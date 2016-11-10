@@ -1,10 +1,8 @@
-//It all begins here
 import cheerio from 'cheerio'
 import fetch from 'isomorphic-fetch'
 
+async function fetchLink(link: string): function {
+    const response = await fetch(link).then(res => res.text())
 
-async function getHtlv(): Promise {
-    const response = await fetch('http://www.hltv.org/').then(res => res)
-
-    return response
+    return cheerio.load(response)
 }
