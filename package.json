@@ -1,0 +1,34 @@
+{
+  "name": "hltv",
+  "version": "0.0.1",
+  "description": "The unofficial HLTV Node.js API",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --presets babel-preset-es2015 --out-dir lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gigobyte/HLTV.git"
+  },
+  "keywords": [
+    "hltv",
+    "api",
+    "crawler",
+    "parser",
+    "csgo"
+  ],
+  "author": "Stanislav Iliev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gigobyte/HLTV/issues"
+  },
+  "homepage": "https://github.com/gigobyte/HLTV#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0"
+  }
+}
