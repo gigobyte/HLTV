@@ -1,6 +1,9 @@
 {
     "presets": ["es2015", "stage-0"],
     "plugins": [
-        "add-module-exports"
+        "transform-runtime",
+        "add-module-exports",
+        "syntax-flow",
+        "transform-flow-strip-types"
     ]
 }
