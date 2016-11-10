@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --presets babel-preset-es2015 --out-dir lib",
-    "start": "npm run build && node lib/index.js"
+    "build": "babel src --out-dir lib",
+    "start": "npm run build && node test/index.spec.js"
   },
   "repository": {
     "type": "git",
@@ -29,12 +29,16 @@
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
     "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-syntax-flow": "^6.18.0",
-    "babel-plugin-transform-flow-strip-types": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-polyfill": "^6.16.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0"
+    "babel-preset-stage-0": "^6.16.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-typescript": "^3.1.2",
+    "tsc": "^1.20150623.0",
+    "typescript": "^2.0.8"
   },
   "dependencies": {
     "babel-runtime": "^6.18.0",
