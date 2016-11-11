@@ -2,7 +2,39 @@ import cheerio from 'cheerio'
 import fetch from 'isomorphic-fetch'
 
 class HLTV {
-    static async getMatches() {
+    _getTeamId($team) {
+        const teamLink = $team.attr('href')
+
+        if(teamLink && teamLink !== '#') return teamLink.split('=')[2]
+    }
+
+    _restructureMatch(match) {
+        if(['LIVE', 'Finished'].includes(match.time)) {
+            delete match.time
+        }
+
+        if(!(match.format.includes('Best of'))) {
+            match.map = match.format
+            match.format = 'Best of 1'
+        }
+
+        if(match.label) {
+            delete match.team1
+            delete match.team1Id
+            delete match.team2
+            delete match.team1Id
+            delete match.live
+            delete match.finished
+            delete match.map
+        } else {
+            delete match.label
+        }
+
+        if(!match.team1Id) delete match.team1Id
+        if(!match.team2Id) delete match.team2Id
+    }
+
+    async getMatches() {
         let matches = []
         const response = await fetch('http://www.hltv.org/matches/').then(res => res.text())
         const $ = cheerio.load(response)
@@ -12,47 +44,22 @@ class HLTV {
             const $elem = $(elem)
             const $team1 = $elem.find('.matchTeam1Cell > a')
             const $team2 = $elem.find('.matchTeam2Cell > a')
+            const $liveInfo = $($elem.find('.matchScoreCell > div > div'))
 
             let match = {}
 
-            match.matchTime = $elem.find('.matchTimeCell').text()
-            match.team1 = $team1.text().trim()
-            match.team2 = $team2.text().trim()
+            match.time     = $elem.find('.matchTimeCell').text()
+            match.team1    = $team1.text().trim()
+            match.team2    = $team2.text().trim()
+            match.team1Id  = this._getTeamId($team1)
+            match.team2Id  = this._getTeamId($team2)
+            match.live     = (match.matchTime === 'LIVE')
+            match.finished = (match.matchTime === 'Finished')
+            match.format   = $($liveInfo[0]).text().trim()
+            match.label    = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
+            match.id       = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
 
-            const team1Link = $team1.attr('href')
-            const team2Link = $team2.attr('href')
-
-            if(team1Link && team1Link !== '#') {
-                match.team1Id = team1Link.split('=')[2]
-            }
-
-            if(team2Link && team2Link !== '#') {
-                match.team2Id = team2Link.split('=')[2]
-            }
-
-            match.live = (match.matchTime === 'LIVE' && delete match.matchTime)
-            match.finished = (match.matchTime === 'Finished' && delete match.matchTime)
-
-            const $liveInfo = $($elem.find('.matchScoreCell > div > div'))
-            const format = $($liveInfo[0]).text().trim()
-
-            if(format.includes('Best of')) {
-                match.format = format
-            } else {
-                match.map = format
-                match.format = 'Best of 1'
-            }
-
-            const matchLabel = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
-
-            if(matchLabel) {
-                match.matchLabel = matchLabel
-                delete match.team1
-                delete match.team2
-                delete match.map    
-            }
-
-            match.id = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
+            this._restructureMatch(match)
 
             matches.push({...match})
         })
