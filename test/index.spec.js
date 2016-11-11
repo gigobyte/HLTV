@@ -1,3 +1,8 @@
 const HLTV = require('../lib/index.js')
 
-HLTV.getMatches().then(res => console.log(res.slice(0,10)))
+HLTV.getMatches().then(res => {
+    for(const r of res) {
+        console.log(r)
+        console.log('\n')
+    }
+})
