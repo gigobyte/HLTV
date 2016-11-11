@@ -8,3 +8,10 @@ hltv.getMatches().then(res => {
         console.log('\n')
     }
 })
+
+hltv.getLatestResults(2).then(res => {
+    for(const r of res) {
+        console.log(r)
+        console.log('\n')
+    }
+})
