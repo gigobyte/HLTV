@@ -25,6 +25,9 @@ const hltv = new HLTV()
 ### API
 
 #### getMatches
+
+Parses all matches from the `hltv.org/matches/` page
+
 Parameters | Type
 ---|---|
 None | - |
