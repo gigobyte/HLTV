@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/gigobyte/HLTV.svg?branch=master)](https://travis-ci.org/gigobyte/HLTV)
+[![Dependency Status](https://david-dm.org/gigobyte/hltv.svg)](https://david-dm.org/gigobyte/hltv)
+[![devDependencies Status](https://david-dm.org/gigobyte/hltv/dev-status.svg)](https://david-dm.org/gigobyte/hltv?type=dev)
+
 <h1 align="center">
   <img src="http://www.archiveteam.org/images/6/69/HLTV_logo.png" alt="pyarray logo" width="200">
   <br>
