@@ -7,9 +7,7 @@
 
 ## Installation
 
-```bash
-npm install hltv --save
-```
+[![NPM](https://nodei.co/npm/hltv.png)](https://nodei.co/npm/hltv/)
 
 ## Usage
 
