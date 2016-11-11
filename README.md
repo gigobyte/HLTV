@@ -22,15 +22,15 @@ const HLTV = require('hltv')
 const hltv = new HLTV()
 ```
 
-### API
+## API
 
 #### getMatches
 
 Parses all matches from the `hltv.org/matches/` page
 
-Parameters | Type
----|---|
-None | - |
+Parameters | Type | Default Value
+---|---|---|
+None | - | - |
 ```javascript
 hltv.getMatches().then((res) => {
   ...
@@ -51,3 +51,32 @@ label | string | Mainly used when the teams are still unknown (e.g. "iBP Masters
 id | string
 live | boolean 
 finished | boolean
+
+***
+
+#### getLatestResults
+
+Parses all matches from the `hltv.org/results/` page
+
+Parameters | Type | Default Value
+---|---|---|
+pages | int | 1 |
+
+```javascript
+hltv.getLatestResults(2).then((res) => {
+  ...
+})
+```
+
+The callback receives an array of objects with the following schema:
+
+Property | Type | Note
+---|---|---|
+result | string | e.g. `'2 - 0'` or `'16 - 9'`
+team1 | string
+team1Id | string
+team2 | string 
+team2Id | string
+map | string | Only exists if the match is BO1
+format | string
+id | string
