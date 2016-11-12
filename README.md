@@ -30,9 +30,9 @@ const hltv = new HLTV()
 
 Parses all matches from the `hltv.org/matches/` page
 
-Parameters | Type | Default Value
----|---|---|
-None | - | - |
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+- | - | - | - |
 ```javascript
 hltv.getMatches().then((res) => {
   ...
@@ -60,12 +60,12 @@ finished | boolean
 
 Parses all matches from the `hltv.org/results/` page
 
-Parameters | Type | Default Value
----|---|---|
-pages | int | 1 |
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+pages | int | 1 | Number of pages with results to be parsed |
 
 ```javascript
-hltv.getLatestResults(2).then((res) => {
+hltv.getLatestResults({pages: 2}).then((res) => {
   ...
 })
 ```
