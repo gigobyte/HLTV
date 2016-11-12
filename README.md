@@ -9,6 +9,15 @@
   <br>
 </h1>
 
+#Table of contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [API](#api)
+  - [getMatches](#getmatches)
+  - [getLatestResults](#getlatestresults)
+  - [getStreams](#getstreams)
+
 ## Installation
 
 [![NPM](https://nodei.co/npm/hltv.png)](https://nodei.co/npm/hltv/)
