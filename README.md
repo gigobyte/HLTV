@@ -38,15 +38,15 @@ hltv.getMatches().then((res) => {
   ...
 })
 ```
-The callback receives an array of objects with the following schema:
+Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
 time | string | Will be undefined if the match is live or finished
 team1 | string
-team1Id | string
+team1Id | int
 team2 | string 
-team2Id | string
+team2Id | int
 map | string | Only exists if the match is BO1
 format | string |
 label | string | Mainly used when the teams are still unknown (e.g. "iBP Masters Grand Final")
@@ -70,15 +70,42 @@ hltv.getLatestResults({pages: 2}).then((res) => {
 })
 ```
 
-The callback receives an array of objects with the following schema:
+Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
 result | string | e.g. `'2 - 0'` or `'16 - 9'`
 team1 | string
-team1Id | string
+team1Id | int
 team2 | string 
-team2Id | string
+team2Id | int
 map | string | Only exists if the match is BO1
 format | string
 id | string
+
+***
+
+#### getStreams
+
+Parses all streams present on the front page of HLTV
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+loadLinks | boolean | false | Enables parsing of the stream links. Its an option since it can slow down the response (every stream is a separate request).
+
+```javascript
+hltv.getStreams().then((res) => {
+  ...
+})
+```
+
+Results in an array of objects with the following schema:
+
+Property | Type | Note
+---|---|---|
+name | string |
+category | string | e.g. `"Caster"` or `"Female player"`
+country | string | An ISO 3166 code
+hltvLink | string | 
+realLink | string | Only if the `loadLinks` flag is enabled
+viewers | int
