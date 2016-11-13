@@ -1,4 +1,3 @@
-[![Build Status](https://travis-ci.org/gigobyte/HLTV.svg?branch=master)](https://travis-ci.org/gigobyte/HLTV)
 [![Dependency Status](https://david-dm.org/gigobyte/hltv.svg)](https://david-dm.org/gigobyte/hltv)
 [![devDependencies Status](https://david-dm.org/gigobyte/hltv/dev-status.svg)](https://david-dm.org/gigobyte/hltv?type=dev)
 
@@ -62,10 +61,11 @@ date | string | e.g. `"12th of November 2016 22:30"`
 format | string
 additionalInfo | string | e.g. `"* Grand final"`
 event | object | Object schema: `{name: string, link: string}`
-maps | [objects] | Object schema: `{name: string, result: string}`
-demos | [objects] | Object schema: `{name: string, link: string}`
+maps | [objects] | Object schema: `{map: string, result: string}`
+streams | [objects] | Object schema: `{name: string, link: string}`
 highlights | array
 players | array
+title | string | Mainly used when the teams are still unknown (e.g. "iBP Masters Grand Final")
 
 ***
 
