@@ -14,6 +14,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [API](#api)
+  - [getMatch](#getmatch)
   - [getMatches](#getmatches)
   - [getLatestResults](#getlatestresults)
   - [getStreams](#getstreams)
@@ -34,6 +35,39 @@ const hltv = new HLTV()
 ```
 
 ## API
+
+#### getMatch
+
+Parses most information from a match page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+id | string | - | The match id
+
+```javascript
+hltv.getMatch({id: '2306295-sk-natus-vincere-eleague-season-2'}).then(res => {
+    ...
+})
+```
+
+Results in an object with the following schema:
+
+Property | Type | Note
+---|---|---|
+team1 | string 
+team1Id | int
+team2 | string
+team2Id | int
+date | string | e.g. `"12th of November 2016 22:30"`
+format | string
+additionalInfo | string | e.g. `"* Grand final"`
+event | object | Object schema: `{name: string, link: string}`
+maps | [objects] | Object schema: `{name: string, result: string}`
+demos | [objects] | Object schema: `{name: string, link: string}`
+highlights | array
+players | array
+
+***
 
 #### getMatches
 
@@ -83,7 +117,7 @@ Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
-result | string | e.g. `'2 - 0'` or `'16 - 9'`
+result | string | e.g. `"2 - 0"` or `"16 - 9"`
 team1 | string
 team1Id | int
 team2 | string 
@@ -112,9 +146,11 @@ Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
-name | string |
+name | string 
 category | string | e.g. `"Caster"` or `"Female player"`
 country | string | An ISO 3166 code
-hltvLink | string | 
+hltvLink | string 
 realLink | string | Only if the `loadLinks` flag is enabled
-viewers | int
+viewers | int 
+
+***
