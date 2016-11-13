@@ -65,7 +65,7 @@ maps | [objects] | Object schema: `{map: string, result: string}`
 streams | [objects] | Object schema: `{name: string, link: string}`
 highlights | array
 players | array
-title | string | Mainly used when the teams are still unknown (e.g. "iBP Masters Grand Final")
+title | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 
 ***
 
@@ -92,7 +92,7 @@ team2 | string
 team2Id | int
 map | string | Only exists if the match is BO1
 format | string |
-label | string | Mainly used when the teams are still unknown (e.g. "iBP Masters Grand Final")
+label | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 id | string
 live | boolean 
 finished | boolean
