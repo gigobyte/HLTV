@@ -3,11 +3,44 @@ import fetch from 'isomorphic-fetch'
 
 const HLTV_URL = 'http://www.hltv.org'
 
-class HLTV {
+class ParsingTools {
+    _cleanupString(str) {
+        if(str.includes('[email protected]')) {
+            console.warn('Cannot parse element because of HLTV obfuscation')
+        } else {
+            return str.replace(/\s\s+/g, ' ').trim()
+        }
+    }
+
     _getTeamId($team) {
         const teamLink = $team.attr('href')
 
         if(teamLink && teamLink !== '#') return parseInt(teamLink.split('=')[2])
+    }
+
+    _parseMatchPageMaps($, $maps, $results) {
+        let maps = Array.apply(null, Array($maps.length)).map(e => ({}))
+
+        $maps.each((i, map) => {
+            maps[i].map = $(map).find('img').attr('src').split('hotmatch/')[1].split('.png')[0]
+        })
+
+        $results.each((i, res) => {
+            maps[i].result = this._cleanupString($(res).text())
+        })
+
+        return maps
+    }
+
+    _parseMatchPageStreams($, $streams) {
+        return $streams.map((i, e) => ({
+            name: this._cleanupString($(e).text()),
+            link: HLTV_URL + $(e).find('a').attr('href')
+        })).get()
+    }
+
+    _parseMatchPagePlayer($) {
+        return (i, e) => this._cleanupString($(e).children().first().text())
     }
 
     _restructureMatch(match) {
@@ -24,7 +57,7 @@ class HLTV {
             delete match.team1
             delete match.team1Id
             delete match.team2
-            delete match.team1Id
+            delete match.team2Id
             delete match.live
             delete match.finished
             delete match.map
@@ -36,10 +69,21 @@ class HLTV {
         if(!match.team2Id) delete match.team2Id
     }
 
-    _cleanupString(str) {
-        return str.replace(/\s\s+/g, ' ').trim()
+    _restructureFullMatch(match) {
+        if(match.title) {
+            delete match.team1
+            delete match.team1Id
+            delete match.team2
+            delete match.team2Id
+            delete match.highlights
+            delete match.players
+        } else {
+            delete match.title
+        }
     }
+}
 
+class HLTV extends ParsingTools {
     async getMatches() {
         let matches = []
         const response = await fetch(`${HLTV_URL}/matches/`).then(res => res.text())
@@ -139,7 +183,6 @@ class HLTV {
     async getMatch({id} = {}) {
         let match = {
             event: {},
-            maps: [],
             players: []
         }
 
@@ -152,7 +195,7 @@ class HLTV {
         const $maps = $('div[style*="width:280px;"]')
         const $mapResults = $('div[style*="width:270px;"]')
         const $highlights = $('.hotmatchroundbox').has('div[style="cursor:pointer;color:#0269D2"]')
-        const $demos = $('.hotmatchroundbox').has('div[style="cursor:pointer;width:240px;"]')
+        const $streams = $('.hotmatchroundbox').has('div[style="cursor:pointer;width:240px;"]')
         const $players = $('div[style*="width:105px;"]')
 
         const $team1 = $($teams[0]).find('span > a')
@@ -163,38 +206,25 @@ class HLTV {
         match.team1Id = this._getTeamId($team1)
         match.team2Id = this._getTeamId($team2)
         match.date = this._cleanupString($($eventInfo[0]).text())
+
         match.event.name = $eventInfo.find('a').text()
         match.event.link = HLTV_URL + $eventInfo.find('a').attr('href')
         match.format = $mapFormatBox.text().split('\n')[1].trim()
-        match.additionalInfo = $mapFormatBox.text().split('\n')[3].trim()
-        $maps.each((i, map) => {
-            const $map = $(map)
-            match.maps[i] = {
-                name: $map.find('img').attr('src').split('hotmatch/')[1].split('.png')[0]
-            }
-        })
 
-        $mapResults.each((i, mapres) => {
-            match.maps[i].result = this._cleanupString($(mapres).text())
-        })
-
+        match.maps = this._parseMatchPageMaps($, $maps, $mapResults)
+        match.streams = this._parseMatchPageStreams($, $streams)
         match.highlights = $highlights.map((i, e) => this._cleanupString($(e).text())).get()
-        match.demos = $demos.map((i, e) => {
-            const $e = $(e)
 
-            return {
-                name: this._cleanupString($e.text()),
-                link: HLTV_URL + $e.find('a').attr('href')
-            }
-        }).get()
+        match.players[0] = $players.slice(0,5).map(this._parseMatchPagePlayer($)).get()
+        match.players[1] = $players.slice(5,10).map(this._parseMatchPagePlayer($)).get()
 
-        match.players[0] = $players.slice(0,5).map((i, e) => {
-            return $(e).children().first().text()
-        }).get()
+        if($mapFormatBox.text().split('\n').length > 3) {
+            match.additionalInfo = $mapFormatBox.text().split('\n')[3].trim()
+        }
 
-        match.players[1] = $players.slice(5,10).map((i, e) => {
-            return $(e).children().first().text()
-        }).get()
+        match.title = this._cleanupString($('span[style*="font-size: 26px"]').first().text())
+
+        this._restructureFullMatch(match)
 
         return match
     }
