@@ -94,6 +94,7 @@ map | string | Only exists if the match is BO1
 format | string |
 label | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 id | string
+eventId | int 
 live | boolean 
 finished | boolean
 
