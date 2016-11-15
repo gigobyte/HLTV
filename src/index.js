@@ -99,6 +99,7 @@ class HLTV extends ParsingTools {
             let match = {}
 
             match.time     = $elem.find('.matchTimeCell').text()
+            match.eventId  = $elem.parent().attr('class').split(' ')[1].replace('event_', '')
             match.team1    = $team1.text().trim()
             match.team2    = $team2.text().trim()
             match.team1Id  = this._getTeamId($team1)
