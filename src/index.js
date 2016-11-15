@@ -198,6 +198,7 @@ class HLTV extends ParsingTools {
         const $highlights = $('.hotmatchroundbox').has('div[style="cursor:pointer;color:#0269D2"]')
         const $streams = $('.hotmatchroundbox').has('div[style="cursor:pointer;width:240px;"]')
         const $players = $('div[style*="width:105px;"]')
+        const $playerHighlight = $('.headertext').find('a > b')
 
         const $team1 = $($teams[0]).find('span > a')
         const $team2 = $($teams[1]).find('span > a')
@@ -223,7 +224,14 @@ class HLTV extends ParsingTools {
             match.additionalInfo = $mapFormatBox.text().split('\n')[3].trim()
         }
 
-        match.title = this._cleanupString($('span[style*="font-size: 26px"]').first().text())
+        if($playerHighlight.text()) {
+            match.playerHighlight = {
+                playerName: $playerHighlight.text().slice(1, -1),
+                playerId: parseInt($playerHighlight.parent().attr('href').split('playerid=')[1])
+            }
+        }
+
+        match.title = this._cleanupString($('span[style*="font-size: 26px"] > span').text())
 
         this._restructureFullMatch(match)
 
