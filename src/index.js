@@ -18,6 +18,17 @@ class ParsingTools {
         if(teamLink && teamLink !== '#') return parseInt(teamLink.split('=')[2])
     }
 
+    _getMatchLink($matchAction) {
+        const matchLink = $matchAction.attr('href')
+
+        if(matchLink) return matchLink.replace('/match/', '')
+    }
+
+    //DRY?
+    _getMatchId(matchLink) {
+        if(matchLink) return parseInt(matchLink.split('-')[0])
+    }
+
     _parseMatchPageMaps($, $maps, $results) {
         let maps = Array.apply(null, Array($maps.length)).map(e => ({}))
 
@@ -108,7 +119,8 @@ class HLTV extends ParsingTools {
             match.finished = (match.matchTime === 'Finished')
             match.format   = $($liveInfo[0]).text().trim()
             match.label    = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
-            match.id       = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
+            match.link     = this._getMatchLink($elem.find('.matchActionCell > a'))
+            match.id       = this._getMatchId(match.link)
 
             this._restructureMatch(match)
 
@@ -139,7 +151,8 @@ class HLTV extends ParsingTools {
                 match.team2   = $team2.text().trim()
                 match.team1Id = this._getTeamId($team1)
                 match.team2Id = this._getTeamId($team2)
-                match.id      = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
+                match.link    = this._getMatchLink($elem.find('.matchActionCell > a'))
+                match.id       = this._getMatchId(match.link)
                 match.result  = $elem.find('.matchScoreCell').text().trim()
 
                 this._restructureMatch(match)
