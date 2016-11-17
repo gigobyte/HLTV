@@ -237,6 +237,28 @@ class HLTV extends ParsingTools {
 
         return match
     }
+
+    async getActiveThreads() {
+        let threads = []
+
+        const response = await fetch(HLTV_URL).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const $threadNames = $('div[style*="width: 110px"]')
+        const $threadReplyCount = $('div[style*="width: 30px"]')
+
+        for(let i = 0; i < $threadNames.length; i++) {
+            const $thread = $($threadNames[i])
+
+            threads[i] = {
+                title: this._cleanupString($thread.text()),
+                link: $thread.find('a').attr('href'),
+                replies: parseInt($($threadReplyCount[i]).text().slice(1))
+            }
+        }
+
+        return threads
+    }
 }
 
 export default HLTV
