@@ -152,7 +152,7 @@ class HLTV extends ParsingTools {
                 match.team1Id = this._getTeamId($team1)
                 match.team2Id = this._getTeamId($team2)
                 match.link    = this._getMatchLink($elem.find('.matchActionCell > a'))
-                match.id       = this._getMatchId(match.link)
+                match.id      = this._getMatchId(match.link)
                 match.result  = $elem.find('.matchScoreCell').text().trim()
 
                 this._restructureMatch(match)
