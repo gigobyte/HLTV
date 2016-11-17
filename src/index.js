@@ -194,13 +194,13 @@ class HLTV extends ParsingTools {
         return streams
     }
 
-    async getMatch({id} = {}) {
+    async getMatch(link) {
         let match = {
             event: {},
             players: []
         }
 
-        const response = await fetch(`${HLTV_URL}/match/${id}`).then(res => res.text())
+        const response = await fetch(`${HLTV_URL}/match/${link}`).then(res => res.text())
         const $ = cheerio.load(response)
 
         const $teams = $('div[style*="width:46%;"]')
