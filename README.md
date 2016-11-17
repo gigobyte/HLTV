@@ -17,6 +17,7 @@
   - [getMatches](#getmatches)
   - [getLatestResults](#getlatestresults)
   - [getStreams](#getstreams)
+  - [getActiveThreads](#getactivethreads)
 
 ## Installation
 
@@ -153,5 +154,29 @@ country | string | An ISO 3166 code
 hltvLink | string 
 realLink | string | Only if the `loadLinks` flag is enabled
 viewers | int 
+
+***
+
+#### getActiveThreads
+
+Parses the latest threads on the front page of HLTV
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+- | - | - | - |
+
+```javascript
+hltv.getActiveThreads().then((res) => {
+  ...
+})
+```
+
+Results in an array of objects with the following schema:
+
+Property | Type | Note
+---|---|---|
+title | string
+link | string
+replies | int
 
 ***
