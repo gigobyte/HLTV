@@ -81,6 +81,15 @@ class ParsingTools {
             delete match.title
         }
     }
+
+    _getPlayerId(fullIdString) {
+        let id = fullIdString.split('playerid=')[1]
+        if(!id) {
+            id = fullIdString.split('/')[2].split('-')[0]
+        }
+
+        return Number(id)
+    }
 }
 
 class HLTV extends ParsingTools {
@@ -108,7 +117,7 @@ class HLTV extends ParsingTools {
             match.finished = (match.time === 'Finished')
             match.format   = $($liveInfo[0]).text().trim()
             match.label    = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
-            match.id       = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
+            match.id       = Number($elem.find('.matchActionCell > a').attr('href').replace('/match/', '').split('-')[0])
 
             this._restructureMatch(match)
 
@@ -187,7 +196,7 @@ class HLTV extends ParsingTools {
             players: []
         }
 
-        const response = await fetch(`${HLTV_URL}/match/${id}`).then(res => res.text())
+        const response = await fetch(`${HLTV_URL}/match/${id}-`).then(res => res.text())
         const $ = cheerio.load(response)
 
         const $teams = $('div[style*="width:46%;"]')
@@ -227,7 +236,7 @@ class HLTV extends ParsingTools {
         if($playerHighlight.text()) {
             match.playerHighlight = {
                 playerName: $playerHighlight.text().slice(1, -1),
-                playerId: parseInt($playerHighlight.parent().attr('href').split('playerid=')[1])
+                playerId: this._getPlayerId($playerHighlight.parent().attr('href'))
             }
         }
 
