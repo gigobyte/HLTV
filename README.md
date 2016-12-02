@@ -42,10 +42,10 @@ Parses most information from a match page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | string | - | The match id
+id | int | - | The match id
 
 ```javascript
-hltv.getMatch({id: '2306295-sk-natus-vincere-eleague-season-2'}).then(res => {
+hltv.getMatch({id: 2306295}).then(res => {
     ...
 })
 ```
@@ -94,7 +94,7 @@ team2Id | int
 map | string | Only exists if the match is BO1
 format | string |
 label | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
-id | string
+id | int
 eventId | int 
 live | boolean 
 finished | boolean
