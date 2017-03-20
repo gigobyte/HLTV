@@ -76,7 +76,7 @@ Parses all matches from the `hltv.org/matches/` page
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
-- | - | - | - |
+| - | - | - | - |
 ```javascript
 hltv.getMatches().then((res) => {
   ...
@@ -163,7 +163,7 @@ Parses the latest threads on the front page of HLTV
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
-- | - | - | - |
+| - | - | - | - |
 
 ```javascript
 hltv.getActiveThreads().then((res) => {
