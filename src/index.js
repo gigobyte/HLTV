@@ -252,19 +252,16 @@ class HLTV extends ParsingTools {
         const response = await fetch(HLTV_URL).then(res => res.text())
         const $ = cheerio.load(response)
 
-        const $threadNames = $('div[style*="width: 110px"]')
-        const $threadReplyCount = $('div[style*="width: 30px"]')
+        const $threadsArray = $('.activitylist').children();
 
-        for(let i = 0; i < $threadNames.length; i++) {
-            const $thread = $($threadNames[i])
-
+        for(let i = 0; i < $threadsArray.length; i++) {
+            const $thread = $($threadsArray[i])
             threads[i] = {
-                title: this._cleanupString($thread.text()),
-                link: $thread.find('a').attr('href'),
-                replies: parseInt($($threadReplyCount[i]).text().slice(1))
+                title: $thread.find('span').text(),
+                link: $thread.attr('href'),
+                replies: parseInt($thread.clone().children().remove().end().text().replace(/[()]/g, ''))
             }
         }
-
         return threads
     }
 }
