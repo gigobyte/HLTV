@@ -164,19 +164,18 @@ class HLTV extends ParsingTools {
         let streams = []
         const response = await fetch(HLTV_URL).then(res => res.text())
         const $ = cheerio.load(response)
-        const $streamTitles = $('div[style*="width: 95px;"]')
-        const $streamViewers = $('div[style*="width: 35px;"]')
+        const $unparsedStreams = $('a.col-box.streamer.a-reset')
 
-        for(let i = 0; i < $streamTitles.length; i++) {
+        for(let i = 0; i < $unparsedStreams.length; i++) {
             let stream = {}
 
-            const $streamHref = $($streamTitles[i]).find('a')
+            const $streamObj = $($unparsedStreams[i])
 
-            stream.name     = $streamHref.attr('title')
-            stream.viewers  = parseInt($($streamViewers[i]).text().replace(/[()]/g, ''))
-            stream.category = $($streamHref.find('img')[0]).attr('title')
-            stream.country  = $($streamHref.find('img')[1]).attr('src').split('flag/')[1].split('.')[0]
-            stream.hltvLink = HLTV_URL + $streamHref.attr('href')
+            stream.name     = $streamObj.attr('title')
+            stream.viewers  = parseInt($streamObj.clone().children().remove().end().text().replace(/[()]/g, ''));
+            stream.category = $($streamObj.find('img')[0]).attr('title')
+            stream.country  = $($streamObj.find('img')[1]).attr('title')
+            stream.hltvLink = HLTV_URL + $streamObj.attr('href')
 
             if(loadLinks) {
                 const hltvPage = await fetch(stream.hltvLink).then(res => res.text())
