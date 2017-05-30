@@ -18,6 +18,18 @@ class ParsingTools {
         if(teamLink && teamLink !== '#') return parseInt(teamLink.split('=')[2])
     }
 
+    _getTeamIdByLogo($team) {
+        const teamLinkLogo = $team.attr('src');
+
+        if(teamLinkLogo && teamLinkLogo !== '#') return parseInt(teamLinkLogo.replace('https://static.hltv.org/images/team/logo/', ''))
+    }
+
+    _getEventIdByLogo($event) {
+        const eventLogo = $event.attr('src');
+
+        if(eventLogo && eventLogo !== '#') return parseInt(eventLogo.replace('https://static.hltv.org/images/eventLogos/', '').replace('.png', ''))
+    }
+
     _parseMatchPageMaps($, $maps, $results) {
         let maps = Array.apply(null, Array($maps.length)).map(e => ({}))
 
@@ -97,9 +109,41 @@ class HLTV extends ParsingTools {
         let matches = []
         const response = await fetch(`${HLTV_URL}/matches/`).then(res => res.text())
         const $ = cheerio.load(response)
-        const $matchElems = $('.matchListRow')
+        const $liveMatches = $('.live-match')
+        const $upcomingMatches = $('.upcoming-matches')
 
-        $matchElems.each((i, elem) => {
+        $liveMatches.each((i, elem) => {
+            const $elem = $(elem)
+            let teams = []
+            $elem.find('.logo').each(function( index ) {
+                teams.push($( this ))
+            })
+
+            const $team1 = teams[0]
+            const $team2 = teams[1]
+            let match = {}
+            const event = $elem.find('.event-logo')
+            if ($team1 != undefined && $team2 != undefined){
+                match.time      = undefined
+                match.id        = $elem.find('.scores .table').attr('data-livescore-match')
+                match.team1     = $team1.attr('title')
+                match.team2     = $team2.attr('title')
+                match.team1Id   = this._getTeamIdByLogo($team1)
+                match.team2Id   = this._getTeamIdByLogo($team2)
+                match.live      = true
+                match.finished  = (match.time === 'Finished')
+                match.format    = $elem.find('.bestof').text()
+                match.label     = undefined
+                match.eventName = event.attr('title')
+                match.eventId   = this._getEventIdByLogo(event)
+
+                this._restructureMatch(match)
+
+                matches.push({...match})
+            }
+        })
+
+        $upcomingMatches.each((i, elem) => {
             const $elem = $(elem)
             const $team1 = $elem.find('.matchTeam1Cell > a')
             const $team2 = $elem.find('.matchTeam2Cell > a')
@@ -108,7 +152,7 @@ class HLTV extends ParsingTools {
             let match = {}
 
             match.time     = $elem.find('.matchTimeCell').text()
-            match.eventId  = parseInt($elem.parent().attr('class').split(' ')[1].replace('event_', ''))
+            //match.eventId  = parseInt($elem.parent().attr('class').split(' ')[1].replace('event_', ''))
             match.team1    = $team1.text().trim()
             match.team2    = $team2.text().trim()
             match.team1Id  = this._getTeamId($team1)
@@ -117,7 +161,7 @@ class HLTV extends ParsingTools {
             match.finished = (match.time === 'Finished')
             match.format   = $($liveInfo[0]).text().trim()
             match.label    = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
-            match.id       = Number($elem.find('.matchActionCell > a').attr('href').replace('/match/', '').split('-')[0])
+            //match.id       = Number($elem.find('.matchActionCell > a').attr('href').replace('/match/', '').split('-')[0])
 
             this._restructureMatch(match)
 
