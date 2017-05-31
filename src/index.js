@@ -34,7 +34,7 @@ class ParsingTools {
         let maps = Array.apply(null, Array($maps.length)).map(e => ({}))
 
         $maps.each((i, map) => {
-            maps[i].map = $(map).find('img').attr('src').split('hotmatch/')[1].split('.png')[0]
+            maps[i].map = $(map).find('img').attr('src').split('maps/')[1].split('.png')[0]
         })
 
         $results.each((i, res) => {
@@ -268,52 +268,70 @@ class HLTV extends ParsingTools {
             players: []
         }
 
-        const response = await fetch(`${HLTV_URL}/match/${id}-`).then(res => res.text())
+        const response = await fetch(`${HLTV_URL}/matches/${id}/-`).then(res => res.text())
         const $ = cheerio.load(response)
 
-        const $teams = $('div[style*="width:46%;"]')
-        const $eventInfo = $('div[style*="font-size: 18px;"]')
-        const $mapFormatBox = $('#mapformatbox')
-        const $maps = $('div[style*="width:280px;"]')
-        const $mapResults = $('div[style*="width:270px;"]')
-        const $highlights = $('.hotmatchroundbox').has('div[style="cursor:pointer;color:#0269D2"]')
-        const $streams = $('.hotmatchroundbox').has('div[style="cursor:pointer;width:240px;"]')
-        const $players = $('div[style*="width:105px;"]')
-        const $playerHighlight = $('.headertext').find('a > b')
+        const $teams = $('.teamsBox')
+        const $eventInfo = $('.timeAndEvent')
+        const $mapFormatBox = $('.veto-box')
 
-        const $team1 = $($teams[0]).find('span > a')
-        const $team2 = $($teams[1]).find('span > a')
+        const $maps = $('.map-name-holder')
+        const $mapResults = $('.results')
+        const $highlights = $('.highlights')
+        const $streams = $('.streams')
+        const $players = $('.player')
+        const $headtohead = $('.head-to-head')
+        /*const $playerHighlight = $('.headertext').find('a > b')
+*/
+        let teams = []
+        $teams.find('.team').each(function( index ) {
+            teams.push($( this ))
+        })
+        const $team1 = teams[0]
+        const $team2 = teams[1]
 
-        match.team1 = $team1.text().trim()
-        match.team2 = $team2.text().trim()
-        match.team1Id = this._getTeamId($team1)
-        match.team2Id = this._getTeamId($team2)
-        match.date = this._cleanupString($($eventInfo[0]).text())
+        let higlightArray = []
+        let streamArray = []
+        if ($team1 != undefined && $team2 != undefined){
+            match.team1 = $team1.find('.logo').attr('title')
+            match.team2 = $team2.find('.logo').attr('title')
+            match.team1Id = this._getTeamIdByLogo($team1.find('.logo'))
+            match.team2Id = this._getTeamIdByLogo($team2.find('.logo'))
+        }
+        match.date = $eventInfo.find('.date').text()
+        match.unixtime = $eventInfo.find('.date').attr('data-unix')
 
-        match.event.name = $eventInfo.find('a').text()
+
+        match.event.name = $eventInfo.find('.text-ellipsis').text()
         match.event.link = HLTV_URL + $eventInfo.find('a').attr('href')
         match.format = $mapFormatBox.text().split('\n')[1].trim()
 
         match.maps = this._parseMatchPageMaps($, $maps, $mapResults)
-        match.streams = this._parseMatchPageStreams($, $streams)
-        match.highlights = $highlights.map((i, e) => this._cleanupString($(e).text())).get()
+        $highlights.find('.highlight').each(function( index ) {
+            let highlight = {}
+            highlight.name = $(this).text()
+            highlight.link = $(this).attr('data-highlight-embed')
+            higlightArray.push(highlight)
+        })
+        match.highlights = higlightArray
 
-        match.players[0] = $players.slice(0,5).map(this._parseMatchPagePlayer($)).get()
-        match.players[1] = $players.slice(5,10).map(this._parseMatchPagePlayer($)).get()
-
-        if($mapFormatBox.text().split('\n').length > 3) {
-            match.additionalInfo = $mapFormatBox.text().split('\n')[3].trim()
+        $streams.find('.stream-box').each(function( index ) {
+            let stream = {}
+            stream.name = $(this).find('.flagAlign').text()
+            stream.link = $(this).attr('data-stream-embed')
+            streamArray.push(stream)
+        })
+        match.streams = streamArray
+        match.players[0] = $players.slice(5,10).map(this._parseMatchPagePlayer($)).get()
+        match.players[1] = $players.slice(15,20).map(this._parseMatchPagePlayer($)).get()
+        match.title = this._cleanupString($eventInfo.find('.text').text())
+        if ($headtohead != undefined){
+            let h2h = {}
+            h2h.team1wins = $($headtohead.find('.flexbox-center .bold')[0]).text()
+            h2h.overtimes = $($headtohead.find('.flexbox-center .bold')[1]).text()
+            h2h.team2wins = $($headtohead.find('.flexbox-center .bold')[2]).text()
+            match.headtohead = h2h
         }
-
-        if($playerHighlight.text()) {
-            match.playerHighlight = {
-                playerName: $playerHighlight.text().slice(1, -1),
-                playerId: this._getPlayerId($playerHighlight.parent().attr('href'))
-            }
-        }
-
-        match.title = this._cleanupString($('span[style*="font-size: 26px"] > span').text())
-
         this._restructureFullMatch(match)
 
         return match
