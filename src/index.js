@@ -60,7 +60,7 @@ class ParsingTools {
             delete match.time
         }
 
-        if(!(match.format.includes('Best of'))) {
+        if(!(match.format.includes('bo'))) {
             match.map = match.format
             match.format = 'Best of 1'
         }
@@ -110,7 +110,7 @@ class HLTV extends ParsingTools {
         const response = await fetch(`${HLTV_URL}/matches/`).then(res => res.text())
         const $ = cheerio.load(response)
         const $liveMatches = $('.live-match')
-        const $upcomingMatches = $('.upcoming-matches')
+        const $upcomingMatches = $('.upcoming-match.standard-box')
 
         $liveMatches.each((i, elem) => {
             const $elem = $(elem)
@@ -125,47 +125,76 @@ class HLTV extends ParsingTools {
             const event = $elem.find('.event-logo')
             if ($team1 != undefined && $team2 != undefined){
                 match.time      = undefined
-                match.id        = $elem.find('.scores .table').attr('data-livescore-match')
                 match.team1     = $team1.attr('title')
-                match.team2     = $team2.attr('title')
                 match.team1Id   = this._getTeamIdByLogo($team1)
+                match.team2     = $team2.attr('title')
                 match.team2Id   = this._getTeamIdByLogo($team2)
-                match.live      = true
-                match.finished  = (match.time === 'Finished')
                 match.format    = $elem.find('.bestof').text()
                 match.label     = undefined
-                match.eventName = event.attr('title')
+                match.id        = $elem.find('.scores .table').attr('data-livescore-match')
                 match.eventId   = this._getEventIdByLogo(event)
-
+                match.live      = true
+                match.finished  = (match.time === 'Finished')
+                match.link      = $elem.find("a.a-reset").attr('href')
+                match.eventName = event.attr('title')
+                match.date      = 'Today'
+                match.unixtime  = 'Now'
                 this._restructureMatch(match)
-
                 matches.push({...match})
             }
         })
 
         $upcomingMatches.each((i, elem) => {
             const $elem = $(elem)
-            const $team1 = $elem.find('.matchTeam1Cell > a')
-            const $team2 = $elem.find('.matchTeam2Cell > a')
+            let teams = []
+            $elem.find('.team').each(function( index ) {
+                teams.push($( this ))
+            })
+
+            const $team1 = teams[0]
+            const $team2 = teams[1]
+
             const $liveInfo = $($elem.find('.matchScoreCell > div > div'))
+
+            const event = $elem.find('.event-logo')
 
             let match = {}
 
-            match.time     = $elem.find('.matchTimeCell').text()
-            //match.eventId  = parseInt($elem.parent().attr('class').split(' ')[1].replace('event_', ''))
-            match.team1    = $team1.text().trim()
-            match.team2    = $team2.text().trim()
-            match.team1Id  = this._getTeamId($team1)
-            match.team2Id  = this._getTeamId($team2)
-            match.live     = (match.time === 'LIVE')
-            match.finished = (match.time === 'Finished')
-            match.format   = $($liveInfo[0]).text().trim()
-            match.label    = $elem.find('div[style="text-align: center;width: 80%;float: left;"]').text()
-            //match.id       = Number($elem.find('.matchActionCell > a').attr('href').replace('/match/', '').split('-')[0])
-
-            this._restructureMatch(match)
-
-            matches.push({...match})
+            if ($team1 != undefined && $team2 != undefined){
+                let halfId      = $elem.attr('href').replace('/matches/', '')
+                let slashIndex  = halfId.indexOf('/')
+                match.time      = $elem.find('div.time').text()
+                match.team1     = $team1.text()
+                match.team1Id   = this._getTeamIdByLogo($team1.parent().find('.logo'))
+                match.team2     = $team2.text()
+                match.team2Id   = this._getTeamIdByLogo($team2.parent().find('.logo'))
+                match.format    = $elem.find('.map-text').text()
+                match.label     = undefined 
+                match.id        = halfId.substring(0,slashIndex)
+                match.eventId   = this._getEventIdByLogo(event)
+                match.live      = false
+                match.finished  = false
+                match.link      = $elem.attr('href')
+                match.eventName = event.attr('title')
+                match.date      = $elem.parent().find('.standard-headline').text()
+                match.unixtime  = $elem.find('div.time').attr('data-unix')
+                this._restructureMatch(match)
+                matches.push({...match})
+            } else {
+                let halfId      = $elem.attr('href').replace('/matches/', '')
+                let slashIndex  = halfId.indexOf('/')
+                match.label     = $elem.find('placeholder-text-cell').text()
+                match.time      = $elem.find('div.time').text()
+                match.format    = 'unknown'
+                match.id        = halfId.substring(0,slashIndex)
+                match.date      = $elem.parent().find('.standard-headline').text()
+                match.unixtime  = $elem.find('div.time').attr('data-unix')
+                match.live      = false
+                match.finished  = false
+                match.link      = $elem.attr('href')
+                this._restructureMatch(match)
+                matches.push({...match})
+            }
         })
 
         return matches
