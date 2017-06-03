@@ -164,7 +164,7 @@ Option | Type | Default Value | Description |
 | - | - | - | - |
 
 ```javascript
-hltv.getActiveThreads().then((res) => {
+HLTV.getActiveThreads().then((res) => {
   ...
 })
 ```
@@ -176,5 +176,5 @@ Property | Type | Note
 title | string
 link | string
 replies | int
-
+category | string | Thread's category (news, forum, match etc)
 ***
