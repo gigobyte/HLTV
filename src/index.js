@@ -6,6 +6,14 @@ const HLTV_URL = 'http://www.hltv.org'
 const toArray = elements => elements.toArray().map(cheerio)
 
 class HLTV {
+    _getMatchFormatAndMap(mapText) {
+        if (mapText && !mapText.includes('bo')) {
+            return { maps: [mapText], format: 'bo1'}
+        }
+
+        return { format: mapText }
+    }
+
     async getMatch({ id }) {
         const response = await fetch(`${HLTV_URL}/matches/${id}/-`).then(res => res.text())
         const $ = cheerio.load(response)
@@ -13,7 +21,7 @@ class HLTV {
         const teamEls = toArray($('div.teamName'))
 
         const [ team1, team2 ] = teamEls.map(el => el.text())
-        const [ team1Id, team2Id ] = teamEls.map(el => el.prev()).map(logo => logo.attr('src').split('/').pop())
+        const [ team1Id, team2Id ] = teamEls.map(el => el.prev()).map(logo => logo.attr('src').split('/').pop()).map(Number)
 
         const title = $('.timeAndEvent .text').text()
         const date = Number($('.timeAndEvent .date').attr('data-unix'))
@@ -44,6 +52,42 @@ class HLTV {
         return {
             team1, team2, team1Id, team2Id, date, format, additionalInfo, event, maps, players, streams, live
         }
+    }
+
+    async getMatches() {
+        const response = await fetch(`${HLTV_URL}/matches`).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const liveMatches = toArray($('.live-match .a-reset')).map(matchEl => {
+            const id = Number(matchEl.attr('href').split('/')[2])
+            const [ team1, team2 ] = toArray(matchEl.find('img.logo')).map(el => el.attr('title'))
+            const [ team1Id, team2Id ] = toArray(matchEl.find('img.logo')).map(el => el.attr('src').split('/').pop()).map(Number)
+            const eventName = matchEl.find('.event-logo').attr('alt')
+            const eventId =  Number(matchEl.find('.event-logo').attr('src').split('/').pop().split('.')[0])
+            const format = matchEl.find('.bestof').text()
+            const maps = toArray(matchEl.find('.header .map')).map(el => el.text())
+
+            return { id, team1, team2, team1Id, team2Id, eventId, eventName, format, maps, live: true }
+        })
+
+        const upcomingMatches = toArray($('.upcoming-match')).map(matchEl => {
+            const id = Number(matchEl.attr('href').split('/')[2])
+            const date = Number(matchEl.find('div.time').attr('data-unix'))
+            const [ team1, team2 ] = toArray(matchEl.find('div.team')).map(el => el.text())
+            const [ team1Id, team2Id ] = toArray(matchEl.find('img.logo')).map(el => el.attr('src').split('/').pop()).map(Number)
+            const { maps, format } = this._getMatchFormatAndMap(matchEl.find('.map-text').text())
+            const label = matchEl.find('.placeholder-text-cell').text()
+            const eventName = matchEl.find('.event-logo').attr('alt')
+            const eventId = do {
+                if (matchEl.find('.event-logo').attr('src')) {
+                    Number(matchEl.find('img.event-logo').attr('src').split('/').pop().split('.')[0])
+                }
+            }
+
+            return { id, date, team1, team2, team1Id, team2Id, format, maps, label, eventName, eventId, live: false }
+        })
+
+        return [...liveMatches, ...upcomingMatches]
     }
  }
 
