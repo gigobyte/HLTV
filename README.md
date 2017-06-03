@@ -2,13 +2,15 @@
 [![devDependencies Status](https://david-dm.org/gigobyte/hltv/dev-status.svg)](https://david-dm.org/gigobyte/hltv?type=dev)
 
 <h1 align="center">
-  <img src="http://www.archiveteam.org/images/6/69/HLTV_logo.png" alt="pyarray logo" width="200">
+  <img src="https://www.hltv.org/img/static/TopLogo2x.png" alt="pyarray logo" width="200">
   <br>
   The unofficial HLTV Node.js API
   <br>
 </h1>
 
-#Table of contents
+:star: This package supports the new HLTV that was deployed on [May 22nd](https://www.hltv.org/news/20530/a-new-beginning-for-hltvorg).
+
+Table of contents
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -29,9 +31,6 @@
 import HLTV from 'hltv'
 // Or if you're stuck with CommonJS
 const HLTV = require('hltv')
-
-//create an object before using the API
-const hltv = new HLTV()
 ```
 
 ## API
@@ -45,7 +44,7 @@ Option | Type | Default value | Description |
 id | int | - | The match id
 
 ```javascript
-hltv.getMatch({id: 2306295}).then(res => {
+HLTV.getMatch({id: 2306295}).then(res => {
     ...
 })
 ```
@@ -54,19 +53,18 @@ Results in an object with the following schema:
 
 Property | Type | Note
 ---|---|---|
-team1 | string 
-team1Id | int
-team2 | string
-team2Id | int
-date | string | e.g. `"12th of November 2016 22:30"`
+team1 | string? 
+team1Id | int?
+team2 | string?
+team2Id | int?
+date | int | Unix timestamp
 format | string
-additionalInfo | string | e.g. `"* Grand final"`
+additionalInfo | string? | e.g. `"* Grand final"`
 event | object | Object schema: `{name: string, link: string}`
 maps | [objects] | Object schema: `{map: string, result: string}`
 streams | [objects] | Object schema: `{name: string, link: string}`
-highlights | array
-players | array
-title | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
+players | object | Object schema: `{$team1$: [string], $team2$: [string]}`
+title | string? | Exists when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 
 ***
 
@@ -78,7 +76,7 @@ Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
 | - | - | - | - |
 ```javascript
-hltv.getMatches().then((res) => {
+HLTV.getMatches().then((res) => {
   ...
 })
 ```
@@ -86,18 +84,17 @@ Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
-time | string | Will be undefined if the match is live or finished
-team1 | string
-team1Id | int
-team2 | string 
-team2Id | int
-map | string | Only exists if the match is BO1
-format | string |
-label | string | Mainly used when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
+date | int | Unix timestamp, will be undefined if the match is live
+team1 | string?
+team1Id | int?
+team2 | string? 
+team2Id | int?
+maps | [string]? | Only exists if the match is BO1
+format | string? |
+label | string? | Exists when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 id | int
-eventId | int 
-live | boolean 
-finished | boolean
+eventId | int
+live | boolean
 
 ***
 
