@@ -53,7 +53,7 @@ Results in an object with the following schema:
 
 Property | Type | Note
 ---|---|---|
-team1 | string? 
+team1 | string?
 team1Id | int?
 team2 | string?
 team2Id | int?
@@ -87,7 +87,7 @@ Property | Type | Note
 date | int | Unix timestamp, will be undefined if the match is live
 team1 | string?
 team1Id | int?
-team2 | string? 
+team2 | string?
 team2Id | int?
 maps | [string]? | Only exists if the match is BO1 or if the match is live
 format | string? |
@@ -107,7 +107,7 @@ Option | Type | Default Value | Description |
 pages | int | 1 | Number of pages with results to be parsed |
 
 ```javascript
-hltv.getLatestResults({pages: 2}).then((res) => {
+HLTV.getLatestResults({pages: 2}).then((res) => {
   ...
 })
 ```
@@ -119,7 +119,7 @@ Property | Type | Note
 result | string | e.g. `"2 - 0"` or `"16 - 9"`
 team1 | string
 team1Id | int
-team2 | string 
+team2 | string
 team2Id | int
 maps | [string]? | Only exists if the match is BO1
 format | string
@@ -146,12 +146,12 @@ Results in an array of objects with the following schema:
 
 Property | Type | Note
 ---|---|---|
-name | string 
+name | string
 category | string | e.g. `"Caster"` or `"Female player"`
 country | string | An ISO 3166 code
-hltvLink | string 
+hltvLink | string
 realLink | string | Only if the `loadLinks` flag is enabled
-viewers | int 
+viewers | int
 
 ***
 

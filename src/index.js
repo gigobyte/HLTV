@@ -108,6 +108,7 @@ class HLTV {
             matches = matches.concat(toArray($('.result-con .a-reset')).map(matchEl => {
                 const id = Number(matchEl.attr('href').split('/')[2])
                 const [ team1, team2 ] = toArray(matchEl.find('div.team')).map(el => el.text())
+                const [ team1Id, team2Id ] = toArray(matchEl.find('img.team-logo')).map(el => el.attr('src').split('/').pop()).map(Number)
                 const result = matchEl.find('.result-score').text()
                 const { maps, format } = this._getMatchFormatAndMap(matchEl.find('.map-text').text())
                 const event = {
@@ -115,7 +116,7 @@ class HLTV {
                     id: Number(matchEl.find('.event-logo').attr('src').split('/').pop().split('.')[0])
                 }
 
-                return { id, team1, team2, result, event, maps, format }
+                return { id, team1, team2, team1Id, team2Id, result, event, maps, format }
             }))
         }
 
