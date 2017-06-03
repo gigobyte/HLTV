@@ -205,24 +205,27 @@ class HLTV extends ParsingTools {
 
         let matches = []
         for(let i = 0; i < pages; i++) {
-            const response = await fetch(`${HLTV_URL}/results/${i*50}/`).then(res => res.text())
+            const response = await fetch(`${HLTV_URL}/results?offset=${i*100}`).then(res => res.text())
             const $ = cheerio.load(response)
-            const $matchElems = $('.matchListRow')
+            const $matchElems = $('.result-con')
 
             $matchElems.each((i, elem) => {
-                const $elem = $(elem)
-                const $team1 = $elem.find('.matchTeam1Cell > a')
-                const $team2 = $elem.find('.matchTeam2Cell > a')
+                const $elem    = $(elem)
+                const $team1   = $elem.find('.team1')
+                const $team2   = $elem.find('.team2')
+                let halfId     = $elem.find('a').attr('href').replace('/matches/', '')
+                let slashIndex = halfId.indexOf('/')
 
                 let match = {}
 
-                match.format  = $elem.find('.matchTimeCell').text()
-                match.team1   = $team1.text().trim()
-                match.team2   = $team2.text().trim()
-                match.team1Id = this._getTeamId($team1)
-                match.team2Id = this._getTeamId($team2)
-                match.id      = $elem.find('.matchActionCell > a').attr('href').replace('/match/', '')
-                match.result  = $elem.find('.matchScoreCell').text().trim()
+                match.format   = $elem.find('.map-text').text()
+                match.team1    = $team1.text().trim()
+                match.team2    = $team2.text().trim()
+                match.team1Id  = this._getTeamIdByLogo($team1.find('.team-logo'))
+                match.team2Id  = this._getTeamIdByLogo($team2.find('.team-logo'))
+                match.id       = halfId.substring(0,slashIndex)
+                match.result   = $elem.find('.result-score').text().trim()
+                match.unixtime = $elem.attr('data-zonedgrouping-entry-unix')
 
                 this._restructureMatch(match)
 
@@ -281,8 +284,7 @@ class HLTV extends ParsingTools {
         const $streams = $('.streams')
         const $players = $('.player')
         const $headtohead = $('.head-to-head')
-        /*const $playerHighlight = $('.headertext').find('a > b')
-*/
+
         let teams = []
         $teams.find('.team').each(function( index ) {
             teams.push($( this ))
