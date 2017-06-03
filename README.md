@@ -89,11 +89,11 @@ team1 | string?
 team1Id | int?
 team2 | string? 
 team2Id | int?
-maps | [string]? | Only exists if the match is BO1
+maps | [string]? | Only exists if the match is BO1 or if the match is live
 format | string? |
 label | string? | Exists when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
 id | int
-eventId | int
+event | object | Object schema: `{name: string, id: int}`
 live | boolean
 
 ***
@@ -121,9 +121,10 @@ team1 | string
 team1Id | int
 team2 | string 
 team2Id | int
-map | string | Only exists if the match is BO1
+maps | [string]? | Only exists if the match is BO1
 format | string
 id | string
+event | object | Object schema: `{name: string, id: int}`
 
 ***
 
