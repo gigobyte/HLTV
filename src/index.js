@@ -62,12 +62,14 @@ class HLTV {
             const id = Number(matchEl.attr('href').split('/')[2])
             const [ team1, team2 ] = toArray(matchEl.find('img.logo')).map(el => el.attr('title'))
             const [ team1Id, team2Id ] = toArray(matchEl.find('img.logo')).map(el => el.attr('src').split('/').pop()).map(Number)
-            const eventName = matchEl.find('.event-logo').attr('alt')
-            const eventId =  Number(matchEl.find('.event-logo').attr('src').split('/').pop().split('.')[0])
             const format = matchEl.find('.bestof').text()
             const maps = toArray(matchEl.find('.header .map')).map(el => el.text())
+            const event = {
+                name:  matchEl.find('.event-logo').attr('alt'),
+                id: Number(matchEl.find('.event-logo').attr('src').split('/').pop().split('.')[0])
+            }
 
-            return { id, team1, team2, team1Id, team2Id, eventId, eventName, format, maps, live: true }
+            return { id, team1, team2, team1Id, team2Id, event, format, maps, live: true }
         })
 
         const upcomingMatches = toArray($('.upcoming-match')).map(matchEl => {
@@ -77,17 +79,47 @@ class HLTV {
             const [ team1Id, team2Id ] = toArray(matchEl.find('img.logo')).map(el => el.attr('src').split('/').pop()).map(Number)
             const { maps, format } = this._getMatchFormatAndMap(matchEl.find('.map-text').text())
             const label = matchEl.find('.placeholder-text-cell').text()
-            const eventName = matchEl.find('.event-logo').attr('alt')
-            const eventId = do {
-                if (matchEl.find('.event-logo').attr('src')) {
-                    Number(matchEl.find('img.event-logo').attr('src').split('/').pop().split('.')[0])
+            const event = {
+                name: matchEl.find('.event-logo').attr('alt'),
+                id: do {
+                    if (matchEl.find('.event-logo').attr('src')) {
+                        Number(matchEl.find('img.event-logo').attr('src').split('/').pop().split('.')[0])
+                    }
                 }
             }
 
-            return { id, date, team1, team2, team1Id, team2Id, format, maps, label, eventName, eventId, live: false }
+            return { id, date, team1, team2, team1Id, team2Id, format, maps, label, even, live: false }
         })
 
         return [...liveMatches, ...upcomingMatches]
+    }
+
+    async getLatestResults({ pages=1 } = {}) {
+        if (pages < 1) {
+            throw new Error('HLTV.getLatestResults: pages cannot be less than 1')
+        }
+
+        let matches = []
+
+        for (let i = 0; i < pages; i++) {
+            const response = await fetch(`${HLTV_URL}/results??offset=${i*100}/`).then(res => res.text())
+            const $ = cheerio.load(response)
+
+            matches = matches.concat(toArray($('.result-con .a-reset')).map(matchEl => {
+                const id = Number(matchEl.attr('href').split('/')[2])
+                const [ team1, team2 ] = toArray(matchEl.find('div.team')).map(el => el.text())
+                const result = matchEl.find('.result-score').text()
+                const { maps, format } = this._getMatchFormatAndMap(matchEl.find('.map-text').text())
+                const event = {
+                    name:  matchEl.find('.event-logo').attr('alt'),
+                    id: Number(matchEl.find('.event-logo').attr('src').split('/').pop().split('.')[0])
+                }
+
+                return { id, team1, team2, result, event, maps, format }
+            }))
+        }
+
+        return matches
     }
  }
 
