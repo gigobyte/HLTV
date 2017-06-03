@@ -147,6 +147,22 @@ class HLTV {
 
         return await streams
     }
+
+    async getActiveThreads() {
+        const response = await fetch(`${HLTV_URL}`).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const threads = toArray($('.activity')).map(threadEl => {
+            const title = threadEl.find('.topic').text()
+            const link = threadEl.attr('href')
+            const replies = Number(threadEl.contents().last().text())
+            const category = threadEl.attr('class').split(' ').find(c => c.includes('Cat')).replace('Cat', '')
+
+            return { title, link, replies, category }
+        })
+
+        return threads
+    }
  }
 
 export default new HLTV()
