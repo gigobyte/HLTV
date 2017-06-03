@@ -1,12 +1,12 @@
 {
   "name": "hltv",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm build",
     "build": "babel src --out-dir lib",
-    "start": "npm run build && node test/index.spec.js"
+    "start": "npm run build && node playground.js"
   },
   "repository": {
     "type": "git",
