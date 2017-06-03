@@ -122,6 +122,31 @@ class HLTV {
 
         return matches
     }
+
+    async getStreams({ loadLinks } = {}) {
+        const response = await fetch(`${HLTV_URL}`).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const streams = Promise.all(toArray($('a.col-box.streamer')).map(async streamEl => {
+            const name = streamEl.find('.name').text()
+            const category = streamEl.children().first().attr('title')
+            const country = {
+                name: streamEl.find('.flag').attr('title'),
+                code: streamEl.find('.flag').attr('src').split('/').pop().split('.')[0]
+            }
+            const viewers = Number(streamEl.contents().last().text())
+            const hltvLink = streamEl.attr('href')
+
+            if (loadLinks) {
+                const hltvPage = await fetch(`${HLTV_URL}${hltvLink}`).then(res => res.text())
+                var realLink = cheerio.load(hltvPage)('iframe').attr('src')
+            }
+
+            return { name, category, country, viewers, hltvLink, realLink }
+        }))
+
+        return await streams
+    }
  }
 
 export default new HLTV()
