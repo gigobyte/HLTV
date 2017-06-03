@@ -137,7 +137,7 @@ Option | Type | Default Value | Description |
 loadLinks | boolean | false | Enables parsing of the stream links. Its an option since it can slow down the response (every stream is a separate request).
 
 ```javascript
-hltv.getStreams().then((res) => {
+HLTV.getStreams().then((res) => {
   ...
 })
 ```
@@ -148,7 +148,7 @@ Property | Type | Note
 ---|---|---|
 name | string
 category | string | e.g. `"Caster"` or `"Female player"`
-country | string | An ISO 3166 code
+country | object | Object schema: `{name: string, code: string}`
 hltvLink | string
 realLink | string | Only if the `loadLinks` flag is enabled
 viewers | int
