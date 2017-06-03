@@ -102,7 +102,7 @@ class HLTV {
         let matches = []
 
         for (let i = 0; i < pages; i++) {
-            const response = await fetch(`${HLTV_URL}/results?offset=${i*100}/`).then(res => res.text())
+            const response = await fetch(`${HLTV_URL}/results?offset=${i*100}`).then(res => res.text())
             const $ = cheerio.load(response)
 
             matches = matches.concat(toArray($('.result-con .a-reset')).map(matchEl => {
