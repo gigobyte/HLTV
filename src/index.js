@@ -163,6 +163,46 @@ class HLTV {
 
         return threads
     }
+
+    async getTeamRankingDates() {
+        const response = await fetch(`${HLTV_URL}/ranking/teams/`).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const dates = toArray($('.filter-column-content')).reduce((result, datesEl) => {
+            const textItems = toArray(datesEl.find('.sidebar-single-line-item')).map(el => el.text().trim())
+            const textItemsFormatted = textItems.map(text => text.toLowerCase().replace(/nd|th|st/, ''))
+            const headerText = datesEl.prev().text().toLowerCase()
+
+            return {...result, [headerText]: textItemsFormatted}
+        }, {})
+
+        return dates
+    }
+
+    async getTeamRanking({ year='', month='', day='' } = {}) {
+        const response = await fetch(`${HLTV_URL}/ranking/teams/${year}/${month}/${day}`).then(res => res.text())
+        const $ = cheerio.load(response)
+
+        const teams = toArray($('.ranked-team')).map(teamEl => {
+            const points = Number(teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0])
+            const place = Number(teamEl.find('.position').text().substring(1))
+            const team = {
+                name: teamEl.find('.name').text(),
+                id: Number(teamEl.find('.name').attr('data-url').split('/')[2])
+            }
+            const change = do {
+                if (teamEl.find('.change').text() === '-') {
+                    0;
+                } else {
+                    Number(teamEl.find('.change').text())
+                }
+            }
+
+            return { points, place, team, change }
+        })
+
+        return teams
+    }
  }
 
 export default new HLTV()
