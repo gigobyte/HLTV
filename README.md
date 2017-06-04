@@ -20,6 +20,8 @@ Table of contents
   - [getLatestResults](#getlatestresults)
   - [getStreams](#getstreams)
   - [getActiveThreads](#getactivethreads)
+  - [getTeamRankingDates](#getteamrankingdates)
+  - [getTeamRanking](#getteamranking)
 
 ## Installation
 
@@ -178,3 +180,52 @@ link | string
 replies | int
 category | string | Thread's category (news, forum, match etc)
 ***
+
+#### getTeamRankingDates
+
+Returns the years/months/days on which team rankings have been updated. You can use this method to construct a filter for ```getTeamRanking```
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| - | - | - | - |
+
+```javascript
+HLTV.getTeamRankingDates().then((res) => {
+  HLTV.getTeamRanking({year: res.year[0], month: res.month[1], day: res.day[2]})
+})
+```
+
+Results in an object with the following schema:
+
+Property | Type | Note
+---|---|---|
+year | [string]
+month | [string]
+day | [string]
+***
+
+#### getTeamRanking
+
+Parses the info from the `hltv.org/ranking/teams/` page
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| year | string | - | - |
+| month | string | - | Must be lowercase and in MMMM format |
+| day | string | - | - |
+
+```javascript
+// If you don't provide a filter the latest ranking will be parsed
+HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
+  ...
+})
+```
+
+Results in an array of objects with the following schema:
+
+Property | Type | Note
+---|---|---|
+team | object | Object schema: `{name: string, id: int}`
+points | int
+place | int
+change | int | Change in placement since last ranking, e.g. `+3` or `-3`
