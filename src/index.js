@@ -6,6 +6,7 @@ const HLTV_URL = 'http://www.hltv.org'
 
 const toArray = elements => elements.toArray().map(cheerio)
 const fetchPage = async url => cheerio.load(await fetch(url).then(res => res.text()))
+const noop = () => {}
 
 class HLTV {
     _getMatchFormatAndMap(mapText) {
@@ -199,7 +200,7 @@ class HLTV {
         return teams
     }
 
-    async connectToScorebot({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }) {
+    async connectToScorebot({ id, onScoreboardUpdate=noop, onLogUpdate=noop, onConnect=noop, onDisconnect=noop }) {
         const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
         const url = $('#scoreboardElement').attr('data-scorebot-url')
         const matchId = $('#scoreboardElement').attr('data-scorebot-id')
