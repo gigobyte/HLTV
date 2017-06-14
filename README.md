@@ -243,3 +243,13 @@ Option | Type | Default Value | Description |
 | onLogUpdate | function? | - | Callback that is called when there is new game log data |
 | onConnect | function? | - | Callback that is called when a connection with the scorebot is established |
 | onDisconnect | function? | - | Callback that is called when the scorebot disconnects |
+
+```javascript
+// If you don't provide a filter the latest ranking will be parsed
+HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
+    ...
+}, onLogUpdate: (data) => {
+    ...
+}})
+
+```
