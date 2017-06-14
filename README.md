@@ -245,7 +245,6 @@ Option | Type | Default Value | Description |
 | onDisconnect | function? | - | Callback that is called when the scorebot disconnects |
 
 ```javascript
-// If you don't provide a filter the latest ranking will be parsed
 HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
     ...
 }, onLogUpdate: (data) => {
