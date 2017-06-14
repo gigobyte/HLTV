@@ -1,9 +1,11 @@
 import cheerio from 'cheerio'
 import fetch from 'isomorphic-fetch'
+import io from 'socket.io-client'
 
 const HLTV_URL = 'http://www.hltv.org'
 
 const toArray = elements => elements.toArray().map(cheerio)
+const fetchPage = async url => cheerio.load(await fetch(url).then(res => res.text()))
 
 class HLTV {
     _getMatchFormatAndMap(mapText) {
@@ -15,8 +17,7 @@ class HLTV {
     }
 
     async getMatch({ id }) {
-        const response = await fetch(`${HLTV_URL}/matches/${id}/-`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
 
         const teamEls = toArray($('div.teamName'))
 
@@ -55,8 +56,7 @@ class HLTV {
     }
 
     async getMatches() {
-        const response = await fetch(`${HLTV_URL}/matches`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}/matches`)
 
         const liveMatches = toArray($('.live-match .a-reset')).map(matchEl => {
             const id = Number(matchEl.attr('href').split('/')[2])
@@ -88,7 +88,7 @@ class HLTV {
                 }
             }
 
-            return { id, date, team1, team2, team1Id, team2Id, format, maps, label, even, live: false }
+            return { id, date, team1, team2, team1Id, team2Id, format, maps, label, event, live: false }
         })
 
         return [...liveMatches, ...upcomingMatches]
@@ -102,8 +102,7 @@ class HLTV {
         let matches = []
 
         for (let i = 0; i < pages; i++) {
-            const response = await fetch(`${HLTV_URL}/results?offset=${i*100}`).then(res => res.text())
-            const $ = cheerio.load(response)
+            const $ = await fetchPage(`${HLTV_URL}/results?offset=${i*100}`)
 
             matches = matches.concat(toArray($('.result-con .a-reset')).map(matchEl => {
                 const id = Number(matchEl.attr('href').split('/')[2])
@@ -124,8 +123,7 @@ class HLTV {
     }
 
     async getStreams({ loadLinks } = {}) {
-        const response = await fetch(`${HLTV_URL}`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}`)
 
         const streams = Promise.all(toArray($('a.col-box.streamer')).map(async streamEl => {
             const name = streamEl.find('.name').text()
@@ -138,8 +136,8 @@ class HLTV {
             const hltvLink = streamEl.attr('href')
 
             if (loadLinks) {
-                const hltvPage = await fetch(`${HLTV_URL}${hltvLink}`).then(res => res.text())
-                var realLink = cheerio.load(hltvPage)('iframe').attr('src')
+                const $streamPage = await fetchPage(`${HLTV_URL}${hltvLink}`)
+                var realLink = $streamPage('iframe').attr('src')
             }
 
             return { name, category, country, viewers, hltvLink, realLink }
@@ -149,8 +147,7 @@ class HLTV {
     }
 
     async getActiveThreads() {
-        const response = await fetch(`${HLTV_URL}`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}`)
 
         const threads = toArray($('.activity')).map(threadEl => {
             const title = threadEl.find('.topic').text()
@@ -165,8 +162,7 @@ class HLTV {
     }
 
     async getTeamRankingDates() {
-        const response = await fetch(`${HLTV_URL}/ranking/teams/`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}/ranking/teams/`)
 
         const dates = toArray($('.filter-column-content')).reduce((result, datesEl) => {
             const textItems = toArray(datesEl.find('.sidebar-single-line-item')).map(el => el.text().trim())
@@ -180,8 +176,7 @@ class HLTV {
     }
 
     async getTeamRanking({ year='', month='', day='' } = {}) {
-        const response = await fetch(`${HLTV_URL}/ranking/teams/${year}/${month}/${day}`).then(res => res.text())
-        const $ = cheerio.load(response)
+        const $ = await fetchPage(`${HLTV_URL}/ranking/teams/${year}/${month}/${day}`)
 
         const teams = toArray($('.ranked-team')).map(teamEl => {
             const points = Number(teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0])
@@ -202,6 +197,33 @@ class HLTV {
         })
 
         return teams
+    }
+
+    async connectToScorebot({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }) {
+        const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
+        const url = $('#scoreboardElement').attr('data-scorebot-url')
+        const matchId = $('#scoreboardElement').attr('data-scorebot-id')
+
+        const socket = io.connect(url)
+
+        socket.on('connect', () => {
+            onConnect()
+            socket.emit('readyForMatch', matchId)
+            socket.on('scoreboard', (data) => {
+                onScoreboardUpdate(data)
+            })
+            socket.on('log', (data) => {
+                onLogUpdate(data)
+            })
+        })
+
+        socket.on('reconnect', () => {
+            socket.emit('readyForMatch', matchId)
+        })
+
+        socket.on('disconnect', () => {
+            onDisconnect()
+        })
     }
  }
 

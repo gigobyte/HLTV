@@ -7,3 +7,8 @@ HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
 HLTV.getActiveThreads().then(res => console.log(res))
 HLTV.getTeamRanking().then(res => console.log(res))
 HLTV.getTeamRankingDates().then(res => console.log(res))
+HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
+    console.log(data)
+}, onLogUpdate: (data) => {
+    console.log(data)
+}})
