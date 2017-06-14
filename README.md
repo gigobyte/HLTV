@@ -22,7 +22,7 @@ Table of contents
   - [getActiveThreads](#getactivethreads)
   - [getTeamRankingDates](#getteamrankingdates)
   - [getTeamRanking](#getteamranking)
-  - [connectToScorebot](#connectotoscorebot)
+  - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
 
