@@ -22,6 +22,7 @@ Table of contents
   - [getActiveThreads](#getactivethreads)
   - [getTeamRankingDates](#getteamrankingdates)
   - [getTeamRanking](#getteamranking)
+  - [connectToScorebot](#connectotoscorebot)
 
 ## Installation
 
@@ -229,3 +230,16 @@ team | object | Object schema: `{name: string, id: int}`
 points | int
 place | int
 change | int | Change in placement since last ranking, e.g. `+3` or `-3`
+***
+
+#### connectToScorebot
+
+Presents an interface to receive data when the HLTV scorebot updates
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| id | int | - | The match ID |
+| onScoreboardUpdate | function? | - | Callback that is called when there is new scoreboard data |
+| onLogUpdate | function? | - | Callback that is called when there is new game log data |
+| onConnect | function? | - | Callback that is called when a connection with the scorebot is established |
+| onDisconnect | function? | - | Callback that is called when the scorebot disconnects |
