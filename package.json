@@ -8,10 +8,7 @@
     "build": "babel src --out-dir lib",
     "start": "npm run build && node playground.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gigobyte/HLTV.git"
-  },
+  "repository": "git+https://github.com/gigobyte/HLTV.git",
   "keywords": [
     "hltv",
     "api",
