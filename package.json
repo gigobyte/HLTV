@@ -1,12 +1,13 @@
 {
   "name": "hltv",
-  "version": "1.2.1",
+  "version": "1.2.11",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "scripts": {
     "prepublish": "npm build",
-    "build": "babel src --out-dir lib",
-    "start": "npm run build && node playground.js"
+    "build": "tsc",
+    "start": "ts-node src/playground",
+    "doc": "typedoc --out documentation src"
   },
   "repository": "git+https://github.com/gigobyte/HLTV.git",
   "keywords": [
@@ -23,18 +24,17 @@
   },
   "homepage": "https://github.com/gigobyte/HLTV#readme",
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-core": "^6.18.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-0": "^6.16.0"
+    "ts-node": "^3.2.0",
+    "typedoc": "^0.7.1",
+    "typescript": "^2.4.1"
   },
   "dependencies": {
-    "babel-runtime": "^6.18.0",
+    "@types/cheerio": "^0.22.2",
+    "@types/socket.io-client": "^1.4.29",
     "cheerio": "^0.22.0",
     "isomorphic-fetch": "^2.2.1",
-    "socket.io-client": "^2.0.3"
+    "isomorphic-fetch.d.ts": "git+https://git@github.com/nozzlegear/isomorphic-fetch.d.ts.git",
+    "socket.io-client": "^2.0.3",
+    "typedoc-markdown-theme": "^0.0.4"
   }
 }

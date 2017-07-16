@@ -1,0 +1,16 @@
+import HLTV from './index'
+// HLTV.getMatch({id: 2311263}).then(res => console.log(res))
+// HLTV.getMatches().then(res => console.log(res))
+// HLTV.getLatestResults({pages: 1}).then(res => console.log(res))
+// HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
+// HLTV.getActiveThreads().then(res => console.log(res))
+// HLTV.getTeamRanking().then(res => console.log(res))
+// HLTV.getTeamRankingDates().then(res => console.log(res))
+// HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
+//     console.log(data)
+// }, onLogUpdate: (data) => {
+//     const a = data.log[0]
+// }})
+// HLTV.getMatchesStats({startDate: '2017-05-21', endDate: '2017-06-21'}).then(res => console.log(res))
+// HLTV.getMatchStats({id: 49558}).then(res => console.dir(res, { depth: null }))
+HLTV.getMatches().then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
