@@ -4,7 +4,7 @@ import MapSlug from '../enums/MapSlug'
 export type VetoType = 'removed' | 'picked'
 
 interface Veto {
-    team?: Team,
+    team: Team,
     map: MapSlug,
     type: VetoType
 }
