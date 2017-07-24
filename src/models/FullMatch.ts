@@ -17,7 +17,10 @@ interface FullMatch {
     readonly event: Event,
     readonly maps: MapResult[],
     readonly streams: Stream[],
-    readonly players?: {[key: number]: Player[]},
+    readonly players?: {
+        team1: Player[],
+        team2: Player[]
+    },
     readonly title?: string,
     readonly live: boolean,
     readonly hasScorebot: boolean,

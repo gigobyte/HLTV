@@ -11,6 +11,6 @@ import HLTV from './index'
 // }, onLogUpdate: (data) => {
 //     const a = data.log[0]
 // }})
-// HLTV.getMatchesStats({startDate: '2017-05-21', endDate: '2017-06-21'}).then(res => console.log(res))
-// HLTV.getMatchStats({id: 49558}).then(res => console.dir(res, { depth: null }))
-HLTV.getMatches().then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
+// HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
+// HLTV.getMatch({id: 2312399}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
+HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))

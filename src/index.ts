@@ -21,6 +21,11 @@ import HeadToHeadResult from './models/HeadToHeadResult'
 import Highlight from './models/Highlight'
 import Veto from './models/Veto'
 import MatchStats from './models/MatchStats'
+import FullMatchMapStats, {
+    PlayerStat, MatchStatsOverview, TeamStatComparison,
+    PlayerPerformanceStats, PlayerStats, PerformanceOverview
+} from './models/FullMatchMapStats'
+import RoundOutcome, { Outcome, WeakRoundOutcome } from './models/RoundOutcome'
 import MapSlug from './enums/MapSlug'
 import StreamCategory from './enums/StreamCategory'
 import ThreadCategory from './enums/ThreadCategory'
@@ -41,6 +46,8 @@ export type GetMatchesStatsParams = {
     matchType?: MatchType,
     maps?: Map[]
 }
+
+export type PlayerPerformanceStatsMap = {[key: number]: PlayerPerformanceStats}
 
 class HLTV {
     public static readonly MatchType = MatchType
@@ -77,7 +84,7 @@ class HLTV {
     }
 
     private static mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Veto => {
-        const [ teamName, map ] = el.text().replace(/^\d. /, '').split(/removed|picked/);
+        const [ teamName, map ] = el.text().replace(/^\d. /, '').split(/removed|picked/)
 
         return {
             team: [team1, team2].find(t => t.name === teamName.trim()) as Team,
@@ -86,10 +93,27 @@ class HLTV {
         }
     }
 
+    private static mapRoundElementToModel = (team1Id: number, team2Id: number) => (el: Cheerio, i: number): WeakRoundOutcome => {
+        const outcomeString = (E.popSlashSource(el) as string).split('.')[0]
+        const outcome = Object.entries(Outcome).find(([_, v]) => v === outcomeString) as Outcome | undefined
+
+        return {
+            outcome: outcome && outcome[1] as Outcome,
+            score: el.attr('title'),
+            ctTeam: i < 15 ? team1Id : team2Id,
+            tTeam: i < 15 ? team2Id : team1Id
+        }
+    }
 
     public static async getMatch({ id }: { id: number }): Promise<FullMatch> {
         const $ = await HLTV.fetchPage(`${HLTV.URL}/matches/${id}/-`)
 
+        const title = $('.timeAndEvent .text').text() === ' ' ? undefined : $('.timeAndEvent .text').text()
+        const date = Number($('.timeAndEvent .date').attr('data-unix'))
+        const format = $('.preformatted-text').text().split('\n')[0]
+        const additionalInfo = $('.preformatted-text').text().split('\n').slice(1).join(' ').trim()
+        const live = $('.countdown').text() === 'LIVE'
+        const hasScorebot = $('#scoreboardElement').length !== 0
         const teamEls = $('div.teamName')
 
         const team1: Team | undefined = teamEls.first().text() ? {
@@ -101,13 +125,6 @@ class HLTV {
             name: teamEls.last().text(),
             id: Number(E.popSlashSource(teamEls.last().prev()))
         } : undefined
-
-        const title = $('.timeAndEvent .text').text() === ' ' ? undefined : $('.timeAndEvent .text').text()
-        const date = Number($('.timeAndEvent .date').attr('data-unix'))
-        const format = $('.preformatted-text').text().split('\n')[0]
-        const additionalInfo = $('.preformatted-text').text().split('\n').slice(1).join(' ').trim()
-        const live = $('.countdown').text() === 'LIVE'
-        const hasScorebot = $('#scoreboardElement').length !== 0
 
         const vetoes = team1 && team2 && HLTV.toArray($('.veto-box').last().find('.padding > div'))
                                               .slice(0, -1).map(el => HLTV.mapVetoElementToModel(el, team1, team2))
@@ -123,12 +140,12 @@ class HLTV {
         }))
 
         const players = team1 && team2 && {
-            [team1.id]: HLTV.toArray($('div.players').first().find('tr').last().find('.flagAlign')).map(HLTV.getMatchPlayer),
-            [team2.id]: HLTV.toArray($('div.players').last().find('tr').last().find('.flagAlign')).map(HLTV.getMatchPlayer)
+            team1: HLTV.toArray($('div.players').first().find('tr').last().find('.flagAlign')).map(HLTV.getMatchPlayer),
+            team2: HLTV.toArray($('div.players').last().find('tr').last().find('.flagAlign')).map(HLTV.getMatchPlayer)
         }
 
         const streams: Stream[] = HLTV.toArray($('.stream-box')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
-            name: streamEl.find('.flagAlign').text(),
+            name: streamEl.find('.flagAlign .spoiler').text(),
             link: streamEl.attr('data-stream-embed'),
             viewers: Number(streamEl.find('.viewers').text())
         }))
@@ -336,38 +353,154 @@ class HLTV {
     }
 
     public static async getMatchesStats({ startDate, endDate, matchType, maps }: GetMatchesStatsParams = {}): Promise<MatchStats[]> {
-        const query = `startDate=${startDate}&endData=${endDate}&matchtype=${matchType}${['', ...maps].join('&maps=')}`
-        const $ = await HLTV.fetchPage(`${HLTV.URL}/stats/matches?${query}`)
+        const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${['', ...maps].join('&maps=')}`
 
-        const matches: MatchStats[] = HLTV.toArray($('.matches-table tbody tr')).map(matchEl => {
-            const id = Number(matchEl.find('.date-col a').attr('href').split('/')[4])
-            const date = Number(matchEl.find('.time').attr('data-unix'))
-            const map = matchEl.find('.dynamic-map-name-short').text() as MapSlug
+        let page = 0
+        let $: CheerioStatic
+        let matches = [] as MatchStats[]
 
-            const team1: Team = {
-                id: Number(matchEl.find('.team-col a').first().attr('href').split('/')[3]),
-                name: matchEl.find('.team-col a').first().text()
-            }
+        do {
+            $ = await HLTV.fetchPage(`${HLTV.URL}/stats/matches?${query}&offset=${page*50}`)
+            page++
 
-            const team2: Team = {
-                id: Number(matchEl.find('.team-col a').last().attr('href').split('/')[3]),
-                name: matchEl.find('.team-col a').last().text()
-            }
+            matches = matches.concat(HLTV.toArray($('.matches-table tbody tr')).map(matchEl => {
+                const id = Number(matchEl.find('.date-col a').attr('href').split('/')[4])
+                const date = Number(matchEl.find('.time').attr('data-unix'))
+                const map = matchEl.find('.dynamic-map-name-short').text() as MapSlug
 
-            const event: Event = {
-                id: Number(matchEl.find('.event-col a').attr('href').split('event=')[1].split('&')[0]),
-                name: matchEl.find('.event-col a').text()
-            }
+                const team1: Team = {
+                    id: Number(matchEl.find('.team-col a').first().attr('href').split('/')[3]),
+                    name: matchEl.find('.team-col a').first().text()
+                }
 
-            const result = {
-                team1: Number(matchEl.find('.team-col .score').first().text().trim().replace(/\(|\)/g, '')),
-                team2: Number(matchEl.find('.team-col .score').last().text().trim().replace(/\(|\)/g, ''))
-            }
+                const team2: Team = {
+                    id: Number(matchEl.find('.team-col a').last().attr('href').split('/')[3]),
+                    name: matchEl.find('.team-col a').last().text()
+                }
 
-            return { id, date, map, team1, team2, event, result }
-        })
+                const event: Event = {
+                    id: Number(matchEl.find('.event-col a').attr('href').split('event=')[1].split('&')[0]),
+                    name: matchEl.find('.event-col a').text()
+                }
+
+                const result = {
+                    team1: Number(matchEl.find('.team-col .score').first().text().trim().replace(/\(|\)/g, '')),
+                    team2: Number(matchEl.find('.team-col .score').last().text().trim().replace(/\(|\)/g, ''))
+                }
+
+                return { id, date, map, team1, team2, event, result }
+            }))
+        } while($('.matches-table tbody tr').length !== 0)
 
         return matches
+    }
+
+    public static async getMatchMapStats({ id }: { id: number }): Promise<FullMatchMapStats> {
+        const getMatchInfoRowValues = ($: CheerioStatic, index: number): TeamStatComparison => {
+            const [ stat1, stat2 ] =  $($('.match-info-row').get(index)).find('.right').text().split(' : ').map(Number)
+
+            return {
+                team1: stat1,
+                team2: stat2
+            }
+        }
+
+        const getPlayerTopStat = ($: CheerioStatic, index: number): PlayerStat => {
+            return {
+                id: Number($($('.most-x-box').get(index)).find('.name > a').attr('href').split('/')[3]),
+                name: $($('.most-x-box').get(index)).find('.name > a').text(),
+                value: Number($($('.most-x-box').get(index)).find('.valueName').text())
+            }
+        }
+
+        const [ m$, p$ ] = await Promise.all([
+            HLTV.fetchPage(`${HLTV.URL}/stats/matches/mapstatsid/${id}/-`),
+            HLTV.fetchPage(`${HLTV.URL}/stats/matches/performance/mapstatsid/${id}/-`)
+        ])
+
+        const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])
+        const map = HLTV.getMapSlug(m$(m$('.match-info-box').contents().get(3)).text().replace(/\n| /g, ''))
+        const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix'))
+
+        const team1: Team = {
+            id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
+            name: m$('.team-left .team-logo').attr('title')
+        }
+
+        const team2: Team = {
+            id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
+            name: m$('.team-right .team-logo').attr('title')
+        }
+
+        const event: Event = {
+            id: Number(m$('.match-info-box .text-ellipsis').first().attr('href').split('event=')[1]),
+            name: m$('.match-info-box .text-ellipsis').first().text()
+        }
+
+        const teamStatProperties = ['rating', 'firstKills', 'clutchesWon']
+        const teamStats = teamStatProperties.reduce((res, prop, i) => ({...res, [prop]: getMatchInfoRowValues(m$, i+1)}), {})
+
+        const mostXProperties = ['mostKills', 'mostDamage', 'mostAssists', 'mostAWPKills', 'mostFirstKills', 'bestRating']
+        const mostX = mostXProperties.reduce((res, prop, i) => ({...res, [prop]: getPlayerTopStat(m$, i)}), {})
+
+        const overview = {...teamStats, ...mostX} as MatchStatsOverview
+
+        const fullRoundHistory: WeakRoundOutcome[] = HLTV.toArray(m$('.round-history-outcome')).map(HLTV.mapRoundElementToModel(team1.id, team2.id))
+        const [ rh1, rh2 ] = [fullRoundHistory.slice(0, 30), fullRoundHistory.slice(30, 60)]
+
+        const roundHistory: RoundOutcome[] = rh1.reduce((history, round, i) => history.concat([round, rh2[i]]), [] as WeakRoundOutcome[])
+                                                .filter(r => r.outcome) as RoundOutcome[]
+
+        const playerPerformanceStats: PlayerPerformanceStatsMap = HLTV.toArray(p$('.highlighted-player')).reduce((map, playerEl) => {
+            const graphData = playerEl.find('.graph.small').attr('data-fusionchart-config')
+            const data = {
+                id: Number(playerEl.find('.headline span a').attr('href').split('/')[2]),
+                killsPerRound: Number(graphData.split('Kills per round: ')[1].split('"')[0]),
+                deathsPerRound: Number(graphData.split('Deaths / round: ')[1].split('"')[0]),
+                impact: Number(graphData.split('Impact rating: ')[1].split('"')[0])
+            }
+
+            map[data.id] = data
+
+            return map
+        }, {})
+
+        const playerOverviewStats: PlayerStats[] = HLTV.toArray(m$('.stats-table tbody tr')).map(rowEl => {
+            const id = Number(rowEl.find('.st-player a').attr('href').split('/')[3])
+            const performanceStats = playerPerformanceStats[id]
+
+            return {
+                id,
+                name: rowEl.find('.st-player a').text(),
+                kills: Number(rowEl.find('.st-kills').contents().first().text()),
+                hsKills: Number(rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')),
+                deaths: Number(rowEl.find('.st-deaths').text()),
+                KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')),
+                killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),
+                ADR: Number(rowEl.find('.st-adr').text()),
+                firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),
+                rating: Number(rowEl.find('.st-rating').text()),
+                ...performanceStats
+            } as PlayerStats
+        })
+
+        const playerStats = {
+            team1: playerOverviewStats.slice(0, 5),
+            team2: playerOverviewStats.slice(5)
+        }
+
+        const performanceOverview = HLTV.toArray(p$('.overview-table tr')).slice(1).reduce((res, rowEl) => {
+            const stat = rowEl.find('.name-column').text()
+            const team1Stat = Number(rowEl.find('.team1-column').text())
+            const team2Stat = Number(rowEl.find('.team2-column').text())
+            const property = stat.toLowerCase()
+
+            return { team1: {...res.team1, [property]: team1Stat}, team2: {...res.team2, [property]: team2Stat}}
+        }, {} as PerformanceOverview)
+
+        return {
+            matchPageID, map, date, team1, team2, event, overview, roundHistory, playerStats, performanceOverview
+        }
     }
 
     public static async connectToScorebot({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) {
