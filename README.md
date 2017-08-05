@@ -71,6 +71,7 @@ HLTV.getMatches().then((res) => {
 ```
 
 **[See schema for Live Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
+
 **[See schema for Upcoming Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/UpcomingMatch.ts)**
 
 ***
@@ -122,7 +123,7 @@ Option | Type | Default Value | Description |
 pages | int | 1 | Number of pages with results to be parsed |
 
 ```javascript
-HLTV.getLatestResults({pages: 2}).then((res) => {
+HLTV.getResults({pages: 2}).then((res) => {
   ...
 })
 ```
@@ -157,7 +158,7 @@ Option | Type | Default Value | Description |
 | - | - | - | - |
 
 ```javascript
-HLTV.getActiveThreads().then((res) => {
+HLTV.getRecentThreads().then((res) => {
   ...
 })
 ```
