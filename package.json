@@ -1,10 +1,11 @@
 {
   "name": "hltv",
-  "version": "1.2.11",
+  "version": "2.0.0",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "prepublish": "npm build",
+    "prepare": "npm build",
     "build": "tsc",
     "start": "ts-node src/playground",
     "doc": "typedoc --out documentation src"
@@ -34,7 +35,7 @@
     "cheerio": "^0.22.0",
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-fetch.d.ts": "git+https://git@github.com/nozzlegear/isomorphic-fetch.d.ts.git",
-    "jsdoc": "^3.5.3",
+    "jsdoc": "^3.5.4",
     "socket.io-client": "^2.0.3"
   }
 }
