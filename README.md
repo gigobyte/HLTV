@@ -17,10 +17,11 @@ Table of contents
 - [API](#api)
   - [getMatch](#getmatch)
   - [getMatches](#getmatches)
-  - [getLatestResults](#getlatestresults)
+  - [getMatchesStats](#getmatchesstats)
+  - [getMatchMapStats](#getmatchmapstats)
+  - [getResults](#getresults)
   - [getStreams](#getstreams)
-  - [getActiveThreads](#getactivethreads)
-  - [getTeamRankingDates](#getteamrankingdates)
+  - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
   - [connectToScorebot](#connecttoscorebot)
 
@@ -33,7 +34,7 @@ Table of contents
 ```javascript
 import HLTV from 'hltv'
 // Or if you're stuck with CommonJS
-const HLTV = require('hltv')
+const { HLTV } = require('hltv')
 ```
 
 ## API
@@ -52,22 +53,7 @@ HLTV.getMatch({id: 2306295}).then(res => {
 })
 ```
 
-Results in an object with the following schema:
-
-Property | Type | Note
----|---|---|
-team1 | string?
-team1Id | int?
-team2 | string?
-team2Id | int?
-date | int | Unix timestamp
-format | string
-additionalInfo | string? | e.g. `"* Grand final"`
-event | object | Object schema: `{name: string, link: string}`
-maps | [objects] | Object schema: `{map: string, result: string}`
-streams | [objects] | Object schema: `{name: string, link: string}`
-players | object | Object schema: `{$team1$: [string], $team2$: [string]}`
-title | string? | Exists when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatch.ts)**
 
 ***
 
@@ -83,25 +69,51 @@ HLTV.getMatches().then((res) => {
   ...
 })
 ```
-Results in an array of objects with the following schema:
 
-Property | Type | Note
----|---|---|
-date | int | Unix timestamp, will be undefined if the match is live
-team1 | string?
-team1Id | int?
-team2 | string?
-team2Id | int?
-maps | [string]? | Only exists if the match is BO1 or if the match is live
-format | string? |
-label | string? | Exists when the teams are still unknown (e.g. `"iBP Masters Grand Final"`)
-id | int
-event | object | Object schema: `{name: string, id: int}`
-live | boolean
+**[See schema for Live Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
+**[See schema for Upcoming Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/UpcomingMatch.ts)**
 
 ***
 
-#### getLatestResults
+#### getMatchesStats
+
+Parses all matches from the `hltv.org/stats/matches` page
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| startDate | string? | - | - |
+| endDate | string? | - | - |
+| matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? | - | - |
+| maps | [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]? | - | - |
+```javascript
+HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
+  ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchStats.ts)**
+
+***
+
+
+#### getMatchMapStats
+
+Parses info from the single map stats page (`hltv.org/stats/matches/mapstatsid/*/*`)
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| id | number | - | - |
+```javascript
+HLTV.getMatchMapStats({id: 49968}).then((res) => {
+  ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchMapStats.ts#L63)**
+
+***
+
+#### getResults
 
 Parses all matches from the `hltv.org/results/` page
 
@@ -114,20 +126,7 @@ HLTV.getLatestResults({pages: 2}).then((res) => {
   ...
 })
 ```
-
-Results in an array of objects with the following schema:
-
-Property | Type | Note
----|---|---|
-result | string | e.g. `"2 - 0"` or `"16 - 9"`
-team1 | string
-team1Id | int
-team2 | string
-team2Id | int
-maps | [string]? | Only exists if the match is BO1
-format | string
-id | string
-event | object | Object schema: `{name: string, id: int}`
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchResult.ts)**
 
 ***
 
@@ -145,20 +144,11 @@ HLTV.getStreams().then((res) => {
 })
 ```
 
-Results in an array of objects with the following schema:
-
-Property | Type | Note
----|---|---|
-name | string
-category | string | e.g. `"Caster"` or `"Female player"`
-country | object | Object schema: `{name: string, code: string}`
-hltvLink | string
-realLink | string | Only if the `loadLinks` flag is enabled
-viewers | int
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullStream.ts)**
 
 ***
 
-#### getActiveThreads
+#### getRecentThreads
 
 Parses the latest threads on the front page of HLTV
 
@@ -171,39 +161,7 @@ HLTV.getActiveThreads().then((res) => {
   ...
 })
 ```
-
-Results in an array of objects with the following schema:
-
-Property | Type | Note
----|---|---|
-title | string
-link | string
-replies | int
-category | string | Thread's category (news, forum, match etc)
-***
-
-#### getTeamRankingDates
-
-Returns the years/months/days on which team rankings have been updated. You can use this method to construct a filter for ```getTeamRanking```
-
-Option | Type | Default Value | Description |
-:---:|:---:|:---:|:---:|
-| - | - | - | - |
-
-```javascript
-HLTV.getTeamRankingDates().then((res) => {
-  HLTV.getTeamRanking({year: res.year[0], month: res.month[1], day: res.day[2]})
-})
-```
-
-Results in an object with the following schema:
-
-Property | Type | Note
----|---|---|
-year | [string]
-month | [string]
-day | [string]
-***
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/Thread.ts)**
 
 #### getTeamRanking
 
@@ -221,15 +179,8 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
   ...
 })
 ```
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/TeamRanking.ts)**
 
-Results in an array of objects with the following schema:
-
-Property | Type | Note
----|---|---|
-team | object | Object schema: `{name: string, id: int}`
-points | int
-place | int
-change | int | Change in placement since last ranking, e.g. `+3` or `-3`
 ***
 
 #### connectToScorebot
@@ -252,3 +203,7 @@ HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
 }})
 
 ```
+
+The ```onLogUpdate``` callback is passed an [LogUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/LogUpdate.ts) object
+
+The ```onScoreboardUpdate``` callback is passed an [ScoreboardUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/ScoreboardUpdate.ts) object
