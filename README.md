@@ -23,6 +23,7 @@ Table of contents
   - [getStreams](#getstreams)
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
+  - [getTeam](#getteam)
   - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
@@ -181,6 +182,24 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
 })
 ```
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/TeamRanking.ts)**
+
+***
+
+#### getTeam
+
+Parses the info from the `hltv.org/team/` page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+id | int | - | The team id
+
+```javascript
+HLTV.getTeam({id: 6137}).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
 
 ***
 
