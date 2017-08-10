@@ -3,6 +3,7 @@ import * as fetch from 'isomorphic-fetch'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
 import Player from '../models/Player'
+import { MapStatistic } from '../models/FullTeam'
 import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
@@ -48,4 +49,28 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (el:
         ctTeam: i < 15 ? team1Id : team2Id,
         tTeam: i < 15 ? team2Id : team1Id
     }
+}
+
+export const getMapsStatistics = (source: string): {[key: string]: MapStatistic} | undefined => {
+    const valueRegex = /"value":"(\d|\.)+%?"/g
+    const labelRegex = /label":"\w+/g
+    const splitRegex = /%?"/
+
+    if (!source.match(labelRegex)) {
+        return;
+    }
+
+    const maps = (source.match(labelRegex) as RegExpMatchArray).map(x => x.split(':"')[1])
+    const values = (source.match(valueRegex) as RegExpMatchArray).map(x => Number(x.split(':"')[1].split(splitRegex)[0]))
+
+    const getStats = index => ({
+        winningPercentage: values[index],
+        ctWinningPercentage: values[index + maps.length * 1],
+        tWinningPercentage: values[index + maps.length * 2],
+        timesPlayed: values[index + maps.length * 3]
+    })
+
+    return maps.reduce((stats, map, i) => ({
+        ...stats, [MapSlug[map]]: getStats(i)
+    }), {})
 }
