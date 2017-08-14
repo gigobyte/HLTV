@@ -21,7 +21,7 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
         }
 
         const team2: Team = {
-            name: teamEls.last().text(),
+            name: teamEls.last().attr('title'),
             id: Number(E.popSlashSource(teamEls.last()))
         }
 
