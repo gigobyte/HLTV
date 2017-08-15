@@ -24,6 +24,7 @@ Table of contents
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
   - [getTeam](#getteam)
+  - [getTeamStats](#getteamstats)
   - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
@@ -200,6 +201,24 @@ HLTV.getTeam({id: 6137}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
+
+***
+
+#### getTeamStats
+
+Parses the info from the `hltv.org/stats/teams/` page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+id | int | - | The team id
+
+```javascript
+HLTV.getTeamStats({id: 6137}).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeamStats.ts)**
 
 ***
 
