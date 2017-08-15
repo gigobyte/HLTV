@@ -23,12 +23,12 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     const teamEls = $('div.teamName')
 
     const team1: Team | undefined = teamEls.first().text() ? {
-        name: teamEls.first().text(),
+        name: teamEls.eq(0).text(),
         id: Number(E.popSlashSource(teamEls.first().prev()))
     } : undefined
 
     const team2: Team | undefined = teamEls.last().text() ? {
-        name: teamEls.last().text(),
+        name: teamEls.eq(1).text(),
         id: Number(E.popSlashSource(teamEls.last().prev()))
     } : undefined
 
