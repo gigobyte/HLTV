@@ -17,7 +17,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     const title = $('.timeAndEvent .text').text() === ' ' ? undefined : $('.timeAndEvent .text').text()
     const date = Number($('.timeAndEvent .date').attr('data-unix'))
     const format = $('.preformatted-text').text().split('\n')[0]
-    const additionalInfo = $('.preformatted-text').text().split('\n').slice(1).join(' ').trim()
+    const additionalInfo = $('.preformatted-text').text().split('\n').length < 2 ? undefined : $('.preformatted-text').text().split('\n').slice(1).join(' ').trim()
     const live = $('.countdown').text() === 'LIVE'
     const hasScorebot = $('#scoreboardElement').length !== 0
     const teamEls = $('div.teamName')
