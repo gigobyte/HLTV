@@ -12,6 +12,7 @@ import HLTV from './index'
 //     const a = data.log[0]
 // }})
 // HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
-// HLTV.getMatch({id: 2313303}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
+// HLTV.getMatch({id: 2312432}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))
-HLTV.getTeam({id: 6799}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+// HLTV.getTeam({id: 6667}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
