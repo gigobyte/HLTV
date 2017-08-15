@@ -74,3 +74,9 @@ export const getMapsStatistics = (source: string): {[key: string]: MapStatistic}
         ...stats, [MapSlug[map]]: getStats(i)
     }), {})
 }
+
+export const getTimestamp = (source: string): number => {
+    const [ day, month, year ] = source.split('/')
+
+    return new Date([month, day, year].join('/')).getTime()
+}

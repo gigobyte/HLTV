@@ -8,6 +8,7 @@ import getResults from './endpoints/getResults'
 import getStreams from './endpoints/getStreams'
 import getTeamRanking from './endpoints/getTeamRanking'
 import getTeam from './endpoints/getTeam'
+import getTeamStats from './endpoints/getTeamStats'
 
 const HLTV = {
     connectToScorebot,
@@ -19,7 +20,8 @@ const HLTV = {
     getResults,
     getStreams,
     getTeamRanking,
-    getTeam
+    getTeam,
+    getTeamStats
 }
 
 export default HLTV
@@ -40,8 +42,9 @@ import MatchType from './enums/MatchType'
 import Thread from './models/Thread'
 import Map from './enums/Map'
 import FullTeam from './models/FullTeam'
+import FullTeamStats from './models/FullTeamStats'
 export {
     FullMatch, FullMatchMapStats, Map, FullStream, LiveMatch,
     LogUpdate, ScoreboardUpdate, TeamRanking, UpcomingMatch,
-    MatchResult, MatchStats, MatchType, Thread, FullTeam
+    MatchResult, MatchStats, MatchType, Thread, FullTeam, FullTeamStats
 }
