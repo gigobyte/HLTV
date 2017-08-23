@@ -51,7 +51,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     }
 
     const streams: Stream[] = toArray($('.stream-box')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
-        name: streamEl.find('.flagAlign .spoiler').text(),
+        name: streamEl.find('.flagAlign').text(),
         link: streamEl.attr('data-stream-embed'),
         viewers: Number(streamEl.find('.viewers').text())
     }))
