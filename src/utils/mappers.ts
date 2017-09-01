@@ -15,6 +15,13 @@ export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Veto => {
     const [ teamName, map ] = el.text().replace(/^\d. /, '').split(/removed|picked/)
 
+    if (!map || !teamName) {
+        return {
+            map: getMapSlug(el.text().split(' ')[1]),
+            type: 'other'
+        }
+    }
+
     return {
         team: [team1, team2].find(t => t.name === teamName.trim()) as Team,
         map: getMapSlug(map.trim()),

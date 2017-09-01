@@ -1,10 +1,10 @@
 import Team from './Team'
 import MapSlug from '../enums/MapSlug'
 
-export type VetoType = 'removed' | 'picked'
+export type VetoType = 'removed' | 'picked' | 'other'
 
 interface Veto {
-    team: Team,
+    team?: Team,
     map: MapSlug,
     type: VetoType
 }
