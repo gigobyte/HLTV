@@ -15,4 +15,6 @@ import HLTV from './index'
 // HLTV.getMatch({id: 2312432}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))
 // HLTV.getTeam({id: 6667}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
-HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+// HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+
+HLTV.getMatch({id: 2314539}).then(res => console.log(res))
