@@ -10,6 +10,7 @@ import Highlight from './Highlight'
 interface FullMatch {
     readonly team1?: Team,
     readonly team2?: Team,
+    readonly winnerTeam?: Team,
     readonly date: number,
     readonly format: string,
     readonly additionalInfo: string,

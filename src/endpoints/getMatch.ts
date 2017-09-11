@@ -32,6 +32,16 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
         id: Number(E.popSlashSource(teamEls.last().prev()))
     } : undefined
 
+    let winnerTeam: Team | undefined
+
+    if ($('.team1-gradient').children().last().hasClass('won')) {
+        winnerTeam = team1
+    }
+
+    if ($('.team2-gradient').children().last().hasClass('won')) {
+        winnerTeam = team2
+    }
+
     const vetoes = team1 && team2 && toArray($('.veto-box').last().find('.padding > div'))
                                                            .slice(0, -1).map(el => mapVetoElementToModel(el, team1, team2))
 
@@ -83,7 +93,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     }))
 
     return {
-        team1, team2, date, format, additionalInfo, event, maps, players, streams, live,
+        team1, team2, winnerTeam, date, format, additionalInfo, event, maps, players, streams, live,
         title, hasScorebot, highlightedPlayer, headToHead, vetoes, highlights
     }
 }
