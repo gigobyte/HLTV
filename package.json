@@ -1,11 +1,11 @@
 {
   "name": "hltv",
-  "version": "2.2.1",
+  "version": "2.2.3",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepare": "npm build",
+    "prepare": "npm run build",
     "build": "tsc",
     "start": "ts-node src/playground",
     "doc": "typedoc --out documentation src"
