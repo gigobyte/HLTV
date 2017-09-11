@@ -40,10 +40,17 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
         id: Number($('.timeAndEvent .event').children().first().attr('href').split('/')[2])
     }
 
-    const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
-        name: getMapSlug(mapEl.find('.mapname').text()),
-        result: mapEl.find('.results').text()
-    }))
+    const maps: MapResult[] = toArray($('.mapholder')).map((mapEl) => {
+        const result = mapEl.find('.results');
+        return {
+            name: getMapSlug(mapEl.find('.mapname').text()),
+            result: result.text(),
+            t_first: result.find('.t').first().text(),
+            ct_first: result.find('.ct').first().text(),
+            t_second: result.find('.t').last().text(),
+            ct_second: result.find('.ct').last().text(),
+        }
+    });
 
     const players = team1 && team2 && {
         team1: toArray($('div.players').first().find('tr').last().find('.flagAlign')).map(getMatchPlayer),
