@@ -1,5 +1,4 @@
 import * as cheerio from 'cheerio'
-import fetch from 'omni-fetch'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
 import Player from '../models/Player'
@@ -8,7 +7,18 @@ import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 
-export const fetchPage = async (url: string) => cheerio.load(await fetch(url).then((res: any) => res.text()))
+const rp = require('request-promise');
+const Agent = require('socks5-http-client/lib/Agent');
+export const fetchPage = async (url: string) => cheerio.load(await rp.get(
+    {
+        url: url,
+        agentClass: Agent,
+        agentOptions: {
+            socksHost: process.env.SOCKET_HOST,
+            socksPort: process.env.SOCKET_PORT
+        }
+    })
+    .then((res: any) => res.text()))
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
