@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import * as fetch from 'isomorphic-fetch'
+import fetch from 'omni-fetch'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
 import Player from '../models/Player'
