@@ -26,13 +26,13 @@
   "homepage": "https://github.com/gigobyte/HLTV#readme",
   "devDependencies": {
     "ts-node": "^3.3.0",
-    "typedoc": "^0.8.0",
-    "typescript": "^2.4.2"
+    "typedoc": "^0.9.0",
+    "typescript": "^2.5.3"
   },
   "dependencies": {
     "@types/cheerio": "^0.22.2",
-    "@types/socket.io-client": "^1.4.29",
-    "cheerio": "^0.22.0",
+    "@types/socket.io-client": "^1.4.30",
+    "cheerio": "^1.0.0-rc.2",
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-fetch.d.ts": "git+https://git@github.com/nozzlegear/isomorphic-fetch.d.ts.git",
     "jsdoc": "^3.5.4",
