@@ -11,18 +11,18 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
     const $ = await fetchPage(`${HLTV_URL}/matches`)
 
     const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
-        const id = Number(matchEl.attr('href').split('/')[2])
+        const id = Number(matchEl.attr('href').split('/')[2]) || undefined
         const teamEls = matchEl.find('img.logo')
         const stars = matchEl.find('.stars i').length
 
         const team1: Team = {
             name: teamEls.first().attr('title'),
-            id: Number(E.popSlashSource(teamEls.first()))
+            id: Number(E.popSlashSource(teamEls.first())) || undefined
         }
 
         const team2: Team = {
             name: teamEls.last().attr('title'),
-            id: Number(E.popSlashSource(teamEls.last()))
+            id: Number(E.popSlashSource(teamEls.last())) || undefined
         }
 
         const format = matchEl.find('.bestof').text()
@@ -30,15 +30,15 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
 
         const event: Event = {
             name:  matchEl.find('.event-logo').attr('title'),
-            id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
+            id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined
         }
 
         return { id, team1, team2, event, format, maps, stars, live: true }
     })
 
     const upcomingMatches: UpcomingMatch[] = toArray($('.upcoming-match')).map(matchEl => {
-        const id = Number(matchEl.attr('href').split('/')[2])
-        const date = Number(matchEl.find('div.time').attr('data-unix'))
+        const id = Number(matchEl.attr('href').split('/')[2]) || undefined
+        const date = Number(matchEl.find('div.time').attr('data-unix')) || undefined
         const title = matchEl.find('.placeholder-text-cell').text()
         const stars = matchEl.find('.stars i').length
 
@@ -51,17 +51,17 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
         if (!title) {
             team1 = {
                 name: matchEl.find('div.team').first().text(),
-                id: Number(E.popSlashSource(matchEl.find('img.logo').first()))
+                id: Number(E.popSlashSource(matchEl.find('img.logo').first())) || undefined
             }
 
             team2 = {
                 name: matchEl.find('div.team').last().text(),
-                id: Number(E.popSlashSource(matchEl.find('img.logo').last()))
+                id: Number(E.popSlashSource(matchEl.find('img.logo').last())) || undefined
 
             }
             event = {
                 name: matchEl.find('.event-logo').attr('alt'),
-                id: Number((E.popSlashSource(matchEl.find('img.event-logo')) as string).split('.')[0])
+                id: Number((E.popSlashSource(matchEl.find('img.event-logo')) as string).split('.')[0]) || undefined
             }
         }
 
