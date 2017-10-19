@@ -1,4 +1,5 @@
-export declare const text: (el: any) => any;
-export declare const prev: (el: any) => any;
-export declare const hasChild: (childSelector: string) => (el: any) => boolean;
-export declare const popSlashSource: (el: any) => any;
+/// <reference types="cheerio" />
+export declare const text: (el: Cheerio) => string;
+export declare const prev: (el: Cheerio) => Cheerio;
+export declare const hasChild: (childSelector: string) => (el: Cheerio) => boolean;
+export declare const popSlashSource: (el: Cheerio) => string | undefined;

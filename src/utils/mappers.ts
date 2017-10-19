@@ -14,11 +14,13 @@ export const fetchPage = async (url: string) => cheerio.load(await rp.get(
         url: url,
         agentClass: Agent,
         agentOptions: {
-            socksHost: process.env.SOCKET_HOST,
-            socksPort: process.env.SOCKET_PORT
+            socksHost: process.env.SOCKET_HOST || 'localhost',
+            socksPort: process.env.SOCKET_PORT || 9091
         }
-    })
-    .then((res: any) => res.text()))
+    }).then((body) => {
+        return body;
+    }))
+
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
