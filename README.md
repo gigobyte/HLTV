@@ -225,7 +225,7 @@ HLTV.getTeamStats({id: 6137}).then(res => {
 
 #### getPlayer
 
-Parses the info from the `https://www.hltv.org/player/` page
+Parses the info from the `hltv.org/player/` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
