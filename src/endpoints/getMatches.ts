@@ -11,7 +11,7 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
     const $ = await fetchPage(`${HLTV_URL}/matches`)
 
     const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
-        const id = Number(matchEl.attr('href').split('/')[2]) || undefined
+        const id = Number(matchEl.attr('href').split('/')[2])
         const teamEls = matchEl.find('img.logo')
         const stars = matchEl.find('.stars i').length
 
@@ -37,7 +37,7 @@ const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
     })
 
     const upcomingMatches: UpcomingMatch[] = toArray($('.upcoming-match')).map(matchEl => {
-        const id = Number(matchEl.attr('href').split('/')[2]) || undefined
+        const id = Number(matchEl.attr('href').split('/')[2])
         const date = Number(matchEl.find('div.time').attr('data-unix')) || undefined
         const title = matchEl.find('.placeholder-text-cell').text()
         const stars = matchEl.find('.stars i').length
