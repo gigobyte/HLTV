@@ -7,16 +7,21 @@ import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 
+require('dotenv').config()
 const rp = require('request-promise');
-const Agent = require('socks5-http-client/lib/Agent');
-export const fetchPage = async (url: string) => cheerio.load(await rp.get(
+
+// 代理服务器
+const proxyHost = "http-dyn.abuyun.com";
+const proxyPort = 9020;
+// 代理隧道验证信息
+const proxyUser = process.env.PROXY_USER;
+const proxyPass = process.env.PROXY_PASS;
+const proxyUrl = "http://" + proxyUser + ":" + proxyPass + "@" + proxyHost + ":" + proxyPort;
+const proxyRp = rp.defaults({'proxy': proxyUrl});
+
+export const fetchPage = async (url: string) => cheerio.load(await proxyRp.get(
     {
         url: url,
-        agentClass: Agent,
-        agentOptions: {
-            socksHost: process.env.SOCKET_HOST || 'localhost',
-            socksPort: process.env.SOCKET_PORT || 9091
-        }
     }).then((body) => {
         return body;
     }))
