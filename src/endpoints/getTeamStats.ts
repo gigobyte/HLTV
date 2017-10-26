@@ -10,7 +10,7 @@ const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
     const mp$ = await fetchPage(`${HLTV_URL}/stats/teams/maps/${id}/-`)
 
     const overviewStats = $('.standard-box .large-strong')
-    const getOverviewStatByIndex = i => Number(overviewStats.eq(i).text())
+    const getOverviewStatByIndex = i => Number(overviewStats.eq(i).text()) || undefined
     const [ wins, draws, losses ] = overviewStats.eq(1).text().split('/').map(Number)
 
     const overview = {
@@ -24,7 +24,7 @@ const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
 
     const getContainerByText = text => $('.standard-headline').filter((_, el) => $(el).text() === text).parent().next()
     const getPlayersByContainer = container => toArray(container.find('.image-and-label')).map(playerEl => ({
-        id: Number(playerEl.attr('href').split('/')[3]),
+        id: Number(playerEl.attr('href').split('/')[3]) || undefined,
         name: playerEl.find('.text-ellipsis').text()
     }))
 
@@ -35,11 +35,11 @@ const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
     const matches = toArray(m$('.stats-table tbody tr')).map(matchEl => ({
         dateApproximate: getTimestamp(matchEl.find('.time a').text()),
         event: {
-            id: Number((E.popSlashSource(matchEl.find('.image-and-label img')) as string).split('.')[0]),
+            id: Number((E.popSlashSource(matchEl.find('.image-and-label img')) as string).split('.')[0]) || undefined,
             name: matchEl.find('.image-and-label img').attr('title')
         },
         enemyTeam: {
-            id: Number(matchEl.find('img.flag').parent().attr('href').split('/')[3]),
+            id: Number(matchEl.find('img.flag').parent().attr('href').split('/')[3]) || undefined,
             name: matchEl.find('img.flag').parent().contents().last().text()
         },
         map: getMapSlug(matchEl.find('.statsMapPlayed span').text()),
@@ -49,7 +49,7 @@ const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
     const events = toArray(e$('.stats-table tbody tr')).map(eventEl => ({
         place: eventEl.find('.statsCenterText').text(),
         event: {
-            id: Number(eventEl.find('.image-and-label').first().attr('href').split('=')[1]),
+            id: Number(eventEl.find('.image-and-label').first().attr('href').split('=')[1]) || undefined,
             name: eventEl.find('.image-and-label').first().attr('title')
         }
     }))
@@ -60,13 +60,13 @@ const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
         const mapName = getMapSlug(mapEl.prev().find('.map-pool-map-name').text())
 
         stats[mapName] = {
-            wins: Number(getMapStat(mapEl, 0).split(' / ')[0]),
-            draws: Number(getMapStat(mapEl, 0).split(' / ')[1]),
-            losses: Number(getMapStat(mapEl, 0).split(' / ')[2]),
-            winRate: Number(getMapStat(mapEl, 1).split('%')[0]),
-            totalRounds: Number(getMapStat(mapEl, 2)),
-            roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]),
-            roundWinPAfterFirstDeath: Number(getMapStat(mapEl, 4).split('%')[0])
+            wins: Number(getMapStat(mapEl, 0).split(' / ')[0]) || undefined,
+            draws: Number(getMapStat(mapEl, 0).split(' / ')[1]) || undefined,
+            losses: Number(getMapStat(mapEl, 0).split(' / ')[2]) || undefined,
+            winRate: Number(getMapStat(mapEl, 1).split('%')[0]) || undefined,
+            totalRounds: Number(getMapStat(mapEl, 2)) || undefined,
+            roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]) || undefined,
+            roundWinPAfterFirstDeath: Number(getMapStat(mapEl, 4).split('%')[0]) || undefined
         }
 
         return stats
