@@ -18,8 +18,10 @@ const proxyUser = process.env.PROXY_USER;
 const proxyPass = process.env.PROXY_PASS;
 const proxyUrl = "http://" + proxyUser + ":" + proxyPass + "@" + proxyHost + ":" + proxyPort;
 const proxyRp = rp.defaults({'proxy': proxyUrl});
+const enable_proxy = (proxyUser !== undefined && proxyPass !== undefined);
+const finalRequestPromise = enable_proxy ? proxyRp : rp;
 
-export const fetchPage = async (url: string) => cheerio.load(await proxyRp.get(
+export const fetchPage = async (url: string) => cheerio.load(await finalRequestPromise.get(
     {
         url: url,
     }).then((body) => {

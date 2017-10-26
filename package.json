@@ -37,10 +37,8 @@
     "isomorphic-fetch": "^2.2.1",
     "isomorphic-fetch.d.ts": "git+https://git@github.com/nozzlegear/isomorphic-fetch.d.ts.git",
     "jsdoc": "^3.5.4",
-    "omni-fetch": "0.2.2",
     "request": "2.83.0",
     "request-promise": "4.2.1",
-    "socket.io-client": "2.0.4",
-    "socks5-http-client": "1.0.2"
+    "socket.io-client": "2.0.4"
   }
 }
