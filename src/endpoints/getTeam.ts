@@ -18,18 +18,18 @@ const getTeam = async ({ id }: { id: number }): Promise<FullTeam> => {
 
     const players: Player[] = toArray(t$('.overlayImageFrame')).filter(E.hasChild('.playerFlagName .text-ellipsis')).map(playerEl => ({
         name: playerEl.find('.playerFlagName .text-ellipsis').text(),
-        id: Number(playerEl.find('.playerFlagName .text-ellipsis').attr('href').split('/')[2])
+        id: Number(playerEl.find('.playerFlagName .text-ellipsis').attr('href').split('/')[2]) || undefined
     }))
 
     const recentResults: Result[] = toArray(t$('.results-holder .a-reset')).map(matchEl => ({
         matchID: matchEl.attr('href') ? Number(matchEl.attr('href').split('/')[2]) : undefined,
         enemyTeam: {
-            id: Number(E.popSlashSource(t$(matchEl.find('.team-logo').get(1))) as string),
+            id: Number(E.popSlashSource(t$(matchEl.find('.team-logo').get(1))) as string) || undefined,
             name: t$(matchEl.find('.team').get(1)).text()
         },
         result: matchEl.find('.result-score').text(),
         event: {
-            id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]),
+            id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined,
             name: matchEl.find('.event-name').text()
         }
     }))
@@ -44,7 +44,7 @@ const getTeam = async ({ id }: { id: number }): Promise<FullTeam> => {
         place: t$(achEl.contents().get(1)).text().split(' at')[0],
         event: {
             name: t$(achEl.contents().get(2)).text(),
-            id: Number(t$(achEl.contents().get(2)).attr('href').split('/')[2])
+            id: Number(t$(achEl.contents().get(2)).attr('href').split('/')[2]) || undefined
         }
     }))
 
@@ -52,13 +52,13 @@ const getTeam = async ({ id }: { id: number }): Promise<FullTeam> => {
 
     const events = toArray(e$('a.big-event')).map(eventEl => ({
         name: eventEl.find('.big-event-name').text(),
-        id: Number(eventEl.attr('href').split('/')[2])
+        id: Number(eventEl.attr('href').split('/')[2]) || undefined
     })).concat(toArray(e$('a.small-event')).map(eventEl => ({
         name: eventEl.find('.event-col .text-ellipsis').text(),
-        id: Number(eventEl.attr('href').split('/')[2])
+        id: Number(eventEl.attr('href').split('/')[2]) || undefined
     }))).concat(toArray(e$('a.ongoing-event')).map(eventEl => ({
         name: eventEl.find('.event-name-small .text-ellipsis').text(),
-        id: Number(eventEl.attr('href').split('/')[2])
+        id: Number(eventEl.attr('href').split('/')[2]) || undefined
     })))
 
     return {name, logo, coverImage, location, facebook, twitter, rank, players, recentResults, rankingDevelopment, bigAchievements, mapStatistics, events}
