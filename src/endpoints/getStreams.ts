@@ -17,7 +17,7 @@ const getStreams = async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<
             code: (E.popSlashSource(streamEl.find('.flag')) as string).split('.')[0]
         }
 
-        const viewers = Number(streamEl.contents().last().text())
+        const viewers = Number(streamEl.contents().last().text()) || undefined
         const hltvLink = streamEl.attr('href')
 
         const stream = { name, category, country, viewers, hltvLink }

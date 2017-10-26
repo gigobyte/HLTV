@@ -17,16 +17,16 @@ const getResults = async ({ pages=1 } = {}): Promise<MatchResult[]> => {
         const $ = await fetchPage(`${HLTV_URL}/results?offset=${i*100}`)
 
         matches = matches.concat(toArray($('.result-con .a-reset')).map(matchEl => {
-            const id = Number(matchEl.attr('href').split('/')[2])
+            const id = Number(matchEl.attr('href').split('/')[2]) || undefined
             const stars = matchEl.find('.stars i').length
 
             const team1: Team = {
-                id: Number(E.popSlashSource(matchEl.find('img.team-logo').first())),
+                id: Number(E.popSlashSource(matchEl.find('img.team-logo').first())) || undefined,
                 name: matchEl.find('div.team').first().text()
             }
 
             const team2: Team = {
-                id: Number(E.popSlashSource(matchEl.find('img.team-logo').last())),
+                id: Number(E.popSlashSource(matchEl.find('img.team-logo').last())) || undefined,
                 name: matchEl.find('div.team').last().text()
             }
 
@@ -35,7 +35,7 @@ const getResults = async ({ pages=1 } = {}): Promise<MatchResult[]> => {
 
             const event: Event = {
                 name: matchEl.find('.event-logo').attr('alt'),
-                id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
+                id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined
             }
 
             return { id, team1, team2, result, event, map, format, stars }
