@@ -23,9 +23,9 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
 
     const getPlayerTopStat = ($: CheerioStatic, index: number): PlayerStat => {
         return {
-            id: Number($($('.most-x-box').get(index)).find('.name > a').attr('href').split('/')[3]),
+            id: Number($($('.most-x-box').get(index)).find('.name > a').attr('href').split('/')[3]) || undefined,
             name: $($('.most-x-box').get(index)).find('.name > a').text(),
-            value: Number($($('.most-x-box').get(index)).find('.valueName').text())
+            value: Number($($('.most-x-box').get(index)).find('.valueName').text()) || undefined
         }
     }
 
@@ -34,22 +34,22 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
         fetchPage(`${HLTV_URL}/stats/matches/performance/mapstatsid/${id}/-`)
     ])
 
-    const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])
+    const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2]) || undefined
     const map = getMapSlug(m$(m$('.match-info-box').contents().get(3)).text().replace(/\n| /g, ''))
-    const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix'))
+    const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix')) || undefined
 
     const team1: Team = {
-        id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
+        id: Number(E.popSlashSource(m$('.team-left .team-logo'))) || undefined,
         name: m$('.team-left .team-logo').attr('title')
     }
 
     const team2: Team = {
-        id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
+        id: Number(E.popSlashSource(m$('.team-right .team-logo'))) || undefined,
         name: m$('.team-right .team-logo').attr('title')
     }
 
     const event: Event = {
-        id: Number(m$('.match-info-box .text-ellipsis').first().attr('href').split('event=')[1]),
+        id: Number(m$('.match-info-box .text-ellipsis').first().attr('href').split('event=')[1]) || undefined,
         name: m$('.match-info-box .text-ellipsis').first().text()
     }
 
@@ -70,10 +70,10 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
     const playerPerformanceStats: PlayerPerformanceStatsMap = toArray(p$('.highlighted-player')).reduce((map, playerEl) => {
         const graphData = playerEl.find('.graph.small').attr('data-fusionchart-config')
         const data = {
-            id: Number(playerEl.find('.headline span a').attr('href').split('/')[2]),
-            killsPerRound: Number(graphData.split('Kills per round: ')[1].split('"')[0]),
-            deathsPerRound: Number(graphData.split('Deaths / round: ')[1].split('"')[0]),
-            impact: Number(graphData.split('Impact rating: ')[1].split('"')[0])
+            id: Number(playerEl.find('.headline span a').attr('href').split('/')[2]) || undefined,
+            killsPerRound: Number(graphData.split('Kills per round: ')[1].split('"')[0]) || undefined,
+            deathsPerRound: Number(graphData.split('Deaths / round: ')[1].split('"')[0]) || undefined,
+            impact: Number(graphData.split('Impact rating: ')[1].split('"')[0]) || undefined
         }
 
         map[data.id] = data
@@ -82,20 +82,20 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
     }, {})
 
     const playerOverviewStats: PlayerStats[] = toArray(m$('.stats-table tbody tr')).map(rowEl => {
-        const id = Number(rowEl.find('.st-player a').attr('href').split('/')[3])
+        const id = Number(rowEl.find('.st-player a').attr('href').split('/')[3]) || undefined
         const performanceStats = playerPerformanceStats[id]
 
         return {
             id,
             name: rowEl.find('.st-player a').text(),
-            kills: Number(rowEl.find('.st-kills').contents().first().text()),
-            hsKills: Number(rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')),
-            deaths: Number(rowEl.find('.st-deaths').text()),
-            KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')),
-            killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),
-            ADR: Number(rowEl.find('.st-adr').text()),
-            firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),
-            rating: Number(rowEl.find('.st-rating').text()),
+            kills: Number(rowEl.find('.st-kills').contents().first().text()) || undefined,
+            hsKills: Number(rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')) || undefined,
+            deaths: Number(rowEl.find('.st-deaths').text()) || undefined,
+            KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')) || undefined,
+            killDeathsDifference: Number(rowEl.find('.st-kddiff').text()) || undefined,
+            ADR: Number(rowEl.find('.st-adr').text()) || undefined,
+            firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()) || undefined,
+            rating: Number(rowEl.find('.st-rating').text()) || undefined,
             ...performanceStats
         } as PlayerStats
     })
@@ -107,8 +107,8 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
 
     const performanceOverview = toArray(p$('.overview-table tr')).slice(1).reduce((res, rowEl) => {
         const stat = rowEl.find('.name-column').text()
-        const team1Stat = Number(rowEl.find('.team1-column').text())
-        const team2Stat = Number(rowEl.find('.team2-column').text())
+        const team1Stat = Number(rowEl.find('.team1-column').text()) || undefined
+        const team2Stat = Number(rowEl.find('.team2-column').text()) || undefined
         const property = stat.toLowerCase()
 
         return { team1: {...res.team1, [property]: team1Stat}, team2: {...res.team2, [property]: team2Stat}}
