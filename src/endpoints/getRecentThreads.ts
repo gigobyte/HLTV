@@ -9,7 +9,7 @@ const getRecentThreads = async (): Promise<Thread[]> => {
     const threads = toArray($('.activity')).map(threadEl => {
         const title = threadEl.find('.topic').text()
         const link = threadEl.attr('href')
-        const replies = Number(threadEl.contents().last().text())
+        const replies = Number(threadEl.contents().last().text()) || undefined
         const category = (threadEl.attr('class').split(' ').find(c => c.includes('Cat')) as string).replace('Cat', '') as ThreadCategory
 
         return { title, link, replies, category }
