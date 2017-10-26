@@ -16,7 +16,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
 
     const title = $('.timeAndEvent .text').text().trim() || undefined
-    const date = Number($('.timeAndEvent .date').attr('data-unix'))
+    const date = Number($('.timeAndEvent .date').attr('data-unix')) || undefined
     const format = $('.preformatted-text').text().split('\n')[0]
     const additionalInfo = $('.preformatted-text').text().split('\n').slice(1).join(' ').trim()
     const live = $('.countdown').text() === 'LIVE'
@@ -25,12 +25,12 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
 
     const team1: Team | undefined = teamEls.first().text() ? {
         name: teamEls.eq(0).text(),
-        id: Number(E.popSlashSource(teamEls.first().prev()))
+        id: Number(E.popSlashSource(teamEls.first().prev())) || undefined
     } : undefined
 
     const team2: Team | undefined = teamEls.last().text() ? {
         name: teamEls.eq(1).text(),
-        id: Number(E.popSlashSource(teamEls.last().prev()))
+        id: Number(E.popSlashSource(teamEls.last().prev())) || undefined
     } : undefined
 
     let winnerTeam: Team | undefined
@@ -51,7 +51,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
 
     const event: Event = {
         name: $('.timeAndEvent .event').text(),
-        id: Number($('.timeAndEvent .event').children().first().attr('href').split('/')[2])
+        id: Number($('.timeAndEvent .event').children().first().attr('href').split('/')[2]) || undefined
     }
 
     const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
@@ -71,28 +71,28 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     const streams: Stream[] = toArray($('.stream-box')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
         name: streamEl.find('.flagAlign').text(),
         link: streamEl.attr('data-stream-embed'),
-        viewers: Number(streamEl.find('.viewers').text())
+        viewers: Number(streamEl.find('.viewers').text()) || undefined
     }))
 
     const highlightedPlayerLink: string | undefined = $('.highlighted-player').find('.flag').next().attr('href')
 
     const highlightedPlayer: Player | undefined = highlightedPlayerLink ? {
         name: highlightedPlayerLink.split('/').pop() as string,
-        id: Number(highlightedPlayerLink.split('/')[2]),
+        id: Number(highlightedPlayerLink.split('/')[2]) || undefined,
     } : undefined
 
     let headToHead: HeadToHeadResult[] | undefined
 
     if (team1 && team2) {
         headToHead = toArray($('.head-to-head-listing tr')).map(matchEl => ({
-            date: Number(matchEl.find('.date a span').attr('data-unix')),
+            date: Number(matchEl.find('.date a span').attr('data-unix')) || undefined,
             winner: {
                 name: matchEl.find('.winner .flag').next().text(),
-                id: Number(matchEl.find('.winner .flag').next().attr('href').split('/')[2])
+                id: Number(matchEl.find('.winner .flag').next().attr('href').split('/')[2]) || undefined
             },
             event: {
                 name: matchEl.find('.event a').text(),
-                id: Number(matchEl.find('.event a').attr('href').split('/')[2])
+                id: Number(matchEl.find('.event a').attr('href').split('/')[2]) || undefined
             },
             map: matchEl.find('.dynamic-map-name-short').text() as MapSlug,
             result: matchEl.find('.result').text()
