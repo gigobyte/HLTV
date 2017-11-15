@@ -11,7 +11,7 @@ const getPlayer = async ({ id }: { id: number }): Promise<FullPlayer> => {
     const ign = ($('.subjectname').text().match(/".+"/) as RegExpMatchArray)[0].replace(/"/g, '')
 
     const shownImage = $('.containedImageFrame img').attr('src')
-    const image = !shownImage.includes('blankplayer') ? shownImage : undefined
+    const image = shownImage && !shownImage.includes('blankplayer') ? shownImage : undefined
 
     const coverImage = $('.coverImage').attr('data-bg-image')
 
@@ -53,7 +53,7 @@ const getPlayer = async ({ id }: { id: number }): Promise<FullPlayer> => {
         }
     }))
 
-    return {name, ign, image, coverImage, age, twitter, twitch, facebook, country, team, statistics, achievements}
+    return { name, ign, image, coverImage, age, twitter, twitch, facebook, country, team, statistics, achievements }
 }
 
 export default getPlayer
