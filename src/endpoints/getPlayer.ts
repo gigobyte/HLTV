@@ -10,8 +10,9 @@ const getPlayer = async ({ id }: { id: number }): Promise<FullPlayer> => {
     const name = $('.subjectname').text().replace(/".+" /, '').trim() || undefined
     const ign = ($('.subjectname').text().match(/".+"/) as RegExpMatchArray)[0].replace(/"/g, '')
 
-    const shownImage = $('.containedImageFrame img').attr('src')
-    const image = !shownImage.includes('blankplayer') ? shownImage : undefined
+    const shownImageOld = $('.containedImageFrame img')
+    const shownImage = shownImageOld.length ? shownImageOld : $('.profileImage')
+    const image = !shownImage.attr('src').includes('blankplayer') ? shownImage.attr('src') : undefined
 
     const coverImage = $('.coverImage').attr('data-bg-image')
 
