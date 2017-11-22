@@ -1,6 +1,6 @@
 interface Team {
     readonly name: string,
-    readonly id: number
+    readonly id?: number
 }
 
 export default Team
