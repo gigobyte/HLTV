@@ -5,8 +5,6 @@ import Player from '../models/Player'
 import Stream from '../models/Stream'
 import Team from '../models/Team'
 import Highlight from '../models/Highlight'
-import HeadToHeadResult from '../models/HeadToHeadResult'
-import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 import { HLTV_URL } from '../utils/constants'
 import { fetchPage, toArray, mapVetoElementToModel, getMapSlug, getMatchPlayer } from '../utils/mappers'
@@ -71,20 +69,6 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
         id: Number(highlightedPlayerLink.split('/')[2]),
     } : undefined
 
-    const headToHead: HeadToHeadResult[] | undefined = team1 && team2 && toArray($('.head-to-head-listing tr')).map(matchEl => ({
-        date: Number(matchEl.find('.date a span').attr('data-unix')),
-        winner: {
-            name: matchEl.find('.winner .flag').next().text(),
-            id: Number(matchEl.find('.winner .flag').next().attr('href').split('/')[2])
-        },
-        event: {
-            name: matchEl.find('.event a').text(),
-            id: Number(matchEl.find('.event a').attr('href').split('/')[2])
-        },
-        map: matchEl.find('.dynamic-map-name-short').text() as MapSlug,
-        result: matchEl.find('.result').text()
-    }))
-
     const highlights: Highlight[] | undefined = team1 && team2 && toArray($('.highlight')).map(highlightEl => ({
         link: highlightEl.attr('data-highlight-embed'),
         title: highlightEl.text()
@@ -92,7 +76,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
 
     return {
         team1, team2, date, format, additionalInfo, event, maps, players, streams, live,
-        title, hasScorebot, highlightedPlayer, headToHead, vetoes, highlights
+        title, hasScorebot, highlightedPlayer, vetoes, highlights
     }
 }
 
