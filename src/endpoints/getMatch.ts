@@ -13,6 +13,7 @@ import { fetchPage, toArray, mapVetoElementToModel, getMapSlug, getMatchPlayer }
 
 const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
+    console.log($);
 
     const title = $('.timeAndEvent .text').text() === ' ' ? undefined : $('.timeAndEvent .text').text()
     const date = Number($('.timeAndEvent .date').attr('data-unix'))
