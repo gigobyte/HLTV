@@ -255,6 +255,8 @@ HLTV.getPlayer({id: 6137}).then(res => {
 
 Presents an interface to receive data when the HLTV scorebot updates
 
+**NOTE: While `connectToScorebot` returns a Promise, the promise will never resolve. Instead you should pass the callbacks described below.**
+
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
 | id | int | - | The match ID |
