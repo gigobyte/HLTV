@@ -14,7 +14,8 @@ export type ConnectToScorebotParams = {
 
 const connectToScorebot = async ({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) => {
     const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
-    const url = $('#scoreboardElement').attr('data-scorebot-url')
+    // const url = $('#scoreboardElement').attr('data-scorebot-url')
+    const url = 'http://scorebot2.hltv.org:10022';
     const matchId = $('#scoreboardElement').attr('data-scorebot-id')
 
     const socket = io.connect(url)
