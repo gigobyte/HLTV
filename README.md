@@ -40,6 +40,16 @@ import HLTV from 'hltv'
 const { HLTV } = require('hltv')
 ```
 
+#### Configuration
+
+You can create an istance of HLTV with a custom config.
+
+```javascript
+const myHLTV = HLTV.createInstance({hltvUrl: 'my-proxy-server'})
+```
+
+**[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/models/HLTVConfig.ts)**
+
 ## API
 
 #### getMatch
