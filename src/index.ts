@@ -43,24 +43,6 @@ const hltvInstance = new HLTVFactory(configDefaults)
 export default hltvInstance
 export { hltvInstance as HLTV }
 
-// const HLTV = {
-//     connectToScorebot,
-//     getMatch,
-//     getMatches,
-//     getMatchesStats,
-//     getMatchMapStats,
-//     getRecentThreads,
-//     getResults,
-//     getStreams,
-//     getTeamRanking,
-//     getTeam,
-//     getTeamStats,
-//     getPlayer
-// }
-
-// export default HLTV
-// export { HLTV }
-
 // External data types
 import FullMatch from './models/FullMatch'
 import FullMatchMapStats from './models/FullMatchMapStats'
