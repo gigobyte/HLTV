@@ -42,7 +42,7 @@ const { HLTV } = require('hltv')
 
 #### Configuration
 
-You can create an istance of HLTV with a custom config.
+You can create an instance of HLTV with a custom config.
 
 ```javascript
 const myHLTV = HLTV.createInstance({hltvUrl: 'my-proxy-server'})
