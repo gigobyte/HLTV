@@ -40,14 +40,18 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
 
     const maps: MapResult[] = toArray($('.mapholder')).map((mapEl) => {
         const result = mapEl.find('.results');
+        const t_first = result.find('.t').first().text();
+        const ct_first = result.find('.ct').first().text();
+        const t_second = result.find('.t').last().text() === t_first ? '' : result.find('.t').last().text();
+        const ct_second = result.find('.ct').last().text() === ct_first ? '' : result.find('.ct').last().text();
         return {
             name: getMapSlug(mapEl.find('.mapname').text()),
             result: result.text(),
             first_left: result.children().first().next().next().next().next().attr('class'),
-            t_first: result.find('.t').first().text(),
-            ct_first: result.find('.ct').first().text(),
-            t_second: result.find('.t').last().text(),
-            ct_second: result.find('.ct').last().text(),
+            t_first: t_first,
+            ct_first: ct_first,
+            t_second: t_second,
+            ct_second: ct_second
         }
     });
 
