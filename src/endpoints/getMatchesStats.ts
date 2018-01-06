@@ -4,7 +4,7 @@ import Team from '../models/Team'
 import MatchType from '../enums/MatchType'
 import Map from '../enums/Map'
 import MapSlug from '../enums/MapSlug'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 export type GetMatchesStatsParams = {

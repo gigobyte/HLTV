@@ -4,7 +4,7 @@ import Event from '../models/Event'
 import Team from '../models/Team'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
 const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | LiveMatch)[]> => {

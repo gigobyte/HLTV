@@ -2,7 +2,7 @@ import FullStream from '../models/FullStream'
 import Country from '../models/Country'
 import StreamCategory from '../enums/StreamCategory'
 import * as E from '../utils/parsing'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 const getStreams = (config: HLTVConfig) => async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<FullStream[]> => {

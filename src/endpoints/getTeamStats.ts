@@ -1,5 +1,5 @@
 import FullTeamStats from '../models/FullTeamStats'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
 import * as E from '../utils/parsing'
 

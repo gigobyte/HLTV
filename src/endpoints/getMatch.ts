@@ -9,7 +9,7 @@ import Veto from '../models/Veto'
 import HeadToHeadResult from '../models/HeadToHeadResult'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
-import { HLTVConfig } from './../'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, mapVetoElementToModel, getMapSlug, getMatchPlayer } from '../utils/mappers'
 
 const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullMatch> => {

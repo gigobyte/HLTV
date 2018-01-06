@@ -1,6 +1,6 @@
 import Thread from '../models/Thread'
 import ThreadCategory from '../enums/ThreadCategory'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => {

@@ -1,6 +1,6 @@
 import FullPlayer from '../models/FullPlayer'
 import Team from '../models/Team'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 import * as E from '../utils/parsing'
 

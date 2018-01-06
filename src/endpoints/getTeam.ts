@@ -1,6 +1,6 @@
 import FullTeam, { Result, Achievement } from '../models/FullTeam'
 import Player from '../models/Player'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMapsStatistics } from '../utils/mappers'
 import * as E from '../utils/parsing'
 

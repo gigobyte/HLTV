@@ -1,6 +1,6 @@
 import TeamRanking from '../models/TeamRanking'
 import Team from '../models/Team'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='' } = {}): Promise<TeamRanking[]> => {

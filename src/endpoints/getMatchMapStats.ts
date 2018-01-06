@@ -6,7 +6,7 @@ import RoundOutcome, { WeakRoundOutcome } from '../models/RoundOutcome'
 import Team from '../models/Team'
 import Event from '../models/Event'
 import * as E from '../utils/parsing'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMapSlug, mapRoundElementToModel } from '../utils/mappers'
 
 export type PlayerPerformanceStatsMap = {[key: number]: PlayerPerformanceStats}

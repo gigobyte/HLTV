@@ -11,11 +11,7 @@ import getTeamRanking from './endpoints/getTeamRanking'
 import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
-
-export interface HLTVConfig {
-    hltvUrl?: string
-    hltvStaticUrl?: string
-}
+import HLTVConfig from './models/HLTVConfig'
 
 export class HLTVFactory {
     constructor(private config: HLTVConfig) {}

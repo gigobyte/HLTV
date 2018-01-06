@@ -2,7 +2,7 @@ import MatchResult from '../models/MatchResult'
 import Event from '../models/Event'
 import Team from '../models/Team'
 import * as E from '../utils/parsing'
-import { HLTVConfig } from './..'
+import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
 const getResults = (config: HLTVConfig) => async ({ pages=1 } = {}): Promise<MatchResult[]> => {
