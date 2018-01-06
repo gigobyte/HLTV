@@ -1,11 +1,11 @@
 import FullPlayer from '../models/FullPlayer'
 import Team from '../models/Team'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
-const getPlayer = async ({ id }: { id: number }): Promise<FullPlayer> => {
-    const $ = await fetchPage(`${HLTV_URL}/player/${id}/-`)
+const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
+    const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`)
 
     const name = $('.subjectname').text().replace(/".+" /, '').trim() || undefined
     const ign = ($('.subjectname').text().match(/".+"/) as RegExpMatchArray)[0].replace(/"/g, '')

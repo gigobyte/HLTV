@@ -9,11 +9,11 @@ import Veto from '../models/Veto'
 import HeadToHeadResult from '../models/HeadToHeadResult'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './../'
 import { fetchPage, toArray, mapVetoElementToModel, getMapSlug, getMatchPlayer } from '../utils/mappers'
 
-const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
-    const $ = await fetchPage(`${HLTV_URL}/matches/${id}/-`)
+const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullMatch> => {
+    const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`)
 
     const title = $('.timeAndEvent .text').text().trim() || undefined
     const date = Number($('.timeAndEvent .date').attr('data-unix'))

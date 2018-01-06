@@ -2,11 +2,11 @@ import FullStream from '../models/FullStream'
 import Country from '../models/Country'
 import StreamCategory from '../enums/StreamCategory'
 import * as E from '../utils/parsing'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getStreams = async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<FullStream[]> => {
-    const $ = await fetchPage(`${HLTV_URL}`)
+const getStreams = (config: HLTVConfig) => async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<FullStream[]> => {
+    const $ = await fetchPage(`${config.hltvUrl}`)
 
     const streams = Promise.all(toArray($('a.col-box.streamer')).map(async streamEl => {
         const name = streamEl.find('.name').text()
@@ -23,7 +23,7 @@ const getStreams = async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<
         const stream = { name, category, country, viewers, hltvLink }
 
         if (loadLinks) {
-            const $streamPage = await fetchPage(`${HLTV_URL}${hltvLink}`)
+            const $streamPage = await fetchPage(`${config.hltvUrl}${hltvLink}`)
             const realLink = $streamPage('iframe').attr('src')
 
             return {...stream, realLink}

@@ -1,10 +1,10 @@
 import TeamRanking from '../models/TeamRanking'
 import Team from '../models/Team'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getTeamRanking = async ({ year='', month='', day='' } = {}): Promise<TeamRanking[]> => {
-    const $ = await fetchPage(`${HLTV_URL}/ranking/teams/${year}/${month}/${day}`)
+const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='' } = {}): Promise<TeamRanking[]> => {
+    const $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`)
 
     const teams = toArray($('.ranked-team')).map(teamEl => {
         const points = Number(teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0])

@@ -1,15 +1,15 @@
 import FullTeam, { Result, Achievement } from '../models/FullTeam'
 import Player from '../models/Player'
-import { HLTV_URL, HLTV_STATIC_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray, getMapsStatistics } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
-const getTeam = async ({ id }: { id: number }): Promise<FullTeam> => {
-    const t$ = await fetchPage(`${HLTV_URL}/team/${id}/-`)
-    const e$ = await fetchPage(`${HLTV_URL}/events?team=${id}`)
+const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullTeam> => {
+    const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`)
+    const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`)
 
     const name = t$('.subjectname').text()
-    const logo = `${HLTV_STATIC_URL}/images/team/logo/${id}`
+    const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`
     const coverImage = t$('.coverImage').attr('data-bg-image')
     const location = t$(t$('.fa-map-marker').parent().contents().get(3)).text().trim()
     const facebook = t$(t$('.fa-map-marker').parent().contents().get(4)).attr('href')

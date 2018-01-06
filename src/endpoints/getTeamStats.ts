@@ -1,13 +1,13 @@
 import FullTeamStats from '../models/FullTeamStats'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
-const getTeamStats = async ({ id }: { id: number }): Promise<FullTeamStats> => {
-    const $ = await fetchPage(`${HLTV_URL}/stats/teams/${id}/-`)
-    const m$ = await fetchPage(`${HLTV_URL}/stats/teams/matches/${id}/-`)
-    const e$ = await fetchPage(`${HLTV_URL}/stats/teams/events/${id}/-`)
-    const mp$ = await fetchPage(`${HLTV_URL}/stats/teams/maps/${id}/-`)
+const getTeamStats = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullTeamStats> => {
+    const $ = await fetchPage(`${config.hltvUrl}/stats/teams/${id}/-`)
+    const m$ = await fetchPage(`${config.hltvUrl}/stats/teams/matches/${id}/-`)
+    const e$ = await fetchPage(`${config.hltvUrl}/stats/teams/events/${id}/-`)
+    const mp$ = await fetchPage(`${config.hltvUrl}/stats/teams/maps/${id}/-`)
 
     const overviewStats = $('.standard-box .large-strong')
     const getOverviewStatByIndex = i => Number(overviewStats.eq(i).text())

@@ -1,3 +1,4 @@
+import * as configDefaults from './utils/constants';
 import connectToScorebot from './endpoints/connectToScorebot'
 import getMatch from './endpoints/getMatch'
 import getMatches from './endpoints/getMatches'
@@ -11,23 +12,54 @@ import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
 
-const HLTV = {
-    connectToScorebot,
-    getMatch,
-    getMatches,
-    getMatchesStats,
-    getMatchMapStats,
-    getRecentThreads,
-    getResults,
-    getStreams,
-    getTeamRanking,
-    getTeam,
-    getTeamStats,
-    getPlayer
+export interface HLTVConfig {
+    hltvUrl?: string
+    hltvStaticUrl?: string
 }
 
-export default HLTV
-export { HLTV }
+export class HLTVFactory {
+    constructor(private config: HLTVConfig) {}
+
+    connectToScorebot = connectToScorebot(this.config)
+    getMatch = getMatch(this.config)
+    getMatches = getMatches(this.config)
+    getMatchesStats = getMatchesStats(this.config)
+    getMatchMapStats = getMatchMapStats(this.config)
+    getRecentThreads = getRecentThreads(this.config)
+    getResults = getResults(this.config)
+    getStreams = getStreams(this.config)
+    getTeamRanking = getTeamRanking(this.config)
+    getTeam = getTeam(this.config)
+    getTeamStats = getTeamStats(this.config)
+    getPlayer = getPlayer(this.config)
+
+    public createInstance(config: HLTVConfig) {
+        return new HLTVFactory(config)
+    }
+}
+
+const hltvInstance = new HLTVFactory(configDefaults)
+
+export default hltvInstance
+export { hltvInstance as HLTV }
+
+// const HLTV = {
+//     connectToScorebot,
+//     getMatch,
+//     getMatches,
+//     getMatchesStats,
+//     getMatchMapStats,
+//     getRecentThreads,
+//     getResults,
+//     getStreams,
+//     getTeamRanking,
+//     getTeam,
+//     getTeamStats,
+//     getPlayer
+// }
+
+// export default HLTV
+// export { HLTV }
 
 // External data types
 import FullMatch from './models/FullMatch'

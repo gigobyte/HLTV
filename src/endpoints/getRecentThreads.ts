@@ -1,10 +1,10 @@
 import Thread from '../models/Thread'
 import ThreadCategory from '../enums/ThreadCategory'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getRecentThreads = async (): Promise<Thread[]> => {
-    const $ = await fetchPage(`${HLTV_URL}`)
+const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => {
+    const $ = await fetchPage(`${config.hltvUrl}`)
 
     const threads = toArray($('.activity')).map(threadEl => {
         const title = threadEl.find('.topic').text()

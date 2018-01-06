@@ -4,11 +4,11 @@ import Event from '../models/Event'
 import Team from '../models/Team'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-const getMatches = async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
-    const $ = await fetchPage(`${HLTV_URL}/matches`)
+const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
+    const $ = await fetchPage(`${config.hltvUrl}/matches`)
 
     const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
         const id = Number(matchEl.attr('href').split('/')[2])

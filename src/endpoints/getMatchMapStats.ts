@@ -6,12 +6,12 @@ import RoundOutcome, { WeakRoundOutcome } from '../models/RoundOutcome'
 import Team from '../models/Team'
 import Event from '../models/Event'
 import * as E from '../utils/parsing'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray, getMapSlug, mapRoundElementToModel } from '../utils/mappers'
 
 export type PlayerPerformanceStatsMap = {[key: number]: PlayerPerformanceStats}
 
-const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapStats> => {
+const getMatchMapStats = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullMatchMapStats> => {
     const getMatchInfoRowValues = ($: CheerioStatic, index: number): TeamStatComparison => {
         const [ stat1, stat2 ] =  $($('.match-info-row').get(index)).find('.right').text().split(' : ').map(Number)
 
@@ -30,8 +30,8 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
     }
 
     const [ m$, p$ ] = await Promise.all([
-        fetchPage(`${HLTV_URL}/stats/matches/mapstatsid/${id}/-`),
-        fetchPage(`${HLTV_URL}/stats/matches/performance/mapstatsid/${id}/-`)
+        fetchPage(`${config.hltvUrl}/stats/matches/mapstatsid/${id}/-`),
+        fetchPage(`${config.hltvUrl}/stats/matches/performance/mapstatsid/${id}/-`)
     ])
 
     const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])

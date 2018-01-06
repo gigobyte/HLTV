@@ -4,7 +4,7 @@ import Team from '../models/Team'
 import MatchType from '../enums/MatchType'
 import Map from '../enums/Map'
 import MapSlug from '../enums/MapSlug'
-import { HLTV_URL } from '../utils/constants'
+import { HLTVConfig } from './..'
 import { fetchPage, toArray } from '../utils/mappers'
 
 export type GetMatchesStatsParams = {
@@ -14,7 +14,7 @@ export type GetMatchesStatsParams = {
     maps?: Map[]
 }
 
-const getMatchesStats = async ({ startDate, endDate, matchType, maps }: GetMatchesStatsParams = {}): Promise<MatchStats[]> => {
+const getMatchesStats = (config: HLTVConfig) => async ({ startDate, endDate, matchType, maps }: GetMatchesStatsParams = {}): Promise<MatchStats[]> => {
     const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${['', ...maps].join('&maps=')}`
 
     let page = 0
@@ -22,7 +22,7 @@ const getMatchesStats = async ({ startDate, endDate, matchType, maps }: GetMatch
     let matches = [] as MatchStats[]
 
     do {
-        $ = await fetchPage(`${HLTV_URL}/stats/matches?${query}&offset=${page*50}`)
+        $ = await fetchPage(`${config.hltvUrl}/stats/matches?${query}&offset=${page*50}`)
         page++
 
         matches = matches.concat(toArray($('.matches-table tbody tr')).map(matchEl => {
