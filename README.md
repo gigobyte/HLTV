@@ -2,7 +2,7 @@
 [![devDependencies Status](https://david-dm.org/gigobyte/hltv/dev-status.svg)](https://david-dm.org/gigobyte/hltv?type=dev)
 
 <h1 align="center">
-  <img src="https://www.hltv.org/img/static/TopLogo2x.png" alt="pyarray logo" width="200">
+  <img src="https://www.hltv.org/img/static/TopLogo2x.png" alt="HLTV logo" width="200">
   <br>
   The unofficial HLTV Node.js API
   <br>
