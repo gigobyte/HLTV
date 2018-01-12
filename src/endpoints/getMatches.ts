@@ -56,7 +56,6 @@ const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | Li
 
             team2 = {
                 name: matchEl.find('div.team').last().text(),
-                id: Number(E.popSlashSource(matchEl.find('img.logo').last())) || undefined
 
             }
             event = {
