@@ -8,8 +8,6 @@
   <br>
 </h1>
 
-:star: This package supports the new HLTV that was deployed on [May 22nd](https://www.hltv.org/news/20530/a-new-beginning-for-hltvorg).
-
 Table of contents
 
 - [Installation](#installation)
