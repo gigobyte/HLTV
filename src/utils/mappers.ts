@@ -1,3 +1,4 @@
+import 'babel-polyfill'
 import * as cheerio from 'cheerio'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
@@ -10,18 +11,7 @@ import * as E from '../utils/parsing'
 require('dotenv').config()
 const rp = require('request-promise');
 
-// 代理服务器
-const proxyHost = "http-dyn.abuyun.com";
-const proxyPort = 9020;
-// 代理隧道验证信息
-const proxyUser = process.env.PROXY_USER;
-const proxyPass = process.env.PROXY_PASS;
-const proxyUrl = "http://" + proxyUser + ":" + proxyPass + "@" + proxyHost + ":" + proxyPort;
-const proxyRp = rp.defaults({'proxy': proxyUrl});
-const enable_proxy = (proxyUser !== undefined && proxyPass !== undefined);
-const finalRequestPromise = enable_proxy ? proxyRp : rp;
-
-export const fetchPage = async (url: string) => cheerio.load(await finalRequestPromise.get(
+export const fetchPage = async (url: string) => cheerio.load(await rp.get(
     {
         url: url,
     }).then((body) => {

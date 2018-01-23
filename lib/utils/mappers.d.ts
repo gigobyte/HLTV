@@ -1,4 +1,5 @@
 /// <reference types="cheerio" />
+import 'babel-polyfill';
 import Team from '../models/Team';
 import Veto from '../models/Veto';
 import Player from '../models/Player';
