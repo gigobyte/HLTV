@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
     "build": "tsc",
     "start": "ts-node src/playground",
     "doc": "typedoc --out documentation src"

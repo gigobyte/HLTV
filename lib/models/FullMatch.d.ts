@@ -16,6 +16,7 @@ interface FullMatch {
     readonly vetoes?: Veto[];
     readonly event: Event;
     readonly maps: MapResult[];
+    readonly mapIds: string[];
     readonly streams: Stream[];
     readonly players?: {
         team1: Player[];

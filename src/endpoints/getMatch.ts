@@ -55,6 +55,12 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
         }
     });
 
+    const mapIds: string[] = toArray($('.stats-menu-link'))
+        .filter(mapEl => mapEl.children().attr('id') !== 'all')
+        .map((mapEl) => {
+            return mapEl.children().attr('id')
+    })
+
     const players = team1 && team2 && {
         team1: toArray($('div.players').first().find('tr').last().find('.flagAlign')).map(getMatchPlayer),
         team2: toArray($('div.players').last().find('tr').last().find('.flagAlign')).map(getMatchPlayer)
@@ -68,6 +74,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
 
     const highlightedPlayerLink: string | undefined = $('.highlighted-player').find('.flag').next().attr('href')
 
+
     const highlightedPlayer: Player | undefined = highlightedPlayerLink ? {
         name: highlightedPlayerLink.split('/').pop() as string,
         id: Number(highlightedPlayerLink.split('/')[2]),
@@ -79,7 +86,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     }))
 
     return {
-        team1, team2, date, format, additionalInfo, event, maps, players, streams, live,
+        team1, team2, date, format, additionalInfo, event, maps, mapIds, players, streams, live,
         title, hasScorebot, highlightedPlayer, vetoes, highlights
     }
 }

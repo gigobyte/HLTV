@@ -13,12 +13,16 @@ import HLTV from './index'
 //     }, onLogUpdate: () => {
 //     }})
 // HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
-// HLTV.getMatch({id: 2312432}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getTeam({id: 7144}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getPlayer({id: 1339}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
-HLTV.getMatchMapStats({id: 60032}).then(res => {
+// HLTV.getMatchMapStats({id: 60032}).then(() => {
+//     // console.log(res)
+//     console.log('hah')
+// }).catch(() => {
+//     // console.log(err)
+// })
+
+HLTV.getMatch({id: 2318732}).then((res) => {
     console.log(res)
-}).catch(err => {
-    console.log(err)
 })
