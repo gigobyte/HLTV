@@ -14,9 +14,12 @@ const rp = require('request-promise');
 export const fetchPage = async (url: string) => cheerio.load(await rp.get(
     {
         url: url,
+        timeout: 60000  // 1 min
     }).then((body) => {
         return body;
-    }))
+    }).catch(err => {
+        console.log(err)
+}))
 
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
