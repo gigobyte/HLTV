@@ -10,11 +10,13 @@ import * as E from '../utils/parsing'
 
 require('dotenv').config()
 const rp = require('request-promise');
+const proxy = process.env.PROXY
 
 export const fetchPage = async (url: string) => cheerio.load(await rp.get(
     {
         url: url,
-        timeout: 60000  // 1 min
+        timeout: 60000,  // 1 min
+        proxy: proxy
     }).then((body) => {
         return body;
     }).catch(err => {

@@ -23,6 +23,10 @@ import HLTV from './index'
 //     // console.log(err)
 // })
 
-HLTV.getMatch({id: 2318732}).then((res) => {
-    console.log(res)
-})
+// HLTV.getMatch({id: 2318732}).then((res) => {
+//     console.log(res)
+// })
+HLTV.getResults()
+    .then((results) => {
+        console.log(results)
+    });

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import connectToScorebot from './endpoints/connectToScorebot'
 import getMatch from './endpoints/getMatch'
 import getMatches from './endpoints/getMatches'
