@@ -1,5 +1,7 @@
+// load environment variables
 require('dotenv').config()
 
+// import all possible functionality
 import connectToScorebot from './endpoints/connectToScorebot'
 import getMatch from './endpoints/getMatch'
 import getMatches from './endpoints/getMatches'
@@ -13,6 +15,7 @@ import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
 
+// define object and do some export
 const HLTV = {
     connectToScorebot,
     getMatch,
@@ -27,7 +30,6 @@ const HLTV = {
     getTeamStats,
     getPlayer
 }
-
 export default HLTV
 export { HLTV }
 
