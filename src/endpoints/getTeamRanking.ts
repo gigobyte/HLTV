@@ -3,8 +3,15 @@ import Team from '../models/Team'
 import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='' } = {}): Promise<TeamRanking[]> => {
-    const $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`)
+const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='', country='' } = {}): Promise<TeamRanking[]> => {
+    let $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`)
+
+    if ((!year || !month || !day) && country) {
+        const redirectedLink = $('.ranking-country > a').first().attr('href')
+        const countryRankingLink = redirectedLink.split('/').slice(0, -1).concat([country]).join('/')
+
+        $ = await fetchPage(`${config.hltvUrl}${countryRankingLink}`)
+    }
 
     const teams = toArray($('.ranked-team')).map(teamEl => {
         const points = Number(teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0])

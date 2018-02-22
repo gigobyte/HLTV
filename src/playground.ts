@@ -5,7 +5,7 @@ import HLTV from './index'
 // HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
 // HLTV.getActiveThreads().then(res => console.log(res))
 // HLTV.getTeamRanking().then(res => console.log(res))
-// HLTV.getTeamRankingDates().then(res => console.log(res))
+// HLTV.getTeamRanking({ country: 'Thailand' }).then(res => console.log(res))
 // HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
 //     console.log(data)
 // }, onLogUpdate: (data) => {
@@ -16,4 +16,4 @@ import HLTV from './index'
 // HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))
 // HLTV.getTeam({id: 7144}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
-HLTV.getPlayer({id: 9216}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+// HLTV.getPlayer({id: 9216}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
