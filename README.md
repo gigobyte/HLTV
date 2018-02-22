@@ -184,9 +184,12 @@ Option | Type | Default Value | Description |
 | year | string | - | - |
 | month | string | - | Must be lowercase and in MMMM format |
 | day | string | - | - |
+| country | string | - | Must be capitalized (`'Brazil'`, `'France'` etc)
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
+HLTV.getTeamRanking()
+HLTV.getTeamRanking({country: 'Thailand'})
 HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
   ...
 })
