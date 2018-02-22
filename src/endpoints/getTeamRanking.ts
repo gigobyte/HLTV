@@ -16,9 +16,10 @@ const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='
         }
 
         const changeText = teamEl.find('.change').text()
-        const change = changeText === '-' ? 0 : Number(changeText)
+        const isNew = changeText === 'New'
+        const change = changeText === '-' || isNew ? 0 : Number(changeText)
 
-        return { points, place, team, change }
+        return { points, place, team, change, isNew }
     })
 
     return teams
