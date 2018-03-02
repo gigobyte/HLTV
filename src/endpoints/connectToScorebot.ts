@@ -24,7 +24,7 @@ const connectToScorebot = (config: HLTVConfig) => async ({ id, onScoreboardUpdat
             onConnect()
         }
 
-        socket.emit('readyForMatch', matchId)
+        socket.emit('readyForMatch', `{"token":"","listId":"${matchId}"}`)
 
         socket.on('scoreboard', (data) => {
             if (onScoreboardUpdate) {

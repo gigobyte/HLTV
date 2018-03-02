@@ -9,13 +9,15 @@ export interface RoundStart {
 
 export interface PlayerJoin {
     PlayerJoin: {
-        playerName: string
+        playerName: string,
+        playerNick: string
     }
 }
 
 export interface PlayerQuit {
     PlayerQuit: {
         playerName: string,
+        playerNick: string,
         playerSide: Side
     }
 }
@@ -32,9 +34,11 @@ export interface RoundEnd {
 export interface Kill {
     Kill: {
         killerName: string,
+        killerNick: string,
         killerSide: Side,
         victimName: string,
         victimSide: Side,
+        victimNick: string,
         weapon: string,
         headShot: boolean
     }
@@ -42,7 +46,8 @@ export interface Kill {
 
 export interface BombDefused {
     BombDefused: {
-        playerName: string
+        playerName: string,
+        playerNick: string
     }
 }
 
