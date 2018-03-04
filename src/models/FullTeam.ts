@@ -31,7 +31,7 @@ interface FullTeam {
     readonly twitter?: string,
     readonly rank?: number,
     readonly recentResults: Result[],
-    readonly rankingDevelopment?: number[],
+    readonly rankingDevelopment: number[],
     readonly bigAchievements: Achievement[],
     readonly mapStatistics?: {[key: string]: MapStatistic},
     readonly events: Event[]

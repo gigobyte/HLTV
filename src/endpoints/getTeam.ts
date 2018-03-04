@@ -8,17 +8,25 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`)
     const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`)
 
-    const name = t$('.subjectname').text()
+    const name = t$('.team-name').text()
     const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`
     const coverImage = t$('.coverImage').attr('data-bg-image')
-    const location = t$(t$('.fa-map-marker').parent().contents().get(3)).text().trim()
-    const facebook = t$(t$('.fa-map-marker').parent().contents().get(4)).attr('href')
-    const twitter = t$(t$('.fa-map-marker').parent().contents().get(6)).attr('href')
-    const rank = Number(t$(t$('.fa-map-marker').parent().contents().last()).text().split('#')[1]) || undefined
+    const location = t$('.team-country .flag').attr('alt')
+    const facebook = t$('.facebook').parent().attr('href')
+    const twitter = t$('.twitter').parent().attr('href')
+    const rank = Number(t$('.profile-team-stat .right').first().text().replace('#', '')) || undefined
 
-    const players: Player[] = toArray(t$('.overlayImageFrame')).filter(E.hasChild('.playerFlagName .text-ellipsis')).map(playerEl => ({
+    const arePlayerPicturesOfficial = toArray(t$('.overlayImageFrame')).length > 0;
+    const playerSelector = arePlayerPicturesOfficial ? '.overlayImageFrame' : '.overlayImageFrame-square';
+    const playerImageSelector = arePlayerPicturesOfficial ? '.bodyshot-team-img' : '.profileImage';
+
+    const getPlayerId = (el: Cheerio) => arePlayerPicturesOfficial
+        ? Number((E.popSlashSource(el) as string).split('.')[0])
+        : Number(el.attr('src').split('/').slice(-2, -1))
+
+    const players: Player[] = toArray(t$(playerSelector)).filter(E.hasChild('.playerFlagName .text-ellipsis')).map(playerEl => ({
         name: playerEl.find('.playerFlagName .text-ellipsis').text(),
-        id: Number(playerEl.find('.playerFlagName .text-ellipsis').attr('href').split('/')[2])
+        id: getPlayerId(playerEl.find(playerImageSelector))
     }))
 
     const recentResults: Result[] = toArray(t$('.results-holder .a-reset')).map(matchEl => ({
@@ -34,11 +42,14 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
         }
     }))
 
-    const rankingDevRegex = /value":"\d+(?="})/g
-
-    const rankings = t$('.graph').attr('data-fusionchart-config').match(rankingDevRegex)
-    const hasRank = t$('.graph').attr('data-fusionchart-config').match(rankingDevRegex) !== null
-    const rankingDevelopment = hasRank ? (rankings as RegExpMatchArray).map(m => m.split(':"')[1]).map(Number) : undefined
+    let rankingDevelopment
+    
+    try {
+        const rankings = JSON.parse(t$('.graph').attr('data-fusionchart-config'))
+        rankingDevelopment = rankings.dataSource.dataset[0].data.map(x => x.value).map(Number);
+    } catch {
+        rankingDevelopment = []
+    }
 
     const bigAchievements: Achievement[] = toArray(t$('.achievement')).map(achEl => ({
         place: t$(achEl.contents().get(1)).text().split(' at')[0],
@@ -56,7 +67,7 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     })).concat(toArray(e$('a.small-event')).map(eventEl => ({
         name: eventEl.find('.event-col .text-ellipsis').text(),
         id: Number(eventEl.attr('href').split('/')[2])
-    }))).concat(toArray(e$('a.ongoing-event')).map(eventEl => ({
+    }))).concat(toArray(e$('.tab-content:not(.hidden) a.ongoing-event')).map(eventEl => ({
         name: eventEl.find('.event-name-small .text-ellipsis').text(),
         id: Number(eventEl.attr('href').split('/')[2])
     })))
