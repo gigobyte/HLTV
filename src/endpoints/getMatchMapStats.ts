@@ -61,7 +61,7 @@ const getMatchMapStats = async ({ id }: { id: number }): Promise<FullMatchMapSta
 
     const overview = {...teamStats, ...mostX} as MatchStatsOverview
 
-    const fullRoundHistory: WeakRoundOutcome[] = toArray(m$('.round-history-outcome')).map(mapRoundElementToModel(team1.id as number, team2.id as number))
+    const fullRoundHistory: WeakRoundOutcome[] = toArray(m$('.round-history-outcome')).map(mapRoundElementToModel())
     const [ rh1, rh2 ] = [fullRoundHistory.slice(0, 30), fullRoundHistory.slice(30, 60)]
 
     const roundHistory: RoundOutcome[] = rh1.reduce((history, round, i) => history.concat([round, rh2[i]]), [] as WeakRoundOutcome[])
