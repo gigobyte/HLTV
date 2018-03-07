@@ -31,7 +31,7 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
     } : undefined
 
     const vetoes = team1 && team2 && toArray($('.veto-box').last().find('.padding > div'))
-                                                           .slice(0, -1).map(el => mapVetoElementToModel(el, team1, team2))
+                                                           .map(el => mapVetoElementToModel(el, team1, team2))
 
     const event: Event = {
         name: $('.timeAndEvent .event').text(),

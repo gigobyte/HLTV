@@ -28,14 +28,17 @@ export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
 export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Veto => {
     const [ teamName, map ] = el.text().replace(/^\d. /, '').split(/removed|picked/)
+    const [lastMap, lastType] = el.text().replace(/^\d. /, '').split(/was/)
 
-    if (!map || !teamName) {
-        return {
-            map: getMapSlug(el.text().split(' ')[1]),
-            type: 'other'
-        }
+    // deal with map of left
+    if(lastMap && lastType) {
+      return {
+        team: undefined,
+        map: getMapSlug(lastMap.trim()),
+        type: 'left'
+      }
     }
-
+    // deal with map of remove or picked
     return {
         team: [team1, team2].find(t => t.name === teamName.trim()) as Team,
         map: getMapSlug(map.trim()),
