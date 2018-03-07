@@ -63,15 +63,12 @@ export const getMatchFormatAndMap = (mapText: string): {map?: MapSlug, format: s
     return { format: mapText }
 }
 
-export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (el: Cheerio, i: number): WeakRoundOutcome => {
+export const mapRoundElementToModel = () => (el: Cheerio): WeakRoundOutcome => {
     const outcomeString = (E.popSlashSource(el) as string).split('.')[0]
     const outcome = Object.entries(Outcome).find(([_, v]) => v === outcomeString) as Outcome | undefined
-
     return {
         outcome: outcome && outcome[1] as Outcome,
-        score: el.attr('title'),
-        ctTeam: i < 15 ? team1Id : team2Id,
-        tTeam: i < 15 ? team2Id : team1Id
+        score: el.attr('title')
     }
 }
 
