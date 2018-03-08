@@ -1,43 +1,43 @@
 declare const HLTV: {
-    connectToScorebot: ({id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect}: {
+    connectToScorebot: ({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: {
         id: number;
         onScoreboardUpdate?: ((data: ScoreboardUpdate) => any) | undefined;
         onLogUpdate?: ((data: LogUpdate) => any) | undefined;
         onConnect?: (() => any) | undefined;
         onDisconnect?: (() => any) | undefined;
     }) => Promise<void>;
-    getMatch: ({id}: {
+    getMatch: ({ id }: {
         id: number;
     }) => Promise<FullMatch>;
     getMatches: () => Promise<(UpcomingMatch | LiveMatch)[]>;
-    getMatchesStats: ({startDate, endDate, matchType, maps}?: {
+    getMatchesStats: ({ startDate, endDate, matchType, maps }?: {
         startDate?: string | undefined;
         endDate?: string | undefined;
         matchType?: MatchType | undefined;
         maps?: Map[] | undefined;
     }) => Promise<MatchStats[]>;
-    getMatchMapStats: ({id}: {
+    getMatchMapStats: ({ id }: {
         id: number;
     }) => Promise<FullMatchMapStats>;
     getRecentThreads: () => Promise<Thread[]>;
-    getResults: ({pages}?: {
+    getResults: ({ pages }?: {
         pages?: number;
     }) => Promise<MatchResult[]>;
-    getStreams: ({loadLinks}?: {
+    getStreams: ({ loadLinks }?: {
         loadLinks?: boolean | undefined;
     }) => Promise<FullStream[]>;
-    getTeamRanking: ({year, month, day}?: {
+    getTeamRanking: ({ year, month, day }?: {
         year?: string;
         month?: string;
         day?: string;
     }) => Promise<TeamRanking[]>;
-    getTeam: ({id}: {
+    getTeam: ({ id }: {
         id: number;
     }) => Promise<FullTeam>;
-    getTeamStats: ({id}: {
+    getTeamStats: ({ id }: {
         id: number;
     }) => Promise<FullTeamStats>;
-    getPlayer: ({id}: {
+    getPlayer: ({ id }: {
         id: number;
     }) => Promise<FullPlayer>;
 };

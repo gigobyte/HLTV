@@ -7,5 +7,5 @@ export declare type ConnectToScorebotParams = {
     onConnect?: () => any;
     onDisconnect?: () => any;
 };
-declare const connectToScorebot: ({id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect}: ConnectToScorebotParams) => Promise<void>;
+declare const connectToScorebot: ({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) => Promise<void>;
 export default connectToScorebot;

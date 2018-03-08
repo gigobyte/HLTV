@@ -2,7 +2,7 @@ import FullMatchMapStats, { PlayerPerformanceStats } from '../models/FullMatchMa
 export declare type PlayerPerformanceStatsMap = {
     [key: number]: PlayerPerformanceStats;
 };
-declare const getMatchMapStats: ({id}: {
+declare const getMatchMapStats: ({ id }: {
     id: number;
 }) => Promise<FullMatchMapStats>;
 export default getMatchMapStats;

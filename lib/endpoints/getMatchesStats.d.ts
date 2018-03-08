@@ -7,5 +7,5 @@ export declare type GetMatchesStatsParams = {
     matchType?: MatchType;
     maps?: Map[];
 };
-declare const getMatchesStats: ({startDate, endDate, matchType, maps}?: GetMatchesStatsParams) => Promise<MatchStats[]>;
+declare const getMatchesStats: ({ startDate, endDate, matchType, maps }?: GetMatchesStatsParams) => Promise<MatchStats[]>;
 export default getMatchesStats;

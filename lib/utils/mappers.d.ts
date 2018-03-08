@@ -15,7 +15,7 @@ export declare const getMatchFormatAndMap: (mapText: string) => {
     map?: MapSlug | undefined;
     format: string;
 };
-export declare const mapRoundElementToModel: (team1Id: number, team2Id: number) => (el: Cheerio, i: number) => WeakRoundOutcome;
+export declare const mapRoundElementToModel: () => (el: Cheerio) => WeakRoundOutcome;
 export declare const getMapsStatistics: (source: string) => {
     [key: string]: MapStatistic;
 } | undefined;
