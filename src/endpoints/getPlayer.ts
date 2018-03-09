@@ -7,10 +7,10 @@ import * as E from '../utils/parsing'
 const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
     const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`)
 
-    const name = $('.player-realname').text().trim() || undefined;
-    const ign = $('.player-nick').text();
+    const name = $('.player-realname').text().trim() || undefined
+    const ign = $('.player-nick').text()
 
-    const image = $('.bodyshot-img').attr('src') || $('.bodyshot-img-square').attr('src');
+    const image = $('.bodyshot-img').attr('src') || $('.bodyshot-img-square').attr('src')
 
     const age = Number($('.profile-player-stat-value').first().text().split(' ')[0]) || undefined
     const twitter = $('.twitter').parent().attr('href')
