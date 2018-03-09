@@ -16,9 +16,9 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     const twitter = t$('.twitter').parent().attr('href')
     const rank = Number(t$('.profile-team-stat .right').first().text().replace('#', '')) || undefined
 
-    const arePlayerPicturesOfficial = toArray(t$('.overlayImageFrame')).length > 0;
-    const playerSelector = arePlayerPicturesOfficial ? '.overlayImageFrame' : '.overlayImageFrame-square';
-    const playerImageSelector = arePlayerPicturesOfficial ? '.bodyshot-team-img' : '.profileImage';
+    const arePlayerPicturesOfficial = toArray(t$('.overlayImageFrame')).length > 0
+    const playerSelector = arePlayerPicturesOfficial ? '.overlayImageFrame' : '.overlayImageFrame-square'
+    const playerImageSelector = arePlayerPicturesOfficial ? '.bodyshot-team-img' : '.profileImage'
 
     const getPlayerId = (el: Cheerio) => arePlayerPicturesOfficial
         ? Number((E.popSlashSource(el) as string).split('.')[0])
@@ -46,7 +46,7 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     
     try {
         const rankings = JSON.parse(t$('.graph').attr('data-fusionchart-config'))
-        rankingDevelopment = rankings.dataSource.dataset[0].data.map(x => x.value).map(Number);
+        rankingDevelopment = rankings.dataSource.dataset[0].data.map(x => x.value).map(Number)
     } catch {
         rankingDevelopment = []
     }
