@@ -7,30 +7,26 @@ import * as E from '../utils/parsing'
 const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
     const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`)
 
-    const name = $('.subjectname').text().replace(/".+" /, '').trim() || undefined
-    const ign = ($('.subjectname').text().match(/".+"/) as RegExpMatchArray)[0].replace(/"/g, '')
+    const name = $('.player-realname').text().trim() || undefined;
+    const ign = $('.player-nick').text();
 
-    const shownImageOld = $('.containedImageFrame img')
-    const shownImage = shownImageOld.length ? shownImageOld : $('.profileImage')
-    const image = !shownImage.attr('src').includes('blankplayer') ? shownImage.attr('src') : undefined
+    const image = $('.bodyshot-img').attr('src') || $('.bodyshot-img-square').attr('src');
 
-    const coverImage = $('.coverImage').attr('data-bg-image')
-
-    const age = Number($($('.subjectname').next().contents().get(3)).text().trim().split(' ')[0])
-    const twitter = $($('.player-some').find('a').get(0)).attr('href')
-    const twitch = $($('.player-some').find('a').get(1)).attr('href')
-    const facebook = $($('.player-some').find('a').get(2)).attr('href')
+    const age = Number($('.profile-player-stat-value').first().text().split(' ')[0]) || undefined
+    const twitter = $('.twitter').parent().attr('href')
+    const twitch = $('.twitch').parent().attr('href')
+    const facebook = $('.facebook').parent().attr('href')
     const country = {
-        name: $('.subjectname').next().children().first().attr('title'),
-        code: (E.popSlashSource($('.subjectname').next().children().first()) as string).split('.')[0]
+        name: $('.player-realname .flag').attr('alt'),
+        code: (E.popSlashSource($('.player-realname .flag')) as string).split('.')[0]
     }
 
     let team: Team | undefined
-
-    if ($('.team-logo-container img').length) {
+    
+    if ($('.profile-player-stat-value.bold').text().trim() !== '-') {
         team = {
-            name: $('.team-logo-container img').attr('title'),
-            id: Number(E.popSlashSource($('.team-logo-container img')))
+            name: $('.profile-player-stat-value a').text().trim(),
+            id: Number($('.profile-player-stat-value a').attr('href').split('/')[2])
         }
     }
 
@@ -54,7 +50,7 @@ const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promis
         }
     }))
 
-    return {name, ign, image, coverImage, age, twitter, twitch, facebook, country, team, statistics, achievements}
+    return {name, ign, image, age, twitter, twitch, facebook, country, team, statistics, achievements}
 }
 
 export default getPlayer

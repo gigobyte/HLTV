@@ -6,8 +6,7 @@ interface FullPlayer {
     readonly name?: string
     readonly ign: string
     readonly image?: string
-    readonly coverImage: string
-    readonly age: number
+    readonly age?: number
     readonly country: Country
     readonly team?: Team
     readonly twitter?: string
