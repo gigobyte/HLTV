@@ -42,8 +42,8 @@ const getMatch = async ({ id }: { id: number }): Promise<FullMatch> => {
         const result = mapEl.find('.results');
         const t_first = result.find('.t').first().text();
         const ct_first = result.find('.ct').first().text();
-        const t_second = result.find('.t').last().text() === t_first ? '' : result.find('.t').last().text();
-        const ct_second = result.find('.ct').last().text() === ct_first ? '' : result.find('.ct').last().text();
+        const t_second = result.find('.t').last().text();
+        const ct_second = result.find('.ct').last().text();
         return {
             name: getMapSlug(mapEl.find('.mapname').text()),
             result: result.text(),
