@@ -38,9 +38,13 @@ export const getMatchPlayer = (playerEl: Cheerio): Player => {
     }
 }
 
-export const getMatchFormatAndMap = (mapText: string): {map?: MapSlug, format: string} => {
+export const getMatchFormatAndMap = (mapText: string): {map?: MapSlug, format?: string} => {
     if (mapText && !mapText.includes('bo')) {
         return { map: mapText as MapSlug, format: 'bo1'}
+    }
+
+    if (!mapText) {
+        return {}
     }
 
     return { format: mapText }

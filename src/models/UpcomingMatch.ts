@@ -7,7 +7,7 @@ interface UpcomingMatch {
     readonly team1?: Team,
     readonly team2?: Team,
     readonly date?: number,
-    readonly format: string,
+    readonly format?: string,
     readonly event?: Event,
     readonly map?: MapSlug,
     readonly title?: string,

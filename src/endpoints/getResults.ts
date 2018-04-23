@@ -1,6 +1,7 @@
 import MatchResult from '../models/MatchResult'
 import Event from '../models/Event'
 import Team from '../models/Team'
+import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
@@ -31,7 +32,7 @@ const getResults = (config: HLTVConfig) => async ({ pages=1 } = {}): Promise<Mat
             }
 
             const result = matchEl.find('.result-score').text()
-            const { map, format } = getMatchFormatAndMap(matchEl.find('.map-text').text())
+            const { map, format } = getMatchFormatAndMap(matchEl.find('.map-text').text()) as { map: MapSlug | undefined, format: string }
 
             const event: Event = {
                 name: matchEl.find('.event-logo').attr('alt'),
