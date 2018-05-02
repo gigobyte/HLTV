@@ -68,7 +68,7 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
         }    
     }
 
-    const streams: Stream[] = toArray($('.stream-box')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
+    const streams: Stream[] = toArray($('.stream-box-embed')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
         name: streamEl.find('.flagAlign').text(),
         link: streamEl.attr('data-stream-embed'),
         viewers: Number(streamEl.find('.viewers').text())
