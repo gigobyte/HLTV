@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
-import * as fetch from 'isomorphic-fetch'
+// import * as fetch from 'isomorphic-fetch'
+import * as cloudScraper from 'cloudscraper'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
 import Player from '../models/Player'
@@ -8,7 +9,12 @@ import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 
-export const fetchPage = async (url: string) => cheerio.load(await fetch(url).then((res: any) => res.text()))
+export const fetchPage = async (url: string) => {
+    return cheerio.load(await new Promise((resolve) => {
+        cloudScraper.get(url, (_, __, body) => resolve(body))
+    }) as any);
+}
+
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
