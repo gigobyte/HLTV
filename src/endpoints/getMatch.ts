@@ -56,7 +56,7 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
 
     const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
         name: getMapSlug(mapEl.find('.mapname').text()),
-        result: mapEl.find('.results').text()
+        result: mapEl.find('.results span').text()
     }))
 
     let players: {team1: Player[], team2: Player[]} | undefined

@@ -8,7 +8,7 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`)
     const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`)
 
-    const name = t$('.team-name').text()
+    const name = t$('.profile-team-name').text()
     const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`
     const coverImage = t$('.coverImage').attr('data-bg-image')
     const location = t$('.team-country .flag').attr('alt')
