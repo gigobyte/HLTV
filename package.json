@@ -27,7 +27,7 @@
   "devDependencies": {
     "ts-node": "^7.0.0",
     "typedoc": "^0.11.1",
-    "typescript": "^2.8.1"
+    "typescript": "^3.0.1"
   },
   "dependencies": {
     "@types/cheerio": "^0.22.2",
