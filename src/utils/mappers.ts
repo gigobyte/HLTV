@@ -1,6 +1,5 @@
 import * as cheerio from 'cheerio'
-// import * as fetch from 'isomorphic-fetch'
-import * as cloudScraper from 'cloudscraper'
+import * as request from 'request'
 import Team from '../models/Team'
 import Veto from '../models/Veto'
 import Player from '../models/Player'
@@ -11,7 +10,7 @@ import * as E from '../utils/parsing'
 
 export const fetchPage = async (url: string) => {
     return cheerio.load(await new Promise((resolve) => {
-        cloudScraper.get(url, (_, __, body) => resolve(body))
+        request.get(url, (_, __, body) => resolve(body))
     }) as any);
 }
 
