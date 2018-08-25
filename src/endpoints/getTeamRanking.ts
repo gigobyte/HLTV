@@ -2,6 +2,7 @@ import TeamRanking from '../models/TeamRanking'
 import Team from '../models/Team'
 import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
+import * as E from '../utils/parsing'
 
 const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='', country='' } = {}): Promise<TeamRanking[]> => {
     let $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`)
@@ -19,12 +20,12 @@ const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='
 
         const team: Team = {
             name: teamEl.find('.name').text(),
-            id: Number(teamEl.find('.name').attr('data-url').split('/')[2])
+            id: Number(E.popSlashSource(teamEl.find('.team-logo img')))
         }
 
         const changeText = teamEl.find('.change').text()
         const isNew = changeText === 'New'
-        const change = changeText === '-' || isNew ? 0 : Number(changeText)
+        const change = (changeText === '-' || isNew) ? 0 : Number(changeText)
 
         return { points, place, team, change, isNew }
     })
