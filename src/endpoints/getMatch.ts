@@ -68,11 +68,19 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
         }    
     }
 
-    const streams: Stream[] = toArray($('.stream-box-embed')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
+    let streams: Stream[] = toArray($('.stream-box-embed')).filter(E.hasChild('.flagAlign')).map(streamEl => ({
         name: streamEl.find('.flagAlign').text(),
         link: streamEl.attr('data-stream-embed'),
         viewers: Number(streamEl.find('.viewers').text())
     }))
+
+    if ($('.stream-box.hltv-live').length !== 0) {
+        streams.push({ name: 'HLTV Live', link: $('.stream-box.hltv-live a').attr('href'), viewers: 0 })
+    }
+
+    if ($('.stream-box.gotv').length !== 0) {
+        streams.push({ name: 'GOTV', link: $('.stream-box.gotv').text().replace('GOTV: connect', '').trim(), viewers: 0 })
+    }
 
     const highlightedPlayerLink: string | undefined = $('.highlighted-player').find('.flag').next().attr('href')
 
