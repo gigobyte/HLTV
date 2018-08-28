@@ -2,6 +2,7 @@ import Team from './Team'
 import Event from './Event'
 import MapResult from './MapResult'
 import Stream from './Stream'
+import Demo from './Demo'
 import Player from './Player'
 import HeadToHeadResult from './HeadToHeadResult'
 import Veto from './Veto'
@@ -18,6 +19,7 @@ interface FullMatch {
     readonly event: Event,
     readonly maps: MapResult[],
     readonly streams: Stream[],
+    readonly demos: Demo[],
     readonly players?: {
         team1: Player[],
         team2: Player[]

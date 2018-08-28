@@ -4,6 +4,7 @@ import MapResult from '../models/MapResult'
 import Player from '../models/Player'
 import Stream from '../models/Stream'
 import Team from '../models/Team'
+import Demo from '../models/Demo'
 import Highlight from '../models/Highlight'
 import Veto from '../models/Veto'
 import HeadToHeadResult from '../models/HeadToHeadResult'
@@ -82,6 +83,16 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
         streams.push({ name: 'GOTV', link: $('.stream-box.gotv').text().replace('GOTV: connect', '').trim(), viewers: 0 })
     }
 
+    const demos: Demo[] = toArray($('div[class="stream-box"]:not(:has(.stream-box-embed))')).map(demoEl => {
+        const gotvEl = demoEl.find('.left-right-padding')
+
+        if (gotvEl.length !== 0) {
+            return { name: gotvEl.text(), link: gotvEl.attr('href') }
+        }
+
+        return { name: demoEl.find('.spoiler').text(), link: demoEl.attr('data-stream-embed') }
+    })
+
     const highlightedPlayerLink: string | undefined = $('.highlighted-player').find('.flag').next().attr('href')
 
     const highlightedPlayer: Player | undefined = highlightedPlayerLink ? {
@@ -118,7 +129,7 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
 
     return {
         team1, team2, winnerTeam, date, format, additionalInfo, event, maps, players, streams, live,
-        title, hasScorebot, highlightedPlayer, headToHead, vetoes, highlights
+        title, hasScorebot, highlightedPlayer, headToHead, vetoes, highlights, demos
     }
 }
 
