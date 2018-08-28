@@ -31,12 +31,9 @@
   },
   "dependencies": {
     "@types/cheerio": "^0.22.2",
-    "@types/isomorphic-fetch": "^0.0.34",
     "@types/request": "^2.47.1",
     "@types/socket.io-client": "^1.4.30",
     "cheerio": "^1.0.0-rc.2",
-    "cloudscraper": "^1.5.0",
-    "isomorphic-fetch": "^2.2.1",
     "socket.io-client": "^2.1.0"
   }
 }
