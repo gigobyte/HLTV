@@ -4,10 +4,10 @@ import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
 const getTeamStats = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullTeamStats> => {
-    const $ = await fetchPage(`${config.hltvUrl}/stats/teams/${id}/-`)
-    const m$ = await fetchPage(`${config.hltvUrl}/stats/teams/matches/${id}/-`)
-    const e$ = await fetchPage(`${config.hltvUrl}/stats/teams/events/${id}/-`)
-    const mp$ = await fetchPage(`${config.hltvUrl}/stats/teams/maps/${id}/-`)
+    const $ = await fetchPage(`${config.hltvUrl}/stats/teams/${id}/-`, config.loadPage)
+    const m$ = await fetchPage(`${config.hltvUrl}/stats/teams/matches/${id}/-`, config.loadPage)
+    const e$ = await fetchPage(`${config.hltvUrl}/stats/teams/events/${id}/-`, config.loadPage)
+    const mp$ = await fetchPage(`${config.hltvUrl}/stats/teams/maps/${id}/-`, config.loadPage)
 
     const overviewStats = $('.standard-box .large-strong')
     const getOverviewStatByIndex = i => Number(overviewStats.eq(i).text())

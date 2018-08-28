@@ -22,7 +22,7 @@ const getMatchesStats = (config: HLTVConfig) => async ({ startDate, endDate, mat
     let matches = [] as MatchStats[]
 
     do {
-        $ = await fetchPage(`${config.hltvUrl}/stats/matches?${query}&offset=${page*50}`)
+        $ = await fetchPage(`${config.hltvUrl}/stats/matches?${query}&offset=${page*50}`, config.loadPage)
         page++
 
         matches = matches.concat(toArray($('.matches-table tbody tr')).map(matchEl => {

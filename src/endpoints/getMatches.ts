@@ -8,7 +8,7 @@ import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
 const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
-    const $ = await fetchPage(`${config.hltvUrl}/matches`)
+    const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
 
     const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
         const id = Number(matchEl.attr('href').split('/')[2])

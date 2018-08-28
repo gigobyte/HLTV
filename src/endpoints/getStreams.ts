@@ -6,7 +6,7 @@ import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 const getStreams = (config: HLTVConfig) => async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<FullStream[]> => {
-    const $ = await fetchPage(`${config.hltvUrl}`)
+    const $ = await fetchPage(`${config.hltvUrl}`, config.loadPage)
 
     const streams = Promise.all(toArray($('a.col-box.streamer')).map(async streamEl => {
         const name = streamEl.find('.name').text()
@@ -23,7 +23,7 @@ const getStreams = (config: HLTVConfig) => async ({ loadLinks }: { loadLinks?: b
         const stream = { name, category, country, viewers, hltvLink }
 
         if (loadLinks) {
-            const $streamPage = await fetchPage(`${config.hltvUrl}${hltvLink}`)
+            const $streamPage = await fetchPage(`${config.hltvUrl}${hltvLink}`, config.loadPage)
             const realLink = $streamPage('iframe').attr('src')
 
             return {...stream, realLink}

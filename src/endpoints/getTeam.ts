@@ -5,8 +5,8 @@ import { fetchPage, toArray, getMapsStatistics } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
 const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullTeam> => {
-    const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`)
-    const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`)
+    const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`, config.loadPage)
+    const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`, config.loadPage)
 
     const name = t$('.profile-team-name').text()
     const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`

@@ -5,7 +5,7 @@ import { fetchPage, toArray } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
 const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
-    const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`)
+    const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`, config.loadPage)
 
     const name = $('.player-realname').text().trim() || undefined
     const ign = $('.player-nick').text()

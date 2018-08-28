@@ -4,7 +4,7 @@ import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray } from '../utils/mappers'
 
 const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => {
-    const $ = await fetchPage(`${config.hltvUrl}`)
+    const $ = await fetchPage(`${config.hltvUrl}`, config.loadPage)
 
     const threads = toArray($('.activity')).map(threadEl => {
         const title = threadEl.find('.topic').text()

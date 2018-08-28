@@ -15,7 +15,7 @@ const getResults = (config: HLTVConfig) => async ({ pages=1 } = {}): Promise<Mat
     let matches = [] as MatchResult[]
 
     for (let i = 0; i < pages; i++) {
-        const $ = await fetchPage(`${config.hltvUrl}/results?offset=${i*100}`)
+        const $ = await fetchPage(`${config.hltvUrl}/results?offset=${i*100}`, config.loadPage)
 
         matches = matches.concat(toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(matchEl => {
             const id = Number(matchEl.attr('href').split('/')[2])

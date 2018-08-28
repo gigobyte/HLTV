@@ -5,13 +5,13 @@ import { fetchPage, toArray } from '../utils/mappers'
 import * as E from '../utils/parsing'
 
 const getTeamRanking = (config: HLTVConfig) => async ({ year='', month='', day='', country='' } = {}): Promise<TeamRanking[]> => {
-    let $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`)
+    let $ = await fetchPage(`${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`, config.loadPage)
 
     if ((!year || !month || !day) && country) {
         const redirectedLink = $('.ranking-country > a').first().attr('href')
         const countryRankingLink = redirectedLink.split('/').slice(0, -1).concat([country]).join('/')
 
-        $ = await fetchPage(`${config.hltvUrl}${countryRankingLink}`)
+        $ = await fetchPage(`${config.hltvUrl}${countryRankingLink}`, config.loadPage)
     }
 
     const teams = toArray($('.ranked-team')).map(teamEl => {

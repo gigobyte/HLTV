@@ -14,7 +14,7 @@ import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage, toArray, mapVetoElementToModel, getMapSlug, getMatchPlayer } from '../utils/mappers'
 
 const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullMatch> => {
-    const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`)
+    const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage)
 
     const title = $('.timeAndEvent .text').text().trim() || undefined
     const date = Number($('.timeAndEvent .date').attr('data-unix'))

@@ -13,7 +13,7 @@ export type ConnectToScorebotParams = {
 }
 
 const connectToScorebot = (config: HLTVConfig) => async ({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) => {
-    const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`)
+    const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage)
     const url = $('#scoreboardElement').attr('data-scorebot-url')
     const matchId = $('#scoreboardElement').attr('data-scorebot-id')
 

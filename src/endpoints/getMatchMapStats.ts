@@ -30,8 +30,8 @@ const getMatchMapStats = (config: HLTVConfig) => async ({ id }: { id: number }):
     }
 
     const [ m$, p$ ] = await Promise.all([
-        fetchPage(`${config.hltvUrl}/stats/matches/mapstatsid/${id}/-`),
-        fetchPage(`${config.hltvUrl}/stats/matches/performance/mapstatsid/${id}/-`)
+        fetchPage(`${config.hltvUrl}/stats/matches/mapstatsid/${id}/-`, config.loadPage),
+        fetchPage(`${config.hltvUrl}/stats/matches/performance/mapstatsid/${id}/-`, config.loadPage)
     ])
 
     const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])

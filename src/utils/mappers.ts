@@ -8,10 +8,12 @@ import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import MapSlug from '../enums/MapSlug'
 import * as E from '../utils/parsing'
 
-export const fetchPage = async (url: string) => {
-    return cheerio.load(await new Promise((resolve) => {
-        request.get(url, (_, __, body) => resolve(body))
-    }) as any);
+export const defaultLoadPage = (url: string) => new Promise<string>((resolve) => {
+    request.get(url, (_, __, body) => resolve(body))
+})
+
+export const fetchPage = async (url: string, loadPage?: (url: string) => Promise<string>) => {
+    return cheerio.load(await loadPage!(url));
 }
 
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
