@@ -40,27 +40,3 @@ const hltvInstance = new HLTVFactory(configDefaults)
 
 export default hltvInstance
 export { hltvInstance as HLTV }
-
-// External data types
-import FullMatch from './models/FullMatch'
-import FullMatchMapStats from './models/FullMatchMapStats'
-import FullStream from './models/FullStream'
-import LiveMatch from './models/LiveMatch'
-import LogUpdate from './models/LogUpdate'
-import ScoreboardUpdate from './models/ScoreboardUpdate'
-import TeamRanking from './models/TeamRanking'
-import UpcomingMatch from './models/UpcomingMatch'
-import MatchResult from './models/MatchResult'
-import MatchStats from './models/MatchStats'
-import MatchType from './enums/MatchType'
-import Thread from './models/Thread'
-import Map from './enums/Map'
-import FullTeam from './models/FullTeam'
-import FullTeamStats from './models/FullTeamStats'
-import FullPlayer from './models/FullPlayer'
-export {
-    FullMatch, FullMatchMapStats, Map, FullStream, LiveMatch,
-    LogUpdate, ScoreboardUpdate, TeamRanking, UpcomingMatch,
-    MatchResult, MatchStats, MatchType, Thread, FullTeam, FullTeamStats,
-    FullPlayer
-}
