@@ -24,6 +24,7 @@ Table of contents
   - [getTeam](#getteam)
   - [getTeamStats](#getteamstats)
   - [getPlayer](#getplayer)
+  - [getEvent](#getevent)
   - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
@@ -43,7 +44,7 @@ const { HLTV } = require('hltv')
 You can create an instance of HLTV with a custom config.
 
 ```javascript
-const myHLTV = HLTV.createInstance({hltvUrl: 'my-proxy-server'})
+const myHLTV = HLTV.createInstance({hltvUrl: 'my-proxy-server', loadPage: /* my custom request library */})
 ```
 
 **[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/models/HLTVConfig.ts)**
@@ -249,6 +250,24 @@ HLTV.getPlayer({id: 6137}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
+
+***
+
+### getEvent
+
+Parses the info from the `hltv.org/event/` page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+id | int | - | The event id
+
+```javascript
+HLTV.getEvent({id: 3389}).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
 
 ***
 
