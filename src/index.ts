@@ -11,10 +11,11 @@ import getTeamRanking from './endpoints/getTeamRanking'
 import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
+import getEvent from './endpoints/getEvent'
 import HLTVConfig from './models/HLTVConfig'
 
 export class HLTVFactory {
-    constructor(private config: HLTVConfig) {}
+    constructor(private readonly config: HLTVConfig) {}
 
     connectToScorebot = connectToScorebot(this.config)
     getMatch = getMatch(this.config)
@@ -28,6 +29,7 @@ export class HLTVFactory {
     getTeam = getTeam(this.config)
     getTeamStats = getTeamStats(this.config)
     getPlayer = getPlayer(this.config)
+    getEvent = getEvent(this.config)
 
     public createInstance(config: HLTVConfig) {
         return new HLTVFactory(config)
