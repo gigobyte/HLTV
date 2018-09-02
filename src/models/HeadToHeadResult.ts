@@ -4,7 +4,8 @@ import MapSlug from '../enums/MapSlug'
 
 interface HeadToHeadResult {
     date: number,
-    winner: Team,
+    /** This property is undefined when the match resulted in a draw */
+    winner?: Team,
     event: Event,
     map: MapSlug,
     result: string

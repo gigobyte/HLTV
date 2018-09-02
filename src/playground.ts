@@ -1,5 +1,5 @@
 // import HLTV from './index'
-// HLTV.getMatch({id: 2311263}).then(res => console.log(res))
+// HLTV.getMatch({id: 2325766}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatches().then(res => console.log(res))
 // HLTV.getLatestResults({pages: 1}).then(res => console.log(res))
 // HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
