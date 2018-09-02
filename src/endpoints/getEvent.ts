@@ -7,9 +7,9 @@ const getEvent = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
     const $ = await fetchPage(`${config.hltvUrl}/events/${id}/-`, config.loadPage)
 
     const name = $('.eventname').text()
-    const dateStart = Number($('td.eventdate span[data-unix]').first().attr('data-unix'))
-    const dateEnd = Number($('td.eventdate span[data-unix]').last().attr('data-unix'))
-    const prizePool = $('td.prizepool').text()
+    const dateStart = Number($('td.eventdate span[data-unix]').first().attr('data-unix')) || undefined
+    const dateEnd = Number($('td.eventdate span[data-unix]').last().attr('data-unix')) || undefined
+    const prizePool = $('td.prizepool').text() 
     const location = { name: $('img.flag').attr('title'), code: (popSlashSource($('img.flag')) as string).split('.')[0] }
 
     const teams = toArray($('.team-box')).map(teamEl => ({

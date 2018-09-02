@@ -20,8 +20,8 @@ export interface EventFormat {
 
 interface FullEvent {
     name: string
-    dateStart: number
-    dateEnd: number
+    dateStart?: number
+    dateEnd?: number
     prizePool: string
     teams: EventTeam[]
     location: Country
