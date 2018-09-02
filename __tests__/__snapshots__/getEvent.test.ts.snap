@@ -1,0 +1,415 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getEvent 1`] = `
+Object {
+  "dateEnd": 1513422000000,
+  "dateStart": 1513422000000,
+  "formats": Array [
+    Object {
+      "description": "Single-elimination BO3",
+      "type": "Playoffs",
+    },
+  ],
+  "location": Object {
+    "code": "SE",
+    "name": "Sweden",
+  },
+  "mapPool": Array [
+    "cch",
+    "mrg",
+    "inf",
+    "nuke",
+    "trn",
+    "cbl",
+    "ovp",
+  ],
+  "name": "Ownit 2017 Winter Finals",
+  "prizeDistribution": Array [
+    Object {
+      "place": "1st",
+      "prize": "$4,100",
+      "team": Object {
+        "id": 6497,
+        "name": "TzatzikiKlubben",
+      },
+    },
+    Object {
+      "place": "2nd",
+      "prize": "$1,175",
+      "team": Object {
+        "id": 8660,
+        "name": "low riders",
+      },
+    },
+    Object {
+      "place": "3rd",
+      "prize": "$575",
+      "team": Object {
+        "id": 8659,
+        "name": "Kampners Advokatbyrå",
+      },
+    },
+    Object {
+      "place": "4th",
+      "prize": undefined,
+      "team": Object {
+        "id": 7908,
+        "name": "PopcornPlokker$",
+      },
+    },
+  ],
+  "prizePool": "$5,850",
+  "relatedEvents": Array [],
+  "teams": Array [
+    Object {
+      "id": 8659,
+      "name": "Kampners Advokatbyrå",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7908,
+      "name": "PopcornPlokker$",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6497,
+      "name": "TzatzikiKlubben",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8660,
+      "name": "low riders",
+      "reasonForParticipation": undefined,
+    },
+  ],
+}
+`;
+
+exports[`getEvent 2`] = `
+Object {
+  "dateEnd": 1520506800000,
+  "dateStart": 1518519600000,
+  "formats": Array [
+    Object {
+      "description": "Round-robin BO2",
+      "type": "Group stage",
+    },
+    Object {
+      "description": "Single-elimination BO3",
+      "type": "Playoffs",
+    },
+  ],
+  "location": Object {
+    "code": "EU",
+    "name": "Europe",
+  },
+  "mapPool": Array [
+    "cch",
+    "mrg",
+    "inf",
+    "nuke",
+    "trn",
+    "cbl",
+    "ovp",
+  ],
+  "name": "CSesport.com Cup #3",
+  "prizeDistribution": Array [
+    Object {
+      "place": "1st",
+      "prize": "$2,000",
+      "team": Object {
+        "id": 6343,
+        "name": "EURONICS",
+      },
+    },
+    Object {
+      "place": "2nd",
+      "prize": "$500",
+      "team": Object {
+        "id": 6652,
+        "name": "GameAgents",
+      },
+    },
+    Object {
+      "place": "3-4th",
+      "prize": "$250",
+      "team": Object {
+        "id": 8361,
+        "name": "SEAL",
+      },
+    },
+    Object {
+      "place": "3-4th",
+      "prize": "$250",
+      "team": Object {
+        "id": 7187,
+        "name": "Nexus",
+      },
+    },
+    Object {
+      "place": "5-6th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8572,
+        "name": "Codewise Unicorns",
+      },
+    },
+    Object {
+      "place": "5-6th",
+      "prize": undefined,
+      "team": Object {
+        "id": 7017,
+        "name": "Space Jam",
+      },
+    },
+    Object {
+      "place": "7-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 4929,
+        "name": "Refuse",
+      },
+    },
+    Object {
+      "place": "7-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8305,
+        "name": "DreamEaters",
+      },
+    },
+    Object {
+      "place": "9-10th",
+      "prize": undefined,
+      "team": Object {
+        "id": 6679,
+        "name": "Revolution",
+      },
+    },
+    Object {
+      "place": "9-10th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8209,
+        "name": "Pompa",
+      },
+    },
+  ],
+  "prizePool": "$3,000",
+  "relatedEvents": Array [
+    Object {
+      "id": 3457,
+      "name": "CSesport.com XMAS Cup",
+    },
+    Object {
+      "id": 3638,
+      "name": "CSesport.com Cup #4",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "id": 8572,
+      "name": "Codewise Unicorns",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8305,
+      "name": "DreamEaters",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6343,
+      "name": "EURONICS",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6652,
+      "name": "GameAgents",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7187,
+      "name": "Nexus",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8209,
+      "name": "Pompa",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 4929,
+      "name": "Refuse",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6679,
+      "name": "Revolution",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8361,
+      "name": "SEAL",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7017,
+      "name": "Space Jam",
+      "reasonForParticipation": undefined,
+    },
+  ],
+}
+`;
+
+exports[`getEvent 3`] = `
+Object {
+  "dateEnd": undefined,
+  "dateStart": undefined,
+  "formats": Array [],
+  "location": Object {
+    "code": "WORLD",
+    "name": "World",
+  },
+  "mapPool": Array [],
+  "name": "DH 09 Summer Qualifier Copenhagen",
+  "prizeDistribution": Array [],
+  "prizePool": "TBA",
+  "relatedEvents": Array [],
+  "teams": Array [
+    Object {
+      "id": 334,
+      "name": "PlayZeek",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 166,
+      "name": "Spirit of Amiga",
+      "reasonForParticipation": undefined,
+    },
+  ],
+}
+`;
+
+exports[`getEvent 4`] = `
+Object {
+  "dateEnd": 1500976800000,
+  "dateStart": 1500285600000,
+  "formats": Array [],
+  "location": Object {
+    "code": "AR",
+    "name": "Argentina",
+  },
+  "mapPool": Array [],
+  "name": "Liga TyC Sports Aorus #1",
+  "prizeDistribution": Array [
+    Object {
+      "place": "1-2nd",
+      "prize": undefined,
+      "team": Object {
+        "id": 6799,
+        "name": "Furious",
+      },
+    },
+    Object {
+      "place": "1-2nd",
+      "prize": undefined,
+      "team": Object {
+        "id": 7653,
+        "name": "Isurus",
+      },
+    },
+    Object {
+      "place": "3-4th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8123,
+        "name": "Keymotion",
+      },
+    },
+    Object {
+      "place": "3-4th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8125,
+        "name": "Hafnet",
+      },
+    },
+    Object {
+      "place": "5-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8094,
+        "name": "Licht",
+      },
+    },
+    Object {
+      "place": "5-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8121,
+        "name": "Malvinas",
+      },
+    },
+    Object {
+      "place": "5-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8122,
+        "name": "Kitsune",
+      },
+    },
+    Object {
+      "place": "5-8th",
+      "prize": undefined,
+      "team": Object {
+        "id": 8124,
+        "name": "Keymotion Red",
+      },
+    },
+  ],
+  "prizePool": "TBA",
+  "relatedEvents": Array [],
+  "teams": Array [
+    Object {
+      "id": 6799,
+      "name": "Furious",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8125,
+      "name": "Hafnet",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7653,
+      "name": "Isurus",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8123,
+      "name": "Keymotion",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8124,
+      "name": "Keymotion Red",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8122,
+      "name": "Kitsune",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8094,
+      "name": "Licht",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8121,
+      "name": "Malvinas",
+      "reasonForParticipation": undefined,
+    },
+  ],
+}
+`;

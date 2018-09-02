@@ -17,5 +17,8 @@
         "baseUrl": "./src/",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true
-    }
+    },
+    "exclude": [
+        "__tests__"
+    ]
 }

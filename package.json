@@ -5,10 +5,10 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
+    "prepare": "npm run test && npm run build",
     "build": "tsc",
     "start": "ts-node src/playground",
-    "doc": "typedoc --out documentation src"
+    "test": "jest"
   },
   "repository": "git+https://github.com/gigobyte/HLTV.git",
   "keywords": [
@@ -18,6 +18,20 @@
     "parser",
     "csgo"
   ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "author": "Stanislav Iliev",
   "license": "ISC",
   "bugs": {
@@ -26,10 +40,12 @@
   "homepage": "https://github.com/gigobyte/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "^0.22.9",
+    "@types/jest": "^23.3.1",
     "@types/request": "^2.47.1",
     "@types/socket.io-client": "^1.4.32",
+    "jest": "^23.5.0",
+    "ts-jest": "^23.1.4",
     "ts-node": "^7.0.0",
-    "typedoc": "^0.12.0",
     "typescript": "^3.0.1"
   },
   "dependencies": {
