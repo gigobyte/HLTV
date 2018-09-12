@@ -59,7 +59,11 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
         }
     }))
 
-    const mapStatistics = getMapsStatistics(t$(t$('.graph').get(1)).attr('data-fusionchart-config'))
+    const mapStatisticsGraphElement = t$(t$('.graph').get(1))
+
+    const mapStatistics = mapStatisticsGraphElement.length !== 0
+        ? getMapsStatistics(mapStatisticsGraphElement.attr('data-fusionchart-config'))
+        : undefined
 
     const events = toArray(e$('a.big-event')).map(eventEl => ({
         name: eventEl.find('.big-event-name').text(),
