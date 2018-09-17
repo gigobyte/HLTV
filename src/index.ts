@@ -12,7 +12,10 @@ import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
 import getEvent from './endpoints/getEvent'
+import getPlayerStats from './endpoints/getPlayerStats';
 import HLTVConfig from './models/HLTVConfig'
+import getPlayerRanking from './endpoints/getPlayerRanking';
+
 
 export class HLTVFactory {
     constructor(private readonly config: HLTVConfig) {}
@@ -30,6 +33,8 @@ export class HLTVFactory {
     getTeamStats = getTeamStats(this.config)
     getPlayer = getPlayer(this.config)
     getEvent = getEvent(this.config)
+    getPlayerStats = getPlayerStats(this.config)
+    getPlayerRanking = getPlayerRanking(this.config);
 
     public createInstance(config: HLTVConfig) {
         return new HLTVFactory(config)
