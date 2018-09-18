@@ -6,7 +6,7 @@ import { fetchPage, toArray  } from '../utils/mappers'
 const getPlayerRanking= (config: HLTVConfig) => async ({ startDate, endDate }: { startDate: string, endDate: string }): Promise<PlayerRanking[]> => {
     
 
-    var options = '';
+    let options = '';
     if (startDate != null && endDate != null) {
         options = '?startDate='+startDate+'&endDate='+endDate;
     }
