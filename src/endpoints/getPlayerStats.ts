@@ -28,7 +28,7 @@ const getPlayerStats = (config: HLTVConfig) => async ({ id , startDate, endDate 
 
     let team: Team | undefined
     
-    if (getInfo(3).text().trim() !== '-') {
+    if (getInfo(3).text() !== 'No team') {
         team = {
             name: getInfo(3).text(),
             id: Number(getInfo(3).attr('href').split('/')[3])
