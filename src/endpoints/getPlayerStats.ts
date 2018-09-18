@@ -2,11 +2,12 @@ import FullPlayerStats from '../models/FullPlayerStats'
 import Team from '../models/Team'
 import HLTVConfig from '../models/HLTVConfig'
 import { fetchPage } from '../utils/mappers'
+import * as E from '../utils/parsing'
 
 const getPlayerStats = (config: HLTVConfig) => async ({ id , startDate, endDate }: { id: number, startDate: string, endDate: string }): Promise<FullPlayerStats> => {
     
 
-    var options = '';
+    let options = '';
     if (startDate != null && endDate != null) {
         options = '?startDate='+startDate+'&endDate='+endDate;
     }
@@ -22,7 +23,7 @@ const getPlayerStats = (config: HLTVConfig) => async ({ id , startDate, endDate 
 
     const country = {
         name: getInfo(2).text(),
-        code: undefined
+        code: (E.popSlashSource($('.image-and-label .flag')) as string).split('.')[0]
     }
 
     let team: Team | undefined
@@ -30,12 +31,11 @@ const getPlayerStats = (config: HLTVConfig) => async ({ id , startDate, endDate 
     if (getInfo(3).text().trim() !== '-') {
         team = {
             name: getInfo(3).text(),
-            id: Number(getInfo(3).attr('href').split('/')[3]),
-            image: $($('.image-and-label>img').get(1)).attr('src')
+            id: Number(getInfo(3).attr('href').split('/')[3])
         };
     }
 
-    const getStats = function(i) { return $($($('.stats-row').get(i)).find('span').get(1)).text(); };
+    const getStats = (i) => { return $($($('.stats-row').get(i)).find('span').get(1)).text(); };
     const statistics = {
         kills: getStats(0),
         headshots: getStats(1),
