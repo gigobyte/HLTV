@@ -18,7 +18,7 @@ const getPlayerStats = (config: HLTVConfig) => async ({ id , startDate, endDate 
 
     const image = $('.context-item-image').attr('src');
 
-    const getInfo = function(i) { return $($('.divided-row').find('.large-strong').get(i)); };
+    const getInfo = (i) => { return $($('.divided-row').find('.large-strong').get(i)); };
     const age = Number(getInfo(1).text()) || undefined;
 
     const country = {
