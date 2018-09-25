@@ -39,7 +39,9 @@ const getResults = (config: HLTVConfig) => async ({ pages=1 } = {}): Promise<Mat
                 id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
             }
 
-            return { id, team1, team2, result, event, map, format, stars }
+            const date = Number(matchEl.parent().attr('data-zonedgrouping-entry-unix'))
+
+            return { id, team1, team2, result, event, map, format, stars, date }
         }))
     }
 
