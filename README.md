@@ -24,6 +24,8 @@ Table of contents
   - [getTeam](#getteam)
   - [getTeamStats](#getteamstats)
   - [getPlayer](#getplayer)
+  - [getPlayerStats](#getplayerstats)
+  - [getPlayerRanking](#getplayerranking)
   - [getEvent](#getevent)
   - [connectToScorebot](#connecttoscorebot)
 
@@ -195,6 +197,7 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
   ...
 })
 ```
+
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/TeamRanking.ts)**
 
 ***
@@ -250,6 +253,48 @@ HLTV.getPlayer({id: 6137}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
+
+***
+
+#### getPlayerStats
+
+Parses the info from `hltv.org/stats/players/*`
+
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+id | int | - | - |
+startDate | string | - | - |
+endDate | string | - | - |
+
+```javascript
+HLTV.getPlayerStats({id: 7998}).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayerStats.ts)**
+
+***
+
+#### getPlayerRanking
+
+Parses the info from `hltv.org/stats/players` page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+startDate | string | - | - |
+endDate | string | - | - |
+
+
+```javascript
+// If you don't provide a filter the latest ranking will be parsed
+HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/PlayerRanking.ts)**
 
 ***
 
