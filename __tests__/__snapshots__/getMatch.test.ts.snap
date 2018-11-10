@@ -200,14 +200,17 @@ Object {
     Object {
       "name": "d2",
       "result": "16:0 (15:0; 1:0)",
+      "statsId": 73147,
     },
     Object {
       "name": "inf",
       "result": "14:16 (5:10; 9:6)",
+      "statsId": 73164,
     },
     Object {
       "name": "mrg",
       "result": "12:16 (7:8; 5:8)",
+      "statsId": 73165,
     },
   ],
   "players": Object {
@@ -362,14 +365,17 @@ Object {
     Object {
       "name": "cbl",
       "result": "16:6 (11:4; 5:2)",
+      "statsId": 30144,
     },
     Object {
       "name": "mrg",
       "result": "13:16 (7:8; 6:8)",
+      "statsId": 30145,
     },
     Object {
       "name": "cch",
       "result": "14:16 (6:9; 8:7)",
+      "statsId": 30146,
     },
   ],
   "players": Object {
@@ -455,6 +461,7 @@ Object {
     Object {
       "name": "nuke",
       "result": "",
+      "statsId": undefined,
     },
   ],
   "players": Object {
@@ -543,6 +550,7 @@ Object {
     Object {
       "name": "nuke",
       "result": "",
+      "statsId": undefined,
     },
   ],
   "players": Object {
