@@ -57,15 +57,59 @@ export const getMatchFormatAndMap = (mapText: string): {map?: MapSlug, format?: 
     return { format: mapText }
 }
 
-export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (el: Cheerio, i: number): WeakRoundOutcome => {
-    const outcomeString = (E.popSlashSource(el) as string).split('.')[0]
-    const outcome = Object.entries(Outcome).find(([_, v]) => v === outcomeString) as Outcome | undefined
+export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (el: Cheerio, i: number, allRoundEls: Cheerio[]): WeakRoundOutcome => {
+    const getOutcome = (el: Cheerio): Outcome | undefined => {
+        const outcomeString = (E.popSlashSource(el) as string).split('.')[0]
+        const outcomeTuple = Object.entries(Outcome).find(([_, v]) => v === outcomeString)
+
+        return outcomeTuple && outcomeTuple[1]
+    }
+
+    const extractCTOutcomeSideInfo = (index: number) => {
+        if (index < 15) {
+            return {
+                firstHalfCt: team1Id,
+                secondHalfCt: team2Id,
+                firstHalfT: team2Id,
+                secondHalfT: team1Id
+            }
+        }
+
+        return {
+            firstHalfCt: team2Id,
+            secondHalfCt: team1Id,
+            firstHalfT: team1Id,
+            secondHalfT: team2Id
+        }
+    }
+
+    const extractTOutcomeSideInfo = (index: number) => {
+        if (index < 15) {
+            return extractCTOutcomeSideInfo(30)
+        }
+
+        return extractCTOutcomeSideInfo(0)
+    }
+    
+    const outcome = getOutcome(el)
+
+    const ctOutcomes = [Outcome.BombDefused, Outcome.CTWin]
+    const tOutcomes = [Outcome.BombExploded, Outcome.TWin]
+
+    const ctOutcomeMarker = allRoundEls.findIndex(x => ctOutcomes.includes(getOutcome(x)!))
+    const tOutcomeMarker = allRoundEls.findIndex(x => tOutcomes.includes(getOutcome(x)!))
+
+    const outcomeSideInfo = ctOutcomeMarker !== -1
+        ? extractCTOutcomeSideInfo(ctOutcomeMarker)
+        : extractTOutcomeSideInfo(tOutcomeMarker)
+
+    const isFirstHalf = i < 15 || (i >= 30 && i < 45)
 
     return {
-        outcome: outcome && outcome[1] as Outcome,
+        outcome: outcome,
         score: el.attr('title'),
-        ctTeam: i < 15 ? team1Id : team2Id,
-        tTeam: i < 15 ? team2Id : team1Id
+        ctTeam: isFirstHalf ? outcomeSideInfo.firstHalfCt : outcomeSideInfo.secondHalfCt,
+        tTeam: isFirstHalf ? outcomeSideInfo.firstHalfT : outcomeSideInfo.secondHalfT
     }
 }
 
