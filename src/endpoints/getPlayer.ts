@@ -42,11 +42,11 @@ const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promis
     }
 
 
-    const achievements = toArray($('.achievement')).map(achEl => ({
-        place: $(achEl.contents().get(1)).text().split(' at')[0],
+    const achievements = toArray($('.achievement-table .team')).map(achEl => ({
+        place: achEl.find('.achievement').text(),
         event: {
-            name: $(achEl.contents().get(2)).text(),
-            id: Number($(achEl.contents().get(2)).attr('href').split('/')[2])
+            name: achEl.find('.tournament-name-cell a').text(),
+            id: Number(achEl.find('.tournament-name-cell a').attr('href').split('/')[2])
         }
     }))
 
