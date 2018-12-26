@@ -1,6 +1,6 @@
 import Team from './Team'
 import Event from './Event'
-import MapSlug from 'enums/MapSlug'
+import MapSlug from '../enums/MapSlug'
 import Country from './Country'
 
 export interface EventPrizeDistribution {
