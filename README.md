@@ -16,6 +16,7 @@ Table of contents
   - [getMatch](#getmatch)
   - [getMatches](#getmatches)
   - [getMatchesStats](#getmatchesstats)
+  - [getMatchStats](#getmatchstats)
   - [getMatchMapStats](#getmatchmapstats)
   - [getResults](#getresults)
   - [getStreams](#getstreams)
@@ -107,6 +108,24 @@ HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchStats.ts)**
+
+***
+
+
+#### getMatchStats
+
+Parses info from the single map stats page (`hltv.org/stats/matches/*/*`)
+
+Option | Type | Default Value | Description |
+:---:|:---:|:---:|:---:|
+| id | number | - | - |
+```javascript
+HLTV.getMatchStats({id: 62979}).then((res) => {
+  ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchStats.ts#L40)**
 
 ***
 

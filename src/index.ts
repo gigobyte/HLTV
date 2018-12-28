@@ -4,6 +4,7 @@ import getMatch from './endpoints/getMatch'
 import getMatches from './endpoints/getMatches'
 import getMatchesStats from './endpoints/getMatchesStats'
 import getMatchMapStats from './endpoints/getMatchMapStats'
+import getMatchStats from './endpoints/getMatchStats'
 import getRecentThreads from './endpoints/getRecentThreads'
 import getResults from './endpoints/getResults'
 import getStreams from './endpoints/getStreams'
@@ -24,6 +25,7 @@ export class HLTVFactory {
     getMatch = getMatch(this.config)
     getMatches = getMatches(this.config)
     getMatchesStats = getMatchesStats(this.config)
+    getMatchStats = getMatchStats(this.config)
     getMatchMapStats = getMatchMapStats(this.config)
     getRecentThreads = getRecentThreads(this.config)
     getResults = getResults(this.config)
