@@ -114,7 +114,7 @@ HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res
 
 #### getMatchStats
 
-Parses info from the single map stats page (`hltv.org/stats/matches/*/*`)
+Parses info from the all maps stats page (`hltv.org/stats/matches/*/*`)
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
