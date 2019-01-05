@@ -60,6 +60,8 @@ const getMatchStats = (config: HLTVConfig) => async ({ id }: { id: number }): Pr
             name: rowEl.find('.st-player a').text(),
             kills: Number(rowEl.find('.st-kills').contents().first().text()),
             hsKills: Number(rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')),
+            assists: Number(rowEl.find('.st-assists').contents().first().text()),
+            flashAssists: Number(rowEl.find('.st-assists .gtSmartphone-only').text().replace(/\(|\)/g, '')),
             deaths: Number(rowEl.find('.st-deaths').text()),
             KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')),
             killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),

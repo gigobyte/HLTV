@@ -6,7 +6,10 @@ export interface PlayerStat extends Player {
     readonly value: number
 }
 
-export interface PlayerStats extends Player {}
+export interface PlayerStats extends Player {
+    assists: number
+    flashAssists: number
+}
 
 export interface TeamStatComparison {
     readonly team1: number,
