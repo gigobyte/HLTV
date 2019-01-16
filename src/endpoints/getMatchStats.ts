@@ -28,16 +28,19 @@ const getMatchStats = (config: HLTVConfig) => async ({ id }: { id: number }): Pr
     const m$ = await fetchPage(`${config.hltvUrl}/stats/matches/${id}/-`, config.loadPage);
 
     const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])
+    const matchScore = [ Number(m$('.team-left .bold').text()), Number(m$('.team-right .bold').text()) ]
     const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix'))
 
     const team1: Team = {
         id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
-        name: m$('.team-left .team-logo').attr('title')
+        name: m$('.team-left .team-logo').attr('title'),
+        score: matchScore[0]
     }
 
     const team2: Team = {
         id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
-        name: m$('.team-right .team-logo').attr('title')
+        name: m$('.team-right .team-logo').attr('title'),
+        score: matchScore[1]
     }
 
     const event: Event = {
@@ -77,7 +80,7 @@ const getMatchStats = (config: HLTVConfig) => async ({ id }: { id: number }): Pr
     }
 
     return {
-        matchPageID, date, team1, team2, event, overview, playerStats,
+        matchPageID, matchScore, date, team1, team2, event, overview, playerStats,
     }
 }
 

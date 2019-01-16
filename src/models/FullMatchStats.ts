@@ -42,6 +42,7 @@ export interface PlayerOverviewStats {
 
 interface FullMatchStats {
     readonly matchPageID: number,
+    readonly matchScore: number[],
     readonly team1: Team,
     readonly team2: Team,
     readonly event: Event,

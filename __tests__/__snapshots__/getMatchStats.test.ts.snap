@@ -8,6 +8,10 @@ Object {
     "name": "BLAST Pro Series Lisbon 2018",
   },
   "matchPageID": 2329728,
+  "matchScore": Array [
+    2,
+    1,
+  ],
   "overview": Object {
     "bestRating": Object {
       "id": 7398,
@@ -201,10 +205,12 @@ Object {
   "team1": Object {
     "id": 6665,
     "name": "Astralis",
+    "score": 2,
   },
   "team2": Object {
     "id": 4608,
     "name": "Natus Vincere",
+    "score": 1,
   },
 }
 `;
@@ -217,6 +223,10 @@ Object {
     "name": "LOOT.BET Bullet Blizzard",
   },
   "matchPageID": 2330118,
+  "matchScore": Array [
+    1,
+    2,
+  ],
   "overview": Object {
     "bestRating": Object {
       "id": 9008,
@@ -410,10 +420,12 @@ Object {
   "team1": Object {
     "id": 9357,
     "name": "Underdogs",
+    "score": 1,
   },
   "team2": Object {
     "id": 9287,
     "name": "Unique",
+    "score": 2,
   },
 }
 `;
@@ -426,6 +438,10 @@ Object {
     "name": "StarSeries i-League Season 7 Asia Qualifier",
   },
   "matchPageID": 2329953,
+  "matchScore": Array [
+    2,
+    0,
+  ],
   "overview": Object {
     "bestRating": Object {
       "id": 10774,
@@ -619,10 +635,12 @@ Object {
   "team1": Object {
     "id": 7606,
     "name": "ViCi",
+    "score": 2,
   },
   "team2": Object {
     "id": 9483,
     "name": "Sparta",
+    "score": 0,
   },
 }
 `;
