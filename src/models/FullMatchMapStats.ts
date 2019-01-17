@@ -33,6 +33,7 @@ export interface PlayerOverviewStats {
     kills: number,
     hsKills: number,
     assists: number,
+    flashAssists: number,
     deaths: number,
     KAST: number,
     killDeathsDifference: number,
