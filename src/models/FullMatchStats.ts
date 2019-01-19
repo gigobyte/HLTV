@@ -2,6 +2,10 @@ import Team from './Team'
 import Event from './Event'
 import Player from './Player'
 
+export interface TeamStat extends Team {
+    readonly score: number
+}
+
 export interface PlayerStat extends Player {
     readonly value: number
 }
@@ -42,7 +46,6 @@ export interface PlayerOverviewStats {
 
 interface FullMatchStats {
     readonly matchPageID: number,
-    readonly matchScore: number[],
     readonly team1: Team,
     readonly team2: Team,
     readonly event: Event,

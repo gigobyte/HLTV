@@ -1,9 +1,8 @@
 import FullMatchMapStats, {
-    PlayerStat, MatchStatsOverview, TeamStatComparison,
+    TeamStat, PlayerStat, MatchStatsOverview, TeamStatComparison,
     PlayerPerformanceStats, PlayerStats, PerformanceOverview
 } from '../models/FullMatchMapStats'
 import RoundOutcome, { WeakRoundOutcome } from '../models/RoundOutcome'
-import Team from '../models/Team'
 import Event from '../models/Event'
 import * as E from '../utils/parsing'
 import HLTVConfig from '../models/HLTVConfig'
@@ -39,13 +38,13 @@ const getMatchMapStats = (config: HLTVConfig) => async ({ id }: { id: number }):
     const map = getMapSlug(m$(m$('.match-info-box').contents().get(3)).text().replace(/\n| /g, ''))
     const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix'))
 
-    const team1: Team = {
+    const team1: TeamStat = {
         id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
         name: m$('.team-left .team-logo').attr('title'),
         score: matchScore[0],
     }
 
-    const team2: Team = {
+    const team2: TeamStat = {
         id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
         name: m$('.team-right .team-logo').attr('title'),
         score: matchScore[1],
@@ -120,7 +119,7 @@ const getMatchMapStats = (config: HLTVConfig) => async ({ id }: { id: number }):
     }, {} as PerformanceOverview)
 
     return {
-        matchPageID, matchScore, map, date, team1, team2, event, overview, roundHistory, playerStats, performanceOverview
+        matchPageID, map, date, team1, team2, event, overview, roundHistory, playerStats, performanceOverview
     }
 }
 

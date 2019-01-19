@@ -8,10 +8,6 @@ Object {
     "name": "BLAST Pro Series Lisbon 2018",
   },
   "matchPageID": 2329728,
-  "matchScore": Array [
-    2,
-    1,
-  ],
   "overview": Object {
     "bestRating": Object {
       "id": 7398,
@@ -223,10 +219,6 @@ Object {
     "name": "LOOT.BET Bullet Blizzard",
   },
   "matchPageID": 2330118,
-  "matchScore": Array [
-    1,
-    2,
-  ],
   "overview": Object {
     "bestRating": Object {
       "id": 9008,
@@ -438,10 +430,6 @@ Object {
     "name": "StarSeries i-League Season 7 Asia Qualifier",
   },
   "matchPageID": 2329953,
-  "matchScore": Array [
-    2,
-    0,
-  ],
   "overview": Object {
     "bestRating": Object {
       "id": 10774,

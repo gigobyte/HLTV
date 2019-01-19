@@ -8,6 +8,10 @@ export interface RoundOutcome extends WeakRoundOutcome {
     outcome: Outcome
 }
 
+export interface TeamStat extends Team {
+    readonly score: number
+}
+
 export interface PlayerStat extends Player {
     readonly value: number
 }
@@ -63,7 +67,6 @@ export interface PerformanceOverview {
 
 interface FullMatchMapStats {
     readonly matchPageID: number,
-    readonly matchScore: number[],
     readonly team1: Team,
     readonly team2: Team,
     readonly event: Event,
