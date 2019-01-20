@@ -11,9 +11,19 @@ export interface ScoreboardPlayer {
     money: number,
     damagePrRound: number,
     hp: number,
+    primaryWeapon: string,
     kevlar: boolean,
     helmet: boolean,
-    nick: string
+    nick: string,
+    hasDefuseKit: boolean,
+    advancedStats: {
+        kast: number,
+        entryKills: number,
+        entryDeaths: number,
+        multiKillRounds: number,
+        oneOnXWins: number,
+        flashAssists: number
+    }
 }
 
 export interface ScoreboardRound {
@@ -42,7 +52,12 @@ export interface ScoreboardUpdate {
     terroristScore: number,
     ctTeamId: number,
     tTeamId: number,
-    frozen: boolean
+    frozen: boolean,
+    live: boolean,
+    ctTeamScore: number,
+    tTeamScore: number,
+    startingCt: number,
+    startingT: number
 }
 
 export default ScoreboardUpdate

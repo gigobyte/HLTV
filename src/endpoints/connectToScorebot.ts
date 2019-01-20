@@ -8,23 +8,30 @@ export type ConnectToScorebotParams = {
     id: number,
     onScoreboardUpdate?: (data: ScoreboardUpdate) => any,
     onLogUpdate?: (data: LogUpdate) => any,
+    onFullLogUpdate?: (data: unknown) => any,
     onConnect?: () => any,
     onDisconnect?: () => any
 }
 
-const connectToScorebot = (config: HLTVConfig) => async ({ id, onScoreboardUpdate, onLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) => {
+const connectToScorebot = (config: HLTVConfig) => async ({ id, onScoreboardUpdate, onLogUpdate, onFullLogUpdate, onConnect, onDisconnect }: ConnectToScorebotParams) => {
     const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage)
-    const url = $('#scoreboardElement').attr('data-scorebot-url')
+    const url = $('#scoreboardElement').attr('data-scorebot-url').split(',').pop()!
     const matchId = $('#scoreboardElement').attr('data-scorebot-id')
 
     const socket = io.connect(url)
+    
+    const initObject = JSON.stringify({
+        token: '',
+        listId: matchId
+    })
 
     socket.on('connect', () => {
         if (onConnect) {
             onConnect()
         }
 
-        socket.emit('readyForMatch', `{"token":"","listId":"${matchId}"}`)
+
+        socket.emit('readyForMatch', initObject)
 
         socket.on('scoreboard', (data) => {
             if (onScoreboardUpdate) {
@@ -37,10 +44,16 @@ const connectToScorebot = (config: HLTVConfig) => async ({ id, onScoreboardUpdat
                 onLogUpdate(JSON.parse(data))
             }
         })
+
+        socket.on('fullLog', (data) => {
+            if (onFullLogUpdate) {
+                onFullLogUpdate(JSON.parse(data))
+            }
+        })
     })
 
     socket.on('reconnect', () => {
-        socket.emit('readyForMatch', matchId)
+        socket.emit('readyForMatch', initObject)
     })
 
     socket.on('disconnect', () => {

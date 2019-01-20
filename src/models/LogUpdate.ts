@@ -1,7 +1,7 @@
 import WinType from '../enums/WinType'
 
 export type Side = 'CT' | 'TERRORIST' | 'SPECTATOR'
-export type LogEvent = RoundStart | RoundEnd | Kill | BombDefused | BombPlanted | PlayerJoin | PlayerQuit
+export type LogEvent = RoundStart | RoundEnd | Kill | Assist | BombDefused | BombPlanted | PlayerJoin | PlayerQuit
 
 export interface RoundStart {
     RoundStart: {}
@@ -40,7 +40,20 @@ export interface Kill {
         victimSide: Side,
         victimNick: string,
         weapon: string,
-        headShot: boolean
+        headShot: boolean,
+        eventId: number
+    }
+}
+
+export interface Assist {
+    Assist: {
+        asissterName: string,
+        assisterNick: string,
+        assisterSide: Side,
+        victimNick: string,
+        victimName: string,
+        victimSide: Side,
+        killEventId: number
     }
 }
 
@@ -54,6 +67,7 @@ export interface BombDefused {
 export interface BombPlanted {
     BombPlanted: {
         playerName: string,
+        playerNick: string,
         ctPlayers: number,
         tPlayers: number
     }

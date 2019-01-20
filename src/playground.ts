@@ -6,10 +6,15 @@
 // HLTV.getActiveThreads().then(res => console.log(res))
 // HLTV.getTeamRanking().then(res => console.log(res))
 // HLTV.getTeamRanking({ country: 'Thailand' }).then(res => console.log(res))
-// HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
-//     console.log(data)
+// HLTV.connectToScorebot({id: 2330349, onScoreboardUpdate: (data) => {
+//     console.log('scoreboard update!')
+//     console.dir(data, { depth: null })
 // }, onLogUpdate: (data) => {
-//     const a = data.log[0]
+//     console.log('log update!')
+//     console.dir(data, { depth: null })
+// }, onFullLogUpdate: (data) => {
+//     console.log('fullLog update!')
+//     console.dir(data, { depth: null })
 // }})
 // HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
 // HLTV.getMatch({id: 2312432}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
