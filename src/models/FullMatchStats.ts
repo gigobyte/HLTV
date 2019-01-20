@@ -2,6 +2,10 @@ import Team from './Team'
 import Event from './Event'
 import Player from './Player'
 
+export interface TeamStat extends Team {
+    readonly score: number
+}
+
 export interface PlayerStat extends Player {
     readonly value: number
 }

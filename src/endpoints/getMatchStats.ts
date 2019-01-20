@@ -1,7 +1,6 @@
 import FullMatchStats, {
-    PlayerStat, PlayerStats, MatchStatsOverview, TeamStatComparison 
+    TeamStat, PlayerStat, PlayerStats, MatchStatsOverview, TeamStatComparison 
 } from '../models/FullMatchStats'
-import Team from '../models/Team'
 import Event from '../models/Event'
 import * as E from '../utils/parsing'
 import HLTVConfig from '../models/HLTVConfig'
@@ -28,16 +27,19 @@ const getMatchStats = (config: HLTVConfig) => async ({ id }: { id: number }): Pr
     const m$ = await fetchPage(`${config.hltvUrl}/stats/matches/${id}/-`, config.loadPage);
 
     const matchPageID = Number(m$('.match-page-link').attr('href').split('/')[2])
+    const matchScore = [ Number(m$('.team-left .bold').text()), Number(m$('.team-right .bold').text()) ]
     const date = Number(m$('.match-info-box .small-text span').first().attr('data-unix'))
 
-    const team1: Team = {
+    const team1: TeamStat = {
         id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
-        name: m$('.team-left .team-logo').attr('title')
+        name: m$('.team-left .team-logo').attr('title'),
+        score: matchScore[0]
     }
 
-    const team2: Team = {
+    const team2: TeamStat = {
         id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
-        name: m$('.team-right .team-logo').attr('title')
+        name: m$('.team-right .team-logo').attr('title'),
+        score: matchScore[1]
     }
 
     const event: Event = {

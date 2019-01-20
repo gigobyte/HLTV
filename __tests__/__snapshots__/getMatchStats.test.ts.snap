@@ -201,10 +201,12 @@ Object {
   "team1": Object {
     "id": 6665,
     "name": "Astralis",
+    "score": 2,
   },
   "team2": Object {
     "id": 4608,
     "name": "Natus Vincere",
+    "score": 1,
   },
 }
 `;
@@ -410,10 +412,12 @@ Object {
   "team1": Object {
     "id": 9357,
     "name": "Underdogs",
+    "score": 1,
   },
   "team2": Object {
     "id": 9287,
     "name": "Unique",
+    "score": 2,
   },
 }
 `;
@@ -619,10 +623,12 @@ Object {
   "team1": Object {
     "id": 7606,
     "name": "ViCi",
+    "score": 2,
   },
   "team2": Object {
     "id": 9483,
     "name": "Sparta",
+    "score": 0,
   },
 }
 `;

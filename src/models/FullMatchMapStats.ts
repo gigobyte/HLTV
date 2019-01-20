@@ -8,6 +8,10 @@ export interface RoundOutcome extends WeakRoundOutcome {
     outcome: Outcome
 }
 
+export interface TeamStat extends Team {
+    readonly score: number
+}
+
 export interface PlayerStat extends Player {
     readonly value: number
 }
@@ -33,6 +37,7 @@ export interface PlayerOverviewStats {
     kills: number,
     hsKills: number,
     assists: number,
+    flashAssists: number,
     deaths: number,
     KAST: number,
     killDeathsDifference: number,
