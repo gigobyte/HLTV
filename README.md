@@ -346,6 +346,7 @@ Option | Type | Default Value | Description |
 | id | int | - | The match ID |
 | onScoreboardUpdate | function? | - | Callback that is called when there is new scoreboard data |
 | onLogUpdate | function? | - | Callback that is called when there is new game log data |
+| onFullLogUpdate | function? | - | It's still unclear when this is called and with what data, if you find out please let me know!
 | onConnect | function? | - | Callback that is called when a connection with the scorebot is established |
 | onDisconnect | function? | - | Callback that is called when the scorebot disconnects |
 
