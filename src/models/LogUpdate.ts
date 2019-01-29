@@ -47,7 +47,7 @@ export interface Kill {
 
 export interface Assist {
     Assist: {
-        asissterName: string,
+        assisterName: string,
         assisterNick: string,
         assisterSide: Side,
         victimNick: string,
