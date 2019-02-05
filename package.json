@@ -58,7 +58,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "purify-ts": "^0.12.2",
     "request": "^2.88.0",
     "socket.io-client": "^2.1.0"
   }
