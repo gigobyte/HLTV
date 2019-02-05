@@ -7,7 +7,6 @@ import { MapStatistic } from '../models/FullTeam'
 import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
-import { Parser } from './parser'
 
 export const defaultLoadPage = (url: string) =>
   new Promise<string>(resolve => {
@@ -18,7 +17,7 @@ export const fetchPage = async (
   url: string,
   loadPage?: (url: string) => Promise<string>
 ): Promise<CheerioStatic> => {
-  return Parser(cheerio.load(await loadPage!(url))) as any
+  return cheerio.load(await loadPage!(url))
 }
 
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
