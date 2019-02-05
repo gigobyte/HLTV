@@ -1,4 +1,4 @@
-import * as configDefaults from './utils/constants';
+import * as configDefaults from './utils/constants'
 import connectToScorebot from './endpoints/connectToScorebot'
 import getMatch from './endpoints/getMatch'
 import getMatches from './endpoints/getMatches'
@@ -13,34 +13,33 @@ import getTeam from './endpoints/getTeam'
 import getTeamStats from './endpoints/getTeamStats'
 import getPlayer from './endpoints/getPlayer'
 import getEvent from './endpoints/getEvent'
-import getPlayerStats from './endpoints/getPlayerStats';
+import getPlayerStats from './endpoints/getPlayerStats'
 import HLTVConfig from './models/HLTVConfig'
-import getPlayerRanking from './endpoints/getPlayerRanking';
-
+import getPlayerRanking from './endpoints/getPlayerRanking'
 
 export class HLTVFactory {
-    constructor(private readonly config: HLTVConfig) {}
+  constructor(private readonly config: HLTVConfig) {}
 
-    connectToScorebot = connectToScorebot(this.config)
-    getMatch = getMatch(this.config)
-    getMatches = getMatches(this.config)
-    getMatchesStats = getMatchesStats(this.config)
-    getMatchStats = getMatchStats(this.config)
-    getMatchMapStats = getMatchMapStats(this.config)
-    getRecentThreads = getRecentThreads(this.config)
-    getResults = getResults(this.config)
-    getStreams = getStreams(this.config)
-    getTeamRanking = getTeamRanking(this.config)
-    getTeam = getTeam(this.config)
-    getTeamStats = getTeamStats(this.config)
-    getPlayer = getPlayer(this.config)
-    getEvent = getEvent(this.config)
-    getPlayerStats = getPlayerStats(this.config)
-    getPlayerRanking = getPlayerRanking(this.config);
+  connectToScorebot = connectToScorebot(this.config)
+  getMatch = getMatch(this.config)
+  getMatches = getMatches(this.config)
+  getMatchesStats = getMatchesStats(this.config)
+  getMatchStats = getMatchStats(this.config)
+  getMatchMapStats = getMatchMapStats(this.config)
+  getRecentThreads = getRecentThreads(this.config)
+  getResults = getResults(this.config)
+  getStreams = getStreams(this.config)
+  getTeamRanking = getTeamRanking(this.config)
+  getTeam = getTeam(this.config)
+  getTeamStats = getTeamStats(this.config)
+  getPlayer = getPlayer(this.config)
+  getEvent = getEvent(this.config)
+  getPlayerStats = getPlayerStats(this.config)
+  getPlayerRanking = getPlayerRanking(this.config)
 
-    public createInstance(config: HLTVConfig) {
-        return new HLTVFactory(config)
-    }
+  public createInstance(config: HLTVConfig) {
+    return new HLTVFactory(config)
+  }
 }
 
 const hltvInstance = new HLTVFactory(configDefaults)
