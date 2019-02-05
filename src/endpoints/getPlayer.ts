@@ -7,30 +7,52 @@ import * as E from '../utils/parsing'
 const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
     const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`, config.loadPage)
 
-    const name = $('.player-realname').text().trim() || undefined
-    const ign = $('.player-nick').text()
+    const isStandardPlayer = $('.standard-box.profileTopBox').length !== 0;
 
-    const image = $('.bodyshot-img').attr('src') || $('.bodyshot-img-square').attr('src')
+    const name = isStandardPlayer
+        ? $('.player-realname').text().trim() || undefined
+        : $('.playerRealname').text().trim() || undefined
 
-    const age = Number($('.profile-player-stat-value').first().text().split(' ')[0]) || undefined
+    const ign = isStandardPlayer
+        ? $('.player-nick').text()
+        : $('.playerNickname').text()
+
+    const image = isStandardPlayer
+        ? $('.bodyshot-img-square').attr('src')
+        : $('.bodyshot-img').attr('src')
+
+    const age = isStandardPlayer
+        ? Number($('.profile-player-stat-value').first().text().split(' ')[0]) || undefined
+        : Number($('.playerAge .listRight').text().split(' ')[0]) || undefined
+
     const twitter = $('.twitter').parent().attr('href')
     const twitch = $('.twitch').parent().attr('href')
     const facebook = $('.facebook').parent().attr('href')
-    const country = {
-        name: $('.player-realname .flag').attr('alt'),
-        code: (E.popSlashSource($('.player-realname .flag')) as string).split('.')[0]
-    }
+
+    const country = isStandardPlayer
+        ? {
+            name: $('.player-realname .flag').attr('alt'),
+            code: (E.popSlashSource($('.player-realname .flag')) as string).split('.')[0]
+        }
+        : {
+            name: $('.playerRealname .flag').attr('alt'),
+            code: (E.popSlashSource($('.playerRealname .flag')) as string).split('.')[0]
+        }
 
     let team: Team | undefined
     
     if ($('.profile-player-stat-value.bold').text().trim() !== '-') {
-        team = {
+        team = isStandardPlayer
+        ? {
             name: $('.profile-player-stat-value a').text().trim(),
             id: Number($('.profile-player-stat-value a').attr('href').split('/')[2])
+        } : {
+            name: $('.playerTeam a').text().trim(),
+            id: Number($('.playerTeam a').attr('href').split('/')[2])
         }
     }
 
-    const getMapStat = (i) => Number($($('.standard-box .two-col').find('.cell').get(i)).find('.statsVal').text().replace('%', ''))
+    const getMapStat = (i) => Number($($('.tab-content .two-col').find('.cell').get(i)).find('.statsVal').text().replace('%', ''))
 
     const statistics = {
         rating: getMapStat(0),
