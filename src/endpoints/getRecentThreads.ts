@@ -1,9 +1,9 @@
-import Thread from '../models/Thread'
-import ThreadCategory from '../enums/ThreadCategory'
-import HLTVConfig from '../models/HLTVConfig'
+import { Thread } from '../models/Thread'
+import { ThreadCategory } from '../enums/ThreadCategory'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => {
+export const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => {
   const $ = await fetchPage(`${config.hltvUrl}`, config.loadPage)
 
   const threads = toArray($('.activity')).map(threadEl => {
@@ -25,5 +25,3 @@ const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread[]> => 
 
   return threads
 }
-
-export default getRecentThreads

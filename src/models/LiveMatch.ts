@@ -1,8 +1,8 @@
-import Team from './Team'
-import Event from './Event'
-import MapSlug from '../enums/MapSlug'
+import { Team } from './Team'
+import { Event } from './Event'
+import { MapSlug } from '../enums/MapSlug'
 
-interface LiveMatch {
+export interface LiveMatch {
   readonly id: number
   readonly team1: Team
   readonly team2: Team
@@ -12,5 +12,3 @@ interface LiveMatch {
   readonly live: boolean
   readonly stars: number
 }
-
-export default LiveMatch

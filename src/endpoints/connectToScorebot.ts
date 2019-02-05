@@ -1,8 +1,8 @@
 import * as io from 'socket.io-client'
-import ScoreboardUpdate from '../models/ScoreboardUpdate'
-import LogUpdate from '../models/LogUpdate'
+import { ScoreboardUpdate } from '../models/ScoreboardUpdate'
+import { LogUpdate } from '../models/LogUpdate'
 import { fetchPage } from '../utils/mappers'
-import HLTVConfig from '../models/HLTVConfig'
+import { HLTVConfig } from '../config'
 
 export type ConnectToScorebotParams = {
   id: number
@@ -13,7 +13,7 @@ export type ConnectToScorebotParams = {
   onDisconnect?: () => any
 }
 
-const connectToScorebot = (config: HLTVConfig) => async ({
+export const connectToScorebot = (config: HLTVConfig) => async ({
   id,
   onScoreboardUpdate,
   onLogUpdate,
@@ -71,5 +71,3 @@ const connectToScorebot = (config: HLTVConfig) => async ({
     }
   })
 }
-
-export default connectToScorebot

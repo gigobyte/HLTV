@@ -1,9 +1,7 @@
-import MapSlug from '../enums/MapSlug'
+import { MapSlug } from '../enums/MapSlug'
 
-interface MapResult {
+export interface MapResult {
   readonly name: MapSlug
   readonly result: string
   readonly statsId?: number
 }
-
-export default MapResult

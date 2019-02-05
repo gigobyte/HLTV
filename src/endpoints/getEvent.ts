@@ -1,9 +1,13 @@
-import FullEvent from '../models/FullEvent'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullEvent } from '../models/FullEvent'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMapSlug } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 
-const getEvent = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullEvent> => {
+export const getEvent = (config: HLTVConfig) => async ({
+  id
+}: {
+  id: number
+}): Promise<FullEvent> => {
   const $ = await fetchPage(`${config.hltvUrl}/events/${id}/-`, config.loadPage)
 
   const name = $('.eventname').text()
@@ -93,5 +97,3 @@ const getEvent = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
     mapPool
   }
 }
-
-export default getEvent

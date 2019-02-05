@@ -1,10 +1,10 @@
-import FullPlayerStats from '../models/FullPlayerStats'
-import Team from '../models/Team'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullPlayerStats } from '../models/FullPlayerStats'
+import { Team } from '../models/Team'
+import { HLTVConfig } from '../config'
 import { fetchPage } from '../utils/mappers'
-import * as E from '../utils/parsing'
+import { popSlashSource } from '../utils/parsing'
 
-const getPlayerStats = (config: HLTVConfig) => async ({
+export const getPlayerStats = (config: HLTVConfig) => async ({
   id,
   startDate,
   endDate
@@ -35,7 +35,7 @@ const getPlayerStats = (config: HLTVConfig) => async ({
 
   const country = {
     name: getInfo(2).text(),
-    code: (E.popSlashSource($('.image-and-label .flag')) as string).split('.')[0]
+    code: (popSlashSource($('.image-and-label .flag')) as string).split('.')[0]
   }
 
   let team: Team | undefined
@@ -77,5 +77,3 @@ const getPlayerStats = (config: HLTVConfig) => async ({
 
   return { name, ign, image, age, country, team, statistics }
 }
-
-export default getPlayerStats

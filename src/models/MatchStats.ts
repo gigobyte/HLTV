@@ -1,8 +1,8 @@
-import Team from './Team'
-import Event from './Event'
-import MapSlug from '../enums/MapSlug'
+import { Team } from './Team'
+import { Event } from './Event'
+import { MapSlug } from '../enums/MapSlug'
 
-interface MatchStats {
+export interface MatchStats {
   id: number
   team1: Team
   team2: Team
@@ -14,5 +14,3 @@ interface MatchStats {
     team2: number
   }
 }
-
-export default MatchStats

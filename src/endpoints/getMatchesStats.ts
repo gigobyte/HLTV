@@ -1,10 +1,10 @@
-import MatchStats from '../models/MatchStats'
-import Event from '../models/Event'
-import Team from '../models/Team'
-import MatchType from '../enums/MatchType'
-import Map from '../enums/Map'
-import MapSlug from '../enums/MapSlug'
-import HLTVConfig from '../models/HLTVConfig'
+import { MatchStats } from '../models/MatchStats'
+import { Event } from '../models/Event'
+import { Team } from '../models/Team'
+import { MatchType } from '../enums/MatchType'
+import { Map } from '../enums/Map'
+import { MapSlug } from '../enums/MapSlug'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
 export type GetMatchesStatsParams = {
@@ -14,7 +14,7 @@ export type GetMatchesStatsParams = {
   maps?: Map[]
 }
 
-const getMatchesStats = (config: HLTVConfig) => async ({
+export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
   endDate,
   matchType,
@@ -112,5 +112,3 @@ const getMatchesStats = (config: HLTVConfig) => async ({
 
   return matches
 }
-
-export default getMatchesStats

@@ -1,4 +1,4 @@
-enum MapSlug {
+export enum MapSlug {
   TBA = 'tba',
   Train = 'trn',
   Cobblestone = 'cbl',
@@ -12,5 +12,3 @@ enum MapSlug {
   Season = '-',
   Default = '-'
 }
-
-export default MapSlug

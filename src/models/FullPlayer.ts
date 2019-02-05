@@ -1,8 +1,8 @@
-import Country from './Country'
-import Team from './Team'
+import { Country } from './Country'
+import { Team } from './Team'
 import { Achievement } from './FullTeam'
 
-interface FullPlayer {
+export interface FullPlayer {
   readonly name?: string
   readonly ign: string
   readonly image?: string
@@ -22,5 +22,3 @@ interface FullPlayer {
   }
   readonly achievements: Achievement[]
 }
-
-export default FullPlayer

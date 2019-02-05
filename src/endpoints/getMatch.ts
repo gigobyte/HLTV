@@ -1,16 +1,16 @@
-import FullMatch from '../models/FullMatch'
-import Event from '../models/Event'
-import MapResult from '../models/MapResult'
-import Player from '../models/Player'
-import Stream from '../models/Stream'
-import Team from '../models/Team'
-import Demo from '../models/Demo'
-import Highlight from '../models/Highlight'
-import Veto from '../models/Veto'
-import HeadToHeadResult from '../models/HeadToHeadResult'
-import MapSlug from '../enums/MapSlug'
-import * as E from '../utils/parsing'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullMatch } from '../models/FullMatch'
+import { Event } from '../models/Event'
+import { MapResult } from '../models/MapResult'
+import { Player } from '../models/Player'
+import { Stream } from '../models/Stream'
+import { Team } from '../models/Team'
+import { Demo } from '../models/Demo'
+import { Highlight } from '../models/Highlight'
+import { Veto } from '../models/Veto'
+import { HeadToHeadResult } from '../models/HeadToHeadResult'
+import { MapSlug } from '../enums/MapSlug'
+import { popSlashSource, hasChild } from '../utils/parsing'
+import { HLTVConfig } from '../config'
 import {
   fetchPage,
   toArray,
@@ -19,7 +19,11 @@ import {
   getMatchPlayer
 } from '../utils/mappers'
 
-const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullMatch> => {
+export const getMatch = (config: HLTVConfig) => async ({
+  id
+}: {
+  id: number
+}): Promise<FullMatch> => {
   const $ = await fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage)
 
   const title =
@@ -43,14 +47,14 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
   const team1: Team | undefined = teamEls.first().text()
     ? {
         name: teamEls.eq(0).text(),
-        id: Number(E.popSlashSource(teamEls.first().prev()))
+        id: Number(popSlashSource(teamEls.first().prev()))
       }
     : undefined
 
   const team2: Team | undefined = teamEls.last().text()
     ? {
         name: teamEls.eq(1).text(),
-        id: Number(E.popSlashSource(teamEls.last().prev()))
+        id: Number(popSlashSource(teamEls.last().prev()))
       }
     : undefined
 
@@ -132,7 +136,7 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
   }
 
   let streams: Stream[] = toArray($('.stream-box-embed'))
-    .filter(E.hasChild('.flagAlign'))
+    .filter(hasChild('.flagAlign'))
     .map(streamEl => ({
       name: streamEl.find('.flagAlign').text(),
       link: streamEl.attr('data-stream-embed'),
@@ -250,5 +254,3 @@ const getMatch = (config: HLTVConfig) => async ({ id }: { id: number }): Promise
     demos
   }
 }
-
-export default getMatch

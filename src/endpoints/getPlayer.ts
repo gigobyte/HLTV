@@ -1,10 +1,14 @@
-import FullPlayer from '../models/FullPlayer'
-import Team from '../models/Team'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullPlayer } from '../models/FullPlayer'
+import { Team } from '../models/Team'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import * as E from '../utils/parsing'
+import { popSlashSource } from '../utils/parsing'
 
-const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullPlayer> => {
+export const getPlayer = (config: HLTVConfig) => async ({
+  id
+}: {
+  id: number
+}): Promise<FullPlayer> => {
   const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`, config.loadPage)
 
   const isStandardPlayer = $('.standard-box.profileTopBox').length !== 0
@@ -49,11 +53,11 @@ const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promis
   const country = isStandardPlayer
     ? {
         name: $('.player-realname .flag').attr('alt'),
-        code: (E.popSlashSource($('.player-realname .flag')) as string).split('.')[0]
+        code: (popSlashSource($('.player-realname .flag')) as string).split('.')[0]
       }
     : {
         name: $('.playerRealname .flag').attr('alt'),
-        code: (E.popSlashSource($('.playerRealname .flag')) as string).split('.')[0]
+        code: (popSlashSource($('.playerRealname .flag')) as string).split('.')[0]
       }
 
   let team: Team | undefined
@@ -134,5 +138,3 @@ const getPlayer = (config: HLTVConfig) => async ({ id }: { id: number }): Promis
     achievements
   }
 }
-
-export default getPlayer

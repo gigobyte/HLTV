@@ -12,8 +12,6 @@ export interface WeakRoundOutcome {
   ctTeam: number
 }
 
-interface RoundOutcome extends WeakRoundOutcome {
+export interface RoundOutcome extends WeakRoundOutcome {
   outcome: Outcome
 }
-
-export default RoundOutcome

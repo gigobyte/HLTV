@@ -1,21 +1,20 @@
-import * as configDefaults from './utils/constants'
-import connectToScorebot from './endpoints/connectToScorebot'
-import getMatch from './endpoints/getMatch'
-import getMatches from './endpoints/getMatches'
-import getMatchesStats from './endpoints/getMatchesStats'
-import getMatchMapStats from './endpoints/getMatchMapStats'
-import getMatchStats from './endpoints/getMatchStats'
-import getRecentThreads from './endpoints/getRecentThreads'
-import getResults from './endpoints/getResults'
-import getStreams from './endpoints/getStreams'
-import getTeamRanking from './endpoints/getTeamRanking'
-import getTeam from './endpoints/getTeam'
-import getTeamStats from './endpoints/getTeamStats'
-import getPlayer from './endpoints/getPlayer'
-import getEvent from './endpoints/getEvent'
-import getPlayerStats from './endpoints/getPlayerStats'
-import HLTVConfig from './models/HLTVConfig'
-import getPlayerRanking from './endpoints/getPlayerRanking'
+import { defaultConfig, HLTVConfig } from './config'
+import { connectToScorebot } from './endpoints/connectToScorebot'
+import { getMatch } from './endpoints/getMatch'
+import { getMatches } from './endpoints/getMatches'
+import { getMatchesStats } from './endpoints/getMatchesStats'
+import { getMatchMapStats } from './endpoints/getMatchMapStats'
+import { getMatchStats } from './endpoints/getMatchStats'
+import { getRecentThreads } from './endpoints/getRecentThreads'
+import { getResults } from './endpoints/getResults'
+import { getStreams } from './endpoints/getStreams'
+import { getTeamRanking } from './endpoints/getTeamRanking'
+import { getTeam } from './endpoints/getTeam'
+import { getTeamStats } from './endpoints/getTeamStats'
+import { getPlayer } from './endpoints/getPlayer'
+import { getEvent } from './endpoints/getEvent'
+import { getPlayerStats } from './endpoints/getPlayerStats'
+import { getPlayerRanking } from './endpoints/getPlayerRanking'
 
 export class HLTVFactory {
   constructor(private readonly config: HLTVConfig) {}
@@ -42,7 +41,7 @@ export class HLTVFactory {
   }
 }
 
-const hltvInstance = new HLTVFactory(configDefaults)
+const hltvInstance = new HLTVFactory(defaultConfig)
 
 export default hltvInstance
 export { hltvInstance as HLTV }

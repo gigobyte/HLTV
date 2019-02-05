@@ -1,13 +1,15 @@
-import UpcomingMatch from '../models/UpcomingMatch'
-import LiveMatch from '../models/LiveMatch'
-import Event from '../models/Event'
-import Team from '../models/Team'
-import MapSlug from '../enums/MapSlug'
-import * as E from '../utils/parsing'
-import HLTVConfig from '../models/HLTVConfig'
+import { UpcomingMatch } from '../models/UpcomingMatch'
+import { LiveMatch } from '../models/LiveMatch'
+import { Event } from '../models/Event'
+import { Team } from '../models/Team'
+import { MapSlug } from '../enums/MapSlug'
+import { popSlashSource, text } from '../utils/parsing'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | LiveMatch)[]> => {
+export const getMatches = (config: HLTVConfig) => async (): Promise<
+  (UpcomingMatch | LiveMatch)[]
+> => {
   const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
 
   const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
@@ -17,21 +19,20 @@ const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | Li
 
     const team1: Team = {
       name: teamEls.first().attr('title'),
-      id: Number(E.popSlashSource(teamEls.first())) || undefined
+      id: Number(popSlashSource(teamEls.first())) || undefined
     }
 
     const team2: Team = {
       name: teamEls.last().attr('title'),
-      id: Number(E.popSlashSource(teamEls.last())) || undefined
+      id: Number(popSlashSource(teamEls.last())) || undefined
     }
 
     const format = matchEl.find('.bestof').text()
-    const maps = toArray(matchEl.find('.header .map')).map(E.text) as MapSlug[]
+    const maps = toArray(matchEl.find('.header .map')).map(text) as MapSlug[]
 
     const event: Event = {
       name: matchEl.find('.event-logo').attr('title'),
-      id:
-        Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined
+      id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined
     }
 
     return { id, team1, team2, event, format, maps, stars, live: true }
@@ -55,7 +56,7 @@ const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | Li
           .find('div.team')
           .first()
           .text(),
-        id: Number(E.popSlashSource(matchEl.find('img.logo').first())) || undefined
+        id: Number(popSlashSource(matchEl.find('img.logo').first())) || undefined
       }
 
       team2 = {
@@ -64,13 +65,13 @@ const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | Li
           .last()
           .text(),
         id: matchEl.find('img.logo').get(1)
-          ? Number(E.popSlashSource($(matchEl.find('img.logo').last())))
+          ? Number(popSlashSource($(matchEl.find('img.logo').last())))
           : undefined
       }
       event = {
         name: matchEl.find('.event-logo').attr('alt'),
         id:
-          Number((E.popSlashSource(matchEl.find('img.event-logo')) as string).split('.')[0]) ||
+          Number((popSlashSource(matchEl.find('img.event-logo')) as string).split('.')[0]) ||
           undefined
       }
     }
@@ -80,5 +81,3 @@ const getMatches = (config: HLTVConfig) => async (): Promise<(UpcomingMatch | Li
 
   return [...liveMatches, ...upcomingMatches]
 }
-
-export default getMatches

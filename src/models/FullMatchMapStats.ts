@@ -1,8 +1,8 @@
-import Team from './Team'
-import Event from './Event'
-import Player from './Player'
-import MapSlug from '../enums/MapSlug'
-import WeakRoundOutcome, { Outcome } from './RoundOutcome'
+import { Team } from './Team'
+import { Event } from './Event'
+import { Player } from './Player'
+import { MapSlug } from '../enums/MapSlug'
+import { WeakRoundOutcome, Outcome } from './RoundOutcome'
 
 export interface RoundOutcome extends WeakRoundOutcome {
   outcome: Outcome
@@ -65,7 +65,7 @@ export interface PerformanceOverview {
   readonly team2: TeamPerformance
 }
 
-interface FullMatchMapStats {
+export interface FullMatchMapStats {
   readonly matchPageID: number
   readonly team1: Team
   readonly team2: Team
@@ -80,5 +80,3 @@ interface FullMatchMapStats {
   }
   readonly performanceOverview: PerformanceOverview
 }
-
-export default FullMatchMapStats

@@ -1,7 +1,7 @@
-import Team from './Team'
-import Event from './Event'
-import MapSlug from '../enums/MapSlug'
-import Country from './Country'
+import { Team } from './Team'
+import { Event } from './Event'
+import { MapSlug } from '../enums/MapSlug'
+import { Country } from './Country'
 
 export interface EventPrizeDistribution {
   place: string
@@ -18,7 +18,7 @@ export interface EventFormat {
   description: string
 }
 
-interface FullEvent {
+export interface FullEvent {
   name: string
   dateStart?: number
   dateEnd?: number
@@ -30,5 +30,3 @@ interface FullEvent {
   relatedEvents: Event[]
   mapPool: MapSlug[]
 }
-
-export default FullEvent

@@ -1,7 +1,7 @@
-import Country from './Country'
-import Team from './Team'
+import { Country } from './Country'
+import { Team } from './Team'
 
-interface FullPlayerStats {
+export interface FullPlayerStats {
   readonly name?: string
   readonly ign?: string
   readonly image?: string
@@ -25,4 +25,3 @@ interface FullPlayerStats {
     rating: string
   }
 }
-export default FullPlayerStats

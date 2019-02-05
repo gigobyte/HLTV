@@ -1,10 +1,14 @@
-import FullTeam, { Result, Achievement } from '../models/FullTeam'
-import Player from '../models/Player'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullTeam, Result, Achievement } from '../models/FullTeam'
+import { Player } from '../models/Player'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMapsStatistics } from '../utils/mappers'
-import * as E from '../utils/parsing'
+import { popSlashSource, hasChild } from '../utils/parsing'
 
-const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<FullTeam> => {
+export const getTeam = (config: HLTVConfig) => async ({
+  id
+}: {
+  id: number
+}): Promise<FullTeam> => {
   const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`, config.loadPage)
   const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`, config.loadPage)
 
@@ -34,7 +38,7 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
 
   const getPlayerId = (el: Cheerio) =>
     arePlayerPicturesOfficial
-      ? Number((E.popSlashSource(el) as string).split('.')[0])
+      ? Number((popSlashSource(el) as string).split('.')[0])
       : Number(
           el
             .attr('src')
@@ -43,7 +47,7 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
         )
 
   const players: Player[] = toArray(t$(playerSelector))
-    .filter(E.hasChild('.playerFlagName .text-ellipsis'))
+    .filter(hasChild('.playerFlagName .text-ellipsis'))
     .map(playerEl => ({
       name: playerEl.find('.playerFlagName .text-ellipsis').text(),
       id: getPlayerId(playerEl.find(playerImageSelector))
@@ -52,12 +56,12 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
   const recentResults: Result[] = toArray(t$('.results-holder .a-reset')).map(matchEl => ({
     matchID: matchEl.attr('href') ? Number(matchEl.attr('href').split('/')[2]) : undefined,
     enemyTeam: {
-      id: Number(E.popSlashSource(t$(matchEl.find('.team-logo').get(1))) as string),
+      id: Number(popSlashSource(t$(matchEl.find('.team-logo').get(1))) as string),
       name: t$(matchEl.find('.team').get(1)).text()
     },
     result: matchEl.find('.result-score').text(),
     event: {
-      id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]),
+      id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]),
       name: matchEl.find('.event-name').text()
     }
   }))
@@ -126,5 +130,3 @@ const getTeam = (config: HLTVConfig) => async ({ id }: { id: number }): Promise<
     events
   }
 }
-
-export default getTeam

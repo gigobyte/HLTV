@@ -1,7 +1,7 @@
-import StreamCategory from '../enums/StreamCategory'
-import Country from './Country'
+import { StreamCategory } from '../enums/StreamCategory'
+import { Country } from './Country'
 
-interface FullStream {
+export interface FullStream {
   readonly name: string
   readonly category: StreamCategory
   readonly country: Country
@@ -9,5 +9,3 @@ interface FullStream {
   readonly realLink?: string
   readonly viewers: number
 }
-
-export default FullStream

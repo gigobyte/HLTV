@@ -1,8 +1,8 @@
-import PlayerRanking from '../models/PlayerRanking'
-import HLTVConfig from '../models/HLTVConfig'
+import { PlayerRanking } from '../models/PlayerRanking'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getPlayerRanking = (config: HLTVConfig) => async ({
+export const getPlayerRanking = (config: HLTVConfig) => async ({
   startDate,
   endDate
 }: {
@@ -29,5 +29,3 @@ const getPlayerRanking = (config: HLTVConfig) => async ({
 
   return players
 }
-
-export default getPlayerRanking

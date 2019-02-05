@@ -1,4 +1,4 @@
-import WinType from '../enums/WinType'
+import { WinType } from '../enums/WinType'
 
 export interface ScoreboardPlayer {
   steamId: string
@@ -59,5 +59,3 @@ export interface ScoreboardUpdate {
   startingCt: number
   startingT: number
 }
-
-export default ScoreboardUpdate

@@ -1,11 +1,11 @@
-import FullStream from '../models/FullStream'
-import Country from '../models/Country'
-import StreamCategory from '../enums/StreamCategory'
-import * as E from '../utils/parsing'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullStream } from '../models/FullStream'
+import { Country } from '../models/Country'
+import { StreamCategory } from '../enums/StreamCategory'
+import { popSlashSource } from '../utils/parsing'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getStreams = (config: HLTVConfig) => async ({
+export const getStreams = (config: HLTVConfig) => async ({
   loadLinks
 }: { loadLinks?: boolean } = {}): Promise<FullStream[]> => {
   const $ = await fetchPage(`${config.hltvUrl}`, config.loadPage)
@@ -20,7 +20,7 @@ const getStreams = (config: HLTVConfig) => async ({
 
       const country: Country = {
         name: streamEl.find('.flag').attr('title'),
-        code: (E.popSlashSource(streamEl.find('.flag')) as string).split('.')[0]
+        code: (popSlashSource(streamEl.find('.flag')) as string).split('.')[0]
       }
 
       const viewers = Number(
@@ -46,5 +46,3 @@ const getStreams = (config: HLTVConfig) => async ({
 
   return await streams
 }
-
-export default getStreams

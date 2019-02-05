@@ -1,9 +1,9 @@
-import FullTeamStats from '../models/FullTeamStats'
-import HLTVConfig from '../models/HLTVConfig'
+import { FullTeamStats } from '../models/FullTeamStats'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
-import * as E from '../utils/parsing'
+import { popSlashSource } from '../utils/parsing'
 
-const getTeamStats = (config: HLTVConfig) => async ({
+export const getTeamStats = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
@@ -50,7 +50,7 @@ const getTeamStats = (config: HLTVConfig) => async ({
   const matches = toArray(m$('.stats-table tbody tr')).map(matchEl => ({
     dateApproximate: getTimestamp(matchEl.find('.time a').text()),
     event: {
-      id: Number((E.popSlashSource(matchEl.find('.image-and-label img')) as string).split('.')[0]),
+      id: Number((popSlashSource(matchEl.find('.image-and-label img')) as string).split('.')[0]),
       name: matchEl.find('.image-and-label img').attr('title')
     },
     enemyTeam: {
@@ -120,5 +120,3 @@ const getTeamStats = (config: HLTVConfig) => async ({
 
   return { overview, currentLineup, historicPlayers, standins, events, mapStats, matches }
 }
-
-export default getTeamStats

@@ -1,8 +1,8 @@
-import Team from './Team'
-import Event from './Event'
-import MapSlug from '../enums/MapSlug'
+import { Team } from './Team'
+import { Event } from './Event'
+import { MapSlug } from '../enums/MapSlug'
 
-interface HeadToHeadResult {
+export interface HeadToHeadResult {
   date: number
   /** This property is undefined when the match resulted in a draw */
   winner?: Team
@@ -10,5 +10,3 @@ interface HeadToHeadResult {
   map: MapSlug
   result: string
 }
-
-export default HeadToHeadResult

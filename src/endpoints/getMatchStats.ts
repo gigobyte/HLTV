@@ -1,16 +1,17 @@
-import FullMatchStats, {
+import {
+  FullMatchStats,
   TeamStat,
   PlayerStat,
   PlayerStats,
   MatchStatsOverview,
   TeamStatComparison
 } from '../models/FullMatchStats'
-import Event from '../models/Event'
-import * as E from '../utils/parsing'
-import HLTVConfig from '../models/HLTVConfig'
+import { Event } from '../models/Event'
+import { popSlashSource } from '../utils/parsing'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-const getMatchStats = (config: HLTVConfig) => async ({
+export const getMatchStats = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
@@ -62,13 +63,13 @@ const getMatchStats = (config: HLTVConfig) => async ({
   )
 
   const team1: TeamStat = {
-    id: Number(E.popSlashSource(m$('.team-left .team-logo'))),
+    id: Number(popSlashSource(m$('.team-left .team-logo'))),
     name: m$('.team-left .team-logo').attr('title'),
     score: matchScore[0]
   }
 
   const team2: TeamStat = {
-    id: Number(E.popSlashSource(m$('.team-right .team-logo'))),
+    id: Number(popSlashSource(m$('.team-right .team-logo'))),
     name: m$('.team-right .team-logo').attr('title'),
     score: matchScore[1]
   }
@@ -171,5 +172,3 @@ const getMatchStats = (config: HLTVConfig) => async ({
     playerStats
   }
 }
-
-export default getMatchStats

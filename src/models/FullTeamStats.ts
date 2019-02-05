@@ -1,7 +1,7 @@
-import Player from './Player'
-import Event from './Event'
-import MapSlug from '../enums/MapSlug'
-import Team from './Team'
+import { Player } from './Player'
+import { Event } from './Event'
+import { MapSlug } from '../enums/MapSlug'
+import { Team } from './Team'
 
 export interface TeamStatsMatch {
   dateApproximate: number
@@ -26,7 +26,7 @@ export interface TeamStatsEvent {
   event: Event
 }
 
-interface FullTeamStats {
+export interface FullTeamStats {
   overview: {
     mapsPlayed: number
     wins: number
@@ -44,5 +44,3 @@ interface FullTeamStats {
   mapStats: { [key: string]: TeamMapStats }
   events: TeamStatsEvent[]
 }
-
-export default FullTeamStats

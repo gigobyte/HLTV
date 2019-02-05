@@ -1,14 +1,14 @@
-import Team from './Team'
-import Event from './Event'
-import MapResult from './MapResult'
-import Stream from './Stream'
-import Demo from './Demo'
-import Player from './Player'
-import HeadToHeadResult from './HeadToHeadResult'
-import Veto from './Veto'
-import Highlight from './Highlight'
+import { Team } from './Team'
+import { Event } from './Event'
+import { MapResult } from './MapResult'
+import { Stream } from './Stream'
+import { Demo } from './Demo'
+import { Player } from './Player'
+import { HeadToHeadResult } from './HeadToHeadResult'
+import { Veto } from './Veto'
+import { Highlight } from './Highlight'
 
-interface FullMatch {
+export interface FullMatch {
   readonly team1?: Team
   readonly team2?: Team
   readonly winnerTeam?: Team
@@ -31,5 +31,3 @@ interface FullMatch {
   readonly headToHead?: HeadToHeadResult[]
   readonly highlights?: Highlight[]
 }
-
-export default FullMatch

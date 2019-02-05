@@ -1,10 +1,10 @@
-import TeamRanking from '../models/TeamRanking'
-import Team from '../models/Team'
-import HLTVConfig from '../models/HLTVConfig'
+import { TeamRanking } from '../models/TeamRanking'
+import { Team } from '../models/Team'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import * as E from '../utils/parsing'
+import { popSlashSource } from '../utils/parsing'
 
-const getTeamRanking = (config: HLTVConfig) => async ({
+export const getTeamRanking = (config: HLTVConfig) => async ({
   year = '',
   month = '',
   day = '',
@@ -45,7 +45,7 @@ const getTeamRanking = (config: HLTVConfig) => async ({
 
     const team: Team = {
       name: teamEl.find('.name').text(),
-      id: Number(E.popSlashSource(teamEl.find('.team-logo img')))
+      id: Number(popSlashSource(teamEl.find('.team-logo img')))
     }
 
     const changeText = teamEl.find('.change').text()
@@ -57,5 +57,3 @@ const getTeamRanking = (config: HLTVConfig) => async ({
 
   return teams
 }
-
-export default getTeamRanking

@@ -1,4 +1,4 @@
-enum Map {
+export const enum Map {
   Cache = 'de_cache',
   Season = 'de_season',
   Dust2 = 'de_dust2',
@@ -10,5 +10,3 @@ enum Map {
   Overpass = 'de_overpass',
   Tuscan = 'de_tuscan'
 }
-
-export default Map

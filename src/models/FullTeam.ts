@@ -1,6 +1,6 @@
-import Player from './Player'
-import Team from './Team'
-import Event from './Event'
+import { Player } from './Player'
+import { Team } from './Team'
+import { Event } from './Event'
 
 export interface Result {
   readonly matchID?: number
@@ -21,7 +21,7 @@ export interface MapStatistic {
   readonly timesPlayed: number
 }
 
-interface FullTeam {
+export interface FullTeam {
   readonly name: string
   readonly players: Player[]
   readonly logo: string
@@ -36,5 +36,3 @@ interface FullTeam {
   readonly mapStatistics?: { [key: string]: MapStatistic }
   readonly events: Event[]
 }
-
-export default FullTeam

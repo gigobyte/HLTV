@@ -1,4 +1,4 @@
-import WinType from '../enums/WinType'
+import { WinType } from '../enums/WinType'
 
 export type Side = 'CT' | 'TERRORIST' | 'SPECTATOR'
 export type LogEvent =
@@ -103,8 +103,6 @@ export interface BombPlanted {
   }
 }
 
-interface LogUpdate {
+export interface LogUpdate {
   log: LogEvent[]
 }
-
-export default LogUpdate

@@ -1,12 +1,14 @@
-import MatchResult from '../models/MatchResult'
-import Event from '../models/Event'
-import Team from '../models/Team'
-import MapSlug from '../enums/MapSlug'
-import * as E from '../utils/parsing'
-import HLTVConfig from '../models/HLTVConfig'
+import { MatchResult } from '../models/MatchResult'
+import { Event } from '../models/Event'
+import { Team } from '../models/Team'
+import { MapSlug } from '../enums/MapSlug'
+import { popSlashSource } from '../utils/parsing'
+import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<MatchResult[]> => {
+export const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<
+  MatchResult[]
+> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
     return []
@@ -24,7 +26,7 @@ const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<M
           const stars = matchEl.find('.stars i').length
 
           const team1: Team = {
-            id: Number(E.popSlashSource(matchEl.find('img.team-logo').first())),
+            id: Number(popSlashSource(matchEl.find('img.team-logo').first())),
             name: matchEl
               .find('div.team')
               .first()
@@ -32,7 +34,7 @@ const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<M
           }
 
           const team2: Team = {
-            id: Number(E.popSlashSource(matchEl.find('img.team-logo').last())),
+            id: Number(popSlashSource(matchEl.find('img.team-logo').last())),
             name: matchEl
               .find('div.team')
               .last()
@@ -47,7 +49,7 @@ const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<M
 
           const event: Event = {
             name: matchEl.find('.event-logo').attr('alt'),
-            id: Number((E.popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
+            id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
           }
 
           const date = Number(matchEl.parent().attr('data-zonedgrouping-entry-unix'))
@@ -60,5 +62,3 @@ const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<M
 
   return matches
 }
-
-export default getResults

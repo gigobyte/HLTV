@@ -1,20 +1,24 @@
 import * as cheerio from 'cheerio'
 import * as request from 'request'
-import Team from '../models/Team'
-import Veto from '../models/Veto'
-import Player from '../models/Player'
+import { Team } from '../models/Team'
+import { Veto } from '../models/Veto'
+import { Player } from '../models/Player'
 import { MapStatistic } from '../models/FullTeam'
 import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
-import MapSlug from '../enums/MapSlug'
-import * as E from '../utils/parsing'
+import { MapSlug } from '../enums/MapSlug'
+import { popSlashSource } from '../utils/parsing'
+import { Parser } from './parser'
 
 export const defaultLoadPage = (url: string) =>
   new Promise<string>(resolve => {
     request.get(url, (_, __, body) => resolve(body))
   })
 
-export const fetchPage = async (url: string, loadPage?: (url: string) => Promise<string>) => {
-  return cheerio.load(await loadPage!(url))
+export const fetchPage = async (
+  url: string,
+  loadPage?: (url: string) => Promise<string>
+): Promise<CheerioStatic> => {
+  return Parser(cheerio.load(await loadPage!(url))) as any
 }
 
 export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
@@ -67,7 +71,7 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
   allRoundEls: Cheerio[]
 ): WeakRoundOutcome => {
   const getOutcome = (el: Cheerio): Outcome | undefined => {
-    const outcomeString = (E.popSlashSource(el) as string).split('.')[0]
+    const outcomeString = (popSlashSource(el) as string).split('.')[0]
     const outcomeTuple = Object.entries(Outcome).find(([_, v]) => v === outcomeString)
 
     return outcomeTuple && outcomeTuple[1]

@@ -1,6 +1,6 @@
-import Team from './Team'
-import Event from './Event'
-import Player from './Player'
+import { Team } from './Team'
+import { Event } from './Event'
+import { Player } from './Player'
 
 export interface TeamStat extends Team {
   readonly score: number
@@ -44,7 +44,7 @@ export interface PlayerOverviewStats {
   rating: number
 }
 
-interface FullMatchStats {
+export interface FullMatchStats {
   readonly matchPageID: number
   readonly team1: Team
   readonly team2: Team
@@ -56,5 +56,3 @@ interface FullMatchStats {
     readonly team2: PlayerStats[]
   }
 }
-
-export default FullMatchStats
