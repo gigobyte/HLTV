@@ -319,7 +319,9 @@ Object {
     Object {
       "place": "1-2nd",
       "prize": undefined,
-      "qualifiesFor": "Liga TyC Sports Aorus Finals",
+      "qualifiesFor": Object {
+        "name": "Liga TyC Sports Aorus Finals",
+      },
       "team": Object {
         "id": 6799,
         "name": "Furious",
@@ -328,7 +330,9 @@ Object {
     Object {
       "place": "1-2nd",
       "prize": undefined,
-      "qualifiesFor": "Liga TyC Sports Aorus Finals",
+      "qualifiesFor": Object {
+        "name": "Liga TyC Sports Aorus Finals",
+      },
       "team": Object {
         "id": 7653,
         "name": "Isurus",
