@@ -39,6 +39,16 @@ export const getEvent = (config: HLTVConfig) => async ({
         .trim() || undefined
   }))
 
+  const relatedEvents = toArray($('.related-event')).map(eventEl => ({
+    name: eventEl.find('.event-name').text(),
+    id: Number(
+      eventEl
+        .find('a')
+        .attr('href')
+        .split('/')[2]
+    )
+  }))
+
   const prizeDistribution = toArray($('.placement')).map(placementEl => ({
     place: $(placementEl.children().get(1)).text(),
     prize:
@@ -68,16 +78,6 @@ export const getEvent = (config: HLTVConfig) => async ({
       .split('\n')
       .join(' ')
       .trim()
-  }))
-
-  const relatedEvents = toArray($('.related-event')).map(eventEl => ({
-    name: eventEl.find('.event-name').text(),
-    id: Number(
-      eventEl
-        .find('a')
-        .attr('href')
-        .split('/')[2]
-    )
   }))
 
   const mapPool = toArray($('.map-pool-map-holder')).map(mapEl =>
