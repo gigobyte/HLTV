@@ -450,8 +450,8 @@ Object {
       "value": 19,
     },
     "mostAssists": Object {
-      "id": 8601,
-      "name": "zhokiNg",
+      "id": 10774,
+      "name": "Freeman",
       "value": 10,
     },
     "mostDamage": Object {
@@ -543,7 +543,7 @@ Object {
         "id": 8950,
         "killDeathsDifference": 1,
         "kills": 35,
-        "name": "kaze",
+        "name": "Kaze",
         "rating": 0.93,
       },
     ],
