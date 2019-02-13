@@ -28,6 +28,7 @@ Object {
     Object {
       "place": "1st",
       "prize": "$4,100",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 6497,
         "name": "TzatzikiKlubben",
@@ -36,6 +37,7 @@ Object {
     Object {
       "place": "2nd",
       "prize": "$1,175",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8660,
         "name": "low riders",
@@ -44,6 +46,7 @@ Object {
     Object {
       "place": "3rd",
       "prize": "$575",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8659,
         "name": "Kampners Advokatbyrå",
@@ -52,6 +55,7 @@ Object {
     Object {
       "place": "4th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 7908,
         "name": "PopcornPlokker$",
@@ -117,6 +121,7 @@ Object {
     Object {
       "place": "1st",
       "prize": "$2,000",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 6343,
         "name": "EURONICS",
@@ -125,6 +130,7 @@ Object {
     Object {
       "place": "2nd",
       "prize": "$500",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 6652,
         "name": "GameAgents",
@@ -133,6 +139,7 @@ Object {
     Object {
       "place": "3-4th",
       "prize": "$250",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8361,
         "name": "SEAL",
@@ -141,6 +148,7 @@ Object {
     Object {
       "place": "3-4th",
       "prize": "$250",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 7187,
         "name": "Nexus",
@@ -149,6 +157,7 @@ Object {
     Object {
       "place": "5-6th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8572,
         "name": "Codewise Unicorns",
@@ -157,6 +166,7 @@ Object {
     Object {
       "place": "5-6th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 7017,
         "name": "Space Jam",
@@ -165,6 +175,7 @@ Object {
     Object {
       "place": "7-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 4929,
         "name": "Refuse",
@@ -173,6 +184,7 @@ Object {
     Object {
       "place": "7-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8305,
         "name": "DreamEaters",
@@ -181,6 +193,7 @@ Object {
     Object {
       "place": "9-10th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 6679,
         "name": "Revolution",
@@ -189,6 +202,7 @@ Object {
     Object {
       "place": "9-10th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8209,
         "name": "Pompa",
@@ -305,6 +319,7 @@ Object {
     Object {
       "place": "1-2nd",
       "prize": undefined,
+      "qualifiesFor": "Liga TyC Sports Aorus Finals",
       "team": Object {
         "id": 6799,
         "name": "Furious",
@@ -313,6 +328,7 @@ Object {
     Object {
       "place": "1-2nd",
       "prize": undefined,
+      "qualifiesFor": "Liga TyC Sports Aorus Finals",
       "team": Object {
         "id": 7653,
         "name": "Isurus",
@@ -321,6 +337,7 @@ Object {
     Object {
       "place": "3-4th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8123,
         "name": "Keymotion",
@@ -329,6 +346,7 @@ Object {
     Object {
       "place": "3-4th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8125,
         "name": "Hafnet",
@@ -337,6 +355,7 @@ Object {
     Object {
       "place": "5-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8094,
         "name": "Licht",
@@ -345,6 +364,7 @@ Object {
     Object {
       "place": "5-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8121,
         "name": "Malvinas",
@@ -353,6 +373,7 @@ Object {
     Object {
       "place": "5-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8122,
         "name": "Kitsune",
@@ -361,6 +382,7 @@ Object {
     Object {
       "place": "5-8th",
       "prize": undefined,
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 8124,
         "name": "Keymotion Red",

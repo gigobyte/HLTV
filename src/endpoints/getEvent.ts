@@ -49,6 +49,16 @@ export const getEvent = (config: HLTVConfig) => async ({
     )
   }))
 
+  function findEventByName(eventName, relatedEvents) {
+    if(eventName == null || relatedEvents.length == 0) return eventName;
+    for(var event of relatedEvents) {
+      if(event.name == eventName) {
+        return event;
+      }
+    }
+    return eventName;
+  }
+
   const prizeDistribution = toArray($('.placement')).map(placementEl => ({
     place: $(placementEl.children().get(1)).text(),
     prize:
@@ -56,6 +66,12 @@ export const getEvent = (config: HLTVConfig) => async ({
         .find('.prizeMoney')
         .first()
         .text() || undefined,
+    qualifiesFor:
+      findEventByName(placementEl
+        .find('.prizeMoney')
+        .first()
+        .next()
+        .text() || undefined, relatedEvents),
     team:
       placementEl.find('.team').children().length !== 0
         ? {
