@@ -50,8 +50,8 @@ export const getEvent = (config: HLTVConfig) => async ({
     )
   }))
 
-  function findEventByName(eventName, relatedEvents) : Event | undefined {
-    if (eventName == null) return undefined;
+  function findEventByName(eventName, relatedEvents): Event | undefined {
+    if (eventName == null) return undefined
     for (var event of relatedEvents) {
       if (event.name == eventName) {
         return event
