@@ -60,48 +60,39 @@ export const getEvent = (config: HLTVConfig) => async ({
     return undefined
   }
 
-  const prizeDistribution = toArray($('.placement')).map(placementEl => ({
-    place: $(placementEl.children().get(1)).text(),
-    prize:
-      placementEl
-        .find('.prizeMoney')
-        .first()
-        .text() || undefined,
-    qualifiesFor: findEventByName(
+  const prizeDistribution = toArray($('.placement')).map(placementEl => {
+    const otherPrize =
       placementEl
         .find('.prizeMoney')
         .first()
         .next()
-        .text() || undefined,
-      relatedEvents
-    ),
-    otherPrize: !findEventByName(
-      placementEl
-        .find('.prizeMoney')
-        .first()
-        .next()
-        .text() || undefined,
-      relatedEvents
-    )
-      ? placementEl
+        .text() || undefined
+
+    const qualifiesFor = !!otherPrize ? findEventByName(otherPrize, relatedEvents) : undefined
+
+    return {
+      place: $(placementEl.children().get(1)).text(),
+      prize:
+        placementEl
           .find('.prizeMoney')
           .first()
-          .next()
-          .text() || undefined
-      : undefined,
-    team:
-      placementEl.find('.team').children().length !== 0
-        ? {
-            name: placementEl.find('.team a').text(),
-            id: Number(
-              placementEl
-                .find('.team a')
-                .attr('href')
-                .split('/')[2]
-            )
-          }
-        : undefined
-  }))
+          .text() || undefined,
+      qualifiesFor: qualifiesFor,
+      otherPrize: !qualifiesFor ? otherPrize : undefined,
+      team:
+        placementEl.find('.team').children().length !== 0
+          ? {
+              name: placementEl.find('.team a').text(),
+              id: Number(
+                placementEl
+                  .find('.team a')
+                  .attr('href')
+                  .split('/')[2]
+              )
+            }
+          : undefined
+    }
+  })
 
   const formats = toArray($('.formats tr')).map(formatEl => ({
     type: formatEl.find('.format-header').text(),
