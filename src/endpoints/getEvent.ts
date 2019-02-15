@@ -1,4 +1,3 @@
-import { Event } from '../models/Event'
 import { FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMapSlug } from '../utils/mappers'
@@ -50,16 +49,6 @@ export const getEvent = (config: HLTVConfig) => async ({
     )
   }))
 
-  function findEventByName(
-    eventName: string | undefined,
-    relatedEvents: Event[]
-  ): Event | undefined {
-    if (eventName == null) return undefined
-    const event = relatedEvents.find(event => event.name === eventName)
-    if (event) return event
-    return undefined
-  }
-
   const prizeDistribution = toArray($('.placement')).map(placementEl => {
     const otherPrize =
       placementEl
@@ -68,7 +57,9 @@ export const getEvent = (config: HLTVConfig) => async ({
         .next()
         .text() || undefined
 
-    const qualifiesFor = !!otherPrize ? findEventByName(otherPrize, relatedEvents) : undefined
+    const qualifiesFor = !!otherPrize
+      ? relatedEvents.find(event => event.name === otherPrize)
+      : undefined
 
     return {
       place: $(placementEl.children().get(1)).text(),
