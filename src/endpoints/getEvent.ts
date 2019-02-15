@@ -1,3 +1,4 @@
+import { Event } from '../models/Event'
 import { FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMapSlug } from '../utils/mappers'
@@ -39,26 +40,59 @@ export const getEvent = (config: HLTVConfig) => async ({
         .trim() || undefined
   }))
 
-  const prizeDistribution = toArray($('.placement')).map(placementEl => ({
-    place: $(placementEl.children().get(1)).text(),
-    prize:
+  const relatedEvents = toArray($('.related-event')).map(eventEl => ({
+    name: eventEl.find('.event-name').text(),
+    id: Number(
+      eventEl
+        .find('a')
+        .attr('href')
+        .split('/')[2]
+    )
+  }))
+
+  function findEventByName(
+    eventName: string | undefined,
+    relatedEvents: Event[]
+  ): Event | undefined {
+    if (eventName == null) return undefined
+    const event = relatedEvents.find(event => event.name === eventName)
+    if (event) return event
+    return undefined
+  }
+
+  const prizeDistribution = toArray($('.placement')).map(placementEl => {
+    const otherPrize =
       placementEl
         .find('.prizeMoney')
         .first()
-        .text() || undefined,
-    team:
-      placementEl.find('.team').children().length !== 0
-        ? {
-            name: placementEl.find('.team a').text(),
-            id: Number(
-              placementEl
-                .find('.team a')
-                .attr('href')
-                .split('/')[2]
-            )
-          }
-        : undefined
-  }))
+        .next()
+        .text() || undefined
+
+    const qualifiesFor = !!otherPrize ? findEventByName(otherPrize, relatedEvents) : undefined
+
+    return {
+      place: $(placementEl.children().get(1)).text(),
+      prize:
+        placementEl
+          .find('.prizeMoney')
+          .first()
+          .text() || undefined,
+      qualifiesFor: qualifiesFor,
+      otherPrize: !qualifiesFor ? otherPrize : undefined,
+      team:
+        placementEl.find('.team').children().length !== 0
+          ? {
+              name: placementEl.find('.team a').text(),
+              id: Number(
+                placementEl
+                  .find('.team a')
+                  .attr('href')
+                  .split('/')[2]
+              )
+            }
+          : undefined
+    }
+  })
 
   const formats = toArray($('.formats tr')).map(formatEl => ({
     type: formatEl.find('.format-header').text(),
@@ -68,16 +102,6 @@ export const getEvent = (config: HLTVConfig) => async ({
       .split('\n')
       .join(' ')
       .trim()
-  }))
-
-  const relatedEvents = toArray($('.related-event')).map(eventEl => ({
-    name: eventEl.find('.event-name').text(),
-    id: Number(
-      eventEl
-        .find('a')
-        .attr('href')
-        .split('/')[2]
-    )
   }))
 
   const mapPool = toArray($('.map-pool-map-holder')).map(mapEl =>
