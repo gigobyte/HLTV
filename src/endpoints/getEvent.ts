@@ -50,11 +50,11 @@ export const getEvent = (config: HLTVConfig) => async ({
     )
   }))
 
-  function findEventByName(eventName:string | undefined, relatedEvents:Event[]): Event | string | undefined {
+  function findEventByName(eventName:string | undefined, relatedEvents:Event[]): Event | undefined {
     if (eventName == null) return undefined
     const event = relatedEvents.find(event => event.name === eventName)
     if (event) return event
-    return eventName
+    return undefined
   }
 
   const prizeDistribution = toArray($('.placement')).map(placementEl => ({
@@ -72,6 +72,11 @@ export const getEvent = (config: HLTVConfig) => async ({
         .text() || undefined,
       relatedEvents
     ),
+    otherPrize:
+      !findEventByName(placementEl.find('.prizeMoney').first().next().text() || undefined, relatedEvents)
+        ? placementEl.find('.prizeMoney').first().next().text() || undefined
+        : undefined
+    ,
     team:
       placementEl.find('.team').children().length !== 0
         ? {

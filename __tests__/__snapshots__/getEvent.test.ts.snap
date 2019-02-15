@@ -26,6 +26,7 @@ Object {
   "name": "Ownit 2017 Winter Finals",
   "prizeDistribution": Array [
     Object {
+      "otherPrize": undefined,
       "place": "1st",
       "prize": "$4,100",
       "qualifiesFor": undefined,
@@ -35,6 +36,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "2nd",
       "prize": "$1,175",
       "qualifiesFor": undefined,
@@ -44,6 +46,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "3rd",
       "prize": "$575",
       "qualifiesFor": undefined,
@@ -53,6 +56,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "4th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -119,6 +123,7 @@ Object {
   "name": "CSesport.com Cup #3",
   "prizeDistribution": Array [
     Object {
+      "otherPrize": undefined,
       "place": "1st",
       "prize": "$2,000",
       "qualifiesFor": undefined,
@@ -128,6 +133,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "2nd",
       "prize": "$500",
       "qualifiesFor": undefined,
@@ -137,6 +143,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "3-4th",
       "prize": "$250",
       "qualifiesFor": undefined,
@@ -146,6 +153,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "3-4th",
       "prize": "$250",
       "qualifiesFor": undefined,
@@ -155,6 +163,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-6th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -164,6 +173,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-6th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -173,6 +183,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "7-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -182,6 +193,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "7-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -191,6 +203,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "9-10th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -200,6 +213,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "9-10th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -317,24 +331,27 @@ Object {
   "name": "Liga TyC Sports Aorus #1",
   "prizeDistribution": Array [
     Object {
+      "otherPrize": "Liga TyC Sports Aorus Finals",
       "place": "1-2nd",
       "prize": undefined,
-      "qualifiesFor": "Liga TyC Sports Aorus Finals",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 6799,
         "name": "Furious",
       },
     },
     Object {
+      "otherPrize": "Liga TyC Sports Aorus Finals",
       "place": "1-2nd",
       "prize": undefined,
-      "qualifiesFor": "Liga TyC Sports Aorus Finals",
+      "qualifiesFor": undefined,
       "team": Object {
         "id": 7653,
         "name": "Isurus",
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "3-4th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -344,6 +361,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "3-4th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -353,6 +371,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -362,6 +381,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -371,6 +391,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
@@ -380,6 +401,7 @@ Object {
       },
     },
     Object {
+      "otherPrize": undefined,
       "place": "5-8th",
       "prize": undefined,
       "qualifiesFor": undefined,
