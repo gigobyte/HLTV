@@ -7,7 +7,7 @@ export interface HLTVConfig {
 }
 
 export const defaultConfig = {
-  hltvUrl: 'http://www.hltv.org',
+  hltvUrl: 'https://www.hltv.org',
   hltvStaticUrl: 'https://static.hltv.org',
   loadPage: defaultLoadPage
 }

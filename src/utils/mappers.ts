@@ -10,7 +10,7 @@ import { popSlashSource } from '../utils/parsing'
 
 export const defaultLoadPage = (url: string) =>
   new Promise<string>(resolve => {
-    request.get(url, (_, __, body) => resolve(body))
+    request.get(url, { gzip: true }, (_, __, body) => resolve(body))
   })
 
 export const fetchPage = async (
