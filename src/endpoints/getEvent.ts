@@ -50,11 +50,11 @@ export const getEvent = (config: HLTVConfig) => async ({
     )
   }))
 
-  function findEventByName(eventName:string | undefined, relatedEvents:Event[]): Event | undefined {
+  function findEventByName(eventName:string | undefined, relatedEvents:Event[]): Event | string | undefined {
     if (eventName == null) return undefined
     const event = relatedEvents.find(event => event.name === eventName)
     if (event) return event
-    return { name: eventName }
+    return eventName
   }
 
   const prizeDistribution = toArray($('.placement')).map(placementEl => ({

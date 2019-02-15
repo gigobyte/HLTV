@@ -6,7 +6,7 @@ import { Country } from './Country'
 export interface EventPrizeDistribution {
   place: string
   prize?: string
-  qualifiesFor?: Event
+  qualifiesFor?: Event | string
   team?: Team
 }
 
