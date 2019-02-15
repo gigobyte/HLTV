@@ -114,6 +114,15 @@ export const getMatch = (config: HLTVConfig) => async ({
       : undefined
   }))
 
+
+  maps.push({
+    // @ts-ignore
+    name: "All maps",
+    result: '-',
+    statsId: Number($('.stats-detailed-stats').find('a').attr('href').split('/')[3])
+  })
+
+
   let players: { team1: Player[]; team2: Player[] } | undefined
 
   if (team1 && team2) {
