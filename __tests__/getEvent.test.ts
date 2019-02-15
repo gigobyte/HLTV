@@ -8,4 +8,4 @@ test('getEvent', async () => {
   expect(await HLTV.getEvent({ id: 4356 })).toMatchSnapshot()
   expect(await HLTV.getEvent({ id: 4409 })).toMatchSnapshot()
   expect(await HLTV.getEvent({ id: 2870 })).toMatchSnapshot()
-})
+}, 30000)
