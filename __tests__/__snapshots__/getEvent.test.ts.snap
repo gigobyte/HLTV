@@ -457,3 +457,464 @@ Object {
   ],
 }
 `;
+
+exports[`getEvent 5`] = `
+Object {
+  "dateEnd": 1549623600000,
+  "dateStart": 1549450800000,
+  "formats": Array [
+    Object {
+      "description": "Double-Elimination BO3 BO5 Grand Final",
+      "type": "Playoffs",
+    },
+  ],
+  "location": Object {
+    "code": "NAM",
+    "name": "North America",
+  },
+  "mapPool": Array [
+    "cch",
+    "d2",
+    "mrg",
+    "inf",
+    "nuke",
+    "trn",
+    "ovp",
+  ],
+  "name": "IEM Sydney 2019 North America Closed Qualifier",
+  "prizeDistribution": Array [
+    Object {
+      "otherPrize": undefined,
+      "place": "1st",
+      "prize": undefined,
+      "qualifiesFor": Object {
+        "id": 4236,
+        "name": "IEM Sydney 2019",
+      },
+      "team": Object {
+        "id": 7726,
+        "name": "Swole Patrol",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "2nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7106,
+        "name": "eUnited",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "3rd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7801,
+        "name": "Ghost",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "4th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 6290,
+        "name": "Luminosity",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "5-6th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 5005,
+        "name": "compLexity",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "5-6th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 5991,
+        "name": "Envy",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "7-8th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 9799,
+        "name": "Bad News Bears",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "7-8th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 9804,
+        "name": "Win Scrims Not Matches",
+      },
+    },
+  ],
+  "prizePool": "1 spot at IEM Sydney",
+  "relatedEvents": Array [
+    Object {
+      "id": 4236,
+      "name": "IEM Sydney 2019",
+    },
+    Object {
+      "id": 4354,
+      "name": "IEM Sydney 2019 North America Open Qualifier 1",
+    },
+    Object {
+      "id": 4355,
+      "name": "IEM Sydney 2019 North America Open Qualifier 2",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "id": 5991,
+      "name": "Envy",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 7801,
+      "name": "Ghost",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 6290,
+      "name": "Luminosity",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 5005,
+      "name": "compLexity",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 9804,
+      "name": "Win Scrims Not Matches",
+      "reasonForParticipation": "Qualifier 1",
+    },
+    Object {
+      "id": 7106,
+      "name": "eUnited",
+      "reasonForParticipation": "Qualifier 1",
+    },
+    Object {
+      "id": 9799,
+      "name": "Bad News Bears",
+      "reasonForParticipation": "Qualifier 2",
+    },
+    Object {
+      "id": 7726,
+      "name": "Swole Patrol",
+      "reasonForParticipation": "Qualifier 2",
+    },
+  ],
+}
+`;
+
+exports[`getEvent 6`] = `
+Object {
+  "dateEnd": 1549623600000,
+  "dateStart": 1549623600000,
+  "formats": Array [
+    Object {
+      "description": "Round-robin BO1",
+      "type": "Group stage",
+    },
+  ],
+  "location": Object {
+    "code": "EU",
+    "name": "Europe",
+  },
+  "mapPool": Array [
+    "cch",
+    "d2",
+    "mrg",
+    "inf",
+    "nuke",
+    "trn",
+    "ovp",
+  ],
+  "name": "NoxFire League Season 2",
+  "prizeDistribution": Array [
+    Object {
+      "otherPrize": "LAN Finals",
+      "place": "1st",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": "LAN Finals",
+      "place": "2nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": "LAN Finals",
+      "place": "3rd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": "LAN Finals",
+      "place": "4th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "5th",
+      "prize": "$2,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "6th",
+      "prize": "$2,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "7th",
+      "prize": "$2,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "8th",
+      "prize": "$2,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "9th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "10th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "11th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "12th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "13th",
+      "prize": "$500",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "14th",
+      "prize": "$500",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "15th",
+      "prize": "$500",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "16th",
+      "prize": "$500",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+  ],
+  "prizePool": "4 Spots at LAN Finals + $14000",
+  "relatedEvents": Array [
+    Object {
+      "id": 4183,
+      "name": "NoxFire League",
+    },
+    Object {
+      "id": 4410,
+      "name": "NoxFire League Season 2 Finals",
+    },
+  ],
+  "teams": Array [
+    Object {
+      "id": 4914,
+      "name": "3DMAX",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 8120,
+      "name": "AVANGAR",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 9679,
+      "name": "Akopalipsa",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 7982,
+      "name": "Bojestvata",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 6762,
+      "name": "Bpro",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 5273,
+      "name": "GamePub",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 6134,
+      "name": "Kinguin",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 7187,
+      "name": "Nexus",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 8504,
+      "name": "SuperJymy",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 9812,
+      "name": "Unicorns of Love",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 8513,
+      "name": "Windigo",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 8135,
+      "name": "forZe",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 7898,
+      "name": "pro100",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 5579,
+      "name": "volgare",
+      "reasonForParticipation": "Invited",
+    },
+    Object {
+      "id": 9838,
+      "name": "Heavy KnockOut",
+      "reasonForParticipation": "Qualifier",
+    },
+    Object {
+      "id": 7615,
+      "name": "HoP",
+      "reasonForParticipation": "Qualifier",
+    },
+  ],
+}
+`;
+
+exports[`getEvent 7`] = `
+Object {
+  "dateEnd": 1495360800000,
+  "dateStart": 1495360800000,
+  "formats": Array [],
+  "location": Object {
+    "code": "SE",
+    "name": "Sweden",
+  },
+  "mapPool": Array [
+    "cch",
+    "mrg",
+    "inf",
+    "nuke",
+    "trn",
+    "cbl",
+    "ovp",
+  ],
+  "name": "GAMERZ Season 1: Nordic Edition",
+  "prizeDistribution": Array [
+    Object {
+      "otherPrize": "Pro contracts",
+      "place": "1st",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7930,
+        "name": "GAMERZ BLUE",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "2nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7931,
+        "name": "GAMERZ RED",
+      },
+    },
+  ],
+  "prizePool": "Professional contracts",
+  "relatedEvents": Array [],
+  "teams": Array [
+    Object {
+      "id": 7930,
+      "name": "GAMERZ BLUE",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7931,
+      "name": "GAMERZ RED",
+      "reasonForParticipation": undefined,
+    },
+  ],
+}
+`;
