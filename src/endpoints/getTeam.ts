@@ -30,38 +30,37 @@ export const getTeam = (config: HLTVConfig) => async ({
         .replace('#', '')
     ) || undefined
 
-  const arePlayerPicturesOfficial = toArray(t$('.overlayImageFrame')).length > 0
-  const playerSelector = arePlayerPicturesOfficial
-    ? '.overlayImageFrame'
-    : '.overlayImageFrame-square'
-  const playerImageSelector = arePlayerPicturesOfficial ? '.bodyshot-team-img' : '.profileImage'
-
-  const getPlayerId = (el: Cheerio) =>
-    arePlayerPicturesOfficial
-      ? Number((popSlashSource(el) as string).split('.')[0])
-      : Number(
-          el
-            .attr('src')
-            .split('/')
-            .slice(-2, -1)
-        )
-
-  const players: Player[] = toArray(t$(playerSelector))
+  const regularPlayers: Player[] = toArray(t$('.overlayImageFrame-square'))
     .filter(hasChild('.playerFlagName .text-ellipsis'))
     .map(playerEl => ({
       name: playerEl.find('.playerFlagName .text-ellipsis').text(),
-      id: getPlayerId(playerEl.find(playerImageSelector))
+      id: Number(
+        playerEl
+          .find('.profileImage')
+          .attr('src')
+          .split('/')
+          .slice(-2, -1)
+      )
     }))
+
+  const officialPicturePlayers: Player[] = toArray(t$('.overlayImageFrame'))
+    .filter(hasChild('.playerFlagName .text-ellipsis'))
+    .map(playerEl => ({
+      name: playerEl.find('.playerFlagName .text-ellipsis').text(),
+      id: Number(popSlashSource(playerEl.find('.bodyshot-team-img'))!.split('.')[0])
+    }))
+
+  const players = regularPlayers.concat(officialPicturePlayers)
 
   const recentResults: Result[] = toArray(t$('.results-holder .a-reset')).map(matchEl => ({
     matchID: matchEl.attr('href') ? Number(matchEl.attr('href').split('/')[2]) : undefined,
     enemyTeam: {
-      id: Number(popSlashSource(t$(matchEl.find('.team-logo').get(1))) as string),
+      id: Number(popSlashSource(t$(matchEl.find('.team-logo').get(1)))!),
       name: t$(matchEl.find('.team').get(1)).text()
     },
     result: matchEl.find('.result-score').text(),
     event: {
-      id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]),
+      id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]),
       name: matchEl.find('.event-name').text()
     }
   }))
