@@ -18,16 +18,16 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
   endDate,
   matchType,
-  maps
+  maps = []
 }: GetMatchesStatsParams = {}): Promise<MatchStats[]> => {
   const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${[
     '',
-    ...(maps || [])
+    ...maps
   ].join('&maps=')}`
 
   let page = 0
   let $: CheerioStatic
-  let matches = [] as MatchStats[]
+  let matches: MatchStats[] = []
 
   do {
     $ = await fetchPage(

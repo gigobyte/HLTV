@@ -32,7 +32,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
 
     const event: Event = {
       name: matchEl.find('.event-logo').attr('title'),
-      id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0]) || undefined
+      id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]) || undefined
     }
 
     return { id, team1, team2, event, format, maps, stars, live: true }
@@ -70,9 +70,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
       }
       event = {
         name: matchEl.find('.event-logo').attr('alt'),
-        id:
-          Number((popSlashSource(matchEl.find('img.event-logo')) as string).split('.')[0]) ||
-          undefined
+        id: Number(popSlashSource(matchEl.find('img.event-logo'))!.split('.')[0]) || undefined
       }
     }
 

@@ -154,7 +154,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
       ADR: Number(rowEl.find('.st-adr').text()),
       firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),
       rating: Number(rowEl.find('.st-rating').text())
-    } as PlayerStats
+    }
   })
 
   const playerStats = {

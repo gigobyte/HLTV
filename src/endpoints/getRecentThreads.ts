@@ -15,10 +15,11 @@ export const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread
         .last()
         .text()
     )
-    const category = (threadEl
+    const category = threadEl
       .attr('class')
       .split(' ')
-      .find(c => c.includes('Cat')) as string).replace('Cat', '') as ThreadCategory
+      .find(c => c.includes('Cat'))!
+      .replace('Cat', '') as ThreadCategory
 
     return { title, link, replies, category }
   })

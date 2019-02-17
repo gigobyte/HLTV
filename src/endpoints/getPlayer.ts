@@ -53,11 +53,11 @@ export const getPlayer = (config: HLTVConfig) => async ({
   const country = isStandardPlayer
     ? {
         name: $('.player-realname .flag').attr('alt'),
-        code: (popSlashSource($('.player-realname .flag')) as string).split('.')[0]
+        code: popSlashSource($('.player-realname .flag'))!.split('.')[0]
       }
     : {
         name: $('.playerRealname .flag').attr('alt'),
-        code: (popSlashSource($('.playerRealname .flag')) as string).split('.')[0]
+        code: popSlashSource($('.playerRealname .flag'))!.split('.')[0]
       }
 
   let team: Team | undefined

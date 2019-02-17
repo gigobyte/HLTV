@@ -35,7 +35,7 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
 
   const country = {
     name: getInfo(2).text(),
-    code: (popSlashSource($('.image-and-label .flag')) as string).split('.')[0]
+    code: popSlashSource($('.image-and-label .flag'))!.split('.')[0]
   }
 
   let team: Team | undefined

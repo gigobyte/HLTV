@@ -125,7 +125,7 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
   const overview = { ...teamStats, ...mostX } as MatchStatsOverview
 
   const fullRoundHistory: WeakRoundOutcome[] = toArray(m$('.round-history-outcome')).map(
-    mapRoundElementToModel(team1.id as number, team2.id as number)
+    mapRoundElementToModel(team1.id!, team2.id!)
   )
   const [rh1, rh2] = [fullRoundHistory.slice(0, 30), fullRoundHistory.slice(30, 60)]
 

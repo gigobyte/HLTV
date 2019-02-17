@@ -49,7 +49,7 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Pr
 
           const event: Event = {
             name: matchEl.find('.event-logo').attr('alt'),
-            id: Number((popSlashSource(matchEl.find('.event-logo')) as string).split('.')[0])
+            id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
           }
 
           const date = Number(matchEl.parent().attr('data-zonedgrouping-entry-unix'))

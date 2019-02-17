@@ -26,7 +26,7 @@ export const getEvent = (config: HLTVConfig) => async ({
   const prizePool = $('td.prizepool').text()
   const location = {
     name: $('img.flag').attr('title'),
-    code: (popSlashSource($('img.flag')) as string).split('.')[0]
+    code: popSlashSource($('img.flag'))!.split('.')[0]
   }
 
   const teams = toArray($('.team-box')).map(teamEl => ({

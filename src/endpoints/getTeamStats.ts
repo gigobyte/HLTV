@@ -50,7 +50,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
   const matches = toArray(m$('.stats-table tbody tr')).map(matchEl => ({
     dateApproximate: getTimestamp(matchEl.find('.time a').text()),
     event: {
-      id: Number((popSlashSource(matchEl.find('.image-and-label img')) as string).split('.')[0]),
+      id: Number(popSlashSource(matchEl.find('.image-and-label img'))!.split('.')[0]),
       name: matchEl.find('.image-and-label img').attr('title')
     },
     enemyTeam: {

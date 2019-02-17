@@ -37,7 +37,7 @@ export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Ve
   }
 
   return {
-    team: [team1, team2].find(t => t.name === teamName.trim()) as Team,
+    team: [team1, team2].find(t => t.name === teamName.trim())!,
     map: getMapSlug(map.trim()),
     type: el.text().includes('picked') ? 'picked' : 'removed'
   }
@@ -134,10 +134,8 @@ export const getMapsStatistics = (source: string): { [key: string]: MapStatistic
     return
   }
 
-  const maps = (source.match(labelRegex) as RegExpMatchArray).map(x => x.split(':"')[1])
-  const values = (source.match(valueRegex) as RegExpMatchArray).map(x =>
-    Number(x.split(':"')[1].split(splitRegex)[0])
-  )
+  const maps = source.match(labelRegex)!.map(x => x.split(':"')[1])
+  const values = source.match(valueRegex)!.map(x => Number(x.split(':"')[1].split(splitRegex)[0]))
 
   const getStats = index => ({
     winningPercentage: values[index],

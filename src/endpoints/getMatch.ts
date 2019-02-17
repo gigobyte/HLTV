@@ -177,7 +177,7 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   const highlightedPlayer: Player | undefined = highlightedPlayerLink
     ? {
-        name: highlightedPlayerLink.split('/').pop() as string,
+        name: highlightedPlayerLink.split('/').pop()!,
         id: Number(highlightedPlayerLink.split('/')[2])
       }
     : undefined
