@@ -36,6 +36,10 @@ Table of contents
 
 ## Usage
 
+:warning: **WARNING:** Abusing this library will likely result in an IP ban from HLTV simply because of Cloudflare bot protection.
+
+&nbsp; &nbsp; &nbsp; &nbsp;Please use with caution and try to limit the rate and amount of your requests if you value your access to HLTV.
+
 ```javascript
 import HLTV from 'hltv'
 // Or if you're stuck with CommonJS
