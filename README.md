@@ -304,6 +304,8 @@ Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
 startDate | string | - | - |
 endDate | string | - | - |
+matchType | string | - | - |
+rankingFilter | string | - | - |
 
 
 ```javascript
