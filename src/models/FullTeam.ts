@@ -22,6 +22,7 @@ export interface MapStatistic {
 }
 
 export interface FullTeam {
+  readonly id: number
   readonly name: string
   readonly players: Player[]
   readonly logo: string

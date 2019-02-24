@@ -125,6 +125,7 @@ export const getPlayer = (config: HLTVConfig) => async ({
   }))
 
   return {
+    id,
     name,
     ign,
     image,

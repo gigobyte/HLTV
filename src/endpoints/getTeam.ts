@@ -114,6 +114,7 @@ export const getTeam = (config: HLTVConfig) => async ({
     )
 
   return {
+    id,
     name,
     logo,
     coverImage,

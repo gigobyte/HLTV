@@ -100,6 +100,7 @@ export const getEvent = (config: HLTVConfig) => async ({
   )
 
   return {
+    id,
     name,
     dateStart,
     dateEnd,

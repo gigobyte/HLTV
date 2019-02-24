@@ -234,6 +234,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   }
 
   return {
+    id,
     team1,
     team2,
     winnerTeam,

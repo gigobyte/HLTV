@@ -3,6 +3,7 @@ import { Team } from './Team'
 import { Achievement } from './FullTeam'
 
 export interface FullPlayer {
+  readonly id: number
   readonly name?: string
   readonly ign: string
   readonly image?: string
