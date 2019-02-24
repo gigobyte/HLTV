@@ -1,18 +1,29 @@
+import querystring from 'querystring';
 import { PlayerRanking } from '../models/PlayerRanking'
+import { MatchType } from '../enums/MatchType'
+import { RankingFilter } from '../enums/RankingFilter'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
 export const getPlayerRanking = (config: HLTVConfig) => async ({
   startDate,
-  endDate
+  endDate,
+  matchType,
+  rankingFilter
 }: {
   startDate: string
   endDate: string
+  matchType: MatchType
+  rankingFilter: RankingFilter
 }): Promise<PlayerRanking[]> => {
-  const options =
-    startDate != null && endDate != null ? '?startDate=' + startDate + '&endDate=' + endDate : ''
+  const query = querystring.stringify({
+    startDate,
+    endDate,
+    matchType,
+    rankingFilter
+  })
 
-  const $ = await fetchPage(`${config.hltvUrl}/stats/players${options}`, config.loadPage)
+  const $ = await fetchPage(`${config.hltvUrl}/stats/players?${query}`, config.loadPage)
 
   const players = toArray($('.player-ratings-table tbody tr')).map(matchEl => {
     var id = Number(

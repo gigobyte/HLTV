@@ -304,6 +304,8 @@ Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
 startDate | string | - | - |
 endDate | string | - | - |
+matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? | - | - |
+rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? | - | - |
 
 
 ```javascript
