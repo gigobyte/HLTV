@@ -9,6 +9,7 @@ import { Veto } from './Veto'
 import { Highlight } from './Highlight'
 
 export interface FullMatch {
+  readonly id: number
   readonly team1?: Team
   readonly team2?: Team
   readonly winnerTeam?: Team
