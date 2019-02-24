@@ -1,5 +1,7 @@
 import querystring from 'querystring';
 import { PlayerRanking } from '../models/PlayerRanking'
+import { MatchType } from '../enums/MatchType'
+import { RankingFilter } from '../enums/RankingFilter'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
@@ -11,8 +13,8 @@ export const getPlayerRanking = (config: HLTVConfig) => async ({
 }: {
   startDate: string
   endDate: string
-  matchType: string
-  rankingFilter: string
+  matchType: MatchType
+  rankingFilter: RankingFilter
 }): Promise<PlayerRanking[]> => {
   const query = querystring.stringify({
     startDate,
