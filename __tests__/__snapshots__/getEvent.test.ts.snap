@@ -10,6 +10,7 @@ Object {
       "type": "Playoffs",
     },
   ],
+  "id": 3452,
   "location": Object {
     "code": "SE",
     "name": "Sweden",
@@ -107,6 +108,7 @@ Object {
       "type": "Playoffs",
     },
   ],
+  "id": 3552,
   "location": Object {
     "code": "EU",
     "name": "Europe",
@@ -294,6 +296,7 @@ Object {
   "dateEnd": undefined,
   "dateStart": undefined,
   "formats": Array [],
+  "id": 355,
   "location": Object {
     "code": "WORLD",
     "name": "World",
@@ -323,6 +326,7 @@ Object {
   "dateEnd": 1500976800000,
   "dateStart": 1500285600000,
   "formats": Array [],
+  "id": 3005,
   "location": Object {
     "code": "AR",
     "name": "Argentina",
@@ -468,6 +472,7 @@ Object {
       "type": "Playoffs",
     },
   ],
+  "id": 4356,
   "location": Object {
     "code": "NAM",
     "name": "North America",
@@ -632,6 +637,7 @@ Object {
   "dateEnd": 1495360800000,
   "dateStart": 1495360800000,
   "formats": Array [],
+  "id": 2870,
   "location": Object {
     "code": "SE",
     "name": "Sweden",

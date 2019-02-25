@@ -195,6 +195,7 @@ Object {
       "title": "MSL triple kill hold to earn map point (Mirage)",
     },
   ],
+  "id": 2325765,
   "live": false,
   "maps": Array [
     Object {
@@ -360,6 +361,7 @@ Object {
     "name": "JonY%20BoY",
   },
   "highlights": Array [],
+  "id": 2302345,
   "live": false,
   "maps": Array [
     Object {
@@ -456,6 +458,7 @@ Object {
   "headToHead": Array [],
   "highlightedPlayer": undefined,
   "highlights": Array [],
+  "id": 2290099,
   "live": false,
   "maps": Array [
     Object {
@@ -545,6 +548,7 @@ Object {
     "name": "fl0w",
   },
   "highlights": Array [],
+  "id": 2186795,
   "live": false,
   "maps": Array [
     Object {
