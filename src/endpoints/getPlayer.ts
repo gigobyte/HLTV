@@ -67,27 +67,25 @@ export const getPlayer = (config: HLTVConfig) => async ({
       .text()
       .trim() !== '-'
   ) {
-    team = isStandardPlayer
-      ? {
-          name: $('.profile-player-stat-value a')
-            .text()
-            .trim(),
-          id: Number(
-            $('.profile-player-stat-value a')
-              .attr('href')
-              .split('/')[2]
-          )
-        }
-      : {
-          name: $('.playerTeam a')
-            .text()
-            .trim(),
-          id: Number(
-            $('.playerTeam a')
-              .attr('href')
-              .split('/')[2]
-          )
-        }
+    if (isStandardPlayer) {
+      team = {
+        name: $('.profile-player-stat-value a')
+          .text()
+          .trim(),
+        id: Number(
+          $('.profile-player-stat-value a')
+            .attr('href')
+            .split('/')[2]
+        )
+      }
+    } else {
+      const playerTeam = $('.playerTeam a')
+      const playerHref = playerTeam.attr('href')
+      team = {
+        name: playerTeam.text().trim(),
+        id: playerHref ? Number(playerHref.split('/')[2]) : 0
+      }
+    }
   }
 
   const getMapStat = i =>
