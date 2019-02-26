@@ -81,9 +81,11 @@ export const getPlayer = (config: HLTVConfig) => async ({
     } else {
       const playerTeam = $('.playerTeam a')
       const playerHref = playerTeam.attr('href')
-      team = {
-        name: playerTeam.text().trim(),
-        id: playerHref ? Number(playerHref.split('/')[2]) : 0
+      if (playerHref) {
+        team = {
+          name: playerTeam.text().trim(),
+          id: Number(playerHref.split('/')[2])
+        }
       }
     }
   }
