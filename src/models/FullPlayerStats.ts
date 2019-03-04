@@ -14,7 +14,7 @@ export interface FullPlayerStats {
     deaths: string
     kdRatio: string
     damagePerRound: string
-    granadeDamagePerRound: string
+    grenadeDamagePerRound: string
     mapsPlayed: string
     roundsPlayed: string
     killsPerRound: string

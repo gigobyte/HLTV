@@ -64,7 +64,7 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
     deaths: getStats(2),
     kdRatio: getStats(3),
     damagePerRound: getStats(4),
-    granadeDamagePerRound: getStats(5),
+    grenadeDamagePerRound: getStats(5),
     mapsPlayed: getStats(6),
     roundsPlayed: getStats(7),
     killsPerRound: getStats(8),
