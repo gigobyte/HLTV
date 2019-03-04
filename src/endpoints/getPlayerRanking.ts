@@ -1,4 +1,4 @@
-import { stringify } from 'querystring';
+import { stringify } from 'querystring'
 import { PlayerRanking } from '../models/PlayerRanking'
 import { MatchType } from '../enums/MatchType'
 import { RankingFilter } from '../enums/RankingFilter'
