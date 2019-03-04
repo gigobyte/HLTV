@@ -289,6 +289,8 @@ Option | Type | Default value | Description |
 id | int | - | - |
 startDate | string | - | - |
 endDate | string | - | - |
+matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? | - | - |
+rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? | - | - |
 
 ```javascript
 HLTV.getPlayerStats({id: 7998}).then(res => {

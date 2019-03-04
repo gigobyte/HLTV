@@ -1,23 +1,33 @@
 import { FullPlayerStats } from '../models/FullPlayerStats'
 import { Team } from '../models/Team'
+import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
+import { MatchType } from '../enums/MatchType'
+import { RankingFilter } from '../enums/RankingFilter'
 import { fetchPage } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 
 export const getPlayerStats = (config: HLTVConfig) => async ({
   id,
   startDate,
-  endDate
+  endDate,
+  matchType,
+  rankingFilter
 }: {
   id: number
   startDate: string
   endDate: string
+  matchType: MatchType
+  rankingFilter: RankingFilter
 }): Promise<FullPlayerStats> => {
-  let options = ''
-  if (startDate != null && endDate != null) {
-    options = '?startDate=' + startDate + '&endDate=' + endDate
-  }
-  const $ = await fetchPage(`${config.hltvUrl}/stats/players/${id}/-${options}`, config.loadPage)
+  const query = stringify({
+    startDate,
+    endDate,
+    matchType,
+    rankingFilter
+  })
+
+  const $ = await fetchPage(`${config.hltvUrl}/stats/players/${id}/-?${query}`, config.loadPage)
 
   const name = $('.statsPlayerName').text() || undefined
   const ign = $('.context-item-name').text()
