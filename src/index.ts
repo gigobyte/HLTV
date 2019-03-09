@@ -15,9 +15,10 @@ import { getPlayer } from './endpoints/getPlayer'
 import { getEvent } from './endpoints/getEvent'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
+import { getResultsDemo } from './endpoints/getResultsDemo'
 
 export class HLTVFactory {
-  constructor(private readonly config: HLTVConfig) {}
+  constructor(private readonly config: HLTVConfig) { }
 
   connectToScorebot = connectToScorebot(this.config)
   getMatch = getMatch(this.config)
@@ -27,6 +28,7 @@ export class HLTVFactory {
   getMatchMapStats = getMatchMapStats(this.config)
   getRecentThreads = getRecentThreads(this.config)
   getResults = getResults(this.config)
+  getResultsDemo = getResultsDemo(this.config)
   getStreams = getStreams(this.config)
   getTeamRanking = getTeamRanking(this.config)
   getTeam = getTeam(this.config)
