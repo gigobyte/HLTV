@@ -17,7 +17,7 @@ export const getResultsDemo = (config: HLTVConfig) => async ({ pages = 1 } = {})
   let matches = [] as MatchResult[]
 
   for (let i = 0; i < pages; i++) {
-    const $ = await fetchPage(`${config.hltvUrl}/results?offset=${i * 100}&content=demo`, config.loadPage)
+    const $ = await fetchPage(`${config.hltvUrl}/results?offset=${i * 100}?content=demo`, config.loadPage)
 
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
