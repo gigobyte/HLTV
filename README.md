@@ -54,7 +54,7 @@ You can create an instance of HLTV with a custom config.
 const myHLTV = HLTV.createInstance({hltvUrl: 'my-proxy-server', loadPage: /* my custom request library */})
 ```
 
-**[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/models/HLTVConfig.ts)**
+**[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/config.ts)**
 
 ## API
 
