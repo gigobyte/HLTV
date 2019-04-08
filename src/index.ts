@@ -15,6 +15,13 @@ import { getPlayer } from './endpoints/getPlayer'
 import { getEvent } from './endpoints/getEvent'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
+import { MapSlug } from './enums/MapSlug'
+import { Map } from './enums/Map'
+import { MatchType } from './enums/MatchType'
+import { RankingFilter } from './enums/RankingFilter'
+import { StreamCategory } from './enums/StreamCategory'
+import { ThreadCategory } from './enums/ThreadCategory'
+import { WinType } from './enums/WinType'
 
 export class HLTVFactory {
   constructor(private readonly config: HLTVConfig) {}
@@ -44,4 +51,13 @@ export class HLTVFactory {
 const hltvInstance = new HLTVFactory(defaultConfig)
 
 export default hltvInstance
-export { hltvInstance as HLTV }
+export {
+  hltvInstance as HLTV,
+  MapSlug,
+  Map,
+  MatchType,
+  RankingFilter,
+  StreamCategory,
+  ThreadCategory,
+  WinType
+}

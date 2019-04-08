@@ -9,6 +9,7 @@ export enum MapSlug {
   Dust2 = 'd2',
   Nuke = 'nuke',
   Tuscan = 'tcn',
+  Vertigo = 'vertigo',
   Season = '-',
   Default = '-'
 }

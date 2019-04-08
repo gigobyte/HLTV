@@ -8,5 +8,6 @@ export const enum Map {
   Train = 'de_train',
   Cobblestone = 'de_cobblestone',
   Overpass = 'de_overpass',
-  Tuscan = 'de_tuscan'
+  Tuscan = 'de_tuscan',
+  Vertigo = 'de_vertigo'
 }
