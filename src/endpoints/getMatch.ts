@@ -1,6 +1,7 @@
 import { FullMatch } from '../models/FullMatch'
 import { Event } from '../models/Event'
 import { MapResult } from '../models/MapResult'
+import { OddResult } from '../models/OddResult'
 import { Player } from '../models/Player'
 import { Stream } from '../models/Stream'
 import { Team } from '../models/Team'
@@ -9,7 +10,7 @@ import { Highlight } from '../models/Highlight'
 import { Veto } from '../models/Veto'
 import { HeadToHeadResult } from '../models/HeadToHeadResult'
 import { MapSlug } from '../enums/MapSlug'
-import { popSlashSource, hasChild } from '../utils/parsing'
+import { popSlashSource, hasChild, hasNoChild } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import {
   fetchPage,
@@ -99,6 +100,61 @@ export const getMatch = (config: HLTVConfig) => async ({
         .attr('href')
         .split('/')[2]
     )
+  }
+
+  const odds: OddResult[] = toArray($('.betting_provider:not(.hidden)'))
+    .filter(hasNoChild('.noOdds'))
+    .map(oddElement => {
+
+    let convertOdds = (oddElement.find('.odds-cell').first().text().indexOf('%') >= 0 ? true : false);
+
+    let oddTeam1 = Number(
+      oddElement
+      .find('.odds-cell')
+      .first()
+      .find('a')
+      .text()
+      .replace('%', '')
+    );
+
+    let oddTeam2 = Number(
+      oddElement
+      .find('.odds-cell')
+      .last()
+      .find('a')
+      .text()
+      .replace('%', '')
+    );
+
+    if(convertOdds) {
+      oddTeam1 = parseFloat( ((1 / oddTeam1) * 100).toFixed(2) );
+      oddTeam2 = parseFloat( ((1 / oddTeam2) * 100).toFixed(2) );
+    }
+
+    return {
+      provider: oddElement.prop('class').split('geoprovider_')[1].split(' ')[0].trim(),
+      oddTeam1: oddTeam1,
+      oddTeam2: oddTeam2
+    }
+  })
+
+  let oddsCommunity: { oddTeam1: Number; oddTeam2: Number } | undefined
+
+  if($('.pick-a-winner-team').length == 2) {
+    oddsCommunity = {
+      oddTeam1: Number(
+        $('.pick-a-winner-team').first()
+        .find('.percentage')
+        .text()
+        .replace('%', '')
+      ),
+      oddTeam2: Number(
+        $('.pick-a-winner-team').last()
+        .find('.percentage')
+        .text()
+        .replace('%', '')
+      )
+    }
   }
 
   const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
@@ -252,6 +308,8 @@ export const getMatch = (config: HLTVConfig) => async ({
     headToHead,
     vetoes,
     highlights,
-    demos
+    demos,
+    odds,
+    oddsCommunity
   }
 }
