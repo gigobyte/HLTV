@@ -31,4 +31,6 @@ export interface FullMatch {
   readonly highlightedPlayer?: Player
   readonly headToHead?: HeadToHeadResult[]
   readonly highlights?: Highlight[]
+  readonly odds?
+  readonly oddsCommunity?
 }

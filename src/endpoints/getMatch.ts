@@ -1,6 +1,7 @@
 import { FullMatch } from '../models/FullMatch'
 import { Event } from '../models/Event'
 import { MapResult } from '../models/MapResult'
+import { OddResult } from '../models/OddResult'
 import { Player } from '../models/Player'
 import { Stream } from '../models/Stream'
 import { Team } from '../models/Team'
@@ -100,6 +101,52 @@ export const getMatch = (config: HLTVConfig) => async ({
         .split('/')[2]
     )
   }
+
+  const odds: OddResult[] = toArray($('.betting_provider:not(.hidden)')).map(oddElement => ({
+    provider: oddElement.prop('class').split('geoprovider_')[1].split(' ')[0].trim(),
+    oddTeam1: oddElement.find('.noOdds').length > 0 || oddElement.find('.odds-cell').first().text().indexOf('%') >= 0
+      ? undefined
+      : Number(
+        oddElement
+        .find('.odds-cell')
+        .first()
+        .find('a')
+        .text()
+      ),
+    oddTeam2: oddElement.find('.noOdds').length > 0 || oddElement.find('.odds-cell').last().text().indexOf('%') >= 0
+      ? undefined
+      : Number(
+        oddElement
+        .find('.odds-cell')
+        .last()
+        .find('a')
+        .text()
+      )
+  }))
+
+  const oddsCommunity: OddResult[] = toArray($('.pick-a-winner:not(.hidden)')).map(oddElement => ({
+    provider: 'community',
+    oddTeam1: oddElement.find('.pick-a-winner-team').first().length <= 0
+      ? undefined
+      : Number(
+        oddElement
+        .find('.pick-a-winner-team')
+        .first()
+        .find('.percentage')
+        .text()
+        .replace('%', '')
+      ),
+    oddTeam2: oddElement.find('.pick-a-winner-team').last().length <= 0
+      ? undefined
+      : Number(
+        oddElement
+        .find('.pick-a-winner-team')
+        .last()
+        .find('.percentage')
+        .text()
+        .replace('%', '')
+      ),
+  }))
 
   const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
     name: getMapSlug(mapEl.find('.mapname').text()),
@@ -252,6 +299,8 @@ export const getMatch = (config: HLTVConfig) => async ({
     headToHead,
     vetoes,
     highlights,
-    demos
+    demos,
+    odds,
+    oddsCommunity
   }
 }
