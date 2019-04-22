@@ -1,6 +1,6 @@
 {
   "name": "hltv",
-  "version": "2.14.1",
+  "version": "2.14.2",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
