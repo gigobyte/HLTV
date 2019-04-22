@@ -214,6 +214,8 @@ Object {
       "statsId": 73165,
     },
   ],
+  "odds": Array [],
+  "oddsCommunity": undefined,
   "players": Object {
     "team1": Array [
       Object {
@@ -380,6 +382,8 @@ Object {
       "statsId": 30146,
     },
   ],
+  "odds": Array [],
+  "oddsCommunity": undefined,
   "players": Object {
     "team1": Array [
       Object {
@@ -467,6 +471,8 @@ Object {
       "statsId": undefined,
     },
   ],
+  "odds": Array [],
+  "oddsCommunity": undefined,
   "players": Object {
     "team1": Array [
       Object {
@@ -557,6 +563,8 @@ Object {
       "statsId": undefined,
     },
   ],
+  "odds": Array [],
+  "oddsCommunity": undefined,
   "players": Object {
     "team1": Array [
       Object {

@@ -7,6 +7,7 @@ import { Player } from './Player'
 import { HeadToHeadResult } from './HeadToHeadResult'
 import { Veto } from './Veto'
 import { Highlight } from './Highlight'
+import { OddResult, CommunityOddResult } from './OddResult'
 
 export interface FullMatch {
   readonly id: number
@@ -31,6 +32,6 @@ export interface FullMatch {
   readonly highlightedPlayer?: Player
   readonly headToHead?: HeadToHeadResult[]
   readonly highlights?: Highlight[]
-  readonly odds?
-  readonly oddsCommunity?
+  readonly odds?: OddResult[]
+  readonly oddsCommunity?: CommunityOddResult
 }
