@@ -19,7 +19,7 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, teamID = 0
   for (let i = 0; i < pages; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`;
 
-    if(teamID) url += '&team=' + teamID;
+    if(teamID) url += `&team=${teamID}`;
 
     const $ = await fetchPage(url, config.loadPage)
 

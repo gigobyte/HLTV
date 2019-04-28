@@ -22,6 +22,7 @@ import { RankingFilter } from './enums/RankingFilter'
 import { StreamCategory } from './enums/StreamCategory'
 import { ThreadCategory } from './enums/ThreadCategory'
 import { WinType } from './enums/WinType'
+import { getEvents } from './endpoints/getEvents';
 
 export class HLTVFactory {
   constructor(private readonly config: HLTVConfig) {}
@@ -40,6 +41,7 @@ export class HLTVFactory {
   getTeamStats = getTeamStats(this.config)
   getPlayer = getPlayer(this.config)
   getEvent = getEvent(this.config)
+  getEvents = getEvents(this.config)
   getPlayerStats = getPlayerStats(this.config)
   getPlayerRanking = getPlayerRanking(this.config)
 
