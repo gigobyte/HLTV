@@ -333,10 +333,10 @@ Parses the info from the `hltv.org/events` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-eventSize | string | all | Event size type. (`all`, `small`, `big`)
+size | EventSize? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
 
 ```javascript
-HLTV.getEvents({eventSize: 'big'}).then(res => {
+HLTV.getEvents().then(res => {
     ...
 })
 ```
