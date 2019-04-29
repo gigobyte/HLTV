@@ -30,7 +30,4 @@ import HLTV from './index'
 // HLTV.getEvent({id: 3773}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 
 HLTV.getResults({pages: 1}).then(res => console.log(res))
-
-HLTV.getTeamResults({ pages: 1, id: 9565 })
-  .then(res => console.dir(res, { depth: null }))
-  .catch(err => console.log(err))
+HLTV.getResults({pages: 1, teamId : 9565}).then(res => console.log(res))

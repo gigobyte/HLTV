@@ -6,7 +6,7 @@ import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-export const getResults = (config: HLTVConfig, type: string) => async ({ pages = 1, id = 0 } = {}): Promise<
+export const getResults = (config: HLTVConfig) => async ({ pages = 1, teamId = 0 } = {}): Promise<
   MatchResult[]
 > => {
   if (pages < 1) {
@@ -18,8 +18,8 @@ export const getResults = (config: HLTVConfig, type: string) => async ({ pages =
 
   for (let i = 0; i < pages; i++) {
     let fullUrl = `${config.hltvUrl}/results?offset=${i * 100}`
-    if (type && id) {
-      fullUrl += `&${type}=${id}`
+    if (teamId) {
+      fullUrl += `&team=${teamId}`
     }
     const $ = await fetchPage(fullUrl, config.loadPage)
 
