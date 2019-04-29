@@ -6,7 +6,7 @@ import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-export const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Promise<
+export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 0 } = {}): Promise<
   MatchResult[]
 > => {
   if (pages < 1) {
@@ -17,8 +17,19 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Pr
   let matches = [] as MatchResult[]
 
   for (let i = 0; i < pages; i++) {
-    const $ = await fetchPage(`${config.hltvUrl}/results?offset=${i * 100}`, config.loadPage)
+    let fullUrl = `${config.hltvUrl}/results?offset=${i * 100}`
+    let eventName: string
 
+    if(eventId) {
+      fullUrl += `&event=${eventId}`
+    }
+    
+    const $ = await fetchPage(fullUrl, config.loadPage)
+
+    if(eventId) {
+      eventName = $('.eventname').text()
+    }
+    
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
         matchEl => {
@@ -48,11 +59,21 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1 } = {}): Pr
           }
 
           const event: Event = {
-            name: matchEl.find('.event-logo').attr('alt'),
-            id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
+            name: eventId ? eventName : matchEl.find('.event-logo').attr('alt'),
+            id: eventId
+              ? eventId
+              : Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
           }
 
-          const date = Number(matchEl.parent().attr('data-zonedgrouping-entry-unix'))
+          const date = Number(
+            eventId
+              ? matchEl
+                  .find('.date-cell')
+                  .children()
+                  .first()
+                  .attr('data-unix')
+              : matchEl.parent().attr('data-zonedgrouping-entry-unix')
+          )
 
           return { id, team1, team2, result, event, map, format, stars, date }
         }
