@@ -14,6 +14,11 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 
     return []
   }
 
+  // All results for events are always on one page
+  if(eventId) {
+    pages = 1
+  }
+
   let matches = [] as MatchResult[]
 
   for (let i = 0; i < pages; i++) {

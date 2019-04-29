@@ -30,5 +30,5 @@ import HLTV from './index'
 // HLTV.getEvent({id: 3773}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 
 
-// HLTV.getResults({pages: 1}).then(res => console.log(res))
 HLTV.getResults({pages: 1, eventId: 3883}).then(res => console.log(res))
+HLTV.getResults({pages: 1, eventId: 3047}).then(res => console.log(3047 + ':' + res.length))
