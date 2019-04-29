@@ -2,8 +2,13 @@ import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { EventResult } from 'models/EventResult';
 import { SimpleEvent } from 'models/SimpleEvent';
+import { EventSize } from 'enums/EventSize';
 
-export const getEvents = (config: HLTVConfig) => async ({ eventSize = 'all' } = {}): Promise<EventResult[]> => {
+export const getEvents = (config: HLTVConfig) => async ({
+    size
+}: {
+    size?: EventSize
+}): Promise<EventResult[]> => {
     const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage);
 
     let events = [] as EventResult[];
@@ -12,12 +17,12 @@ export const getEvents = (config: HLTVConfig) => async ({ eventSize = 'all' } = 
         let monthEvents = [] as SimpleEvent[];
         let monthName   = event.find('.standard-headline').text();
 
-        switch(eventSize) {
-            case 'small':
+        switch(size) {
+            case EventSize.Small:
                 monthEvents = parseSmallEvents(toArray(event.find('a.small-event')));
             break;
 
-            case 'big':
+            case EventSize.Big:
                 monthEvents = parseBigEvents(toArray(event.find('a.big-event')));
             break;
 
