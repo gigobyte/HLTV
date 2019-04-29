@@ -336,7 +336,7 @@ Option | Type | Default value | Description |
 size | [EventSize](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
 
 ```javascript
-HLTV.getEvents().then(res => {
+HLTV.getEvents({}).then(res => {
     ...
 })
 ```

@@ -19,15 +19,15 @@ export const getEvents = (config: HLTVConfig) => async ({
 
         switch(size) {
             case EventSize.Small:
-                monthEvents = parseSmallEvents(toArray(event.find('a.small-event')));
+                monthEvents = parseEvents(toArray(event.find('a.small-event')), EventSize.Small);
             break;
 
             case EventSize.Big:
-                monthEvents = parseBigEvents(toArray(event.find('a.big-event')));
+                monthEvents = parseEvents(toArray(event.find('a.big-event')), EventSize.Big);
             break;
 
             default:
-                monthEvents = parseBigEvents(toArray(event.find('a.big-event'))).concat( parseSmallEvents(toArray(event.find('a.small-event'))) );
+                monthEvents = parseEvents(toArray(event.find('a.big-event'))).concat( parseEvents(toArray(event.find('a.small-event'))) );
             break;
         }
 
@@ -40,46 +40,44 @@ export const getEvents = (config: HLTVConfig) => async ({
     return events;
 }
 
-const parseSmallEvents = (smallEvents) => {
+const parseEvents = (eventsToParse, size?:EventSize) => {
     let events = [] as SimpleEvent[];
 
-    smallEvents.forEach((eventEl) => {
-        let dateStart   = eventEl.find('.eventDetails .col-desc span[data-unix]').eq(0).data('unix');
-        let dateEnd     = eventEl.find('.eventDetails .col-desc span[data-unix]').eq(1).data('unix');
-        let teams       = eventEl.find('.col-value').eq(1).text();
+    let dateSelector, nameSelector, locationSelector = '';
+
+    if(size == EventSize.Small) {
+        dateSelector        = '.eventDetails .col-desc span[data-unix]';
+        nameSelector        = '.col-value .text-ellipsis';
+        locationSelector    = '.smallCountry img';
+    } else {
+        dateSelector        = 'span[data-unix]';
+        nameSelector        = '.big-event-name';
+        locationSelector    = '.location-top-teams img';
+    }
+
+    eventsToParse.forEach((eventEl) => {
+        let dateStart   = eventEl.find(dateSelector).eq(0).data('unix');
+        let dateEnd     = eventEl.find(dateSelector).eq(1).data('unix');
+        let teams       = '0';
+        let prizePool   = '';
+
+        if(size == EventSize.Small) {
+            teams       = eventEl.find('.col-value').eq(1).text();
+            prizePool   = eventEl.find('.prizePoolEllipsis').text();
+        } else {
+            teams       = eventEl.find('.additional-info tr').eq(0).find('td').eq(2).text();
+            prizePool   = eventEl.find('.additional-info tr').eq(0).find('td').eq(1).text();
+        }
 
         events.push({
             id: Number(eventEl.attr('href').split('/')[2]),
-            name: eventEl.find('.col-value .text-ellipsis').text(),
+            name: eventEl.find(nameSelector).text(),
             dateStart: dateStart ? Number(dateStart) : undefined,
             dateEnd: dateEnd ? Number(dateEnd) : undefined,
-            prizePool: eventEl.find('.prizePoolEllipsis').text(),
+            prizePool: prizePool,
             teams: teams.length ? Number(teams) : undefined,
-            location: eventEl.find('.smallCountry img').prop('title'),
-            host: eventEl.find('table tr').eq(0).find('td').eq(3).text()
-        });
-    });
-
-    return events;
-}
-
-const parseBigEvents = (bigEvents) => {
-    let events = [] as SimpleEvent[];
-
-    bigEvents.forEach((eventEl) => {
-        let dateStart   = eventEl.find('span[data-unix]').eq(0).data('unix');
-        let dateEnd     = eventEl.find('span[data-unix]').eq(1).data('unix');
-        let teams       = eventEl.find('.additional-info tr').eq(0).find('td').eq(2).text();
-
-        events.push({
-            id: Number(eventEl.attr('href').split('/')[2]),
-            name: eventEl.find('.big-event-name').text(),
-            dateStart: dateStart ? Number(dateStart) : undefined,
-            dateEnd: dateEnd ? Number(dateEnd) : undefined,
-            prizePool: eventEl.find('.additional-info tr').eq(0).find('td').eq(1).text(),
-            teams: teams.length ? Number(teams) : undefined,
-            location: eventEl.find('.location-top-teams img').prop('title'),
-            host: undefined
+            location: eventEl.find(locationSelector).prop('title'),
+            host: size == EventSize.Small ? eventEl.find('table tr').eq(0).find('td').eq(3).text() : undefined
         });
     });
 
