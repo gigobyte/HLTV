@@ -6,16 +6,20 @@ import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 0 } = {}): Promise<
-  MatchResult[]
-> => {
+export const getResults = (config: HLTVConfig) => async ({
+  pages = 1,
+  eventId
+}: {
+  pages: number
+  eventId?: number
+}): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
     return []
   }
 
   // All results for events are always on one page
-  if(eventId) {
+  if (eventId) {
     pages = 1
   }
 
@@ -24,12 +28,12 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 
   for (let i = 0; i < pages; i++) {
     let fullUrl = `${config.hltvUrl}/results?offset=${i * 100}`
 
-    if(eventId) {
+    if (eventId) {
       fullUrl += `&event=${eventId}`
     }
-    
+
     const $ = await fetchPage(fullUrl, config.loadPage)
-    
+
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
         matchEl => {
