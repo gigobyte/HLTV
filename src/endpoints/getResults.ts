@@ -23,17 +23,12 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 
 
   for (let i = 0; i < pages; i++) {
     let fullUrl = `${config.hltvUrl}/results?offset=${i * 100}`
-    let eventName: string
 
     if(eventId) {
       fullUrl += `&event=${eventId}`
     }
     
     const $ = await fetchPage(fullUrl, config.loadPage)
-
-    if(eventId) {
-      eventName = $('.eventname').text()
-    }
     
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
@@ -64,7 +59,7 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, eventId = 
           }
 
           const event: Event = {
-            name: eventId ? eventName : matchEl.find('.event-logo').attr('alt'),
+            name: eventId ? $('.eventname').text() : matchEl.find('.event-logo').attr('alt'),
             id: eventId
               ? eventId
               : Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
