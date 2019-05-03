@@ -1,4 +1,5 @@
 import { Country } from './Country'
+import { EventType } from '../enums/EventType'
 
 export interface SimpleEvent {
   id: number
@@ -8,5 +9,5 @@ export interface SimpleEvent {
   prizePool: string
   teams?: number
   location: Country
-  host?: string
+  type?: EventType
 }

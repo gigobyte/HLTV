@@ -3,6 +3,7 @@ import { fetchPage, toArray } from '../utils/mappers'
 import { EventResult } from 'models/EventResult'
 import { SimpleEvent } from 'models/SimpleEvent'
 import { EventSize } from 'enums/EventSize'
+import { EventType } from 'enums/EventType'
 
 export const getEvents = (config: HLTVConfig) => async ({ size = '' } = {}): Promise<
   EventResult[]
@@ -90,23 +91,27 @@ const parseEvents = (eventsToParse, size?: EventSize) => {
         .text()
     }
 
+    let eventName = eventEl.find(nameSelector).text()
+
+    let typeName = eventEl
+      .find('table tr')
+      .eq(0)
+      .find('td')
+      .eq(3)
+      .text()
+
+    if (!typeName)
+      typeName = eventName.toLowerCase().indexOf('major') > -1 ? EventType.Major : undefined
+
     events.push({
       id: Number(eventEl.attr('href').split('/')[2]),
-      name: eventEl.find(nameSelector).text(),
+      name: eventName,
       dateStart: dateStart ? Number(dateStart) : undefined,
       dateEnd: dateEnd ? Number(dateEnd) : undefined,
       prizePool: prizePool,
       teams: teams.length ? Number(teams) : undefined,
       location: eventEl.find(locationSelector).prop('title'),
-      host:
-        size == EventSize.Small
-          ? eventEl
-              .find('table tr')
-              .eq(0)
-              .find('td')
-              .eq(3)
-              .text()
-          : undefined
+      type: typeName ? (typeName as EventType) : undefined
     })
   })
 
