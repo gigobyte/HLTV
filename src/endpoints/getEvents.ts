@@ -5,9 +5,9 @@ import { SimpleEvent } from 'models/SimpleEvent'
 import { EventSize } from 'enums/EventSize'
 import { EventType } from 'enums/EventType'
 
-export const getEvents = (config: HLTVConfig) => async ({ size = '' } = {}): Promise<
-  EventResult[]
-> => {
+export const getEvents = (config: HLTVConfig) => async ({
+  size
+}: { size?: EventSize } = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
 
   let events = [] as EventResult[]
