@@ -159,7 +159,7 @@ Parses all matches from the `hltv.org/results/` page
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
 pages | int | 1 | Number of pages with results to be parsed |
-teamID | int | - | ID of specific team |
+teamID | int? | - | ID of specific team |
 
 ```javascript
 HLTV.getResults({pages: 2}).then((res) => {
@@ -333,10 +333,10 @@ Parses the info from the `hltv.org/events` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-size | [EventSize](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
+size | [EventSize?](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
 
 ```javascript
-HLTV.getEvents({}).then(res => {
+HLTV.getEvents().then(res => {
     ...
 })
 ```

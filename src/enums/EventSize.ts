@@ -1,4 +1,4 @@
 export const enum EventSize {
-    Small   = 'small',
-    Big     = 'big'
+  Small = 'small',
+  Big = 'big'
 }

@@ -6,9 +6,13 @@ import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
-export const getResults = (config: HLTVConfig) => async ({ pages = 1, teamID = 0 } = {}): Promise<
-  MatchResult[]
-> => {
+export const getResults = (config: HLTVConfig) => async ({
+  pages = 1,
+  teamID
+}: {
+  pages: Number
+  teamID?: Number
+}): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
     return []
@@ -17,9 +21,9 @@ export const getResults = (config: HLTVConfig) => async ({ pages = 1, teamID = 0
   let matches = [] as MatchResult[]
 
   for (let i = 0; i < pages; i++) {
-    let url = `${config.hltvUrl}/results?offset=${i * 100}`;
+    let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
-    if(teamID) url += `&team=${teamID}`;
+    if (teamID) url += `&team=${teamID}`
 
     const $ = await fetchPage(url, config.loadPage)
 

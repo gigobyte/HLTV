@@ -21,8 +21,9 @@ import { MatchType } from './enums/MatchType'
 import { RankingFilter } from './enums/RankingFilter'
 import { StreamCategory } from './enums/StreamCategory'
 import { ThreadCategory } from './enums/ThreadCategory'
+import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
-import { getEvents } from './endpoints/getEvents';
+import { getEvents } from './endpoints/getEvents'
 
 export class HLTVFactory {
   constructor(private readonly config: HLTVConfig) {}
@@ -61,5 +62,6 @@ export {
   RankingFilter,
   StreamCategory,
   ThreadCategory,
-  WinType
+  WinType,
+  EventSize
 }

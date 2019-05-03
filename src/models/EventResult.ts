@@ -1,6 +1,6 @@
-import { SimpleEvent } from "./SimpleEvent";
+import { SimpleEvent } from './SimpleEvent'
 
 export interface EventResult {
-    readonly month: string
-    readonly events: SimpleEvent[]
+  readonly month: string
+  readonly events: SimpleEvent[]
 }
