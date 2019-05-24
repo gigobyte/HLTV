@@ -10,6 +10,7 @@ import { Highlight } from '../models/Highlight'
 import { Veto } from '../models/Veto'
 import { HeadToHeadResult } from '../models/HeadToHeadResult'
 import { MapSlug } from '../enums/MapSlug'
+import { MatchStatus } from '../enums/MatchStatus';
 import { popSlashSource, hasChild, hasNoChild, percentageToDecimalOdd } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import {
@@ -41,7 +42,24 @@ export const getMatch = (config: HLTVConfig) => async ({
     .slice(1)
     .join(' ')
     .trim()
-  const live = $('.countdown').text() === 'LIVE'
+
+  let status = MatchStatus.upcoming
+
+  switch ($('.countdown').text()) {
+    case MatchStatus.live:
+      status = MatchStatus.live
+      break
+    case MatchStatus.over:
+      status = MatchStatus.over
+      break
+    case MatchStatus.postponed:
+      status = MatchStatus.postponed
+      break
+    default:
+      break
+  }
+
+  const live = status === MatchStatus.live
   const hasScorebot = $('#scoreboardElement').length !== 0
   const teamEls = $('div.teamName')
 
@@ -318,6 +336,7 @@ export const getMatch = (config: HLTVConfig) => async ({
     players,
     streams,
     live,
+    status,
     title,
     hasScorebot,
     highlightedPlayer,
