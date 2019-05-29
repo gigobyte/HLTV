@@ -43,20 +43,12 @@ export const getMatch = (config: HLTVConfig) => async ({
     .join(' ')
     .trim()
 
-  let status = MatchStatus.upcoming
-
-  switch ($('.countdown').text()) {
-    case MatchStatus.live:
-      status = MatchStatus.live
-      break
-    case MatchStatus.over:
-      status = MatchStatus.over
-      break
-    case MatchStatus.postponed:
-      status = MatchStatus.postponed
-      break
-    default:
-      break
+  let status = MatchStatus.scheduled
+  if($('.countdown').text() === 'LIVE') {
+    status = MatchStatus.live
+  }
+  if(!$('.countdown').attr('data-time-countdown')) {
+    status = $('.countdown').text() as MatchStatus
   }
 
   const live = status === MatchStatus.live

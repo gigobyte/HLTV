@@ -19,7 +19,7 @@ import HLTV from './index'
 //     console.dir(data, { depth: null })
 // }})
 // HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then(res => console.log(res.length))
-HLTV.getMatch({id: 2333372}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
+HLTV.getMatch({id: 2333283}).then(res => console.dir(res, {depth: null})).catch(err => console.log(err))
 // HLTV.getMatchMapStats({id: 49968}).then(res => console.dir(res, { depth: null }))
 // HLTV.getMatchStats({id: 62979}).then(res => console.dir(res, { depth: null }))
 // HLTV.getTeam({ id: 9481 })
