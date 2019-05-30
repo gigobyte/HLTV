@@ -262,6 +262,7 @@ Object {
       },
     ],
   },
+  "status": "Match over",
   "streams": Array [],
   "team1": Object {
     "id": 4494,
@@ -430,6 +431,7 @@ Object {
       },
     ],
   },
+  "status": "Match over",
   "streams": Array [],
   "team1": Object {
     "id": 6785,
@@ -519,6 +521,7 @@ Object {
       },
     ],
   },
+  "status": "Match over",
   "streams": Array [],
   "team1": Object {
     "id": 4494,
@@ -611,6 +614,7 @@ Object {
       },
     ],
   },
+  "status": "Match over",
   "streams": Array [],
   "team1": Object {
     "id": 4498,
