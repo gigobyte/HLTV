@@ -43,15 +43,15 @@ export const getMatch = (config: HLTVConfig) => async ({
     .join(' ')
     .trim()
 
-  let status = MatchStatus.scheduled
+  let status = MatchStatus.Scheduled
   if(!$('.countdown').attr('data-time-countdown')) {
     status = $('.countdown').text() as MatchStatus
   }
-  else if($('.countdown').text() === MatchStatus.live) {
-    status = MatchStatus.live
+  else if($('.countdown').text() === MatchStatus.Live) {
+    status = MatchStatus.Live
   }
 
-  const live = status === MatchStatus.live
+  const live = status === MatchStatus.Live
   const hasScorebot = $('#scoreboardElement').length !== 0
   const teamEls = $('div.teamName')
 
