@@ -6,36 +6,44 @@ import { EventSize } from 'enums/EventSize'
 import { EventType } from 'enums/EventType'
 
 export const getEvents = (config: HLTVConfig) => async ({
-  size
-}: { size?: EventSize } = {}): Promise<EventResult[]> => {
+  size,
+  month
+}: {
+  size?: EventSize,
+  month?: Number
+} = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
 
   let events = [] as EventResult[]
 
   toArray($('.events-month')).map(event => {
     let monthEvents = [] as SimpleEvent[]
-    let monthName = event.find('.standard-headline').text()
+    let checkMonth  = Date.parse(event.find('.standard-headline').text());
 
-    switch (size) {
-      case EventSize.Small:
-        monthEvents = parseEvents(toArray(event.find('a.small-event')), EventSize.Small)
-        break
+    if(checkMonth) checkMonth = new Date(checkMonth).getMonth();
 
-      case EventSize.Big:
-        monthEvents = parseEvents(toArray(event.find('a.big-event')), EventSize.Big)
-        break
-
-      default:
-        monthEvents = parseEvents(toArray(event.find('a.big-event'))).concat(
-          parseEvents(toArray(event.find('a.small-event')))
-        )
-        break
+    if(typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth) ) {
+      switch (size) {
+        case EventSize.Small:
+          monthEvents = parseEvents(toArray(event.find('a.small-event')), EventSize.Small)
+          break
+  
+        case EventSize.Big:
+          monthEvents = parseEvents(toArray(event.find('a.big-event')), EventSize.Big)
+          break
+  
+        default:
+          monthEvents = parseEvents(toArray(event.find('a.big-event'))).concat(
+            parseEvents(toArray(event.find('a.small-event')))
+          )
+          break
+      }
+  
+      events.push({
+        month: checkMonth,
+        events: monthEvents
+      })
     }
-
-    events.push({
-      month: monthName,
-      events: monthEvents
-    })
   })
 
   return events
