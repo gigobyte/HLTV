@@ -9,7 +9,7 @@ export const getEvents = (config: HLTVConfig) => async ({
   size,
   month
 }: {
-  size?: EventSize,
+  size?: EventSize
   month?: Number
 } = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
@@ -18,27 +18,27 @@ export const getEvents = (config: HLTVConfig) => async ({
 
   toArray($('.events-month')).map(event => {
     let monthEvents = [] as SimpleEvent[]
-    let checkMonth  = Date.parse(event.find('.standard-headline').text());
+    let checkMonth = Date.parse(event.find('.standard-headline').text())
 
-    if(checkMonth) checkMonth = new Date(checkMonth).getMonth();
+    if (checkMonth) checkMonth = new Date(checkMonth).getMonth()
 
-    if(typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth) ) {
+    if (typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth)) {
       switch (size) {
         case EventSize.Small:
           monthEvents = parseEvents(toArray(event.find('a.small-event')), EventSize.Small)
           break
-  
+
         case EventSize.Big:
           monthEvents = parseEvents(toArray(event.find('a.big-event')), EventSize.Big)
           break
-  
+
         default:
           monthEvents = parseEvents(toArray(event.find('a.big-event'))).concat(
             parseEvents(toArray(event.find('a.small-event')))
           )
           break
       }
-  
+
       events.push({
         month: checkMonth,
         events: monthEvents
