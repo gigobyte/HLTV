@@ -2,5 +2,6 @@ export enum MatchStatus {
   Live = 'LIVE',
   Postponed = 'Match postponed',
   Over = 'Match over',
-  Scheduled = 'Scheduled'
+  Scheduled = 'Scheduled',
+  Deleted = 'Match deleted'
 }
