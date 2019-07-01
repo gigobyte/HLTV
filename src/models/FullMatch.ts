@@ -1,4 +1,4 @@
-import { MatchStatus } from './../enums/MatchStatus';
+import { MatchStatus } from './../enums/MatchStatus'
 import { Team } from './Team'
 import { Event } from './Event'
 import { MapResult } from './MapResult'
