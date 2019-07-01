@@ -160,6 +160,7 @@ Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
 pages | int | 1 | Number of pages with results to be parsed |
 teamID | int? | - | ID of specific team |
+eventID | int? | - | ID of specific event |
 
 ```javascript
 HLTV.getResults({pages: 2}).then((res) => {

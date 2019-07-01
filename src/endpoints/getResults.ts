@@ -11,7 +11,7 @@ export const getResults = (config: HLTVConfig) => async ({
   teamID,
   eventID
 }: {
-  pages: Number
+  pages: Number,
   teamID?: Number,
   eventID?: Number,
 }): Promise<MatchResult[]> => {
@@ -22,7 +22,7 @@ export const getResults = (config: HLTVConfig) => async ({
 
   let matches = [] as MatchResult[]
 
-  if (eventID) pages = 1;
+  if (eventID) pages = 1
 
   for (let i = 0; i < pages; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
@@ -60,12 +60,17 @@ export const getResults = (config: HLTVConfig) => async ({
             format: string
           }
 
+          let idOfEvent = (typeof eventID === 'undefined' ? popSlashSource(matchEl.find('.event-logo'))!.split('.')[0] : eventID);
+          let nameOfEvent = (typeof eventID === 'undefined' ? matchEl.find('.event-logo').attr('alt') : $('.eventname').text() );
+
           const event: Event = {
-            name: matchEl.find('.event-logo').attr('alt'),
-            id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
+            name: nameOfEvent,
+            id: Number(idOfEvent)
           }
 
-          const date = Number(matchEl.parent().attr('data-zonedgrouping-entry-unix'))
+          let eventDate = (typeof eventID === 'undefined' ? matchEl.parent().attr('data-zonedgrouping-entry-unix') : $('.eventdate span').first().data('unix'));
+
+          const date = Number(eventDate)
 
           return { id, team1, team2, result, event, map, format, stars, date }
         }
