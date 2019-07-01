@@ -1,3 +1,4 @@
+import { MatchStatus } from './../enums/MatchStatus';
 import { Team } from './Team'
 import { Event } from './Event'
 import { MapResult } from './MapResult'
@@ -28,6 +29,7 @@ export interface FullMatch {
   }
   readonly title?: string
   readonly live: boolean
+  readonly status: MatchStatus
   readonly hasScorebot: boolean
   readonly highlightedPlayer?: Player
   readonly headToHead?: HeadToHeadResult[]

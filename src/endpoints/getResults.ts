@@ -8,10 +8,12 @@ import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
-  teamID
+  teamID,
+  eventID
 }: {
   pages: Number
-  teamID?: Number
+  teamID?: Number,
+  eventID?: Number,
 }): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
@@ -20,10 +22,13 @@ export const getResults = (config: HLTVConfig) => async ({
 
   let matches = [] as MatchResult[]
 
+  if (eventID) pages = 1;
+
   for (let i = 0; i < pages; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
     if (teamID) url += `&team=${teamID}`
+    if (eventID) url += `&event=${eventID}`
 
     const $ = await fetchPage(url, config.loadPage)
 

@@ -1,7 +1,7 @@
-import HLTV from './index'
-HLTV.getMatch({ id: 2332676 })
-  .then(res => console.dir(res, { depth: null }))
-  .catch(err => console.log(err))
+// import HLTV from './index'
+// HLTV.getMatch({ id: 2332676 })
+//   .then(res => console.dir(res, { depth: null }))
+//   .catch(err => console.log(err))
 // HLTV.getMatches().then(res => console.log(res))
 // HLTV.getResults({pages: 1}).then(res => console.log(res))
 // HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
@@ -28,3 +28,4 @@ HLTV.getMatch({ id: 2332676 })
 // HLTV.getTeamStats({id: 6669}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getPlayer({id: 9216}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getEvent({id: 3773}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+// HLTV.getResults({pages: 1, eventId: 3883}).then(res => console.log(res))
