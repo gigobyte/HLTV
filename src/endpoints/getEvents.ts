@@ -1,9 +1,9 @@
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import { EventResult } from 'models/EventResult'
-import { SimpleEvent } from 'models/SimpleEvent'
-import { EventSize } from 'enums/EventSize'
-import { EventType } from 'enums/EventType'
+import { EventResult } from '../models/EventResult'
+import { EventSize } from '../enums/EventSize'
+import { EventType } from '../enums/EventType'
+import { SimpleEvent } from '../models/SimpleEvent'
 
 export const getEvents = (config: HLTVConfig) => async ({
   size,
@@ -14,44 +14,42 @@ export const getEvents = (config: HLTVConfig) => async ({
 } = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
 
-  let events = [] as EventResult[]
+  const events = toArray($('.events-month'))
+    .map(eventEl => {
+      const checkMonth = new Date(eventEl.find('.standard-headline').text()).getMonth()
 
-  toArray($('.events-month')).map(event => {
-    let monthEvents = [] as SimpleEvent[]
-    let checkMonth = Date.parse(event.find('.standard-headline').text())
+      if (typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth)) {
+        switch (size) {
+          case EventSize.Small:
+            return {
+              month: checkMonth,
+              events: parseEvents(toArray(eventEl.find('a.small-event')), EventSize.Small)
+            }
 
-    if (checkMonth) checkMonth = new Date(checkMonth).getMonth()
+          case EventSize.Big:
+            return {
+              month: checkMonth,
+              events: parseEvents(toArray(eventEl.find('a.big-event')), EventSize.Big)
+            }
 
-    if (typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth)) {
-      switch (size) {
-        case EventSize.Small:
-          monthEvents = parseEvents(toArray(event.find('a.small-event')), EventSize.Small)
-          break
-
-        case EventSize.Big:
-          monthEvents = parseEvents(toArray(event.find('a.big-event')), EventSize.Big)
-          break
-
-        default:
-          monthEvents = parseEvents(toArray(event.find('a.big-event'))).concat(
-            parseEvents(toArray(event.find('a.small-event')))
-          )
-          break
+          default:
+            return {
+              month: checkMonth,
+              events: parseEvents(toArray(eventEl.find('a.big-event'))).concat(
+                parseEvents(toArray(eventEl.find('a.small-event')))
+              )
+            }
+        }
       }
 
-      events.push({
-        month: checkMonth,
-        events: monthEvents
-      })
-    }
-  })
+      return null
+    })
+    .filter((x): x is EventResult => !!x)
 
   return events
 }
 
-const parseEvents = (eventsToParse, size?: EventSize) => {
-  let events = [] as SimpleEvent[]
-
+const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] => {
   let dateSelector,
     nameSelector,
     locationSelector = ''
@@ -66,7 +64,7 @@ const parseEvents = (eventsToParse, size?: EventSize) => {
     locationSelector = '.location-top-teams img'
   }
 
-  eventsToParse.forEach(eventEl => {
+  const events = eventsToParse.map(eventEl => {
     let dateStart = eventEl
       .find(dateSelector)
       .eq(0)
@@ -106,12 +104,12 @@ const parseEvents = (eventsToParse, size?: EventSize) => {
       .eq(0)
       .find('td')
       .eq(3)
-      .text()
+      .text() as EventType | undefined
 
     if (!typeName)
-      typeName = eventName.toLowerCase().indexOf('major') > -1 ? EventType.Major : undefined
+      typeName = eventName.toLowerCase().includes('major') ? EventType.Major : undefined
 
-    events.push({
+    return {
       id: Number(eventEl.attr('href').split('/')[2]),
       name: eventName,
       dateStart: dateStart ? Number(dateStart) : undefined,
@@ -119,8 +117,8 @@ const parseEvents = (eventsToParse, size?: EventSize) => {
       prizePool: prizePool,
       teams: teams.length ? Number(teams) : undefined,
       location: eventEl.find(locationSelector).prop('title'),
-      type: typeName ? (typeName as EventType) : undefined
-    })
+      type: typeName ? typeName : undefined
+    }
   })
 
   return events

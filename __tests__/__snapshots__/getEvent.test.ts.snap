@@ -238,33 +238,8 @@ Object {
   ],
   "teams": Array [
     Object {
-      "id": 8572,
-      "name": "Codewise Unicorns",
-      "reasonForParticipation": undefined,
-    },
-    Object {
       "id": 8305,
       "name": "DreamEaters",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6343,
-      "name": "EURONICS",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6652,
-      "name": "GameAgents",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 7187,
-      "name": "Nexus",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8209,
-      "name": "Pompa",
       "reasonForParticipation": undefined,
     },
     Object {
@@ -273,8 +248,28 @@ Object {
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 6679,
-      "name": "Revolution",
+      "id": 6652,
+      "name": "GameAgents",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7017,
+      "name": "Space Jam",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8209,
+      "name": "Pompa",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 7187,
+      "name": "Nexus",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6343,
+      "name": "EURONICS",
       "reasonForParticipation": undefined,
     },
     Object {
@@ -283,8 +278,13 @@ Object {
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 7017,
-      "name": "Space Jam",
+      "id": 8572,
+      "name": "Codewise Unicorns",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 6679,
+      "name": "Revolution",
       "reasonForParticipation": undefined,
     },
   ],
@@ -419,6 +419,16 @@ Object {
   "relatedEvents": Array [],
   "teams": Array [
     Object {
+      "id": 7653,
+      "name": "Isurus",
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8094,
+      "name": "Licht",
+      "reasonForParticipation": undefined,
+    },
+    Object {
       "id": 6799,
       "name": "Furious",
       "reasonForParticipation": undefined,
@@ -426,11 +436,6 @@ Object {
     Object {
       "id": 8125,
       "name": "Hafnet",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 7653,
-      "name": "Isurus",
       "reasonForParticipation": undefined,
     },
     Object {
@@ -446,11 +451,6 @@ Object {
     Object {
       "id": 8122,
       "name": "Kitsune",
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8094,
-      "name": "Licht",
       "reasonForParticipation": undefined,
     },
     Object {
@@ -538,7 +538,7 @@ Object {
       "qualifiesFor": undefined,
       "team": Object {
         "id": 5005,
-        "name": "compLexity",
+        "name": "Complexity",
       },
     },
     Object {
@@ -589,13 +589,13 @@ Object {
   ],
   "teams": Array [
     Object {
-      "id": 5991,
-      "name": "Envy",
+      "id": 7801,
+      "name": "Ghost",
       "reasonForParticipation": "Invited",
     },
     Object {
-      "id": 7801,
-      "name": "Ghost",
+      "id": 5991,
+      "name": "Envy",
       "reasonForParticipation": "Invited",
     },
     Object {
@@ -605,13 +605,8 @@ Object {
     },
     Object {
       "id": 5005,
-      "name": "compLexity",
+      "name": "Complexity",
       "reasonForParticipation": "Invited",
-    },
-    Object {
-      "id": 9804,
-      "name": "Win Scrims Not Matches",
-      "reasonForParticipation": "Qualifier 1",
     },
     Object {
       "id": 7106,
@@ -627,6 +622,11 @@ Object {
       "id": 7726,
       "name": "Swole Patrol",
       "reasonForParticipation": "Qualifier 2",
+    },
+    Object {
+      "id": 9804,
+      "name": "Win Scrims Not Matches",
+      "reasonForParticipation": "Qualifier 1",
     },
   ],
 }
