@@ -9,6 +9,6 @@ export interface LiveMatch {
   readonly format: string
   readonly event: Event
   readonly maps: MapSlug[]
-  readonly live: boolean
+  readonly live: true
   readonly stars: number
 }

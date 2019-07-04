@@ -11,6 +11,6 @@ export interface UpcomingMatch {
   readonly event?: Event
   readonly map?: MapSlug
   readonly title?: string
-  readonly live: boolean
+  readonly live: false
   readonly stars: number
 }
