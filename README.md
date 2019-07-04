@@ -65,7 +65,7 @@ Parses most information from a match page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | The match id
+id | number | - | The match id
 
 ```javascript
 HLTV.getMatch({id: 2306295}).then(res => {
@@ -158,9 +158,9 @@ Parses all matches from the `hltv.org/results/` page
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
-pages | int | 1 | Number of pages with results to be parsed |
-teamID | int? | - | ID of specific team |
-eventID | int? | - | ID of specific event |
+pages | number | 1 | Number of pages with results to be parsed |
+teamID | number? | - | ID of specific team |
+eventID | number? | - | ID of specific event |
 
 ```javascript
 // Note: if you pass `eventID` to getResults you cannot pass a `pages` parameter
@@ -236,7 +236,7 @@ Parses the info from the `hltv.org/team/` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | The team id
+id | number | - | The team id
 
 ```javascript
 HLTV.getTeam({id: 6137}).then(res => {
@@ -254,7 +254,7 @@ Parses the info from the `hltv.org/stats/teams/` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | The team id
+id | number | - | The team id
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
@@ -272,7 +272,7 @@ Parses the info from the `hltv.org/player/` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | The player id
+id | number | - | The player id
 
 ```javascript
 HLTV.getPlayer({id: 6137}).then(res => {
@@ -291,7 +291,7 @@ Parses the info from `hltv.org/stats/players/*`
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | - |
+id | number | - | - |
 startDate | string | - | - |
 endDate | string | - | - |
 matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? | - | - |
@@ -354,7 +354,7 @@ Parses the info from the `hltv.org/event/` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | int | - | The event id
+id | number | - | The event id
 
 ```javascript
 HLTV.getEvent({id: 3389}).then(res => {
@@ -374,7 +374,7 @@ Presents an interface to receive data when the HLTV scorebot updates
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
-| id | int | - | The match ID |
+| id | number | - | The match ID |
 | onScoreboardUpdate | function? | - | Callback that is called when there is new scoreboard data |
 | onLogUpdate | function? | - | Callback that is called when there is new game log data |
 | onFullLogUpdate | function? | - | It's still unclear when this is called and with what data, if you find out please let me know!
