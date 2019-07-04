@@ -163,6 +163,8 @@ teamID | int? | - | ID of specific team |
 eventID | int? | - | ID of specific event |
 
 ```javascript
+// Note: if you pass `eventID` to getResults you cannot pass a `pages` parameter
+// since HLTV doesn't have pages for the event filter.
 HLTV.getResults({pages: 2}).then((res) => {
   ...
 })
