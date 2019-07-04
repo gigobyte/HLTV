@@ -1,0 +1,546 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMatch 1`] = `
+Array [
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294629,
+    "map": undefined,
+    "result": "2 - 1",
+    "stars": 0,
+    "team1": Object {
+      "id": 4991,
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "id": 4411,
+      "name": "NiP",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294628,
+    "map": undefined,
+    "result": "0 - 2",
+    "stars": 0,
+    "team1": Object {
+      "id": 5991,
+      "name": "Envy",
+    },
+    "team2": Object {
+      "id": 4411,
+      "name": "NiP",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294627,
+    "map": undefined,
+    "result": "2 - 0",
+    "stars": 0,
+    "team1": Object {
+      "id": 4991,
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294626,
+    "map": undefined,
+    "result": "2 - 1",
+    "stars": 0,
+    "team1": Object {
+      "id": 4411,
+      "name": "NiP",
+    },
+    "team2": Object {
+      "id": 5996,
+      "name": "TSM",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294625,
+    "map": undefined,
+    "result": "2 - 1",
+    "stars": 0,
+    "team1": Object {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "id": 6033,
+      "name": "Keyd",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294624,
+    "map": undefined,
+    "result": "2 - 0",
+    "stars": 0,
+    "team1": Object {
+      "id": 4991,
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "id": 5395,
+      "name": "PENTA",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo3",
+    "id": 2294623,
+    "map": undefined,
+    "result": "2 - 1",
+    "stars": 0,
+    "team1": Object {
+      "id": 5991,
+      "name": "Envy",
+    },
+    "team2": Object {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294612,
+    "map": "ovp",
+    "result": "16 - 8",
+    "stars": 0,
+    "team1": Object {
+      "id": 5996,
+      "name": "TSM",
+    },
+    "team2": Object {
+      "id": 5752,
+      "name": "Cloud9",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294610,
+    "map": "inf",
+    "result": "16 - 11",
+    "stars": 0,
+    "team1": Object {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "id": 5752,
+      "name": "Cloud9",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294609,
+    "map": "d2",
+    "result": "16 - 8",
+    "stars": 0,
+    "team1": Object {
+      "id": 6033,
+      "name": "Keyd",
+    },
+    "team2": Object {
+      "id": 5974,
+      "name": "CLG",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294611,
+    "map": "nuke",
+    "result": "10 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 5789,
+      "name": "3DMAX",
+    },
+    "team2": Object {
+      "id": 5996,
+      "name": "TSM",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294607,
+    "map": "mrg",
+    "result": "7 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 5974,
+      "name": "CLG",
+    },
+    "team2": Object {
+      "id": 4411,
+      "name": "NiP",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294608,
+    "map": "inf",
+    "result": "12 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 5310,
+      "name": "HellRaisers",
+    },
+    "team2": Object {
+      "id": 6033,
+      "name": "Keyd",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294581,
+    "map": "nuke",
+    "result": "16 - 14",
+    "stars": 0,
+    "team1": Object {
+      "id": 5752,
+      "name": "Cloud9",
+    },
+    "team2": Object {
+      "id": 5996,
+      "name": "TSM",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294580,
+    "map": "ovp",
+    "result": "16 - 5",
+    "stars": 0,
+    "team1": Object {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "id": 5789,
+      "name": "3DMAX",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294577,
+    "map": "inf",
+    "result": "16 - 9",
+    "stars": 0,
+    "team1": Object {
+      "id": 4411,
+      "name": "NiP",
+    },
+    "team2": Object {
+      "id": 6033,
+      "name": "Keyd",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294578,
+    "map": "nuke",
+    "result": "16 - 14",
+    "stars": 0,
+    "team1": Object {
+      "id": 5974,
+      "name": "CLG",
+    },
+    "team2": Object {
+      "id": 5310,
+      "name": "HellRaisers",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294606,
+    "map": "inf",
+    "result": "3 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 4784,
+      "name": "Vox Eminor",
+    },
+    "team2": Object {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294603,
+    "map": "d2",
+    "result": "12 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 5962,
+      "name": "LGB",
+    },
+    "team2": Object {
+      "id": 5395,
+      "name": "PENTA",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294604,
+    "map": "cbl",
+    "result": "16 - 7",
+    "stars": 0,
+    "team1": Object {
+      "id": 4991,
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294605,
+    "map": "cch",
+    "result": "16 - 2",
+    "stars": 0,
+    "team1": Object {
+      "id": 4784,
+      "name": "Vox Eminor",
+    },
+    "team2": Object {
+      "id": 5988,
+      "name": "FlipSid3",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294602,
+    "map": "cch",
+    "result": "4 - 16",
+    "stars": 0,
+    "team1": Object {
+      "id": 5284,
+      "name": "Titan",
+    },
+    "team2": Object {
+      "id": 5395,
+      "name": "PENTA",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294601,
+    "map": "cch",
+    "result": "16 - 8",
+    "stars": 0,
+    "team1": Object {
+      "id": 5991,
+      "name": "Envy",
+    },
+    "team2": Object {
+      "id": 5962,
+      "name": "LGB",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294575,
+    "map": "mrg",
+    "result": "16 - 2",
+    "stars": 0,
+    "team1": Object {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "id": 5988,
+      "name": "FlipSid3",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294574,
+    "map": "inf",
+    "result": "16 - 3",
+    "stars": 0,
+    "team1": Object {
+      "id": 4991,
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "id": 4784,
+      "name": "Vox Eminor",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294572,
+    "map": "d2",
+    "result": "16 - 3",
+    "stars": 0,
+    "team1": Object {
+      "id": 5962,
+      "name": "LGB",
+    },
+    "team2": Object {
+      "id": 5395,
+      "name": "PENTA",
+    },
+  },
+  Object {
+    "date": 1426158000000,
+    "event": Object {
+      "id": 1611,
+      "name": "ESL One Katowice 2015",
+    },
+    "format": "bo1",
+    "id": 2294571,
+    "map": "cbl",
+    "result": "16 - 14",
+    "stars": 0,
+    "team1": Object {
+      "id": 5991,
+      "name": "Envy",
+    },
+    "team2": Object {
+      "id": 5284,
+      "name": "Titan",
+    },
+  },
+]
+`;
