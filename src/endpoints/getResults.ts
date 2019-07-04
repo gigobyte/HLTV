@@ -8,31 +8,29 @@ import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
-  eventId
+  teamID,
+  eventID
 }: {
-  pages: number
-  eventId?: number
+  pages: Number
+  teamID?: Number
+  eventID?: Number
 }): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
     return []
   }
 
-  // All results for events are always on one page
-  if (eventId) {
-    pages = 1
-  }
-
   let matches = [] as MatchResult[]
 
+  if (eventID) pages = 1
+
   for (let i = 0; i < pages; i++) {
-    let fullUrl = `${config.hltvUrl}/results?offset=${i * 100}`
+    let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
-    if (eventId) {
-      fullUrl += `&event=${eventId}`
-    }
+    if (teamID) url += `&team=${teamID}`
+    if (eventID) url += `&event=${eventID}`
 
-    const $ = await fetchPage(fullUrl, config.loadPage)
+    const $ = await fetchPage(url, config.loadPage)
 
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
@@ -62,22 +60,28 @@ export const getResults = (config: HLTVConfig) => async ({
             format: string
           }
 
+          let idOfEvent =
+            typeof eventID === 'undefined'
+              ? popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]
+              : eventID
+          let nameOfEvent =
+            typeof eventID === 'undefined'
+              ? matchEl.find('.event-logo').attr('alt')
+              : $('.eventname').text()
+
           const event: Event = {
-            name: eventId ? $('.eventname').text() : matchEl.find('.event-logo').attr('alt'),
-            id: eventId
-              ? eventId
-              : Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0])
+            name: nameOfEvent,
+            id: Number(idOfEvent)
           }
 
-          const date = Number(
-            eventId
-              ? matchEl
-                  .find('.date-cell')
-                  .children()
+          let eventDate =
+            typeof eventID === 'undefined'
+              ? matchEl.parent().attr('data-zonedgrouping-entry-unix')
+              : $('.eventdate span')
                   .first()
-                  .attr('data-unix')
-              : matchEl.parent().attr('data-zonedgrouping-entry-unix')
-          )
+                  .data('unix')
+
+          const date = Number(eventDate)
 
           return { id, team1, team2, result, event, map, format, stars, date }
         }

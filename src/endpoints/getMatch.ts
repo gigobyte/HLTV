@@ -10,7 +10,7 @@ import { Highlight } from '../models/Highlight'
 import { Veto } from '../models/Veto'
 import { HeadToHeadResult } from '../models/HeadToHeadResult'
 import { MapSlug } from '../enums/MapSlug'
-import { MatchStatus } from '../enums/MatchStatus';
+import { MatchStatus } from '../enums/MatchStatus'
 import { popSlashSource, hasChild, hasNoChild, percentageToDecimalOdd } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import {
@@ -44,10 +44,9 @@ export const getMatch = (config: HLTVConfig) => async ({
     .trim()
 
   let status = MatchStatus.Scheduled
-  if(!$('.countdown').attr('data-time-countdown')) {
+  if (!$('.countdown').attr('data-time-countdown')) {
     status = $('.countdown').text() as MatchStatus
-  }
-  else if($('.countdown').text() === MatchStatus.Live) {
+  } else if ($('.countdown').text() === MatchStatus.Live) {
     status = MatchStatus.Live
   }
 

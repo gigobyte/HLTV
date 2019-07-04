@@ -27,6 +27,7 @@ Table of contents
   - [getPlayer](#getplayer)
   - [getPlayerStats](#getplayerstats)
   - [getPlayerRanking](#getplayerranking)
+  - [getEvents](#getevents)
   - [getEvent](#getevent)
   - [connectToScorebot](#connecttoscorebot)
 
@@ -158,6 +159,8 @@ Parses all matches from the `hltv.org/results/` page
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
 pages | int | 1 | Number of pages with results to be parsed |
+teamID | int? | - | ID of specific team |
+eventID | int? | - | ID of specific event |
 
 ```javascript
 HLTV.getResults({pages: 2}).then((res) => {
@@ -322,6 +325,24 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/PlayerRanking.ts)**
+
+***
+
+### getEvents
+
+Parses the info from the `hltv.org/events` page
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+size | [EventSize?](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
+
+```javascript
+HLTV.getEvents().then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/EventResult.ts)**
 
 ***
 
