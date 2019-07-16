@@ -262,15 +262,19 @@ Object {
       },
     ],
   },
+  "result": "1 - 2",
+  "statsId": 59400,
   "status": "Match over",
   "streams": Array [],
   "team1": Object {
     "id": 4494,
     "name": "mousesports",
+    "scores": 1,
   },
   "team2": Object {
     "id": 7533,
     "name": "North",
+    "scores": 2,
   },
   "title": undefined,
   "vetoes": Array [
@@ -279,6 +283,7 @@ Object {
       "team": Object {
         "id": 4494,
         "name": "mousesports",
+        "scores": 1,
       },
       "type": "removed",
     },
@@ -287,6 +292,7 @@ Object {
       "team": Object {
         "id": 7533,
         "name": "North",
+        "scores": 2,
       },
       "type": "removed",
     },
@@ -295,6 +301,7 @@ Object {
       "team": Object {
         "id": 4494,
         "name": "mousesports",
+        "scores": 1,
       },
       "type": "picked",
     },
@@ -303,6 +310,7 @@ Object {
       "team": Object {
         "id": 7533,
         "name": "North",
+        "scores": 2,
       },
       "type": "picked",
     },
@@ -311,6 +319,7 @@ Object {
       "team": Object {
         "id": 4494,
         "name": "mousesports",
+        "scores": 1,
       },
       "type": "removed",
     },
@@ -319,6 +328,7 @@ Object {
       "team": Object {
         "id": 7533,
         "name": "North",
+        "scores": 2,
       },
       "type": "removed",
     },
@@ -326,309 +336,7 @@ Object {
   "winnerTeam": Object {
     "id": 7533,
     "name": "North",
-  },
-}
-`;
-
-exports[`getMatch 2`] = `
-Object {
-  "additionalInfo": "* Semi-final",
-  "date": 1461538800000,
-  "demos": Array [
-    Object {
-      "link": "/download/demo/21006",
-      "name": "GOTV Demo",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=3h27m15s&autoplay=true",
-      "name": "E-Frag (Map 1 - Cobblestone)",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=4h59m0s&autoplay=true",
-      "name": "E-Frag (Map 2 - Mirage)",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=5h52m45s&autoplay=true",
-      "name": "E-Frag (Map 3 - Cache)",
-    },
-  ],
-  "event": Object {
-    "id": 2226,
-    "name": "Rising Stars South America Promotional Cup",
-  },
-  "format": "Best of 3",
-  "hasScorebot": false,
-  "headToHead": Array [],
-  "highlightedPlayer": Object {
-    "id": 10499,
-    "name": "JonY%20BoY",
-  },
-  "highlights": Array [],
-  "id": 2302345,
-  "live": false,
-  "maps": Array [
-    Object {
-      "name": "cbl",
-      "result": "16:6 (11:4; 5:2)",
-      "statsId": 30144,
-    },
-    Object {
-      "name": "mrg",
-      "result": "13:16 (7:8; 6:8)",
-      "statsId": 30145,
-    },
-    Object {
-      "name": "cch",
-      "result": "14:16 (6:9; 8:7)",
-      "statsId": 30146,
-    },
-  ],
-  "odds": Array [],
-  "oddsCommunity": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
-        "id": 10559,
-        "name": "knight",
-      },
-      Object {
-        "id": 10819,
-        "name": "tt",
-      },
-      Object {
-        "id": 10818,
-        "name": "iDk",
-      },
-      Object {
-        "id": 10566,
-        "name": "chelo",
-      },
-      Object {
-        "id": 11155,
-        "name": "Fluyr",
-      },
-    ],
-    "team2": Array [
-      Object {
-        "id": 10499,
-        "name": "JonY BoY",
-      },
-      Object {
-        "id": 10508,
-        "name": "nbl",
-      },
-      Object {
-        "id": 11149,
-        "name": "nch",
-      },
-      Object {
-        "id": 10500,
-        "name": "sheep",
-      },
-      Object {
-        "id": 11148,
-        "name": "coMplot",
-      },
-    ],
-  },
-  "status": "Match over",
-  "streams": Array [],
-  "team1": Object {
-    "id": 6785,
-    "name": "Innova",
-  },
-  "team2": Object {
-    "id": 6798,
-    "name": "2KILL",
-  },
-  "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
-    "id": 6798,
-    "name": "2KILL",
-  },
-}
-`;
-
-exports[`getMatch 3`] = `
-Object {
-  "additionalInfo": "",
-  "date": 1392668100000,
-  "demos": Array [],
-  "event": Object {
-    "id": 1315,
-    "name": "ESL Pro Series Germany Spring 2014 Cup #1",
-  },
-  "format": "",
-  "hasScorebot": false,
-  "headToHead": Array [],
-  "highlightedPlayer": undefined,
-  "highlights": Array [],
-  "id": 2290099,
-  "live": false,
-  "maps": Array [
-    Object {
-      "name": "nuke",
-      "result": "",
-      "statsId": undefined,
-    },
-  ],
-  "odds": Array [],
-  "oddsCommunity": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
-        "id": 5794,
-        "name": "tabseN",
-      },
-      Object {
-        "id": 7964,
-        "name": "cadiaN",
-      },
-      Object {
-        "id": 5796,
-        "name": "tiziaN",
-      },
-      Object {
-        "id": 2730,
-        "name": "chrisJ",
-      },
-      Object {
-        "id": 3252,
-        "name": "LEGIJA",
-      },
-    ],
-    "team2": Array [
-      Object {
-        "id": 7499,
-        "name": "Spiidi",
-      },
-      Object {
-        "id": 2326,
-        "name": "xall",
-      },
-      Object {
-        "id": 7246,
-        "name": "stavros",
-      },
-      Object {
-        "id": 7208,
-        "name": "smn",
-      },
-      Object {
-        "id": 7214,
-        "name": "strux1",
-      },
-    ],
-  },
-  "status": "Match over",
-  "streams": Array [],
-  "team1": Object {
-    "id": 4494,
-    "name": "mousesports",
-  },
-  "team2": Object {
-    "id": 4901,
-    "name": "3DMAX",
-  },
-  "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
-    "id": 4494,
-    "name": "mousesports",
-  },
-}
-`;
-
-exports[`getMatch 4`] = `
-Object {
-  "additionalInfo": "",
-  "date": 1352228400000,
-  "demos": Array [],
-  "event": Object {
-    "id": 982,
-    "name": "ESL Pro Series Germany Winter Season 2012",
-  },
-  "format": "",
-  "hasScorebot": false,
-  "headToHead": Array [],
-  "highlightedPlayer": Object {
-    "id": 7226,
-    "name": "fl0w",
-  },
-  "highlights": Array [],
-  "id": 2186795,
-  "live": false,
-  "maps": Array [
-    Object {
-      "name": "nuke",
-      "result": "",
-      "statsId": undefined,
-    },
-  ],
-  "odds": Array [],
-  "oddsCommunity": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
-        "id": 7224,
-        "name": "caLipo",
-      },
-      Object {
-        "id": 7225,
-        "name": "cavy",
-      },
-      Object {
-        "id": 7226,
-        "name": "fl0w",
-      },
-      Object {
-        "id": 7227,
-        "name": "kev1n",
-      },
-      Object {
-        "id": 7321,
-        "name": "TuGuX",
-      },
-    ],
-    "team2": Array [
-      Object {
-        "id": 7209,
-        "name": "H1T",
-      },
-      Object {
-        "id": 7212,
-        "name": "miLo",
-      },
-      Object {
-        "id": 7213,
-        "name": "wNe",
-      },
-      Object {
-        "id": 7258,
-        "name": "tomo",
-      },
-      Object {
-        "id": 7342,
-        "name": "constarr",
-      },
-    ],
-  },
-  "status": "Match over",
-  "streams": Array [],
-  "team1": Object {
-    "id": 4498,
-    "name": "Red Dead",
-  },
-  "team2": Object {
-    "id": 4499,
-    "name": "CPLAY",
-  },
-  "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
-    "id": 4498,
-    "name": "Red Dead",
+    "scores": 2,
   },
 }
 `;

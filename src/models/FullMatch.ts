@@ -12,9 +12,11 @@ import { OddResult, CommunityOddResult } from './OddResult'
 
 export interface FullMatch {
   readonly id: number
+  readonly statsId?: number;
   readonly team1?: Team
   readonly team2?: Team
   readonly winnerTeam?: Team
+  readonly result?: string;
   readonly date: number
   readonly format: string
   readonly additionalInfo: string

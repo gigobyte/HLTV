@@ -88,6 +88,20 @@ export const getMatch = (config: HLTVConfig) => async ({
     winnerTeam = team2
   }
 
+  let result: string | undefined = undefined;
+  if (winnerTeam && team1 && team2) {
+    team1.scores = Number($('.team1-gradient')
+      .children()
+      .last()
+      .text());
+    team2.scores = Number($('.team2-gradient')
+      .children()
+      .last()
+      .text());
+
+    result = `${team1.scores} - ${team2.scores}`;
+  }
+
   let vetoes: Veto[] | undefined
 
   if (team1 && team2) {
@@ -314,11 +328,25 @@ export const getMatch = (config: HLTVConfig) => async ({
     }))
   }
 
+  let statsId: number|undefined = undefined;
+  const detailedStatsEl = $('.stats-detailed-stats');
+  if (detailedStatsEl.length) {
+    statsId = Number(
+      detailedStatsEl
+        .children()
+        .attr('href')
+        .trim()
+        .split('/')[3]
+    );
+  }
+
   return {
     id,
+    statsId,
     team1,
     team2,
     winnerTeam,
+    result,
     date,
     format,
     additionalInfo,
