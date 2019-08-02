@@ -74,17 +74,14 @@ export const getTeam = (config: HLTVConfig) => async ({
     rankingDevelopment = []
   }
 
-  const bigAchievements: Achievement[] = toArray(t$('.achievement')).map(achEl => ({
-    place: t$(achEl.contents().get(1))
-      .text()
-      .split(' at')[0],
+  const bigAchievements: Achievement[] = toArray(t$('.achievement-table .team')).map(achEl => ({
+    place: achEl.find('.achievement').text(),
     event: {
-      name: t$(achEl.contents().get(2)).text(),
-      id: Number(
-        t$(achEl.contents().get(2))
-          .attr('href')
-          .split('/')[2]
-      )
+      name: achEl.find('.tournament-name-cell a[data-link-tracking-page="Teampage"]').text(),
+      id: Number(achEl.find('.tournament-name-cell a[data-link-tracking-page="Teampage"]')
+            .attr('href')
+            .split('/')[2]
+          )
     }
   }))
 
