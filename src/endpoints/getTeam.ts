@@ -1,7 +1,7 @@
 import { FullTeam, Result, Achievement } from '../models/FullTeam'
 import { Player } from '../models/Player'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray, getMapsStatistics } from '../utils/mappers'
+import { fetchPage, toArray } from '../utils/mappers'
 import { popSlashSource, hasChild } from '../utils/parsing'
 
 export const getTeam = (config: HLTVConfig) => async ({
@@ -10,7 +10,7 @@ export const getTeam = (config: HLTVConfig) => async ({
   id: number
 }): Promise<FullTeam> => {
   const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`, config.loadPage)
-  const e$ = await fetchPage(`${config.hltvUrl}/events?team=${id}`, config.loadPage)
+  const e$ = await fetchPage(`${config.hltvUrl}/stats/teams/events/${id}/-`, config.loadPage)
 
   const name = t$('.profile-team-name').text()
   const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`
@@ -74,42 +74,33 @@ export const getTeam = (config: HLTVConfig) => async ({
     rankingDevelopment = []
   }
 
-  const bigAchievements: Achievement[] = toArray(t$('.achievement')).map(achEl => ({
-    place: t$(achEl.contents().get(1))
-      .text()
-      .split(' at')[0],
+  const bigAchievements: Achievement[] = toArray(t$('.achievement-table .team')).map(achEl => ({
+    place: achEl.find('.achievement').text(),
     event: {
-      name: t$(achEl.contents().get(2)).text(),
+      name: achEl.find('.tournament-name-cell a').text(),
       id: Number(
-        t$(achEl.contents().get(2))
+        achEl
+          .find('.tournament-name-cell a')
           .attr('href')
           .split('/')[2]
       )
     }
   }))
 
-  const mapStatisticsGraphElement = t$(t$('.graph').get(1))
-
-  const mapStatistics =
-    mapStatisticsGraphElement.length !== 0
-      ? getMapsStatistics(mapStatisticsGraphElement.attr('data-fusionchart-config'))
-      : undefined
-
-  const events = toArray(e$('a.big-event'))
+  const events = toArray(t$('#ongoingEvents a.ongoing-event'))
     .map(eventEl => ({
-      name: eventEl.find('.big-event-name').text(),
+      name: eventEl.find('.eventbox-eventname').text(),
       id: Number(eventEl.attr('href').split('/')[2])
     }))
     .concat(
-      toArray(e$('a.small-event')).map(eventEl => ({
-        name: eventEl.find('.event-col .text-ellipsis').text(),
-        id: Number(eventEl.attr('href').split('/')[2])
-      }))
-    )
-    .concat(
-      toArray(e$('.tab-content:not(.hidden) a.ongoing-event')).map(eventEl => ({
-        name: eventEl.find('.event-name-small .text-ellipsis').text(),
-        id: Number(eventEl.attr('href').split('/')[2])
+      toArray(e$('.image-and-label[href*="event"]')).map(eventEl => ({
+        name: eventEl.attr('title'),
+        id: Number(
+          eventEl
+            .attr('href')
+            .split('=')
+            .pop()
+        )
       }))
     )
 
@@ -126,7 +117,6 @@ export const getTeam = (config: HLTVConfig) => async ({
     recentResults,
     rankingDevelopment,
     bigAchievements,
-    mapStatistics,
     events
   }
 }

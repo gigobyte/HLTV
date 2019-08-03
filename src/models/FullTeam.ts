@@ -14,13 +14,6 @@ export interface Achievement {
   readonly place: string
 }
 
-export interface MapStatistic {
-  readonly winningPercentage: number
-  readonly ctWinningPercentage: number
-  readonly tWinningPercentage: number
-  readonly timesPlayed: number
-}
-
 export interface FullTeam {
   readonly id: number
   readonly name: string
@@ -34,6 +27,5 @@ export interface FullTeam {
   readonly recentResults: Result[]
   readonly rankingDevelopment: number[]
   readonly bigAchievements: Achievement[]
-  readonly mapStatistics?: { [key: string]: MapStatistic }
   readonly events: Event[]
 }

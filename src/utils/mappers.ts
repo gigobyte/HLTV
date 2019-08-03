@@ -3,7 +3,6 @@ import * as request from 'request'
 import { Team } from '../models/Team'
 import { Veto } from '../models/Veto'
 import { Player } from '../models/Player'
-import { MapStatistic } from '../models/FullTeam'
 import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
@@ -123,34 +122,6 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
     ctTeam: isFirstHalf ? outcomeSideInfo.firstHalfCt : outcomeSideInfo.secondHalfCt,
     tTeam: isFirstHalf ? outcomeSideInfo.firstHalfT : outcomeSideInfo.secondHalfT
   }
-}
-
-export const getMapsStatistics = (source: string): { [key: string]: MapStatistic } | undefined => {
-  const valueRegex = /"value":"(\d|\.)+%?"/g
-  const labelRegex = /label":"\w+/g
-  const splitRegex = /%?"/
-
-  if (!source.match(labelRegex)) {
-    return
-  }
-
-  const maps = source.match(labelRegex)!.map(x => x.split(':"')[1])
-  const values = source.match(valueRegex)!.map(x => Number(x.split(':"')[1].split(splitRegex)[0]))
-
-  const getStats = index => ({
-    winningPercentage: values[index],
-    ctWinningPercentage: values[index + maps.length * 1],
-    tWinningPercentage: values[index + maps.length * 2],
-    timesPlayed: values[index + maps.length * 3]
-  })
-
-  return maps.reduce(
-    (stats, map, i) => ({
-      ...stats,
-      [MapSlug[map]]: getStats(i)
-    }),
-    {}
-  )
 }
 
 export const getTimestamp = (source: string): number => {
