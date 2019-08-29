@@ -34,27 +34,24 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
 
   const image = $('.context-item-image').attr('src')
 
-  const getInfo = i => {
-    return $(
-      $('.divided-row')
-        .find('.large-strong')
-        .get(i)
-    )
-  }
-  const age = Number(getInfo(1).text()) || undefined
+  const age = Number($('.summaryPlayerAge').text()) || undefined
 
+  const flag = $('.summaryRealname .flag');
   const country = {
-    name: getInfo(2).text(),
-    code: popSlashSource($('.image-and-label .flag'))!.split('.')[0]
+    name: flag.attr('title'),
+    code: popSlashSource(flag)!.split('.')[0]
   }
 
   let team: Team | undefined
 
-  if (getInfo(3).text() !== 'No team') {
+  const teamName = $('.SummaryTeamname');
+  if (teamName.text() !== 'No team') {
     team = {
-      name: getInfo(3).text(),
+      name: teamName.text(),
       id: Number(
-        getInfo(3)
+        teamName
+          .find('a')
+          .get(0)
           .attr('href')
           .split('/')[3]
       )
