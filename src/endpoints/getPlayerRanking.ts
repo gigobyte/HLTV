@@ -11,10 +11,10 @@ export const getPlayerRanking = (config: HLTVConfig) => async ({
   matchType,
   rankingFilter
 }: {
-  startDate: string
-  endDate: string
-  matchType: MatchType
-  rankingFilter: RankingFilter
+  startDate?: string
+  endDate?: string
+  matchType?: MatchType
+  rankingFilter?: RankingFilter
 }): Promise<PlayerRanking[]> => {
   const query = stringify({
     startDate,

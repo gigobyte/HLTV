@@ -7,7 +7,7 @@ import { MapSlug } from '../enums/MapSlug'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-export type GetMatchesStatsParams = {
+interface GetMatchesStatsParams {
   startDate?: string
   endDate?: string
   matchType?: MatchType
