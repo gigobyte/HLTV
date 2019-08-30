@@ -212,10 +212,10 @@ Parses the info from the `hltv.org/ranking/teams/` page
 
 Option | Type | Default Value | Description |
 :---:|:---:|:---:|:---:|
-| year | string | - | - |
-| month | string | - | Must be lowercase and in MMMM format |
-| day | string | - | - |
-| country | string | - | Must be capitalized (`'Brazil'`, `'France'` etc)
+| year | string? | - | - |
+| month | string? | - | Must be lowercase and in MMMM format |
+| day | string? | - | - |
+| country | string? | - | Must be capitalized (`'Brazil'`, `'France'` etc)
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
@@ -313,8 +313,8 @@ Parses the info from `hltv.org/stats/players` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-startDate | string | - | - |
-endDate | string | - | - |
+startDate | string? | - | - |
+endDate | string? | - | - |
 matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? | - | - |
 rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? | - | - |
 
@@ -336,7 +336,7 @@ Parses the info from the `hltv.org/events` page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-size | [EventSize?](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
+size | [EventSize](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? | - | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both.
 
 ```javascript
 HLTV.getEvents().then(res => {

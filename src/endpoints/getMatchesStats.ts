@@ -7,19 +7,17 @@ import { MapSlug } from '../enums/MapSlug'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
-interface GetMatchesStatsParams {
-  startDate?: string
-  endDate?: string
-  matchType?: MatchType
-  maps?: Map[]
-}
-
 export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
   endDate,
   matchType,
   maps = []
-}: GetMatchesStatsParams = {}): Promise<MatchStats[]> => {
+}: {
+  startDate?: string
+  endDate?: string
+  matchType?: MatchType
+  maps?: Map[]
+} = {}): Promise<MatchStats[]> => {
   const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${[
     '',
     ...maps
