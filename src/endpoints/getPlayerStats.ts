@@ -15,10 +15,10 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
   rankingFilter
 }: {
   id: number
-  startDate: string
-  endDate: string
-  matchType: MatchType
-  rankingFilter: RankingFilter
+  startDate?: string
+  endDate?: string
+  matchType?: MatchType
+  rankingFilter?: RankingFilter
 }): Promise<FullPlayerStats> => {
   const query = stringify({
     startDate,
@@ -29,42 +29,41 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
 
   const $ = await fetchPage(`${config.hltvUrl}/stats/players/${id}/-?${query}`, config.loadPage)
 
-  const name = $('.statsPlayerName').text() || undefined
+  const name = $('.summaryRealname div').text() || undefined
   const ign = $('.context-item-name').text()
 
-  const image = $('.context-item-image').attr('src')
+  const imageUrl = $('.context-item-image').attr('src')
+  const image = imageUrl.includes('blankplayer') ? undefined : imageUrl
 
-  const age = Number($('.summaryPlayerAge').text()) || undefined
+  const age = parseInt($('.summaryPlayerAge').text(), 10) || undefined
 
-  const flag = $('.summaryRealname .flag');
+  const flagEl = $('.summaryRealname .flag')
   const country = {
-    name: flag.attr('title'),
-    code: popSlashSource(flag)!.split('.')[0]
+    name: flagEl.attr('title'),
+    code: popSlashSource(flagEl)!.split('.')[0]
   }
 
-  let team: Team | undefined
+  const teamNameEl = $('.SummaryTeamname')
+  const team: Team | undefined =
+    teamNameEl.text() !== 'No team'
+      ? {
+          name: teamNameEl.text(),
+          id: Number(
+            teamNameEl
+              .find('a')
+              .attr('href')
+              .split('/')[3]
+          )
+        }
+      : undefined
 
-  const teamName = $('.SummaryTeamname');
-  if (teamName.text() !== 'No team') {
-    team = {
-      name: teamName.text(),
-      id: Number(
-        teamName
-          .find('a')
-          .get(0)
-          .attr('href')
-          .split('/')[3]
-      )
-    }
-  }
-
-  const getStats = i => {
-    return $(
+  const getStats = (i: number) =>
+    $(
       $($('.stats-row').get(i))
         .find('span')
         .get(1)
     ).text()
-  }
+
   const statistics = {
     kills: getStats(0),
     headshots: getStats(1),

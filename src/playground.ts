@@ -29,3 +29,4 @@
 // HLTV.getPlayer({id: 9216}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getEvent({id: 3773}).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getResults({pages: 1, eventId: 3883}).then(res => console.log(res))
+// HLTV.getPlayerStats({ id: 12398 }).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
