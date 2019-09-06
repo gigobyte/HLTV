@@ -69,7 +69,7 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
   allRoundEls: Cheerio[]
 ): WeakRoundOutcome => {
   const getOutcome = (el: Cheerio): Outcome | undefined => {
-    const outcomeString = (popSlashSource(el) as string).split('.')[0]
+    const outcomeString = popSlashSource(el)!.split('.')[0]
     const outcomeTuple = Object.entries(Outcome).find(([_, v]) => v === outcomeString)
 
     return outcomeTuple && outcomeTuple[1]
@@ -103,7 +103,7 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
 
   const outcome = getOutcome(el)
 
-  const ctOutcomes = [Outcome.BombDefused, Outcome.CTWin]
+  const ctOutcomes = [Outcome.BombDefused, Outcome.CTWin, Outcome.TimeRanOut]
   const tOutcomes = [Outcome.BombExploded, Outcome.TWin]
 
   const ctOutcomeMarker = allRoundEls.findIndex(x => ctOutcomes.includes(getOutcome(x)!))
@@ -117,7 +117,7 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
   const isFirstHalf = i < 15 || (i >= 30 && i < 45)
 
   return {
-    outcome: outcome,
+    outcome,
     score: el.attr('title'),
     ctTeam: isFirstHalf ? outcomeSideInfo.firstHalfCt : outcomeSideInfo.secondHalfCt,
     tTeam: isFirstHalf ? outcomeSideInfo.firstHalfT : outcomeSideInfo.secondHalfT
