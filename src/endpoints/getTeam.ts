@@ -52,17 +52,20 @@ export const getTeam = (config: HLTVConfig) => async ({
 
   const players = regularPlayers.concat(officialPicturePlayers)
 
-  const recentResults: Result[] = toArray(t$('.results-holder .a-reset')).map(matchEl => ({
-    matchID: matchEl.attr('href') ? Number(matchEl.attr('href').split('/')[2]) : undefined,
+  const recentResults: Result[] = toArray(t$('.team-row')).map(matchEl => ({
+    matchID: Number(
+      (matchEl.find('.matchpage-button').length
+        ? matchEl.find('.matchpage-button')
+        : matchEl.find('.stats-button')
+      )
+        .attr('href')
+        .split('/')[2]
+    ),
     enemyTeam: {
-      id: Number(popSlashSource(t$(matchEl.find('.team-logo').get(1)))!),
-      name: t$(matchEl.find('.team').get(1)).text()
+      id: Number(popSlashSource(matchEl.find('.team-2 .team-logo-container img'))!),
+      name: matchEl.find('span.team-2').text()
     },
-    result: matchEl.find('.result-score').text(),
-    event: {
-      id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]),
-      name: matchEl.find('.event-name').text()
-    }
+    result: matchEl.find('.score-cell').text()
   }))
 
   let rankingDevelopment

@@ -6,7 +6,6 @@ export interface Result {
   readonly matchID?: number
   readonly enemyTeam: Team
   readonly result: string
-  readonly event: Event
 }
 
 export interface Achievement {
