@@ -1,4 +1,4 @@
-export const enum Map {
+export enum Map {
   Cache = 'de_cache',
   Season = 'de_season',
   Dust2 = 'de_dust2',

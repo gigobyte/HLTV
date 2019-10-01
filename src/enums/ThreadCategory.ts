@@ -1,4 +1,4 @@
-export const enum ThreadCategory {
+export enum ThreadCategory {
   CS = 'cs',
   Match = 'match',
   News = 'news'

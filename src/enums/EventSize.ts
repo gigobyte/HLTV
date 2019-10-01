@@ -1,4 +1,4 @@
-export const enum EventSize {
+export enum EventSize {
   Small = 'small',
   Big = 'big'
 }
