@@ -1,33 +1,18 @@
 import { HLTVConfig } from '../config'
-import axios from 'axios'
-import { ISOCodesToLong } from '../utils/parsing'
-import { SearchPlayer } from 'models/SearchPlayer'
+import { FullPlayer } from '../../lib/models/FullPlayer'
+import HLTV from '../index'
 
 export const getPlayerByName = (config: HLTVConfig) => async ({
   name
 }: {
   name: string
-}): Promise<SearchPlayer> => {
-  return axios.get(`${config.hltvUrl}/search?term=${name}`)
-    .then((response) => {
-      let playerArr = response.data[0].players
+}): Promise<FullPlayer> => {
+  if (config.loadPage === undefined) throw new Error('\'config.loadPage\' function is not Defined')
+  const pageContent = JSON.parse(await config.loadPage(`${config.hltvUrl}/search?term=${name}`))
+  let playerArr = pageContent[0].players[0]
 
-      return playerArr.map(element => {
-        const { flagUrl } = element
-        return {
-          id: element.id,
-          name: `${element.firstName} ${element.lastName}`,
-          ign: element.nickName,
-          image: element.pictureUrl,
-          country: {
-            name: ISOCodesToLong(flagUrl.substring(flagUrl.length - 6, flagUrl.length - 4)),
-            code: flagUrl.substring(flagUrl.length - 6, flagUrl.length - 4)
-          },
-          team: {
-            name: element.team.name,
-            id: element.team.location.split('/')[2]
-          }
-        }
-      })
-    })
+  let retArr = await HLTV.getPlayer({id: playerArr.id})
+
+  console.log(retArr)
+  return retArr
 }
