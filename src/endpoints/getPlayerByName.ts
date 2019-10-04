@@ -13,6 +13,5 @@ export const getPlayerByName = (config: HLTVConfig) => async ({
 
   let retArr = await HLTV.getPlayer({id: playerArr.id})
 
-  console.log(retArr)
   return retArr
 }
