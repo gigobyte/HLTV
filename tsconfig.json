@@ -16,9 +16,11 @@
         "noFallthroughCasesInSwitch": true,
         "baseUrl": "./src/",
         "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "emitDecoratorMetadata": true,
+        "skipLibCheck": true
     },
     "exclude": [
-        "__tests__"
+        "__tests__",
+        "node_modules/**/*"
     ]
 }
