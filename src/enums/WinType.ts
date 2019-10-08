@@ -1,4 +1,4 @@
-export const enum WinType {
+export enum WinType {
   Lost = 'lost',
   TerroristsWin = 'Terrorists_Win',
   CTsWin = 'CTs_Win',

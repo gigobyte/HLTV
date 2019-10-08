@@ -1,4 +1,4 @@
-export const enum StreamCategory {
+export enum StreamCategory {
   TopPlayer = 'Top player',
   Caster = 'Caster',
   FemalePlayer = 'Female Player'

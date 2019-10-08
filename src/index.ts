@@ -12,6 +12,7 @@ import { getTeamRanking } from './endpoints/getTeamRanking'
 import { getTeam } from './endpoints/getTeam'
 import { getTeamStats } from './endpoints/getTeamStats'
 import { getPlayer } from './endpoints/getPlayer'
+import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getEvent } from './endpoints/getEvent'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
@@ -26,7 +27,7 @@ import { WinType } from './enums/WinType'
 import { getEvents } from './endpoints/getEvents'
 
 export class HLTVFactory {
-  constructor(private readonly config: HLTVConfig) {}
+  constructor(private readonly config: HLTVConfig) { }
 
   connectToScorebot = connectToScorebot(this.config)
   getMatch = getMatch(this.config)
@@ -41,6 +42,7 @@ export class HLTVFactory {
   getTeam = getTeam(this.config)
   getTeamStats = getTeamStats(this.config)
   getPlayer = getPlayer(this.config)
+  getPlayerByName = getPlayerByName(this.config)
   getEvent = getEvent(this.config)
   getEvents = getEvents(this.config)
   getPlayerStats = getPlayerStats(this.config)
