@@ -1,4 +1,4 @@
-export const enum MatchType {
+export enum MatchType {
   LAN = 'Lan',
   Online = 'Online',
   BigEvents = 'BigEvents',

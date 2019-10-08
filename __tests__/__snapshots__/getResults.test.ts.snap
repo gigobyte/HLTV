@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getMatch 1`] = `
+exports[`getResults 1`] = `
 Array [
   Object {
     "date": 1426158000000,

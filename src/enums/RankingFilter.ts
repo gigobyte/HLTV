@@ -1,4 +1,4 @@
-export const enum RankingFilter {
+export enum RankingFilter {
   Top5 = 'Top5',
   Top10 = 'Top10',
   Top20 = 'Top20',
