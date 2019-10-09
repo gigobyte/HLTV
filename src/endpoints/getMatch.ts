@@ -314,8 +314,14 @@ export const getMatch = (config: HLTVConfig) => async ({
     }))
   }
 
+  const matchStatsId = parseInt($('.stats-detailed-stats')
+    .children('a')
+    .attr('href')
+    .split('/')[3], 10)
+
   return {
     id,
+    matchStatsId,
     team1,
     team2,
     winnerTeam,
