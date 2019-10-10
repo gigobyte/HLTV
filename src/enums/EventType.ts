@@ -1,4 +1,4 @@
-export const enum EventType {
+export enum EventType {
   Online = 'Online',
   LocalLan = 'Local LAN',
   IntlLan = 'International LAN',
