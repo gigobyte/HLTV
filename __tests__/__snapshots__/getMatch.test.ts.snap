@@ -475,6 +475,7 @@ Object {
       "statsId": undefined,
     },
   ],
+  "matchStatsId": undefined,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
@@ -568,6 +569,7 @@ Object {
       "statsId": undefined,
     },
   ],
+  "matchStatsId": 13368,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
