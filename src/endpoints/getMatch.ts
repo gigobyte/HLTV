@@ -314,10 +314,9 @@ export const getMatch = (config: HLTVConfig) => async ({
     }))
   }
 
-  let matchStatsId: number | undefined
-  if ($('.stats-detailed-stats')['0'] !== undefined) {
-    let matchStatsHref = $('.stats-detailed-stats')
-      .children('a')
+  let matchStatsId: number = 0
+  if ($('.stats-detailed-stats a')['0'] !== undefined) {
+    let matchStatsHref = $('.stats-detailed-stats a')
       .attr('href')
     if (matchStatsHref.split('/')[3] !== 'mapstatsid')
       matchStatsId = parseInt(matchStatsHref.split('/')[3], 10)
