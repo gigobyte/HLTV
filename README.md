@@ -25,6 +25,7 @@ Table of contents
   - [getTeam](#getteam)
   - [getTeamStats](#getteamstats)
   - [getPlayer](#getplayer)
+  - [getPlayerByName](#getplayerbyname)
   - [getPlayerStats](#getplayerstats)
   - [getPlayerRanking](#getplayerranking)
   - [getEvents](#getevents)
@@ -283,6 +284,22 @@ HLTV.getPlayer({id: 6137}).then(res => {
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
 
 ***
+
+#### getPlayerByName
+
+Same as getPlayer but accepts a player name instead of ID.
+
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+name | string | - | The player name
+
+```javascript
+HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
+    ...
+})
+```
+
+**[See getPlayer schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
 
 #### getPlayerStats
 
