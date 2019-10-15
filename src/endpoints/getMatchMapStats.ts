@@ -34,14 +34,17 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
     }
   }
 
-  const getPlayerTopStat = ($: CheerioStatic, index: number): PlayerStat => {
+  const getPlayerTopStat = ($: CheerioStatic, index: number): PlayerStat | undefined => {
+    const playerHref = $($('.most-x-box').get(index))
+      .find('.name > a')
+      .attr('href')
+
+    if (!playerHref) {
+      return undefined
+    }
+
     return {
-      id: Number(
-        $($('.most-x-box').get(index))
-          .find('.name > a')
-          .attr('href')
-          .split('/')[3]
-      ),
+      id: Number(playerHref.split('/')[3]),
       name: $($('.most-x-box').get(index))
         .find('.name > a')
         .text(),
@@ -64,6 +67,7 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
       .split('/')[2]
   )
   const matchScore = [Number(m$('.team-left .bold').text()), Number(m$('.team-right .bold').text())]
+
   const map = getMapSlug(
     m$(
       m$('.match-info-box')
@@ -73,6 +77,7 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
       .text()
       .replace(/\n| /g, '')
   )
+
   const date = Number(
     m$('.match-info-box .small-text span')
       .first()
@@ -193,14 +198,15 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
           .replace(/\(|\)/g, '')
       ),
       deaths: Number(rowEl.find('.st-deaths').text()),
-      KAST: Number(
-        rowEl
-          .find('.st-kdratio')
-          .text()
-          .replace('%', '')
-      ),
+      KAST:
+        Number(
+          rowEl
+            .find('.st-kdratio')
+            .text()
+            .replace('%', '')
+        ) || undefined,
       killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),
-      ADR: Number(rowEl.find('.st-adr').text()),
+      ADR: Number(rowEl.find('.st-adr').text()) || undefined,
       firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),
       rating: Number(rowEl.find('.st-rating').text()),
       ...performanceStats

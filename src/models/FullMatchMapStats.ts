@@ -30,7 +30,7 @@ export interface MatchStatsOverview {
   readonly mostAssists: PlayerStat
   readonly mostAWPKills: PlayerStat
   readonly mostFirstKills: PlayerStat
-  readonly bestRating: PlayerStat
+  readonly bestRating?: PlayerStat
 }
 
 export interface PlayerOverviewStats {
@@ -39,9 +39,9 @@ export interface PlayerOverviewStats {
   assists: number
   flashAssists: number
   deaths: number
-  KAST: number
+  KAST?: number
   killDeathsDifference: number
-  ADR: number
+  ADR?: number
   firstKillsDifference: number
   rating: number
 }
