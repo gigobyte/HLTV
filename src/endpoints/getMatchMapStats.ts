@@ -35,13 +35,17 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
   }
 
   const getPlayerTopStat = ($: CheerioStatic, index: number): PlayerStat => {
+    const playerLink = $($('.most-x-box').get(index))
+      .find('.name > a')
+      .attr('href')
+
     return {
-      id: Number(
+      id: playerLink !== undefined ? Number(
         $($('.most-x-box').get(index))
           .find('.name > a')
           .attr('href')
-          .split('/')[3]
-      ),
+          .split('/')[3])
+          : 0,
       name: $($('.most-x-box').get(index))
         .find('.name > a')
         .text(),
@@ -137,6 +141,13 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
     p$('.highlighted-player')
   ).reduce((map, playerEl) => {
     const graphData = playerEl.find('.graph.small').attr('data-fusionchart-config')
+    console.log('playerPerformanceStats')
+    console.log(Number(
+      playerEl
+        .find('.headline span a')
+        .attr('href')
+        .split('/')[2]
+    ))
     const data = {
       id: Number(
         playerEl
