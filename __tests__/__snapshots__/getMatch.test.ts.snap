@@ -214,7 +214,6 @@ Object {
       "statsId": 73165,
     },
   ],
-  "matchStatsId": 59400,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
@@ -263,6 +262,7 @@ Object {
       },
     ],
   },
+  "statsId": 59400,
   "status": "Match over",
   "streams": Array [],
   "team1": Object {
@@ -384,7 +384,6 @@ Object {
       "statsId": 30146,
     },
   ],
-  "matchStatsId": 35977,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
@@ -433,6 +432,7 @@ Object {
       },
     ],
   },
+  "statsId": 35977,
   "status": "Match over",
   "streams": Array [],
   "team1": Object {
@@ -475,7 +475,6 @@ Object {
       "statsId": undefined,
     },
   ],
-  "matchStatsId": undefined,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
@@ -524,6 +523,7 @@ Object {
       },
     ],
   },
+  "statsId": undefined,
   "status": "Match over",
   "streams": Array [],
   "team1": Object {
@@ -569,7 +569,6 @@ Object {
       "statsId": undefined,
     },
   ],
-  "matchStatsId": 13368,
   "odds": Array [],
   "oddsCommunity": undefined,
   "players": Object {
@@ -618,6 +617,7 @@ Object {
       },
     ],
   },
+  "statsId": 13368,
   "status": "Match over",
   "streams": Array [],
   "team1": Object {
