@@ -56,16 +56,16 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   const team1: Team | undefined = teamEls.first().text()
     ? {
-      name: teamEls.eq(0).text(),
-      id: Number(popSlashSource(teamEls.first().prev()))
-    }
+        name: teamEls.eq(0).text(),
+        id: Number(popSlashSource(teamEls.first().prev()))
+      }
     : undefined
 
   const team2: Team | undefined = teamEls.last().text()
     ? {
-      name: teamEls.eq(1).text(),
-      id: Number(popSlashSource(teamEls.last().prev()))
-    }
+        name: teamEls.eq(1).text(),
+        id: Number(popSlashSource(teamEls.last().prev()))
+      }
     : undefined
 
   let winnerTeam: Team | undefined
@@ -187,11 +187,11 @@ export const getMatch = (config: HLTVConfig) => async ({
     result: mapEl.find('.results span').text(),
     statsId: mapEl.find('.results-stats').length
       ? Number(
-        mapEl
-          .find('.results-stats')
-          .attr('href')
-          .split('/')[4]
-      )
+          mapEl
+            .find('.results-stats')
+            .attr('href')
+            .split('/')[4]
+        )
       : undefined
   }))
 
@@ -258,9 +258,9 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   const highlightedPlayer: Player | undefined = highlightedPlayerLink
     ? {
-      name: highlightedPlayerLink.split('/').pop()!,
-      id: Number(highlightedPlayerLink.split('/')[2])
-    }
+        name: highlightedPlayerLink.split('/').pop()!,
+        id: Number(highlightedPlayerLink.split('/')[2])
+      }
     : undefined
 
   let headToHead: HeadToHeadResult[] | undefined
@@ -314,18 +314,8 @@ export const getMatch = (config: HLTVConfig) => async ({
     }))
   }
 
-  let matchStatsId: number = 0
-  if ($('.stats-detailed-stats a')['0'] !== undefined) {
-    let matchStatsHref = $('.stats-detailed-stats a')
-      .attr('href')
-    if (matchStatsHref.split('/')[3] !== 'mapstatsid')
-      matchStatsId = parseInt(matchStatsHref.split('/')[3], 10)
-    else matchStatsId = parseInt(matchStatsHref.split('/')[4], 10)
-  }
-
   return {
     id,
-    matchStatsId,
     team1,
     team2,
     winnerTeam,

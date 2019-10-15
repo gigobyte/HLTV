@@ -141,13 +141,6 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
     p$('.highlighted-player')
   ).reduce((map, playerEl) => {
     const graphData = playerEl.find('.graph.small').attr('data-fusionchart-config')
-    console.log('playerPerformanceStats')
-    console.log(Number(
-      playerEl
-        .find('.headline span a')
-        .attr('href')
-        .split('/')[2]
-    ))
     const data = {
       id: Number(
         playerEl
