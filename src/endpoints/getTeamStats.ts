@@ -69,6 +69,12 @@ export const getTeamStats = (config: HLTVConfig) => async ({
         .text()
     },
     map: getMapSlug(matchEl.find('.statsMapPlayed span').text()),
+    mapStatsId: Number(
+      matchEl
+        .find('.time a')
+        .attr('href')
+        .split('/')[4]
+    ),
     result: matchEl.find('.statsDetail').text()
   }))
 

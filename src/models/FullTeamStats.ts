@@ -8,6 +8,7 @@ export interface TeamStatsMatch {
   event: Event
   enemyTeam: Team
   map: MapSlug
+  mapStatsId: number
   result: string
 }
 
