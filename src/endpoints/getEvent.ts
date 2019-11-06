@@ -36,7 +36,14 @@ export const getEvent = (config: HLTVConfig) => async ({
       teamEl
         .find('.sub-text')
         .text()
-        .trim() || undefined
+        .trim() || undefined,
+    rankDuringEvent:
+      Number(
+        teamEl
+          .find('.event-world-rank')
+          .text()
+          .replace('#', '')
+      ) || undefined
   }))
 
   const relatedEvents = toArray($('.related-event')).map(eventEl => ({

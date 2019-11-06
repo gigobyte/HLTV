@@ -13,6 +13,7 @@ export interface EventPrizeDistribution {
 
 export interface EventTeam extends Team {
   reasonForParticipation?: string
+  rankDuringEvent?: number
 }
 
 export interface EventFormat {

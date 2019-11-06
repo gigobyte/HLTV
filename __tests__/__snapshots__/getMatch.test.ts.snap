@@ -10,27 +10,27 @@ Object {
       "name": "GOTV Demo",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=3h6m9s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s",
       "name": "DreamHack (Pre-Match Analysis)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=3h28m35s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s",
       "name": "DreamHack (Map 1 - Dust 2)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=4h17m45s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s",
       "name": "DreamHack (Map 2 - Inferno)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=5h34m10s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s",
       "name": "DreamHack (Map 3 - Mirage)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=6h23m45s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s",
       "name": "DreamHack (Winning Moment)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&t=6h26m32s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s",
       "name": "DreamHack (Post-Match Analysis)",
     },
   ],
@@ -339,18 +339,6 @@ Object {
     Object {
       "link": "/download/demo/21006",
       "name": "GOTV Demo",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=3h27m15s&autoplay=true",
-      "name": "E-Frag (Map 1 - Cobblestone)",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=4h59m0s&autoplay=true",
-      "name": "E-Frag (Map 2 - Mirage)",
-    },
-    Object {
-      "link": "https://embed.azubu.tv/video273395SVefragtv?t=5h52m45s&autoplay=true",
-      "name": "E-Frag (Map 3 - Cache)",
     },
   ],
   "event": Object {
