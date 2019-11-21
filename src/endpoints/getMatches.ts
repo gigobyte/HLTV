@@ -39,7 +39,8 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
   })
 
   const upcomingMatches: UpcomingMatch[] = toArray($('.upcoming-match')).map(matchEl => {
-    const id = Number(matchEl.attr('href').split('/')[2])
+    const link = matchEl.find('.a-reset');
+    const id = Number(link.attr('href').split('/')[2])
     const date = Number(matchEl.find('div.time').attr('data-unix')) || undefined
     const title = matchEl.find('.placeholder-text-cell').text() || undefined
     const stars = matchEl.find('.stars i').length
