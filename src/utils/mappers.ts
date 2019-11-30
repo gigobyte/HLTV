@@ -43,11 +43,9 @@ export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Ve
 }
 
 export const getMatchPlayer = (playerEl: Cheerio): Player => {
-  const link = playerEl.parent().attr('href')
-
   return {
     name: playerEl.find('.text-ellipsis').text(),
-    id: link ? Number(link.split('/')[2]) : undefined
+    id: playerEl.data('player-id')
   }
 }
 
