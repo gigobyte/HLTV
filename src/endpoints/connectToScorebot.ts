@@ -6,9 +6,9 @@ import { HLTVConfig } from '../config'
 
 export type ConnectToScorebotParams = {
   id: number
-  onScoreboardUpdate?: (data: ScoreboardUpdate) => any
-  onLogUpdate?: (data: LogUpdate) => any
-  onFullLogUpdate?: (data: unknown) => any
+  onScoreboardUpdate?: (data: ScoreboardUpdate, done: () => void) => any
+  onLogUpdate?: (data: LogUpdate, done: () => void) => any
+  onFullLogUpdate?: (data: unknown, done: () => void) => any
   onConnect?: () => any
   onDisconnect?: () => any
 }
@@ -36,6 +36,8 @@ export const connectToScorebot = (config: HLTVConfig) => ({
     })
 
     socket.on('connect', () => {
+      const done = () => socket.close()
+
       if (onConnect) {
         onConnect()
       }
@@ -44,19 +46,19 @@ export const connectToScorebot = (config: HLTVConfig) => ({
 
       socket.on('scoreboard', data => {
         if (onScoreboardUpdate) {
-          onScoreboardUpdate(data)
+          onScoreboardUpdate(data, done)
         }
       })
 
       socket.on('log', data => {
         if (onLogUpdate) {
-          onLogUpdate(JSON.parse(data))
+          onLogUpdate(JSON.parse(data), done)
         }
       })
 
       socket.on('fullLog', data => {
         if (onFullLogUpdate) {
-          onFullLogUpdate(JSON.parse(data))
+          onFullLogUpdate(JSON.parse(data), done)
         }
       })
     })
