@@ -106,7 +106,7 @@ export const getMatch = (config: HLTVConfig) => async ({
       $('.timeAndEvent .event')
         .children()
         .first()
-        .attr('href')
+        .attr('href')!
         .split('/')[2]
     )
   }
@@ -182,18 +182,33 @@ export const getMatch = (config: HLTVConfig) => async ({
     }
   }
 
-  const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => ({
-    name: getMapSlug(mapEl.find('.mapname').text()),
-    result: mapEl.find('.results span').text(),
-    statsId: mapEl.find('.results-stats').length
-      ? Number(
-          mapEl
-            .find('.results-stats')
-            .attr('href')
-            .split('/')[4]
-        )
-      : undefined
-  }))
+  const maps: MapResult[] = toArray($('.mapholder')).map(mapEl => {
+    const team1Rounds = mapEl
+      .find('.results-left .results-team-score')
+      .text()
+      .trim()
+    const team2Rounds = mapEl
+      .find('.results-right .results-team-score')
+      .text()
+      .trim()
+    const halfs = mapEl
+      .find('.results-center-half-score')
+      .text()
+      .trim()
+
+    return {
+      name: getMapSlug(mapEl.find('.mapname').text()),
+      result: team1Rounds ? `${team1Rounds}:${team2Rounds} ${halfs}` : undefined,
+      statsId: mapEl.find('.results-stats').length
+        ? Number(
+            mapEl
+              .find('.results-stats')
+              .attr('href')!
+              .split('/')[4]
+          )
+        : undefined
+    }
+  })
 
   let players: { team1: Player[]; team2: Player[] } | undefined
 
@@ -220,12 +235,16 @@ export const getMatch = (config: HLTVConfig) => async ({
     .filter(hasChild('.flagAlign'))
     .map(streamEl => ({
       name: streamEl.find('.flagAlign').text(),
-      link: streamEl.attr('data-stream-embed'),
+      link: streamEl.attr('data-stream-embed')!,
       viewers: Number(streamEl.find('.viewers').text())
     }))
 
   if ($('.stream-box.hltv-live').length !== 0) {
-    streams.push({ name: 'HLTV Live', link: $('.stream-box.hltv-live a').attr('href'), viewers: 0 })
+    streams.push({
+      name: 'HLTV Live',
+      link: $('.stream-box.hltv-live a').attr('href')!,
+      viewers: 0
+    })
   }
 
   if ($('.stream-box.gotv').length !== 0) {
@@ -244,10 +263,10 @@ export const getMatch = (config: HLTVConfig) => async ({
       const gotvEl = demoEl.find('.left-right-padding')
 
       if (gotvEl.length !== 0) {
-        return { name: gotvEl.text(), link: gotvEl.attr('href') }
+        return { name: gotvEl.text(), link: gotvEl.attr('href')! }
       }
 
-      return { name: demoEl.find('.spoiler').text(), link: demoEl.attr('data-stream-embed') }
+      return { name: demoEl.find('.spoiler').text(), link: demoEl.attr('data-stream-embed')! }
     }
   )
 
@@ -283,7 +302,7 @@ export const getMatch = (config: HLTVConfig) => async ({
             matchEl
               .find('.winner .flag')
               .next()
-              .attr('href')
+              .attr('href')!
               .split('/')[2]
           )
         }
@@ -294,7 +313,7 @@ export const getMatch = (config: HLTVConfig) => async ({
         id: Number(
           matchEl
             .find('.event a')
-            .attr('href')
+            .attr('href')!
             .split('/')[2]
         )
       }
@@ -309,7 +328,7 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   if (team1 && team2) {
     highlights = toArray($('.highlight')).map(highlightEl => ({
-      link: highlightEl.attr('data-highlight-embed'),
+      link: highlightEl.attr('data-highlight-embed')!,
       title: highlightEl.text()
     }))
   }
@@ -317,7 +336,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   let statsId: number | undefined
 
   if ($('.stats-detailed-stats a').length) {
-    const matchStatsHref = $('.stats-detailed-stats a').attr('href')
+    const matchStatsHref = $('.stats-detailed-stats a').attr('href')!
 
     statsId =
       matchStatsHref.split('/')[3] !== 'mapstatsid'

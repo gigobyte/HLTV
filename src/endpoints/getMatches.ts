@@ -13,17 +13,17 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
   const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
 
   const liveMatches: LiveMatch[] = toArray($('.live-match .a-reset')).map(matchEl => {
-    const id = Number(matchEl.attr('href').split('/')[2])
+    const id = Number(matchEl.attr('href')!.split('/')[2])
     const teamEls = matchEl.find('img.logo')
     const stars = matchEl.find('.stars i').length
 
     const team1: Team = {
-      name: teamEls.first().attr('title'),
+      name: teamEls.first().attr('title')!,
       id: Number(popSlashSource(teamEls.first())) || undefined
     }
 
     const team2: Team = {
-      name: teamEls.last().attr('title'),
+      name: teamEls.last().attr('title')!,
       id: Number(popSlashSource(teamEls.last())) || undefined
     }
 
@@ -31,7 +31,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
     const maps = toArray(matchEl.find('.header .map')).map(text) as MapSlug[]
 
     const event: Event = {
-      name: matchEl.find('.event-logo').attr('title'),
+      name: matchEl.find('.event-logo').attr('title')!,
       id: Number(popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]) || undefined
     }
 
@@ -39,8 +39,8 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
   })
 
   const upcomingMatches: UpcomingMatch[] = toArray($('.upcoming-match')).map(matchEl => {
-    const link = matchEl.find('.a-reset');
-    const id = Number(link.attr('href').split('/')[2])
+    const link = matchEl.find('.a-reset')
+    const id = Number(link.attr('href')!.split('/')[2])
     const date = Number(matchEl.find('div.time').attr('data-unix')) || undefined
     const title = matchEl.find('.placeholder-text-cell').text() || undefined
     const stars = matchEl.find('.stars i').length
@@ -70,7 +70,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
           : undefined
       }
       event = {
-        name: matchEl.find('.event-logo').attr('alt'),
+        name: matchEl.find('.event-logo').attr('alt')!,
         id: Number(popSlashSource(matchEl.find('img.event-logo'))!.split('.')[0]) || undefined
       }
     }

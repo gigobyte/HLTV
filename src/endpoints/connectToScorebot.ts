@@ -23,7 +23,7 @@ export const connectToScorebot = (config: HLTVConfig) => ({
 }: ConnectToScorebotParams) => {
   fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage).then($ => {
     const url = $('#scoreboardElement')
-      .attr('data-scorebot-url')
+      .attr('data-scorebot-url')!
       .split(',')
       .pop()!
     const matchId = $('#scoreboardElement').attr('data-scorebot-id')

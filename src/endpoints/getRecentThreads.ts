@@ -8,7 +8,7 @@ export const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread
 
   const threads = toArray($('.activity')).map(threadEl => {
     const title = threadEl.find('.topic').text()
-    const link = threadEl.attr('href')
+    const link = threadEl.attr('href')!
     const replies = Number(
       threadEl
         .contents()
@@ -16,7 +16,7 @@ export const getRecentThreads = (config: HLTVConfig) => async (): Promise<Thread
         .text()
     )
     const category = threadEl
-      .attr('class')
+      .attr('class')!
       .split(' ')
       .find(c => c.includes('Cat'))!
       .replace('Cat', '') as ThreadCategory

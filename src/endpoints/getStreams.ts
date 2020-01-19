@@ -19,7 +19,7 @@ export const getStreams = (config: HLTVConfig) => async ({
         .attr('title') as StreamCategory
 
       const country: Country = {
-        name: streamEl.find('.flag').attr('title'),
+        name: streamEl.find('.flag').attr('title')!,
         code: (popSlashSource(streamEl.find('.flag')) as string).split('.')[0]
       }
 
@@ -29,13 +29,13 @@ export const getStreams = (config: HLTVConfig) => async ({
           .last()
           .text()
       )
-      const hltvLink = streamEl.attr('href')
+      const hltvLink = streamEl.attr('href')!
 
       const stream = { name, category, country, viewers, hltvLink }
 
       if (loadLinks) {
         const $streamPage = await fetchPage(`${config.hltvUrl}${hltvLink}`, config.loadPage)
-        const realLink = $streamPage('iframe').attr('src')
+        const realLink = $streamPage('iframe').attr('src')!
 
         return { ...stream, realLink }
       }

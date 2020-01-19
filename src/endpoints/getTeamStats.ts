@@ -39,7 +39,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       .next()
   const getPlayersByContainer = container =>
     toArray(container.find('.image-and-label')).map(playerEl => ({
-      id: Number(playerEl.attr('href').split('/')[3]),
+      id: Number(playerEl.attr('href')!.split('/')[3]),
       name: playerEl.find('.text-ellipsis').text()
     }))
 
@@ -51,14 +51,14 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     dateApproximate: getTimestamp(matchEl.find('.time a').text()),
     event: {
       id: Number(popSlashSource(matchEl.find('.image-and-label img'))!.split('.')[0]),
-      name: matchEl.find('.image-and-label img').attr('title')
+      name: matchEl.find('.image-and-label img').attr('title')!
     },
     enemyTeam: {
       id: Number(
         matchEl
           .find('img.flag')
           .parent()
-          .attr('href')
+          .attr('href')!
           .split('/')[3]
       ),
       name: matchEl
@@ -72,7 +72,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     mapStatsId: Number(
       matchEl
         .find('.time a')
-        .attr('href')
+        .attr('href')!
         .split('/')[4]
     ),
     result: matchEl.find('.statsDetail').text()
@@ -85,13 +85,13 @@ export const getTeamStats = (config: HLTVConfig) => async ({
         eventEl
           .find('.image-and-label')
           .first()
-          .attr('href')
+          .attr('href')!
           .split('=')[1]
       ),
       name: eventEl
         .find('.image-and-label')
         .first()
-        .attr('title')
+        .attr('title')!
     }
   }))
 
