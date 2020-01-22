@@ -30,19 +30,19 @@ import { defaultLoadPage } from './utils/mappers'
 export class HLTVFactory {
   constructor(private readonly config: HLTVConfig) {
     if (!config.hltvStaticUrl) {
-      config.hltvStaticUrl = defaultConfig.hltvStaticUrl;
+      config.hltvStaticUrl = defaultConfig.hltvStaticUrl
     }
     if (!config.hltvUrl) {
-      config.hltvUrl = defaultConfig.hltvUrl;
+      config.hltvUrl = defaultConfig.hltvUrl
     }
     if (config.httpAgent && !config.loadPage) {
-      config.loadPage = defaultLoadPage(config.httpAgent);
+      config.loadPage = defaultLoadPage(config.httpAgent)
     }
     if (!config.httpAgent) {
-      config.httpAgent = defaultConfig.httpAgent;
+      config.httpAgent = defaultConfig.httpAgent
     }
     if (!config.loadPage) {
-      config.loadPage = defaultConfig.loadPage;
+      config.loadPage = defaultConfig.loadPage
     }
   }
 
