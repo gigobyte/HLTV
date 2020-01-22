@@ -28,7 +28,9 @@ export const connectToScorebot = (config: HLTVConfig) => ({
       .pop()!
     const matchId = $('#scoreboardElement').attr('data-scorebot-id')
 
-    const socket = io.connect(url)
+    const socket = io.connect(url, {
+      agent: !config.httpAgent
+    })
 
     const initObject = JSON.stringify({
       token: '',
