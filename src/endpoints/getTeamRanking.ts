@@ -18,7 +18,7 @@ export const getTeamRanking = (config: HLTVConfig) => async ({
   if ((!year || !month || !day) && country) {
     const redirectedLink = $('.ranking-country > a')
       .first()
-      .attr('href')
+      .attr('href')!
     const countryRankingLink = redirectedLink
       .split('/')
       .slice(0, -1)

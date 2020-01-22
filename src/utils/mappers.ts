@@ -116,7 +116,7 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
 
   return {
     outcome,
-    score: el.attr('title'),
+    score: el.attr('title')!,
     ctTeam: isFirstHalf ? outcomeSideInfo.firstHalfCt : outcomeSideInfo.secondHalfCt,
     tTeam: isFirstHalf ? outcomeSideInfo.firstHalfT : outcomeSideInfo.secondHalfT
   }

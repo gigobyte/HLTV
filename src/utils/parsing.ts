@@ -6,7 +6,7 @@ export const hasNoChild = (childSelector: string) => (el: Cheerio) =>
   el.find(childSelector).length === 0
 export const popSlashSource = (el: Cheerio) =>
   el
-    .attr('src')
+    .attr('src')!
     .split('/')
     .pop()
 export const percentageToDecimalOdd = (odd: number): number =>

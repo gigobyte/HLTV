@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPlayerStats 1`] = `
+Object {
+  "age": 23,
+  "country": Object {
+    "code": "DE",
+    "name": "Germany",
+  },
+  "ign": "syken",
+  "image": "https://static.hltv.org/images/playerprofile/thumb/8000/400.jpeg?v=5",
+  "name": "Thilo Phan",
+  "statistics": Object {
+    "assistsPerRound": "0.12",
+    "damagePerRound": "74.1",
+    "deaths": "7573",
+    "deathsPerRound": "0.71",
+    "grenadeDamagePerRound": "3.3",
+    "headshots": "57.9%",
+    "kdRatio": "0.97",
+    "kills": "7328",
+    "killsPerRound": "0.69",
+    "mapsPlayed": "406",
+    "rating": "0.98",
+    "roundsPlayed": "10673",
+    "savedByTeammatePerRound": "0.11",
+    "savedTeammatesPerRound": "0.11",
+  },
+  "team": undefined,
+}
+`;
+
+exports[`getPlayerStats 2`] = `
+Object {
+  "age": undefined,
+  "country": Object {
+    "code": "DE",
+    "name": "Germany",
+  },
+  "ign": "Allanon",
+  "image": undefined,
+  "name": "Sebastian Orth",
+  "statistics": Object {
+    "assistsPerRound": "0.00",
+    "damagePerRound": "0",
+    "deaths": "0",
+    "deathsPerRound": "",
+    "grenadeDamagePerRound": "0",
+    "headshots": "0.0%",
+    "kdRatio": "0.00",
+    "kills": "0",
+    "killsPerRound": "0.00",
+    "mapsPlayed": "0.00",
+    "rating": "",
+    "roundsPlayed": "0.00",
+    "savedByTeammatePerRound": "",
+    "savedTeammatesPerRound": "",
+  },
+  "team": undefined,
+}
+`;
+
+exports[`getPlayerStats 3`] = `
+Object {
+  "age": 22,
+  "country": Object {
+    "code": "GE",
+    "name": "Georgia",
+  },
+  "ign": "d10",
+  "image": undefined,
+  "name": "Dati Onezashvili",
+  "statistics": Object {
+    "assistsPerRound": "0.10",
+    "damagePerRound": "92.7",
+    "deaths": "87",
+    "deathsPerRound": "0.69",
+    "grenadeDamagePerRound": "2.5",
+    "headshots": "55.2%",
+    "kdRatio": "1.21",
+    "kills": "105",
+    "killsPerRound": "0.83",
+    "mapsPlayed": "4",
+    "rating": "1.24",
+    "roundsPlayed": "126",
+    "savedByTeammatePerRound": "0.05",
+    "savedTeammatesPerRound": "0.08",
+  },
+  "team": undefined,
+}
+`;
+
+exports[`getPlayerStats 4`] = `
+Object {
+  "age": 27,
+  "country": Object {
+    "code": "US",
+    "name": "United States",
+  },
+  "ign": "MAKKA",
+  "image": "https://static.hltv.org/images/playerprofile/thumb/9123/400.jpeg?v=2",
+  "name": "Bryan Drouillard",
+  "statistics": Object {
+    "assistsPerRound": "0.14",
+    "damagePerRound": "77.4",
+    "deaths": "4296",
+    "deathsPerRound": "0.67",
+    "grenadeDamagePerRound": "3.2",
+    "headshots": "50.5%",
+    "kdRatio": "1.03",
+    "kills": "4432",
+    "killsPerRound": "0.70",
+    "mapsPlayed": "240",
+    "rating": "1.01",
+    "roundsPlayed": "6369",
+    "savedByTeammatePerRound": "0.10",
+    "savedTeammatesPerRound": "0.10",
+  },
+  "team": undefined,
+}
+`;

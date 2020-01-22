@@ -30,7 +30,7 @@ export const getPlayerRanking = (config: HLTVConfig) => async ({
       matchEl
         .find('.playerCol a')
         .first()
-        .attr('href')
+        .attr('href')!
         .split('/')[3]
     )
     var name = matchEl.find('.playerCol').text()

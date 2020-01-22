@@ -34,7 +34,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
       id: Number(
         $($('.most-x-box').get(index))
           .find('.name > a')
-          .attr('href')
+          .attr('href')!
           .split('/')[3]
       ),
       name: $($('.most-x-box').get(index))
@@ -52,7 +52,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
 
   const matchPageID = Number(
     m$('.match-page-link')
-      .attr('href')
+      .attr('href')!
       .split('/')[2]
   )
   const matchScore = [Number(m$('.team-left .bold').text()), Number(m$('.team-right .bold').text())]
@@ -64,13 +64,13 @@ export const getMatchStats = (config: HLTVConfig) => async ({
 
   const team1: TeamStat = {
     id: Number(popSlashSource(m$('.team-left .team-logo'))),
-    name: m$('.team-left .team-logo').attr('title'),
+    name: m$('.team-left .team-logo').attr('title')!,
     score: matchScore[0]
   }
 
   const team2: TeamStat = {
     id: Number(popSlashSource(m$('.team-right .team-logo'))),
-    name: m$('.team-right .team-logo').attr('title'),
+    name: m$('.team-right .team-logo').attr('title')!,
     score: matchScore[1]
   }
 
@@ -78,7 +78,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
     id: Number(
       m$('.match-info-box .text-ellipsis')
         .first()
-        .attr('href')
+        .attr('href')!
         .split('event=')[1]
     ),
     name: m$('.match-info-box .text-ellipsis')
@@ -110,7 +110,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
     const id = Number(
       rowEl
         .find('.st-player a')
-        .attr('href')
+        .attr('href')!
         .split('/')[3]
     )
 

@@ -33,7 +33,7 @@ export const getResults = (config: HLTVConfig) => async ({
     matches = matches.concat(
       toArray($('.results-holder > .results-all > .results-sublist .result-con .a-reset')).map(
         matchEl => {
-          const id = Number(matchEl.attr('href').split('/')[2])
+          const id = Number(matchEl.attr('href')!.split('/')[2])
           const stars = matchEl.find('.stars i').length
 
           const team1: Team = {
@@ -64,7 +64,7 @@ export const getResults = (config: HLTVConfig) => async ({
               : eventID
           let nameOfEvent =
             typeof eventID === 'undefined'
-              ? matchEl.find('.event-logo').attr('alt')
+              ? matchEl.find('.event-logo').attr('alt')!
               : $('.eventname').text()
 
           const event: Event = {

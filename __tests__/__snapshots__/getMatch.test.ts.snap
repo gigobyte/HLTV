@@ -459,7 +459,7 @@ Object {
   "maps": Array [
     Object {
       "name": "nuke",
-      "result": "",
+      "result": undefined,
       "statsId": undefined,
     },
   ],
@@ -553,7 +553,7 @@ Object {
   "maps": Array [
     Object {
       "name": "nuke",
-      "result": "",
+      "result": undefined,
       "statsId": undefined,
     },
   ],
