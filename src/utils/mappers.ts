@@ -6,10 +6,10 @@ import { Player } from '../models/Player'
 import { Outcome, WeakRoundOutcome } from '../models/RoundOutcome'
 import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
-import { Agent as httpsAgent } from 'https'
-import { Agent as httpAgent } from 'http'
+import { Agent as HttpsAgent } from 'https'
+import { Agent as HttpAgent } from 'http'
 
-export const defaultLoadPage = (httpAgent: httpsAgent | httpAgent | undefined) => (url: string) =>
+export const defaultLoadPage = (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
   new Promise<string>(resolve => {
     request.get(url, { gzip: true, agent: httpAgent }, (_, __, body) => resolve(body))
   })

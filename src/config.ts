@@ -1,15 +1,15 @@
 import { defaultLoadPage } from './utils/mappers'
-import { Agent as httpsAgent } from 'https'
-import { Agent as httpAgent } from 'http'
+import { Agent as HttpsAgent } from 'https'
+import { Agent as HttpAgent } from 'http'
 
 export interface HLTVConfig {
   hltvUrl?: string
   hltvStaticUrl?: string
   loadPage?: (url: string) => Promise<string>
-  httpAgent?: httpsAgent | httpAgent
+  httpAgent?: HttpsAgent | HttpAgent
 }
 
-const defaultAgent = new httpsAgent();
+const defaultAgent = new HttpsAgent();
 
 export const defaultConfig: HLTVConfig = {
   hltvUrl: 'https://www.hltv.org',
