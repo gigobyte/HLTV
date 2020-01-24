@@ -52,8 +52,17 @@ const { HLTV } = require('hltv')
 
 You can create an instance of HLTV with a custom config if you want to.
 
+Option | Type | Default value | Description |
+:---:|:---:|:---:|:---:|
+hltvUrl | string | https://www.hltv.org | Url that will be used to construct requests to HLTV
+hltvStaticUrl | string | https://static.hltv.org | Url that will be used to construct links to images
+loadPage | function | based on the 'request' library | Function that will be called when the library makes a request to HLTV
+httpAgent | HttpAgent | HttpsAgent | Http agent used when sending a request and connecting to the scoreboard websocket
+
 ```javascript
-const myHLTV = HLTV.createInstance({hltvUrl: /* my-proxy-server */, loadPage: /* my custom request library */})
+const myHLTV = HLTV.createInstance({loadPage: (url) => axios.get(url)})
+//or
+const myHLTV = HLTV.createInstance({loadPage: (url) => fetch(url)})
 ```
 
 **[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/config.ts)**
@@ -66,7 +75,7 @@ Parses most information from a match page
 
 Option | Type | Default value | Description |
 :---:|:---:|:---:|:---:|
-id | number | - | The match id
+id | number | - | The match id 
 
 ```javascript
 HLTV.getMatch({id: 2306295}).then(res => {
@@ -397,9 +406,9 @@ Option | Type | Default Value | Description |
 | onDisconnect | function? | - | Callback that is called when the scorebot disconnects |
 
 ```javascript
-HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data) => {
-    ...
-}, onLogUpdate: (data) => {
+HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data, done) => {
+    // if you call done() the socket connection will close.
+}, onLogUpdate: (data, done) => {
     ...
 }})
 
