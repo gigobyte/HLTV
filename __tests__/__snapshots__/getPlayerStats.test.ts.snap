@@ -26,7 +26,10 @@ Object {
     "savedByTeammatePerRound": "0.11",
     "savedTeammatesPerRound": "0.11",
   },
-  "team": undefined,
+  "team": Object {
+    "id": 5540,
+    "name": "ttc",
+  },
 }
 `;
 

@@ -21,7 +21,10 @@ Object {
     "rating": 0.9,
     "roundsContributed": 62.9,
   },
-  "team": undefined,
+  "team": Object {
+    "id": 5540,
+    "name": "ttc",
+  },
   "twitch": undefined,
   "twitter": undefined,
 }
