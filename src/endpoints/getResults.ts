@@ -14,7 +14,7 @@ export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
   teamID,
   eventID,
-  contentFilter
+  contentFilter = []
 }: GetResultsArguments): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')

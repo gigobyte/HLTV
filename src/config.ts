@@ -5,7 +5,6 @@ import { Agent as HttpAgent } from 'http'
 export interface HLTVConfig {
   hltvUrl?: string
   hltvStaticUrl?: string
-  contentFilters?: string[]
   loadPage?: (url: string) => Promise<string>
   httpAgent?: HttpsAgent | HttpAgent
 }
