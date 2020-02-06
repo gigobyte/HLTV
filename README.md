@@ -171,6 +171,7 @@ Option | Type | Default Value | Description |
 pages | number | 1 | Number of pages with results to be parsed |
 teamID | number? | - | ID of specific team |
 eventID | number? | - | ID of specific event |
+contentFilter | string[] | [] | Add filter of the content, available values is `['highlights', 'demo', 'vod', 'stats']` can be combined |
 
 ```javascript
 // Note: if you pass `eventID` to getResults you cannot pass a `pages` parameter
