@@ -5,16 +5,17 @@ import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
+import { ContentFilter } from '../enums/ContentFilter'
 
 type GetResultsArguments =
-  | { pages?: number; teamID?: number; eventID?: never; contentFilter?: string[] }
-  | { pages?: never; teamID?: number; eventID?: number; contentFilter?: string[] }
+  | { pages?: number; teamID?: number; eventID?: never; contentFilter?: ContentFilter }
+  | { pages?: never; teamID?: number; eventID?: number; contentFilter?: ContentFilter }
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
   teamID,
   eventID,
-  contentFilter = []
+  contentFilter
 }: GetResultsArguments): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
