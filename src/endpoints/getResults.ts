@@ -8,8 +8,8 @@ import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 import { ContentFilter } from '../enums/ContentFilter'
 
 type GetResultsArguments =
-  | { pages?: number; teamID?: number; eventID?: never; contentFilter?: ContentFilter }
-  | { pages?: never; teamID?: number; eventID?: number; contentFilter?: ContentFilter }
+  | { pages?: number; teamID?: number; eventID?: never; contentFilter?: ContentFilter[] }
+  | { pages?: never; teamID?: number; eventID?: number; contentFilter?: ContentFilter[] }
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
