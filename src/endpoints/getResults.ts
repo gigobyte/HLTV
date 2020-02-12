@@ -8,32 +8,30 @@ import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 import { ContentFilter } from '../enums/ContentFilter'
 
 type GetResultsArguments =
-  | { pages?: number; teamID?: number; eventID?: never; contentFilter?: ContentFilter[] }
-  | { pages?: never; teamID?: number; eventID?: number; contentFilter?: ContentFilter[] }
+  | { pages?: number; teamID?: number; eventID?: never; contentFilters?: ContentFilter[] }
+  | { pages?: never; teamID?: number; eventID?: number; contentFilters?: ContentFilter[] }
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
   teamID,
   eventID,
-  contentFilter
+  contentFilters = []
 }: GetResultsArguments): Promise<MatchResult[]> => {
   if (pages < 1) {
     console.error('getLatestResults: pages cannot be less than 1')
     return []
   }
 
-  let matches = [] as MatchResult[]
+  let matches: MatchResult[] = []
 
   for (let i = 0; i < pages; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
     if (teamID) url += `&team=${teamID}`
-	if (eventID) url += `&event=${eventID}`
-	if (contentFilter?.length) {
-		for (let filter of contentFilter) {
-			url += `&content=${filter}`
-		}
-	}
+    if (eventID) url += `&event=${eventID}`
+    for (const filter of contentFilters) {
+      url += `&content=${filter}`
+    }
 
     const $ = await fetchPage(url, config.loadPage)
 
