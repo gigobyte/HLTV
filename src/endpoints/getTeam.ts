@@ -31,7 +31,7 @@ export const getTeam = (config: HLTVConfig) => async ({
 
   const players = toArray(t$('.bodyshot-team .col-custom')).map(playerEl => ({
     name: playerEl.attr('title')!,
-    id: Number(playerEl.attr('href')!.split('/')[2])
+    id: playerEl.attr('href') ? Number(playerEl.attr('href')!.split('/')[2]) : undefined
   }))
 
   const recentResults: Result[] = toArray(t$('.team-row')).map(matchEl => ({
