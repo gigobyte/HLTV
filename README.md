@@ -171,7 +171,7 @@ Option | Type | Default Value | Description |
 pages | number | 1 | Number of pages with results to be parsed |
 teamID | number? | - | ID of specific team |
 eventID | number? | - | ID of specific event |
-contentFilter | string[] | [] | Add filter of the content, available values is `['highlights', 'demo', 'vod', 'stats']` can be combined |
+contentFilter | [ContentFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? | - | Add filter of the content |
 
 ```javascript
 // Note: if you pass `eventID` to getResults you cannot pass a `pages` parameter
