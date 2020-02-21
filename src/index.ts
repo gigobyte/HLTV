@@ -22,6 +22,7 @@ import { MatchType } from './enums/MatchType'
 import { RankingFilter } from './enums/RankingFilter'
 import { StreamCategory } from './enums/StreamCategory'
 import { ThreadCategory } from './enums/ThreadCategory'
+import { ContentFilter } from './enums/ContentFilter'
 import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
 import { getEvents } from './endpoints/getEvents'
@@ -82,5 +83,6 @@ export {
   StreamCategory,
   ThreadCategory,
   WinType,
-  EventSize
+  EventSize,
+  ContentFilter
 }
