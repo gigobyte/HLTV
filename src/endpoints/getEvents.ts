@@ -36,7 +36,7 @@ export const getEvents = (config: HLTVConfig) => async ({
             return {
               month: checkMonth,
               events: parseEvents(toArray(eventEl.find('a.big-event'))).concat(
-                parseEvents(toArray(eventEl.find('a.small-event')))
+                parseEvents(toArray(eventEl.find('a.small-event')), EventSize.Small)
               )
             }
         }
