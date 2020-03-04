@@ -4,13 +4,14 @@ import { EventResult } from '../models/EventResult'
 import { EventSize } from '../enums/EventSize'
 import { EventType } from '../enums/EventType'
 import { SimpleEvent } from '../models/SimpleEvent'
+import { popSlashSource } from '../utils/parsing'
 
 export const getEvents = (config: HLTVConfig) => async ({
   size,
   month
 }: {
   size?: EventSize
-  month?: Number
+  month?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
 } = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
 
@@ -35,8 +36,8 @@ export const getEvents = (config: HLTVConfig) => async ({
           default:
             return {
               month: checkMonth,
-              events: parseEvents(toArray(eventEl.find('a.big-event'))).concat(
-                parseEvents(toArray(eventEl.find('a.small-event')))
+              events: parseEvents(toArray(eventEl.find('a.big-event')), EventSize.Big).concat(
+                parseEvents(toArray(eventEl.find('a.small-event')), EventSize.Small)
               )
             }
         }
@@ -50,9 +51,7 @@ export const getEvents = (config: HLTVConfig) => async ({
 }
 
 const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] => {
-  let dateSelector,
-    nameSelector,
-    locationSelector = ''
+  let dateSelector, nameSelector, locationSelector
 
   if (size == EventSize.Small) {
     dateSelector = '.eventDetails .col-desc span[data-unix]'
@@ -65,16 +64,18 @@ const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] 
   }
 
   const events = eventsToParse.map(eventEl => {
-    let dateStart = eventEl
+    const dateStart = eventEl
       .find(dateSelector)
       .eq(0)
       .data('unix')
-    let dateEnd = eventEl
+
+    const dateEnd = eventEl
       .find(dateSelector)
       .eq(1)
       .data('unix')
-    let teams = '0'
-    let prizePool = ''
+
+    let teams
+    let prizePool
 
     if (size == EventSize.Small) {
       teams = eventEl
@@ -97,27 +98,36 @@ const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] 
         .text()
     }
 
-    let eventName = eventEl.find(nameSelector).text()
+    const eventName = eventEl.find(nameSelector).text()
 
-    let typeName = eventEl
-      .find('table tr')
-      .eq(0)
-      .find('td')
-      .eq(3)
-      .text() as EventType | undefined
+    const rawType =
+      eventEl
+        .find('table tr')
+        .eq(0)
+        .find('td')
+        .eq(3)
+        .text() || undefined
 
-    if (!typeName)
-      typeName = eventName.toLowerCase().includes('major') ? EventType.Major : undefined
+    const eventType = Object.entries({
+      major: EventType.Major,
+      online: EventType.Online,
+      intl: EventType.InternationalLan,
+      local: EventType.LocalLan,
+      reg: EventType.RegionalLan
+    }).find(([needle]) => (rawType ? rawType.toLowerCase().includes(needle) : false))?.[1]
 
     return {
       id: Number(eventEl.attr('href')!.split('/')[2]),
       name: eventName,
       dateStart: dateStart ? Number(dateStart) : undefined,
       dateEnd: dateEnd ? Number(dateEnd) : undefined,
-      prizePool: prizePool,
+      prizePool,
       teams: teams.length ? Number(teams) : undefined,
-      location: eventEl.find(locationSelector).prop('title'),
-      type: typeName ? typeName : undefined
+      location: {
+        name: eventEl.find(locationSelector).prop('title'),
+        code: popSlashSource(eventEl.find(locationSelector))!.split('.')[0]
+      },
+      type: eventType || EventType.Other
     }
   })
 

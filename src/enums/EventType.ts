@@ -1,8 +1,8 @@
 export enum EventType {
-  Online = 'Online',
-  LocalLan = 'Local LAN',
-  IntlLan = 'International LAN',
-  RegLan = 'Regional LAN',
-  Major = 'Major',
-  Other = 'Other'
+  Online = 'ONLINE',
+  LocalLan = 'LOCALLAN',
+  InternationalLan = 'INTLLAN',
+  RegionalLan = 'REGIONALLAN',
+  Major = 'MAJOR',
+  Other = 'OTHER'
 }
