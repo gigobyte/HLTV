@@ -5,7 +5,7 @@ export interface ScoreboardPlayer {
   dbId: number
   name: string
   score: number
-  death: number
+  deaths: number
   assists: number
   alive: boolean
   money: number
