@@ -9,5 +9,5 @@ export interface SimpleEvent {
   prizePool: string
   teams?: number
   location: Country
-  type?: EventType
+  type: EventType
 }

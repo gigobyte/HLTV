@@ -22,12 +22,30 @@ import { MatchType } from './enums/MatchType'
 import { RankingFilter } from './enums/RankingFilter'
 import { StreamCategory } from './enums/StreamCategory'
 import { ThreadCategory } from './enums/ThreadCategory'
+import { ContentFilter } from './enums/ContentFilter'
 import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
 import { getEvents } from './endpoints/getEvents'
+import { defaultLoadPage } from './utils/mappers'
 
 export class HLTVFactory {
-  constructor(private readonly config: HLTVConfig) { }
+  constructor(private readonly config: HLTVConfig) {
+    if (!config.hltvStaticUrl) {
+      config.hltvStaticUrl = defaultConfig.hltvStaticUrl
+    }
+    if (!config.hltvUrl) {
+      config.hltvUrl = defaultConfig.hltvUrl
+    }
+    if (config.httpAgent && !config.loadPage) {
+      config.loadPage = defaultLoadPage(config.httpAgent)
+    }
+    if (!config.httpAgent) {
+      config.httpAgent = defaultConfig.httpAgent
+    }
+    if (!config.loadPage) {
+      config.loadPage = defaultConfig.loadPage
+    }
+  }
 
   connectToScorebot = connectToScorebot(this.config)
   getMatch = getMatch(this.config)
@@ -65,5 +83,6 @@ export {
   StreamCategory,
   ThreadCategory,
   WinType,
-  EventSize
+  EventSize,
+  ContentFilter
 }

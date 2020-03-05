@@ -37,6 +37,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       .filter((_, el) => $(el).text() === text)
       .parent()
       .next()
+
   const getPlayersByContainer = container =>
     toArray(container.find('.image-and-label')).map(playerEl => ({
       id: Number(playerEl.attr('href')!.split('/')[3]),

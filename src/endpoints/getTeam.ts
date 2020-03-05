@@ -1,8 +1,7 @@
 import { FullTeam, Result, Achievement } from '../models/FullTeam'
-import { Player } from '../models/Player'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import { popSlashSource, hasChild } from '../utils/parsing'
+import { popSlashSource } from '../utils/parsing'
 
 export const getTeam = (config: HLTVConfig) => async ({
   id
@@ -30,27 +29,12 @@ export const getTeam = (config: HLTVConfig) => async ({
         .replace('#', '')
     ) || undefined
 
-  const regularPlayers: Player[] = toArray(t$('.overlayImageFrame-square'))
-    .filter(hasChild('.playerFlagName .text-ellipsis'))
+  const players = toArray(t$('.bodyshot-team .col-custom'))
     .map(playerEl => ({
-      name: playerEl.find('.playerFlagName .text-ellipsis').text(),
-      id: Number(
-        playerEl
-          .find('.profileImage')
-          .attr('src')!
-          .split('/')
-          .slice(-2, -1)
-      )
+      name: playerEl.attr('title')!,
+      id: Number(playerEl.attr('href')?.split('/')[2])
     }))
-
-  const officialPicturePlayers: Player[] = toArray(t$('.overlayImageFrame'))
-    .filter(hasChild('.playerFlagName .text-ellipsis'))
-    .map(playerEl => ({
-      name: playerEl.find('.playerFlagName .text-ellipsis').text(),
-      id: Number(popSlashSource(playerEl.find('.bodyshot-team-img'))!.split('.')[0])
-    }))
-
-  const players = regularPlayers.concat(officialPicturePlayers)
+    .filter(player => player.name)
 
   const recentResults: Result[] = toArray(t$('.team-row')).map(matchEl => ({
     matchID: Number(
