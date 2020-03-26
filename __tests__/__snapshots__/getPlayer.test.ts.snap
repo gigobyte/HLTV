@@ -14,12 +14,12 @@ Object {
   "image": "https://static.hltv.org/images/playerprofile/thumb/8000/400.jpeg?v=5",
   "name": "Thilo Phan",
   "statistics": Object {
-    "deathsPerRound": 0.72,
-    "headshots": 58.8,
-    "killsPerRound": 0.65,
-    "mapsPlayed": 4,
-    "rating": 0.9,
-    "roundsContributed": 62.9,
+    "deathsPerRound": 0,
+    "headshots": 0,
+    "killsPerRound": 0,
+    "mapsPlayed": 0,
+    "rating": 0,
+    "roundsContributed": 0,
   },
   "team": Object {
     "id": 5540,

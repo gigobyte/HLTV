@@ -11,7 +11,7 @@ export interface ScoreboardPlayer {
   money: number
   damagePrRound: number
   hp: number
-  primaryWeapon: string
+  primaryWeapon?: string
   kevlar: boolean
   helmet: boolean
   nick: string

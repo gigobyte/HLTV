@@ -63,6 +63,8 @@ export interface Kill {
     weapon: string
     headShot: boolean
     eventId: number
+    flasherNick?: string
+    flasherSide?: Side
   }
 }
 
