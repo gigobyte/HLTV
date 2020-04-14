@@ -149,7 +149,7 @@ export const getMatch = (config: HLTVConfig) => async ({
       return {
         provider: oddElement
           .prop('class')
-          .split('geoprovider_')[1]
+          .split('gprov_')[1]
           .split(' ')[0]
           .trim(),
         team1: oddTeam1,
