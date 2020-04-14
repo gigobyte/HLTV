@@ -95,7 +95,7 @@ Object {
 
 exports[`getPlayerStats 4`] = `
 Object {
-  "age": 27,
+  "age": 28,
   "country": Object {
     "code": "US",
     "name": "United States",

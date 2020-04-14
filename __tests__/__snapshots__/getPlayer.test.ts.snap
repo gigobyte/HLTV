@@ -87,7 +87,7 @@ Object {
 exports[`getPlayer 4`] = `
 Object {
   "achievements": Array [],
-  "age": 27,
+  "age": 28,
   "country": Object {
     "code": "US",
     "name": "United States",
