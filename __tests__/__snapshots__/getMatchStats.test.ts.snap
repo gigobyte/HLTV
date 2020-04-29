@@ -2,7 +2,7 @@
 
 exports[`getMatchStats 1`] = `
 Object {
-  "date": 1544898000000,
+  "date": 1544901600000,
   "event": Object {
     "id": 4205,
     "name": "BLAST Pro Series Lisbon 2018",
@@ -213,7 +213,7 @@ Object {
 
 exports[`getMatchStats 2`] = `
 Object {
-  "date": 1545649200000,
+  "date": 1545652800000,
   "event": Object {
     "id": 4339,
     "name": "LOOT.BET Bullet Blizzard",
@@ -424,7 +424,7 @@ Object {
 
 exports[`getMatchStats 3`] = `
 Object {
-  "date": 1545459300000,
+  "date": 1545462900000,
   "event": Object {
     "id": 4283,
     "name": "StarSeries i-League Season 7 Asia Qualifier",
