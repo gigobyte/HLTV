@@ -17,7 +17,8 @@
         "baseUrl": "./src/",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "isolatedModules": true
     },
     "exclude": [
         "__tests__",
