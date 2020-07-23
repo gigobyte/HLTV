@@ -1,6 +1,5 @@
 import { Team } from './Team'
 import { Event } from './Event'
-import { MapSlug } from '../enums/MapSlug'
 
 export interface LiveMatch {
   readonly id: number
@@ -8,7 +7,6 @@ export interface LiveMatch {
   readonly team2: Team
   readonly format: string
   readonly event: Event
-  readonly maps: MapSlug[]
   readonly live: true
   readonly stars: number
 }

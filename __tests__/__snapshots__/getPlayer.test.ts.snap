@@ -11,7 +11,7 @@ Object {
   "facebook": undefined,
   "id": 8000,
   "ign": "syken",
-  "image": "https://static.hltv.org/images/playerprofile/thumb/8000/400.jpeg?v=5",
+  "image": "https://img-cdn.hltv.org/playerbodyshot/1Qa20w2Am4nkS6LOsCOaFF.png?ixlib=java-2.1.0&w=400&s=ae58a0c87c736b9ea2ff2750fd833d36",
   "name": "Thilo Phan",
   "statistics": Object {
     "deathsPerRound": 0,
@@ -22,11 +22,11 @@ Object {
     "roundsContributed": 0,
   },
   "team": Object {
-    "id": 5540,
-    "name": "ttc",
+    "id": 5121,
+    "name": "Berzerk",
   },
   "twitch": undefined,
-  "twitter": undefined,
+  "twitter": "https://twitter.com/sykencs",
 }
 `;
 
@@ -60,7 +60,7 @@ Object {
 exports[`getPlayer 3`] = `
 Object {
   "achievements": Array [],
-  "age": 22,
+  "age": 23,
   "country": Object {
     "code": "GE",
     "name": "Georgia",
@@ -95,7 +95,7 @@ Object {
   "facebook": undefined,
   "id": 9123,
   "ign": "MAKKA",
-  "image": "https://static.hltv.org/images/playerprofile/thumb/9123/400.jpeg?v=2",
+  "image": "https://img-cdn.hltv.org/gallerypicture/rS0_w_Kx090EK9b5uzGQNb.jpg?bg=3e4c54&h=400&ixlib=java-2.1.0&rect=1400%2C229%2C1637%2C1637&w=400&s=2cef6ac402e74b880ea4e3ca4cafb9f8",
   "name": "Bryan Drouillard",
   "statistics": Object {
     "deathsPerRound": 0,

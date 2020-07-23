@@ -10,27 +10,27 @@ Object {
       "name": "GOTV Demo",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s&parent=www.hltv.org",
       "name": "DreamHack (Pre-Match Analysis)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s&parent=www.hltv.org",
       "name": "DreamHack (Map 1 - Dust 2)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s&parent=www.hltv.org",
       "name": "DreamHack (Map 2 - Inferno)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s&parent=www.hltv.org",
       "name": "DreamHack (Map 3 - Mirage)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s&parent=www.hltv.org",
       "name": "DreamHack (Winning Moment)",
     },
     Object {
-      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s",
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s&parent=www.hltv.org",
       "name": "DreamHack (Post-Match Analysis)",
     },
   ],
@@ -139,59 +139,59 @@ Object {
   },
   "highlights": Array [
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=AgreeableEagerGerbilBatChest&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=AgreeableEagerGerbilBatChest&autoplay=true&parent=www.hltv.org",
       "title": "suNny triple entry frag (Dust2)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=AgitatedEncouragingClipsdadCurseLit&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=AgitatedEncouragingClipsdadCurseLit&autoplay=true&parent=www.hltv.org",
       "title": "Snax 1v2 clutch (Dust2) ",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=RoundTawdryHamsterWTRuck&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=RoundTawdryHamsterWTRuck&autoplay=true&parent=www.hltv.org",
       "title": "chrisJ 1v2 clutch (Dust2)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=CuteSpicyMonitorWow&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=CuteSpicyMonitorWow&autoplay=true&parent=www.hltv.org",
       "title": "MSL triple kill hold (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=PiercingExuberantDunlinLitFam&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=PiercingExuberantDunlinLitFam&autoplay=true&parent=www.hltv.org",
       "title": "niko defends the with a 3k (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=ClearExpensiveQueleaKreygasm&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=ClearExpensiveQueleaKreygasm&autoplay=true&parent=www.hltv.org",
       "title": "MSL snipes down three on the defense (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=SquareSmellyZucchiniPRChase&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=SquareSmellyZucchiniPRChase&autoplay=true&parent=www.hltv.org",
       "title": "suNny taps down three in the second pistol round (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=FancyInventiveBaboonNomNom&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=FancyInventiveBaboonNomNom&autoplay=true&parent=www.hltv.org",
       "title": "valde takes down three to steal the round (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=ArbitraryClumsyJackalJebaited&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=ArbitraryClumsyJackalJebaited&autoplay=true&parent=www.hltv.org",
       "title": "chrisJ scouts down three (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=ObeseMistyKangarooOMGScoots&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=ObeseMistyKangarooOMGScoots&autoplay=true&parent=www.hltv.org",
       "title": "oskar snipes down three to keep mouz alive (Infeno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=CalmSneakySquidEagleEye&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=CalmSneakySquidEagleEye&autoplay=true&parent=www.hltv.org",
       "title": "niko 3k to steal the map (Inferno)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=HomelyOnerousBeaverGivePLZ&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=HomelyOnerousBeaverGivePLZ&autoplay=true&parent=www.hltv.org",
       "title": "aizy triple kill hold (Mirage)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=AnnoyingAbstemiousWebSmoocherZ&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=AnnoyingAbstemiousWebSmoocherZ&autoplay=true&parent=www.hltv.org",
       "title": "Kjaerbye quick double to steal the round (Mirage)",
     },
     Object {
-      "link": "https://clips.twitch.tv/embed?clip=FancyCulturedDolphinYouDontSay&autoplay=true",
+      "link": "https://clips.twitch.tv/embed?clip=FancyCulturedDolphinYouDontSay&autoplay=true&parent=www.hltv.org",
       "title": "MSL triple kill hold to earn map point (Mirage)",
     },
   ],
