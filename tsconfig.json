@@ -22,6 +22,7 @@
     },
     "exclude": [
         "__tests__",
-        "node_modules/**/*"
+        "node_modules/**/*",
+        "src/playground.ts"
     ]
 }
