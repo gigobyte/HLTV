@@ -16,32 +16,24 @@ export const getTeamRanking = (config: HLTVConfig) => async ({
   )
 
   if ((!year || !month || !day) && country) {
-    const redirectedLink = $('.ranking-country > a')
-      .first()
-      .attr('href')!
+    const redirectedLink = $('.ranking-country > a').first().attr('href')!
     const countryRankingLink = redirectedLink
       .split('/')
       .slice(0, -1)
       .concat([country])
       .join('/')
 
-    $ = await fetchPage(`${config.hltvUrl}${countryRankingLink}`, config.loadPage)
+    $ = await fetchPage(
+      `${config.hltvUrl}${countryRankingLink}`,
+      config.loadPage
+    )
   }
 
-  const teams = toArray($('.ranked-team')).map(teamEl => {
+  const teams = toArray($('.ranked-team')).map((teamEl) => {
     const points = Number(
-      teamEl
-        .find('.points')
-        .text()
-        .replace(/\(|\)/g, '')
-        .split(' ')[0]
+      teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0]
     )
-    const place = Number(
-      teamEl
-        .find('.position')
-        .text()
-        .substring(1)
-    )
+    const place = Number(teamEl.find('.position').text().substring(1))
 
     const team: Team = {
       name: teamEl.find('.name').text(),

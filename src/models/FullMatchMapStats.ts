@@ -52,7 +52,10 @@ export interface PlayerPerformanceStats {
   impact: number
 }
 
-export interface PlayerStats extends Player, PlayerPerformanceStats, PlayerOverviewStats {}
+export interface PlayerStats
+  extends Player,
+    PlayerPerformanceStats,
+    PlayerOverviewStats {}
 
 export interface TeamPerformance {
   kills: number

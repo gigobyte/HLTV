@@ -27,7 +27,10 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
     rankingFilter
   })
 
-  const $ = await fetchPage(`${config.hltvUrl}/stats/players/${id}/-?${query}`, config.loadPage)
+  const $ = await fetchPage(
+    `${config.hltvUrl}/stats/players/${id}/-?${query}`,
+    config.loadPage
+  )
 
   const name = $('.summaryRealname div').text() || undefined
   const ign = $('.context-item-name').text()
@@ -48,21 +51,12 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
     teamNameEl.text() !== 'No team'
       ? {
           name: teamNameEl.text(),
-          id: Number(
-            teamNameEl
-              .find('a')
-              .attr('href')!
-              .split('/')[3]
-          )
+          id: Number(teamNameEl.find('a').attr('href')!.split('/')[3])
         }
       : undefined
 
   const getStats = (i: number) =>
-    $(
-      $($('.stats-row').get(i))
-        .find('span')
-        .get(1)
-    ).text()
+    $($($('.stats-row').get(i)).find('span').get(1)).text()
 
   const statistics = {
     kills: getStats(0),

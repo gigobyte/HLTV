@@ -14,41 +14,25 @@ export const getPlayer = (config: HLTVConfig) => async ({
   const isStandardPlayer = $('.standard-box.profileTopBox').length !== 0
 
   const name = isStandardPlayer
-    ? $('.player-realname')
-        .text()
-        .trim() || undefined
-    : $('.playerRealname')
-        .text()
-        .trim() || undefined
+    ? $('.player-realname').text().trim() || undefined
+    : $('.playerRealname').text().trim() || undefined
 
-  const ign = isStandardPlayer ? $('.player-nick').text() : $('.playerNickname').text()
+  const ign = isStandardPlayer
+    ? $('.player-nick').text()
+    : $('.playerNickname').text()
 
   const image = isStandardPlayer
     ? $('.bodyshot-img-square').attr('src')
     : $('.bodyshot-img').attr('src')
 
   const age = isStandardPlayer
-    ? Number(
-        $('.profile-player-stat-value')
-          .first()
-          .text()
-          .split(' ')[0]
-      ) || undefined
-    : Number(
-        $('.playerAge .listRight')
-          .text()
-          .split(' ')[0]
-      ) || undefined
+    ? Number($('.profile-player-stat-value').first().text().split(' ')[0]) ||
+      undefined
+    : Number($('.playerAge .listRight').text().split(' ')[0]) || undefined
 
-  const twitter = $('.twitter')
-    .parent()
-    .attr('href')
-  const twitch = $('.twitch')
-    .parent()
-    .attr('href')
-  const facebook = $('.facebook')
-    .parent()
-    .attr('href')
+  const twitter = $('.twitter').parent().attr('href')
+  const twitch = $('.twitch').parent().attr('href')
+  const facebook = $('.facebook').parent().attr('href')
 
   const country = isStandardPlayer
     ? {
@@ -62,20 +46,12 @@ export const getPlayer = (config: HLTVConfig) => async ({
 
   let team: Team | undefined
 
-  if (
-    $('.profile-player-stat-value.bold')
-      .text()
-      .trim() !== '-'
-  ) {
+  if ($('.profile-player-stat-value.bold').text().trim() !== '-') {
     if (isStandardPlayer) {
       team = {
-        name: $('.profile-player-stat-value a')
-          .text()
-          .trim(),
+        name: $('.profile-player-stat-value a').text().trim(),
         id: Number(
-          $('.profile-player-stat-value a')
-            .attr('href')!
-            .split('/')[2]
+          $('.profile-player-stat-value a').attr('href')!.split('/')[2]
         )
       }
     } else {
@@ -90,13 +66,9 @@ export const getPlayer = (config: HLTVConfig) => async ({
     }
   }
 
-  const getMapStat = i =>
+  const getMapStat = (i) =>
     Number(
-      $(
-        $('.tab-content .two-col')
-          .find('.cell')
-          .get(i)
-      )
+      $($('.tab-content .two-col').find('.cell').get(i))
         .find('.statsVal')
         .text()
         .replace('%', '')
@@ -111,15 +83,12 @@ export const getPlayer = (config: HLTVConfig) => async ({
     roundsContributed: getMapStat(5)
   }
 
-  const achievements = toArray($('.achievement-table .team')).map(achEl => ({
+  const achievements = toArray($('.achievement-table .team')).map((achEl) => ({
     place: achEl.find('.achievement').text(),
     event: {
       name: achEl.find('.tournament-name-cell a').text(),
       id: Number(
-        achEl
-          .find('.tournament-name-cell a')
-          .attr('href')!
-          .split('/')[2]
+        achEl.find('.tournament-name-cell a').attr('href')!.split('/')[2]
       )
     }
   }))

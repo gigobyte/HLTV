@@ -1,7 +1,6 @@
 export enum ContentFilter {
-	Highlights = 'highlights',
-	Demo = 'demo',
-	Vod = 'vod',
-	Stats = 'stats'
-  }
-  
+  Highlights = 'highlights',
+  Demo = 'demo',
+  Vod = 'vod',
+  Stats = 'stats'
+}

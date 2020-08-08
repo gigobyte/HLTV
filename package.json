@@ -33,12 +33,6 @@
       "node"
     ]
   },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100,
-    "parser": "typescript",
-    "singleQuote": true
-  },
   "author": "Stanislav Iliev",
   "license": "ISC",
   "bugs": {

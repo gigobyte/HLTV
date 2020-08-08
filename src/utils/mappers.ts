@@ -9,9 +9,13 @@ import { popSlashSource } from '../utils/parsing'
 import { Agent as HttpsAgent } from 'https'
 import { Agent as HttpAgent } from 'http'
 
-export const defaultLoadPage = (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
-  new Promise<string>(resolve => {
-    request.get(url, { gzip: true, agent: httpAgent }, (_, __, body) => resolve(body))
+export const defaultLoadPage = (
+  httpAgent: HttpsAgent | HttpAgent | undefined
+) => (url: string) =>
+  new Promise<string>((resolve) => {
+    request.get(url, { gzip: true, agent: httpAgent }, (_, __, body) =>
+      resolve(body)
+    )
   })
 
 export const fetchPage = async (
@@ -21,10 +25,15 @@ export const fetchPage = async (
   return cheerio.load(await loadPage!(url))
 }
 
-export const toArray = (elements: Cheerio): Cheerio[] => elements.toArray().map(cheerio)
+export const toArray = (elements: Cheerio): Cheerio[] =>
+  elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
-export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Veto => {
+export const mapVetoElementToModel = (
+  el: Cheerio,
+  team1: Team,
+  team2: Team
+): Veto => {
   const [teamName, map] = el
     .text()
     .replace(/^\d. /, '')
@@ -38,7 +47,7 @@ export const mapVetoElementToModel = (el: Cheerio, team1: Team, team2: Team): Ve
   }
 
   return {
-    team: [team1, team2].find(t => t.name === teamName.trim())!,
+    team: [team1, team2].find((t) => t.name === teamName.trim())!,
     map: getMapSlug(map.trim()),
     type: el.text().includes('picked') ? 'picked' : 'removed'
   }
@@ -51,7 +60,9 @@ export const getMatchPlayer = (playerEl: Cheerio): Player => {
   }
 }
 
-export const getMatchFormatAndMap = (mapText: string): { map?: MapSlug; format?: string } => {
+export const getMatchFormatAndMap = (
+  mapText: string
+): { map?: MapSlug; format?: string } => {
   if (mapText && !mapText.includes('bo')) {
     return { map: mapText as MapSlug, format: 'bo1' }
   }
@@ -70,7 +81,9 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
 ): WeakRoundOutcome => {
   const getOutcome = (el: Cheerio): Outcome | undefined => {
     const outcomeString = popSlashSource(el)!.split('.')[0]
-    const outcomeTuple = Object.entries(Outcome).find(([_, v]) => v === outcomeString)
+    const outcomeTuple = Object.entries(Outcome).find(
+      ([_, v]) => v === outcomeString
+    )
 
     return outcomeTuple && outcomeTuple[1]
   }
@@ -106,8 +119,12 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
   const ctOutcomes = [Outcome.BombDefused, Outcome.CTWin, Outcome.TimeRanOut]
   const tOutcomes = [Outcome.BombExploded, Outcome.TWin]
 
-  const ctOutcomeMarker = allRoundEls.findIndex(x => ctOutcomes.includes(getOutcome(x)!))
-  const tOutcomeMarker = allRoundEls.findIndex(x => tOutcomes.includes(getOutcome(x)!))
+  const ctOutcomeMarker = allRoundEls.findIndex((x) =>
+    ctOutcomes.includes(getOutcome(x)!)
+  )
+  const tOutcomeMarker = allRoundEls.findIndex((x) =>
+    tOutcomes.includes(getOutcome(x)!)
+  )
 
   const outcomeSideInfo =
     ctOutcomeMarker !== -1
@@ -119,8 +136,12 @@ export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
   return {
     outcome,
     score: el.attr('title')!,
-    ctTeam: isFirstHalf ? outcomeSideInfo.firstHalfCt : outcomeSideInfo.secondHalfCt,
-    tTeam: isFirstHalf ? outcomeSideInfo.firstHalfT : outcomeSideInfo.secondHalfT
+    ctTeam: isFirstHalf
+      ? outcomeSideInfo.firstHalfCt
+      : outcomeSideInfo.secondHalfCt,
+    tTeam: isFirstHalf
+      ? outcomeSideInfo.firstHalfT
+      : outcomeSideInfo.secondHalfT
   }
 }
 

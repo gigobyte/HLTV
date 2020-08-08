@@ -12,69 +12,42 @@ export const getEvent = (config: HLTVConfig) => async ({
 
   const name = $('.eventname').text()
   const dateStart =
-    Number(
-      $('td.eventdate span[data-unix]')
-        .first()
-        .attr('data-unix')
-    ) || undefined
+    Number($('td.eventdate span[data-unix]').first().attr('data-unix')) ||
+    undefined
   const dateEnd =
-    Number(
-      $('td.eventdate span[data-unix]')
-        .last()
-        .attr('data-unix')
-    ) || undefined
+    Number($('td.eventdate span[data-unix]').last().attr('data-unix')) ||
+    undefined
   const prizePool = $('td.prizepool').text()
   const location = {
     name: $('img.flag').attr('title')!,
     code: popSlashSource($('img.flag'))!.split('.')[0]
   }
 
-  const teams = toArray($('.team-box')).map(teamEl => ({
+  const teams = toArray($('.team-box')).map((teamEl) => ({
     name: teamEl.find('.logo').attr('title')!,
     id: Number(popSlashSource(teamEl.find('.logo'))),
-    reasonForParticipation:
-      teamEl
-        .find('.sub-text')
-        .text()
-        .trim() || undefined,
+    reasonForParticipation: teamEl.find('.sub-text').text().trim() || undefined,
     rankDuringEvent:
-      Number(
-        teamEl
-          .find('.event-world-rank')
-          .text()
-          .replace('#', '')
-      ) || undefined
+      Number(teamEl.find('.event-world-rank').text().replace('#', '')) ||
+      undefined
   }))
 
-  const relatedEvents = toArray($('.related-event')).map(eventEl => ({
+  const relatedEvents = toArray($('.related-event')).map((eventEl) => ({
     name: eventEl.find('.event-name').text(),
-    id: Number(
-      eventEl
-        .find('a')
-        .attr('href')!
-        .split('/')[2]
-    )
+    id: Number(eventEl.find('a').attr('href')!.split('/')[2])
   }))
 
-  const prizeDistribution = toArray($('.placement')).map(placementEl => {
+  const prizeDistribution = toArray($('.placement')).map((placementEl) => {
     const otherPrize =
-      placementEl
-        .find('.prizeMoney')
-        .first()
-        .next()
-        .text() || undefined
+      placementEl.find('.prizeMoney').first().next().text() || undefined
 
     const qualifiesFor = !!otherPrize
-      ? relatedEvents.find(event => event.name === otherPrize)
+      ? relatedEvents.find((event) => event.name === otherPrize)
       : undefined
 
     return {
       place: $(placementEl.children().get(1)).text(),
-      prize:
-        placementEl
-          .find('.prizeMoney')
-          .first()
-          .text() || undefined,
+      prize: placementEl.find('.prizeMoney').first().text() || undefined,
       qualifiesFor: qualifiesFor,
       otherPrize: !qualifiesFor ? otherPrize : undefined,
       team:
@@ -82,17 +55,14 @@ export const getEvent = (config: HLTVConfig) => async ({
           ? {
               name: placementEl.find('.team a').text(),
               id: Number(
-                placementEl
-                  .find('.team a')
-                  .attr('href')!
-                  .split('/')[2]
+                placementEl.find('.team a').attr('href')!.split('/')[2]
               )
             }
           : undefined
     }
   })
 
-  const formats = toArray($('.formats tr')).map(formatEl => ({
+  const formats = toArray($('.formats tr')).map((formatEl) => ({
     type: formatEl.find('.format-header').text(),
     description: formatEl
       .find('.format-data')
@@ -102,7 +72,7 @@ export const getEvent = (config: HLTVConfig) => async ({
       .trim()
   }))
 
-  const mapPool = toArray($('.map-pool-map-holder')).map(mapEl =>
+  const mapPool = toArray($('.map-pool-map-holder')).map((mapEl) =>
     getMapSlug(mapEl.find('.map-pool-map-name').text())
   )
 

@@ -35,42 +35,25 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
     page++
 
     matches = matches.concat(
-      toArray($('.matches-table tbody tr')).map(matchEl => {
+      toArray($('.matches-table tbody tr')).map((matchEl) => {
         const id = Number(
-          matchEl
-            .find('.date-col a')
-            .attr('href')!
-            .split('/')[4]
+          matchEl.find('.date-col a').attr('href')!.split('/')[4]
         )
         const date = Number(matchEl.find('.time').attr('data-unix'))
         const map = matchEl.find('.dynamic-map-name-short').text() as MapSlug
 
         const team1: Team = {
           id: Number(
-            matchEl
-              .find('.team-col a')
-              .first()
-              .attr('href')!
-              .split('/')[3]
+            matchEl.find('.team-col a').first().attr('href')!.split('/')[3]
           ),
-          name: matchEl
-            .find('.team-col a')
-            .first()
-            .text()
+          name: matchEl.find('.team-col a').first().text()
         }
 
         const team2: Team = {
           id: Number(
-            matchEl
-              .find('.team-col a')
-              .last()
-              .attr('href')!
-              .split('/')[3]
+            matchEl.find('.team-col a').last().attr('href')!.split('/')[3]
           ),
-          name: matchEl
-            .find('.team-col a')
-            .last()
-            .text()
+          name: matchEl.find('.team-col a').last().text()
         }
 
         const event: Event = {

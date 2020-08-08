@@ -16,28 +16,45 @@ export const getEvents = (config: HLTVConfig) => async ({
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
 
   const events = toArray($('.events-month'))
-    .map(eventEl => {
-      const checkMonth = new Date(eventEl.find('.standard-headline').text()).getMonth()
+    .map((eventEl) => {
+      const checkMonth = new Date(
+        eventEl.find('.standard-headline').text()
+      ).getMonth()
 
-      if (typeof month === 'undefined' || (typeof month !== 'undefined' && month == checkMonth)) {
+      if (
+        typeof month === 'undefined' ||
+        (typeof month !== 'undefined' && month == checkMonth)
+      ) {
         switch (size) {
           case EventSize.Small:
             return {
               month: checkMonth,
-              events: parseEvents(toArray(eventEl.find('a.small-event')), EventSize.Small)
+              events: parseEvents(
+                toArray(eventEl.find('a.small-event')),
+                EventSize.Small
+              )
             }
 
           case EventSize.Big:
             return {
               month: checkMonth,
-              events: parseEvents(toArray(eventEl.find('a.big-event')), EventSize.Big)
+              events: parseEvents(
+                toArray(eventEl.find('a.big-event')),
+                EventSize.Big
+              )
             }
 
           default:
             return {
               month: checkMonth,
-              events: parseEvents(toArray(eventEl.find('a.big-event')), EventSize.Big).concat(
-                parseEvents(toArray(eventEl.find('a.small-event')), EventSize.Small)
+              events: parseEvents(
+                toArray(eventEl.find('a.big-event')),
+                EventSize.Big
+              ).concat(
+                parseEvents(
+                  toArray(eventEl.find('a.small-event')),
+                  EventSize.Small
+                )
               )
             }
         }
@@ -50,7 +67,10 @@ export const getEvents = (config: HLTVConfig) => async ({
   return events
 }
 
-const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] => {
+const parseEvents = (
+  eventsToParse: Cheerio[],
+  size?: EventSize
+): SimpleEvent[] => {
   let dateSelector, nameSelector, locationSelector
 
   if (size == EventSize.Small) {
@@ -63,33 +83,19 @@ const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] 
     locationSelector = '.location-top-teams img'
   }
 
-  const events = eventsToParse.map(eventEl => {
-    const dateStart = eventEl
-      .find(dateSelector)
-      .eq(0)
-      .data('unix')
+  const events = eventsToParse.map((eventEl) => {
+    const dateStart = eventEl.find(dateSelector).eq(0).data('unix')
 
-    const dateEnd = eventEl
-      .find(dateSelector)
-      .eq(1)
-      .data('unix')
+    const dateEnd = eventEl.find(dateSelector).eq(1).data('unix')
 
     let teams
     let prizePool
 
     if (size == EventSize.Small) {
-      teams = eventEl
-        .find('.col-value')
-        .eq(1)
-        .text()
+      teams = eventEl.find('.col-value').eq(1).text()
       prizePool = eventEl.find('.prizePoolEllipsis').text()
     } else {
-      teams = eventEl
-        .find('.additional-info tr')
-        .eq(0)
-        .find('td')
-        .eq(2)
-        .text()
+      teams = eventEl.find('.additional-info tr').eq(0).find('td').eq(2).text()
       prizePool = eventEl
         .find('.additional-info tr')
         .eq(0)
@@ -101,12 +107,7 @@ const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] 
     const eventName = eventEl.find(nameSelector).text()
 
     const rawType =
-      eventEl
-        .find('table tr')
-        .eq(0)
-        .find('td')
-        .eq(3)
-        .text() || undefined
+      eventEl.find('table tr').eq(0).find('td').eq(3).text() || undefined
 
     const eventType = Object.entries({
       major: EventType.Major,
@@ -114,7 +115,9 @@ const parseEvents = (eventsToParse: Cheerio[], size?: EventSize): SimpleEvent[] 
       intl: EventType.InternationalLan,
       local: EventType.LocalLan,
       reg: EventType.RegionalLan
-    }).find(([needle]) => (rawType ? rawType.toLowerCase().includes(needle) : false))?.[1]
+    }).find(([needle]) =>
+      rawType ? rawType.toLowerCase().includes(needle) : false
+    )?.[1]
 
     return {
       id: Number(eventEl.attr('href')!.split('/')[2]),

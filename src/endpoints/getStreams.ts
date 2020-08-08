@@ -11,7 +11,7 @@ export const getStreams = (config: HLTVConfig) => async ({
   const $ = await fetchPage(`${config.hltvUrl}`, config.loadPage)
 
   const streams = Promise.all(
-    toArray($('a.col-box.streamer')).map(async streamEl => {
+    toArray($('a.col-box.streamer')).map(async (streamEl) => {
       const name = streamEl.find('.name').text()
       const category = streamEl
         .children()
@@ -23,18 +23,16 @@ export const getStreams = (config: HLTVConfig) => async ({
         code: (popSlashSource(streamEl.find('.flag')) as string).split('.')[0]
       }
 
-      const viewers = Number(
-        streamEl
-          .contents()
-          .last()
-          .text()
-      )
+      const viewers = Number(streamEl.contents().last().text())
       const hltvLink = streamEl.attr('href')!
 
       const stream = { name, category, country, viewers, hltvLink }
 
       if (loadLinks) {
-        const $streamPage = await fetchPage(`${config.hltvUrl}${hltvLink}`, config.loadPage)
+        const $streamPage = await fetchPage(
+          `${config.hltvUrl}${hltvLink}`,
+          config.loadPage
+        )
         const realLink = $streamPage('iframe').attr('src')!
 
         return { ...stream, realLink }

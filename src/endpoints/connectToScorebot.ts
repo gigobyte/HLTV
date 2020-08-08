@@ -21,7 +21,7 @@ export const connectToScorebot = (config: HLTVConfig) => ({
   onConnect,
   onDisconnect
 }: ConnectToScorebotParams) => {
-  fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage).then($ => {
+  fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage).then(($) => {
     const url = $('#scoreboardElement')
       .attr('data-scorebot-url')!
       .split(',')
@@ -46,19 +46,19 @@ export const connectToScorebot = (config: HLTVConfig) => ({
 
       socket.emit('readyForMatch', initObject)
 
-      socket.on('scoreboard', data => {
+      socket.on('scoreboard', (data) => {
         if (onScoreboardUpdate) {
           onScoreboardUpdate(data, done)
         }
       })
 
-      socket.on('log', data => {
+      socket.on('log', (data) => {
         if (onLogUpdate) {
           onLogUpdate(JSON.parse(data), done)
         }
       })
 
-      socket.on('fullLog', data => {
+      socket.on('fullLog', (data) => {
         if (onFullLogUpdate) {
           onFullLogUpdate(JSON.parse(data), done)
         }

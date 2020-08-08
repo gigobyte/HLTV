@@ -16,7 +16,10 @@ export const getMatchStats = (config: HLTVConfig) => async ({
 }: {
   id: number
 }): Promise<FullMatchStats> => {
-  const getMatchInfoRowValues = ($: CheerioStatic, index: number): TeamStatComparison => {
+  const getMatchInfoRowValues = (
+    $: CheerioStatic,
+    index: number
+  ): TeamStatComparison => {
     const [stat1, stat2] = $($('.match-info-row').get(index))
       .find('.right')
       .text()
@@ -37,29 +40,23 @@ export const getMatchStats = (config: HLTVConfig) => async ({
           .attr('href')!
           .split('/')[3]
       ),
-      name: $($('.most-x-box').get(index))
-        .find('.name > a')
-        .text(),
-      value: Number(
-        $($('.most-x-box').get(index))
-          .find('.valueName')
-          .text()
-      )
+      name: $($('.most-x-box').get(index)).find('.name > a').text(),
+      value: Number($($('.most-x-box').get(index)).find('.valueName').text())
     }
   }
 
-  const m$ = await fetchPage(`${config.hltvUrl}/stats/matches/${id}/-`, config.loadPage)
-
-  const matchPageID = Number(
-    m$('.match-page-link')
-      .attr('href')!
-      .split('/')[2]
+  const m$ = await fetchPage(
+    `${config.hltvUrl}/stats/matches/${id}/-`,
+    config.loadPage
   )
-  const matchScore = [Number(m$('.team-left .bold').text()), Number(m$('.team-right .bold').text())]
+
+  const matchPageID = Number(m$('.match-page-link').attr('href')!.split('/')[2])
+  const matchScore = [
+    Number(m$('.team-left .bold').text()),
+    Number(m$('.team-right .bold').text())
+  ]
   const date = Number(
-    m$('.match-info-box .small-text span')
-      .first()
-      .attr('data-unix')
+    m$('.match-info-box .small-text span').first().attr('data-unix')
   )
 
   const team1: TeamStat = {
@@ -81,9 +78,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
         .attr('href')!
         .split('event=')[1]
     ),
-    name: m$('.match-info-box .text-ellipsis')
-      .first()
-      .text()
+    name: m$('.match-info-box .text-ellipsis').first().text()
   }
 
   const teamStatProperties = ['rating', 'firstKills', 'clutchesWon']
@@ -106,37 +101,19 @@ export const getMatchStats = (config: HLTVConfig) => async ({
   )
 
   const overview = { ...teamStats, ...mostX } as MatchStatsOverview
-  const playerOverviewStats: PlayerStats[] = toArray(m$('.stats-table tbody tr')).map(rowEl => {
-    const id = Number(
-      rowEl
-        .find('.st-player a')
-        .attr('href')!
-        .split('/')[3]
-    )
+  const playerOverviewStats: PlayerStats[] = toArray(
+    m$('.stats-table tbody tr')
+  ).map((rowEl) => {
+    const id = Number(rowEl.find('.st-player a').attr('href')!.split('/')[3])
 
     return {
       id,
       name: rowEl.find('.st-player a').text(),
-      kills: Number(
-        rowEl
-          .find('.st-kills')
-          .contents()
-          .first()
-          .text()
-      ),
+      kills: Number(rowEl.find('.st-kills').contents().first().text()),
       hsKills: Number(
-        rowEl
-          .find('.st-kills .gtSmartphone-only')
-          .text()
-          .replace(/\(|\)/g, '')
+        rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')
       ),
-      assists: Number(
-        rowEl
-          .find('.st-assists')
-          .contents()
-          .first()
-          .text()
-      ),
+      assists: Number(rowEl.find('.st-assists').contents().first().text()),
       flashAssists: Number(
         rowEl
           .find('.st-assists .gtSmartphone-only')
@@ -144,12 +121,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
           .replace(/\(|\)/g, '')
       ),
       deaths: Number(rowEl.find('.st-deaths').text()),
-      KAST: Number(
-        rowEl
-          .find('.st-kdratio')
-          .text()
-          .replace('%', '')
-      ),
+      KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')),
       killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),
       ADR: Number(rowEl.find('.st-adr').text()),
       firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),

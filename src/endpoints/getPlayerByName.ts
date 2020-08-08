@@ -7,7 +7,9 @@ export const getPlayerByName = (config: HLTVConfig) => async ({
 }: {
   name: string
 }): Promise<FullPlayer> => {
-  const pageContent = JSON.parse(await config.loadPage!(`${config.hltvUrl}/search?term=${name}`))
+  const pageContent = JSON.parse(
+    await config.loadPage!(`${config.hltvUrl}/search?term=${name}`)
+  )
   const firstResult = pageContent[0].players[0]
 
   return HLTV.getPlayer({ id: firstResult.id })
