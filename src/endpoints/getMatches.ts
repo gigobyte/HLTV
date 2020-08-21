@@ -15,7 +15,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
     (matchEl) => {
       const id = Number(matchEl.attr('href')!.split('/')[2])
       const teamEls = matchEl.find('img.matchTeamLogo')
-      const stars = matchEl.find('.matchRating i').length
+      const stars = 5 - matchEl.find('.matchRating i.faded').length
 
       const team1: Team = {
         name: teamEls.first().attr('title')!,
@@ -48,7 +48,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
       const date =
         Number(matchEl.find('.matchTime').attr('data-unix')) || undefined
       const title = matchEl.find('.matchInfoEmpty').text() || undefined
-      const stars = matchEl.find('.matchRating i').length
+      const stars = matchEl.find('.matchRating i:not(.faded)').length
 
       const format = matchEl.find('.matchMeta').text()
 
