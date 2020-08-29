@@ -21,10 +21,7 @@ Object {
     "rating": 0,
     "roundsContributed": 0,
   },
-  "team": Object {
-    "id": 5121,
-    "name": "Berzerk",
-  },
+  "team": undefined,
   "twitch": undefined,
   "twitter": "https://twitter.com/sykencs",
 }

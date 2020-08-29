@@ -26,10 +26,7 @@ Object {
     "savedByTeammatePerRound": "0.11",
     "savedTeammatesPerRound": "0.11",
   },
-  "team": Object {
-    "id": 5121,
-    "name": "Berzerk",
-  },
+  "team": undefined,
 }
 `;
 
