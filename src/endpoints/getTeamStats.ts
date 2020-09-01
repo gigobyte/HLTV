@@ -87,7 +87,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       id: Number(
         eventEl.find('.image-and-label').first().attr('href')!.split('=')[1]
       ),
-      name: eventEl.find('.image-and-label').first().attr('title')!
+      name: eventEl.find('.image-and-label span').first().text()
     }
   }))
 
