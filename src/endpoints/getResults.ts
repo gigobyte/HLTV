@@ -58,14 +58,16 @@ export const getResults = (config: HLTVConfig) => async ({
           id:
             Number(popSlashSource(matchEl.find('img.team-logo').first())) ||
             undefined,
-          name: matchEl.find('div.team').first().text()
+          name: matchEl.find('div.team').first().text(),
+          logoLink: matchEl.find('img.team-logo').first().attr('src')|| undefined
         }
 
         const team2: Team = {
           id:
             Number(popSlashSource(matchEl.find('img.team-logo').last())) ||
             undefined,
-          name: matchEl.find('div.team').last().text()
+          name: matchEl.find('div.team').last().text(),
+          logoLink: matchEl.find('img.team-logo').last().attr('src') || undefined
         }
 
         const result = matchEl.find('.result-score').text()
