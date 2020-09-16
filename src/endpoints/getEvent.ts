@@ -25,7 +25,9 @@ export const getEvent = (config: HLTVConfig) => async ({
 
   const teams = toArray($('.team-box')).map((teamEl) => ({
     name: teamEl.find('.logo').attr('title')!,
-    id: Number(popSlashSource(teamEl.find('.logo'))),
+    id:
+      Number(teamEl.find('.team-name a').attr('href')!.split('/')[2]) ||
+      undefined,
     reasonForParticipation: teamEl.find('.sub-text').text().trim() || undefined,
     rankDuringEvent:
       Number(teamEl.find('.event-world-rank').text().replace('#', '')) ||

@@ -55,12 +55,16 @@ export const getResults = (config: HLTVConfig) => async ({
         const stars = matchEl.find('.stars i').length
 
         const team1: Team = {
-          id: Number(popSlashSource(matchEl.find('img.team-logo').first())),
+          id:
+            Number(popSlashSource(matchEl.find('img.team-logo').first())) ||
+            undefined,
           name: matchEl.find('div.team').first().text()
         }
 
         const team2: Team = {
-          id: Number(popSlashSource(matchEl.find('img.team-logo').last())),
+          id:
+            Number(popSlashSource(matchEl.find('img.team-logo').last())) ||
+            undefined,
           name: matchEl.find('div.team').last().text()
         }
 

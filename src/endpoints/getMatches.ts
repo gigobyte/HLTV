@@ -11,20 +11,20 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
 > => {
   const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
 
-  const liveMatches: LiveMatch[] = toArray($('.liveMatch .a-reset')).map(
+  const liveMatches: LiveMatch[] = toArray($('.liveMatch-container')).map(
     (matchEl) => {
-      const id = Number(matchEl.attr('href')!.split('/')[2])
-      const teamEls = matchEl.find('img.matchTeamLogo')
+      const id = Number(matchEl.find('.a-reset').attr('href')!.split('/')[2])
+      const teamNameEls = matchEl.find('.matchTeamName')
       const stars = 5 - matchEl.find('.matchRating i.faded').length
 
       const team1: Team = {
-        name: teamEls.first().attr('title')!,
-        id: Number(popSlashSource(teamEls.first())) || undefined
+        name: teamNameEls.first().text(),
+        id: Number(matchEl.attr('team1')) || undefined
       }
 
       const team2: Team = {
-        name: teamEls.last().attr('title')!,
-        id: Number(popSlashSource(teamEls.last())) || undefined
+        name: teamNameEls.last().text(),
+        id: Number(matchEl.attr('team2')) || undefined
       }
 
       const format = matchEl.find('.matchMeta').text()
@@ -41,7 +41,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
     }
   )
 
-  const upcomingMatches: UpcomingMatch[] = toArray($('.upcomingMatch ')).map(
+  const upcomingMatches: UpcomingMatch[] = toArray($('.upcomingMatch')).map(
     (matchEl) => {
       const link = matchEl.find('.a-reset')
       const id = Number(link.attr('href')!.split('/')[2])
@@ -59,19 +59,14 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
       if (!title) {
         team1 = {
           name: matchEl.find('.team1 .matchTeamName').text(),
-          id:
-            Number(popSlashSource(matchEl.find('.team1 .matchTeamLogo'))) ||
-            undefined
+          id: Number(matchEl.attr('team1')) || undefined
         }
 
         team2 = {
           name:
             matchEl.find('.team2 .matchTeamName').text() ||
             matchEl.find('.team2 .team').text(),
-          id: matchEl.find('.team2 .matchTeamLogo').length
-            ? Number(popSlashSource(matchEl.find('.team2 .matchTeamLogo'))) ||
-              undefined
-            : undefined
+          id: Number(matchEl.attr('team2')) || undefined
         }
         event = {
           name: matchEl.find('.matchEventLogo').attr('alt')!,

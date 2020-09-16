@@ -14,7 +14,7 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": 4991,
+      "id": undefined,
       "name": "fnatic",
     },
     "team2": Object {
@@ -34,7 +34,7 @@ Array [
     "result": "0 - 2",
     "stars": 0,
     "team1": Object {
-      "id": 5991,
+      "id": undefined,
       "name": "Envy",
     },
     "team2": Object {
@@ -54,11 +54,11 @@ Array [
     "result": "2 - 0",
     "stars": 0,
     "team1": Object {
-      "id": 4991,
+      "id": undefined,
       "name": "fnatic",
     },
     "team2": Object {
-      "id": 5378,
+      "id": undefined,
       "name": "Virtus.pro",
     },
   },
@@ -78,7 +78,7 @@ Array [
       "name": "NiP",
     },
     "team2": Object {
-      "id": 5996,
+      "id": undefined,
       "name": "TSM",
     },
   },
@@ -94,11 +94,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": 5378,
+      "id": undefined,
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "id": 6033,
+      "id": undefined,
       "name": "Keyd",
     },
   },
@@ -114,11 +114,11 @@ Array [
     "result": "2 - 0",
     "stars": 0,
     "team1": Object {
-      "id": 4991,
+      "id": undefined,
       "name": "fnatic",
     },
     "team2": Object {
-      "id": 5395,
+      "id": undefined,
       "name": "PENTA",
     },
   },
@@ -134,11 +134,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": 5991,
+      "id": undefined,
       "name": "Envy",
     },
     "team2": Object {
-      "id": 4608,
+      "id": undefined,
       "name": "Natus Vincere",
     },
   },
@@ -154,11 +154,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": 5996,
+      "id": undefined,
       "name": "TSM",
     },
     "team2": Object {
-      "id": 5752,
+      "id": undefined,
       "name": "Cloud9",
     },
   },
@@ -174,11 +174,11 @@ Array [
     "result": "16 - 11",
     "stars": 0,
     "team1": Object {
-      "id": 5378,
+      "id": undefined,
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "id": 5752,
+      "id": undefined,
       "name": "Cloud9",
     },
   },
@@ -194,11 +194,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": 6033,
+      "id": undefined,
       "name": "Keyd",
     },
     "team2": Object {
-      "id": 5974,
+      "id": undefined,
       "name": "CLG",
     },
   },
@@ -218,7 +218,7 @@ Array [
       "name": "3DMAX",
     },
     "team2": Object {
-      "id": 5996,
+      "id": undefined,
       "name": "TSM",
     },
   },
@@ -234,7 +234,7 @@ Array [
     "result": "7 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 5974,
+      "id": undefined,
       "name": "CLG",
     },
     "team2": Object {
@@ -254,11 +254,11 @@ Array [
     "result": "12 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 5310,
+      "id": undefined,
       "name": "HellRaisers",
     },
     "team2": Object {
-      "id": 6033,
+      "id": undefined,
       "name": "Keyd",
     },
   },
@@ -274,11 +274,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": 5752,
+      "id": undefined,
       "name": "Cloud9",
     },
     "team2": Object {
-      "id": 5996,
+      "id": undefined,
       "name": "TSM",
     },
   },
@@ -294,7 +294,7 @@ Array [
     "result": "16 - 5",
     "stars": 0,
     "team1": Object {
-      "id": 5378,
+      "id": undefined,
       "name": "Virtus.pro",
     },
     "team2": Object {
@@ -318,7 +318,7 @@ Array [
       "name": "NiP",
     },
     "team2": Object {
-      "id": 6033,
+      "id": undefined,
       "name": "Keyd",
     },
   },
@@ -334,11 +334,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": 5974,
+      "id": undefined,
       "name": "CLG",
     },
     "team2": Object {
-      "id": 5310,
+      "id": undefined,
       "name": "HellRaisers",
     },
   },
@@ -354,11 +354,11 @@ Array [
     "result": "3 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 4784,
+      "id": undefined,
       "name": "Vox Eminor",
     },
     "team2": Object {
-      "id": 4608,
+      "id": undefined,
       "name": "Natus Vincere",
     },
   },
@@ -374,11 +374,11 @@ Array [
     "result": "12 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 5962,
+      "id": undefined,
       "name": "LGB",
     },
     "team2": Object {
-      "id": 5395,
+      "id": undefined,
       "name": "PENTA",
     },
   },
@@ -394,11 +394,11 @@ Array [
     "result": "16 - 7",
     "stars": 0,
     "team1": Object {
-      "id": 4991,
+      "id": undefined,
       "name": "fnatic",
     },
     "team2": Object {
-      "id": 4608,
+      "id": undefined,
       "name": "Natus Vincere",
     },
   },
@@ -414,11 +414,11 @@ Array [
     "result": "16 - 2",
     "stars": 0,
     "team1": Object {
-      "id": 4784,
+      "id": undefined,
       "name": "Vox Eminor",
     },
     "team2": Object {
-      "id": 5988,
+      "id": undefined,
       "name": "FlipSid3",
     },
   },
@@ -434,11 +434,11 @@ Array [
     "result": "4 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 5284,
+      "id": undefined,
       "name": "Titan",
     },
     "team2": Object {
-      "id": 5395,
+      "id": undefined,
       "name": "PENTA",
     },
   },
@@ -454,11 +454,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": 5991,
+      "id": undefined,
       "name": "Envy",
     },
     "team2": Object {
-      "id": 5962,
+      "id": undefined,
       "name": "LGB",
     },
   },
@@ -474,11 +474,11 @@ Array [
     "result": "16 - 2",
     "stars": 0,
     "team1": Object {
-      "id": 4608,
+      "id": undefined,
       "name": "Natus Vincere",
     },
     "team2": Object {
-      "id": 5988,
+      "id": undefined,
       "name": "FlipSid3",
     },
   },
@@ -494,11 +494,11 @@ Array [
     "result": "16 - 3",
     "stars": 0,
     "team1": Object {
-      "id": 4991,
+      "id": undefined,
       "name": "fnatic",
     },
     "team2": Object {
-      "id": 4784,
+      "id": undefined,
       "name": "Vox Eminor",
     },
   },
@@ -514,11 +514,11 @@ Array [
     "result": "16 - 3",
     "stars": 0,
     "team1": Object {
-      "id": 5962,
+      "id": undefined,
       "name": "LGB",
     },
     "team2": Object {
-      "id": 5395,
+      "id": undefined,
       "name": "PENTA",
     },
   },
@@ -534,11 +534,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": 5991,
+      "id": undefined,
       "name": "Envy",
     },
     "team2": Object {
-      "id": 5284,
+      "id": undefined,
       "name": "Titan",
     },
   },

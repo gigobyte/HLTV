@@ -7,7 +7,6 @@ import {
   TeamStatComparison
 } from '../models/FullMatchStats'
 import { Event } from '../models/Event'
-import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 
@@ -60,13 +59,13 @@ export const getMatchStats = (config: HLTVConfig) => async ({
   )
 
   const team1: TeamStat = {
-    id: Number(popSlashSource(m$('.team-left .team-logo'))),
+    id: Number(m$('.team-left a.block').attr('href')!.split('/')[3]),
     name: m$('.team-left .team-logo').attr('title')!,
     score: matchScore[0]
   }
 
   const team2: TeamStat = {
-    id: Number(popSlashSource(m$('.team-right .team-logo'))),
+    id: Number(m$('.team-right a.block').attr('href')!.split('/')[3]),
     name: m$('.team-right .team-logo').attr('title')!,
     score: matchScore[1]
   }
