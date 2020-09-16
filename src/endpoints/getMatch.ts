@@ -11,12 +11,7 @@ import { Veto } from '../models/Veto'
 import { HeadToHeadResult } from '../models/HeadToHeadResult'
 import { MapSlug } from '../enums/MapSlug'
 import { MatchStatus } from '../enums/MatchStatus'
-import {
-  popSlashSource,
-  hasChild,
-  hasNoChild,
-  percentageToDecimalOdd
-} from '../utils/parsing'
+import { hasChild, hasNoChild, percentageToDecimalOdd } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import {
   fetchPage,
@@ -55,19 +50,20 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   const live = status === MatchStatus.Live
   const hasScorebot = $('#scoreboardElement').length !== 0
-  const teamEls = $('div.teamName')
+  const teamEls = $('div.teamsBox div.team')
 
-  const team1: Team | undefined = teamEls.first().text()
+  const team1: Team | undefined = teamEls.first().find('div.teamName').first().text()
     ? {
-        name: teamEls.eq(0).text(),
-        id: Number(popSlashSource(teamEls.first().prev()))
+        name: teamEls.first().find('div.teamName').first().text(),
+        id: Number(teamEls.first().find('a').first().attr('href')!.split('/')[2]
+        )
       }
     : undefined
 
-  const team2: Team | undefined = teamEls.last().text()
+  const team2: Team | undefined = teamEls.last().find('div.teamName').first().text()
     ? {
-        name: teamEls.eq(1).text(),
-        id: Number(popSlashSource(teamEls.last().prev()))
+        name: teamEls.last().find('div.teamName').first().text(),
+        id: Number(teamEls.last().find('a').first().attr('href')!.split('/')[2])
       }
     : undefined
 
