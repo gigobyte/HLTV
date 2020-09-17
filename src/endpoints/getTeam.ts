@@ -1,7 +1,6 @@
 import { FullTeam, Result, Achievement } from '../models/FullTeam'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import { popSlashSource } from '../utils/parsing'
 
 export const getTeam = (config: HLTVConfig) => async ({
   id
@@ -41,9 +40,7 @@ export const getTeam = (config: HLTVConfig) => async ({
         .split('/')[2]
     ),
     enemyTeam: {
-      id: Number(
-        popSlashSource(matchEl.find('.team-2 .team-logo-container img'))!
-      ),
+      id: Number(matchEl.find('.team-2').attr('href').split('/')[2]),
       name: matchEl.find('span.team-2').text()
     },
     result: matchEl.find('.score-cell').text()
