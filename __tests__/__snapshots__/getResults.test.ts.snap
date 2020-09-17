@@ -14,11 +14,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
       "name": "fnatic",
     },
     "team2": Object {
-      "id": 4411,
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NiP",
     },
   },
@@ -34,11 +34,11 @@ Array [
     "result": "0 - 2",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
       "name": "Envy",
     },
     "team2": Object {
-      "id": 4411,
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NiP",
     },
   },
@@ -54,11 +54,11 @@ Array [
     "result": "2 - 0",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
       "name": "fnatic",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
       "name": "Virtus.pro",
     },
   },
@@ -74,11 +74,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": 4411,
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NiP",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
       "name": "TSM",
     },
   },
@@ -94,11 +94,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
       "name": "Keyd",
     },
   },
@@ -114,11 +114,11 @@ Array [
     "result": "2 - 0",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
       "name": "fnatic",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/iU6j4K8WM-9_WK8VAC2T40.svg?ixlib=java-2.1.0&s=ab56798dd211a07ef91a74e11ff8dc16",
       "name": "PENTA",
     },
   },
@@ -134,11 +134,11 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
       "name": "Envy",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
       "name": "Natus Vincere",
     },
   },
@@ -154,11 +154,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
       "name": "TSM",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
       "name": "Cloud9",
     },
   },
@@ -174,11 +174,11 @@ Array [
     "result": "16 - 11",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
       "name": "Cloud9",
     },
   },
@@ -194,11 +194,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
       "name": "Keyd",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
       "name": "CLG",
     },
   },
@@ -214,11 +214,11 @@ Array [
     "result": "10 - 16",
     "stars": 0,
     "team1": Object {
-      "id": 5789,
+      "logo": "https://static.hltv.org/images/team/logo/5789",
       "name": "3DMAX",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
       "name": "TSM",
     },
   },
@@ -234,11 +234,11 @@ Array [
     "result": "7 - 16",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
       "name": "CLG",
     },
     "team2": Object {
-      "id": 4411,
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NiP",
     },
   },
@@ -254,11 +254,11 @@ Array [
     "result": "12 - 16",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&s=5f6b99e45ac369c4989b01d0ee8acd6c",
       "name": "HellRaisers",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
       "name": "Keyd",
     },
   },
@@ -274,11 +274,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
       "name": "Cloud9",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
       "name": "TSM",
     },
   },
@@ -294,11 +294,11 @@ Array [
     "result": "16 - 5",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "id": 5789,
+      "logo": "https://static.hltv.org/images/team/logo/5789",
       "name": "3DMAX",
     },
   },
@@ -314,11 +314,11 @@ Array [
     "result": "16 - 9",
     "stars": 0,
     "team1": Object {
-      "id": 4411,
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NiP",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
       "name": "Keyd",
     },
   },
@@ -334,11 +334,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
       "name": "CLG",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&s=5f6b99e45ac369c4989b01d0ee8acd6c",
       "name": "HellRaisers",
     },
   },
@@ -354,11 +354,11 @@ Array [
     "result": "3 - 16",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
       "name": "Vox Eminor",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
       "name": "Natus Vincere",
     },
   },
@@ -374,11 +374,11 @@ Array [
     "result": "12 - 16",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/qMND-GUX-E-Xc-hBQs1AZZ.svg?ixlib=java-2.1.0&s=6787eb2e88b321814f7c2cbaff8a2138",
       "name": "LGB",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/iU6j4K8WM-9_WK8VAC2T40.svg?ixlib=java-2.1.0&s=ab56798dd211a07ef91a74e11ff8dc16",
       "name": "PENTA",
     },
   },
@@ -394,11 +394,11 @@ Array [
     "result": "16 - 7",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
       "name": "fnatic",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
       "name": "Natus Vincere",
     },
   },
@@ -414,11 +414,11 @@ Array [
     "result": "16 - 2",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
       "name": "Vox Eminor",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Upn7lSBAXHRFRtmuiQn5Me.svg?ixlib=java-2.1.0&s=82618c94ea7d2de4b4297dd84353d020",
       "name": "FlipSid3",
     },
   },
@@ -434,11 +434,11 @@ Array [
     "result": "4 - 16",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/xem4ejU2wb6vVi3LCMWLNe.svg?ixlib=java-2.1.0&s=ebda1ce5f5bdb0a5cd6acb8ecb3bc28a",
       "name": "Titan",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/iU6j4K8WM-9_WK8VAC2T40.svg?ixlib=java-2.1.0&s=ab56798dd211a07ef91a74e11ff8dc16",
       "name": "PENTA",
     },
   },
@@ -454,11 +454,11 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
       "name": "Envy",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/qMND-GUX-E-Xc-hBQs1AZZ.svg?ixlib=java-2.1.0&s=6787eb2e88b321814f7c2cbaff8a2138",
       "name": "LGB",
     },
   },
@@ -474,11 +474,11 @@ Array [
     "result": "16 - 2",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
       "name": "Natus Vincere",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/Upn7lSBAXHRFRtmuiQn5Me.svg?ixlib=java-2.1.0&s=82618c94ea7d2de4b4297dd84353d020",
       "name": "FlipSid3",
     },
   },
@@ -494,11 +494,11 @@ Array [
     "result": "16 - 3",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
       "name": "fnatic",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
       "name": "Vox Eminor",
     },
   },
@@ -514,11 +514,11 @@ Array [
     "result": "16 - 3",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/qMND-GUX-E-Xc-hBQs1AZZ.svg?ixlib=java-2.1.0&s=6787eb2e88b321814f7c2cbaff8a2138",
       "name": "LGB",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/iU6j4K8WM-9_WK8VAC2T40.svg?ixlib=java-2.1.0&s=ab56798dd211a07ef91a74e11ff8dc16",
       "name": "PENTA",
     },
   },
@@ -534,11 +534,11 @@ Array [
     "result": "16 - 14",
     "stars": 0,
     "team1": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
       "name": "Envy",
     },
     "team2": Object {
-      "id": undefined,
+      "logo": "https://img-cdn.hltv.org/teamlogo/xem4ejU2wb6vVi3LCMWLNe.svg?ixlib=java-2.1.0&s=ebda1ce5f5bdb0a5cd6acb8ecb3bc28a",
       "name": "Titan",
     },
   },
