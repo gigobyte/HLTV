@@ -40,7 +40,7 @@ export const getTeam = (config: HLTVConfig) => async ({
         .split('/')[2]
     ),
     enemyTeam: {
-      id: Number(matchEl.find('.team-2').attr('href').split('/')[2]),
+      id: Number(matchEl.find('.team-2').attr('href')!.split('/')[2]),
       name: matchEl.find('span.team-2').text()
     },
     result: matchEl.find('.score-cell').text()
