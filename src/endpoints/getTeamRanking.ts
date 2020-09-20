@@ -2,7 +2,6 @@ import { TeamRanking } from '../models/TeamRanking'
 import { Team } from '../models/Team'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
-import { popSlashSource } from '../utils/parsing'
 
 export const getTeamRanking = (config: HLTVConfig) => async ({
   year = '',
@@ -37,7 +36,7 @@ export const getTeamRanking = (config: HLTVConfig) => async ({
 
     const team: Team = {
       name: teamEl.find('.name').text(),
-      id: Number(popSlashSource(teamEl.find('.team-logo img')))
+      id: Number(teamEl.find('.moreLink').attr('href')!.split('/')[2])
     }
 
     const changeText = teamEl.find('.change').text()
