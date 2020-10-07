@@ -26,6 +26,7 @@ import { ContentFilter } from './enums/ContentFilter'
 import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
 import { getEvents } from './endpoints/getEvents'
+import { getOngoingEvents } from './endpoints/getOngoingEvents'
 import { defaultLoadPage } from './utils/mappers'
 
 export class HLTVFactory {
@@ -63,6 +64,7 @@ export class HLTVFactory {
   getPlayerByName = getPlayerByName(this.config)
   getEvent = getEvent(this.config)
   getEvents = getEvents(this.config)
+  getOngoingEvents = getOngoingEvents(this.config)
   getPlayerStats = getPlayerStats(this.config)
   getPlayerRanking = getPlayerRanking(this.config)
 
