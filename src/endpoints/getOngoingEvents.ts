@@ -3,10 +3,8 @@ import { fetchPage, toArray } from '../utils/mappers'
 import { OngoingEventResult } from '../models/OngoingEventResult'
 
 export const getOngoingEvents = (config: HLTVConfig) => async ({
-  all
-}: {
-  all: boolean
-}): Promise<OngoingEventResult[]> => {
+  all = false
+}= {}): Promise<OngoingEventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
   if (all) {
     const ongoingEvents = toArray($('.tab-content').last().find('a')).map((eventEl) => {

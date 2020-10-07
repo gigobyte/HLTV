@@ -28,6 +28,7 @@ Table of contents
   - [getPlayerByName](#getplayerbyname)
   - [getPlayerStats](#getplayerstats)
   - [getPlayerRanking](#getplayerranking)
+  - [getOngoingEvents](#getOngoingEvents)
   - [getEvents](#getevents)
   - [getEvent](#getevent)
   - [connectToScorebot](#connecttoscorebot)
@@ -374,6 +375,24 @@ HLTV.getEvents().then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/EventResult.ts)**
+
+---
+
+### getOngoingEvents
+
+Parses the info from the `hltv.org/events` page
+
+| Option |                                       Type                                        | Default value |                                    Description                                    |
+| :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
+|  all  | boolean |       false       | Its an option to show all ongoing events |
+
+```javascript
+HLTV.getOngoingEvents().then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/OngoingEventResult.ts)**
 
 ---
 
