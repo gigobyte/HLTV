@@ -172,6 +172,8 @@ Parses all matches from the `hltv.org/results/` page
 |     Option     |                                            Type                                             | Default Value |                Description                |
 | :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :---------------------------------------: |
 |     pages      |                                           number                                            |       1       | Number of pages with results to be parsed |
+|     startPage      |                                           number                                            |       0       | Set start page |
+|     endPage      |                                           number                                            |       -       | Set end page|
 |     teamID     |                                           number?                                           |       -       |            ID of specific team            |
 |    eventID     |                                           number?                                           |       -       |           ID of specific event            |
 | contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       |         Add filter of the content         |

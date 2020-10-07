@@ -10,12 +10,16 @@ import { ContentFilter } from '../enums/ContentFilter'
 type GetResultsArguments =
   | {
       pages?: number
+      startPage?: number
+      endPage?: number
       teamID?: number
       eventID?: never
       contentFilters?: ContentFilter[]
     }
   | {
       pages?: never
+      startPage?: number
+      endPage?: number
       teamID?: number
       eventID?: number
       contentFilters?: ContentFilter[]
@@ -23,6 +27,8 @@ type GetResultsArguments =
 
 export const getResults = (config: HLTVConfig) => async ({
   pages = 1,
+  startPage = 0,
+  endPage = 0,
   teamID,
   eventID,
   contentFilters = []
@@ -33,8 +39,8 @@ export const getResults = (config: HLTVConfig) => async ({
   }
 
   let matches: MatchResult[] = []
-
-  for (let i = 0; i < pages; i++) {
+  if(endPage !== 0)pages = endPage+1
+  for (let i = startPage; i < pages; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
     if (teamID) url += `&team=${teamID}`
