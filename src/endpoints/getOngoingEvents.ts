@@ -2,25 +2,37 @@ import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { OngoingEventResult } from '../models/OngoingEventResult'
 
-export const getOngoingEvents = (config: HLTVConfig) => async (): Promise<OngoingEventResult[]> => {
+export const getOngoingEvents = (config: HLTVConfig) => async ({
+  all
+}: {
+  all: boolean
+}): Promise<OngoingEventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
-
-  let ongoingEvents: Array<OngoingEventResult> = [];
-  toArray($('.tab-content'))
-    .map((eventEl) => {
-      toArray(eventEl.find('a')).map((a) => {
-        let dateSelector = '.eventDetails .col-desc span[data-unix]'
-        const event = {
-          name: a.attr('href')!.split('/')[3],
-          id: Number(a.attr('href')!.split('/')[2]),
-          link: config.hltvUrl + a.attr('href')!,
-          logo: a.find('.logo').attr('src')!,
-          dateStart: a.find(dateSelector).eq(0).data('unix'),
-          dateEnd: a.find(dateSelector).eq(1).data('unix')
-        }
-        if (!ongoingEvents.includes(event))
-          ongoingEvents.push(event);
-      })
+  if (all) {
+    const ongoingEvents = toArray($('.tab-content').last().find('a')).map((eventEl) => {
+      let dateSelector = '.eventDetails .col-desc span[data-unix]'
+      const name = eventEl.attr('href')!.split('/')[3]
+      const id = Number(eventEl.attr('href')!.split('/')[2])
+      const link = config.hltvUrl + eventEl.attr('href')!
+      const logo = eventEl.find('.logo').attr('src')!
+      const dateStart = eventEl.find(dateSelector).eq(0).data('unix')
+      const dateEnd = eventEl.find(dateSelector).eq(1).data('unix')
+      return { name, id, link, logo, dateStart, dateEnd };
     })
-  return ongoingEvents
+
+    return ongoingEvents
+  } else {
+    const ongoingEvents = toArray($('.tab-content').first().next().find('a')).map((eventEl) => {
+      let dateSelector = '.eventDetails .col-desc span[data-unix]'
+      const name = eventEl.attr('href')!.split('/')[3]
+      const id = Number(eventEl.attr('href')!.split('/')[2])
+      const link = config.hltvUrl + eventEl.attr('href')!
+      const logo = eventEl.find('.logo').attr('src')!
+      const dateStart = eventEl.find(dateSelector).eq(0).data('unix')
+      const dateEnd = eventEl.find(dateSelector).eq(1).data('unix')
+      return { name, id, link, logo, dateStart, dateEnd };
+    })
+
+    return ongoingEvents
+  }
 }
