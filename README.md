@@ -191,8 +191,8 @@ HLTV.getResults({pages: 2}).then((res) => {
 
 Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is enabled)
 
-|  Option   |  Type   | Default Value |                                                         Description                                                          |
-| :-------: | :-----: | :-----------: | :--------------------------------------------------------------------------------------------------------------------------: |
+|  Option   |  Type   | Default Value |                                      Description                                      |
+| :-------: | :-----: | :-----------: | :-----------------------------------------------------------------------------------: |
 | loadLinks | boolean |     false     | Enables parsing of the stream links (every stream is an additional separate request). |
 
 ```javascript

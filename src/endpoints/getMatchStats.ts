@@ -44,45 +44,45 @@ export const getMatchStats = (config: HLTVConfig) => async ({
     }
   }
 
-  const m$ = await fetchPage(
+  const $ = await fetchPage(
     `${config.hltvUrl}/stats/matches/${id}/-`,
     config.loadPage
   )
 
-  const matchPageID = Number(m$('.match-page-link').attr('href')!.split('/')[2])
+  const matchPageID = Number($('.match-page-link').attr('href')!.split('/')[2])
   const matchScore = [
-    Number(m$('.team-left .bold').text()),
-    Number(m$('.team-right .bold').text())
+    Number($('.team-left .bold').text()),
+    Number($('.team-right .bold').text())
   ]
   const date = Number(
-    m$('.match-info-box .small-text span').first().attr('data-unix')
+    $('.match-info-box .small-text span').first().attr('data-unix')
   )
 
   const team1: TeamStat = {
-    id: Number(m$('.team-left a.block').attr('href')!.split('/')[3]),
-    name: m$('.team-left .team-logo').attr('title')!,
+    id: Number($('.team-left a.block').attr('href')!.split('/')[3]),
+    name: $('.team-left .team-logo').attr('title')!,
     score: matchScore[0]
   }
 
   const team2: TeamStat = {
-    id: Number(m$('.team-right a.block').attr('href')!.split('/')[3]),
-    name: m$('.team-right .team-logo').attr('title')!,
+    id: Number($('.team-right a.block').attr('href')!.split('/')[3]),
+    name: $('.team-right .team-logo').attr('title')!,
     score: matchScore[1]
   }
 
   const event: Event = {
     id: Number(
-      m$('.match-info-box .text-ellipsis')
+      $('.match-info-box .text-ellipsis')
         .first()
         .attr('href')!
         .split('event=')[1]
     ),
-    name: m$('.match-info-box .text-ellipsis').first().text()
+    name: $('.match-info-box .text-ellipsis').first().text()
   }
 
   const teamStatProperties = ['rating', 'firstKills', 'clutchesWon']
   const teamStats = teamStatProperties.reduce(
-    (res, prop, i) => ({ ...res, [prop]: getMatchInfoRowValues(m$, i) }),
+    (res, prop, i) => ({ ...res, [prop]: getMatchInfoRowValues($, i) }),
     {}
   )
 
@@ -95,13 +95,13 @@ export const getMatchStats = (config: HLTVConfig) => async ({
     'bestRating'
   ]
   const mostX = mostXProperties.reduce(
-    (res, prop, i) => ({ ...res, [prop]: getPlayerTopStat(m$, i) }),
+    (res, prop, i) => ({ ...res, [prop]: getPlayerTopStat($, i) }),
     {}
   )
 
   const overview = { ...teamStats, ...mostX } as MatchStatsOverview
   const playerOverviewStats: PlayerStats[] = toArray(
-    m$('.stats-table tbody tr')
+    $('.stats-table tbody tr')
   ).map((rowEl) => {
     const id = Number(rowEl.find('.st-player a').attr('href')!.split('/')[3])
 
