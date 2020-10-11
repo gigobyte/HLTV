@@ -40,7 +40,7 @@ Table of contents
 
 :warning: **WARNING:** Abusing this library will likely result in an IP ban from HLTV simply because of Cloudflare bot protection.
 
-&nbsp; &nbsp; &nbsp; &nbsp;Please use with caution and try to limit the rate and amount of your requests if you value your access to HLTV.
+Please use with caution and try to limit the rate and amount of your requests if you value your access to HLTV. Each method has the number of requests it makes to HLTV documented in this README. This is important if you want to implement some kind of throttling yourself.
 
 ```javascript
 import HLTV from 'hltv'
@@ -71,7 +71,7 @@ const myHLTV = HLTV.createInstance({ loadPage: (url) => fetch(url) })
 
 #### getMatch
 
-Parses most information from a match page
+Parses most information from a match page (1 request)
 
 | Option |  Type  | Default value | Description  |
 | :----: | :----: | :-----------: | :----------: |
@@ -89,7 +89,7 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 #### getMatches
 
-Parses all matches from the `hltv.org/matches/` page
+Parses all matches from the `hltv.org/matches/` page (1 request)
 
 | Option | Type | Default Value | Description |
 | :----: | :--: | :-----------: | :---------: |
@@ -109,7 +109,7 @@ HLTV.getMatches().then((res) => {
 
 #### getMatchesStats
 
-Parses all matches from the `hltv.org/stats/matches` page
+Parses all matches from the `hltv.org/stats/matches` page (1 request per page of results)
 
 |  Option   |                                       Type                                        | Default Value | Description |
 | :-------: | :-------------------------------------------------------------------------------: | :-----------: | :---------: |
@@ -130,7 +130,7 @@ HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res
 
 #### getMatchStats
 
-Parses info from the all maps stats page (`hltv.org/stats/matches/*/*`)
+Parses info from the `hltv.org/stats/matches/*/*` all maps stats page (1 request)
 
 | Option |  Type  | Default Value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -148,7 +148,7 @@ HLTV.getMatchStats({id: 62979}).then((res) => {
 
 #### getMatchMapStats
 
-Parses info from the single map stats page (`hltv.org/stats/matches/mapstatsid/*/*`)
+Parses info from the `hltv.org/stats/matches/mapstatsid/*/*` single map stats page (2 requests)
 
 | Option |  Type  | Default Value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -166,7 +166,7 @@ HLTV.getMatchMapStats({id: 49968}).then((res) => {
 
 #### getResults
 
-Parses all matches from the `hltv.org/results/` page
+Parses all matches from the `hltv.org/results/` page (1 reuest per result page)
 
 |     Option     |                                            Type                                             | Default Value |                Description                |
 | :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :---------------------------------------: |
@@ -189,11 +189,11 @@ HLTV.getResults({pages: 2}).then((res) => {
 
 #### getStreams
 
-Parses all streams present on the front page of HLTV
+Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is enabled)
 
 |  Option   |  Type   | Default Value |                                                         Description                                                          |
 | :-------: | :-----: | :-----------: | :--------------------------------------------------------------------------------------------------------------------------: |
-| loadLinks | boolean |     false     | Enables parsing of the stream links. Its an option since it can slow down the response (every stream is a separate request). |
+| loadLinks | boolean |     false     | Enables parsing of the stream links (every stream is an additional separate request). |
 
 ```javascript
 HLTV.getStreams().then((res) => {
@@ -207,7 +207,7 @@ HLTV.getStreams().then((res) => {
 
 #### getRecentThreads
 
-Parses the latest threads on the front page of HLTV
+Parses the latest threads on the front page of HLTV (1 request)
 
 | Option | Type | Default Value | Description |
 | :----: | :--: | :-----------: | :---------: |
@@ -223,7 +223,7 @@ HLTV.getRecentThreads().then((res) => {
 
 #### getTeamRanking
 
-Parses the info from the `hltv.org/ranking/teams/` page
+Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 
 | Option  |  Type   | Default Value |                   Description                    |
 | :-----: | :-----: | :-----------: | :----------------------------------------------: |
@@ -247,7 +247,7 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
 
 #### getTeam
 
-Parses the info from the `hltv.org/team/` page
+Parses the info from the `hltv.org/team/` page (2 requests)
 
 | Option |  Type  | Default value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -265,7 +265,7 @@ HLTV.getTeam({id: 6137}).then(res => {
 
 #### getTeamStats
 
-Parses the info from the `hltv.org/stats/teams/` page
+Parses the info from the `hltv.org/stats/teams/*` page (4 requests)
 
 | Option |  Type  | Default value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -283,7 +283,7 @@ HLTV.getTeamStats({id: 6137}).then(res => {
 
 #### getPlayer
 
-Parses the info from the `hltv.org/player/` page
+Parses the info from the `hltv.org/player/*` page (1 request)
 
 | Option |  Type  | Default value |  Description  |
 | :----: | :----: | :-----------: | :-----------: |
@@ -301,7 +301,7 @@ HLTV.getPlayer({id: 6137}).then(res => {
 
 #### getPlayerByName
 
-Same as getPlayer but accepts a player name instead of ID.
+Same as getPlayer but accepts a player name instead of ID. (2 requests)
 
 | Option |  Type  | Default value |   Description   |
 | :----: | :----: | :-----------: | :-------------: |
@@ -317,7 +317,7 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 
 #### getPlayerStats
 
-Parses the info from `hltv.org/stats/players/*`
+Parses the info from `hltv.org/stats/players/*` (1 request)
 
 |    Option     |                                           Type                                            | Default value | Description |
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
@@ -339,7 +339,7 @@ HLTV.getPlayerStats({id: 7998}).then(res => {
 
 #### getPlayerRanking
 
-Parses the info from `hltv.org/stats/players` page
+Parses the info from `hltv.org/stats/players` page (1 request)
 
 |    Option     |                                           Type                                            | Default value | Description |
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
@@ -361,7 +361,7 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 ### getEvents
 
-Parses the info from the `hltv.org/events` page
+Parses the info from the `hltv.org/events` page (1 request)
 
 | Option |                                       Type                                        | Default value |                                    Description                                    |
 | :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
@@ -379,7 +379,7 @@ HLTV.getEvents().then(res => {
 
 ### getEvent
 
-Parses the info from the `hltv.org/event/` page
+Parses the info from the `hltv.org/event/` page (1 request)
 
 | Option |  Type  | Default value | Description  |
 | :----: | :----: | :-----------: | :----------: |
