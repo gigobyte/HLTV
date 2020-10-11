@@ -68,7 +68,7 @@ export const getPlayer = (config: HLTVConfig) => async ({
 
   const getMapStat = (i) =>
     Number(
-      $($('.tab-content .two-col').find('.cell').get(i))
+      $($('.playerpage-container').find('.player-stat').get(i))
         .find('.statsVal')
         .text()
         .replace('%', '')
