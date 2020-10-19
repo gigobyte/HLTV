@@ -9,7 +9,6 @@ import { ContentFilter } from '../enums/ContentFilter'
 
 type GetResultsArguments =
   | {
-      pages?: number
       startPage?: number
       endPage?: number
       teamID?: number
@@ -17,30 +16,28 @@ type GetResultsArguments =
       contentFilters?: ContentFilter[]
     }
   | {
-      pages?: never
-      startPage?: number
-      endPage?: number
+      startPage?: never
+      endPage?: never
       teamID?: number
       eventID?: number
       contentFilters?: ContentFilter[]
     }
 
 export const getResults = (config: HLTVConfig) => async ({
-  pages = 1,
   startPage = 0,
-  endPage = 0,
+  endPage = 1,
   teamID,
   eventID,
   contentFilters = []
 }: GetResultsArguments): Promise<MatchResult[]> => {
-  if (pages < 1) {
-    console.error('getLatestResults: pages cannot be less than 1')
+  if (startPage < 0) {
+    console.error('getLatestResults: startPage cannot be less than 0')
     return []
+  }else if (endPage < 1) {
+    console.error('getLatestResults: endPage cannot be less than 1')
   }
-
   let matches: MatchResult[] = []
-  if(endPage !== 0)pages = endPage+1
-  for (let i = startPage; i < pages; i++) {
+  for (let i = startPage; i < endPage; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
 
     if (teamID) url += `&team=${teamID}`

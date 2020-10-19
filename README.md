@@ -171,17 +171,16 @@ Parses all matches from the `hltv.org/results/` page
 
 |     Option     |                                            Type                                             | Default Value |                Description                |
 | :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :---------------------------------------: |
-|     pages      |                                           number                                            |       1       | Number of pages with results to be parsed |
 |     startPage      |                                           number                                            |       0       | Set start page |
-|     endPage      |                                           number                                            |       -       | Set end page|
+|     endPage      |                                           number                                            |       1       | Set end page|
 |     teamID     |                                           number?                                           |       -       |            ID of specific team            |
 |    eventID     |                                           number?                                           |       -       |           ID of specific event            |
 | contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       |         Add filter of the content         |
 
 ```javascript
-// Note: if you pass `eventID` to getResults you cannot pass a `pages` parameter
+// Note: if you pass `eventID` to getResults you cannot pass the `startpage` and `endPage` parameter
 // since HLTV doesn't have pages for the event filter.
-HLTV.getResults({pages: 2}).then((res) => {
+HLTV.getResults({startPage:0,endPage:2}).then((res) => {
   ...
 })
 ```
@@ -386,7 +385,7 @@ Parses the info from the `hltv.org/events` page
 
 | Option |                                       Type                                        | Default value |                                    Description                                    |
 | :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
-|  all  | boolean |       false       | Its an option to show all ongoing events |
+|  -  | - |       -       | - |
 
 ```javascript
 HLTV.getOngoingEvents().then(res => {
