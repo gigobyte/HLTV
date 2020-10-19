@@ -6,4 +6,5 @@ export interface OngoingEventResult {
   readonly dateStart?: number
   readonly dateEnd?: number
   readonly logo: string
+  readonly today: boolean
 }
