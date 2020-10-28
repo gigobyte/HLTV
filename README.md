@@ -270,6 +270,7 @@ Parses the info from the `hltv.org/stats/teams/*` page (4 requests)
 | Option |  Type  | Default value | Description |
 | :----: | :----: | :-----------: | :---------: |
 |   id   | number |       -       | The team id |
+|   currentRosterOnly   | boolean |       false       | Only Current Roster |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {

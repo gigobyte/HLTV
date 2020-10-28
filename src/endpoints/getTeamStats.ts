@@ -4,24 +4,70 @@ import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 
 export const getTeamStats = (config: HLTVConfig) => async ({
-  id
+  id,
+  currentRosterOnly
 }: {
-  id: number
+  id: number,
+  currentRosterOnly: boolean
 }): Promise<FullTeamStats> => {
-  const $ = await fetchPage(
+  let currentRosterURL = ''
+  let matchesURL = ''
+  let eventsURL = ''
+  let mapsURL = ''
+
+  let $ = await fetchPage(
     `${config.hltvUrl}/stats/teams/${id}/-`,
     config.loadPage
   )
+
+  const getContainerByText = (text) =>
+    $('.standard-headline')
+      .filter((_, el) => $(el).text() === text)
+      .parent()
+      .next()
+
+  const getPlayersByContainer = (container) =>
+    toArray(container.find('.image-and-label')).map((playerEl) => ({
+      id: Number(playerEl.attr('href')!.split('/')[3]),
+      name: playerEl.find('.text-ellipsis').text()
+    }))
+
+  const currentLineup = getPlayersByContainer(
+    getContainerByText('Current lineup')
+  )
+
+  const historicPlayers = getPlayersByContainer(
+    getContainerByText('Historic players')
+  )
+  const standins = getPlayersByContainer(getContainerByText('Standins'))
+
+  if (currentRosterOnly) {
+    currentRosterURL = `lineup=${currentLineup.map(x => x.id).join('&lineup=')}&minLineupMatch=0`
+
+    matchesURL = `${config.hltvUrl}/stats/lineup/matches?${currentRosterURL}`
+    eventsURL = `${config.hltvUrl}/stats/lineup/events?${currentRosterURL}`
+    mapsURL = `${config.hltvUrl}/stats/lineup/maps?${currentRosterURL}`
+
+    $ = await fetchPage(
+      `${config.hltvUrl}/stats/lineup?${currentRosterURL}`,
+      config.loadPage
+    )
+  } else {
+    matchesURL = `${config.hltvUrl}/stats/teams/matches/${id}/-`
+    eventsURL = `${config.hltvUrl}/stats/teams/events/${id}/-`
+    mapsURL = `${config.hltvUrl}/stats/teams/maps/${id}/-`
+  }
   const m$ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/matches/${id}/-`,
+    `${matchesURL}`,
     config.loadPage
   )
+
   const e$ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/events/${id}/-`,
+    `${eventsURL}`,
     config.loadPage
   )
   const mp$ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/maps/${id}/-`,
+    `${mapsURL}`,
     config.loadPage
   )
 
@@ -44,26 +90,6 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     losses
   }
 
-  const getContainerByText = (text) =>
-    $('.standard-headline')
-      .filter((_, el) => $(el).text() === text)
-      .parent()
-      .next()
-
-  const getPlayersByContainer = (container) =>
-    toArray(container.find('.image-and-label')).map((playerEl) => ({
-      id: Number(playerEl.attr('href')!.split('/')[3]),
-      name: playerEl.find('.text-ellipsis').text()
-    }))
-
-  const currentLineup = getPlayersByContainer(
-    getContainerByText('Current lineup')
-  )
-  const historicPlayers = getPlayersByContainer(
-    getContainerByText('Historic players')
-  )
-  const standins = getPlayersByContainer(getContainerByText('Standins'))
-
   const matches = toArray(m$('.stats-table tbody tr')).map((matchEl) => ({
     dateApproximate: getTimestamp(matchEl.find('.time a').text()),
     event: {
@@ -85,7 +111,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     place: eventEl.find('.statsCenterText').text(),
     event: {
       id: Number(
-        eventEl.find('.image-and-label').first().attr('href')!.split('=')[1]
+        eventEl.find('.image-and-label').first().attr('href')!.split('=')[eventEl.find('.image-and-label').first().attr('href')!.split('=').length - 1]
       ),
       name: eventEl.find('.image-and-label span').first().text()
     }
