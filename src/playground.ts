@@ -3,7 +3,7 @@
 //   .then(res => console.dir(res, { depth: null }))
 //   .catch(err => console.log(err))
 // HLTV.getMatches().then(res => console.log(res))
-// HLTV.getResults({pages: 1}).then(res => console.log(res))
+// HLTV.getResults({startPage: 1, endPage: 3}).then(res => console.log(res))
 // HLTV.getStreams({ loadLinks: true }).then(res => console.log(res))
 // HLTV.getActiveThreads().then(res => console.log(res))
 // HLTV.getTeamRanking().then(res => console.log(res))

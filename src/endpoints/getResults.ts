@@ -33,7 +33,7 @@ export const getResults = (config: HLTVConfig) => async ({
   if (startPage < 0) {
     console.error('getLatestResults: startPage cannot be less than 0')
     return []
-  }else if (endPage < 1) {
+  } else if (endPage < 1) {
     console.error('getLatestResults: endPage cannot be less than 1')
   }
   let matches: MatchResult[] = []
