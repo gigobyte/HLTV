@@ -269,10 +269,10 @@ HLTV.getTeam({id: 6137}).then(res => {
 
 Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `currentRosterOnly` is true)
 
-|      Option       |  Type   | Default value |                Description                 |
-| :---------------: | :-----: | :-----------: | :----------------------------------------: |
-|        id         | number  |       -       |                The team id                 |
-| currentRosterOnly | boolean |     false     | Return stats about the current roster only |
+|      Option       |   Type   | Default value |                Description                 |
+| :---------------: | :------: | :-----------: | :----------------------------------------: |
+|        id         |  number  |       -       |                The team id                 |
+| currentRosterOnly | boolean? |     false     | Return stats about the current roster only |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
