@@ -169,13 +169,13 @@ HLTV.getMatchMapStats({id: 49968}).then((res) => {
 
 Parses all matches from the `hltv.org/results/` page (1 reuest per result page)
 
-|     Option     |                                            Type                                             | Default Value |                Description                |
-| :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :---------------------------------------: |
-|     startPage      |                                           number                                            |       0       | Set start page |
-|     endPage      |                                           number                                            |       1       | Set end page|
-|     teamID     |                                           number?                                           |       -       |            ID of specific team            |
-|    eventID     |                                           number?                                           |       -       |           ID of specific event            |
-| contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       |         Add filter of the content         |
+|     Option     |                                            Type                                             | Default Value |        Description        |
+| :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :-----------------------: |
+|   startPage    |                                           number                                            |       0       |      Set start page       |
+|    endPage     |                                           number                                            |       1       |       Set end page        |
+|     teamID     |                                           number?                                           |       -       |    ID of specific team    |
+|    eventID     |                                           number?                                           |       -       |   ID of specific event    |
+| contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       | Add filter of the content |
 
 ```javascript
 // Note: if you pass `eventID` to getResults you cannot pass the `startpage` and `endPage` parameter
@@ -382,11 +382,11 @@ HLTV.getEvents().then(res => {
 
 ### getOngoingEvents
 
-Parses the info from the `hltv.org/events` page
+Parses the info from the `hltv.org/events` page (1 request)
 
-| Option |                                       Type                                        | Default value |                                    Description                                    |
-| :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
-|  -  | - |       -       | - |
+| Option | Type | Default value | Description |
+| :----: | :--: | :-----------: | :---------: |
+|   -    |  -   |       -       |      -      |
 
 ```javascript
 HLTV.getOngoingEvents().then(res => {
