@@ -72,12 +72,18 @@ export const getTeam = (config: HLTVConfig) => async ({
   const events = toArray(t$('#ongoingEvents a.ongoing-event'))
     .map((eventEl) => ({
       name: eventEl.find('.eventbox-eventname').text(),
-      id: Number(eventEl.attr('href')!.split('/')[2])
+      id: Number(eventEl.attr('href')!.split('/')[2]),
+      ended: false,
+      logo: eventEl.find('img').attr('src'),
+      link: `${config.hltvUrl}` + eventEl.attr('href')
     }))
     .concat(
       toArray(e$('.image-and-label[href*="event"]')).map((eventEl) => ({
         name: eventEl.find('span').text()!,
-        id: Number(eventEl.attr('href')!.split('=').pop())
+        id: Number(eventEl.attr('href')!.split('=').pop()),
+        ended: true,
+        logo: eventEl.find('img').attr('src'),
+        link: `${config.hltvUrl}` + eventEl.attr('href')
       }))
     )
 
