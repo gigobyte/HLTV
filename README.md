@@ -189,7 +189,7 @@ HLTV.getResults({pages: 2}).then((res) => {
 
 #### getStreams
 
-Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is enabled)
+Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is true)
 
 |  Option   |  Type   | Default Value |                                      Description                                      |
 | :-------: | :-----: | :-----------: | :-----------------------------------------------------------------------------------: |
@@ -265,12 +265,12 @@ HLTV.getTeam({id: 6137}).then(res => {
 
 #### getTeamStats
 
-Parses the info from the `hltv.org/stats/teams/*` page (4 requests)
+Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `currentRosterOnly` is true)
 
-| Option |  Type  | Default value | Description |
-| :----: | :----: | :-----------: | :---------: |
-|   id   | number |       -       | The team id |
-|   currentRosterOnly   | boolean |       false       | Only Current Roster |
+|      Option       |  Type   | Default value |                Description                 |
+| :---------------: | :-----: | :-----------: | :----------------------------------------: |
+|        id         | number  |       -       |                The team id                 |
+| currentRosterOnly | boolean |     false     | Return stats about the current roster only |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {

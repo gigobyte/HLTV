@@ -7,8 +7,8 @@ export const getTeamStats = (config: HLTVConfig) => async ({
   id,
   currentRosterOnly
 }: {
-  id: number,
-  currentRosterOnly: boolean
+  id: number
+  currentRosterOnly?: boolean
 }): Promise<FullTeamStats> => {
   let currentRosterURL = ''
   let matchesURL = ''
@@ -42,7 +42,9 @@ export const getTeamStats = (config: HLTVConfig) => async ({
   const standins = getPlayersByContainer(getContainerByText('Standins'))
 
   if (currentRosterOnly) {
-    currentRosterURL = `lineup=${currentLineup.map(x => x.id).join('&lineup=')}&minLineupMatch=0`
+    currentRosterURL = `lineup=${currentLineup
+      .map((x) => x.id)
+      .join('&lineup=')}&minLineupMatch=0`
 
     matchesURL = `${config.hltvUrl}/stats/lineup/matches?${currentRosterURL}`
     eventsURL = `${config.hltvUrl}/stats/lineup/events?${currentRosterURL}`
@@ -57,19 +59,10 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     eventsURL = `${config.hltvUrl}/stats/teams/events/${id}/-`
     mapsURL = `${config.hltvUrl}/stats/teams/maps/${id}/-`
   }
-  const m$ = await fetchPage(
-    `${matchesURL}`,
-    config.loadPage
-  )
+  const m$ = await fetchPage(`${matchesURL}`, config.loadPage)
 
-  const e$ = await fetchPage(
-    `${eventsURL}`,
-    config.loadPage
-  )
-  const mp$ = await fetchPage(
-    `${mapsURL}`,
-    config.loadPage
-  )
+  const e$ = await fetchPage(`${eventsURL}`, config.loadPage)
+  const mp$ = await fetchPage(`${mapsURL}`, config.loadPage)
 
   const overviewStats = $('.standard-box .large-strong')
   const getOverviewStatByIndex = (i) => Number(overviewStats.eq(i).text())
@@ -111,7 +104,10 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     place: eventEl.find('.statsCenterText').text(),
     event: {
       id: Number(
-        eventEl.find('.image-and-label').first().attr('href')!.split('=')[eventEl.find('.image-and-label').first().attr('href')!.split('=').length - 1]
+        eventEl.find('.image-and-label').first().attr('href')!.split('=')[
+          eventEl.find('.image-and-label').first().attr('href')!.split('=')
+            .length - 1
+        ]
       ),
       name: eventEl.find('.image-and-label span').first().text()
     }
