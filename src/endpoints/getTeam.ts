@@ -76,7 +76,7 @@ export const getTeam = (config: HLTVConfig) => async ({
     }))
     .concat(
       toArray(e$('.image-and-label[href*="event"]')).map((eventEl) => ({
-        name: eventEl.attr('title')!,
+        name: eventEl.find('span').text()!,
         id: Number(eventEl.attr('href')!.split('=').pop())
       }))
     )
