@@ -68,7 +68,7 @@ export const getEvents = (config: HLTVConfig) => async ({
 }
 
 const parseEvents = (
-  eventsToParse: Cheerio[],
+  eventsToParse: cheerio.Cheerio[],
   size?: EventSize
 ): SimpleEvent[] => {
   let dateSelector, nameSelector, locationSelector

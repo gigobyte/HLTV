@@ -29,7 +29,7 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
   id: number
 }): Promise<FullMatchMapStats> => {
   const getMatchInfoRowValues = (
-    $: CheerioStatic,
+    $: cheerio.Root,
     index: number
   ): TeamStatComparison => {
     const [stat1, stat2] = $($('.match-info-row').get(index))
@@ -45,7 +45,7 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
   }
 
   const getPlayerTopStat = (
-    $: CheerioStatic,
+    $: cheerio.Root,
     index: number
   ): PlayerStat | undefined => {
     const playerHref = $($('.most-x-box').get(index))

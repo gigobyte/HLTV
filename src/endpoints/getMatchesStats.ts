@@ -24,7 +24,7 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
   ].join('&maps=')}`
 
   let page = 0
-  let $: CheerioStatic
+  let $: cheerio.Root
   let matches: MatchStats[] = []
 
   do {

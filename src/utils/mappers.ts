@@ -21,16 +21,16 @@ export const defaultLoadPage = (
 export const fetchPage = async (
   url: string,
   loadPage?: (url: string) => Promise<string>
-): Promise<CheerioStatic> => {
+): Promise<cheerio.Root> => {
   return cheerio.load(await loadPage!(url))
 }
 
-export const toArray = (elements: Cheerio): Cheerio[] =>
+export const toArray = (elements: cheerio.Cheerio): cheerio.Cheerio[] =>
   elements.toArray().map(cheerio)
 export const getMapSlug = (map: string): MapSlug => MapSlug[map]
 
 export const mapVetoElementToModel = (
-  el: Cheerio,
+  el: cheerio.Cheerio,
   team1: Team,
   team2: Team
 ): Veto => {
@@ -53,7 +53,7 @@ export const mapVetoElementToModel = (
   }
 }
 
-export const getMatchPlayer = (playerEl: Cheerio): Player => {
+export const getMatchPlayer = (playerEl: cheerio.Cheerio): Player => {
   return {
     name: playerEl.find('.text-ellipsis').text(),
     id: playerEl.data('player-id')
@@ -75,11 +75,11 @@ export const getMatchFormatAndMap = (
 }
 
 export const mapRoundElementToModel = (team1Id: number, team2Id: number) => (
-  el: Cheerio,
+  el: cheerio.Cheerio,
   i: number,
-  allRoundEls: Cheerio[]
+  allRoundEls: cheerio.Cheerio[]
 ): WeakRoundOutcome => {
-  const getOutcome = (el: Cheerio): Outcome | undefined => {
+  const getOutcome = (el: cheerio.Cheerio): Outcome | undefined => {
     const outcomeString = popSlashSource(el)!.split('.')[0]
     const outcomeTuple = Object.entries(Outcome).find(
       ([_, v]) => v === outcomeString
