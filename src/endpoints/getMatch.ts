@@ -21,6 +21,14 @@ import {
   getMatchPlayer
 } from '../utils/mappers'
 
+const getTeamId = (el: cheerio.Cheerio): number | undefined => {
+  if (el.find('a').length) {
+    return Number(el.find('a').first().attr('href')!.split('/')[2])
+  }
+
+  return undefined
+}
+
 export const getMatch = (config: HLTVConfig) => async ({
   id
 }: {
@@ -52,18 +60,25 @@ export const getMatch = (config: HLTVConfig) => async ({
   const hasScorebot = $('#scoreboardElement').length !== 0
   const teamEls = $('div.teamsBox div.team')
 
-  const team1: Team | undefined = teamEls.first().find('div.teamName').first().text()
+  const team1: Team | undefined = teamEls
+    .first()
+    .find('div.teamName')
+    .first()
+    .text()
     ? {
         name: teamEls.first().find('div.teamName').first().text(),
-        id: Number(teamEls.first().find('a').first().attr('href')!.split('/')[2]
-        )
+        id: getTeamId(teamEls.first())
       }
     : undefined
 
-  const team2: Team | undefined = teamEls.last().find('div.teamName').first().text()
+  const team2: Team | undefined = teamEls
+    .last()
+    .find('div.teamName')
+    .first()
+    .text()
     ? {
         name: teamEls.last().find('div.teamName').first().text(),
-        id: Number(teamEls.last().find('a').first().attr('href')!.split('/')[2])
+        id: getTeamId(teamEls.last())
       }
     : undefined
 
@@ -212,18 +227,20 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   const demos: Demo[] = toArray(
     $('div[class="stream-box"]:not(:has(.stream-box-embed))')
-  ).map((demoEl) => {
-    const gotvEl = demoEl.find('.left-right-padding')
+  )
+    .map((demoEl) => {
+      const gotvEl = demoEl.find('.left-right-padding')
 
-    if (gotvEl.length !== 0) {
-      return { name: gotvEl.text(), link: gotvEl.attr('href')! }
-    }
+      if (gotvEl.length !== 0) {
+        return { name: gotvEl.text(), link: gotvEl.attr('href')! }
+      }
 
-    return {
-      name: demoEl.find('.spoiler').text(),
-      link: demoEl.attr('data-stream-embed')!
-    }
-  })
+      return {
+        name: demoEl.find('.spoiler').text(),
+        link: demoEl.attr('data-stream-embed')!
+      }
+    })
+    .filter((x) => !!x.link)
 
   const highlightedPlayerLink: string | undefined = $('.highlighted-player')
     .find('.flag')
