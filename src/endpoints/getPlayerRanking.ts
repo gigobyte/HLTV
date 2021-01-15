@@ -47,7 +47,7 @@ export const getPlayerRanking = (config: HLTVConfig) => async ({
     const id = Number(
       playerRow.find('.playerCol a').first().attr('href')!.split('/')[3]
     )
-    const country = playerRow.find('.playerCol img.flag').eq(0).attr('alt')
+    const country = playerRow.find('.playerCol img.flag').eq(0).attr('alt') || ''
     const name = playerRow.find('.playerCol').text()
     const rating = Number(playerRow.find('.ratingCol').text())
     const teams: Team[] = toArray(playerRow.find('.teamCol a')).map(
