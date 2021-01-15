@@ -1,7 +1,7 @@
 import { Team } from './Team'
 
 export interface PlayerRanking {
-  readonly id?: number
+  readonly id: number
   readonly name: string
   readonly country: string
   readonly teams: Team[]
