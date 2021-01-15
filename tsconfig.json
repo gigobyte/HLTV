@@ -20,5 +20,5 @@
     "skipLibCheck": true,
     "isolatedModules": true
   },
-  "exclude": ["__tests__", "node_modules/**/*", "src/playground.ts", "**/*.d.ts"],
+  "exclude": ["__tests__", "node_modules/**/*", "src/playground.ts"],
 }
