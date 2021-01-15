@@ -1,4 +1,5 @@
-// import HLTV from './index'
+// import HLTV, {Map} from './index'
+// import {BestOfFilter} from "./enums/BestOfFilter";
 // HLTV.getMatch({ id: 2332676 })
 //   .then(res => console.dir(res, { depth: null }))
 //   .catch(err => console.log(err))
@@ -33,3 +34,12 @@
 // HLTV.getResults({pages: 1, eventId: 3883}).then(res => console.log(res))
 // HLTV.getPlayerStats({ id: 12398 }).then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
 // HLTV.getOngoingEvents().then(res => console.dir(res, { depth: null })).catch(err => console.log(err))
+// HLTV.getPlayerRanking({
+//     startDate: '2019-10-15',
+//     endDate: '2020-01-15',
+//     minMapCount: 5,
+//     maps: [Map.Dust2],
+//     bestOfX: BestOfFilter.BO1
+// }).then(res => {
+//     console.log(res[0], res[res.length - 1])
+// })

@@ -1,0 +1,748 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getMatchStats 1`] = `
+Array [
+  Object {
+    "country": "Russia",
+    "id": 13776,
+    "kd": 1.64,
+    "kdDiff": 69,
+    "maps": 8,
+    "name": "Jame",
+    "rating": 1.44,
+    "teams": Array [
+      Object {
+        "id": 8120,
+        "name": "AVANGAR",
+      },
+    ],
+  },
+  Object {
+    "country": "Kazakhstan",
+    "id": 13239,
+    "kd": 1.26,
+    "kdDiff": 30,
+    "maps": 8,
+    "name": "qikert",
+    "rating": 1.21,
+    "teams": Array [
+      Object {
+        "id": 8120,
+        "name": "AVANGAR",
+      },
+    ],
+  },
+  Object {
+    "country": "Kazakhstan",
+    "id": 11942,
+    "kd": 1.35,
+    "kdDiff": 43,
+    "maps": 8,
+    "name": "buster",
+    "rating": 1.21,
+    "teams": Array [
+      Object {
+        "id": 8120,
+        "name": "AVANGAR",
+      },
+    ],
+  },
+  Object {
+    "country": "Sweden",
+    "id": 9766,
+    "kd": 1.04,
+    "kdDiff": 5,
+    "maps": 6,
+    "name": "hampus",
+    "rating": 1.1,
+    "teams": Array [
+      Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    ],
+  },
+  Object {
+    "country": "Belarus",
+    "id": 13980,
+    "kd": 1.11,
+    "kdDiff": 9,
+    "maps": 5,
+    "name": "lollipop21k",
+    "rating": 1.09,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+  Object {
+    "country": "Sweden",
+    "id": 1146,
+    "kd": 1.08,
+    "kdDiff": 9,
+    "maps": 5,
+    "name": "dennis",
+    "rating": 1.09,
+    "teams": Array [
+      Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    ],
+  },
+  Object {
+    "country": "Kazakhstan",
+    "id": 16384,
+    "kd": 1.17,
+    "kdDiff": 12,
+    "maps": 5,
+    "name": "spellfull",
+    "rating": 1.04,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+  Object {
+    "country": "Belarus",
+    "id": 13976,
+    "kd": 0.87,
+    "kdDiff": -12,
+    "maps": 5,
+    "name": "boX",
+    "rating": 1.02,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+  Object {
+    "country": "Uzbekistan",
+    "id": 11716,
+    "kd": 0.94,
+    "kdDiff": -8,
+    "maps": 7,
+    "name": "SANJI",
+    "rating": 1.01,
+    "teams": Array [
+      Object {
+        "id": 8120,
+        "name": "AVANGAR",
+      },
+    ],
+  },
+  Object {
+    "country": "Kazakhstan",
+    "id": 334,
+    "kd": 0.94,
+    "kdDiff": -8,
+    "maps": 8,
+    "name": "AdreN",
+    "rating": 1.01,
+    "teams": Array [
+      Object {
+        "id": 8120,
+        "name": "AVANGAR",
+      },
+    ],
+  },
+  Object {
+    "country": "Sweden",
+    "id": 10784,
+    "kd": 0.91,
+    "kdDiff": -13,
+    "maps": 6,
+    "name": "RuStY",
+    "rating": 1.01,
+    "teams": Array [
+      Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    ],
+  },
+  Object {
+    "country": "Sweden",
+    "id": 13670,
+    "kd": 1.06,
+    "kdDiff": 7,
+    "maps": 6,
+    "name": "nawwk",
+    "rating": 0.99,
+    "teams": Array [
+      Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    ],
+  },
+  Object {
+    "country": "Belarus",
+    "id": 11926,
+    "kd": 0.9,
+    "kdDiff": -9,
+    "maps": 5,
+    "name": "mds",
+    "rating": 0.98,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 12269,
+    "kd": 0.95,
+    "kdDiff": -4,
+    "maps": 5,
+    "name": "Jyo",
+    "rating": 0.97,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+]
+`;
+
+exports[`getMatchStats 2`] = `
+Array [
+  Object {
+    "country": "Latvia",
+    "id": 17117,
+    "kd": 1.77,
+    "kdDiff": 55,
+    "maps": 5,
+    "name": "shield",
+    "rating": 1.47,
+    "teams": Array [
+      Object {
+        "id": 9845,
+        "name": "Titan",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 19206,
+    "kd": 1.3,
+    "kdDiff": 35,
+    "maps": 6,
+    "name": "jL",
+    "rating": 1.27,
+    "teams": Array [
+      Object {
+        "id": 10468,
+        "name": "zdarova",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 14990,
+    "kd": 1.13,
+    "kdDiff": 12,
+    "maps": 5,
+    "name": "keen",
+    "rating": 1.23,
+    "teams": Array [
+      Object {
+        "id": 9845,
+        "name": "Titan",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 11816,
+    "kd": 1.29,
+    "kdDiff": 323,
+    "maps": 69,
+    "name": "ropz",
+    "rating": 1.2,
+    "teams": Array [
+      Object {
+        "id": 4494,
+        "name": "mousesports",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 19207,
+    "kd": 1.28,
+    "kdDiff": 22,
+    "maps": 5,
+    "name": "EIZA",
+    "rating": 1.17,
+    "teams": Array [
+      Object {
+        "id": 9845,
+        "name": "Titan",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 13193,
+    "kd": 1.11,
+    "kdDiff": 12,
+    "maps": 6,
+    "name": "Prochas",
+    "rating": 1.17,
+    "teams": Array [
+      Object {
+        "id": 10468,
+        "name": "zdarova",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 12031,
+    "kd": 1.12,
+    "kdDiff": 15,
+    "maps": 8,
+    "name": "Butters",
+    "rating": 1.16,
+    "teams": Array [
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+      Object {
+        "id": 7552,
+        "name": "1337HUANIA",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 13679,
+    "kd": 1.2,
+    "kdDiff": 198,
+    "maps": 59,
+    "name": "nukkye",
+    "rating": 1.15,
+    "teams": Array [
+      Object {
+        "id": 5310,
+        "name": "HellRaisers",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 7910,
+    "kd": 1.14,
+    "kdDiff": 25,
+    "maps": 9,
+    "name": "fejtZ",
+    "rating": 1.14,
+    "teams": Array [
+      Object {
+        "id": 10127,
+        "name": "Game Fist",
+      },
+      Object {
+        "id": 8280,
+        "name": "Yalla",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 8460,
+    "kd": 1.06,
+    "kdDiff": 8,
+    "maps": 8,
+    "name": "lukjjE",
+    "rating": 1.12,
+    "teams": Array [
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 13915,
+    "kd": 1.03,
+    "kdDiff": 43,
+    "maps": 72,
+    "name": "YEKINDAR",
+    "rating": 1.09,
+    "teams": Array [
+      Object {
+        "id": 7898,
+        "name": "pro100",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 14548,
+    "kd": 1.05,
+    "kdDiff": 13,
+    "maps": 14,
+    "name": "maty",
+    "rating": 1.08,
+    "teams": Array [
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+      Object {
+        "id": 10468,
+        "name": "zdarova",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 12030,
+    "kd": 1.05,
+    "kdDiff": 57,
+    "maps": 62,
+    "name": "EspiranTo",
+    "rating": 1.08,
+    "teams": Array [
+      Object {
+        "id": 10150,
+        "name": "CR4ZY",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 14174,
+    "kd": 0.97,
+    "kdDiff": -3,
+    "maps": 5,
+    "name": "hek",
+    "rating": 1.07,
+    "teams": Array [
+      Object {
+        "id": 10466,
+        "name": "SACRAMENTO",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 12269,
+    "kd": 1.06,
+    "kdDiff": 100,
+    "maps": 91,
+    "name": "Jyo",
+    "rating": 1.07,
+    "teams": Array [
+      Object {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 16037,
+    "kd": 0.97,
+    "kdDiff": -4,
+    "maps": 6,
+    "name": "Dreamas",
+    "rating": 1.06,
+    "teams": Array [
+      Object {
+        "id": 10468,
+        "name": "zdarova",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 11250,
+    "kd": 1.08,
+    "kdDiff": 74,
+    "maps": 59,
+    "name": "Flarich",
+    "rating": 1.05,
+    "teams": Array [
+      Object {
+        "id": 5310,
+        "name": "HellRaisers",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 16415,
+    "kd": 0.99,
+    "kdDiff": -11,
+    "maps": 46,
+    "name": "supra",
+    "rating": 1.05,
+    "teams": Array [
+      Object {
+        "id": 9976,
+        "name": "Gambit Youngsters",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 11307,
+    "kd": 1.06,
+    "kdDiff": 10,
+    "maps": 11,
+    "name": "pounh",
+    "rating": 1.04,
+    "teams": Array [
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+      Object {
+        "id": 7552,
+        "name": "1337HUANIA",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 9410,
+    "kd": 0.98,
+    "kdDiff": -3,
+    "maps": 9,
+    "name": "kalinka",
+    "rating": 1.03,
+    "teams": Array [
+      Object {
+        "id": 10094,
+        "name": "Dracarys",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 18053,
+    "kd": 1.01,
+    "kdDiff": 10,
+    "maps": 50,
+    "name": "broky",
+    "rating": 1.02,
+    "teams": Array [
+      Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 15500,
+    "kd": 0.92,
+    "kdDiff": -7,
+    "maps": 5,
+    "name": "ardiis",
+    "rating": 1.01,
+    "teams": Array [
+      Object {
+        "id": 9397,
+        "name": "Fierce",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 17119,
+    "kd": 0.97,
+    "kdDiff": -3,
+    "maps": 6,
+    "name": "reN",
+    "rating": 0.99,
+    "teams": Array [
+      Object {
+        "id": 10466,
+        "name": "SACRAMENTO",
+      },
+      Object {
+        "id": 10477,
+        "name": "risefrom",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 11890,
+    "kd": 0.98,
+    "kdDiff": -2,
+    "maps": 5,
+    "name": "hyskeee",
+    "rating": 0.98,
+    "teams": Array [
+      Object {
+        "id": 9845,
+        "name": "Titan",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 14205,
+    "kd": 0.91,
+    "kdDiff": -61,
+    "maps": 39,
+    "name": "R0b3n",
+    "rating": 0.98,
+    "teams": Array [
+      Object {
+        "id": 9287,
+        "name": "Unique",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 14215,
+    "kd": 0.89,
+    "kdDiff": -15,
+    "maps": 8,
+    "name": "leakeN",
+    "rating": 0.94,
+    "teams": Array [
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 19728,
+    "kd": 0.81,
+    "kdDiff": -18,
+    "maps": 5,
+    "name": "MyLastChance",
+    "rating": 0.91,
+    "teams": Array [
+      Object {
+        "id": 10466,
+        "name": "SACRAMENTO",
+      },
+    ],
+  },
+  Object {
+    "country": "Estonia",
+    "id": 8994,
+    "kd": 0.82,
+    "kdDiff": -52,
+    "maps": 13,
+    "name": "HS",
+    "rating": 0.9,
+    "teams": Array [
+      Object {
+        "id": 10445,
+        "name": "ex-Windigo",
+      },
+      Object {
+        "id": 10442,
+        "name": "internazionale",
+      },
+      Object {
+        "id": 10458,
+        "name": "2115",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 14969,
+    "kd": 0.73,
+    "kdDiff": -26,
+    "maps": 5,
+    "name": "discplex",
+    "rating": 0.89,
+    "teams": Array [
+      Object {
+        "id": 9845,
+        "name": "Titan",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 8459,
+    "kd": 0.81,
+    "kdDiff": -35,
+    "maps": 11,
+    "name": "Kvik",
+    "rating": 0.88,
+    "teams": Array [
+      Object {
+        "id": 10475,
+        "name": "2BYL9",
+      },
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
+      },
+    ],
+  },
+  Object {
+    "country": "Lithuania",
+    "id": 8299,
+    "kd": 0.84,
+    "kdDiff": -18,
+    "maps": 6,
+    "name": "teddy",
+    "rating": 0.86,
+    "teams": Array [
+      Object {
+        "id": 10468,
+        "name": "zdarova",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 19729,
+    "kd": 0.74,
+    "kdDiff": -25,
+    "maps": 5,
+    "name": "klaudi",
+    "rating": 0.77,
+    "teams": Array [
+      Object {
+        "id": 10466,
+        "name": "SACRAMENTO",
+      },
+    ],
+  },
+  Object {
+    "country": "Latvia",
+    "id": 14173,
+    "kd": 0.51,
+    "kdDiff": -49,
+    "maps": 5,
+    "name": "d3k",
+    "rating": 0.61,
+    "teams": Array [
+      Object {
+        "id": 10466,
+        "name": "SACRAMENTO",
+      },
+    ],
+  },
+]
+`;
