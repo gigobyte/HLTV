@@ -5,6 +5,7 @@ import { EventSize } from '../enums/EventSize'
 import { EventType } from '../enums/EventType'
 import { SimpleEvent } from '../models/SimpleEvent'
 import { popSlashSource } from '../utils/parsing'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getEvents = (config: HLTVConfig) => async ({
   size,
@@ -14,6 +15,8 @@ export const getEvents = (config: HLTVConfig) => async ({
   month?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
 } = {}): Promise<EventResult[]> => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
+
+  checkForRateLimiting($)
 
   const events = toArray($('.events-month'))
     .map((eventEl) => {

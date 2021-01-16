@@ -6,6 +6,7 @@ import { Map } from '../enums/Map'
 import { MapSlug } from '../enums/MapSlug'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
@@ -32,6 +33,9 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
       `${config.hltvUrl}/stats/matches?${query}&offset=${page * 50}`,
       config.loadPage
     )
+
+    checkForRateLimiting($)
+
     page++
 
     matches = matches.concat(

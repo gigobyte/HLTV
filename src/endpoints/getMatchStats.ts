@@ -9,6 +9,7 @@ import {
 import { Event } from '../models/Event'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getMatchStats = (config: HLTVConfig) => async ({
   id
@@ -48,6 +49,8 @@ export const getMatchStats = (config: HLTVConfig) => async ({
     `${config.hltvUrl}/stats/matches/${id}/-`,
     config.loadPage
   )
+
+  checkForRateLimiting($)
 
   const matchPageID = Number($('.match-page-link').attr('href')!.split('/')[2])
   const matchScore = [

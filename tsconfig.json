@@ -5,7 +5,6 @@
     "lib": ["es2017", "dom"],
     "declaration": true,
     "outDir": "./lib",
-    "rootDir": "./src",
     "removeComments": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
@@ -14,9 +13,6 @@
     "noImplicitReturns": true,
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": "./src/",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "skipLibCheck": true,
     "isolatedModules": true
   },

@@ -1,11 +1,14 @@
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { OngoingEventResult } from '../models/OngoingEventResult'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getOngoingEvents = (config: HLTVConfig) => async (): Promise<
   OngoingEventResult[]
 > => {
   const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
+
+  checkForRateLimiting($)
 
   const ongoingEventsToday = toArray(
     $('.tab-content').first().next().find('a')

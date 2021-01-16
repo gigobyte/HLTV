@@ -18,6 +18,7 @@ import {
   getMapSlug,
   mapRoundElementToModel
 } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export type PlayerPerformanceStatsMap = {
   [key: number]: PlayerPerformanceStats
@@ -73,6 +74,9 @@ export const getMatchMapStats = (config: HLTVConfig) => async ({
       config.loadPage
     )
   ])
+
+  checkForRateLimiting(m$)
+  checkForRateLimiting(p$)
 
   const matchPageID = Number(m$('.match-page-link').attr('href')!.split('/')[2])
   const matchScore = [

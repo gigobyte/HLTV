@@ -2,6 +2,7 @@ import { FullTeamStats } from '../models/FullTeamStats'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getTeamStats = (config: HLTVConfig) => async ({
   id,
@@ -19,6 +20,8 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     `${config.hltvUrl}/stats/teams/${id}/-`,
     config.loadPage
   )
+
+  checkForRateLimiting($)
 
   const getContainerByText = (text) =>
     $('.standard-headline')

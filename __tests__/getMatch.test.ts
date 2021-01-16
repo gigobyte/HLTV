@@ -5,6 +5,7 @@ function sleep(ms: number): Promise<void> {
 }
 
 test('getMatch', async () => {
+  await sleep(3000)
   expect(await HLTV.getMatch({ id: 2325765 })).toMatchSnapshot()
   expect(await HLTV.getMatch({ id: 2302345 })).toMatchSnapshot()
   await sleep(3000)

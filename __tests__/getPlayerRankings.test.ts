@@ -6,7 +6,7 @@ function sleep(ms: number): Promise<void> {
 }
 
 test('getMatchStats', async () => {
-  await sleep(1000)
+  await sleep(3000)
   expect(
     await HLTV.getPlayerRanking({
       startDate: '2019-10-15',

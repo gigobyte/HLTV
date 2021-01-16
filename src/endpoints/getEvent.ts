@@ -2,6 +2,7 @@ import { FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMapSlug } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getEvent = (config: HLTVConfig) => async ({
   id
@@ -9,6 +10,8 @@ export const getEvent = (config: HLTVConfig) => async ({
   id: number
 }): Promise<FullEvent> => {
   const $ = await fetchPage(`${config.hltvUrl}/events/${id}/-`, config.loadPage)
+
+  checkForRateLimiting($)
 
   const name = $('.eventname').text()
   const dateStart =

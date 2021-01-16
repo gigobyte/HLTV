@@ -1,6 +1,7 @@
 import { FullTeam, Result, Achievement } from '../models/FullTeam'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getTeam = (config: HLTVConfig) => async ({
   id
@@ -12,6 +13,9 @@ export const getTeam = (config: HLTVConfig) => async ({
     `${config.hltvUrl}/stats/teams/events/${id}/-`,
     config.loadPage
   )
+
+  checkForRateLimiting(t$)
+  checkForRateLimiting(e$)
 
   const name = t$('.profile-team-name').text()
   const logo = `${config.hltvStaticUrl}/images/team/logo/${id}`

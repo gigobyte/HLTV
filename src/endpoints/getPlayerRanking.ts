@@ -7,6 +7,7 @@ import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { BestOfFilter } from '../enums/BestOfFilter'
 import { Team } from '../models/Team'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getPlayerRanking = (config: HLTVConfig) => async ({
   startDate,
@@ -43,11 +44,14 @@ export const getPlayerRanking = (config: HLTVConfig) => async ({
     config.loadPage
   )
 
+  checkForRateLimiting($)
+
   return toArray($('.player-ratings-table tbody tr')).map((playerRow) => {
     const id = Number(
       playerRow.find('.playerCol a').first().attr('href')!.split('/')[3]
     )
-    const country = playerRow.find('.playerCol img.flag').eq(0).attr('alt') || ''
+    const country =
+      playerRow.find('.playerCol img.flag').eq(0).attr('alt') || ''
     const name = playerRow.find('.playerCol').text()
     const rating = Number(playerRow.find('.ratingCol').text())
     const teams: Team[] = toArray(playerRow.find('.teamCol a')).map(

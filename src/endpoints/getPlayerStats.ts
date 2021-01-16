@@ -6,6 +6,7 @@ import { MatchType } from '../enums/MatchType'
 import { RankingFilter } from '../enums/RankingFilter'
 import { fetchPage } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getPlayerStats = (config: HLTVConfig) => async ({
   id,
@@ -31,6 +32,8 @@ export const getPlayerStats = (config: HLTVConfig) => async ({
     `${config.hltvUrl}/stats/players/${id}/-?${query}`,
     config.loadPage
   )
+
+  checkForRateLimiting($)
 
   const name = $('.summaryRealname div').text() || undefined
   const ign = $('.context-item-name').text()

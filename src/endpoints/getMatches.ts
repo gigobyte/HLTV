@@ -5,11 +5,14 @@ import { Team } from '../models/Team'
 import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getMatches = (config: HLTVConfig) => async (): Promise<
   (UpcomingMatch | LiveMatch)[]
 > => {
   const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
+
+  checkForRateLimiting($)
 
   const liveMatches: LiveMatch[] = toArray($('.liveMatch-container')).map(
     (matchEl) => {

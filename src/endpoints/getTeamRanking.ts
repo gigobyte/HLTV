@@ -2,6 +2,7 @@ import { TeamRanking } from '../models/TeamRanking'
 import { Team } from '../models/Team'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getTeamRanking = (config: HLTVConfig) => async ({
   year = '',
@@ -27,6 +28,8 @@ export const getTeamRanking = (config: HLTVConfig) => async ({
       config.loadPage
     )
   }
+
+  checkForRateLimiting($)
 
   const teams = toArray($('.ranked-team')).map((teamEl) => {
     const points = Number(

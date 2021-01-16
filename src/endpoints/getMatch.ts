@@ -20,6 +20,7 @@ import {
   getMapSlug,
   getMatchPlayer
 } from '../utils/mappers'
+import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 const getTeamId = (el: cheerio.Cheerio): number | undefined => {
   if (el.find('a').length) {
@@ -38,6 +39,8 @@ export const getMatch = (config: HLTVConfig) => async ({
     `${config.hltvUrl}/matches/${id}/-`,
     config.loadPage
   )
+
+  checkForRateLimiting($)
 
   const title = $('.timeAndEvent .text').text().trim() || undefined
   const date = Number($('.timeAndEvent .date').attr('data-unix'))
