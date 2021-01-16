@@ -348,8 +348,12 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
 |   startDate   |                                          string?                                          |       -       |      -      |
 |    endDate    |                                          string?                                          |       -       |      -      |
-|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
+|   matchType   | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?         |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
+|     maps      | [Map[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?                   |       -       |      -      |
+|  minMapCount  | number?                                                                                   |       -       |      -      |
+|    country    | string[]                                                                                  |       -       |      -      |
+|    bestOfX    | [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?   |       -       |      -      |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
