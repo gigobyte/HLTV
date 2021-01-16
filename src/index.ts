@@ -25,6 +25,7 @@ import { ThreadCategory } from './enums/ThreadCategory'
 import { ContentFilter } from './enums/ContentFilter'
 import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
+import { BestOfFilter } from './enums/BestOfFilter'
 import { getEvents } from './endpoints/getEvents'
 import { getOngoingEvents } from './endpoints/getOngoingEvents'
 import { defaultLoadPage } from './utils/mappers'
@@ -86,5 +87,6 @@ export {
   ThreadCategory,
   WinType,
   EventSize,
-  ContentFilter
+  ContentFilter,
+  BestOfFilter
 }
