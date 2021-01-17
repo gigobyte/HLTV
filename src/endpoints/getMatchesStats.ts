@@ -7,6 +7,7 @@ import { MapSlug } from '../enums/MapSlug'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { RankingFilter } from '../enums/RankingFilter'
 
 export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
@@ -19,7 +20,7 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
   endDate?: string
   matchType?: MatchType
   maps?: Map[]
-  rankingFilter?: string
+  rankingFilter?: RankingFilter
 } = {}): Promise<MatchStats[]> => {
   const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${[
     '',
