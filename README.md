@@ -112,12 +112,13 @@ HLTV.getMatches().then((res) => {
 
 Parses all matches from the `hltv.org/stats/matches` page (1 request per page of results)
 
-|  Option   |                                       Type                                        | Default Value | Description |
-| :-------: | :-------------------------------------------------------------------------------: | :-----------: | :---------: |
-| startDate |                                      string?                                      |       -       |      -      |
-|  endDate  |                                      string?                                      |       -       |      -      |
-| matchType | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? |       -       |      -      |
-|   maps    |      [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?      |       -       |      -      |
+|  Option       |                                       Type                                        | Default Value |         Description          |
+| :-------:     | :-------------------------------------------------------------------------------: | :-----------: |     :-----------------:      |
+| startDate     |                                      string?                                      |       -       |              -               |
+|  endDate      |                                      string?                                      |       -       |              -               |
+| matchType     | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)? |       -       |              -               |
+|   maps        |      [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?      |       -       |              -               |
+| rankingFilter |                                      string?                                      |       -       |         eg. "Top10"          |
 
 ```javascript
 HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
