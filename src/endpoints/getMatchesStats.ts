@@ -7,22 +7,25 @@ import { MapSlug } from '../enums/MapSlug'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { RankingFilter } from '../enums/RankingFilter'
 
 export const getMatchesStats = (config: HLTVConfig) => async ({
   startDate,
   endDate,
   matchType,
-  maps = []
+  maps = [],
+  rankingFilter
 }: {
   startDate?: string
   endDate?: string
   matchType?: MatchType
   maps?: Map[]
+  rankingFilter?: RankingFilter
 } = {}): Promise<MatchStats[]> => {
   const query = `startDate=${startDate}&endDate=${endDate}&matchtype=${matchType}${[
     '',
     ...maps
-  ].join('&maps=')}`
+  ].join('&maps=')}&rankingFilter=${rankingFilter}`
 
   let page = 0
   let $: cheerio.Root
