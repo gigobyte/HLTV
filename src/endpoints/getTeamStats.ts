@@ -6,18 +6,24 @@ import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getTeamStats = (config: HLTVConfig) => async ({
   id,
-  currentRosterOnly
+  currentRosterOnly,
+  startDate,
+  endDate
 }: {
   id: number
   currentRosterOnly?: boolean
+  startDate?: string,
+  endDate?: string
 }): Promise<FullTeamStats> => {
+  const query = `startDate=${startDate}&endDate=${endDate}`
+
   let currentRosterURL = ''
   let matchesURL = ''
   let eventsURL = ''
   let mapsURL = ''
 
   let $ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/${id}/-`,
+    `${config.hltvUrl}/stats/teams/${id}/-?${query}`,
     config.loadPage
   )
 
@@ -49,18 +55,18 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       .map((x) => x.id)
       .join('&lineup=')}&minLineupMatch=0`
 
-    matchesURL = `${config.hltvUrl}/stats/lineup/matches?${currentRosterURL}`
-    eventsURL = `${config.hltvUrl}/stats/lineup/events?${currentRosterURL}`
-    mapsURL = `${config.hltvUrl}/stats/lineup/maps?${currentRosterURL}`
+    matchesURL = `${config.hltvUrl}/stats/lineup/matches?${currentRosterURL}&${query}`
+    eventsURL = `${config.hltvUrl}/stats/lineup/events?${currentRosterURL}&${query}`
+    mapsURL = `${config.hltvUrl}/stats/lineup/maps?${currentRosterURL}&${query}`
 
     $ = await fetchPage(
       `${config.hltvUrl}/stats/lineup?${currentRosterURL}`,
       config.loadPage
     )
   } else {
-    matchesURL = `${config.hltvUrl}/stats/teams/matches/${id}/-`
-    eventsURL = `${config.hltvUrl}/stats/teams/events/${id}/-`
-    mapsURL = `${config.hltvUrl}/stats/teams/maps/${id}/-`
+    matchesURL = `${config.hltvUrl}/stats/teams/matches/${id}/-?${query}`
+    eventsURL = `${config.hltvUrl}/stats/teams/events/${id}/-?${query}`
+    mapsURL = `${config.hltvUrl}/stats/teams/maps/${id}/-?${query}`
   }
   const m$ = await fetchPage(`${matchesURL}`, config.loadPage)
 

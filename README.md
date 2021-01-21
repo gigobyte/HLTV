@@ -274,6 +274,8 @@ Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `
 | :---------------: | :------: | :-----------: | :----------------------------------------: |
 |        id         |  number  |       -       |                The team id                 |
 | currentRosterOnly | boolean? |     false     | Return stats about the current roster only |
+|     startDate     |  string? |       -       |                    -                       |
+|      endDate      |  string? |       -       |                    -                       |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
