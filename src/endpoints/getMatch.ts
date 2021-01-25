@@ -146,22 +146,20 @@ export const getMatch = (config: HLTVConfig) => async ({
 
   let oddsCommunity: CommunityOddResult | undefined
 
-  if ($('.pick-a-winner-team').length == 2) {
+  if ($('.pick-a-winner').length > 0) {
     oddsCommunity = {
       team1: percentageToDecimalOdd(
         Number(
-          $('.pick-a-winner-team')
-            .first()
-            .find('.percentage')
+          $('.pick-a-winner-team.team1>.percentage')
+            .first() // query returns two elements due to mobile version
             .text()
             .replace('%', '')
         )
       ),
       team2: percentageToDecimalOdd(
         Number(
-          $('.pick-a-winner-team')
-            .last()
-            .find('.percentage')
+          $('.pick-a-winner-team.team2>.percentage')
+            .first()
             .text()
             .replace('%', '')
         )
