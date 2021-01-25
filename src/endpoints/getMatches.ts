@@ -16,7 +16,8 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
 
   const liveMatches: LiveMatch[] = toArray($('.liveMatch-container')).map(
     (matchEl) => {
-      const id = Number(matchEl.find('.a-reset').attr('href')!.split('/')[2])
+      const url = matchEl.find('.a-reset').attr('href')!
+      const id = Number(url.split('/')[2])
       const teamNameEls = matchEl.find('.matchTeamName')
       const stars = 5 - matchEl.find('.matchRating i.faded').length
 
@@ -40,14 +41,14 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
           ) || undefined
       }
 
-      return { id, team1, team2, event, format, stars, live: true }
+      return { id, url, team1, team2, event, format, stars, live: true }
     }
   )
 
   const upcomingMatches: UpcomingMatch[] = toArray($('.upcomingMatch')).map(
     (matchEl) => {
-      const link = matchEl.find('.a-reset')
-      const id = Number(link.attr('href')!.split('/')[2])
+      const url = matchEl.find('.a-reset').attr('href')!
+      const id = Number(url.split('/')[2])
       const date =
         Number(matchEl.find('.matchTime').attr('data-unix')) || undefined
       const title = matchEl.find('.matchInfoEmpty').text() || undefined
@@ -82,6 +83,7 @@ export const getMatches = (config: HLTVConfig) => async (): Promise<
 
       return {
         id,
+        url,
         date,
         team1,
         team2,

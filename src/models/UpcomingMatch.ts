@@ -3,6 +3,7 @@ import { Event } from './Event'
 
 export interface UpcomingMatch {
   readonly id: number
+  readonly url: string
   readonly team1?: Team
   readonly team2?: Team
   readonly date?: number

@@ -31,14 +31,13 @@ const getTeamId = (el: cheerio.Cheerio): number | undefined => {
 }
 
 export const getMatch = (config: HLTVConfig) => async ({
-  id
+  id,
+  url
 }: {
   id: number
+  url?: string 
 }): Promise<FullMatch> => {
-  const $ = await fetchPage(
-    `${config.hltvUrl}/matches/${id}/-`,
-    config.loadPage
-  )
+  const $ = url ? await fetchPage(`${config.hltvUrl}${url}`, config.loadPage) : await fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage)
 
   checkForRateLimiting($)
 
