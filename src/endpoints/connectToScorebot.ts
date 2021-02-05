@@ -47,7 +47,9 @@ export const connectToScorebot = (config: HLTVConfig) => ({
         onConnect()
       }
 
-      socket.emit('readyForMatch', initObject)
+      if (!reconnected) {
+        socket.emit('readyForMatch', initObject)
+      }
 
       socket.on('scoreboard', (data) => {
         if (onScoreboardUpdate) {
@@ -69,6 +71,7 @@ export const connectToScorebot = (config: HLTVConfig) => ({
     })
 
     socket.on('reconnect', () => {
+      reconnected = true
       socket.emit('readyForMatch', initObject)
     })
 
