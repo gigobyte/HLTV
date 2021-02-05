@@ -40,6 +40,8 @@ export const connectToScorebot = (config: HLTVConfig) => ({
       listId: matchId
     })
 
+    let reconnected = false
+
     socket.on('connect', () => {
       const done = () => socket.close()
 
