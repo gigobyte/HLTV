@@ -1,6 +1,6 @@
 import { FullTeam, Result, Achievement } from '../models/FullTeam'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
+import { fetchPage, generateRandomSuffix, toArray } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getTeam = (config: HLTVConfig) => async ({
@@ -8,9 +8,12 @@ export const getTeam = (config: HLTVConfig) => async ({
 }: {
   id: number
 }): Promise<FullTeam> => {
-  const t$ = await fetchPage(`${config.hltvUrl}/team/${id}/-`, config.loadPage)
+  const t$ = await fetchPage(
+    `${config.hltvUrl}/team/${id}/${generateRandomSuffix()}`,
+    config.loadPage
+  )
   const e$ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/events/${id}/-`,
+    `${config.hltvUrl}/stats/teams/events/${id}/${generateRandomSuffix()}`,
     config.loadPage
   )
 

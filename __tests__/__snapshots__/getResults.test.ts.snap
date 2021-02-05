@@ -18,8 +18,8 @@ Array [
       "name": "fnatic",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
-      "name": "NiP",
+      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "name": "NIP",
     },
   },
   Object {
@@ -38,8 +38,8 @@ Array [
       "name": "Envy",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
-      "name": "NiP",
+      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "name": "NIP",
     },
   },
   Object {
@@ -74,8 +74,8 @@ Array [
     "result": "2 - 1",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
-      "name": "NiP",
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
     },
     "team2": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
@@ -98,7 +98,7 @@ Array [
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&w=50&s=089859161a786a28a444eb988a0c377b",
       "name": "Keyd",
     },
   },
@@ -194,7 +194,7 @@ Array [
     "result": "16 - 8",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&w=50&s=089859161a786a28a444eb988a0c377b",
       "name": "Keyd",
     },
     "team2": Object {
@@ -214,7 +214,7 @@ Array [
     "result": "10 - 16",
     "stars": 0,
     "team1": Object {
-      "logo": "https://static.hltv.org/images/team/logo/0",
+      "logo": "/img/static/team/placeholder.svg",
       "name": "3DMAX",
     },
     "team2": Object {
@@ -238,8 +238,8 @@ Array [
       "name": "CLG",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
-      "name": "NiP",
+      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "name": "NIP",
     },
   },
   Object {
@@ -254,11 +254,11 @@ Array [
     "result": "12 - 16",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&s=5f6b99e45ac369c4989b01d0ee8acd6c",
+      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&w=50&s=ec14f7cd7c1546af9653914c5ff9b419",
       "name": "HellRaisers",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&w=50&s=089859161a786a28a444eb988a0c377b",
       "name": "Keyd",
     },
   },
@@ -298,7 +298,7 @@ Array [
       "name": "Virtus.pro",
     },
     "team2": Object {
-      "logo": "https://static.hltv.org/images/team/logo/0",
+      "logo": "/img/static/team/placeholder.svg",
       "name": "3DMAX",
     },
   },
@@ -314,11 +314,11 @@ Array [
     "result": "16 - 9",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
-      "name": "NiP",
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&s=594f080c2a272c370eba43489c1bd5d9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/IpOaI22Ty6oH_T5ogXr2M3.png?ixlib=java-2.1.0&w=50&s=089859161a786a28a444eb988a0c377b",
       "name": "Keyd",
     },
   },
@@ -338,7 +338,7 @@ Array [
       "name": "CLG",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&s=5f6b99e45ac369c4989b01d0ee8acd6c",
+      "logo": "https://img-cdn.hltv.org/teamlogo/pISBtHPYUFG-04nIc8ReCS.png?ixlib=java-2.1.0&w=50&s=ec14f7cd7c1546af9653914c5ff9b419",
       "name": "HellRaisers",
     },
   },
@@ -354,7 +354,7 @@ Array [
     "result": "3 - 16",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&w=50&s=039cf4c7cf325d7ef2b4627160ece5b2",
       "name": "Vox Eminor",
     },
     "team2": Object {
@@ -414,7 +414,7 @@ Array [
     "result": "16 - 2",
     "stars": 0,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&w=50&s=039cf4c7cf325d7ef2b4627160ece5b2",
       "name": "Vox Eminor",
     },
     "team2": Object {
@@ -498,7 +498,7 @@ Array [
       "name": "fnatic",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&s=ed338d0437c80d1b2b1b2d1ce210c51c",
+      "logo": "https://img-cdn.hltv.org/teamlogo/OvT587NoP_3A9LWf80f-rr.png?ixlib=java-2.1.0&w=50&s=039cf4c7cf325d7ef2b4627160ece5b2",
       "name": "Vox Eminor",
     },
   },

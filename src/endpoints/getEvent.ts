@@ -1,6 +1,11 @@
 import { FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray, getMapSlug } from '../utils/mappers'
+import {
+  fetchPage,
+  toArray,
+  getMapSlug,
+  generateRandomSuffix
+} from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
@@ -9,7 +14,10 @@ export const getEvent = (config: HLTVConfig) => async ({
 }: {
   id: number
 }): Promise<FullEvent> => {
-  const $ = await fetchPage(`${config.hltvUrl}/events/${id}/-`, config.loadPage)
+  const $ = await fetchPage(
+    `${config.hltvUrl}/events/${id}/${generateRandomSuffix()}`,
+    config.loadPage
+  )
 
   checkForRateLimiting($)
 

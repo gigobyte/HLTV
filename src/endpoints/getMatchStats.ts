@@ -8,7 +8,7 @@ import {
 } from '../models/FullMatchStats'
 import { Event } from '../models/Event'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
+import { fetchPage, generateRandomSuffix, toArray } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
 export const getMatchStats = (config: HLTVConfig) => async ({
@@ -46,7 +46,7 @@ export const getMatchStats = (config: HLTVConfig) => async ({
   }
 
   const $ = await fetchPage(
-    `${config.hltvUrl}/stats/matches/${id}/-`,
+    `${config.hltvUrl}/stats/matches/${id}/${generateRandomSuffix()}`,
     config.loadPage
   )
 

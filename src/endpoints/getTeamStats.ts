@@ -1,6 +1,12 @@
 import { FullTeamStats } from '../models/FullTeamStats'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray, getTimestamp, getMapSlug } from '../utils/mappers'
+import {
+  fetchPage,
+  toArray,
+  getTimestamp,
+  getMapSlug,
+  generateRandomSuffix
+} from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
@@ -12,7 +18,7 @@ export const getTeamStats = (config: HLTVConfig) => async ({
 }: {
   id: number
   currentRosterOnly?: boolean
-  startDate?: string,
+  startDate?: string
   endDate?: string
 }): Promise<FullTeamStats> => {
   const query = `startDate=${startDate}&endDate=${endDate}`
@@ -64,9 +70,15 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       config.loadPage
     )
   } else {
-    matchesURL = `${config.hltvUrl}/stats/teams/matches/${id}/-?${query}`
-    eventsURL = `${config.hltvUrl}/stats/teams/events/${id}/-?${query}`
-    mapsURL = `${config.hltvUrl}/stats/teams/maps/${id}/-?${query}`
+    matchesURL = `${
+      config.hltvUrl
+    }/stats/teams/matches/${id}/${generateRandomSuffix()}?${query}`
+    eventsURL = `${
+      config.hltvUrl
+    }/stats/teams/events/${id}/${generateRandomSuffix()}?${query}`
+    mapsURL = `${
+      config.hltvUrl
+    }/stats/teams/maps/${id}/${generateRandomSuffix()}?${query}`
   }
   const m$ = await fetchPage(`${matchesURL}`, config.loadPage)
 

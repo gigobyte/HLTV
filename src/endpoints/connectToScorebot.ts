@@ -1,7 +1,7 @@
 import * as io from 'socket.io-client'
 import { ScoreboardUpdate } from '../models/ScoreboardUpdate'
 import { LogUpdate } from '../models/LogUpdate'
-import { fetchPage } from '../utils/mappers'
+import { fetchPage, generateRandomSuffix } from '../utils/mappers'
 import { HLTVConfig } from '../config'
 
 export type ConnectToScorebotParams = {
@@ -21,7 +21,10 @@ export const connectToScorebot = (config: HLTVConfig) => ({
   onConnect,
   onDisconnect
 }: ConnectToScorebotParams) => {
-  fetchPage(`${config.hltvUrl}/matches/${id}/-`, config.loadPage).then(($) => {
+  fetchPage(
+    `${config.hltvUrl}/matches/${id}/${generateRandomSuffix()}`,
+    config.loadPage
+  ).then(($) => {
     const url = $('#scoreboardElement')
       .attr('data-scorebot-url')!
       .split(',')

@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
 import * as request from 'request'
+import { v4 as uuidv4 } from 'uuid'
 import { Team } from '../models/Team'
 import { Veto } from '../models/Veto'
 import { Player } from '../models/Player'
@@ -8,6 +9,10 @@ import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
 import { Agent as HttpsAgent } from 'https'
 import { Agent as HttpAgent } from 'http'
+
+export const generateRandomSuffix = () => {
+  return uuidv4()
+}
 
 export const defaultLoadPage = (
   httpAgent: HttpsAgent | HttpAgent | undefined

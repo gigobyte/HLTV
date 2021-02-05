@@ -1,7 +1,7 @@
 import { FullPlayer } from '../models/FullPlayer'
 import { Team } from '../models/Team'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
+import { fetchPage, generateRandomSuffix, toArray } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
@@ -10,7 +10,10 @@ export const getPlayer = (config: HLTVConfig) => async ({
 }: {
   id: number
 }): Promise<FullPlayer> => {
-  const $ = await fetchPage(`${config.hltvUrl}/player/${id}/-`, config.loadPage)
+  const $ = await fetchPage(
+    `${config.hltvUrl}/player/${id}/${generateRandomSuffix()}`,
+    config.loadPage
+  )
 
   checkForRateLimiting($)
 

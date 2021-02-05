@@ -18,7 +18,8 @@ import {
   toArray,
   mapVetoElementToModel,
   getMapSlug,
-  getMatchPlayer
+  getMatchPlayer,
+  generateRandomSuffix
 } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
@@ -36,7 +37,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   id: number
 }): Promise<FullMatch> => {
   const $ = await fetchPage(
-    `${config.hltvUrl}/matches/${id}/-`,
+    `${config.hltvUrl}/matches/${id}/${generateRandomSuffix()}`,
     config.loadPage
   )
 
