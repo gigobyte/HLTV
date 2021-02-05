@@ -9,34 +9,27 @@ import { BestOfFilter } from '../enums/BestOfFilter'
 import { Team } from '../models/Team'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 
-export const getPlayerRanking = (config: HLTVConfig) => async ({
-  startDate,
-  endDate,
-  matchType,
-  rankingFilter,
-  maps,
-  minMapCount,
-  country,
-  bestOfX
-}: {
-  startDate?: string
-  endDate?: string
-  matchType?: MatchType
-  rankingFilter?: RankingFilter
-  maps?: Map[]
-  minMapCount?: number
-  country?: string[]
-  bestOfX?: BestOfFilter
-}): Promise<PlayerRanking[]> => {
+export const getPlayerRanking = (config: HLTVConfig) => async (
+  options: {
+    startDate?: string
+    endDate?: string
+    matchType?: MatchType
+    rankingFilter?: RankingFilter
+    maps?: Map[]
+    minMapCount?: number
+    country?: string[]
+    bestOfX?: BestOfFilter
+  } = {}
+): Promise<PlayerRanking[]> => {
   const query = stringify({
-    startDate,
-    endDate,
-    matchType,
-    rankingFilter,
-    maps,
-    minMapCount,
-    country,
-    bestOfX
+    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(options.endDate ? { endDate: options.endDate } : {}),
+    ...(options.matchType ? { matchType: options.matchType } : {}),
+    ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {}),
+    ...(options.maps ? { maps: options.maps } : {}),
+    ...(options.minMapCount ? { minMapCount: options.minMapCount } : {}),
+    ...(options.country ? { country: options.country } : {}),
+    ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
   })
 
   const $ = await fetchPage(
