@@ -12,5 +12,9 @@ export const getPlayerByName = (config: HLTVConfig) => async ({
   )
   const firstResult = pageContent[0].players[0]
 
+  if (!firstResult) {
+    throw new Error(`Player ${name} not found`)
+  }
+
   return HLTV.getPlayer({ id: firstResult.id })
 }
