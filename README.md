@@ -32,6 +32,7 @@ Table of contents
   - [getOngoingEvents](#getOngoingEvents)
   - [getEvents](#getevents)
   - [getEvent](#getevent)
+  - [getEventByName](#geteventbyname)
   - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
@@ -439,6 +440,24 @@ HLTV.getEvent({id: 3389}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
+
+---
+
+#### getEventByName
+
+Same as getEvent but accepts a team name instead of ID. (2 requests)
+
+| Option |  Type  | Default value |   Description   |
+| :----: | :----: | :-----------: | :-------------: |
+|  name  | string |       -       | The event name  |
+
+```javascript
+HLTV.getTeamByName({name: "IEM Katowice 2019"}).then(res => {
+    ...
+})
+```
+
+**[See getEvent schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
 
 ---
 
