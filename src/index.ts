@@ -10,10 +10,12 @@ import { getResults } from './endpoints/getResults'
 import { getStreams } from './endpoints/getStreams'
 import { getTeamRanking } from './endpoints/getTeamRanking'
 import { getTeam } from './endpoints/getTeam'
+import { getTeamByName } from './endpoints/getTeamByName'
 import { getTeamStats } from './endpoints/getTeamStats'
 import { getPlayer } from './endpoints/getPlayer'
 import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getEvent } from './endpoints/getEvent'
+import { getEventByName } from './endpoints/getEventByName'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
 import { MapSlug } from './enums/MapSlug'
@@ -60,10 +62,12 @@ export class HLTVFactory {
   getStreams = getStreams(this.config)
   getTeamRanking = getTeamRanking(this.config)
   getTeam = getTeam(this.config)
+  getTeamByName = getTeamByName(this.config)
   getTeamStats = getTeamStats(this.config)
   getPlayer = getPlayer(this.config)
   getPlayerByName = getPlayerByName(this.config)
   getEvent = getEvent(this.config)
+  getEventByName = getEventByName(this.config)
   getEvents = getEvents(this.config)
   getOngoingEvents = getOngoingEvents(this.config)
   getPlayerStats = getPlayerStats(this.config)

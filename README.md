@@ -23,6 +23,7 @@ Table of contents
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
   - [getTeam](#getteam)
+  - [getTeamByName](#getteambyname)
   - [getTeamStats](#getteamstats)
   - [getPlayer](#getplayer)
   - [getPlayerByName](#getplayerbyname)
@@ -31,6 +32,7 @@ Table of contents
   - [getOngoingEvents](#getOngoingEvents)
   - [getEvents](#getevents)
   - [getEvent](#getevent)
+  - [getEventByName](#geteventbyname)
   - [connectToScorebot](#connecttoscorebot)
 
 ## Installation
@@ -266,6 +268,24 @@ HLTV.getTeam({id: 6137}).then(res => {
 
 ---
 
+#### getTeamByName
+
+Same as getTeam but accepts a team name instead of ID. (2 requests)
+
+| Option |  Type  | Default value |   Description   |
+| :----: | :----: | :-----------: | :-------------: |
+|  name  | string |       -       |  The team name  |
+
+```javascript
+HLTV.getTeamByName({name: "BIG"}).then(res => {
+    ...
+})
+```
+
+**[See getTeam schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
+
+---
+
 #### getTeamStats
 
 Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `currentRosterOnly` is true)
@@ -369,7 +389,7 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 ---
 
-### getEvents
+#### getEvents
 
 Parses the info from the `hltv.org/events` page (1 request)
 
@@ -387,7 +407,7 @@ HLTV.getEvents().then(res => {
 
 ---
 
-### getOngoingEvents
+#### getOngoingEvents
 
 Parses the info from the `hltv.org/events` page (1 request)
 
@@ -405,7 +425,7 @@ HLTV.getOngoingEvents().then(res => {
 
 ---
 
-### getEvent
+#### getEvent
 
 Parses the info from the `hltv.org/event/` page (1 request)
 
@@ -420,6 +440,24 @@ HLTV.getEvent({id: 3389}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
+
+---
+
+#### getEventByName
+
+Same as getEvent but accepts a event name instead of ID. (2 requests)
+
+| Option |  Type  | Default value |   Description   |
+| :----: | :----: | :-----------: | :-------------: |
+|  name  | string |       -       | The event name  |
+
+```javascript
+HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
+    ...
+})
+```
+
+**[See getEvent schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
 
 ---
 
