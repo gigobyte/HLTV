@@ -445,14 +445,14 @@ HLTV.getEvent({id: 3389}).then(res => {
 
 #### getEventByName
 
-Same as getEvent but accepts a team name instead of ID. (2 requests)
+Same as getEvent but accepts a event name instead of ID. (2 requests)
 
 | Option |  Type  | Default value |   Description   |
 | :----: | :----: | :-----------: | :-------------: |
 |  name  | string |       -       | The event name  |
 
 ```javascript
-HLTV.getTeamByName({name: "IEM Katowice 2019"}).then(res => {
+HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
     ...
 })
 ```
