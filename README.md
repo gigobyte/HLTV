@@ -23,6 +23,7 @@ Table of contents
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
   - [getTeam](#getteam)
+  - [getTeamByName](#getteambyname)
   - [getTeamStats](#getteamstats)
   - [getPlayer](#getplayer)
   - [getPlayerByName](#getplayerbyname)
@@ -263,6 +264,24 @@ HLTV.getTeam({id: 6137}).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
+
+---
+
+#### getTeamByName
+
+Same as getTeam but accepts a team name instead of ID. (2 requests)
+
+| Option |  Type  | Default value |   Description   |
+| :----: | :----: | :-----------: | :-------------: |
+|  name  | string |       -       |  The team name  |
+
+```javascript
+HLTV.getTeamByName({name: "BIG"}).then(res => {
+    ...
+})
+```
+
+**[See getTeam schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
 
 ---
 
