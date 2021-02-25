@@ -15,6 +15,7 @@ import { getTeamStats } from './endpoints/getTeamStats'
 import { getPlayer } from './endpoints/getPlayer'
 import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getEvent } from './endpoints/getEvent'
+import { getEventByName } from './endpoints/getEventByName'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
 import { MapSlug } from './enums/MapSlug'
@@ -66,6 +67,7 @@ export class HLTVFactory {
   getPlayer = getPlayer(this.config)
   getPlayerByName = getPlayerByName(this.config)
   getEvent = getEvent(this.config)
+  getEventByName = getEventByName(this.config)
   getEvents = getEvents(this.config)
   getOngoingEvents = getOngoingEvents(this.config)
   getPlayerStats = getPlayerStats(this.config)
@@ -90,5 +92,5 @@ export {
   WinType,
   EventSize,
   ContentFilter,
-  BestOfFilter
+    BestOfFilter
 }
