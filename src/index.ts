@@ -92,5 +92,5 @@ export {
   WinType,
   EventSize,
   ContentFilter,
-    BestOfFilter
+  BestOfFilter
 }
