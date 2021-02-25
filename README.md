@@ -389,7 +389,7 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 ---
 
-### getEvents
+#### getEvents
 
 Parses the info from the `hltv.org/events` page (1 request)
 
@@ -407,7 +407,7 @@ HLTV.getEvents().then(res => {
 
 ---
 
-### getOngoingEvents
+#### getOngoingEvents
 
 Parses the info from the `hltv.org/events` page (1 request)
 
@@ -425,7 +425,7 @@ HLTV.getOngoingEvents().then(res => {
 
 ---
 
-### getEvent
+#### getEvent
 
 Parses the info from the `hltv.org/event/` page (1 request)
 
