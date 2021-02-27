@@ -2,7 +2,6 @@ import { MatchResult } from '../models/MatchResult'
 import { Event } from '../models/Event'
 import { ResultTeam } from '../models/ResultTeam'
 import { MapSlug } from '../enums/MapSlug'
-import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray, getMatchFormatAndMap } from '../utils/mappers'
 import { ContentFilter } from '../enums/ContentFilter'
@@ -36,6 +35,7 @@ export const getResults = (config: HLTVConfig) => async ({
   } else if (endPage < 1) {
     console.error('getLatestResults: endPage cannot be less than 1')
   }
+
   let matches: MatchResult[] = []
   for (let i = startPage; i < endPage; i++) {
     let url = `${config.hltvUrl}/results?offset=${i * 100}`
@@ -75,21 +75,17 @@ export const getResults = (config: HLTVConfig) => async ({
           format: string
         }
 
-        let idOfEvent =
-          typeof eventID === 'undefined'
-            ? popSlashSource(matchEl.find('.event-logo'))!.split('.')[0]
-            : eventID
-        let nameOfEvent =
+        const nameOfEvent =
           typeof eventID === 'undefined'
             ? matchEl.find('.event-logo').attr('alt')!
             : $('.eventname').text()
 
         const event: Event = {
           name: nameOfEvent,
-          id: Number(idOfEvent)
+          id: eventID ? Number(eventID) : undefined
         }
 
-        let eventDate =
+        const eventDate =
           typeof eventID === 'undefined'
             ? matchEl.parent().attr('data-zonedgrouping-entry-unix')
             : $('.eventdate span').first().data('unix')
