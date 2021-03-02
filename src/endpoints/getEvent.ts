@@ -1,4 +1,4 @@
-import { FullEvent } from '../models/FullEvent'
+import { EventTeam, FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
 import {
   fetchPage,
@@ -8,6 +8,8 @@ import {
 } from '../utils/mappers'
 import { popSlashSource } from '../utils/parsing'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+
+const notNull = <T>(x: T | null): x is T => x !== null
 
 export const getEvent = (config: HLTVConfig) => async ({
   id
@@ -34,16 +36,25 @@ export const getEvent = (config: HLTVConfig) => async ({
     code: popSlashSource($('img.flag'))!.split('.')[0]
   }
 
-  const teams = toArray($('.team-box')).map((teamEl) => ({
-    name: teamEl.find('.logo').attr('title')!,
-    id:
-      Number(teamEl.find('.team-name a').attr('href')!.split('/')[2]) ||
-      undefined,
-    reasonForParticipation: teamEl.find('.sub-text').text().trim() || undefined,
-    rankDuringEvent:
-      Number(teamEl.find('.event-world-rank').text().replace('#', '')) ||
-      undefined
-  }))
+  const teams: EventTeam[] = toArray($('.team-box'))
+    .map((teamEl) => {
+      if (!teamEl.find('.team-name a').length) {
+        return null
+      }
+
+      return {
+        name: teamEl.find('.logo').attr('title')!,
+        id:
+          Number(teamEl.find('.team-name a').attr('href')!.split('/')[2]) ||
+          undefined,
+        reasonForParticipation:
+          teamEl.find('.sub-text').text().trim() || undefined,
+        rankDuringEvent:
+          Number(teamEl.find('.event-world-rank').text().replace('#', '')) ||
+          undefined
+      }
+    })
+    .filter(notNull)
 
   const relatedEvents = toArray($('.related-event')).map((eventEl) => ({
     name: eventEl.find('.event-name').text(),
