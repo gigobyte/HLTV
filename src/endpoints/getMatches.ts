@@ -22,7 +22,7 @@ export const getMatches = (config: HLTVConfig) => async ({
   filter
 }: GetMatchesArguments = {} ): Promise<(UpcomingMatch | LiveMatch)[]> => {
   const query = stringify({
-    ...(eventID ? { eventID } : {}),
+    ...(eventID ? { event: eventID } : {}),
     ...(eventType ? { eventType } : {}),
     ...(filter ? { predefinedFilter: filter } : {})
   })
