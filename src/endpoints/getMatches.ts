@@ -10,15 +10,17 @@ import { checkForRateLimiting } from '../utils/checkForRateLimiting'
 import { MatchEventType } from '../enums/MatchEventType'
 import { MatchFilter } from '../enums/MatchFilter'
 
+type GetMatchesArguments = {
+  eventID?: number
+  eventType?: MatchEventType
+  filter?: MatchFilter
+}
+
 export const getMatches = (config: HLTVConfig) => async ({
   eventID,
   eventType,
   filter
-}: {
-  eventID?: number
-  eventType?: MatchEventType
-  filter?: MatchFilter
-}): Promise<(UpcomingMatch | LiveMatch)[]> => {
+}: GetMatchesArguments = {} ): Promise<(UpcomingMatch | LiveMatch)[]> => {
   const query = stringify({
     ...(eventID ? { eventID } : {}),
     ...(eventType ? { eventType } : {}),
