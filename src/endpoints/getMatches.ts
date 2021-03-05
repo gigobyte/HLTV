@@ -22,7 +22,7 @@ export const getMatches = (config: HLTVConfig) => async ({
   const query = stringify({
     ...(eventID ? { eventID } : {}),
     ...(eventType ? { eventType } : {}),
-    ...(filter ? { filter } : {})
+    ...(filter ? { predefinedFilter: filter } : {})
   })
   
   const $ = await fetchPage(`${config.hltvUrl}/matches?${query}`, config.loadPage)

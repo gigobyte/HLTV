@@ -94,11 +94,11 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 Parses all matches from the `hltv.org/matches/` page (1 request)
 
-|  Option   |                                            Type                                             | Default Value |              Description              |
-| :-------: | :-----------------------------------------------------------------------------------------: | :-----------: | :-----------------------------------: |
-|  eventID  |                                           number?                                           |       -       |      Filter matches by event ID.      |
-| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchEventType.ts)? |       -       |     Filter matches by event type.     |
-|  filter   |    [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchFilter.ts)?    |       -       | Filter matches by pre-set categories. |
+|  Option   |                                            Type                                             | Default Value |                          Description                           |
+| :-------: | :-----------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
+|  eventID  |                                           number?                                           |       -       |                  Filter matches by event ID.                   |
+| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchEventType.ts)? |       -       |                 Filter matches by event type.                  |
+|  filter   |    [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchFilter.ts)?    |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
