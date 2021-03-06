@@ -24,6 +24,7 @@ export const getEvent = (config: HLTVConfig) => async ({
   checkForRateLimiting($)
 
   const name = $('.eventname').text()
+  const eventLogo = $('.sidebar-first-level').find('.event-logo').attr('src')!
   const dateStart =
     Number($('td.eventdate span[data-unix]').first().attr('data-unix')) ||
     undefined
@@ -103,6 +104,7 @@ export const getEvent = (config: HLTVConfig) => async ({
   return {
     id,
     name,
+    eventLogo,
     dateStart,
     dateEnd,
     prizePool,
