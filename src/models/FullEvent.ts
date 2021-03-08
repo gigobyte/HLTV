@@ -24,6 +24,7 @@ export interface EventFormat {
 export interface FullEvent {
   id: number
   name: string
+  logo: string
   dateStart?: number
   dateEnd?: number
   prizePool: string
