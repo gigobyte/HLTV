@@ -45,7 +45,7 @@
     "@types/socket.io-client": "^1.4.32",
     "jest": "26.6.3",
     "prettier": "^2.0.1",
-    "ts-jest": "26.5.2",
+    "ts-jest": "26.5.3",
     "ts-node": "^9.0.0",
     "typescript": "4.2.2"
   },
