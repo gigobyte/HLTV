@@ -39,7 +39,7 @@ export const getPlayer = (config: HLTVConfig) => async ({
   const twitter = $('.twitter').parent().attr('href')
   const twitch = $('.twitch').parent().attr('href')
   const facebook = $('.facebook').parent().attr('href')
-  const instagram = $('instagram').parent().attr('href')
+  const instagram = $('.instagram').parent().attr('href')
 
   const country = isStandardPlayer
     ? {
