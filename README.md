@@ -94,9 +94,11 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 Parses all matches from the `hltv.org/matches/` page (1 request)
 
-| Option | Type | Default Value | Description |
-| :----: | :--: | :-----------: | :---------: |
-|   -    |  -   |       -       |      -      |
+|  Option   |                                            Type                                             | Default Value |                          Description                           |
+| :-------: | :-----------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
+|  eventID  |                                           number?                                           |       -       |                  Filter matches by event ID.                   |
+| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchEventType.ts)? |       -       |                 Filter matches by event type.                  |
+|  filter   |    [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchFilter.ts)?    |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -114,13 +116,13 @@ HLTV.getMatches().then((res) => {
 
 Parses all matches from the `hltv.org/stats/matches` page (1 request per page of results)
 
-|  Option       |                                       Type                                                     | Default Value |         Description          |
-| :-------:     | :--------------------------------------------------------------------------------------:       | :-----------: |     :-----------------:      |
-| startDate     |                                      string?                                                   |       -       |              -               |
-|  endDate      |                                      string?                                                   |       -       |              -               |
-| matchType     | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?              |       -       |              -               |
-|   maps        |      [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?                   |       -       |              -               |
-| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)?      |       -       |              -               |
+|    Option     |                                           Type                                            | Default Value | Description |
+| :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
+|   startDate   |                                          string?                                          |       -       |      -      |
+|    endDate    |                                          string?                                          |       -       |      -      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
+|     maps      |          [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?          |       -       |      -      |
+| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
 
 ```javascript
 HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
@@ -272,9 +274,9 @@ HLTV.getTeam({id: 6137}).then(res => {
 
 Same as getTeam but accepts a team name instead of ID. (2 requests)
 
-| Option |  Type  | Default value |   Description   |
-| :----: | :----: | :-----------: | :-------------: |
-|  name  | string |       -       |  The team name  |
+| Option |  Type  | Default value |  Description  |
+| :----: | :----: | :-----------: | :-----------: |
+|  name  | string |       -       | The team name |
 
 ```javascript
 HLTV.getTeamByName({name: "BIG"}).then(res => {
@@ -294,8 +296,8 @@ Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `
 | :---------------: | :------: | :-----------: | :----------------------------------------: |
 |        id         |  number  |       -       |                The team id                 |
 | currentRosterOnly | boolean? |     false     | Return stats about the current roster only |
-|     startDate     |  string? |       -       |                    -                       |
-|      endDate      |  string? |       -       |                    -                       |
+|     startDate     | string?  |       -       |                     -                      |
+|      endDate      | string?  |       -       |                     -                      |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
@@ -371,12 +373,12 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
 |   startDate   |                                          string?                                          |       -       |      -      |
 |    endDate    |                                          string?                                          |       -       |      -      |
-|   matchType   | [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?         |       -       |      -      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
-|     maps      | [Map[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?                   |       -       |      -      |
-|  minMapCount  | number?                                                                                   |       -       |      -      |
-|    country    | string[]                                                                                  |       -       |      -      |
-|    bestOfX    | [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?   |       -       |      -      |
+|     maps      |          [Map[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?          |       -       |      -      |
+|  minMapCount  |                                          number?                                          |       -       |      -      |
+|    country    |                                         string[]                                          |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
@@ -447,9 +449,9 @@ HLTV.getEvent({id: 3389}).then(res => {
 
 Same as getEvent but accepts a event name instead of ID. (2 requests)
 
-| Option |  Type  | Default value |   Description   |
-| :----: | :----: | :-----------: | :-------------: |
-|  name  | string |       -       | The event name  |
+| Option |  Type  | Default value |  Description   |
+| :----: | :----: | :-----------: | :------------: |
+|  name  | string |       -       | The event name |
 
 ```javascript
 HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {

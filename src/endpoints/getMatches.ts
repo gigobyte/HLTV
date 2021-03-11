@@ -1,3 +1,4 @@
+import { stringify } from 'querystring'
 import { UpcomingMatch } from '../models/UpcomingMatch'
 import { LiveMatch } from '../models/LiveMatch'
 import { Event } from '../models/Event'
@@ -6,11 +7,27 @@ import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
 import { fetchPage, toArray } from '../utils/mappers'
 import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { MatchEventType } from '../enums/MatchEventType'
+import { MatchFilter } from '../enums/MatchFilter'
 
-export const getMatches = (config: HLTVConfig) => async (): Promise<
-  (UpcomingMatch | LiveMatch)[]
-> => {
-  const $ = await fetchPage(`${config.hltvUrl}/matches`, config.loadPage)
+type GetMatchesArguments = {
+  eventID?: number
+  eventType?: MatchEventType
+  filter?: MatchFilter
+}
+
+export const getMatches = (config: HLTVConfig) => async ({
+  eventID,
+  eventType,
+  filter
+}: GetMatchesArguments = {} ): Promise<(UpcomingMatch | LiveMatch)[]> => {
+  const query = stringify({
+    ...(eventID ? { event: eventID } : {}),
+    ...(eventType ? { eventType } : {}),
+    ...(filter ? { predefinedFilter: filter } : {})
+  })
+  
+  const $ = await fetchPage(`${config.hltvUrl}/matches?${query}`, config.loadPage)
 
   checkForRateLimiting($)
 
