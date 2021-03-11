@@ -1,6 +1,6 @@
 {
   "extends": ["config:base", ":pinAllExceptPeerDependencies"],
   "ignorePaths": [],
-  "ignoreDeps": "socket.io-client",
+  "ignoreDeps": ["socket.io-client"],
   "automerge": true
 }
