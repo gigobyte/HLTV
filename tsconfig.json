@@ -14,7 +14,8 @@
     "alwaysStrict": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "esModuleInterop": true
   },
   "exclude": ["__tests__", "node_modules/**/*", "src/playground.ts"],
 }
