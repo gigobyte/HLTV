@@ -2,5 +2,9 @@
   "extends": ["config:base", ":pinAllExceptPeerDependencies"],
   "ignorePaths": [],
   "ignoreDeps": ["socket.io-client"],
-  "automerge": true
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "requiredStatusChecks": null
 }
