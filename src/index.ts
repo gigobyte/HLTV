@@ -18,6 +18,8 @@ import { getEvent } from './endpoints/getEvent'
 import { getEventByName } from './endpoints/getEventByName'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
+import { getEvents } from './endpoints/getEvents'
+import { getOngoingEvents } from './endpoints/getOngoingEvents'
 import { MapSlug } from './enums/MapSlug'
 import { Map } from './enums/Map'
 import { MatchType } from './enums/MatchType'
@@ -28,8 +30,7 @@ import { ContentFilter } from './enums/ContentFilter'
 import { EventSize } from './enums/EventSize'
 import { WinType } from './enums/WinType'
 import { BestOfFilter } from './enums/BestOfFilter'
-import { getEvents } from './endpoints/getEvents'
-import { getOngoingEvents } from './endpoints/getOngoingEvents'
+import { MatchEventType } from './enums/MatchEventType'
 import { defaultLoadPage } from './utils/mappers'
 
 export class HLTVFactory {
@@ -92,5 +93,6 @@ export {
   WinType,
   EventSize,
   ContentFilter,
-  BestOfFilter
+  BestOfFilter,
+  MatchEventType
 }

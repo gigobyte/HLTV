@@ -17,5 +17,5 @@
     "isolatedModules": true,
     "esModuleInterop": true
   },
-  "exclude": ["__tests__", "node_modules/**/*", "src/playground.ts"],
+  "exclude": ["node_modules", "lib"],
 }

@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.release.json",
     "start": "ts-node src/playground",
     "test": "jest",
     "pretty": "prettier --write \"**/*.ts\""
