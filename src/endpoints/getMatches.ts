@@ -20,14 +20,17 @@ export const getMatches = (config: HLTVConfig) => async ({
   eventID,
   eventType,
   filter
-}: GetMatchesArguments = {} ): Promise<(UpcomingMatch | LiveMatch)[]> => {
+}: GetMatchesArguments = {}): Promise<(UpcomingMatch | LiveMatch)[]> => {
   const query = stringify({
     ...(eventID ? { event: eventID } : {}),
     ...(eventType ? { eventType } : {}),
     ...(filter ? { predefinedFilter: filter } : {})
   })
-  
-  const $ = await fetchPage(`${config.hltvUrl}/matches?${query}`, config.loadPage)
+
+  const $ = await fetchPage(
+    `${config.hltvUrl}/matches?${query}`,
+    config.loadPage
+  )
 
   checkForRateLimiting($)
 
