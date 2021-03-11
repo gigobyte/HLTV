@@ -15,6 +15,7 @@ Object {
     "code": "SE",
     "name": "Sweden",
   },
+  "logo": "/img/static/event/logo/noLogo.svg",
   "mapPool": Array [
     "cch",
     "mrg",
@@ -71,8 +72,8 @@ Object {
   "relatedEvents": Array [],
   "teams": Array [
     Object {
-      "id": 8659,
-      "name": "Kampners Advokatbyrå",
+      "id": 6497,
+      "name": "TzatzikiKlubben",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -83,8 +84,8 @@ Object {
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 6497,
-      "name": "TzatzikiKlubben",
+      "id": 8659,
+      "name": "Kampners Advokatbyrå",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -117,6 +118,7 @@ Object {
     "code": "EU",
     "name": "Europe",
   },
+  "logo": "https://img-cdn.hltv.org/eventlogo/Wt5f_17LkLZR_99jNfBZtc.png?ixlib=java-2.1.0&s=f959ffa7b87a84a6547f5a6a4a3cacce",
   "mapPool": Array [
     "cch",
     "mrg",
@@ -315,6 +317,7 @@ Object {
     "code": "WORLD",
     "name": "World",
   },
+  "logo": "/img/static/event/logo/noLogo.svg",
   "mapPool": Array [],
   "name": "DH 09 Summer Qualifier Copenhagen",
   "prizeDistribution": Array [],
@@ -322,14 +325,14 @@ Object {
   "relatedEvents": Array [],
   "teams": Array [
     Object {
-      "id": 334,
-      "name": "PlayZeek",
+      "id": 166,
+      "name": "Spirit of Amiga",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 166,
-      "name": "Spirit of Amiga",
+      "id": 334,
+      "name": "PlayZeek",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -347,6 +350,7 @@ Object {
     "code": "AR",
     "name": "Argentina",
   },
+  "logo": "https://img-cdn.hltv.org/eventlogo/0OEQL0ulg1n7GSfj-htibf.png?ixlib=java-2.1.0&s=aef2b3abcdfdbf1ad380eb4e02f17b17",
   "mapPool": Array [],
   "name": "Liga TyC Sports Aorus #1",
   "prizeDistribution": Array [
@@ -441,8 +445,8 @@ Object {
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 6799,
-      "name": "Furious",
+      "id": 8124,
+      "name": "Keymotion Red",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -453,20 +457,8 @@ Object {
       "reasonForParticipation": undefined,
     },
     Object {
-      "id": 8123,
-      "name": "Keymotion",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8124,
-      "name": "Keymotion Red",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8122,
-      "name": "Kitsune",
+      "id": 6799,
+      "name": "Furious",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -479,6 +471,18 @@ Object {
     Object {
       "id": 8121,
       "name": "Malvinas",
+      "rankDuringEvent": undefined,
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8122,
+      "name": "Kitsune",
+      "rankDuringEvent": undefined,
+      "reasonForParticipation": undefined,
+    },
+    Object {
+      "id": 8123,
+      "name": "Keymotion",
       "rankDuringEvent": undefined,
       "reasonForParticipation": undefined,
     },
@@ -501,6 +505,7 @@ Object {
     "code": "NAM",
     "name": "North America",
   },
+  "logo": "https://img-cdn.hltv.org/eventlogo/FCMmoiniBqS8QK_c4lPCHk.png?ixlib=java-2.1.0&s=2ce24bfef3062f4858a846dfbeb0eb94",
   "mapPool": Array [
     "cch",
     "d2",
@@ -674,6 +679,7 @@ Object {
     "code": "SE",
     "name": "Sweden",
   },
+  "logo": "https://img-cdn.hltv.org/eventlogo/k2gvBlkIkdad1MHLlYHV8I.png?ixlib=java-2.1.0&s=f6c171da1d1b1c19028223cc899984f9",
   "mapPool": Array [
     "cch",
     "mrg",

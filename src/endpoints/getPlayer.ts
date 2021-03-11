@@ -53,7 +53,11 @@ export const getPlayer = (config: HLTVConfig) => async ({
 
   let team: Team | undefined
 
-  if ($('.profile-player-stat-value.bold').text().trim() !== '-') {
+  const hasTeam = isStandardPlayer
+    ? $('span.profile-player-stat-value').last().text().trim() !== '-'
+    : $('.playerTeam .listRight').text().trim() !== 'No team'
+
+  if (hasTeam) {
     if (isStandardPlayer) {
       team = {
         name: $('.profile-player-stat-value a').text().trim(),
@@ -62,13 +66,9 @@ export const getPlayer = (config: HLTVConfig) => async ({
         )
       }
     } else {
-      const playerTeam = $('.playerTeam a')
-      const playerHref = playerTeam.attr('href')
-      if (playerHref) {
-        team = {
-          name: playerTeam.text().trim(),
-          id: Number(playerHref.split('/')[2])
-        }
+      team = {
+        name: $('.playerTeam a').text().trim(),
+        id: Number($('.playerTeam a').attr('href')!.split('/')[2])
       }
     }
   }

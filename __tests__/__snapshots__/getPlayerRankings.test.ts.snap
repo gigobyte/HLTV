@@ -317,12 +317,12 @@ Array [
     "rating": 1.16,
     "teams": Array [
       Object {
-        "id": 10467,
-        "name": "Akatsuki",
-      },
-      Object {
         "id": 7552,
         "name": "1337HUANIA",
+      },
+      Object {
+        "id": 10467,
+        "name": "Akatsuki",
       },
     ],
   },

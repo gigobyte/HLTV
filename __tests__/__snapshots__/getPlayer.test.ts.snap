@@ -12,6 +12,7 @@ Object {
   "id": 8000,
   "ign": "syken",
   "image": "https://img-cdn.hltv.org/playerbodyshot/1Qa20w2Am4nkS6LOsCOaFF.png?ixlib=java-2.1.0&w=400&s=ae58a0c87c736b9ea2ff2750fd833d36",
+  "instagram": undefined,
   "name": "Thilo Phan",
   "statistics": Object {
     "deathsPerRound": 0,
@@ -23,7 +24,7 @@ Object {
   },
   "team": undefined,
   "twitch": undefined,
-  "twitter": "https://twitter.com/sykencs",
+  "twitter": "https://www.twitter.com/sykencs",
 }
 `;
 
@@ -39,6 +40,7 @@ Object {
   "id": 7000,
   "ign": "Allanon",
   "image": "https://static.hltv.org/images/playerprofile/blankplayer.svg",
+  "instagram": undefined,
   "name": "Sebastian Orth",
   "statistics": Object {
     "deathsPerRound": 0,
@@ -66,6 +68,7 @@ Object {
   "id": 3000,
   "ign": "d10",
   "image": "https://static.hltv.org/images/playerprofile/blankplayer.svg",
+  "instagram": undefined,
   "name": "Dati Onezashvili",
   "statistics": Object {
     "deathsPerRound": 0,
@@ -93,6 +96,7 @@ Object {
   "id": 9123,
   "ign": "MAKKA",
   "image": "https://img-cdn.hltv.org/gallerypicture/rS0_w_Kx090EK9b5uzGQNb.jpg?bg=3e4c54&h=400&ixlib=java-2.1.0&rect=1400%2C229%2C1637%2C1637&w=400&s=2cef6ac402e74b880ea4e3ca4cafb9f8",
+  "instagram": undefined,
   "name": "Bryan Drouillard",
   "statistics": Object {
     "deathsPerRound": 0,
