@@ -412,10 +412,10 @@
   version "0.12.1"
   resolved "https://registry.npmjs.org/@types/caseless/-/caseless-0.12.1.tgz"
 
-"@types/cheerio@0.22.24":
-  version "0.22.24"
-  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.24.tgz#fcee47074aa221ac0f31ede0c72c0800bf3bf0aa"
-  integrity sha512-iKXt/cwltGvN06Dd6zwQG1U35edPwId9lmcSeYfcxSNvvNg4vysnFB+iBQNjj06tSVV7MBj0GWMQ7dwb4Z+p8Q==
+"@types/cheerio@0.22.26":
+  version "0.22.26"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.26.tgz#190127a564d723e17f414d358e2453a5dced0300"
+  integrity sha512-ckxG5bCHk803zCbeq3GO4wbFan8AyVP8BuYynR0E0d/CD0N8I92kXyvikDWsbG14onoKTXR6B+sboxwjnTMSRg==
   dependencies:
     "@types/node" "*"
 
