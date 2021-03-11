@@ -22,6 +22,7 @@ export interface FullTeam {
   readonly location: string
   readonly facebook?: string
   readonly twitter?: string
+  readonly instagram?: string
   readonly rank?: number
   readonly recentResults: Result[]
   readonly rankingDevelopment: number[]

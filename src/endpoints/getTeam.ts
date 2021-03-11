@@ -26,6 +26,7 @@ export const getTeam = (config: HLTVConfig) => async ({
   const location = t$('.team-country .flag').attr('alt')!
   const facebook = t$('.facebook').parent().attr('href')
   const twitter = t$('.twitter').parent().attr('href')
+  const instagram = t$('.instagram').parent().attr('href')
   const rank =
     Number(t$('.profile-team-stat .right').first().text().replace('#', '')) ||
     undefined
@@ -96,6 +97,7 @@ export const getTeam = (config: HLTVConfig) => async ({
     location,
     facebook,
     twitter,
+    instagram,
     rank,
     players,
     recentResults,
