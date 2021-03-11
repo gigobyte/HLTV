@@ -412,9 +412,10 @@
   version "0.12.1"
   resolved "https://registry.npmjs.org/@types/caseless/-/caseless-0.12.1.tgz"
 
-"@types/cheerio@^0.22.9":
+"@types/cheerio@0.22.24":
   version "0.22.24"
-  resolved "https://registry.npmjs.org/@types/cheerio/-/cheerio-0.22.24.tgz"
+  resolved "https://registry.yarnpkg.com/@types/cheerio/-/cheerio-0.22.24.tgz#fcee47074aa221ac0f31ede0c72c0800bf3bf0aa"
+  integrity sha512-iKXt/cwltGvN06Dd6zwQG1U35edPwId9lmcSeYfcxSNvvNg4vysnFB+iBQNjj06tSVV7MBj0GWMQ7dwb4Z+p8Q==
   dependencies:
     "@types/node" "*"
 
@@ -444,9 +445,10 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@^26.0.0":
+"@types/jest@26.0.20":
   version "26.0.20"
-  resolved "https://registry.npmjs.org/@types/jest/-/jest-26.0.20.tgz"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-26.0.20.tgz#cd2f2702ecf69e86b586e1f5223a60e454056307"
+  integrity sha512-9zi2Y+5USJRxd0FsahERhBwlcvFh6D2GLQnY2FH2BzK8J9s9omvNHIbvABwIluXa0fD8XVKMLTO0aOEuUfACAA==
   dependencies:
     jest-diff "^26.0.0"
     pretty-format "^26.0.0"
@@ -463,18 +465,20 @@
   version "2.1.5"
   resolved "https://registry.npmjs.org/@types/prettier/-/prettier-2.1.5.tgz"
 
-"@types/request@^2.47.1":
+"@types/request@2.48.5":
   version "2.48.5"
-  resolved "https://registry.npmjs.org/@types/request/-/request-2.48.5.tgz"
+  resolved "https://registry.yarnpkg.com/@types/request/-/request-2.48.5.tgz#019b8536b402069f6d11bee1b2c03e7f232937a0"
+  integrity sha512-/LO7xRVnL3DxJ1WkPGDQrp4VTV1reX9RkC85mJ+Qzykj2Bdw+mG15aAfDahc76HtknjzE16SX/Yddn6MxVbmGQ==
   dependencies:
     "@types/caseless" "*"
     "@types/node" "*"
     "@types/tough-cookie" "*"
     form-data "^2.5.0"
 
-"@types/socket.io-client@^1.4.32":
+"@types/socket.io-client@1.4.35":
   version "1.4.35"
-  resolved "https://registry.npmjs.org/@types/socket.io-client/-/socket.io-client-1.4.35.tgz"
+  resolved "https://registry.yarnpkg.com/@types/socket.io-client/-/socket.io-client-1.4.35.tgz#9f3d38b2f548d64beab4510b4eddc5a526b81724"
+  integrity sha512-MI8YmxFS+jMkIziycT5ickBWK1sZwDwy16mgH/j99Mcom6zRG/NimNGQ3vJV0uX5G6g/hEw0FG3w3b3sT5OUGw==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.0"
@@ -484,10 +488,15 @@
   version "2.3.3"
   resolved "https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-2.3.3.tgz"
 
-"@types/user-agents@^1.0.0":
+"@types/user-agents@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@types/user-agents/-/user-agents-1.0.0.tgz#aeb7546f50cea28358a019a70ab3ce8827ecf937"
   integrity sha512-oOSdQ9CULdFN2SJ9NNHvPrkP9aJ6oAz7BiiAeMC4vca+AzFqktlGdetMjlbCA0J3AemMn7ToU3U74VgrMecHtA==
+
+"@types/uuid@8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.0.tgz#215c231dff736d5ba92410e6d602050cce7e273f"
+  integrity sha512-eQ9qFW/fhfGJF8WKHGEHZEyVWfZxrT+6CLIJGBcZPfxUh/+BnEj+UCGYMlr9qZuX/2AltsvwrGqp0LhEW8D0zQ==
 
 "@types/yargs-parser@*":
   version "13.0.0"
@@ -835,9 +844,10 @@ cheerio-select-tmp@^0.1.0:
     domhandler "^4.0.0"
     domutils "^2.4.4"
 
-cheerio@^1.0.0-rc.2:
+cheerio@1.0.0-rc.5:
   version "1.0.0-rc.5"
-  resolved "https://registry.npmjs.org/cheerio/-/cheerio-1.0.0-rc.5.tgz"
+  resolved "https://registry.yarnpkg.com/cheerio/-/cheerio-1.0.0-rc.5.tgz#88907e1828674e8f9fee375188b27dadd4f0fa2f"
+  integrity sha512-yoqps/VCaZgN4pfXtenwHROTp8NG6/Hlt4Jpz2FEP0ZJQ+ZUkVDd0hAPDNKhj3nakpfPt/CNs57yEtxD1bXQiw==
   dependencies:
     cheerio-select-tmp "^0.1.0"
     dom-serializer "~1.2.0"
@@ -2596,9 +2606,10 @@ prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.1.2.tgz"
 
-prettier@^2.0.1:
+prettier@2.2.1:
   version "2.2.1"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-2.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-format@^26.0.0, pretty-format@^26.6.2:
   version "26.6.2"
@@ -2689,9 +2700,10 @@ request-promise-native@^1.0.8:
     stealthy-require "^1.1.1"
     tough-cookie "^2.3.3"
 
-request@^2.88.0, request@^2.88.2:
+request@2.88.2, request@^2.88.2:
   version "2.88.2"
-  resolved "https://registry.npmjs.org/request/-/request-2.88.2.tgz"
+  resolved "https://registry.yarnpkg.com/request/-/request-2.88.2.tgz#d73c918731cb5a87da047e207234146f664d12b3"
+  integrity sha512-MsvtOrfG9ZcrOwAW+Qi+F6HbD0CWXEh9ou77uOb7FM2WPhwT7smM833PzanhJLsgXjN89Ir6V2PczXNnMpwKhw==
   dependencies:
     aws-sign2 "~0.7.0"
     aws4 "^1.8.0"
@@ -3153,9 +3165,10 @@ ts-jest@26.5.3:
     semver "7.x"
     yargs-parser "20.x"
 
-ts-node@^9.0.0:
+ts-node@9.1.1:
   version "9.1.1"
-  resolved "https://registry.npmjs.org/ts-node/-/ts-node-9.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-9.1.1.tgz#51a9a450a3e959401bda5f004a72d54b936d376d"
+  integrity sha512-hPlt7ZACERQGf03M253ytLY3dHbGNGrAq9qIHWUY9XHYl1z7wYngSr3OQ5xmui8o2AaxsONxIzjafLUiWBo1Fg==
   dependencies:
     arg "^4.1.0"
     create-require "^1.1.0"
@@ -3244,7 +3257,7 @@ use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/use/-/use-3.1.1.tgz"
 
-user-agents@^1.0.587:
+user-agents@1.0.587:
   version "1.0.587"
   resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.587.tgz#8f81ad2706e0dc601e7bb235c213590454b7fda1"
   integrity sha512-aJHzH9X5WW9rWbVejYYU6nOm+Y6OwQE4d+Tagiz3Q+3M+Kxr2ZWNi+3UBF3mnQRghbsN4QGRtANwHk5ziQdwrw==
@@ -3252,13 +3265,14 @@ user-agents@^1.0.587:
     dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
 
+uuid@8.3.2, uuid@^8.3.0:
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
 uuid@^3.3.2:
   version "3.3.2"
   resolved "https://registry.npmjs.org/uuid/-/uuid-3.3.2.tgz"
-
-uuid@^8.3.0, uuid@^8.3.2:
-  version "8.3.2"
-  resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
 
 v8-to-istanbul@^7.0.0:
   version "7.0.0"
