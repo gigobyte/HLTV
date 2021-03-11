@@ -13,6 +13,7 @@ export interface FullPlayer {
   readonly twitter?: string
   readonly twitch?: string
   readonly facebook?: string
+  readonly instagram?: string
   readonly statistics: {
     rating: number
     killsPerRound: number
