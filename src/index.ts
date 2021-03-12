@@ -1,98 +1,33 @@
-import { defaultConfig, HLTVConfig } from './config'
-import { connectToScorebot } from './endpoints/connectToScorebot'
+import { defaultConfig, defaultLoadPage, HLTVConfig } from './config'
 import { getMatch } from './endpoints/getMatch'
-import { getMatches } from './endpoints/getMatches'
-import { getMatchesStats } from './endpoints/getMatchesStats'
-import { getMatchMapStats } from './endpoints/getMatchMapStats'
-import { getMatchStats } from './endpoints/getMatchStats'
-import { getRecentThreads } from './endpoints/getRecentThreads'
-import { getResults } from './endpoints/getResults'
-import { getStreams } from './endpoints/getStreams'
-import { getTeamRanking } from './endpoints/getTeamRanking'
-import { getTeam } from './endpoints/getTeam'
-import { getTeamByName } from './endpoints/getTeamByName'
-import { getTeamStats } from './endpoints/getTeamStats'
-import { getPlayer } from './endpoints/getPlayer'
-import { getPlayerByName } from './endpoints/getPlayerByName'
-import { getEvent } from './endpoints/getEvent'
-import { getEventByName } from './endpoints/getEventByName'
-import { getPlayerStats } from './endpoints/getPlayerStats'
-import { getPlayerRanking } from './endpoints/getPlayerRanking'
-import { getEvents } from './endpoints/getEvents'
-import { getOngoingEvents } from './endpoints/getOngoingEvents'
-import { MapSlug } from './enums/MapSlug'
-import { Map } from './enums/Map'
-import { MatchType } from './enums/MatchType'
-import { RankingFilter } from './enums/RankingFilter'
-import { StreamCategory } from './enums/StreamCategory'
-import { ThreadCategory } from './enums/ThreadCategory'
-import { ContentFilter } from './enums/ContentFilter'
-import { EventSize } from './enums/EventSize'
-import { WinType } from './enums/WinType'
-import { BestOfFilter } from './enums/BestOfFilter'
-import { MatchEventType } from './enums/MatchEventType'
-import { defaultLoadPage } from './utils/mappers'
+import { connectToScorebot } from './endpoints/connectToScorebot'
 
-export class HLTVFactory {
-  constructor(private readonly config: HLTVConfig) {
-    if (!config.hltvStaticUrl) {
-      config.hltvStaticUrl = defaultConfig.hltvStaticUrl
-    }
-    if (!config.hltvUrl) {
-      config.hltvUrl = defaultConfig.hltvUrl
-    }
+export class Hltv {
+  constructor(private config: Partial<HLTVConfig> = {}) {
     if (config.httpAgent && !config.loadPage) {
       config.loadPage = defaultLoadPage(config.httpAgent)
     }
+
     if (!config.httpAgent) {
       config.httpAgent = defaultConfig.httpAgent
     }
+
     if (!config.loadPage) {
       config.loadPage = defaultConfig.loadPage
     }
   }
 
-  connectToScorebot = connectToScorebot(this.config)
-  getMatch = getMatch(this.config)
-  getMatches = getMatches(this.config)
-  getMatchesStats = getMatchesStats(this.config)
-  getMatchStats = getMatchStats(this.config)
-  getMatchMapStats = getMatchMapStats(this.config)
-  getRecentThreads = getRecentThreads(this.config)
-  getResults = getResults(this.config)
-  getStreams = getStreams(this.config)
-  getTeamRanking = getTeamRanking(this.config)
-  getTeam = getTeam(this.config)
-  getTeamByName = getTeamByName(this.config)
-  getTeamStats = getTeamStats(this.config)
-  getPlayer = getPlayer(this.config)
-  getPlayerByName = getPlayerByName(this.config)
-  getEvent = getEvent(this.config)
-  getEventByName = getEventByName(this.config)
-  getEvents = getEvents(this.config)
-  getOngoingEvents = getOngoingEvents(this.config)
-  getPlayerStats = getPlayerStats(this.config)
-  getPlayerRanking = getPlayerRanking(this.config)
+  getMatch = getMatch(this.config as HLTVConfig)
+  connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
-    return new HLTVFactory(config)
+    return new Hltv(config)
   }
 }
 
-const hltvInstance = new HLTVFactory(defaultConfig)
+const hltv = new Hltv()
 
-export default hltvInstance
-export {
-  hltvInstance as HLTV,
-  MapSlug,
-  Map,
-  MatchType,
-  RankingFilter,
-  StreamCategory,
-  ThreadCategory,
-  WinType,
-  EventSize,
-  ContentFilter,
-  BestOfFilter,
-  MatchEventType
-}
+export default hltv
+export { hltv as HLTV }
+export * from './endpoints/getMatch'
+export * from './endpoints/connectToScorebot'

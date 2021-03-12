@@ -13,3 +13,5 @@ export enum MapSlug {
   Season = '-',
   Default = '-'
 }
+
+export const toMapSlug = (map: string): MapSlug => (MapSlug as any)[map]
