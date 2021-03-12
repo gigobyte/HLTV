@@ -3257,10 +3257,10 @@ use@^3.1.0:
   version "3.1.1"
   resolved "https://registry.npmjs.org/use/-/use-3.1.1.tgz"
 
-user-agents@1.0.587:
-  version "1.0.587"
-  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.587.tgz#8f81ad2706e0dc601e7bb235c213590454b7fda1"
-  integrity sha512-aJHzH9X5WW9rWbVejYYU6nOm+Y6OwQE4d+Tagiz3Q+3M+Kxr2ZWNi+3UBF3mnQRghbsN4QGRtANwHk5ziQdwrw==
+user-agents@1.0.588:
+  version "1.0.588"
+  resolved "https://registry.yarnpkg.com/user-agents/-/user-agents-1.0.588.tgz#2bba80fa98a04cb063243b161445de8110fd3fd3"
+  integrity sha512-/1/zrYOhdcxSVoLmzneSwu7dl0qfK1knL0EM/8TyPUZoNuuDOph30FdApMLrdkpZKohkml3N1YFvpG6aBU530Q==
   dependencies:
     dot-json "^1.2.2"
     lodash.clonedeep "^4.5.0"
