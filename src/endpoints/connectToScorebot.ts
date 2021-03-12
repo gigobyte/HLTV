@@ -2,8 +2,9 @@ import * as io from 'socket.io-client'
 import { fetchPage, generateRandomSuffix } from '../utils'
 import { HLTVConfig } from '../config'
 
-export type Side = 'CT' | 'TERRORIST' | 'SPECTATOR'
-export type LogEvent =
+type Side = 'CT' | 'TERRORIST' | 'SPECTATOR'
+
+type LogEvent =
   | RoundStart
   | RoundEnd
   | Restart
@@ -143,7 +144,7 @@ export interface ScoreboardPlayer {
   }
 }
 
-enum WinType {
+export enum WinType {
   Lost = 'lost',
   TerroristsWin = 'Terrorists_Win',
   CTsWin = 'CTs_Win',

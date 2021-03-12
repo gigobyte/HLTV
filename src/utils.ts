@@ -30,6 +30,11 @@ export function getIdAt(index?: number, href?: string): any {
     case 1:
       return (href: string) => getIdAt(index!, href)
     default:
-      return Number(href!.split('/')[index!]) || undefined
+      return parseNumber(href!.split('/')[index!])
   }
 }
+
+export const notNull = <T>(x: T | null): x is T => x !== null
+
+export const parseNumber = (str: string | undefined): number | undefined =>
+  Number(str) || undefined

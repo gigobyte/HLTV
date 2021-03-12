@@ -2,6 +2,7 @@ import { defaultConfig, defaultLoadPage, HLTVConfig } from './config'
 import { getMatch } from './endpoints/getMatch'
 import { connectToScorebot } from './endpoints/connectToScorebot'
 import { getMatches } from './endpoints/getMatches'
+import { getEvent } from './endpoints/getEvent'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -20,6 +21,7 @@ export class Hltv {
 
   getMatch = getMatch(this.config as HLTVConfig)
   getMatches = getMatches(this.config as HLTVConfig)
+  getEvent = getEvent(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -31,6 +33,7 @@ const hltv = new Hltv()
 
 export default hltv
 export { hltv as HLTV }
+
 export type {
   Demo,
   Highlight,
@@ -40,7 +43,20 @@ export type {
   MapHalfResult,
   MapResult,
   Stream,
-  Match,
+  FullMatch as Match,
   MatchStatus
 } from './endpoints/getMatch'
-export * from './endpoints/connectToScorebot'
+
+export type {
+  MatchEventType,
+  MatchFilter,
+  MatchPreview
+} from './endpoints/getMatches'
+
+export type {
+  ScoreboardUpdate,
+  LogUpdate,
+  WinType
+} from './endpoints/connectToScorebot'
+
+export type { FullEvent } from './endpoints/getEvent'

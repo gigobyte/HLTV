@@ -1,6 +1,6 @@
 import { HLTVConfig } from '../config'
 import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
-import { MapSlug, toMapSlug } from '../shared/MapSlug'
+import { fromMapName, GameMap } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
 import {
@@ -28,7 +28,7 @@ export interface Highlight {
 
 export interface Veto {
   team?: Team
-  map: MapSlug
+  map: GameMap
   type: 'removed' | 'picked' | 'leftover'
 }
 
@@ -37,7 +37,7 @@ export interface HeadToHeadResult {
   /** This property is undefined when the match resulted in a draw */
   winner?: Team
   event: Event
-  map: MapSlug
+  map: GameMap
   result: string
 }
 
@@ -53,7 +53,7 @@ export interface MapHalfResult {
 }
 
 export interface MapResult {
-  name: MapSlug
+  name: GameMap
   result?: {
     team1TotalRounds: number
     team2TotalRounds: number
@@ -68,7 +68,7 @@ export interface Stream {
   viewers: number
 }
 
-export interface Match {
+export interface FullMatch {
   id: number
   statsId?: number
   title?: string
@@ -113,7 +113,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
-}): Promise<Match> => {
+}): Promise<FullMatch> => {
   const $ = HLTVScraper(
     await fetchPage(
       `https://www.hltv.org/matches/${id}/${generateRandomSuffix()}`,
@@ -201,14 +201,14 @@ function getVetoes($: HLTVPage, team1?: Team, team2?: Team): Veto[] {
 
     if (!map || !teamName) {
       return {
-        map: toMapSlug(text.split(' ')[1]),
+        map: fromMapName(text.split(' ')[1]),
         type: 'leftover'
       } as const
     }
 
     return {
       team: [team1, team2].find((t) => t!.name === teamName.trim())!,
-      map: toMapSlug(map.trim()),
+      map: fromMapName(map.trim()),
       type: text.includes('picked') ? 'picked' : 'removed'
     } as const
   }
@@ -336,7 +336,7 @@ function getMaps($: HLTVPage): MapResult[] {
       }
 
       return {
-        name: toMapSlug(mapEl.find('.mapname').text()),
+        name: fromMapName(mapEl.find('.mapname').text()),
         result,
         statsId
       }
@@ -441,7 +441,7 @@ function getHeadToHead($: HLTVPage): HeadToHeadResult[] {
     .toArray()
     .map((matchEl) => {
       const date = Number(matchEl.find('.date a span').attr('data-unix'))
-      const map = matchEl.find('.dynamic-map-name-short').text() as MapSlug
+      const map = matchEl.find('.dynamic-map-name-short').text() as GameMap
       const isDraw = !matchEl.find('.winner').exists()
 
       let winner: Team | undefined
