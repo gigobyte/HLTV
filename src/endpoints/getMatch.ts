@@ -6,9 +6,15 @@ import { Event } from '../shared/Event'
 import {
   fetchPage,
   generateRandomSuffix,
+  getIdAt,
   percentageToDecimalOdd
 } from '../utils'
 import { Player } from '../shared/Player'
+import {
+  fromFullMatchFormat,
+  MatchFormat,
+  MatchFormatLocation
+} from '../shared/MatchFormat'
 
 export interface Demo {
   name: string
@@ -67,7 +73,10 @@ export interface Match {
   statsId?: number
   title?: string
   date?: number
-  format?: MatchFormat
+  format?: {
+    type: MatchFormat
+    location?: MatchFormatLocation
+  }
   status: MatchStatus
   hasScorebot: boolean
   team1?: Team
@@ -90,21 +99,6 @@ export interface Match {
   headToHead: HeadToHeadResult[]
   highlights: Highlight[]
   playerOfTheMatch?: Player
-}
-
-export enum MatchFormat {
-  BestOf1 = 'Best of 1',
-  BestOf3 = 'Best of 3',
-  BestOf5 = 'Best of 5',
-  BestOf7 = 'Best of 7',
-  BestOf1Online = 'Best of 1 (Online)',
-  BestOf3Online = 'Best of 3 (Online)',
-  BestOf5Online = 'Best of 5 (Online)',
-  BestOf7Online = 'Best of 7 (Online)',
-  BestOf1LAN = 'Best of 1 (LAN)',
-  BestOf3LAN = 'Best of 3 (LAN)',
-  BestOf5LAN = 'Best of 5 (LAN)',
-  BestOf7LAN = 'Best of 7 (LAN)'
 }
 
 export enum MatchStatus {
@@ -196,10 +190,7 @@ function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
   return $(`.team${n}-gradient`).exists()
     ? {
         name: $(`.team${n}-gradient .teamName`).text(),
-        id: $(`.team${n}-gradient a`).attrThen(
-          'href',
-          (x) => Number(x.split('/')[2]) || undefined
-        )
+        id: $(`.team${n}-gradient a`).attrThen('href', getIdAt(2))
       }
     : undefined
 }
@@ -251,10 +242,7 @@ function getVetoes($: HLTVPage, team1?: Team, team2?: Team): Veto[] {
 function getEvent($: HLTVPage): Event {
   return {
     name: $('.timeAndEvent .event a').text(),
-    id: $('.timeAndEvent .event a').attrThen(
-      'href',
-      (x) => Number(x.split('/')[2]) || undefined
-    )
+    id: $('.timeAndEvent .event a').attrThen('href', getIdAt(2))
   }
 }
 
@@ -436,13 +424,13 @@ function getHighlightedPlayers($: HLTVPage) {
           name: $('.lineups-compare-left .lineups-compare-playername').text(),
           id: $('.lineups-compare-left .lineups-compare-player-links a')
             .first()
-            .attrThen('href', (x) => Number(x.split('/')[2]))
+            .attrThen('href', getIdAt(2))
         },
         team2: {
           name: $('.lineups-compare-right .lineups-compare-playername').text(),
           id: $('.lineups-compare-right .lineups-compare-player-links a')
             .first()
-            .attrThen('href', (x) => Number(x.split('/')[2]))
+            .attrThen('href', getIdAt(2))
         }
       }
     : undefined
@@ -461,18 +449,13 @@ function getHeadToHead($: HLTVPage): HeadToHeadResult[] {
       if (!isDraw) {
         winner = {
           name: matchEl.find('.winner .flag').next().text(),
-          id: matchEl
-            .find('.winner .flag')
-            .next()
-            .attrThen('href', (x) => Number(x.split('/')[2]))
+          id: matchEl.find('.winner .flag').next().attrThen('href', getIdAt(2))
         }
       }
 
       const event = {
         name: matchEl.find('.event a').text(),
-        id: matchEl
-          .find('.event a')
-          .attrThen('href', (x) => Number(x.split('/')[2]))
+        id: matchEl.find('.event a').attrThen('href', getIdAt(2))
       }
 
       const result = matchEl.find('.result').text()
@@ -497,8 +480,8 @@ function getStatsId($: HLTVPage): number | undefined {
     const matchStatsHref = $('.stats-detailed-stats a').attr('href')
 
     return matchStatsHref.split('/')[3] !== 'mapstatsid'
-      ? Number(matchStatsHref.split('/')[3])
-      : Number(matchStatsHref.split('/')[4])
+      ? getIdAt(3, matchStatsHref)
+      : getIdAt(4, matchStatsHref)
   }
 }
 
@@ -530,6 +513,17 @@ function getWinnerTeam(
   }
 }
 
-function getFormat($: HLTVPage): MatchFormat | undefined {
-  return ($('.preformatted-text').lines()[0] as MatchFormat) || undefined
+function getFormat($: HLTVPage) {
+  if (!$('.preformatted-text').exists()) {
+    return
+  }
+
+  const [format, location] = $('.preformatted-text').lines()[0].split(' (')
+
+  return {
+    type: fromFullMatchFormat(format.trim()),
+    location: location
+      ?.trim()
+      ?.substring(0, location.length - 1) as MatchFormatLocation
+  }
 }

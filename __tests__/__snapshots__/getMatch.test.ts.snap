@@ -1,113 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getMatch: DELETED 1`] = `
-Object {
-  "date": 1506182400000,
-  "demos": Array [],
-  "event": Object {
-    "id": 3057,
-    "name": "ECS Season 4 EU Promotion",
-  },
-  "format": undefined,
-  "hasScorebot": false,
-  "headToHead": Array [
-    Object {
-      "date": 1495389933000,
-      "event": Object {
-        "id": 2792,
-        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
-      },
-      "map": "nuke",
-      "result": "14 - 16",
-      "winner": Object {
-        "id": 7175,
-        "name": "Heroic",
-      },
-    },
-    Object {
-      "date": 1495389933000,
-      "event": Object {
-        "id": 2792,
-        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
-      },
-      "map": "inf",
-      "result": "4 - 16",
-      "winner": Object {
-        "id": 7175,
-        "name": "Heroic",
-      },
-    },
-  ],
-  "highlightedPlayers": undefined,
-  "highlights": Array [],
-  "id": 2315069,
-  "maps": Array [],
-  "odds": Array [],
-  "playerOfTheMatch": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
-        "id": 629,
-        "name": "fox",
-      },
-      Object {
-        "id": 1485,
-        "name": "RUBINO",
-      },
-      Object {
-        "id": 8248,
-        "name": "jkaem",
-      },
-      Object {
-        "id": 8151,
-        "name": "AcilioN",
-      },
-      Object {
-        "id": 3997,
-        "name": "loWel",
-      },
-    ],
-    "team2": Array [
-      Object {
-        "id": 922,
-        "name": "Snappi",
-      },
-      Object {
-        "id": 545,
-        "name": "MODDII",
-      },
-      Object {
-        "id": 8611,
-        "name": "es3tag",
-      },
-      Object {
-        "id": 10264,
-        "name": "niko",
-      },
-      Object {
-        "id": 8783,
-        "name": "JUGi",
-      },
-    ],
-  },
-  "statsId": undefined,
-  "status": "Over",
-  "streams": Array [],
-  "team1": Object {
-    "id": 5422,
-    "name": "Dignitas",
-  },
-  "team2": Object {
-    "id": 7175,
-    "name": "Heroic",
-  },
-  "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": undefined,
-}
-`;
-
-exports[`getMatch: FULL 1`] = `
+exports[`getMatch 1`] = `
 Object {
   "date": 1535888100000,
   "demos": Array [
@@ -144,7 +37,10 @@ Object {
     "id": 3389,
     "name": "DreamHack Masters Stockholm 2018",
   },
-  "format": "Best of 3",
+  "format": Object {
+    "location": undefined,
+    "type": "bo3",
+  },
   "hasScorebot": false,
   "headToHead": Array [
     Object {
@@ -462,7 +358,7 @@ Object {
 }
 `;
 
-exports[`getMatch: MISSING_INFO 1`] = `
+exports[`getMatch 2`] = `
 Object {
   "date": 1392668100000,
   "demos": Array [],
@@ -551,7 +447,7 @@ Object {
 }
 `;
 
-exports[`getMatch: OLD_PLAYERS 1`] = `
+exports[`getMatch 3`] = `
 Object {
   "date": 1352228400000,
   "demos": Array [],
@@ -643,7 +539,7 @@ Object {
 }
 `;
 
-exports[`getMatch: VETO_IN_INFO 1`] = `
+exports[`getMatch 4`] = `
 Object {
   "date": 1451157000000,
   "demos": Array [],
@@ -651,7 +547,10 @@ Object {
     "id": 2092,
     "name": "StarLadder Regional Minor Championship CIS Closed Qualifier",
   },
-  "format": "Best of 3",
+  "format": Object {
+    "location": undefined,
+    "type": "bo3",
+  },
   "hasScorebot": false,
   "headToHead": Array [],
   "highlightedPlayers": undefined,
@@ -801,6 +700,327 @@ Object {
   "winnerTeam": Object {
     "id": 6594,
     "name": "420pm",
+  },
+}
+`;
+
+exports[`getMatch 5`] = `
+Object {
+  "date": 1506182400000,
+  "demos": Array [],
+  "event": Object {
+    "id": 3057,
+    "name": "ECS Season 4 EU Promotion",
+  },
+  "format": undefined,
+  "hasScorebot": false,
+  "headToHead": Array [
+    Object {
+      "date": 1495389933000,
+      "event": Object {
+        "id": 2792,
+        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
+      },
+      "map": "nuke",
+      "result": "14 - 16",
+      "winner": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1495389933000,
+      "event": Object {
+        "id": 2792,
+        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
+      },
+      "map": "inf",
+      "result": "4 - 16",
+      "winner": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+  ],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2315069,
+  "maps": Array [],
+  "odds": Array [],
+  "playerOfTheMatch": undefined,
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 629,
+        "name": "fox",
+      },
+      Object {
+        "id": 1485,
+        "name": "RUBINO",
+      },
+      Object {
+        "id": 8248,
+        "name": "jkaem",
+      },
+      Object {
+        "id": 8151,
+        "name": "AcilioN",
+      },
+      Object {
+        "id": 3997,
+        "name": "loWel",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 922,
+        "name": "Snappi",
+      },
+      Object {
+        "id": 545,
+        "name": "MODDII",
+      },
+      Object {
+        "id": 8611,
+        "name": "es3tag",
+      },
+      Object {
+        "id": 10264,
+        "name": "niko",
+      },
+      Object {
+        "id": 8783,
+        "name": "JUGi",
+      },
+    ],
+  },
+  "statsId": undefined,
+  "status": "Over",
+  "streams": Array [],
+  "team1": Object {
+    "id": 5422,
+    "name": "Dignitas",
+  },
+  "team2": Object {
+    "id": 7175,
+    "name": "Heroic",
+  },
+  "title": undefined,
+  "vetoes": Array [],
+  "winnerTeam": undefined,
+}
+`;
+
+exports[`getMatch 6`] = `
+Object {
+  "date": 1615485900000,
+  "demos": Array [
+    Object {
+      "link": "/download/demo/62836",
+      "name": "GOTV Demo",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=36m40s&parent=www.hltv.org",
+      "name": "Singularity (Map 1 - Train)",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=1h41m55s&parent=www.hltv.org",
+      "name": "Singularity (Map 2 - Inferno)",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=3h9m15s&parent=www.hltv.org",
+      "name": "Singularity (Map 3 - Mirage)",
+    },
+  ],
+  "event": Object {
+    "id": 5701,
+    "name": "ESEA Premier Season 36 Europe",
+  },
+  "format": Object {
+    "location": "Online",
+    "type": "bo3",
+  },
+  "hasScorebot": false,
+  "headToHead": Array [],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2346506,
+  "maps": Array [
+    Object {
+      "name": "trn",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 6,
+            "team2Rounds": 9,
+          },
+          Object {
+            "team1Rounds": 4,
+            "team2Rounds": 7,
+          },
+        ],
+        "team1TotalRounds": 10,
+        "team2TotalRounds": 16,
+      },
+      "statsId": 116197,
+    },
+    Object {
+      "name": "inf",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 4,
+            "team2Rounds": 11,
+          },
+          Object {
+            "team1Rounds": 12,
+            "team2Rounds": 2,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 13,
+      },
+      "statsId": 116206,
+    },
+    Object {
+      "name": "mrg",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 9,
+            "team2Rounds": 6,
+          },
+          Object {
+            "team1Rounds": 7,
+            "team2Rounds": 4,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 10,
+      },
+      "statsId": 116211,
+    },
+  ],
+  "odds": Array [],
+  "playerOfTheMatch": Object {
+    "id": 15385,
+    "name": "kaluber",
+  },
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 8917,
+        "name": "niki1",
+      },
+      Object {
+        "id": 10762,
+        "name": "Rock1nG",
+      },
+      Object {
+        "id": 14380,
+        "name": "Patrick",
+      },
+      Object {
+        "id": 15385,
+        "name": "KalubeR",
+      },
+      Object {
+        "id": 16412,
+        "name": "rafftu",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 7414,
+        "name": "smF",
+      },
+      Object {
+        "id": 7965,
+        "name": "larsen",
+      },
+      Object {
+        "id": 9903,
+        "name": "notaN",
+      },
+      Object {
+        "id": 12048,
+        "name": "Remoy",
+      },
+      Object {
+        "id": 16731,
+        "name": "IceBerg",
+      },
+    ],
+  },
+  "statsId": 79738,
+  "status": "Over",
+  "streams": Array [],
+  "team1": Object {
+    "id": 9863,
+    "name": "FATE",
+  },
+  "team2": Object {
+    "id": 6978,
+    "name": "Singularity",
+  },
+  "title": undefined,
+  "vetoes": Array [
+    Object {
+      "map": "nuke",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "d2",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "trn",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "inf",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "vertigo",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "ovp",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "mrg",
+      "type": "leftover",
+    },
+  ],
+  "winnerTeam": Object {
+    "id": 9863,
+    "name": "FATE",
   },
 }
 `;

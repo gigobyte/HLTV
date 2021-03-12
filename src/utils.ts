@@ -22,3 +22,14 @@ export const generateRandomSuffix = () => {
 
 export const percentageToDecimalOdd = (odd: number): number =>
   parseFloat(((1 / odd) * 100).toFixed(2))
+
+export function getIdAt(index: number, href: string): number | undefined
+export function getIdAt(index: number): (href: string) => number | undefined
+export function getIdAt(index?: number, href?: string): any {
+  switch (arguments.length) {
+    case 1:
+      return (href: string) => getIdAt(index!, href)
+    default:
+      return Number(href!.split('/')[index!]) || undefined
+  }
+}

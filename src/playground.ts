@@ -5,4 +5,5 @@ const log = (promise: Promise<any>) =>
     .then((res) => console.dir(res, { depth: null }))
     .catch((err) => console.log(err))
 
-log(HLTV.getMatch({ id: 2300113 }))
+// log(HLTV.getMatch({ id: 2300113 }))
+log(HLTV.getMatches())

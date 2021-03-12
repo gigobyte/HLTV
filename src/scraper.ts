@@ -15,13 +15,14 @@ export interface HLTVPageElement {
   find(selector: string): HLTVPageElement
   attr(attr: string): string
   text(): string
-  textThen(then: (value: string) => any): any
+  textThen<T>(then: (value: string) => T): T
   first(): HLTVPageElement
   last(): HLTVPageElement
   toArray(): HLTVPageElement[]
   data(name: string): any
-  attrThen(attr: string, then: (value: string) => any): any
+  attrThen<T>(attr: string, then: (value: string) => T): T
   next(selector?: string): HLTVPageElement
+  eq(index: number): HLTVPageElement
 }
 
 const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
@@ -36,7 +37,7 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
       return root.attr(attr)!
     },
 
-    attrThen(attr: string, then: (value: string) => any): any {
+    attrThen<T>(attr: string, then: (value: string) => T): T {
       return then(root.attr(attr)!)
     },
 
@@ -44,7 +45,7 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
       return root.text()
     },
 
-    textThen(then: (value: string) => any): any {
+    textThen<T>(then: (value: string) => T): T {
       return then(root.text())
     },
 
@@ -86,6 +87,10 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
 
     next(selector?: string): HLTVPageElement {
       return attachMethods(root.next(selector))
+    },
+
+    eq(index: number): HLTVPageElement {
+      return attachMethods(root.eq(index))
     }
   }
 
