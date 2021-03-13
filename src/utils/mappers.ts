@@ -9,7 +9,7 @@ import { MapSlug } from '../enums/MapSlug'
 import { popSlashSource } from '../utils/parsing'
 import { Agent as HttpsAgent } from 'https'
 import { Agent as HttpAgent } from 'http'
-import UserAgent from 'user-agents'
+import randomUseragent from 'random-useragent'
 
 export const generateRandomSuffix = () => {
   return uuidv4()
@@ -24,7 +24,7 @@ export const defaultLoadPage = (
       {
         gzip: true,
         agent: httpAgent,
-        headers: { 'User-Agent': new UserAgent().toString() }
+        headers: { 'User-Agent': randomUseragent.getRandom() }
       },
       (_, __, body) => resolve(body)
     )
