@@ -7,4 +7,5 @@ const log = (promise: Promise<any>) =>
 
 // log(HLTV.getMatch({ id: 2300113 }))
 // log(HLTV.getMatches())
-log(HLTV.getEvent({ id: 5539 }))
+// log(HLTV.getEvent({ id: 5741 }))
+log(HLTV.getEvents())

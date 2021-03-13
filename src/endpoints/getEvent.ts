@@ -52,7 +52,7 @@ export interface FullEvent {
   dateEnd?: number
   prizePool: string
   location: Country
-  numberOfTeams: number
+  numberOfTeams?: number
   teams: FullEventTeam[]
   prizeDistribution: FullEventPrizeDistribution[]
   relatedEvents: Event[]

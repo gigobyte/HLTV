@@ -25,6 +25,7 @@ export interface HLTVPageElement {
   next(selector?: string): HLTVPageElement
   eq(index: number): HLTVPageElement
   children(selector?: string): HLTVPageElement
+  prev(selector?: string): HLTVPageElement
 }
 
 const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
@@ -85,6 +86,10 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
 
     toArray(): HLTVPageElement[] {
       return root.toArray().map(cheerio.default).map(attachMethods)
+    },
+
+    prev(selector?: string): HLTVPageElement {
+      return attachMethods(root.prev(selector))
     },
 
     next(selector?: string): HLTVPageElement {
