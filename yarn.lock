@@ -2629,7 +2629,7 @@ random-seed@^0.3.0:
   dependencies:
     json-stringify-safe "^5.0.1"
 
-random-useragent@^0.5.0:
+random-useragent@0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/random-useragent/-/random-useragent-0.5.0.tgz#83a92dfdfb2366972d0a1f81fc93d5ef85807ae8"
   integrity sha512-FUMkqVdZeoSff5tErNL3FFGYXElDWZ1bEuedhm5u9MdCFwANriJWbHvDRYrLTOzp/fBsBGu5J1cWtDgifa97aQ==

@@ -53,7 +53,7 @@
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.5",
-    "random-useragent": "^0.5.0",
+    "random-useragent": "0.5.0",
     "request": "2.88.2",
     "socket.io-client": "2.4.0",
     "uuid": "8.3.2"
