@@ -147,25 +147,25 @@ export const getMatch = (config: HLTVConfig) => async ({
   return {
     id,
     statsId,
-    title,
-    date,
-    format,
-    status,
-    hasScorebot,
     team1,
     team2,
     winnerTeam,
-    vetoes,
+    date,
+    format,
     event,
-    odds: odds.concat(oddsCommunity ? [oddsCommunity] : []),
     maps,
     players,
     streams,
-    demos,
+    status,
+    title,
+    hasScorebot,
     highlightedPlayers,
+    playerOfTheMatch,
     headToHead,
+    vetoes,
     highlights,
-    playerOfTheMatch
+    demos,
+    odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
   }
 }
 
@@ -389,6 +389,20 @@ function getStreams($: HLTVPage): Stream[] {
           ]
         : []
     )
+    .concat(
+      $('.stream-box.gotv').exists()
+        ? [
+            {
+              name: 'GOTV',
+              link: $('.stream-box.gotv')
+                .text()
+                .replace('GOTV: connect', '')
+                .trim(),
+              viewers: -1
+            }
+          ]
+        : []
+    )
 }
 
 function getDemos($: HLTVPage): Demo[] {
@@ -476,12 +490,8 @@ function getHighlights($: HLTVPage, team1?: Team, team2?: Team): Highlight[] {
 }
 
 function getStatsId($: HLTVPage): number | undefined {
-  if ($('.stats-detailed-stats a').exists()) {
-    const matchStatsHref = $('.stats-detailed-stats a').attr('href')
-
-    return matchStatsHref.split('/')[3] !== 'mapstatsid'
-      ? getIdAt(3, matchStatsHref)
-      : getIdAt(4, matchStatsHref)
+  if (!$('.stats-detailed-stats a').attr('href').includes('mapstats')) {
+    return getIdAt(3, $('.stats-detailed-stats a').attr('href'))
   }
 }
 

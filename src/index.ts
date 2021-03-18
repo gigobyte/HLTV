@@ -5,6 +5,7 @@ import { getMatches } from './endpoints/getMatches'
 import { getEvent } from './endpoints/getEvent'
 import { getEventByName } from './endpoints/getEventByName'
 import { getEvents } from './endpoints/getEvents'
+import { getMatchMapStats } from './endpoints/getMatchMapStats'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -26,6 +27,7 @@ export class Hltv {
   getEvent = getEvent(this.config as HLTVConfig)
   getEvents = getEvents(this.config as HLTVConfig)
   getEventByName = getEventByName(this.config as HLTVConfig)
+  getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -38,6 +40,7 @@ const hltv = new Hltv()
 export default hltv
 export { hltv as HLTV }
 
+export { MatchStatus } from './endpoints/getMatch'
 export type {
   Demo,
   Highlight,
@@ -47,21 +50,14 @@ export type {
   MapHalfResult,
   MapResult,
   Stream,
-  FullMatch as Match,
-  MatchStatus
+  FullMatch as Match
 } from './endpoints/getMatch'
 
-export type {
-  MatchEventType,
-  MatchFilter,
-  MatchPreview
-} from './endpoints/getMatches'
+export { MatchEventType, MatchFilter } from './endpoints/getMatches'
+export type { MatchPreview } from './endpoints/getMatches'
 
-export type {
-  ScoreboardUpdate,
-  LogUpdate,
-  WinType
-} from './endpoints/connectToScorebot'
+export { WinType } from './endpoints/connectToScorebot'
+export type { ScoreboardUpdate, LogUpdate } from './endpoints/connectToScorebot'
 
 export type {
   FullEvent,
@@ -71,3 +67,6 @@ export type {
   FullEventPrizeDistribution,
   FullEventTeam
 } from './endpoints/getEvent'
+
+export { EventType } from './endpoints/getEvents'
+export type { EventPreview } from './endpoints/getEvents'

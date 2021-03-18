@@ -94,11 +94,11 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 Parses all matches from the `hltv.org/matches/` page (1 request)
 
-|  Option   |                                            Type                                             | Default Value |                          Description                           |
-| :-------: | :-----------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
-|  eventID  |                                           number?                                           |       -       |                  Filter matches by event ID.                   |
-| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchEventType.ts)? |       -       |                 Filter matches by event type.                  |
-|  filter   |    [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchFilter.ts)?    |       -       | Filter matches by pre-set categories. Overrides other filters. |
+|  Option   |         Type         | Default Value |                          Description                           |
+| :-------: | :------------------: | :-----------: | :------------------------------------------------------------: |
+|  eventId  |       number?        |       -       |                  Filter matches by event ID.                   |
+| eventType | [MatchEventType?]()? |       -       |                 Filter matches by event type.                  |
+|  filter   |  [MatchFilter?]()?   |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -395,9 +395,11 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 Parses the info from the `hltv.org/events` page (1 request)
 
-| Option |                                       Type                                        | Default value |                                    Description                                    |
-| :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
-|  size  | [EventSize](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? |       -       | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both. |
+|    Option    |    Type    | Default value |                     Description                     |
+| :----------: | :--------: | :-----------: | :-------------------------------------------------: |
+|  eventType   | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+| prizePoolMin |  number?   |       -       |              Minimum prize pool (USD$)              |
+| prizePoolMax |  number?   |       -       |              Maximum prize pool (USD$)              |
 
 ```javascript
 HLTV.getEvents().then(res => {

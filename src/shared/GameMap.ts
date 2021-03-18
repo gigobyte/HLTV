@@ -50,20 +50,25 @@ export const fromMapName = (name: string): GameMap => {
     case 'TBA':
       return GameMap.TBA
     case 'Train':
+    case 'Train_se':
       return GameMap.Train
     case 'Cobblestone':
       return GameMap.Cobblestone
     case 'Inferno':
+    case 'Inferno_se':
       return GameMap.Inferno
     case 'Cache':
       return GameMap.Cache
     case 'Mirage':
+    case 'Mirage_ce':
       return GameMap.Mirage
     case 'Overpass':
       return GameMap.Overpass
     case 'Dust2':
+    case 'Dust2_se':
       return GameMap.Dust2
     case 'Nuke':
+    case 'Nuke_se':
       return GameMap.Nuke
     case 'Tuscan':
       return GameMap.Tuscan

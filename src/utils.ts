@@ -7,7 +7,12 @@ export const fetchPage = async (
 ): Promise<cheerio.Root> => {
   const root = cheerio.load(await loadPage(url))
 
-  if (root.html().includes('error code: 1015')) {
+  const html = root.html()
+
+  if (
+    html.includes('error code: 1015') ||
+    html.includes('Sorry, you have been blocked')
+  ) {
     throw new Error(
       'Access denied | www.hltv.org used Cloudflare to restrict access'
     )
@@ -36,5 +41,12 @@ export function getIdAt(index?: number, href?: string): any {
 
 export const notNull = <T>(x: T | null): x is T => x !== null
 
-export const parseNumber = (str: string | undefined): number | undefined =>
-  Number(str) || undefined
+export const parseNumber = (str: string | undefined): number | undefined => {
+  const num = Number(str)
+
+  if (Number.isNaN(num)) {
+    return undefined
+  }
+
+  return num
+}
