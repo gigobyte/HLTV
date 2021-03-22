@@ -193,12 +193,12 @@ Object {
   "id": 2325765,
   "maps": Array [
     Object {
-      "name": "d2",
+      "name": "de_dust2",
       "result": undefined,
       "statsId": 73147,
     },
     Object {
-      "name": "inf",
+      "name": "de_inferno",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -216,7 +216,7 @@ Object {
       "statsId": 73164,
     },
     Object {
-      "name": "mrg",
+      "name": "de_mirage",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -299,7 +299,7 @@ Object {
   "title": undefined,
   "vetoes": Array [
     Object {
-      "map": "ovp",
+      "map": "de_overpass",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -307,7 +307,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "cch",
+      "map": "de_cache",
       "team": Object {
         "id": 7533,
         "name": "North",
@@ -315,7 +315,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "d2",
+      "map": "de_dust2",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -323,7 +323,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "inf",
+      "map": "de_inferno",
       "team": Object {
         "id": 7533,
         "name": "North",
@@ -331,7 +331,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "trn",
+      "map": "de_train",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -339,7 +339,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "nuke",
+      "map": "de_nuke",
       "team": Object {
         "id": 7533,
         "name": "North",
@@ -347,7 +347,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "mrg",
+      "map": "de_mirage",
       "type": "leftover",
     },
   ],
@@ -374,7 +374,7 @@ Object {
   "id": 2290099,
   "maps": Array [
     Object {
-      "name": "nuke",
+      "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
@@ -463,7 +463,7 @@ Object {
   "id": 2186795,
   "maps": Array [
     Object {
-      "name": "nuke",
+      "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
@@ -519,7 +519,7 @@ Object {
       },
     ],
   },
-  "statsId": 13368,
+  "statsId": undefined,
   "status": "Over",
   "streams": Array [],
   "team1": Object {
@@ -558,7 +558,7 @@ Object {
   "id": 2300113,
   "maps": Array [
     Object {
-      "name": "cch",
+      "name": "de_cache",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -576,7 +576,7 @@ Object {
       "statsId": undefined,
     },
     Object {
-      "name": "mrg",
+      "name": "de_mirage",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -594,7 +594,7 @@ Object {
       "statsId": undefined,
     },
     Object {
-      "name": "inf",
+      "name": "de_inferno",
       "result": undefined,
       "statsId": undefined,
     },
@@ -661,7 +661,7 @@ Object {
   "title": undefined,
   "vetoes": Array [
     Object {
-      "map": "trn",
+      "map": "de_train",
       "team": Object {
         "id": 6599,
         "name": "KULAK",
@@ -669,7 +669,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "cbl",
+      "map": "de_cbble",
       "team": Object {
         "id": 6594,
         "name": "420pm",
@@ -677,7 +677,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "cch",
+      "map": "de_cache",
       "team": Object {
         "id": 6599,
         "name": "KULAK",
@@ -685,7 +685,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "mrg",
+      "map": "de_mirage",
       "team": Object {
         "id": 6594,
         "name": "420pm",
@@ -693,7 +693,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "inf",
+      "map": "de_inferno",
       "type": "leftover",
     },
   ],
@@ -847,7 +847,7 @@ Object {
   "id": 2346506,
   "maps": Array [
     Object {
-      "name": "trn",
+      "name": "de_train",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -865,7 +865,7 @@ Object {
       "statsId": 116197,
     },
     Object {
-      "name": "inf",
+      "name": "de_inferno",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -883,7 +883,7 @@ Object {
       "statsId": 116206,
     },
     Object {
-      "name": "mrg",
+      "name": "de_mirage",
       "result": Object {
         "halfResults": Array [
           Object {
@@ -966,7 +966,7 @@ Object {
   "title": undefined,
   "vetoes": Array [
     Object {
-      "map": "nuke",
+      "map": "de_nuke",
       "team": Object {
         "id": 9863,
         "name": "FATE",
@@ -974,7 +974,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "d2",
+      "map": "de_dust2",
       "team": Object {
         "id": 6978,
         "name": "Singularity",
@@ -982,7 +982,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "trn",
+      "map": "de_train",
       "team": Object {
         "id": 9863,
         "name": "FATE",
@@ -990,7 +990,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "inf",
+      "map": "de_inferno",
       "team": Object {
         "id": 6978,
         "name": "Singularity",
@@ -998,7 +998,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "vertigo",
+      "map": "de_vertigo",
       "team": Object {
         "id": 9863,
         "name": "FATE",
@@ -1006,7 +1006,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "ovp",
+      "map": "de_overpass",
       "team": Object {
         "id": 6978,
         "name": "Singularity",
@@ -1014,7 +1014,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "mrg",
+      "map": "de_mirage",
       "type": "leftover",
     },
   ],

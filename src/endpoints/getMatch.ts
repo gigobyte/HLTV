@@ -490,7 +490,9 @@ function getHighlights($: HLTVPage, team1?: Team, team2?: Team): Highlight[] {
 }
 
 function getStatsId($: HLTVPage): number | undefined {
-  if (!$('.stats-detailed-stats a').attr('href').includes('mapstats')) {
+  const statsEl = $('.stats-detailed-stats a')
+
+  if (statsEl.exists() && !statsEl.attr('href').includes('mapstats')) {
     return getIdAt(3, $('.stats-detailed-stats a').attr('href'))
   }
 }

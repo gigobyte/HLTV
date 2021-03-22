@@ -6,6 +6,7 @@ import { getEvent } from './endpoints/getEvent'
 import { getEventByName } from './endpoints/getEventByName'
 import { getEvents } from './endpoints/getEvents'
 import { getMatchMapStats } from './endpoints/getMatchMapStats'
+import { getMatchStats } from './endpoints/getMatchStats'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -28,6 +29,7 @@ export class Hltv {
   getEvents = getEvents(this.config as HLTVConfig)
   getEventByName = getEventByName(this.config as HLTVConfig)
   getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
+  getMatchStats = getMatchStats(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -70,3 +72,5 @@ export type {
 
 export { EventType } from './endpoints/getEvents'
 export type { EventPreview } from './endpoints/getEvents'
+
+export type { FullMatchStats } from './endpoints/getMatchStats'

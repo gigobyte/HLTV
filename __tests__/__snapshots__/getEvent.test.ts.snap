@@ -2,1552 +2,514 @@
 
 exports[`getEvent 1`] = `
 Object {
-  "dateEnd": 1513422000000,
-  "dateStart": 1513422000000,
+  "dateEnd": 1616756400000,
+  "dateStart": 1615806000000,
   "formats": Array [
     Object {
-      "description": "Single-elimination BO3",
-      "type": "Playoffs",
+      "description": "Stage 1: GSL Bo3 - Top 2 teams of each group advance to Stage 2  Stage 2: Swiss Bo3",
+      "type": "Group stage",
     },
   ],
-  "highlights": Array [
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164170883.mp4",
-      "name": "M1 | Plopski - ACE",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164170883-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164178832.mp4",
-      "name": "M3 | PONKUS - 1vs3 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "team2": Object {
-        "id": 7908,
-        "name": "PopcornPlokker$",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164178832-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164179392.mp4",
-      "name": "M3 | VORTEX - ACE",
-      "team1": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "team2": Object {
-        "id": 7908,
-        "name": "PopcornPlokker$",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164179392-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-19246.mp4",
-      "name": "M2 | Brollan - 1vs3 clutch (T - post-plant situation) to complete his ACE",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-19246-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-10456.mp4",
-      "name": "M3 | Plopski - 4 quick AK kills (2 HS) on the bombsite A bomb plant defense",
-      "team1": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "team2": Object {
-        "id": 7908,
-        "name": "PopcornPlokker$",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-10456-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164174707.mp4",
-      "name": "M2 | kedo - 4 AK kills (3 HS) on the bombsite A offensive to keep low riders in the match",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164174707-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164170016.mp4",
-      "name": "M1 | HugoXD - 3 M4A4 HS kills on the bombsite B defense",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164170016-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164170420.mp4",
-      "name": "M1 | kedo - 4 M4A4 kills (2 HS) on the Mid defense (clean round - anti-eco)",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164170420-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-18716.mp4",
-      "name": "M2 | Plopski - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-210031600-offset-18716-preview-480x272.jpg",
-      "views": 106,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/164171789.mp4",
-      "name": "M2 | Plopski - 3 AK kills on the bombsite B bomb plant defense (2vs3 situation)",
-      "team1": Object {
-        "id": 8660,
-        "name": "low riders",
-      },
-      "team2": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/164171789-preview-480x272.jpg",
-      "views": 106,
-    },
-  ],
-  "id": 3452,
+  "highlights": Array [],
+  "id": 5785,
   "location": Object {
-    "code": "SE",
-    "name": "Stockholm, Sweden",
+    "code": "EU",
+    "name": "Europe (Online)",
   },
-  "logo": "/img/static/event/logo/noLogo.svg",
+  "logo": "https://img-cdn.hltv.org/eventlogo/8RZBXkxFwtN4xocujrPdpf.png?ixlib=java-2.1.0&s=a5fd9f41e3a749377ce16db562b6874a",
   "mapPool": Array [
-    "de_cache",
+    "de_dust2",
     "de_mirage",
     "de_inferno",
     "de_nuke",
     "de_train",
-    "de_cbble",
     "de_overpass",
+    "de_vertigo",
   ],
-  "name": "Ownit 2017 Winter Finals",
+  "name": "Snow Sweet Snow 3 Regionals",
   "news": Array [],
   "numberOfTeams": undefined,
   "prizeDistribution": Array [
     Object {
       "otherPrize": undefined,
-      "place": "1st",
-      "prize": "$4,100",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 6497,
-        "name": "TzatzikiKlubben",
+      "place": "1-2nd",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
       },
+      "team": undefined,
     },
     Object {
       "otherPrize": undefined,
-      "place": "2nd",
-      "prize": "$1,175",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8660,
-        "name": "low riders",
+      "place": "1-2nd",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
       },
+      "team": undefined,
     },
     Object {
       "otherPrize": undefined,
-      "place": "3rd",
-      "prize": "$575",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8659,
-        "name": "Kampners Advokatbyrå",
+      "place": "3-5th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
       },
+      "team": undefined,
     },
     Object {
       "otherPrize": undefined,
-      "place": "4th",
+      "place": "3-5th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
+      },
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "3-5th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
+      },
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "6-8th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
+      },
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "6-8th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
+      },
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "6-8th",
+      "prize": "$3,000",
+      "qualifiesFor": Object {
+        "id": 5786,
+        "name": "Snow Sweet Snow 3",
+      },
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "9-11th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "9-11th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "9-11th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "12-14th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "12-14th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "12-14th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "15-16th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "15-16th",
+      "prize": "$1,000",
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "17-24th",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": undefined,
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
       "prize": undefined,
       "qualifiesFor": undefined,
       "team": Object {
-        "id": 7908,
-        "name": "PopcornPlokker$",
+        "id": 10894,
+        "name": "Case",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7674,
+        "name": "Ambush",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 7681,
+        "name": "Izako Boars",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 9735,
+        "name": "Lilmix",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 10999,
+        "name": "EC Brugge",
+      },
+    },
+    Object {
+      "otherPrize": undefined,
+      "place": "25-32nd",
+      "prize": undefined,
+      "qualifiesFor": undefined,
+      "team": Object {
+        "id": 10808,
+        "name": "GROND",
       },
     },
   ],
-  "prizePool": "$5,850",
-  "relatedEvents": Array [],
+  "prizePool": "$32,000",
+  "relatedEvents": Array [
+    Object {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    Object {
+      "id": 5752,
+      "name": "Snow Sweet Snow 2",
+    },
+    Object {
+      "id": 5786,
+      "name": "Snow Sweet Snow 3",
+    },
+  ],
   "teams": Array [
     Object {
-      "id": 6497,
-      "name": "TzatzikiKlubben",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
+      "id": 7461,
+      "name": "Copenhagen Flames",
+      "rankDuringEvent": 30,
+      "reasonForParticipation": "Nordic Invite",
     },
     Object {
-      "id": 7908,
-      "name": "PopcornPlokker$",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
+      "id": 10426,
+      "name": "Wisla Krakow",
+      "rankDuringEvent": 40,
+      "reasonForParticipation": "Polish Invite",
     },
     Object {
-      "id": 8659,
-      "name": "Kampners Advokatbyrå",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
+      "id": 11026,
+      "name": "VOYVODA",
+      "rankDuringEvent": 47,
+      "reasonForParticipation": "International Invite",
     },
     Object {
-      "id": 8660,
-      "name": "low riders",
+      "id": 4602,
+      "name": "Tricked",
+      "rankDuringEvent": 50,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 8963,
+      "name": "Lyngby Vikings",
+      "rankDuringEvent": 51,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 10386,
+      "name": "SKADE",
+      "rankDuringEvent": 52,
+      "reasonForParticipation": "Balkan Invite",
+    },
+    Object {
+      "id": 9735,
+      "name": "Lilmix",
+      "rankDuringEvent": 53,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 7681,
+      "name": "Izako Boars",
+      "rankDuringEvent": 55,
+      "reasonForParticipation": "Polish Invite",
+    },
+    Object {
+      "id": 10977,
+      "name": "Trident",
+      "rankDuringEvent": 59,
+      "reasonForParticipation": "CIS Invite",
+    },
+    Object {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+      "rankDuringEvent": 60,
+      "reasonForParticipation": "West EU Invite",
+    },
+    Object {
+      "id": 4674,
+      "name": "LDLC",
+      "rankDuringEvent": 61,
+      "reasonForParticipation": "West EU Invite",
+    },
+    Object {
+      "id": 8769,
+      "name": "Nordavind",
+      "rankDuringEvent": 64,
+      "reasonForParticipation": "International Invite",
+    },
+    Object {
+      "id": 10525,
+      "name": "100PG",
+      "rankDuringEvent": 66,
+      "reasonForParticipation": "CIS Invite",
+    },
+    Object {
+      "id": 7244,
+      "name": "K23",
+      "rankDuringEvent": 71,
+      "reasonForParticipation": "CIS Invite",
+    },
+    Object {
+      "id": 10879,
+      "name": "UMX",
+      "rankDuringEvent": 81,
+      "reasonForParticipation": "West EU Invite",
+    },
+    Object {
+      "id": 10737,
+      "name": "HONORIS",
+      "rankDuringEvent": 85,
+      "reasonForParticipation": "Polish Invite",
+    },
+    Object {
+      "id": 10808,
+      "name": "GROND",
+      "rankDuringEvent": 86,
+      "reasonForParticipation": "CIS Invite",
+    },
+    Object {
+      "id": 8813,
+      "name": "Illuminar",
+      "rankDuringEvent": 90,
+      "reasonForParticipation": "Polish Invite",
+    },
+    Object {
+      "id": 10192,
+      "name": "eXploit",
+      "rankDuringEvent": 93,
+      "reasonForParticipation": "Ibero-American Invite",
+    },
+    Object {
+      "id": 10960,
+      "name": "Young Ninjas",
+      "rankDuringEvent": 98,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 11001,
+      "name": "ONYX",
+      "rankDuringEvent": 99,
+      "reasonForParticipation": "Balkan Invite",
+    },
+    Object {
+      "id": 7187,
+      "name": "Nexus",
+      "rankDuringEvent": 100,
+      "reasonForParticipation": "Balkan Invite",
+    },
+    Object {
+      "id": 10954,
+      "name": "Astralis Talent",
+      "rankDuringEvent": 104,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 7674,
+      "name": "Ambush",
+      "rankDuringEvent": 107,
+      "reasonForParticipation": "West EU Invite",
+    },
+    Object {
+      "id": 8515,
+      "name": "OFFSET",
+      "rankDuringEvent": 109,
+      "reasonForParticipation": "Ibero-American Invite",
+    },
+    Object {
+      "id": 10894,
+      "name": "Case",
+      "rankDuringEvent": 113,
+      "reasonForParticipation": "Ibero-American Invite",
+    },
+    Object {
+      "id": 9466,
+      "name": "GTZ Bulls",
+      "rankDuringEvent": 117,
+      "reasonForParticipation": "Ibero-American Invite",
+    },
+    Object {
+      "id": 9648,
+      "name": "KOVA",
+      "rankDuringEvent": 138,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 9863,
+      "name": "FATE",
+      "rankDuringEvent": 140,
+      "reasonForParticipation": "Balkan Invite",
+    },
+    Object {
+      "id": 10764,
+      "name": "Galaxy Racer",
+      "rankDuringEvent": 147,
+      "reasonForParticipation": "Nordic Invite",
+    },
+    Object {
+      "id": 10999,
+      "name": "EC Brugge",
       "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
+      "reasonForParticipation": "International Invite",
+    },
+    Object {
+      "id": 10697,
+      "name": "BLINK",
+      "rankDuringEvent": undefined,
+      "reasonForParticipation": "International Invite",
     },
   ],
 }
 `;
 
 exports[`getEvent 2`] = `
-Object {
-  "dateEnd": 1520506800000,
-  "dateStart": 1518519600000,
-  "formats": Array [
-    Object {
-      "description": "Round-robin BO2",
-      "type": "Group stage",
-    },
-    Object {
-      "description": "Single-elimination BO3",
-      "type": "Playoffs",
-    },
-  ],
-  "highlights": Array [
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205360028.mp4",
-      "name": "M2 | faveN - ACE",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205360028-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205352239.mp4",
-      "name": "M1 | faveN - USP-S ACE (pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205352239-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205362866.mp4",
-      "name": "M3 | Zero - 3 M4A4 kills on the bombsite A defense",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205362866-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205358202.mp4",
-      "name": "M2 | gabesson - 3 quick USP-S HS kills on the bombsite A defense (second half pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205358202-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205353729.mp4",
-      "name": "M1 | mirbit - 4 AK kills (2 HS) on the Mid defense",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205353729-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205361503.mp4",
-      "name": "M3 | mirbit - 3 USP-S HS kills on the bombsite B bomb plant defense (second half pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205361503-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/205356369.mp4",
-      "name": "M1 | crisby - 4 Glock HS kills on the bombsite A offensive (second half pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/205356369-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-235584298-offset-5384.mp4",
-      "name": "M2 | peet - 1vs3 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-235584298-offset-5384-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203818989.mp4",
-      "name": "M1 | faveN - 3 AK kills on the Ladder Room to bombsite A offensive",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203818989-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203784776.mp4",
-      "name": "M2 | gabesson - 3 AWP kills on the bombsite B defense (initial frags)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203784776-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203819450.mp4",
-      "name": "M1 | oskarish - 3 kills (2 M4A4, USP-S) on the bombsite A defense (finishing frags)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203819450-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203821777.mp4",
-      "name": "M2 | mirbit - 3 quick M4A1-S kills on the bombsite B defense (2vs4 situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203821777-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203785350.mp4",
-      "name": "M2 | fleav - 3 M4A4 kills on the bombsite B defense (initial frags - vs CZ75A round)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203785350-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203819939.mp4",
-      "name": "M1 | oskarish - 3 Glock HS kills on the bombsite B bomb plant defense (second half pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203819939-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/203820464.mp4",
-      "name": "M1 | p1jo - 4 AK kills (3 HS) on the bombsite A bomb plant defen (including 1vs2 clutch)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/203820464-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202524341.mp4",
-      "name": "M1 | CHEHOL - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202524341-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-233715945-offset-2142.mp4",
-      "name": "M1 | Speed4k - 4 USP-S HS kills on the bombsite A defense (second half pistol round)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-233715945-offset-2142-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202521547.mp4",
-      "name": "M1 | mono - 4 USP-S HS kills on the bombsite B retake (initial 2vs4 situation - including 1vs2 clutch - pistol round)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202521547-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202525455.mp4",
-      "name": "M1 | oskarish - 1vs3 clutch (T - bomb planted after 2 clutch kills) - Part 2 - 1/3 frags",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202525455-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-233715945-offset-3742.mp4",
-      "name": "M1 | oskarish - 1vs3 clutch (T - bomb planted after 2 clutch kills) - Part 1 - 2/3 frags",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-233715945-offset-3742-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202526672.mp4",
-      "name": "M2 | minse - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202526672-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202529295.mp4",
-      "name": "M2 | p1jo - 3 AK HS kills on the bombsite A offensive (2vs3 situation)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202529295-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/202527591.mp4",
-      "name": "M2 | mono - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-      "team2": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/202527591-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/200304256.mp4",
-      "name": "M2 | FANAT ROCKA - 1vs2 AWP clutch (CT - pre-plant situation)",
-      "team1": Object {
-        "id": 7017,
-        "name": "Space Jam",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/200304256-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/200305507.mp4",
-      "name": "M2 | uNdo - 1vs2 MAC10 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 7017,
-        "name": "Space Jam",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/200305507-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/199157125.mp4",
-      "name": "M1 | pounh - quick 1vs3 clutch (T - post-plant situation - second half pistol round)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/199157125-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/199164011.mp4",
-      "name": "M2 | kzy - 1vs2 clutch (T - bomb planted after 1 clutch kill)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/199164011-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-232762147-offset-5118.mp4",
-      "name": "M2 | faveN - 3 Deagle kills (2 HS) on the bombsite B offensive",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-232762147-offset-5118-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/199160652.mp4",
-      "name": "M1 | faveN - 1vs2 clutch (CT - post-plant situation) to secure the map victory for EURONICS",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/199160652-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/199159306.mp4",
-      "name": "M1 | crisby - 3 M4A4 HS kills on the bombsite A defense",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/199159306-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196051976.mp4",
-      "name": "M1 | koloRRR - AWP ACE (with 1vs4 clutch) - Part 2 - 4/5 frags",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196051976-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196049613.mp4",
-      "name": "M1 | koloRRR - Scout ACE (Part 1 - 4/5 frags)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196049613-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196052261.mp4",
-      "name": "M1 | koloRRR - AWP ACE (with 1vs4 clutch) - Part 1 - 1/5 frags",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196052261-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196054626.mp4",
-      "name": "M2 | Zero - 1vs3 clutch (T - pre-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196054626-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-230752616-offset-8818.mp4",
-      "name": "M2 | Zero - 1vs2 clutch (CT - pre-plant situation) to secure the match victory for GameAgents",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-230752616-offset-8818-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196049221.mp4",
-      "name": "M1 | koloRRR - Scout ACE (Part 2 - 2/5 frags)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196049221-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196047004.mp4",
-      "name": "M2 | Crityourface - 4 AK kills (2 HS) on the Mid defense (3 kills) and Mid to Underpass to Apartments flank (1 kill) - vs upgraded pistols",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196047004-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196037158.mp4",
-      "name": "M1 | azizz - 1vs3 clutch (T - bomb planted after 1 clutch kill)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196037158-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196056824.mp4",
-      "name": "M2 | fleav - 4 AK kills on the bombsite A defense (vs upgraded pistols)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196056824-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196045209.mp4",
-      "name": "M2 | koloRRR - 4 AWP kills on the bombsite B defense",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196045209-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196055401.mp4",
-      "name": "M2 | mrtn - 1vs2 clutch (CT - bomb planted after 1 clutch kill)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196055401-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196051035.mp4",
-      "name": "M1 | mirbit - 1vs2 AWP clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196051035-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196038179.mp4",
-      "name": "M1 | Zero (CT) - 3 M4A4 kills on the Mid to bombsite B flank (initial frags - vs CZ75A round)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196038179-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196040899.mp4",
-      "name": "M1 | Zero - 3 AK kills (2 HS) on the bombsite A offensive (initial 2vs3 situation - including 1vs2 clutch)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196040899-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196042819.mp4",
-      "name": "M1 | Enzo - 4 AK kills on the advanced bombsite B defense to secure the map victory for Codewise Unicorns",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196042819-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/196040298.mp4",
-      "name": "M1 | Enzo - 4 kills (Incendiary, 3 M4A4) on the bombsite B defense",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/196040298-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194876726.mp4",
-      "name": "M1 | kressy - 4 Deagle HS kills on the bombsite B defense",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194876726-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194887097.mp4",
-      "name": "M2 | mirbit - 1vs3 clutch (T - bomb planted after 2 clutch kills) to set EURONICS on the match point",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194887097-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-230016844-offset-2956.mp4",
-      "name": "M1 | kressy - 3 AK kills (2 HS) on the Drop Zone offensive",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-230016844-offset-2956-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194879731.mp4",
-      "name": "M1 | azizz - 1vs2 clutch (T - bomb planted after 1 clutch kill) - Part 1",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194879731-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194879054.mp4",
-      "name": "M1 | azizz - 1vs2 clutch (T - bomb planted after 1 clutch kill) - Part 2",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194879054-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-230038686-offset-2354.mp4",
-      "name": "M2 | azizz - 3 kills (2 CZ75A, AK) on the bombsite B retake (2vs3 post-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-230038686-offset-2354-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194883870.mp4",
-      "name": "M2 | mepsoN - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194883870-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194884986.mp4",
-      "name": "M2 | faveN - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194884986-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194527536.mp4",
-      "name": "M1 | azizz - ACE (1vs5 clutch) - Part 2 - 2/5 frags",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194527536-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194527730.mp4",
-      "name": "M1 | azizz - ACE (1vs5 clutch) - Part 1 - 3/5 frags",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194527730-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194529032.mp4",
-      "name": "M1 | Puhlyi - 1vs2 clutch (CT - bomb planted after 1 clutch kill) to secure the map victory for Revolution",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194529032-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-229638775-offset-9316.mp4",
-      "name": "M1 | Crityourface - 3 AWP kills on the bombsite A defense",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-229638775-offset-9316-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194529533.mp4",
-      "name": "M2 | mepsoN - 1vs2 clutch (T - post-plant situation) while having 11 HP",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194529533-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/194530723.mp4",
-      "name": "M2 | mepsoN - 3 AK kills (2 HS) on the bombsite A defense",
-      "team1": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-      "team2": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/194530723-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-229283285-offset-8976.mp4",
-      "name": "M2 OT | mono - 1vs2 clutch (T - pre-plant situation)",
-      "team1": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-      "team2": Object {
-        "id": 7017,
-        "name": "Space Jam",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-229283285-offset-8976-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/193403961.mp4",
-      "name": "M2 | Butters - 1vs2 clutch (CT - post-plant situation) to secure the map victory for Refuse",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/193403961-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-228993929-offset-20844.mp4",
-      "name": "M2 | nukkye - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-228993929-offset-20844-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/193402748.mp4",
-      "name": "M2 | koloRRR - 3 AWP kills on the bombsite B defense (initial frags)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/193402748-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/193395321.mp4",
-      "name": "M1 | fleav - 3 M4A4 kills on the advanced bombsite B defense",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/193395321-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/193400449.mp4",
-      "name": "M2 | nukkye - 3 AWP kills on the bombsite A defense",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/193400449-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-228993929-offset-15832.mp4",
-      "name": "M1 | Butters - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-      "team2": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-228993929-offset-15832-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192886456.mp4",
-      "name": "M1 | LTN - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192886456-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192892932.mp4",
-      "name": "M2 | Markos - ACE (with 1vs4 AWP clutch) - Part 1 - 4/5 frags",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192892932-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192889335.mp4",
-      "name": "M1 | Hyper - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192889335-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192885327.mp4",
-      "name": "M1 | LTN - 4 AK kills (3 HS) on the Ramp defense (clean round - vs upgraded pistols)",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192885327-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192892624.mp4",
-      "name": "M2 | Markos - ACE (with 1vs4 AWP clutch) - Part 2 - 1/5 frags",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192892624-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192890656.mp4",
-      "name": "M2 | BTN - 4 kills (HE, 3 M4A4) on the advanced bombsite A defense (vs mostly upgraded pistols)",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192890656-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192884568.mp4",
-      "name": "M1 | TheOne - 3 AK kills (2 HS) on the bombsite A offensive",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192884568-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192891725.mp4",
-      "name": "M2 | iM - 3 M4A4 kills on the bombsite B defense",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192891725-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192887983.mp4",
-      "name": "M1 | XELLOW - 3 AK kills (2 HS) on the Outside offensive",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192887983-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192894355.mp4",
-      "name": "M2 | BTN - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192894355-preview-480x272.jpg",
-      "views": 56,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/192895437.mp4",
-      "name": "M2 | jaxi - 1vs2 clutch (T - bomb planted after 1 clutch kill) while having 28 HP to secure the map victory for Nexus",
-      "team1": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "team2": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/192895437-preview-480x272.jpg",
-      "views": 56,
-    },
-  ],
-  "id": 3552,
-  "location": Object {
-    "code": "EU",
-    "name": "Online (Europe)",
-  },
-  "logo": "https://img-cdn.hltv.org/eventlogo/Wt5f_17LkLZR_99jNfBZtc.png?ixlib=java-2.1.0&s=f959ffa7b87a84a6547f5a6a4a3cacce",
-  "mapPool": Array [
-    "de_cache",
-    "de_mirage",
-    "de_inferno",
-    "de_nuke",
-    "de_train",
-    "de_cbble",
-    "de_overpass",
-  ],
-  "name": "CSesport.com Cup #3",
-  "news": Array [],
-  "numberOfTeams": undefined,
-  "prizeDistribution": Array [
-    Object {
-      "otherPrize": undefined,
-      "place": "1st",
-      "prize": "$2,000",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 6343,
-        "name": "EURONICS",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "2nd",
-      "prize": "$500",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 6652,
-        "name": "GameAgents",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "3-4th",
-      "prize": "$250",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8361,
-        "name": "SEAL",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "3-4th",
-      "prize": "$250",
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-6th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8572,
-        "name": "Codewise Unicorns",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-6th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 7017,
-        "name": "Space Jam",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "7-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 4929,
-        "name": "Refuse",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "7-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8305,
-        "name": "DreamEaters",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "9-10th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 6679,
-        "name": "Revolution",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "9-10th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8209,
-        "name": "Pompa",
-      },
-    },
-  ],
-  "prizePool": "$3,000",
-  "relatedEvents": Array [
-    Object {
-      "id": 3457,
-      "name": "CSesport.com XMAS Cup",
-    },
-    Object {
-      "id": 3638,
-      "name": "CSesport.com Cup #4",
-    },
-  ],
-  "teams": Array [
-    Object {
-      "id": 8305,
-      "name": "DreamEaters",
-      "rankDuringEvent": 61,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 4929,
-      "name": "Refuse",
-      "rankDuringEvent": 72,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6652,
-      "name": "GameAgents",
-      "rankDuringEvent": 75,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 7017,
-      "name": "Space Jam",
-      "rankDuringEvent": 82,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8209,
-      "name": "Pompa",
-      "rankDuringEvent": 88,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 7187,
-      "name": "Nexus",
-      "rankDuringEvent": 92,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6343,
-      "name": "EURONICS",
-      "rankDuringEvent": 98,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8361,
-      "name": "SEAL",
-      "rankDuringEvent": 103,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8572,
-      "name": "Codewise Unicorns",
-      "rankDuringEvent": 104,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6679,
-      "name": "Revolution",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-  ],
-}
-`;
-
-exports[`getEvent 3`] = `
 Object {
   "dateEnd": undefined,
   "dateStart": undefined,
@@ -1583,763 +545,7 @@ Object {
 }
 `;
 
-exports[`getEvent 4`] = `
-Object {
-  "dateEnd": 1500976800000,
-  "dateStart": 1500285600000,
-  "formats": Array [],
-  "highlights": Array [
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-4018.mp4",
-      "name": "M1 | Zote - 3 AK kills to eliminate the CTs pushing from bombsite B (anti-eco)",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-4018-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-6554.mp4",
-      "name": "M2 | Noktse - 4 AWP kills on the bombsite A defense",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-6554-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-6702.mp4",
-      "name": "M2 | nbl - 4 M4A4 kills on the bombsite A defense",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-6702-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-7458.mp4",
-      "name": "M2 | NikoM - 4 HS kills (3 M4A1-S, USP-S) on the bombsite A defense (clean round - anti-eco)",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-7458-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-5218.mp4",
-      "name": "M1 | restikk - 3 quick HS kills (2 TEC9, AWP) on the Ivy to bombsite A offensive",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-5218-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-4774.mp4",
-      "name": "M1 | restikk (T) resolves the 2vs2 post-plant situation with 2 AK kills on the bombsite A bomb plant defense",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-4774-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-2668.mp4",
-      "name": "M1 | Chuky - 3 AK kills on the bombsite B defense",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-162007397-offset-2668-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-8566.666333333334-60.mp4",
-      "name": "M2 | 1962 - ACE",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-8566.666333333334-60-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4470.mp4",
-      "name": "M1 | 1962 - 1vs2 clutch (CT - pre-plant situation)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4470-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-3292.mp4",
-      "name": "M1 | 1962 - 4 Famas kills (2 HS) on the bombsite B defense (clean round - vs AK and upgraded pistols with 4/5 armor distribution)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-3292-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-5694.mp4",
-      "name": "M2 | LinKz - 3 AK kills on the Heaven to bombsite A offensive",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-5694-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-3514.mp4",
-      "name": "M1 | xand - 4 AK kills on the bombsite A defense (mostly 3rd person perspective)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-3514-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4238.mp4",
-      "name": "M1 | 1962 - 4 AK kills (2 HS) on the bombsite B defense",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4238-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-5970.mp4",
-      "name": "M2 | raizen - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-5970-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4488.85-50.00000000000004.mp4",
-      "name": "M1 | tt - 4 kills (3 AWP, Zeus) on the bombsite A defense (clean round - vs buy) to complete the perfect CT half",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-161734449-offset-4488.85-50.00000000000004-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-1699.2-60.mp4",
-      "name": "M2 | meyern - ACE (with 1vs2 clutch) following an upgraded pistols with armor buy round",
-      "team1": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "team2": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-1699.2-60-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160740820-offset-70.mp4",
-      "name": "M2 | restikk - 1vs3 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "team2": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160740820-offset-70-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-976.3829999999999-20.000000000000032.mp4",
-      "name": "M2 | restikk - 3 quick AK kills on the bombsite B defense (initial frags - vs upgraded pistols)",
-      "team1": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "team2": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-976.3829999999999-20.000000000000032-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-606.mp4",
-      "name": "M2 | restikk - 3 quick M4A4 kills on the advanced bombsite B Apartments defense (clean round - vs buy)",
-      "team1": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "team2": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-606-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-1834.5659999999998-20.00000000000002.mp4",
-      "name": "M2 | maxujas - 3 CZ75A kills on the bombsite A Ramp defense",
-      "team1": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-      "team2": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160731446-offset-1834.5659999999998-20.00000000000002-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6278.299666666667-60.mp4",
-      "name": "M2 | mat1 (T) wins the 1vs3 situation with the help of the bomb timer in the final duel (vs Zote) - Part 1",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6278.299666666667-60-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6340.616-60.mp4",
-      "name": "M2 | mat1 (T) wins the 1vs3 situation with the help of the bomb timer in the final duel (vs Zote) - Part 2",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6340.616-60-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2030.mp4",
-      "name": "M1 | tinchoff (T) resolves the 2vs2 pre-plant situation with 2 AK kills on the bombsite A offensive",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2030-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2429.616-40.00000000000015.mp4",
-      "name": "M1 | nbl - 3 M4A4 kills on the bombsite A defense",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2429.616-40.00000000000015-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-5208.mp4",
-      "name": "M2 | nbl - 3 AK HS kills on the bombsite A offensive",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-5208-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6048.mp4",
-      "name": "M2 | NikoM - 1vs3 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-6048-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2706.216-20.000000000000025.mp4",
-      "name": "M1 | Noktse - 1vs2 AWP clutch (CT - pre-plant situation)",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-2706.216-20.000000000000025-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-5860.mp4",
-      "name": "M2 | Straka - 1vs2 clutch (T - pre-plant situation)",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-5860-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-4870.mp4",
-      "name": "M2 | Noktse - 1vs2 clutch (T - post-plant situation) to secure the pistol round for Isurus",
-      "team1": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-      "team2": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160484849-offset-4870-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-3641.116-40.00000000000006.mp4",
-      "name": "M1 | xand - 1vs3 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-3641.116-40.00000000000006-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-2286.45-20.000000000000075.mp4",
-      "name": "M1 | reversive - 3 USP-S kills (2 HS) on the bombsite A defense (clean pistol round)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-2286.45-20.000000000000075-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-4120.mp4",
-      "name": "M1 | reversive - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-4120-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-3476.5-40.00000000000007.mp4",
-      "name": "M1 | reversive - 3 M4A1-S kills (2 HS) on the bombsite A defense (2vs3 situation)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-3476.5-40.00000000000007-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-6490.mp4",
-      "name": "M2 | 1962 - 3 AK kills (2 HS) on the bombsite A defense (vs upgraded pistols)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-6490-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-5569.216-40.00000000000008.mp4",
-      "name": "M2 | reversive - 3 M4A1-S kills on the Ladder Room defense (initial frags -  vs upgraded pistols)",
-      "team1": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-      "team2": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-160226274-offset-5569.216-40.00000000000008-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-3591.1-14.999999999999991.mp4",
-      "name": "M1 | raizen - 3 quick M4A4 kills (2 HS) on the bombsite A defense",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-3591.1-14.999999999999991-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-3632.mp4",
-      "name": "M1 | LinKz - 1vs2 TEC9 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-3632-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-2914.mp4",
-      "name": "M1 | negroNE - 3 AK kills (2 HS) on the bombsite B bomb plant defense",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-2914-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-7368.mp4",
-      "name": "M2 | LEEROY - 3 M4A4 kills on the bombsite B defense (initial frags)",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-7368-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4438.mp4",
-      "name": "M1 | bEaRs - 1vs2 clutch (CT - post-plant situation) to secure the second half pistol round for Licht",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4438-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4098.mp4",
-      "name": "M1 | gessito - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4098-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4530.mp4",
-      "name": "M1 | negroNE - 1vs2 clutch (CT - post-plant situation)",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-4530-preview-480x272.jpg",
-      "views": 103,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-7590.mp4",
-      "name": "M2 | alejandrinho (CT) secures the second half pistol round for Licht with 2 USP-S kills on the bombsite A retake (2vs2 post-plant situation)",
-      "team1": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-      "team2": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/vod-159947314-offset-7590-preview-480x272.jpg",
-      "views": 103,
-    },
-  ],
-  "id": 3005,
-  "location": Object {
-    "code": "AR",
-    "name": "Online",
-  },
-  "logo": "https://img-cdn.hltv.org/eventlogo/0OEQL0ulg1n7GSfj-htibf.png?ixlib=java-2.1.0&s=aef2b3abcdfdbf1ad380eb4e02f17b17",
-  "mapPool": Array [],
-  "name": "Liga TyC Sports Aorus #1",
-  "news": Array [],
-  "numberOfTeams": undefined,
-  "prizeDistribution": Array [
-    Object {
-      "otherPrize": "Liga TyC Sports Aorus Finals",
-      "place": "1-2nd",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 6799,
-        "name": "Furious",
-      },
-    },
-    Object {
-      "otherPrize": "Liga TyC Sports Aorus Finals",
-      "place": "1-2nd",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 7653,
-        "name": "Isurus",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "3-4th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8123,
-        "name": "Keymotion",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "3-4th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8125,
-        "name": "Hafnet",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8094,
-        "name": "Licht",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8121,
-        "name": "Malvinas",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8122,
-        "name": "Kitsune",
-      },
-    },
-    Object {
-      "otherPrize": undefined,
-      "place": "5-8th",
-      "prize": undefined,
-      "qualifiesFor": undefined,
-      "team": Object {
-        "id": 8124,
-        "name": "Keymotion Red",
-      },
-    },
-  ],
-  "prizePool": "TBA",
-  "relatedEvents": Array [],
-  "teams": Array [
-    Object {
-      "id": 7653,
-      "name": "Isurus",
-      "rankDuringEvent": 199,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8124,
-      "name": "Keymotion Red",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8125,
-      "name": "Hafnet",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 6799,
-      "name": "Furious",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8094,
-      "name": "Licht",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8121,
-      "name": "Malvinas",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8122,
-      "name": "Kitsune",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-    Object {
-      "id": 8123,
-      "name": "Keymotion",
-      "rankDuringEvent": undefined,
-      "reasonForParticipation": undefined,
-    },
-  ],
-}
-`;
-
-exports[`getEvent 5`] = `
+exports[`getEvent 3`] = `
 Object {
   "dateEnd": 1549623600000,
   "dateStart": 1549450800000,
@@ -3035,7 +1241,7 @@ Object {
 }
 `;
 
-exports[`getEvent 6`] = `
+exports[`getEvent 4`] = `
 Object {
   "dateEnd": 1495360800000,
   "dateStart": 1495360800000,

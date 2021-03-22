@@ -10,7 +10,7 @@ export const fetchPage = async (
   const html = root.html()
 
   if (
-    html.includes('error code: 1015') ||
+    html.includes('error code:') ||
     html.includes('Sorry, you have been blocked')
   ) {
     throw new Error(
@@ -42,11 +42,11 @@ export function getIdAt(index?: number, href?: string): any {
 export const notNull = <T>(x: T | null): x is T => x !== null
 
 export const parseNumber = (str: string | undefined): number | undefined => {
-  const num = Number(str)
-
-  if (Number.isNaN(num)) {
+  if (!str) {
     return undefined
   }
 
-  return num
+  const num = Number(str)
+
+  return Number.isNaN(num) ? undefined : num
 }
