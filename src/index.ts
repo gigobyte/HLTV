@@ -8,6 +8,8 @@ import { getEvents } from './endpoints/getEvents'
 import { getMatchMapStats } from './endpoints/getMatchMapStats'
 import { getMatchStats } from './endpoints/getMatchStats'
 import { getMatchesStats } from './endpoints/getMatchesStats'
+import { getPlayer } from './endpoints/getPlayer'
+import { getPlayerByName } from './endpoints/getPlayerByName'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -32,6 +34,8 @@ export class Hltv {
   getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
   getMatchStats = getMatchStats(this.config as HLTVConfig)
   getMatchesStats = getMatchesStats(this.config as HLTVConfig)
+  getPlayer = getPlayer(this.config as HLTVConfig)
+  getPlayerByName = getPlayerByName(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -65,7 +69,6 @@ export type { ScoreboardUpdate, LogUpdate } from './endpoints/connectToScorebot'
 
 export type {
   FullEvent,
-  FullEventArticle,
   FullEventHighlight,
   FullEventFormat,
   FullEventPrizeDistribution,
@@ -82,3 +85,17 @@ export type {
   GetMatchesStatsArguments,
   MatchStatsPreview
 } from './endpoints/getMatchesStats'
+
+export type {
+  FullPlayerTeam,
+  PlayerAchievement,
+  FullPlayer
+} from './endpoints/getPlayer'
+
+export * from './shared/Article'
+export * from './shared/Country'
+export * from './shared/Event'
+export * from './shared/GameMap'
+export * from './shared/MatchFormat'
+export * from './shared/Player'
+export * from './shared/Team'

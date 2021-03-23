@@ -19,7 +19,13 @@ export const defaultLoadPage = (
         agent: httpAgent,
         headers: { 'User-Agent': randomUseragent.getRandom() }
       },
-      (_, __, body) => resolve(body)
+      (err, __, body) => {
+        if (err) {
+          throw err
+        }
+
+        resolve(body)
+      }
     )
   })
 

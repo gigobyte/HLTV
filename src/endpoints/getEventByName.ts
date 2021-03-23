@@ -1,6 +1,5 @@
 import { HLTVConfig } from '../config'
-import HLTV from '../index'
-import { FullEvent } from './getEvent'
+import { FullEvent, getEvent } from './getEvent'
 
 export const getEventByName = (config: HLTVConfig) => async ({
   name
@@ -16,5 +15,5 @@ export const getEventByName = (config: HLTVConfig) => async ({
     throw new Error(`Event ${name} not found`)
   }
 
-  return HLTV.getEvent({ id: firstResult.id })
+  return getEvent(config)({ id: firstResult.id })
 }

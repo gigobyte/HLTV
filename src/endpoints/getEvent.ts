@@ -11,6 +11,7 @@ import {
   parseNumber
 } from '../utils'
 import { fromMapName, GameMap } from '../shared/GameMap'
+import { Article } from '../shared/Article'
 
 export interface FullEventTeam extends Team {
   reasonForParticipation?: string
@@ -39,11 +40,6 @@ export interface FullEventHighlight {
   team2: Team
 }
 
-export interface FullEventArticle {
-  name: string
-  link: string
-}
-
 export interface FullEvent {
   id: number
   name: string
@@ -59,7 +55,7 @@ export interface FullEvent {
   formats: FullEventFormat[]
   mapPool: GameMap[]
   highlights: FullEventHighlight[]
-  news: FullEventArticle[]
+  news: Article[]
 }
 
 export const getEvent = (config: HLTVConfig) => async ({

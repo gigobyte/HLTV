@@ -24,6 +24,7 @@ export interface HLTVPageElement {
   attrThen<T>(attr: string, then: (value: string) => T): T
   next(selector?: string): HLTVPageElement
   eq(index: number): HLTVPageElement
+  parent(): HLTVPageElement
   children(selector?: string): HLTVPageElement
   prev(selector?: string): HLTVPageElement
   contents(): HLTVPageElement
@@ -103,6 +104,10 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
 
     children(selector?: string): HLTVPageElement {
       return attachMethods(root.children(selector))
+    },
+
+    parent(): HLTVPageElement {
+      return attachMethods(root.parent())
     },
 
     contents(): HLTVPageElement {

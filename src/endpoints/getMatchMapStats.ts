@@ -3,7 +3,7 @@ import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
 import { fromMapName, GameMap } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
-import { fetchPage, getIdAt, notNull } from '../utils'
+import { fetchPage, getIdAt, notNull, parseNumber } from '../utils'
 import { Player } from '../shared/Player'
 
 export interface PlayerStats {
@@ -379,7 +379,7 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
         deaths: el.find('.st-deaths').numFromText()!,
         KAST: el
           .find('.st-kdratio')
-          .textThen((x) => Number(x.replace('%', '')) || undefined),
+          .textThen((x) => parseNumber(x.replace('%', ''))),
         killDeathsDifference: el.find('.st-kddiff').numFromText(),
         ADR: el.find('.st-adr').numFromText(),
         firstKillsDifference: el.find('.st-fkdiff').numFromText(),
