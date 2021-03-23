@@ -1,9 +1,8 @@
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
-import { fromMapName, GameMap } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
-import { fetchPage, getIdAt, notNull } from '../utils'
+import { fetchPage, getIdAt } from '../utils'
 import {
   MapStatsOverview,
   TeamsPerformanceOverview,

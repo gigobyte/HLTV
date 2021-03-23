@@ -1,25 +1,12 @@
 import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVPage, HLTVScraper } from '../scraper'
-import { fromMapSlug, GameMap } from '../shared/GameMap'
+import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
 import { fetchPage, getIdAt, sleep } from '../utils'
-
-export enum RankingFilter {
-  Top5 = 'Top5',
-  Top10 = 'Top10',
-  Top20 = 'Top20',
-  Top30 = 'Top30',
-  Top50 = 'Top50'
-}
-
-export enum MatchType {
-  LAN = 'Lan',
-  Online = 'Online',
-  BigEvents = 'BigEvents',
-  Majors = 'Majors'
-}
+import { RankingFilter } from '../shared/RankingFilter'
+import { MatchType } from '../shared/MatchType'
 
 export interface GetMatchesStatsArguments {
   startDate?: string
@@ -43,20 +30,15 @@ export interface MatchStatsPreview {
   }
 }
 
-export const getMatchesStats = (config: HLTVConfig) => async ({
-  startDate,
-  endDate,
-  matchType,
-  maps,
-  rankingFilter,
-  delayBetweenPageRequests = 0
-}: GetMatchesStatsArguments): Promise<any> => {
+export const getMatchesStats = (config: HLTVConfig) => async (
+  options: GetMatchesStatsArguments
+): Promise<any> => {
   const query = stringify({
-    ...(startDate ? { startDate } : {}),
-    ...(endDate ? { endDate } : {}),
-    ...(matchType ? { matchType } : {}),
-    ...(maps ? { maps } : {}),
-    ...(rankingFilter ? { rankingFilter } : {})
+    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(options.endDate ? { endDate: options.endDate } : {}),
+    ...(options.matchType ? { matchType: options.matchType } : {}),
+    ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
+    ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {})
   })
 
   let page = 0
@@ -64,7 +46,7 @@ export const getMatchesStats = (config: HLTVConfig) => async ({
   let matches: MatchStatsPreview[] = []
 
   do {
-    await sleep(delayBetweenPageRequests)
+    await sleep(options.delayBetweenPageRequests ?? 0)
 
     $ = HLTVScraper(
       await fetchPage(

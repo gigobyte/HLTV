@@ -1,4 +1,4 @@
-import { HLTV } from '../src'
+import HLTV from '../src'
 
 test('getMatchesStats', async () => {
   expect(

@@ -55,12 +55,10 @@ const { HLTV } = require('hltv')
 
 You can create an instance of HLTV with a custom config if you want to.
 
-|    Option     |   Type    |         Default value          |                                    Description                                    |
-| :-----------: | :-------: | :----------------------------: | :-------------------------------------------------------------------------------: |
-|    hltvUrl    |  string   |      https://www.hltv.org      |                Url that will be used to construct requests to HLTV                |
-| hltvStaticUrl |  string   |    https://static.hltv.org     |                Url that will be used to construct links to images                 |
-|   loadPage    | function  | based on the 'request' library |       Function that will be called when the library makes a request to HLTV       |
-|   httpAgent   | HttpAgent |           HttpsAgent           | Http agent used when sending a request and connecting to the scoreboard websocket |
+|  Option   |                Type                |         Default value          |                                   Description                                   |
+| :-------: | :--------------------------------: | :----------------------------: | :-----------------------------------------------------------------------------: |
+| loadPage  | (url: string) => Promise\<string\> | based on the 'request' library |      Function that will be called when the library makes a request to HLTV      |
+| httpAgent |             HttpAgent              |           HttpsAgent           | Http agent used when sending a request and connecting to the scorebot websocket |
 
 ```javascript
 const myHLTV = HLTV.createInstance({ loadPage: (url) => axios.get(url) })
@@ -106,11 +104,7 @@ HLTV.getMatches().then((res) => {
 })
 ```
 
-**[See schema for Live Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
-
-**[See schema for Upcoming Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/UpcomingMatch.ts)**
-
----
+## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
 
 #### getMatchesStats
 
@@ -121,7 +115,7 @@ Parses all matches from the `hltv.org/stats/matches` page (1 request per page of
 |        startDate         |                                          string?                                          |       -       |                     -                      |
 |         endDate          |                                          string?                                          |       -       |                     -                      |
 |        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |                     -                      |
-|           maps           |          [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?          |       -       |                     -                      |
+|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?        |       -       |                     -                      |
 |      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |                     -                      |
 | delayBetweenPageRequests |                                          number?                                          |       0       | Used to prevent CloudFlare throttling (ms) |
 
