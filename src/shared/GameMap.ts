@@ -1,5 +1,5 @@
 export enum GameMap {
-  TBA = 'tna',
+  TBA = 'tba',
   Train = 'de_train',
   Cobblestone = 'de_cbble',
   Inferno = 'de_inferno',
@@ -78,5 +78,36 @@ export const fromMapName = (name: string): GameMap => {
       return GameMap.Default
     default:
       return GameMap.Default
+  }
+}
+
+export const toMapFilter = (map: GameMap): string => {
+  switch (map) {
+    case GameMap.Cache:
+      return 'de_cache'
+    case GameMap.Cobblestone:
+      return 'de_cobblestone'
+    case GameMap.Overpass:
+      return 'de_overpass'
+    case GameMap.Dust2:
+      return 'de_dust2'
+    case GameMap.Inferno:
+      return 'de_inferno'
+    case GameMap.Mirage:
+      return 'de_mirage'
+    case GameMap.Nuke:
+      return 'de_nuke'
+    case GameMap.Train:
+      return 'de_train'
+    case GameMap.Tuscan:
+      return 'de_tuscan'
+    case GameMap.Vertigo:
+      return 'de_vertigo'
+    case GameMap.Season:
+      return 'de_season'
+    case GameMap.TBA:
+    case GameMap.Default: {
+      throw new Error(`Invalid map filter - ${map}`)
+    }
   }
 }

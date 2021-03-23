@@ -16,7 +16,7 @@ export enum MatchFilter {
   TopTier = 'top_tier'
 }
 
-type GetMatchesArguments = {
+export interface GetMatchesArguments {
   eventId?: number
   eventType?: MatchEventType
   filter?: MatchFilter

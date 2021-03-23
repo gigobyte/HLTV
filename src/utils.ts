@@ -50,3 +50,7 @@ export const parseNumber = (str: string | undefined): number | undefined => {
 
   return Number.isNaN(num) ? undefined : num
 }
+
+export const sleep = (ms: number): Promise<void> => {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
