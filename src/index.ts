@@ -12,6 +12,7 @@ import { getPlayer } from './endpoints/getPlayer'
 import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
 import { getPlayerStats } from './endpoints/getPlayerStats'
+import { getRecentThreads } from './endpoints/getRecentThreads'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -40,6 +41,7 @@ export class Hltv {
   getPlayerByName = getPlayerByName(this.config as HLTVConfig)
   getPlayerRanking = getPlayerRanking(this.config as HLTVConfig)
   getPlayerStats = getPlayerStats(this.config as HLTVConfig)
+  getRecentThreads = getRecentThreads(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -104,6 +106,9 @@ export type {
   FullPlayerStats,
   GetPlayerStatsArguments
 } from './endpoints/getPlayerStats'
+
+export { ThreadCategory } from './endpoints/getRecentThreads'
+export type { Thread } from './endpoints/getRecentThreads'
 
 export * from './shared/Article'
 export * from './shared/Country'
