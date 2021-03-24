@@ -56,17 +56,21 @@ export const getPlayer = (config: HLTVConfig) => async ({
 
   const isRegularPlayer = $('.standard-box.profileTopBox').exists()
 
-  const name = isRegularPlayer
+  const nameText = isRegularPlayer
     ? $('.player-realname').trimText()
     : $('.playerRealname').trimText()
+
+  const name = nameText === '-' ? undefined : nameText
 
   const ign = isRegularPlayer
     ? $('.player-nick').text()
     : $('.playerNickname').text()
 
-  const image = isRegularPlayer
+  const imageUrl = isRegularPlayer
     ? $('.bodyshot-img-square').attr('src')
     : $('.bodyshot-img').attr('src')
+
+  const image = imageUrl.includes('bodyshot/unknown.png') ? undefined : imageUrl
 
   const age = isRegularPlayer
     ? $('.profile-player-stat-value')

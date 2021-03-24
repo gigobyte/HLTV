@@ -1,6 +1,7 @@
 import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
+import { BestOfFilter } from '../shared/BestOfFilter'
 import { GameMap, toMapFilter } from '../shared/GameMap'
 import { MatchType } from '../shared/MatchType'
 import { Player } from '../shared/Player'
@@ -16,12 +17,6 @@ export interface PlayerRanking {
   kd: number
   rating1?: number
   rating2?: number
-}
-
-export enum BestOfFilter {
-  'BO1' = 'BestOf1',
-  'BO3' = 'BestOf3',
-  'BO5' = 'BestOf5'
 }
 
 export interface GetPlayerRankingOptions {

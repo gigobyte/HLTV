@@ -28,6 +28,9 @@ export interface HLTVPageElement {
   children(selector?: string): HLTVPageElement
   prev(selector?: string): HLTVPageElement
   contents(): HLTVPageElement
+  filter(
+    func: (index: number, element: HLTVPageElement) => boolean
+  ): HLTVPageElement
 }
 
 const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
@@ -112,6 +115,14 @@ const attachMethods = (root: cheerio.Cheerio): HLTVPageElement => {
 
     contents(): HLTVPageElement {
       return attachMethods(root.contents())
+    },
+
+    filter(
+      func: (index: number, element: HLTVPageElement) => boolean
+    ): HLTVPageElement {
+      return attachMethods(
+        root.filter((i, el) => func(i, attachMethods(cheerio.default(el))))
+      )
     }
   }
 

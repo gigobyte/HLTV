@@ -6,7 +6,7 @@ function sleep(ms: number): Promise<void> {
 
 const FULL = 7998
 const EMPTY_NEW_DESIGN = 7000
-const EMPTY_OLD_DESIGN = 9124
+const EMPTY_OLD_DESIGN = 194
 
 test('getPlayer', async () => {
   await sleep(3000)

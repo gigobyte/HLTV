@@ -13,3 +13,4 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getMatchStats({ id: 79924 }))
 // log(HLTV.getPlayer({ id: 7998 }))
 // log(HLTV.getPlayerRanking())
+log(HLTV.getPlayerStats({ id: 1122 }))

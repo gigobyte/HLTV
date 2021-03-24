@@ -340,7 +340,7 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 
 #### getPlayerStats
 
-Parses the info from `hltv.org/stats/players/*` (1 request)
+Parses the info from `hltv.org/stats/players/*` (2 requests)
 
 |    Option     |                                           Type                                            | Default value | Description |
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
@@ -349,6 +349,8 @@ Parses the info from `hltv.org/stats/players/*` (1 request)
 |    endDate    |                                          string                                           |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
+|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 HLTV.getPlayerStats({id: 7998}).then(res => {
@@ -370,7 +372,7 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 |    endDate    |                                          string?                                          |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
-|     maps      |          [Map[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?          |       -       |      -      |
+|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
 |  minMapCount  |                                          number?                                          |       -       |      -      |
 |    country    |                                         string[]                                          |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |

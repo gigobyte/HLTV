@@ -1,6 +1,6 @@
 import HLTV from '../src/'
 import { GameMap } from '../src/shared/GameMap'
-import { BestOfFilter } from '../src/endpoints/getPlayerRanking'
+import { BestOfFilter } from '../src/shared/BestOfFilter'
 
 function sleep(ms: number): Promise<void> {
   return new Promise((resolve) => setTimeout(resolve, ms))

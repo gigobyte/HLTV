@@ -11,6 +11,7 @@ import { getMatchesStats } from './endpoints/getMatchesStats'
 import { getPlayer } from './endpoints/getPlayer'
 import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
+import { getPlayerStats } from './endpoints/getPlayerStats'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -38,6 +39,7 @@ export class Hltv {
   getPlayer = getPlayer(this.config as HLTVConfig)
   getPlayerByName = getPlayerByName(this.config as HLTVConfig)
   getPlayerRanking = getPlayerRanking(this.config as HLTVConfig)
+  getPlayerStats = getPlayerStats(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -93,11 +95,15 @@ export type {
   FullPlayer
 } from './endpoints/getPlayer'
 
-export { BestOfFilter } from './endpoints/getPlayerRanking'
 export type {
   PlayerRanking,
   GetPlayerRankingOptions
 } from './endpoints/getPlayerRanking'
+
+export type {
+  FullPlayerStats,
+  GetPlayerStatsArguments
+} from './endpoints/getPlayerStats'
 
 export * from './shared/Article'
 export * from './shared/Country'
@@ -108,3 +114,4 @@ export * from './shared/Player'
 export * from './shared/Team'
 export * from './shared/RankingFilter'
 export * from './shared/MatchType'
+export * from './shared/BestOfFilter'
