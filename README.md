@@ -18,7 +18,6 @@ Table of contents
   - [getMatchesStats](#getmatchesstats)
   - [getMatchStats](#getmatchstats)
   - [getMatchMapStats](#getmatchmapstats)
-  - [getResults](#getresults)
   - [getStreams](#getstreams)
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
@@ -162,30 +161,6 @@ HLTV.getMatchMapStats({id: 49968}).then((res) => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchMapStats.ts#L63)**
-
----
-
-#### getResults
-
-Parses all matches from the `hltv.org/results/` page (1 reuest per result page)
-
-|     Option     |                                            Type                                             | Default Value |        Description        |
-| :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :-----------------------: |
-|   startPage    |                                           number                                            |       0       |      Set start page       |
-|    endPage     |                                           number                                            |       1       |       Set end page        |
-|     teamID     |                                           number?                                           |       -       |    ID of specific team    |
-|    eventID     |                                           number?                                           |       -       |   ID of specific event    |
-| contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       | Add filter of the content |
-
-```javascript
-// Note: if you pass `eventID` to getResults you cannot pass the `startpage` and `endPage` parameter
-// since HLTV doesn't have pages for the event filter.
-HLTV.getResults({startPage:0,endPage:2}).then((res) => {
-  ...
-})
-```
-
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchResult.ts)**
 
 ---
 

@@ -14,7 +14,7 @@ Object {
     "bestRating2": Object {
       "id": 16410,
       "name": "Duplicate",
-      "value": "1.53",
+      "value": 1.53,
     },
     "clutchesWon": Object {
       "team1": 1,
@@ -27,27 +27,27 @@ Object {
     "mostAWPKills": Object {
       "id": 12379,
       "name": "Impulse",
-      "value": "19",
+      "value": 19,
     },
     "mostAssists": Object {
       "id": 3730,
       "name": "HOLMES",
-      "value": "7",
+      "value": 7,
     },
     "mostDamage": Object {
       "id": 12379,
       "name": "Impulse",
-      "value": "108.0",
+      "value": 108,
     },
     "mostFirstKills": Object {
       "id": 13466,
       "name": "dennyslaw",
-      "value": "8",
+      "value": 8,
     },
     "mostKills": Object {
       "id": 12379,
       "name": "Impulse",
-      "value": "30",
+      "value": 30,
     },
     "rating": Object {
       "team1": 1.27,
@@ -85,7 +85,6 @@ Object {
           "id": 16410,
           "name": "Duplicate",
         },
-        "playerId": 16410,
         "rating1": 1.53,
       },
       Object {
@@ -105,7 +104,6 @@ Object {
           "id": 13466,
           "name": "dennyslaw",
         },
-        "playerId": 13466,
         "rating1": 1.4,
       },
       Object {
@@ -125,7 +123,6 @@ Object {
           "id": 17145,
           "name": "Rainwaker",
         },
-        "playerId": 17145,
         "rating1": 1.21,
       },
       Object {
@@ -145,7 +142,6 @@ Object {
           "id": 18697,
           "name": "Oxygen",
         },
-        "playerId": 18697,
         "rating1": 1.09,
       },
       Object {
@@ -165,7 +161,6 @@ Object {
           "id": 11343,
           "name": "SHiPZ",
         },
-        "playerId": 11343,
         "rating1": 1.09,
       },
     ],
@@ -187,7 +182,6 @@ Object {
           "id": 12379,
           "name": "Impulse",
         },
-        "playerId": 12379,
         "rating1": 1.5,
       },
       Object {
@@ -207,7 +201,6 @@ Object {
           "id": 3732,
           "name": "DiMKE",
         },
-        "playerId": 3732,
         "rating1": 0.76,
       },
       Object {
@@ -227,7 +220,6 @@ Object {
           "id": 5351,
           "name": "aVN",
         },
-        "playerId": 5351,
         "rating1": 0.71,
       },
       Object {
@@ -247,7 +239,6 @@ Object {
           "id": 4218,
           "name": "Dav",
         },
-        "playerId": 4218,
         "rating1": 0.68,
       },
       Object {
@@ -267,7 +258,6 @@ Object {
           "id": 3730,
           "name": "HOLMES",
         },
-        "playerId": 3730,
         "rating1": 0.58,
       },
     ],

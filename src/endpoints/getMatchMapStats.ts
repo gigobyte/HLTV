@@ -324,7 +324,7 @@ export function getStatsOverview($: HLTVPage) {
       res[prop] = {
         id: playerHref ? getIdAt(3, playerHref) : undefined,
         name: $('.most-x-box').eq(i).find('.name > a').text(),
-        value: $('.most-x-box').eq(i).find('.valueName').text()
+        value: $('.most-x-box').eq(i).find('.valueName').numFromText()
       }
 
       return res
@@ -338,7 +338,7 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
     .toArray()
     .reduce((map, el) => {
       const graphData = el.find('.graph.small').attr('data-fusionchart-config')!
-      const data = {
+      const { playerId, ...data } = {
         playerId: Number(
           el.find('.headline span a').attr('href')!.split('/')[2]
         ),
@@ -351,7 +351,7 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
         impact: Number(graphData.split('Impact rating: ')[1].split('"')[0])
       }
 
-      map[data.playerId] = data
+      map[playerId] = data
 
       return map
     }, {} as Record<string, Partial<PlayerStats>>)
