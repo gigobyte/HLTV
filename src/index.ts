@@ -13,6 +13,7 @@ import { getPlayerByName } from './endpoints/getPlayerByName'
 import { getPlayerRanking } from './endpoints/getPlayerRanking'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getRecentThreads } from './endpoints/getRecentThreads'
+import { getStreams } from './endpoints/getStreams'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -42,6 +43,7 @@ export class Hltv {
   getPlayerRanking = getPlayerRanking(this.config as HLTVConfig)
   getPlayerStats = getPlayerStats(this.config as HLTVConfig)
   getRecentThreads = getRecentThreads(this.config as HLTVConfig)
+  getStreams = getStreams(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: HLTVConfig) {
@@ -110,13 +112,16 @@ export type {
 export { ThreadCategory } from './endpoints/getRecentThreads'
 export type { Thread } from './endpoints/getRecentThreads'
 
-export * from './shared/Article'
-export * from './shared/Country'
-export * from './shared/Event'
-export * from './shared/GameMap'
-export * from './shared/MatchFormat'
-export * from './shared/Player'
-export * from './shared/Team'
-export * from './shared/RankingFilter'
-export * from './shared/MatchType'
-export * from './shared/BestOfFilter'
+export { StreamCategory } from './endpoints/getStreams'
+export type { FullStream } from './endpoints/getStreams'
+
+export { GameMap } from './shared/GameMap'
+export { MatchFormat } from './shared/MatchFormat'
+export { RankingFilter } from './shared/RankingFilter'
+export { MatchType } from './shared/MatchType'
+export { BestOfFilter } from './shared/BestOfFilter'
+export type { Article } from './shared/Article'
+export type { Country } from './shared/Country'
+export type { Event } from './shared/Event'
+export type { Player } from './shared/Player'
+export type { Team } from './shared/Team'
