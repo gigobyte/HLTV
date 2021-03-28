@@ -1,141 +1,159 @@
+import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
-import { EventResult } from '../models/EventResult'
-import { EventSize } from '../enums/EventSize'
-import { EventType } from '../enums/EventType'
-import { SimpleEvent } from '../models/SimpleEvent'
-import { popSlashSource } from '../utils/parsing'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVScraper } from '../scraper'
+import { Country } from '../shared/Country'
+import { EventType } from '../shared/EventType'
+import { fetchPage, getIdAt, parseNumber } from '../utils'
 
-export const getEvents = (config: HLTVConfig) => async ({
-  size,
-  month
-}: {
-  size?: EventSize
-  month?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11
-} = {}): Promise<EventResult[]> => {
-  const $ = await fetchPage(`${config.hltvUrl}/events`, config.loadPage)
-
-  checkForRateLimiting($)
-
-  const events = toArray($('.events-month'))
-    .map((eventEl) => {
-      const checkMonth = new Date(
-        eventEl.find('.standard-headline').text()
-      ).getMonth()
-
-      if (
-        typeof month === 'undefined' ||
-        (typeof month !== 'undefined' && month == checkMonth)
-      ) {
-        switch (size) {
-          case EventSize.Small:
-            return {
-              month: checkMonth,
-              events: parseEvents(
-                toArray(eventEl.find('a.small-event')),
-                EventSize.Small
-              )
-            }
-
-          case EventSize.Big:
-            return {
-              month: checkMonth,
-              events: parseEvents(
-                toArray(eventEl.find('a.big-event')),
-                EventSize.Big
-              )
-            }
-
-          default:
-            return {
-              month: checkMonth,
-              events: parseEvents(
-                toArray(eventEl.find('a.big-event')),
-                EventSize.Big
-              ).concat(
-                parseEvents(
-                  toArray(eventEl.find('a.small-event')),
-                  EventSize.Small
-                )
-              )
-            }
-        }
-      }
-
-      return null
-    })
-    .filter((x): x is EventResult => !!x)
-
-  return events
+export interface EventPreview {
+  id: number
+  name: string
+  dateStart: number
+  dateEnd: number
+  numberOfTeams?: number
+  prizePool?: string
+  location?: Country
 }
 
-const parseEvents = (
-  eventsToParse: cheerio.Cheerio[],
-  size?: EventSize
-): SimpleEvent[] => {
-  let dateSelector, nameSelector, locationSelector
+export interface GetEventsArguments {
+  eventType?: EventType
+  prizePoolMin?: number
+  prizePoolMax?: number
+  attendingTeamIds?: number[]
+  attendingPlayerIds?: number[]
+}
 
-  if (size == EventSize.Small) {
-    dateSelector = '.eventDetails .col-desc span[data-unix]'
-    nameSelector = '.col-value .text-ellipsis'
-    locationSelector = '.smallCountry img'
-  } else {
-    dateSelector = 'span[data-unix]'
-    nameSelector = '.big-event-name'
-    locationSelector = '.location-top-teams img'
-  }
+export const getEvents = (config: HLTVConfig) => async (
+  options: GetEventsArguments = {}
+): Promise<EventPreview[]> => {
+  const query = stringify({
+    ...(options.eventType ? { eventType: options.eventType } : {}),
+    ...(options.prizePoolMin ? { prizeMin: options.prizePoolMin } : {}),
+    ...(options.prizePoolMax ? { prizeMax: options.prizePoolMax } : {}),
+    ...(options.attendingTeamIds ? { team: options.attendingTeamIds } : {}),
+    ...(options.attendingPlayerIds
+      ? { player: options.attendingPlayerIds }
+      : {})
+  })
 
-  const events = eventsToParse.map((eventEl) => {
-    const dateStart = eventEl.find(dateSelector).eq(0).data('unix')
+  const $ = HLTVScraper(
+    await fetchPage(`https://www.hltv.org/events?${query}`, config.loadPage)
+  )
 
-    const dateEnd = eventEl.find(dateSelector).eq(1).data('unix')
+  const ongoingEvents = $('.tab-content[id="ALL"] a.ongoing-event')
+    .toArray()
+    .map((el) => {
+      const id = el.attrThen('href', getIdAt(2))!
+      const name = el.find('.event-name-small .text-ellipsis').text()
 
-    let teams
-    let prizePool
+      const dateStart = el
+        .find('tr.eventDetails span[data-unix]')
+        .first()
+        .numFromAttr('data-unix')!
 
-    if (size == EventSize.Small) {
-      teams = eventEl.find('.col-value').eq(1).text()
-      prizePool = eventEl.find('.prizePoolEllipsis').text()
-    } else {
-      teams = eventEl.find('.additional-info tr').eq(0).find('td').eq(2).text()
-      prizePool = eventEl
+      const dateEnd = el
+        .find('tr.eventDetails span[data-unix]')
+        .last()
+        .numFromAttr('data-unix')!
+
+      return { id, name, dateStart, dateEnd }
+    })
+
+  const bigUpcomingEvents = $('a.big-event')
+    .toArray()
+    .map((el) => {
+      const id = el.attrThen('href', getIdAt(2))!
+      const name = el.find('.big-event-name').text()
+
+      const dateStart = el
+        .find('.additional-info .col-date span[data-unix]')
+        .first()
+        .numFromAttr('data-unix')!
+
+      const dateEnd = el
+        .find('.additional-info .col-date span[data-unix]')
+        .last()
+        .numFromAttr('data-unix')!
+
+      const location = {
+        name: el.find('.big-event-location').text(),
+        code: el
+          .find('.location-top-teams img.flag')
+          .attr('src')
+          .split('/')
+          .pop()!
+          .split('.')[0]
+      }
+
+      const prizePool = el
         .find('.additional-info tr')
-        .eq(0)
+        .first()
         .find('td')
         .eq(1)
         .text()
-    }
 
-    const eventName = eventEl.find(nameSelector).text()
+      const numberOfTeams = parseNumber(
+        el.find('.additional-info tr').first().find('td').eq(2).text()
+      )
 
-    const rawType =
-      eventEl.find('table tr').eq(0).find('td').eq(3).text() || undefined
+      return {
+        id,
+        name,
+        dateStart,
+        dateEnd,
+        location,
+        prizePool,
+        numberOfTeams
+      }
+    })
 
-    const eventType = Object.entries({
-      major: EventType.Major,
-      online: EventType.Online,
-      intl: EventType.InternationalLan,
-      local: EventType.LocalLan,
-      reg: EventType.RegionalLan
-    }).find(([needle]) =>
-      rawType ? rawType.toLowerCase().includes(needle) : false
-    )?.[1]
+  const smallUpcomingEvents = $('a.small-event')
+    .toArray()
+    .map((el) => {
+      const id = el.attrThen('href', getIdAt(2))!
+      const name = el
+        .find('.table tr')
+        .first()
+        .find('td')
+        .first()
+        .find('.text-ellipsis')
+        .text()
 
-    return {
-      id: Number(eventEl.attr('href')!.split('/')[2]),
-      name: eventName,
-      dateStart: dateStart ? Number(dateStart) : undefined,
-      dateEnd: dateEnd ? Number(dateEnd) : undefined,
-      prizePool,
-      teams: teams.length ? Number(teams) : undefined,
-      location: {
-        name: eventEl.find(locationSelector).prop('title'),
-        code: popSlashSource(eventEl.find(locationSelector))!.split('.')[0]
-      },
-      type: eventType || EventType.Other
-    }
-  })
+      const dateStart = el
+        .find('td span[data-unix]')
+        .first()
+        .numFromAttr('data-unix')!
 
-  return events
+      const dateEnd = el
+        .find('td span[data-unix]')
+        .last()
+        .numFromAttr('data-unix')!
+
+      const location = {
+        name: el.find('.smallCountry .col-desc').text().replace(' | ', ''),
+        code: el
+          .find('.smallCountry img.flag')
+          .attr('src')
+          .split('/')
+          .pop()!
+          .split('.')[0]
+      }
+
+      const prizePool = el.find('.prizePoolEllipsis').text()
+      const numberOfTeams = parseNumber(
+        el.find('.prizePoolEllipsis').prev().text()
+      )
+
+      return {
+        id,
+        name,
+        dateStart,
+        dateEnd,
+        location,
+        prizePool,
+        numberOfTeams
+      }
+    })
+
+  return ongoingEvents.concat(bigUpcomingEvents).concat(smallUpcomingEvents)
 }

@@ -2,7 +2,6 @@
 
 exports[`getMatch 1`] = `
 Object {
-  "additionalInfo": "* Semi-final",
   "date": 1535888100000,
   "demos": Array [
     Object {
@@ -38,7 +37,10 @@ Object {
     "id": 3389,
     "name": "DreamHack Masters Stockholm 2018",
   },
-  "format": "Best of 3",
+  "format": Object {
+    "location": undefined,
+    "type": "bo3",
+  },
   "hasScorebot": false,
   "headToHead": Array [
     Object {
@@ -133,10 +135,7 @@ Object {
       },
     },
   ],
-  "highlightedPlayer": Object {
-    "id": 11816,
-    "name": "ropz",
-  },
+  "highlightedPlayers": undefined,
   "highlights": Array [
     Object {
       "link": "https://clips.twitch.tv/embed?clip=AgreeableEagerGerbilBatChest&autoplay=true&parent=www.hltv.org",
@@ -192,26 +191,54 @@ Object {
     },
   ],
   "id": 2325765,
-  "live": false,
   "maps": Array [
     Object {
-      "name": "d2",
-      "result": "16:0 (15:0; 1:0)",
+      "name": "de_dust2",
+      "result": undefined,
       "statsId": 73147,
     },
     Object {
-      "name": "inf",
-      "result": "14:16 (5:10; 9:6)",
+      "name": "de_inferno",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 5,
+            "team2Rounds": 10,
+          },
+          Object {
+            "team1Rounds": 9,
+            "team2Rounds": 6,
+          },
+        ],
+        "team1TotalRounds": 14,
+        "team2TotalRounds": 16,
+      },
       "statsId": 73164,
     },
     Object {
-      "name": "mrg",
-      "result": "12:16 (7:8; 5:8)",
+      "name": "de_mirage",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 7,
+            "team2Rounds": 8,
+          },
+          Object {
+            "team1Rounds": 5,
+            "team2Rounds": 8,
+          },
+        ],
+        "team1TotalRounds": 12,
+        "team2TotalRounds": 16,
+      },
       "statsId": 73165,
     },
   ],
   "odds": Array [],
-  "oddsCommunity": undefined,
+  "playerOfTheMatch": Object {
+    "id": 11816,
+    "name": "ropz",
+  },
   "players": Object {
     "team1": Array [
       Object {
@@ -259,7 +286,7 @@ Object {
     ],
   },
   "statsId": 59400,
-  "status": "Match over",
+  "status": "Over",
   "streams": Array [],
   "team1": Object {
     "id": 4494,
@@ -272,7 +299,7 @@ Object {
   "title": undefined,
   "vetoes": Array [
     Object {
-      "map": "ovp",
+      "map": "de_overpass",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -280,7 +307,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "cch",
+      "map": "de_cache",
       "team": Object {
         "id": 7533,
         "name": "North",
@@ -288,7 +315,7 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "d2",
+      "map": "de_dust2",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -296,7 +323,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "inf",
+      "map": "de_inferno",
       "team": Object {
         "id": 7533,
         "name": "North",
@@ -304,7 +331,7 @@ Object {
       "type": "picked",
     },
     Object {
-      "map": "trn",
+      "map": "de_train",
       "team": Object {
         "id": 4494,
         "name": "mousesports",
@@ -312,12 +339,16 @@ Object {
       "type": "removed",
     },
     Object {
-      "map": "nuke",
+      "map": "de_nuke",
       "team": Object {
         "id": 7533,
         "name": "North",
       },
       "type": "removed",
+    },
+    Object {
+      "map": "de_mirage",
+      "type": "leftover",
     },
   ],
   "winnerTeam": Object {
@@ -329,138 +360,27 @@ Object {
 
 exports[`getMatch 2`] = `
 Object {
-  "additionalInfo": "* Semi-final",
-  "date": 1461538800000,
-  "demos": Array [
-    Object {
-      "link": "/download/demo/21006",
-      "name": "GOTV Demo",
-    },
-  ],
-  "event": Object {
-    "id": 2226,
-    "name": "Rising Stars South America Promotional Cup",
-  },
-  "format": "Best of 3",
-  "hasScorebot": false,
-  "headToHead": Array [],
-  "highlightedPlayer": Object {
-    "id": 10499,
-    "name": "jony-boy",
-  },
-  "highlights": Array [],
-  "id": 2302345,
-  "live": false,
-  "maps": Array [
-    Object {
-      "name": "cbl",
-      "result": "16:6 (11:4; 5:2)",
-      "statsId": 30144,
-    },
-    Object {
-      "name": "mrg",
-      "result": "13:16 (7:8; 6:8)",
-      "statsId": 30145,
-    },
-    Object {
-      "name": "cch",
-      "result": "14:16 (6:9; 8:7)",
-      "statsId": 30146,
-    },
-  ],
-  "odds": Array [],
-  "oddsCommunity": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
-        "id": 10559,
-        "name": "knight",
-      },
-      Object {
-        "id": 10819,
-        "name": "tt",
-      },
-      Object {
-        "id": 10818,
-        "name": "iDk",
-      },
-      Object {
-        "id": 10566,
-        "name": "chelo",
-      },
-      Object {
-        "id": 11155,
-        "name": "Fluyr",
-      },
-    ],
-    "team2": Array [
-      Object {
-        "id": 10499,
-        "name": "JonY BoY",
-      },
-      Object {
-        "id": 10508,
-        "name": "nbl",
-      },
-      Object {
-        "id": 11149,
-        "name": "nch",
-      },
-      Object {
-        "id": 10500,
-        "name": "sheep",
-      },
-      Object {
-        "id": 11148,
-        "name": "coMplot",
-      },
-    ],
-  },
-  "statsId": 35977,
-  "status": "Match over",
-  "streams": Array [],
-  "team1": Object {
-    "id": 6785,
-    "name": "Innova",
-  },
-  "team2": Object {
-    "id": 6798,
-    "name": "2KILL",
-  },
-  "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
-    "id": 6798,
-    "name": "2KILL",
-  },
-}
-`;
-
-exports[`getMatch 3`] = `
-Object {
-  "additionalInfo": "",
   "date": 1392668100000,
   "demos": Array [],
   "event": Object {
     "id": 1315,
     "name": "ESL Pro Series Germany Spring 2014 Cup #1",
   },
-  "format": "",
+  "format": undefined,
   "hasScorebot": false,
   "headToHead": Array [],
-  "highlightedPlayer": undefined,
+  "highlightedPlayers": undefined,
   "highlights": Array [],
   "id": 2290099,
-  "live": false,
   "maps": Array [
     Object {
-      "name": "nuke",
+      "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
   ],
   "odds": Array [],
-  "oddsCommunity": undefined,
+  "playerOfTheMatch": undefined,
   "players": Object {
     "team1": Array [
       Object {
@@ -508,7 +428,7 @@ Object {
     ],
   },
   "statsId": undefined,
-  "status": "Match over",
+  "status": "Over",
   "streams": Array [],
   "team1": Object {
     "id": 4494,
@@ -527,34 +447,32 @@ Object {
 }
 `;
 
-exports[`getMatch 4`] = `
+exports[`getMatch 3`] = `
 Object {
-  "additionalInfo": "",
   "date": 1352228400000,
   "demos": Array [],
   "event": Object {
     "id": 982,
     "name": "ESL Pro Series Germany Winter Season 2012",
   },
-  "format": "",
+  "format": undefined,
   "hasScorebot": false,
   "headToHead": Array [],
-  "highlightedPlayer": Object {
-    "id": 7226,
-    "name": "fl0w",
-  },
+  "highlightedPlayers": undefined,
   "highlights": Array [],
   "id": 2186795,
-  "live": false,
   "maps": Array [
     Object {
-      "name": "nuke",
+      "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
   ],
   "odds": Array [],
-  "oddsCommunity": undefined,
+  "playerOfTheMatch": Object {
+    "id": 7226,
+    "name": "fl0w",
+  },
   "players": Object {
     "team1": Array [
       Object {
@@ -601,8 +519,8 @@ Object {
       },
     ],
   },
-  "statsId": 13368,
-  "status": "Match over",
+  "statsId": undefined,
+  "status": "Over",
   "streams": Array [],
   "team1": Object {
     "id": 4498,
@@ -617,6 +535,492 @@ Object {
   "winnerTeam": Object {
     "id": 4498,
     "name": "Red Dead",
+  },
+}
+`;
+
+exports[`getMatch 4`] = `
+Object {
+  "date": 1451157000000,
+  "demos": Array [],
+  "event": Object {
+    "id": 2092,
+    "name": "StarLadder Regional Minor Championship CIS Closed Qualifier",
+  },
+  "format": Object {
+    "location": undefined,
+    "type": "bo3",
+  },
+  "hasScorebot": false,
+  "headToHead": Array [],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2300113,
+  "maps": Array [
+    Object {
+      "name": "de_cache",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 8,
+            "team2Rounds": 7,
+          },
+          Object {
+            "team1Rounds": 8,
+            "team2Rounds": 2,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 9,
+      },
+      "statsId": undefined,
+    },
+    Object {
+      "name": "de_mirage",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 6,
+            "team2Rounds": 9,
+          },
+          Object {
+            "team1Rounds": 9,
+            "team2Rounds": NaN,
+          },
+        ],
+        "team1TotalRounds": 31,
+        "team2TotalRounds": 26,
+      },
+      "statsId": undefined,
+    },
+    Object {
+      "name": "de_inferno",
+      "result": undefined,
+      "statsId": undefined,
+    },
+  ],
+  "odds": Array [],
+  "playerOfTheMatch": undefined,
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 737,
+        "name": "Fox",
+      },
+      Object {
+        "id": 3410,
+        "name": "ROBO",
+      },
+      Object {
+        "id": 3499,
+        "name": "pixel",
+      },
+      Object {
+        "id": 9890,
+        "name": "hoax",
+      },
+      Object {
+        "id": 7973,
+        "name": "El Patron",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 7404,
+        "name": "insom",
+      },
+      Object {
+        "id": 7793,
+        "name": "DSTR",
+      },
+      Object {
+        "id": 8120,
+        "name": "PLAZ",
+      },
+      Object {
+        "id": 7794,
+        "name": "Egor K.",
+      },
+      Object {
+        "id": 7406,
+        "name": "latro",
+      },
+    ],
+  },
+  "statsId": undefined,
+  "status": "Over",
+  "streams": Array [],
+  "team1": Object {
+    "id": 6594,
+    "name": "420pm",
+  },
+  "team2": Object {
+    "id": 6599,
+    "name": "KULAK",
+  },
+  "title": undefined,
+  "vetoes": Array [
+    Object {
+      "map": "de_train",
+      "team": Object {
+        "id": 6599,
+        "name": "KULAK",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_cbble",
+      "team": Object {
+        "id": 6594,
+        "name": "420pm",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_cache",
+      "team": Object {
+        "id": 6599,
+        "name": "KULAK",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_mirage",
+      "team": Object {
+        "id": 6594,
+        "name": "420pm",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_inferno",
+      "type": "leftover",
+    },
+  ],
+  "winnerTeam": Object {
+    "id": 6594,
+    "name": "420pm",
+  },
+}
+`;
+
+exports[`getMatch 5`] = `
+Object {
+  "date": 1506182400000,
+  "demos": Array [],
+  "event": Object {
+    "id": 3057,
+    "name": "ECS Season 4 EU Promotion",
+  },
+  "format": undefined,
+  "hasScorebot": false,
+  "headToHead": Array [
+    Object {
+      "date": 1495389933000,
+      "event": Object {
+        "id": 2792,
+        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
+      },
+      "map": "nuke",
+      "result": "14 - 16",
+      "winner": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1495389933000,
+      "event": Object {
+        "id": 2792,
+        "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
+      },
+      "map": "inf",
+      "result": "4 - 16",
+      "winner": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+  ],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2315069,
+  "maps": Array [],
+  "odds": Array [],
+  "playerOfTheMatch": undefined,
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 629,
+        "name": "fox",
+      },
+      Object {
+        "id": 1485,
+        "name": "RUBINO",
+      },
+      Object {
+        "id": 8248,
+        "name": "jkaem",
+      },
+      Object {
+        "id": 8151,
+        "name": "AcilioN",
+      },
+      Object {
+        "id": 3997,
+        "name": "loWel",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 922,
+        "name": "Snappi",
+      },
+      Object {
+        "id": 545,
+        "name": "MODDII",
+      },
+      Object {
+        "id": 8611,
+        "name": "es3tag",
+      },
+      Object {
+        "id": 10264,
+        "name": "niko",
+      },
+      Object {
+        "id": 8783,
+        "name": "JUGi",
+      },
+    ],
+  },
+  "statsId": undefined,
+  "status": "Over",
+  "streams": Array [],
+  "team1": Object {
+    "id": 5422,
+    "name": "Dignitas",
+  },
+  "team2": Object {
+    "id": 7175,
+    "name": "Heroic",
+  },
+  "title": undefined,
+  "vetoes": Array [],
+  "winnerTeam": undefined,
+}
+`;
+
+exports[`getMatch 6`] = `
+Object {
+  "date": 1615485900000,
+  "demos": Array [
+    Object {
+      "link": "/download/demo/62836",
+      "name": "GOTV Demo",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=36m40s&parent=www.hltv.org",
+      "name": "Singularity (Map 1 - Train)",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=1h41m55s&parent=www.hltv.org",
+      "name": "Singularity (Map 2 - Inferno)",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=3h9m15s&parent=www.hltv.org",
+      "name": "Singularity (Map 3 - Mirage)",
+    },
+  ],
+  "event": Object {
+    "id": 5701,
+    "name": "ESEA Premier Season 36 Europe",
+  },
+  "format": Object {
+    "location": "Online",
+    "type": "bo3",
+  },
+  "hasScorebot": false,
+  "headToHead": Array [],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2346506,
+  "maps": Array [
+    Object {
+      "name": "de_train",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 6,
+            "team2Rounds": 9,
+          },
+          Object {
+            "team1Rounds": 4,
+            "team2Rounds": 7,
+          },
+        ],
+        "team1TotalRounds": 10,
+        "team2TotalRounds": 16,
+      },
+      "statsId": 116197,
+    },
+    Object {
+      "name": "de_inferno",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 4,
+            "team2Rounds": 11,
+          },
+          Object {
+            "team1Rounds": 12,
+            "team2Rounds": 2,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 13,
+      },
+      "statsId": 116206,
+    },
+    Object {
+      "name": "de_mirage",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 9,
+            "team2Rounds": 6,
+          },
+          Object {
+            "team1Rounds": 7,
+            "team2Rounds": 4,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 10,
+      },
+      "statsId": 116211,
+    },
+  ],
+  "odds": Array [],
+  "playerOfTheMatch": Object {
+    "id": 15385,
+    "name": "kaluber",
+  },
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 8917,
+        "name": "niki1",
+      },
+      Object {
+        "id": 10762,
+        "name": "Rock1nG",
+      },
+      Object {
+        "id": 14380,
+        "name": "Patrick",
+      },
+      Object {
+        "id": 15385,
+        "name": "KalubeR",
+      },
+      Object {
+        "id": 16412,
+        "name": "rafftu",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 7414,
+        "name": "smF",
+      },
+      Object {
+        "id": 7965,
+        "name": "larsen",
+      },
+      Object {
+        "id": 9903,
+        "name": "notaN",
+      },
+      Object {
+        "id": 12048,
+        "name": "Remoy",
+      },
+      Object {
+        "id": 16731,
+        "name": "IceBerg",
+      },
+    ],
+  },
+  "statsId": 79738,
+  "status": "Over",
+  "streams": Array [],
+  "team1": Object {
+    "id": 9863,
+    "name": "FATE",
+  },
+  "team2": Object {
+    "id": 6978,
+    "name": "Singularity",
+  },
+  "title": undefined,
+  "vetoes": Array [
+    Object {
+      "map": "de_nuke",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_dust2",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_train",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_inferno",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_vertigo",
+      "team": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_overpass",
+      "team": Object {
+        "id": 6978,
+        "name": "Singularity",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_mirage",
+      "type": "leftover",
+    },
+  ],
+  "winnerTeam": Object {
+    "id": 9863,
+    "name": "FATE",
   },
 }
 `;

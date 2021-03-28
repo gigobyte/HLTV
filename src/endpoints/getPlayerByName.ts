@@ -1,6 +1,5 @@
 import { HLTVConfig } from '../config'
-import { FullPlayer } from '../models/FullPlayer'
-import HLTV from '../index'
+import { FullPlayer, getPlayer } from './getPlayer'
 
 export const getPlayerByName = (config: HLTVConfig) => async ({
   name
@@ -8,7 +7,7 @@ export const getPlayerByName = (config: HLTVConfig) => async ({
   name: string
 }): Promise<FullPlayer> => {
   const pageContent = JSON.parse(
-    await config.loadPage!(`${config.hltvUrl}/search?term=${name}`)
+    await config.loadPage!(`https://www.hltv.org/search?term=${name}`)
   )
   const firstResult = pageContent[0].players[0]
 
@@ -16,5 +15,5 @@ export const getPlayerByName = (config: HLTVConfig) => async ({
     throw new Error(`Player ${name} not found`)
   }
 
-  return HLTV.getPlayer({ id: firstResult.id })
+  return getPlayer(config)({ id: firstResult.id })
 }

@@ -1,105 +1,193 @@
-import { EventTeam, FullEvent } from '../models/FullEvent'
 import { HLTVConfig } from '../config'
+import { HLTVScraper } from '../scraper'
+import { Country } from '../shared/Country'
+import { Team } from '../shared/Team'
+import { Event } from '../shared/Event'
 import {
   fetchPage,
-  toArray,
-  getMapSlug,
-  generateRandomSuffix
-} from '../utils/mappers'
-import { popSlashSource } from '../utils/parsing'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+  generateRandomSuffix,
+  getIdAt,
+  notNull,
+  parseNumber
+} from '../utils'
+import { fromMapName, GameMap } from '../shared/GameMap'
+import { Article } from '../shared/Article'
 
-const notNull = <T>(x: T | null): x is T => x !== null
+export interface FullEventTeam extends Team {
+  reasonForParticipation?: string
+  rankDuringEvent?: number
+}
+
+export interface FullEventPrizeDistribution {
+  place: string
+  prize?: string
+  otherPrize?: string
+  qualifiesFor?: Event
+  team?: Team
+}
+
+export interface FullEventFormat {
+  type: string
+  description: string
+}
+
+export interface FullEventHighlight {
+  link: string
+  name: string
+  views: number
+  thumbnail: string
+  team1: Team
+  team2: Team
+}
+
+export interface FullEvent {
+  id: number
+  name: string
+  logo: string
+  dateStart?: number
+  dateEnd?: number
+  prizePool: string
+  location: Country
+  numberOfTeams?: number
+  teams: FullEventTeam[]
+  prizeDistribution: FullEventPrizeDistribution[]
+  relatedEvents: Event[]
+  formats: FullEventFormat[]
+  mapPool: GameMap[]
+  highlights: FullEventHighlight[]
+  news: Article[]
+}
 
 export const getEvent = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
 }): Promise<FullEvent> => {
-  const $ = await fetchPage(
-    `${config.hltvUrl}/events/${id}/${generateRandomSuffix()}`,
-    config.loadPage
+  const $ = HLTVScraper(
+    await fetchPage(
+      `https://www.hltv.org/events/${id}/${generateRandomSuffix()}`,
+      config.loadPage
+    )
   )
 
-  checkForRateLimiting($)
-
   const name = $('.eventname').text()
-  const logo = $('.sidebar-first-level').find('.event-logo').attr('src')!
-  const dateStart =
-    Number($('td.eventdate span[data-unix]').first().attr('data-unix')) ||
-    undefined
-  const dateEnd =
-    Number($('td.eventdate span[data-unix]').last().attr('data-unix')) ||
-    undefined
+  const logo = $('.sidebar-first-level').find('.event-logo').attr('src')
   const prizePool = $('td.prizepool').text()
+
+  const dateStart = $('td.eventdate span[data-unix]')
+    .first()
+    .numFromAttr('data-unix')
+  const dateEnd = $('td.eventdate span[data-unix]')
+    .last()
+    .numFromAttr('data-unix')
+
   const location = {
-    name: $('img.flag').attr('title')!,
-    code: popSlashSource($('img.flag'))!.split('.')[0]
+    name: $('.location span.text-ellipsis').text(),
+    code: $('img.flag').attr('src').split('/').pop()!.split('.')[0]
   }
 
-  const teams: EventTeam[] = toArray($('.team-box'))
-    .map((teamEl) => {
-      if (!teamEl.find('.team-name a').length) {
+  const relatedEvents = $('.related-event')
+    .toArray()
+    .map((el) => ({
+      name: el.find('.event-name').text(),
+      id: el.find('a').attrThen('href', getIdAt(2))
+    }))
+
+  const prizeDistribution = $('.placement')
+    .toArray()
+    .map((el) => {
+      const otherPrize =
+        el.find('.prizeMoney').first().next().text() || undefined
+
+      const qualifiesFor = !!otherPrize
+        ? relatedEvents.find((event) => event.name === otherPrize)
+        : undefined
+
+      return {
+        place: el.children().eq(1).text(),
+        prize: el.find('.prizeMoney').first().text() || undefined,
+        qualifiesFor,
+        otherPrize: !qualifiesFor ? otherPrize : undefined,
+        team: el.find('.team').children().exists()
+          ? {
+              name: el.find('.team a').text(),
+              id: el.find('.team a').attrThen('href', getIdAt(2))
+            }
+          : undefined
+      }
+    })
+
+  const numberOfTeams = $('.teamsNumber').numFromText()!
+
+  const teams = $('.team-box')
+    .toArray()
+    .map((el) => {
+      if (!el.find('.team-name a').exists()) {
         return null
       }
 
       return {
-        name: teamEl.find('.logo').attr('title')!,
-        id:
-          Number(teamEl.find('.team-name a').attr('href')!.split('/')[2]) ||
-          undefined,
-        reasonForParticipation:
-          teamEl.find('.sub-text').text().trim() || undefined,
-        rankDuringEvent:
-          Number(teamEl.find('.event-world-rank').text().replace('#', '')) ||
-          undefined
+        name: el.find('.logo').attr('title'),
+        id: el.find('.team-name a').attrThen('href', getIdAt(2)),
+        reasonForParticipation: el.find('.sub-text').trimText(),
+        rankDuringEvent: parseNumber(
+          el.find('.event-world-rank').text().replace('#', '')
+        )
       }
     })
     .filter(notNull)
 
-  const relatedEvents = toArray($('.related-event')).map((eventEl) => ({
-    name: eventEl.find('.event-name').text(),
-    id: Number(eventEl.find('a').attr('href')!.split('/')[2])
-  }))
+  const formats = $('.formats tr')
+    .toArray()
+    .map((el) => ({
+      type: el.find('.format-header').text(),
+      description: el.find('.format-data').text().split('\n').join(' ').trim()
+    }))
 
-  const prizeDistribution = toArray($('.placement')).map((placementEl) => {
-    const otherPrize =
-      placementEl.find('.prizeMoney').first().next().text() || undefined
+  const mapPool = $('.map-pool-map-holder')
+    .toArray()
+    .map((el) => fromMapName(el.find('.map-pool-map-name').text()))
 
-    const qualifiesFor = !!otherPrize
-      ? relatedEvents.find((event) => event.name === otherPrize)
-      : undefined
+  const highlights = $('.highlight-video')
+    .toArray()
+    .map((el) => {
+      const name = el.find('.video-discription-text').text()
+      const link = el.data('mp4-url')
+      const thumbnail = el.data('thumbnail')
+      const team1Name = el
+        .find('.video-team')
+        .first()
+        .find('.video-team-img')
+        .first()
+        .attr('title')
+      const team1 = teams.find((x) => x.name === team1Name)!
 
-    return {
-      place: $(placementEl.children().get(1)).text(),
-      prize: placementEl.find('.prizeMoney').first().text() || undefined,
-      qualifiesFor: qualifiesFor,
-      otherPrize: !qualifiesFor ? otherPrize : undefined,
-      team:
-        placementEl.find('.team').children().length !== 0
-          ? {
-              name: placementEl.find('.team a').text(),
-              id: Number(
-                placementEl.find('.team a').attr('href')!.split('/')[2]
-              )
-            }
-          : undefined
-    }
-  })
+      const team2Name = el
+        .find('.video-team')
+        .last()
+        .find('.video-team-img')
+        .first()
+        .attr('title')
+      const team2 = teams.find((x) => x.name === team2Name)!
 
-  const formats = toArray($('.formats tr')).map((formatEl) => ({
-    type: formatEl.find('.format-header').text(),
-    description: formatEl
-      .find('.format-data')
-      .text()
-      .split('\n')
-      .join(' ')
-      .trim()
-  }))
+      const views = Number($('.thumbnail-view-count').text().split(' ')[0])
 
-  const mapPool = toArray($('.map-pool-map-holder')).map((mapEl) =>
-    getMapSlug(mapEl.find('.map-pool-map-name').text())
-  )
+      return {
+        name,
+        link,
+        thumbnail,
+        team1: { id: team1.id, name: team1.name },
+        team2: { id: team2.id, name: team2.name },
+        views
+      }
+    })
+
+  const news = $('.news .item')
+    .toArray()
+    .map((el) => ({
+      name: el.find('.flag-align .text-ellipsis').text(),
+      link: el.find('a').attr('href')
+    }))
 
   return {
     id,
@@ -108,11 +196,14 @@ export const getEvent = (config: HLTVConfig) => async ({
     dateStart,
     dateEnd,
     prizePool,
-    teams,
     location,
+    numberOfTeams,
+    teams,
     prizeDistribution,
-    formats,
     relatedEvents,
-    mapPool
+    formats,
+    mapPool,
+    highlights,
+    news
   }
 }

@@ -1,104 +1,183 @@
-import { FullPlayer } from '../models/FullPlayer'
-import { Team } from '../models/Team'
 import { HLTVConfig } from '../config'
-import { fetchPage, generateRandomSuffix, toArray } from '../utils/mappers'
-import { popSlashSource } from '../utils/parsing'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVScraper } from '../scraper'
+import { Country } from '../shared/Country'
+import { Team } from '../shared/Team'
+import { Event } from '../shared/Event'
+import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
+import { Article } from '../shared/Article'
+
+export interface FullPlayerTeam extends Team {
+  startDate: number
+  leaveDate: number
+  trophies: Event[]
+}
+
+export interface PlayerAchievement {
+  event: Event
+  place: string
+}
+
+export interface FullPlayer {
+  id: number
+  name?: string
+  ign: string
+  image?: string
+  age?: number
+  country: Country
+  team?: Team
+  twitter?: string
+  twitch?: string
+  facebook?: string
+  instagram?: string
+  statistics?: {
+    rating: number
+    killsPerRound: number
+    headshots: number
+    mapsPlayed: number
+    deathsPerRound: number
+    roundsContributed: number
+  }
+  teams: FullPlayerTeam[]
+  achievements: PlayerAchievement[]
+  news: Article[]
+}
 
 export const getPlayer = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
 }): Promise<FullPlayer> => {
-  const $ = await fetchPage(
-    `${config.hltvUrl}/player/${id}/${generateRandomSuffix()}`,
-    config.loadPage
+  const $ = HLTVScraper(
+    await fetchPage(
+      `https://www.hltv.org/player/${id}/${generateRandomSuffix()}`,
+      config.loadPage
+    )
   )
 
-  checkForRateLimiting($)
+  const isRegularPlayer = $('.standard-box.profileTopBox').exists()
 
-  const isStandardPlayer = $('.standard-box.profileTopBox').length !== 0
+  const nameText = isRegularPlayer
+    ? $('.player-realname').trimText()
+    : $('.playerRealname').trimText()
 
-  const name = isStandardPlayer
-    ? $('.player-realname').text().trim() || undefined
-    : $('.playerRealname').text().trim() || undefined
+  const name = nameText === '-' ? undefined : nameText
 
-  const ign = isStandardPlayer
+  const ign = isRegularPlayer
     ? $('.player-nick').text()
     : $('.playerNickname').text()
 
-  const image = isStandardPlayer
+  const imageUrl = isRegularPlayer
     ? $('.bodyshot-img-square').attr('src')
     : $('.bodyshot-img').attr('src')
 
-  const age = isStandardPlayer
-    ? Number($('.profile-player-stat-value').first().text().split(' ')[0]) ||
-      undefined
-    : Number($('.playerAge .listRight').text().split(' ')[0]) || undefined
+  const image = imageUrl.includes('bodyshot/unknown.png') ? undefined : imageUrl
+
+  const age = isRegularPlayer
+    ? $('.profile-player-stat-value')
+        .first()
+        .textThen((x) => parseNumber(x.split(' ')[0]))
+    : $('.playerAge .listRight').textThen((x) => parseNumber(x.split(' ')[0]))
 
   const twitter = $('.twitter').parent().attr('href')
   const twitch = $('.twitch').parent().attr('href')
   const facebook = $('.facebook').parent().attr('href')
   const instagram = $('.instagram').parent().attr('href')
 
-  const country = isStandardPlayer
+  const country = isRegularPlayer
     ? {
-        name: $('.player-realname .flag').attr('alt')!,
-        code: popSlashSource($('.player-realname .flag'))!.split('.')[0]
+        name: $('.player-realname .flag').attr('alt'),
+        code: $('.player-realname .flag').attrThen(
+          'src',
+          (x) => x.split('/').pop()?.split('.')[0]!
+        )
       }
     : {
         name: $('.playerRealname .flag').attr('alt')!,
-        code: popSlashSource($('.playerRealname .flag'))!.split('.')[0]
+        code: $('.playerRealname .flag').attrThen(
+          'src',
+          (x) => x.split('/').pop()?.split('.')[0]!
+        )
       }
 
-  let team: Team | undefined
+  const hasTeam = isRegularPlayer
+    ? $('span.profile-player-stat-value').last().trimText() !== '-'
+    : $('.playerTeam .listRight').trimText() !== 'No team'
 
-  const hasTeam = isStandardPlayer
-    ? $('span.profile-player-stat-value').last().text().trim() !== '-'
-    : $('.playerTeam .listRight').text().trim() !== 'No team'
+  let team
 
   if (hasTeam) {
-    if (isStandardPlayer) {
+    if (isRegularPlayer) {
       team = {
-        name: $('.profile-player-stat-value a').text().trim(),
-        id: Number(
-          $('.profile-player-stat-value a').attr('href')!.split('/')[2]
-        )
+        name: $('.profile-player-stat-value a').trimText()!,
+        id: $('.profile-player-stat-value a').attrThen('href', getIdAt(2))
       }
     } else {
       team = {
-        name: $('.playerTeam a').text().trim(),
-        id: Number($('.playerTeam a').attr('href')!.split('/')[2])
+        name: $('.playerTeam a').trimText()!,
+        id: $('.playerTeam a').attrThen('href', getIdAt(2))
       }
     }
   }
 
-  const getMapStat = (i) =>
+  const getMapStat = (i: number) =>
     Number(
-      $($('.playerpage-container').find('.player-stat').get(i))
+      $('.playerpage-container')
+        .find('.player-stat')
+        .eq(i)
         .find('.statsVal')
         .text()
         .replace('%', '')
     )
 
-  const statistics = {
-    rating: getMapStat(0),
-    killsPerRound: getMapStat(1),
-    headshots: getMapStat(2),
-    mapsPlayed: getMapStat(3),
-    deathsPerRound: getMapStat(4),
-    roundsContributed: getMapStat(5)
-  }
+  const statistics = $('.playerpage-container.empty-state').exists()
+    ? undefined
+    : {
+        rating: getMapStat(0),
+        killsPerRound: getMapStat(1),
+        headshots: getMapStat(2),
+        mapsPlayed: getMapStat(3),
+        deathsPerRound: getMapStat(4),
+        roundsContributed: getMapStat(5)
+      }
 
-  const achievements = toArray($('.achievement-table .team')).map((achEl) => ({
-    place: achEl.find('.achievement').text(),
-    event: {
-      name: achEl.find('.tournament-name-cell a').text(),
-      id: Number(
-        achEl.find('.tournament-name-cell a').attr('href')!.split('/')[2]
-      )
-    }
-  }))
+  const achievements = $('.achievement-table .team')
+    .toArray()
+    .map((el) => ({
+      place: el.find('.achievement').text(),
+      event: {
+        name: el.find('.tournament-name-cell a').text(),
+        id: el.find('.tournament-name-cell a').attrThen('href', getIdAt(2))
+      }
+    }))
+
+  const teams = $('.team-breakdown .team')
+    .toArray()
+    .map((el) => ({
+      id: el.find('.team-name-cell a').attrThen('href', getIdAt(2)),
+      name: el.find('.team-name').text(),
+      startDate: el
+        .find('.time-period-cell [data-unix]')
+        .first()
+        .numFromAttr('data-unix')!,
+      leaveDate: el
+        .find('.time-period-cell [data-unix]')
+        .last()
+        .numFromAttr('data-unix')!,
+      trophies: el
+        .find('.trophy-row-trophy a')
+        .toArray()
+        .map((trophyEl) => ({
+          id: trophyEl.attrThen('href', getIdAt(2)),
+          name: trophyEl.find('img').attr('title')
+        }))
+    }))
+
+  const news = $('#newsBox a')
+    .toArray()
+    .map((el) => ({
+      name: el.contents().eq(1).text(),
+      link: el.attr('href')
+    }))
 
   return {
     id,
@@ -113,6 +192,8 @@ export const getPlayer = (config: HLTVConfig) => async ({
     country,
     team,
     statistics,
-    achievements
+    achievements,
+    teams,
+    news
   }
 }

@@ -1,148 +1,104 @@
-import {
-  FullMatchStats,
-  TeamStat,
-  PlayerStat,
-  PlayerStats,
-  MatchStatsOverview,
-  TeamStatComparison
-} from '../models/FullMatchStats'
-import { Event } from '../models/Event'
 import { HLTVConfig } from '../config'
-import { fetchPage, generateRandomSuffix, toArray } from '../utils/mappers'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVScraper } from '../scraper'
+import { Team } from '../shared/Team'
+import { Event } from '../shared/Event'
+import { fetchPage, getIdAt } from '../utils'
+import {
+  MapStatsOverview,
+  TeamsPerformanceOverview,
+  PlayerStats,
+  getStatsOverview,
+  getPlayerStats,
+  getPerformanceOverview
+} from './getMatchMapStats'
+
+export interface FullMatchStats {
+  id: number
+  matchId: number
+  mapStatIds: number[]
+  result: {
+    team1MapsWon: number
+    team2MapsWon: number
+  }
+  date: number
+  team1: Team
+  team2: Team
+  event: Event
+  overview: MapStatsOverview
+  playerStats: {
+    team1: PlayerStats[]
+    team2: PlayerStats[]
+  }
+  performanceOverview: TeamsPerformanceOverview
+}
 
 export const getMatchStats = (config: HLTVConfig) => async ({
   id
 }: {
   id: number
 }): Promise<FullMatchStats> => {
-  const getMatchInfoRowValues = (
-    $: cheerio.Root,
-    index: number
-  ): TeamStatComparison => {
-    const [stat1, stat2] = $($('.match-info-row').get(index))
-      .find('.right')
-      .text()
-      .split(' : ')
-      .map(Number)
+  const [m$, p$] = await Promise.all([
+    fetchPage(
+      `https://www.hltv.org/stats/matches/${id}/-`,
+      config.loadPage
+    ).then(HLTVScraper),
+    fetchPage(
+      `https://www.hltv.org/stats/matches/performance/${id}/-`,
+      config.loadPage
+    ).then(HLTVScraper)
+  ])
 
-    return {
-      team1: stat1,
-      team2: stat2
-    }
+  const matchId = m$('.match-page-link').attrThen('href', getIdAt(2))!
+
+  const mapStatIds = m$('.stats-match-map.inactive')
+    .toArray()
+    .map((el) => el.attrThen('href', getIdAt(4))!)
+
+  const result = {
+    team1MapsWon: m$('.team-left .bold').numFromText()!,
+    team2MapsWon: m$('.team-right .bold').numFromText()!
   }
 
-  const getPlayerTopStat = ($: cheerio.Root, index: number): PlayerStat => {
-    return {
-      id: Number(
-        $($('.most-x-box').get(index))
-          .find('.name > a')
-          .attr('href')!
-          .split('/')[3]
-      ),
-      name: $($('.most-x-box').get(index)).find('.name > a').text(),
-      value: Number($($('.most-x-box').get(index)).find('.valueName').text())
-    }
+  const date = m$('.match-info-box span[data-time-format]').numFromAttr(
+    'data-unix'
+  )!
+
+  const team1 = {
+    id: m$('.team-left a').attrThen('href', getIdAt(3)),
+    name: m$('.team-left .team-logo').attr('title')
   }
 
-  const $ = await fetchPage(
-    `${config.hltvUrl}/stats/matches/${id}/${generateRandomSuffix()}`,
-    config.loadPage
-  )
-
-  checkForRateLimiting($)
-
-  const matchPageID = Number($('.match-page-link').attr('href')!.split('/')[2])
-  const matchScore = [
-    Number($('.team-left .bold').text()),
-    Number($('.team-right .bold').text())
-  ]
-  const date = Number(
-    $('.match-info-box .small-text span').first().attr('data-unix')
-  )
-
-  const team1: TeamStat = {
-    id: Number($('.team-left a.block').attr('href')!.split('/')[3]),
-    name: $('.team-left .team-logo').attr('title')!,
-    score: matchScore[0]
+  const team2 = {
+    id: m$('.team-right a').attrThen('href', getIdAt(3)),
+    name: m$('.team-right .team-logo').attr('title')
   }
 
-  const team2: TeamStat = {
-    id: Number($('.team-right a.block').attr('href')!.split('/')[3]),
-    name: $('.team-right .team-logo').attr('title')!,
-    score: matchScore[1]
-  }
-
-  const event: Event = {
+  const event = {
     id: Number(
-      $('.match-info-box .text-ellipsis')
+      m$('.match-info-box .text-ellipsis')
         .first()
-        .attr('href')!
-        .split('event=')[1]
+        .attr('href')
+        .split('event=')
+        .pop()
     ),
-    name: $('.match-info-box .text-ellipsis').first().text()
+    name: m$('.match-info-box .text-ellipsis').first().text()
   }
 
-  const teamStatProperties = ['rating', 'firstKills', 'clutchesWon']
-  const teamStats = teamStatProperties.reduce(
-    (res, prop, i) => ({ ...res, [prop]: getMatchInfoRowValues($, i) }),
-    {}
-  )
-
-  const mostXProperties = [
-    'mostKills',
-    'mostDamage',
-    'mostAssists',
-    'mostAWPKills',
-    'mostFirstKills',
-    'bestRating'
-  ]
-  const mostX = mostXProperties.reduce(
-    (res, prop, i) => ({ ...res, [prop]: getPlayerTopStat($, i) }),
-    {}
-  )
-
-  const overview = { ...teamStats, ...mostX } as MatchStatsOverview
-  const playerOverviewStats: PlayerStats[] = toArray(
-    $('.stats-table tbody tr')
-  ).map((rowEl) => {
-    const id = Number(rowEl.find('.st-player a').attr('href')!.split('/')[3])
-
-    return {
-      id,
-      name: rowEl.find('.st-player a').text(),
-      kills: Number(rowEl.find('.st-kills').contents().first().text()),
-      hsKills: Number(
-        rowEl.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')
-      ),
-      assists: Number(rowEl.find('.st-assists').contents().first().text()),
-      flashAssists: Number(
-        rowEl
-          .find('.st-assists .gtSmartphone-only')
-          .text()
-          .replace(/\(|\)/g, '')
-      ),
-      deaths: Number(rowEl.find('.st-deaths').text()),
-      KAST: Number(rowEl.find('.st-kdratio').text().replace('%', '')),
-      killDeathsDifference: Number(rowEl.find('.st-kddiff').text()),
-      ADR: Number(rowEl.find('.st-adr').text()),
-      firstKillsDifference: Number(rowEl.find('.st-fkdiff').text()),
-      rating: Number(rowEl.find('.st-rating').text())
-    }
-  })
-
-  const playerStats = {
-    team1: playerOverviewStats.slice(0, 5),
-    team2: playerOverviewStats.slice(5)
-  }
+  const overview = getStatsOverview(m$)
+  const playerStats = getPlayerStats(m$, p$)
+  const performanceOverview = getPerformanceOverview(p$)
 
   return {
-    matchPageID,
+    id,
+    matchId,
+    mapStatIds,
+    result,
     date,
     team1,
     team2,
     event,
     overview,
-    playerStats
+    playerStats,
+    performanceOverview
   }
 }

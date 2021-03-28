@@ -1,118 +1,96 @@
 import { stringify } from 'querystring'
-import { UpcomingMatch } from '../models/UpcomingMatch'
-import { LiveMatch } from '../models/LiveMatch'
-import { Event } from '../models/Event'
-import { Team } from '../models/Team'
-import { popSlashSource } from '../utils/parsing'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
-import { MatchEventType } from '../enums/MatchEventType'
-import { MatchFilter } from '../enums/MatchFilter'
+import { HLTVScraper } from '../scraper'
+import { Team } from '../shared/Team'
+import { Event } from '../shared/Event'
+import { fetchPage, getIdAt } from '../utils'
 
-type GetMatchesArguments = {
-  eventID?: number
+export enum MatchEventType {
+  All = 'All',
+  LAN = 'Lan',
+  Online = 'Online'
+}
+
+export enum MatchFilter {
+  LanOnly = 'lan_only',
+  TopTier = 'top_tier'
+}
+
+export interface GetMatchesArguments {
+  eventId?: number
   eventType?: MatchEventType
   filter?: MatchFilter
 }
 
+export interface MatchPreview {
+  id: number
+  team1?: Team
+  team2?: Team
+  date?: number
+  format?: string
+  event?: Event
+  title?: string
+  live: boolean
+  stars: number
+}
+
 export const getMatches = (config: HLTVConfig) => async ({
-  eventID,
+  eventId,
   eventType,
   filter
-}: GetMatchesArguments = {}): Promise<(UpcomingMatch | LiveMatch)[]> => {
+}: GetMatchesArguments = {}): Promise<MatchPreview[]> => {
   const query = stringify({
-    ...(eventID ? { event: eventID } : {}),
+    ...(eventId ? { event: eventId } : {}),
     ...(eventType ? { eventType } : {}),
     ...(filter ? { predefinedFilter: filter } : {})
   })
 
-  const $ = await fetchPage(
-    `${config.hltvUrl}/matches?${query}`,
-    config.loadPage
+  const $ = HLTVScraper(
+    await fetchPage(`https://www.hltv.org/matches?${query}`, config.loadPage)
   )
 
-  checkForRateLimiting($)
+  const events = $('.event-filter-popup a')
+    .toArray()
+    .map((el) => ({
+      id: el.attrThen('href', (x) => Number(x.split('=').pop())),
+      name: el.find('.event-name').text()
+    }))
 
-  const liveMatches: LiveMatch[] = toArray($('.liveMatch-container')).map(
-    (matchEl) => {
-      const id = Number(matchEl.find('.a-reset').attr('href')!.split('/')[2])
-      const teamNameEls = matchEl.find('.matchTeamName')
-      const stars = 5 - matchEl.find('.matchRating i.faded').length
+  return $('.liveMatch-container')
+    .toArray()
+    .concat($('.upcomingMatch').toArray())
+    .map((el) => {
+      const id = el.find('.a-reset').attrThen('href', getIdAt(2))!
+      const stars = 5 - el.find('.matchRating i.faded').length
+      const live = el.find('.matchTime.matchLive').text() === 'LIVE'
+      const title = el.find('.matchInfoEmpty').text() || undefined
 
-      const team1: Team = {
-        name: teamNameEls.first().text(),
-        id: Number(matchEl.attr('team1')) || undefined
-      }
+      const date = el.find('.matchTime').numFromAttr('data-unix')
 
-      const team2: Team = {
-        name: teamNameEls.last().text(),
-        id: Number(matchEl.attr('team2')) || undefined
-      }
-
-      const format = matchEl.find('.matchMeta').text()
-
-      const event: Event = {
-        name: matchEl.find('.matchEventLogo').attr('title')!,
-        id:
-          Number(
-            popSlashSource(matchEl.find('.matchEventLogo'))!.split('.')[0]
-          ) || undefined
-      }
-
-      return { id, team1, team2, event, format, stars, live: true }
-    }
-  )
-
-  const upcomingMatches: UpcomingMatch[] = toArray($('.upcomingMatch')).map(
-    (matchEl) => {
-      const link = matchEl.find('.a-reset')
-      const id = Number(link.attr('href')!.split('/')[2])
-      const date =
-        Number(matchEl.find('.matchTime').attr('data-unix')) || undefined
-      const title = matchEl.find('.matchInfoEmpty').text() || undefined
-      const stars = matchEl.find('.matchRating i:not(.faded)').length
-
-      const format = matchEl.find('.matchMeta').text()
-
-      let event: Event | undefined
-      let team1: Team | undefined
-      let team2: Team | undefined
+      let team1
+      let team2
 
       if (!title) {
         team1 = {
-          name: matchEl.find('.team1 .matchTeamName').text(),
-          id: Number(matchEl.attr('team1')) || undefined
+          name:
+            el.find('.matchTeamName').first().text() ||
+            el.find('.team1 .team').text(),
+          id: el.numFromAttr('team1')
         }
 
         team2 = {
           name:
-            matchEl.find('.team2 .matchTeamName').text() ||
-            matchEl.find('.team2 .team').text(),
-          id: Number(matchEl.attr('team2')) || undefined
-        }
-        event = {
-          name: matchEl.find('.matchEventLogo').attr('alt')!,
-          id:
-            Number(
-              popSlashSource(matchEl.find('.matchEventLogo'))!.split('.')[0]
-            ) || undefined
+            el.find('.matchTeamName').eq(1).text() ||
+            el.find('.team2 .team').text(),
+          id: el.numFromAttr('team2')
         }
       }
 
-      return {
-        id,
-        date,
-        team1,
-        team2,
-        format,
-        title,
-        event,
-        stars,
-        live: false
-      }
-    }
-  )
+      const format = el.find('.matchMeta').text()
 
-  return [...liveMatches, ...upcomingMatches]
+      const eventName = el.find('.matchEventLogo').attr('title')
+      const event = events.find((x) => x.name === eventName)
+
+      return { id, date, stars, title, team1, team2, format, event, live }
+    })
 }

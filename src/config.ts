@@ -1,19 +1,37 @@
-import { defaultLoadPage } from './utils/mappers'
 import { Agent as HttpsAgent } from 'https'
 import { Agent as HttpAgent } from 'http'
+import * as request from 'request'
+import randomUseragent from 'random-useragent'
 
 export interface HLTVConfig {
-  hltvUrl?: string
-  hltvStaticUrl?: string
-  loadPage?: (url: string) => Promise<string>
-  httpAgent?: HttpsAgent | HttpAgent
+  loadPage: (url: string) => Promise<string>
+  httpAgent: HttpsAgent | HttpAgent
 }
+
+export const defaultLoadPage = (
+  httpAgent: HttpsAgent | HttpAgent | undefined
+) => (url: string) =>
+  new Promise<string>((resolve) => {
+    request.get(
+      url,
+      {
+        gzip: true,
+        agent: httpAgent,
+        headers: { 'User-Agent': randomUseragent.getRandom() }
+      },
+      (err, __, body) => {
+        if (err) {
+          throw err
+        }
+
+        resolve(body)
+      }
+    )
+  })
 
 const defaultAgent = new HttpsAgent()
 
 export const defaultConfig: HLTVConfig = {
-  hltvUrl: 'https://www.hltv.org',
-  hltvStaticUrl: 'https://static.hltv.org',
   httpAgent: defaultAgent,
   loadPage: defaultLoadPage(defaultAgent)
 }

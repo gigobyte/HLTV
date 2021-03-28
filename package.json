@@ -1,6 +1,6 @@
 {
   "name": "hltv",
-  "version": "2.25.1",
+  "version": "3.0.0",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -41,6 +41,7 @@
   "devDependencies": {
     "@types/cheerio": "0.22.28",
     "@types/jest": "26.0.22",
+    "@types/random-useragent": "^0.3.0",
     "@types/request": "2.48.5",
     "@types/socket.io-client": "1.4.36",
     "@types/user-agents": "1.0.0",

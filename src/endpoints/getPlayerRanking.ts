@@ -1,85 +1,85 @@
 import { stringify } from 'querystring'
-import { PlayerRanking } from '../models/PlayerRanking'
-import { MatchType } from '../enums/MatchType'
-import { RankingFilter } from '../enums/RankingFilter'
-import { Map } from '../enums/Map'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
-import { BestOfFilter } from '../enums/BestOfFilter'
-import { Team } from '../models/Team'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVScraper } from '../scraper'
+import { BestOfFilter } from '../shared/BestOfFilter'
+import { GameMap, toMapFilter } from '../shared/GameMap'
+import { MatchType } from '../shared/MatchType'
+import { Player } from '../shared/Player'
+import { RankingFilter } from '../shared/RankingFilter'
+import { Team } from '../shared/Team'
+import { fetchPage, getIdAt } from '../utils'
+
+export interface PlayerRanking {
+  player: Player
+  teams: Team[]
+  maps: number
+  kdDiff: number
+  kd: number
+  rating1?: number
+  rating2?: number
+}
+
+export interface GetPlayerRankingOptions {
+  startDate?: string
+  endDate?: string
+  matchType?: MatchType
+  rankingFilter?: RankingFilter
+  maps?: GameMap[]
+  minMapCount?: number
+  country?: string[]
+  bestOfX?: BestOfFilter
+}
 
 export const getPlayerRanking = (config: HLTVConfig) => async (
-  options: {
-    startDate?: string
-    endDate?: string
-    matchType?: MatchType
-    rankingFilter?: RankingFilter
-    maps?: Map[]
-    minMapCount?: number
-    country?: string[]
-    bestOfX?: BestOfFilter
-  } = {}
+  options: GetPlayerRankingOptions = {}
 ): Promise<PlayerRanking[]> => {
   const query = stringify({
     ...(options.startDate ? { startDate: options.startDate } : {}),
     ...(options.endDate ? { endDate: options.endDate } : {}),
     ...(options.matchType ? { matchType: options.matchType } : {}),
     ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {}),
-    ...(options.maps ? { maps: options.maps } : {}),
+    ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
     ...(options.minMapCount ? { minMapCount: options.minMapCount } : {}),
     ...(options.country ? { country: options.country } : {}),
     ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
   })
 
-  const $ = await fetchPage(
-    `${config.hltvUrl}/stats/players?${query}`,
-    config.loadPage
+  const $ = HLTVScraper(
+    await fetchPage(
+      `https://www.hltv.org/stats/players?${query}`,
+      config.loadPage
+    )
   )
 
-  checkForRateLimiting($)
+  return $('.player-ratings-table tbody tr')
+    .toArray()
+    .map((el) => {
+      const id = el.find('.playerCol a').attrThen('href', getIdAt(3))
+      const name = el.find('.playerCol a').text()
+      const player = { name, id }
 
-  return toArray($('.player-ratings-table tbody tr')).map((playerRow) => {
-    const id = Number(
-      playerRow.find('.playerCol a').first().attr('href')!.split('/')[3]
-    )
-    const country =
-      playerRow.find('.playerCol img.flag').eq(0).attr('alt') || ''
-    const name = playerRow.find('.playerCol').text()
-    const rating = Number(playerRow.find('.ratingCol').text())
-    const teams: Team[] = toArray(playerRow.find('.teamCol a')).map(
-      (teamEl) => {
-        let id
-        const hrefAttr = $(teamEl).attr('href')
+      const teams = el
+        .find('.teamCol a')
+        .toArray()
+        .map((teamEl) => ({
+          id: teamEl.attrThen('href', getIdAt(3)),
+          name: teamEl.find('img').attr('title')
+        }))
 
-        if (hrefAttr) {
-          const idRegex = hrefAttr.match(/\/stats\/teams\/(\d+)\/.*/)
-          if (idRegex && idRegex[1]) {
-            id = Number(idRegex[1])
-          }
-        }
+      const maps = el.find('td.statsDetail').eq(0).numFromText()!
+      const kdDiff = el.find('td.kdDiffCol').numFromText()!
+      const kd = el.find('td.statsDetail').eq(1).numFromText()!
+      const rating = el.find('td.ratingCol').numFromText()!
 
-        const name = $(teamEl).find('img.logo').eq(0).attr('alt') || ''
-
-        return {
-          id,
-          name
-        }
+      return {
+        player,
+        teams,
+        maps,
+        kdDiff,
+        kd,
+        ...($('.ratingCol .ratingDesc').text() === '2.0'
+          ? { rating2: rating }
+          : { rating1: rating })
       }
-    )
-    const maps = Number(playerRow.find('td.statsDetail').eq(0).text())
-    const kdDiff = Number(playerRow.find('td.kdDiffCol').text())
-    const kd = Number(playerRow.find('td.statsDetail').eq(1).text())
-
-    return {
-      id,
-      name,
-      country,
-      teams,
-      maps,
-      kdDiff,
-      kd,
-      rating
-    }
-  })
+    })
 }

@@ -1,92 +1,133 @@
-import { FullTeamStats } from '../models/FullTeamStats'
+import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
-import {
-  fetchPage,
-  toArray,
-  getTimestamp,
-  getMapSlug,
-  generateRandomSuffix
-} from '../utils/mappers'
-import { popSlashSource } from '../utils/parsing'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
+import { BestOfFilter } from '../shared/BestOfFilter'
+import { fromMapName, GameMap, toMapFilter } from '../shared/GameMap'
+import { MatchType } from '../shared/MatchType'
+import { Player } from '../shared/Player'
+import { Event } from '../shared/Event'
+import { RankingFilter } from '../shared/RankingFilter'
+import { fetchPage, generateRandomSuffix, getIdAt } from '../utils'
+import { MatchStatsPreview } from './getMatchesStats'
 
-export const getTeamStats = (config: HLTVConfig) => async ({
-  id,
-  currentRosterOnly,
-  startDate,
-  endDate
-}: {
+export interface TeamMapStats {
+  wins: number
+  draws: number
+  losses: number
+  winRate: number
+  totalRounds: number
+  roundWinPAfterFirstKill: number
+  roundWinPAfterFirstDeath: number
+}
+
+export interface TeamStatsEvent {
+  place: string
+  event: Event
+}
+
+export interface FullTeamStats {
+  id: number
+  name: string
+  overview: {
+    mapsPlayed: number
+    wins: number
+    draws: number
+    losses: number
+    totalKills: number
+    totalDeaths: number
+    roundsPlayed: number
+    kdRatio: number
+  }
+  currentLineup: Player[]
+  historicPlayers: Player[]
+  standins: Player[]
+  matches: MatchStatsPreview[]
+  mapStats: Record<GameMap, TeamMapStats>
+  events: TeamStatsEvent[]
+}
+
+export interface GetTeamStatsArguments {
   id: number
   currentRosterOnly?: boolean
   startDate?: string
   endDate?: string
-}): Promise<FullTeamStats> => {
-  const query = `startDate=${startDate}&endDate=${endDate}`
+  matchType?: MatchType
+  rankingFilter?: RankingFilter
+  maps?: GameMap[]
+  bestOfX?: BestOfFilter
+}
 
-  let currentRosterURL = ''
-  let matchesURL = ''
-  let eventsURL = ''
-  let mapsURL = ''
+export const getTeamStats = (config: HLTVConfig) => async (
+  options: GetTeamStatsArguments
+): Promise<FullTeamStats> => {
+  const query = stringify({
+    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(options.endDate ? { endDate: options.endDate } : {}),
+    ...(options.matchType ? { matchType: options.matchType } : {}),
+    ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {}),
+    ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
+    ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
+  })
 
-  let $ = await fetchPage(
-    `${config.hltvUrl}/stats/teams/${id}/-?${query}`,
-    config.loadPage
-  )
-
-  checkForRateLimiting($)
-
-  const getContainerByText = (text) =>
-    $('.standard-headline')
-      .filter((_, el) => $(el).text() === text)
-      .parent()
-      .next()
-
-  const getPlayersByContainer = (container) =>
-    toArray(container.find('.image-and-label')).map((playerEl) => ({
-      id: Number(playerEl.attr('href')!.split('/')[3]),
-      name: playerEl.find('.text-ellipsis').text()
-    }))
-
-  const currentLineup = getPlayersByContainer(
-    getContainerByText('Current lineup')
-  )
-
-  const historicPlayers = getPlayersByContainer(
-    getContainerByText('Historic players')
-  )
-  const standins = getPlayersByContainer(getContainerByText('Standins'))
-
-  if (currentRosterOnly) {
-    currentRosterURL = `lineup=${currentLineup
-      .map((x) => x.id)
-      .join('&lineup=')}&minLineupMatch=0`
-
-    matchesURL = `${config.hltvUrl}/stats/lineup/matches?${currentRosterURL}&${query}`
-    eventsURL = `${config.hltvUrl}/stats/lineup/events?${currentRosterURL}&${query}`
-    mapsURL = `${config.hltvUrl}/stats/lineup/maps?${currentRosterURL}&${query}`
-
-    $ = await fetchPage(
-      `${config.hltvUrl}/stats/lineup?${currentRosterURL}`,
+  let $ = HLTVScraper(
+    await fetchPage(
+      `https://www.hltv.org/stats/teams/${options.id}/-?${query}`,
       config.loadPage
     )
-  } else {
-    matchesURL = `${
-      config.hltvUrl
-    }/stats/teams/matches/${id}/${generateRandomSuffix()}?${query}`
-    eventsURL = `${
-      config.hltvUrl
-    }/stats/teams/events/${id}/${generateRandomSuffix()}?${query}`
-    mapsURL = `${
-      config.hltvUrl
-    }/stats/teams/maps/${id}/${generateRandomSuffix()}?${query}`
-  }
-  const m$ = await fetchPage(`${matchesURL}`, config.loadPage)
+  )
 
-  const e$ = await fetchPage(`${eventsURL}`, config.loadPage)
-  const mp$ = await fetchPage(`${mapsURL}`, config.loadPage)
+  const currentLineup = getPlayersByContainer(
+    getContainerByText($, 'Current lineup')
+  )
+
+  const currentRosterQuery = `lineup=${currentLineup
+    .map((x) => x.id)
+    .join('&lineup=')}&minLineupMatch=0`
+
+  if (options.currentRosterOnly) {
+    $ = HLTVScraper(
+      await fetchPage(
+        `https://www.hltv.org/stats/lineup?${currentRosterQuery}`,
+        config.loadPage
+      )
+    )
+  }
+
+  const historicPlayers = getPlayersByContainer(
+    getContainerByText($, 'Historic players')
+  )
+
+  const standins = getPlayersByContainer(getContainerByText($, 'Standins'))
+
+  const [m$, e$, mp$] = await Promise.all([
+    fetchPage(
+      options.currentRosterOnly
+        ? `https://www.hltv.org/stats/lineup/matches?${currentRosterQuery}&${query}`
+        : `https://www.hltv.org/stats/teams/matches/${
+            options.id
+          }/${generateRandomSuffix()}?${query}`,
+      config.loadPage
+    ).then(HLTVScraper),
+    fetchPage(
+      options.currentRosterOnly
+        ? `https://www.hltv.org/stats/lineup/events?${currentRosterQuery}&${query}`
+        : `https://www.hltv.org/stats/teams/events/${
+            options.id
+          }/${generateRandomSuffix()}?${query}`,
+      config.loadPage
+    ).then(HLTVScraper),
+    fetchPage(
+      options.currentRosterOnly
+        ? `https://www.hltv.org/stats/lineup/maps?${currentRosterQuery}&${query}`
+        : `https://www.hltv.org/stats/teams/maps/${
+            options.id
+          }/${generateRandomSuffix()}?${query}`,
+      config.loadPage
+    ).then(HLTVScraper)
+  ])
 
   const overviewStats = $('.standard-box .large-strong')
-  const getOverviewStatByIndex = (i) => Number(overviewStats.eq(i).text())
+
   const [wins, draws, losses] = overviewStats
     .eq(1)
     .text()
@@ -94,57 +135,82 @@ export const getTeamStats = (config: HLTVConfig) => async ({
     .map(Number)
 
   const overview = {
-    mapsPlayed: getOverviewStatByIndex(0),
-    totalKills: getOverviewStatByIndex(2),
-    totalDeaths: getOverviewStatByIndex(3),
-    roundsPlayed: getOverviewStatByIndex(4),
-    kdRatio: getOverviewStatByIndex(5),
+    mapsPlayed: overviewStats.eq(0).numFromText()!,
+    totalKills: overviewStats.eq(2).numFromText()!,
+    totalDeaths: overviewStats.eq(3).numFromText()!,
+    roundsPlayed: overviewStats.eq(4).numFromText()!,
+    kdRatio: overviewStats.eq(5).numFromText()!,
     wins,
     draws,
     losses
   }
 
-  const matches = toArray(m$('.stats-table tbody tr')).map((matchEl) => ({
-    dateApproximate: getTimestamp(matchEl.find('.time a').text()),
-    event: {
-      id: Number(
-        popSlashSource(matchEl.find('.image-and-label img'))!.split('.')[0]
-      ),
-      name: matchEl.find('.image-and-label img').attr('title')!
-    },
-    enemyTeam: {
-      id: Number(matchEl.find('img.flag').parent().attr('href')!.split('/')[3]),
-      name: matchEl.find('img.flag').parent().contents().last().text()
-    },
-    map: getMapSlug(matchEl.find('.statsMapPlayed span').text()),
-    mapStatsId: Number(matchEl.find('.time a').attr('href')!.split('/')[4]),
-    result: matchEl.find('.statsDetail').text()
-  }))
+  const name = $('.context-item-name').last().text()
+  const currentTeam = { id: options.id, name }
 
-  const events = toArray(e$('.stats-table tbody tr')).map((eventEl) => ({
-    place: eventEl.find('.statsCenterText').text(),
-    event: {
-      id: Number(
-        eventEl.find('.image-and-label').first().attr('href')!.split('=')[
-          eventEl.find('.image-and-label').first().attr('href')!.split('=')
-            .length - 1
-        ]
-      ),
-      name: eventEl.find('.image-and-label span').first().text()
-    }
-  }))
+  const matches = m$('.stats-table tbody tr')
+    .toArray()
+    .map((el) => {
+      const [team1Result, team2Result] = el
+        .find('.statsDetail')
+        .text()
+        .split(' - ')
 
-  const getMapStat = (mapEl, i) =>
+      return {
+        date: getTimestamp(el.find('.time a').text()),
+        event: {
+          id: Number(
+            el
+              .find('.image-and-label')
+              .attr('href')!
+              .split('event=')[1]
+              .split('&')[0]
+          ),
+          name: el.find('.image-and-label img').attr('title')!
+        },
+        team1: currentTeam,
+        team2: {
+          id: el.find('img.flag').parent().attrThen('href', getIdAt(3)),
+          name: el.find('img.flag').parent().trimText()!
+        },
+        map: fromMapName(el.find('.statsMapPlayed').text()),
+        mapStatsId: el.find('.time a').attrThen('href', getIdAt(4))!,
+        result: { team1: Number(team1Result), team2: Number(team2Result) }
+      }
+    })
+
+  const events = e$('.stats-table tbody tr')
+    .toArray()
+    .map((el) => {
+      const eventEl = el.find('.image-and-label').first()
+
+      return {
+        place: el.find('.statsCenterText').text(),
+        event: {
+          id: Number(eventEl.attr('href')!.split('event=')[1].split('&')[0]),
+          name: eventEl.text()
+        }
+      }
+    })
+
+  const getMapStat = (mapEl: HLTVPageElement, i: number) =>
     mapEl.find('.stats-row').eq(i).children().last().text()
 
-  const mapStats = toArray(mp$('.two-grid .col .stats-rows')).reduce(
-    (stats, mapEl) => {
-      const mapName = getMapSlug(mapEl.prev().find('.map-pool-map-name').text())
+  const mapStats = mp$('.two-grid .col .stats-rows')
+    .toArray()
+    .reduce((stats, mapEl) => {
+      const mapName = fromMapName(
+        mapEl.prev().find('.map-pool-map-name').text()
+      )
+
+      const [wins, draws, losses] = getMapStat(mapEl, 0)
+        .split(' / ')
+        .map(Number)
 
       stats[mapName] = {
-        wins: Number(getMapStat(mapEl, 0).split(' / ')[0]),
-        draws: Number(getMapStat(mapEl, 0).split(' / ')[1]),
-        losses: Number(getMapStat(mapEl, 0).split(' / ')[2]),
+        wins,
+        draws,
+        losses,
         winRate: Number(getMapStat(mapEl, 1).split('%')[0]),
         totalRounds: Number(getMapStat(mapEl, 2)),
         roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]),
@@ -152,17 +218,40 @@ export const getTeamStats = (config: HLTVConfig) => async ({
       }
 
       return stats
-    },
-    {}
-  )
+    }, {} as Record<string, any>)
 
   return {
+    id: options.id,
+    name,
     overview,
+    matches,
     currentLineup,
     historicPlayers,
     standins,
     events,
-    mapStats,
-    matches
+    mapStats
   }
+}
+
+function getContainerByText($: HLTVPage, text: string) {
+  return $('.standard-headline')
+    .filter((_, el) => el.text() === text)
+    .parent()
+    .next()
+}
+
+function getPlayersByContainer(container: HLTVPageElement) {
+  return container
+    .find('.image-and-label')
+    .toArray()
+    .map((el) => ({
+      id: el.attrThen('href', getIdAt(3)),
+      name: el.find('.text-ellipsis').text()
+    }))
+}
+
+function getTimestamp(source: string): number {
+  const [day, month, year] = source.split('/')
+
+  return new Date([month, day, year].join('/')).getTime()
 }

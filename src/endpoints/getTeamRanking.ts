@@ -1,53 +1,83 @@
-import { TeamRanking } from '../models/TeamRanking'
-import { Team } from '../models/Team'
 import { HLTVConfig } from '../config'
-import { fetchPage, toArray } from '../utils/mappers'
-import { checkForRateLimiting } from '../utils/checkForRateLimiting'
+import { HLTVScraper } from '../scraper'
+import { Team } from '../shared/Team'
+import { fetchPage, getIdAt } from '../utils'
+
+export interface TeamRanking {
+  team: Team
+  points: number
+  place: number
+  change: number
+  isNew: boolean
+}
+
+export interface GetTeamArguments {
+  year?: 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021
+  month?:
+    | 'january'
+    | 'february'
+    | 'march'
+    | 'april'
+    | 'may'
+    | 'june'
+    | 'july'
+    | 'august'
+    | 'september'
+    | 'october'
+    | 'november'
+    | 'december'
+  day?: number
+  country?: string
+}
 
 export const getTeamRanking = (config: HLTVConfig) => async ({
-  year = '',
-  month = '',
-  day = '',
-  country = ''
-} = {}): Promise<TeamRanking[]> => {
-  let $ = await fetchPage(
-    `${config.hltvUrl}/ranking/teams/${year}/${month}/${day}`,
-    config.loadPage
+  year,
+  month,
+  day,
+  country
+}: GetTeamArguments = {}): Promise<TeamRanking[]> => {
+  let $ = HLTVScraper(
+    await fetchPage(
+      `https://www.hltv.org/ranking/teams/${year}/${month}/${day}`,
+      config.loadPage
+    )
   )
 
-  if ((!year || !month || !day) && country) {
-    const redirectedLink = $('.ranking-country > a').first().attr('href')!
+  if (country) {
+    const redirectedLink = $('.ranking-country > a').first().attr('href')
     const countryRankingLink = redirectedLink
       .split('/')
       .slice(0, -1)
-      .concat([country])
+      .concat(country)
       .join('/')
 
-    $ = await fetchPage(
-      `${config.hltvUrl}${countryRankingLink}`,
-      config.loadPage
+    $ = HLTVScraper(
+      await fetchPage(
+        `https://www.hltv.org/${countryRankingLink}`,
+        config.loadPage
+      )
     )
   }
 
-  checkForRateLimiting($)
+  const teams = $('.ranked-team')
+    .toArray()
+    .map((el) => {
+      const points = Number(
+        el.find('.points').text().replace(/\(|\)/g, '').split(' ')[0]
+      )
+      const place = Number(el.find('.position').text().substring(1))
 
-  const teams = toArray($('.ranked-team')).map((teamEl) => {
-    const points = Number(
-      teamEl.find('.points').text().replace(/\(|\)/g, '').split(' ')[0]
-    )
-    const place = Number(teamEl.find('.position').text().substring(1))
+      const team = {
+        name: el.find('.name').text(),
+        id: el.find('.moreLink').attrThen('href', getIdAt(2))
+      }
 
-    const team: Team = {
-      name: teamEl.find('.name').text(),
-      id: Number(teamEl.find('.moreLink').attr('href')!.split('/')[2])
-    }
+      const changeText = el.find('.change').text()
+      const isNew = changeText === 'New'
+      const change = changeText === '-' || isNew ? 0 : Number(changeText)
 
-    const changeText = teamEl.find('.change').text()
-    const isNew = changeText === 'New'
-    const change = changeText === '-' || isNew ? 0 : Number(changeText)
-
-    return { points, place, team, change, isNew }
-  })
+      return { points, place, team, change, isNew }
+    })
 
   return teams
 }

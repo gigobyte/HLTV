@@ -18,7 +18,6 @@ Table of contents
   - [getMatchesStats](#getmatchesstats)
   - [getMatchStats](#getmatchstats)
   - [getMatchMapStats](#getmatchmapstats)
-  - [getResults](#getresults)
   - [getStreams](#getstreams)
   - [getRecentThreads](#getrecentthreads)
   - [getTeamRanking](#getteamranking)
@@ -33,7 +32,10 @@ Table of contents
   - [getEvents](#getevents)
   - [getEvent](#getevent)
   - [getEventByName](#geteventbyname)
+  - [getPastEvents](#getpastevents)
   - [connectToScorebot](#connecttoscorebot)
+  - [TEAM_PLACEHOLDER_IMAGE](#teamplaceholderimage)
+  - [PLAYER_PLACEHOLDER_IMAGE](#playerplaceholderimage)
 
 ## Installation
 
@@ -55,12 +57,10 @@ const { HLTV } = require('hltv')
 
 You can create an instance of HLTV with a custom config if you want to.
 
-|    Option     |   Type    |         Default value          |                                    Description                                    |
-| :-----------: | :-------: | :----------------------------: | :-------------------------------------------------------------------------------: |
-|    hltvUrl    |  string   |      https://www.hltv.org      |                Url that will be used to construct requests to HLTV                |
-| hltvStaticUrl |  string   |    https://static.hltv.org     |                Url that will be used to construct links to images                 |
-|   loadPage    | function  | based on the 'request' library |       Function that will be called when the library makes a request to HLTV       |
-|   httpAgent   | HttpAgent |           HttpsAgent           | Http agent used when sending a request and connecting to the scoreboard websocket |
+|  Option   |                Type                |         Default value          |                                   Description                                   |
+| :-------: | :--------------------------------: | :----------------------------: | :-----------------------------------------------------------------------------: |
+| loadPage  | (url: string) => Promise\<string\> | based on the 'request' library |      Function that will be called when the library makes a request to HLTV      |
+| httpAgent |             HttpAgent              |           HttpsAgent           | Http agent used when sending a request and connecting to the scorebot websocket |
 
 ```javascript
 const myHLTV = HLTV.createInstance({ loadPage: (url) => axios.get(url) })
@@ -94,11 +94,11 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 Parses all matches from the `hltv.org/matches/` page (1 request)
 
-|  Option   |                                            Type                                             | Default Value |                          Description                           |
-| :-------: | :-----------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
-|  eventID  |                                           number?                                           |       -       |                  Filter matches by event ID.                   |
-| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchEventType.ts)? |       -       |                 Filter matches by event type.                  |
-|  filter   |    [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchFilter.ts)?    |       -       | Filter matches by pre-set categories. Overrides other filters. |
+|  Option   |         Type         | Default Value |                          Description                           |
+| :-------: | :------------------: | :-----------: | :------------------------------------------------------------: |
+|  eventId  |       number?        |       -       |                  Filter matches by event ID.                   |
+| eventType | [MatchEventType?]()? |       -       |                 Filter matches by event type.                  |
+|  filter   |  [MatchFilter?]()?   |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -106,23 +106,20 @@ HLTV.getMatches().then((res) => {
 })
 ```
 
-**[See schema for Live Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
-
-**[See schema for Upcoming Matches](https://github.com/gigobyte/HLTV/blob/master/src/models/UpcomingMatch.ts)**
-
----
+## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
 
 #### getMatchesStats
 
 Parses all matches from the `hltv.org/stats/matches` page (1 request per page of results)
 
-|    Option     |                                           Type                                            | Default Value | Description |
-| :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
-|   startDate   |                                          string?                                          |       -       |      -      |
-|    endDate    |                                          string?                                          |       -       |      -      |
-|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
-|     maps      |          [Map](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?          |       -       |      -      |
-| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
+|          Option          |                                           Type                                            | Default Value |                Description                 |
+| :----------------------: | :---------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        startDate         |                                          string?                                          |       -       |                     -                      |
+|         endDate          |                                          string?                                          |       -       |                     -                      |
+|        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |                     -                      |
+|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?        |       -       |                     -                      |
+|      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |                     -                      |
+| delayBetweenPageRequests |                                          number?                                          |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
 HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
@@ -170,30 +167,6 @@ HLTV.getMatchMapStats({id: 49968}).then((res) => {
 
 ---
 
-#### getResults
-
-Parses all matches from the `hltv.org/results/` page (1 reuest per result page)
-
-|     Option     |                                            Type                                             | Default Value |        Description        |
-| :------------: | :-----------------------------------------------------------------------------------------: | :-----------: | :-----------------------: |
-|   startPage    |                                           number                                            |       0       |      Set start page       |
-|    endPage     |                                           number                                            |       1       |       Set end page        |
-|     teamID     |                                           number?                                           |       -       |    ID of specific team    |
-|    eventID     |                                           number?                                           |       -       |   ID of specific event    |
-| contentFilters | [ContentFilter[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/ContentFilter.ts)? |      []       | Add filter of the content |
-
-```javascript
-// Note: if you pass `eventID` to getResults you cannot pass the `startpage` and `endPage` parameter
-// since HLTV doesn't have pages for the event filter.
-HLTV.getResults({startPage:0,endPage:2}).then((res) => {
-  ...
-})
-```
-
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchResult.ts)**
-
----
-
 #### getStreams
 
 Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is true)
@@ -232,12 +205,12 @@ HLTV.getRecentThreads().then((res) => {
 
 Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 
-| Option  |  Type   | Default Value |                   Description                    |
-| :-----: | :-----: | :-----------: | :----------------------------------------------: |
-|  year   | string? |       -       |                        -                         |
-|  month  | string? |       -       |       Must be lowercase and in MMMM format       |
-|   day   | string? |       -       |                        -                         |
-| country | string? |       -       | Must be capitalized (`'Brazil'`, `'France'` etc) |
+| Option  |                                                                      Type                                                                      | Default Value |                   Description                    |
+| :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------------: |
+|  year   |                                              2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021                                              |       -       |                        -                         |
+|  month  | 'january' \| 'february' \| 'march' \| 'april' \| 'may' \| 'june' \| 'july' \| 'august' \| 'september' \| 'october' \| 'november' \| 'december' |       -       |                        -                         |
+|   day   |                                                                    number?                                                                     |       -       |                        -                         |
+| country |                                                                    string?                                                                     |       -       | Must be capitalized (`'Brazil'`, `'France'` etc) |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
@@ -254,7 +227,7 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
 
 #### getTeam
 
-Parses the info from the `hltv.org/team/` page (2 requests)
+Parses the info from the `hltv.org/team/` page (1 request)
 
 | Option |  Type  | Default value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -345,7 +318,7 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 
 #### getPlayerStats
 
-Parses the info from `hltv.org/stats/players/*` (1 request)
+Parses the info from `hltv.org/stats/players/*` (3 requests)
 
 |    Option     |                                           Type                                            | Default value | Description |
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
@@ -354,6 +327,8 @@ Parses the info from `hltv.org/stats/players/*` (1 request)
 |    endDate    |                                          string                                           |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
+|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 HLTV.getPlayerStats({id: 7998}).then(res => {
@@ -375,7 +350,7 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 |    endDate    |                                          string?                                          |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
-|     maps      |          [Map[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?          |       -       |      -      |
+|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
 |  minMapCount  |                                          number?                                          |       -       |      -      |
 |    country    |                                         string[]                                          |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
@@ -395,9 +370,13 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 Parses the info from the `hltv.org/events` page (1 request)
 
-| Option |                                       Type                                        | Default value |                                    Description                                    |
-| :----: | :-------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------------------------------------: |
-|  size  | [EventSize](https://github.com/gigobyte/HLTV/blob/master/src/enums/EventSize.ts)? |       -       | Event size type. (EventSize.Small, EventSize.Big). Default (empty) combines both. |
+|       Option       |    Type    | Default value |                     Description                     |
+| :----------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|     eventType      | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|    prizePoolMin    |  number?   |       -       |              Minimum prize pool (USD$)              |
+|    prizePoolMax    |  number?   |       -       |              Maximum prize pool (USD$)              |
+|  attendingTeamIds  | number[]?  |       -       |                          -                          |
+| attendingPlayerIds | number[]?  |       -       |                          -                          |
 
 ```javascript
 HLTV.getEvents().then(res => {
@@ -406,24 +385,6 @@ HLTV.getEvents().then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/EventResult.ts)**
-
----
-
-#### getOngoingEvents
-
-Parses the info from the `hltv.org/events` page (1 request)
-
-| Option | Type | Default value | Description |
-| :----: | :--: | :-----------: | :---------: |
-|   -    |  -   |       -       |      -      |
-
-```javascript
-HLTV.getOngoingEvents().then(res => {
-    ...
-})
-```
-
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/OngoingEventResult.ts)**
 
 ---
 
@@ -463,6 +424,29 @@ HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
 
 ---
 
+#### getPastEvents
+
+Parses the info from the `hltv.org/events/archive` page (1 request per page of results)
+
+|          Option          |    Type    | Default value |                     Description                     |
+| :----------------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|        eventType         | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|        startDate         |  string?   |       -       |                          -                          |
+|         endDate          |  string?   |       -       |                          -                          |
+|       prizePoolMin       |  number?   |       -       |              Minimum prize pool (USD$)              |
+|       prizePoolMax       |  number?   |       -       |              Maximum prize pool (USD$)              |
+|     attendingTeamIds     | number[]?  |       -       |                          -                          |
+|    attendingPlayerIds    | number[]?  |       -       |                          -                          |
+| delayBetweenPageRequests |  number?   |       0       |     Used to prevent CloudFlare throttling (ms)      |
+
+```javascript
+HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res => {
+    ...
+})
+```
+
+---
+
 #### connectToScorebot
 
 Presents an interface to receive data when the HLTV scorebot updates
@@ -488,3 +472,21 @@ HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data, done) => {
 The `onLogUpdate` callback is passed an [LogUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/LogUpdate.ts) object
 
 The `onScoreboardUpdate` callback is passed an [ScoreboardUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/ScoreboardUpdate.ts) object
+
+---
+
+#### TEAM_PLACEHOLDER_IMAGE
+
+```javascript
+HLTV.TEAM_PLACEHOLDER_IMAGE
+// https://www.hltv.org/img/static/team/placeholder.svg
+```
+
+---
+
+#### PLAYER_PLACEHOLDER_IMAGE
+
+```javascript
+HLTV.PLAYER_PLACEHOLDER_IMAGE
+// https://static.hltv.org/images/playerprofile/bodyshot/unknown.png
+```
