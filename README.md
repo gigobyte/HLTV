@@ -204,12 +204,12 @@ HLTV.getRecentThreads().then((res) => {
 
 Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 
-| Option  |  Type   | Default Value |                   Description                    |
-| :-----: | :-----: | :-----------: | :----------------------------------------------: |
-|  year   | string? |       -       |                        -                         |
-|  month  | string? |       -       |       Must be lowercase and in MMMM format       |
-|   day   | string? |       -       |                        -                         |
-| country | string? |       -       | Must be capitalized (`'Brazil'`, `'France'` etc) |
+| Option  |                                                                      Type                                                                      | Default Value |                   Description                    |
+| :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------------: |
+|  year   |                                              2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021                                              |       -       |                        -                         |
+|  month  | 'january' \| 'february' \| 'march' \| 'april' \| 'may' \| 'june' \| 'july' \| 'august' \| 'september' \| 'october' \| 'november' \| 'december' |       -       |                        -                         |
+|   day   |                                                                    number?                                                                     |       -       |                        -                         |
+| country |                                                                    string?                                                                     |       -       | Must be capitalized (`'Brazil'`, `'France'` etc) |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
