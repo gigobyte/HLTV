@@ -14,12 +14,11 @@ export interface GetMatchesStatsArguments {
   matchType?: MatchType
   maps?: GameMap[]
   rankingFilter?: RankingFilter
-  playerId?: number
   delayBetweenPageRequests?: number
 }
 
 export interface MatchStatsPreview {
-  mapStatId: number
+  mapStatsId: number
   date: number
   team1: Team
   team2: Team
@@ -42,14 +41,6 @@ export const getMatchesStats = (config: HLTVConfig) => async (
     ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {})
   })
 
-  let baseUrl = 'https://www.hltv.org/stats/matches'
-
-  if (options.playerId) {
-    baseUrl = `https://www.hltv.org/stats/players/matches/${
-      options.playerId
-    }/${generateRandomSuffix()}`
-  }
-
   let page = 0
   let $: HLTVPage
   let matches: MatchStatsPreview[] = []
@@ -70,7 +61,9 @@ export const getMatchesStats = (config: HLTVConfig) => async (
       ...$('.matches-table tbody tr')
         .toArray()
         .map((el) => {
-          const mapStatId = el.find('.date-col a').attrThen('href', getIdAt(4))!
+          const mapStatsId = el
+            .find('.date-col a')
+            .attrThen('href', getIdAt(4))!
           const date = el.find('.time').numFromAttr('data-unix')!
           const map = fromMapSlug(el.find('.dynamic-map-name-short').text())
 
@@ -112,7 +105,7 @@ export const getMatchesStats = (config: HLTVConfig) => async (
             )
           }
 
-          return { mapStatId, date, map, team1, team2, event, result }
+          return { mapStatsId, date, map, team1, team2, event, result }
         })
     )
   } while ($('.matches-table tbody tr').length !== 0)

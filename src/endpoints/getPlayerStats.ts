@@ -69,7 +69,7 @@ export interface GetPlayerStatsArguments {
 
 export const getPlayerStats = (config: HLTVConfig) => async (
   options: GetPlayerStatsArguments
-): Promise<any> => {
+): Promise<FullPlayerStats> => {
   const query = stringify({
     ...(options.startDate ? { startDate: options.startDate } : {}),
     ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -122,7 +122,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
         }
       : undefined
 
-  const getOverviewStats = (label: string) => {
+  const getOverviewStats = (label: string): number | undefined => {
     const lbl = label.toLowerCase()
     const row = $('.stats-row').filter((_, x) =>
       x.text().toLowerCase().includes(lbl)
@@ -133,17 +133,17 @@ export const getPlayerStats = (config: HLTVConfig) => async (
   }
 
   const overviewStatistics = {
-    kills: getOverviewStats('Total kills'),
-    headshots: getOverviewStats('Headhost %'),
-    deaths: getOverviewStats('Total deaths'),
-    kdRatio: getOverviewStats('K/D Ratio'),
+    kills: getOverviewStats('Total kills')!,
+    headshots: getOverviewStats('Headhost %')!,
+    deaths: getOverviewStats('Total deaths')!,
+    kdRatio: getOverviewStats('K/D Ratio')!,
     damagePerRound: getOverviewStats('Damage / Round'),
     grenadeDamagePerRound: getOverviewStats('Grenade dmg / Round'),
-    mapsPlayed: getOverviewStats('Maps played'),
-    roundsPlayed: getOverviewStats('Rounds played'),
-    killsPerRound: getOverviewStats('Kills / round'),
-    assistsPerRound: getOverviewStats('Assists / round'),
-    deathsPerRound: getOverviewStats('Deaths / round'),
+    mapsPlayed: getOverviewStats('Maps played')!,
+    roundsPlayed: getOverviewStats('Rounds played')!,
+    killsPerRound: getOverviewStats('Kills / round')!,
+    assistsPerRound: getOverviewStats('Assists / round')!,
+    deathsPerRound: getOverviewStats('Deaths / round')!,
     savedByTeammatePerRound: getOverviewStats('Saved by teammate'),
     savedTeammatesPerRound: getOverviewStats('Saved teammates'),
     ...(getOverviewStats('Rating 1.0') !== undefined
@@ -151,7 +151,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
       : { rating2: getOverviewStats('Rating 2.0') })
   }
 
-  const getIndivialStats = (label: string) => {
+  const getIndivialStats = (label: string): number => {
     const lbl = label.toLowerCase()
     const row = i$('.stats-row').filter((_, x) =>
       x.text().toLowerCase().includes(lbl)
@@ -184,6 +184,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
   }
 
   return {
+    id: options.id,
     name,
     ign,
     image,
