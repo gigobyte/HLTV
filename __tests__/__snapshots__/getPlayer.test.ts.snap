@@ -3488,11 +3488,11 @@ Object {
   ],
   "statistics": Object {
     "deathsPerRound": 0.59,
-    "headshots": 34.6,
+    "headshots": 34.1,
     "killsPerRound": 0.88,
-    "mapsPlayed": 41,
+    "mapsPlayed": 43,
     "rating": 1.35,
-    "roundsContributed": 75.2,
+    "roundsContributed": 75.1,
   },
   "team": Object {
     "id": 4608,

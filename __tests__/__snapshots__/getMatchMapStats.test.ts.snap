@@ -459,7 +459,7 @@ Object {
     "bestRating2": Object {
       "id": 7998,
       "name": "s1mple",
-      "value": "1.61",
+      "value": 1.61,
     },
     "clutchesWon": Object {
       "team1": 0,
@@ -472,27 +472,27 @@ Object {
     "mostAWPKills": Object {
       "id": 7998,
       "name": "s1mple",
-      "value": "9",
+      "value": 9,
     },
     "mostAssists": Object {
       "id": 484,
       "name": "Zeus",
-      "value": "9",
+      "value": 9,
     },
     "mostDamage": Object {
       "id": 7398,
       "name": "dupreeh",
-      "value": "99.9",
+      "value": 99.9,
     },
     "mostFirstKills": Object {
       "id": 8918,
       "name": "electronic",
-      "value": "5",
+      "value": 5,
     },
     "mostKills": Object {
       "id": 7398,
       "name": "dupreeh",
-      "value": "23",
+      "value": 23,
     },
     "rating": Object {
       "team1": 0.81,
@@ -530,7 +530,6 @@ Object {
           "id": 7398,
           "name": "dupreeh",
         },
-        "playerId": 7398,
         "rating1": 1.32,
       },
       Object {
@@ -550,7 +549,6 @@ Object {
           "id": 9032,
           "name": "Magisk",
         },
-        "playerId": 9032,
         "rating1": 0.89,
       },
       Object {
@@ -570,7 +568,6 @@ Object {
           "id": 7592,
           "name": "device",
         },
-        "playerId": 7592,
         "rating1": 0.72,
       },
       Object {
@@ -590,7 +587,6 @@ Object {
           "id": 7412,
           "name": "gla1ve",
         },
-        "playerId": 7412,
         "rating1": 0.56,
       },
       Object {
@@ -610,7 +606,6 @@ Object {
           "id": 4954,
           "name": "Xyp9x",
         },
-        "playerId": 4954,
         "rating1": 0.53,
       },
     ],
@@ -632,7 +627,6 @@ Object {
           "id": 7998,
           "name": "s1mple",
         },
-        "playerId": 7998,
         "rating1": 1.61,
       },
       Object {
@@ -652,7 +646,6 @@ Object {
           "id": 8918,
           "name": "electronic",
         },
-        "playerId": 8918,
         "rating1": 1.48,
       },
       Object {
@@ -672,7 +665,6 @@ Object {
           "id": 483,
           "name": "Edward",
         },
-        "playerId": 483,
         "rating1": 1.41,
       },
       Object {
@@ -692,7 +684,6 @@ Object {
           "id": 7594,
           "name": "flamie",
         },
-        "playerId": 7594,
         "rating1": 1,
       },
       Object {
@@ -712,7 +703,6 @@ Object {
           "id": 484,
           "name": "Zeus",
         },
-        "playerId": 484,
         "rating1": 0.91,
       },
     ],
