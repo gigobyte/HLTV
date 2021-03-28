@@ -121,6 +121,7 @@ Parses all matches from the `hltv.org/stats/matches` page (1 request per page of
 | delayBetweenPageRequests |                                          number?                                          |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
+// ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
 HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
   ...
 })
@@ -215,7 +216,7 @@ Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 // If you don't provide a filter the latest ranking will be parsed
 HLTV.getTeamRanking()
 HLTV.getTeamRanking({country: 'Thailand'})
-HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
+HLTV.getTeamRanking({year: 2017, month: 'may', day: 29}).then((res) => {
   ...
 })
 ```
@@ -443,6 +444,7 @@ Parses the info from the `hltv.org/events/archive` page (1 request per page of r
 | delayBetweenPageRequests |  number?   |       0       |     Used to prevent CloudFlare throttling (ms)      |
 
 ```javascript
+// ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
 HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res => {
     ...
 })
