@@ -317,7 +317,7 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 
 #### getPlayerStats
 
-Parses the info from `hltv.org/stats/players/*` (2 requests)
+Parses the info from `hltv.org/stats/players/*` (3 requests)
 
 |    Option     |                                           Type                                            | Default value | Description |
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |

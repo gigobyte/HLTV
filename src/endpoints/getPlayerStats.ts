@@ -3,11 +3,22 @@ import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
 import { BestOfFilter } from '../shared/BestOfFilter'
 import { Country } from '../shared/Country'
-import { GameMap, toMapFilter } from '../shared/GameMap'
+import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { MatchType } from '../shared/MatchType'
 import { RankingFilter } from '../shared/RankingFilter'
 import { Team } from '../shared/Team'
 import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
+
+export interface PlayerStatsMatch {
+  date: number
+  team1: Team
+  team2: Team
+  map: GameMap
+  kills: number
+  deaths: number
+  rating: number
+  mapStatsId: number
+}
 
 export interface FullPlayerStats {
   id: number
@@ -17,6 +28,7 @@ export interface FullPlayerStats {
   age?: number
   country: Country
   team?: Team
+  matches: PlayerStatsMatch[]
   overviewStatistics: {
     kills: number
     headshots: number
@@ -79,7 +91,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
     ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
   })
 
-  const [$, i$] = await Promise.all([
+  const [$, i$, m$] = await Promise.all([
     fetchPage(
       `https://www.hltv.org/stats/players/${
         options.id
@@ -88,6 +100,12 @@ export const getPlayerStats = (config: HLTVConfig) => async (
     ).then(HLTVScraper),
     fetchPage(
       `https://www.hltv.org/stats/players/individual/${
+        options.id
+      }/${generateRandomSuffix()}?${query}`,
+      config.loadPage
+    ).then(HLTVScraper),
+    fetchPage(
+      `https://www.hltv.org/stats/players/matches/${
         options.id
       }/${generateRandomSuffix()}?${query}`,
       config.loadPage
@@ -134,7 +152,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
 
   const overviewStatistics = {
     kills: getOverviewStats('Total kills')!,
-    headshots: getOverviewStats('Headhost %')!,
+    headshots: getOverviewStats('Headshot %')!,
     deaths: getOverviewStats('Total deaths')!,
     kdRatio: getOverviewStats('K/D Ratio')!,
     damagePerRound: getOverviewStats('Damage / Round'),
@@ -183,6 +201,46 @@ export const getPlayerStats = (config: HLTVConfig) => async (
     otherKills: getIndivialStats('Other')
   }
 
+  const matches = m$('.stats-table tbody tr')
+    .toArray()
+    .map((el) => {
+      const [kills, deaths] = el
+        .find('td')
+        .eq(4)
+        .text()
+        .split(' - ')
+        .map(Number)
+
+      return {
+        mapStatsId: el
+          .find('td')
+          .first()
+          .find('a')
+          .attrThen('href', getIdAt(4))!,
+        date: el.find('.time').numFromAttr('data-unix')!,
+        team1: {
+          id: el
+            .find('td')
+            .eq(1)
+            .find('.gtSmartphone-only a')
+            .attrThen('href', getIdAt(3)),
+          name: el.find('td').eq(1).find('a span').text()
+        },
+        team2: {
+          id: el
+            .find('td')
+            .eq(2)
+            .find('.gtSmartphone-only a')
+            .attrThen('href', getIdAt(3)),
+          name: el.find('td').eq(2).find('a span').text()
+        },
+        map: fromMapSlug(el.find('.statsMapPlayed').text()),
+        kills,
+        deaths,
+        rating: el.find('td').last().numFromText()!
+      }
+    })
+
   return {
     id: options.id,
     name,
@@ -192,6 +250,7 @@ export const getPlayerStats = (config: HLTVConfig) => async (
     country,
     team,
     overviewStatistics,
-    individualStatistics
+    individualStatistics,
+    matches
   }
 }

@@ -67,12 +67,12 @@ export const getMatchesStats = (config: HLTVConfig) => async (
           const date = el.find('.time').numFromAttr('data-unix')!
           const map = fromMapSlug(el.find('.dynamic-map-name-short').text())
 
-          const team1: Team = {
+          const team1 = {
             id: el.find('.team-col a').first().attrThen('href', getIdAt(3)),
             name: el.find('.team-col a').first().text()
           }
 
-          const team2: Team = {
+          const team2 = {
             id: el.find('.team-col a').last().attrThen('href', getIdAt(3)),
             name: el.find('.team-col a').last().text()
           }
