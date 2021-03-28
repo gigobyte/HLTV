@@ -28,14 +28,13 @@ Table of contents
   - [getPlayerByName](#getplayerbyname)
   - [getPlayerStats](#getplayerstats)
   - [getPlayerRanking](#getplayerranking)
-  - [getOngoingEvents](#getOngoingEvents)
   - [getEvents](#getevents)
   - [getEvent](#getevent)
   - [getEventByName](#geteventbyname)
   - [getPastEvents](#getpastevents)
   - [connectToScorebot](#connecttoscorebot)
-  - [TEAM_PLACEHOLDER_IMAGE](#teamplaceholderimage)
-  - [PLAYER_PLACEHOLDER_IMAGE](#playerplaceholderimage)
+  - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
+  - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
 
 ## Installation
 
@@ -86,7 +85,7 @@ HLTV.getMatch({id: 2306295}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatch.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatch.ts#L71)**
 
 ---
 
@@ -97,8 +96,8 @@ Parses all matches from the `hltv.org/matches/` page (1 request)
 |  Option   |         Type         | Default Value |                          Description                           |
 | :-------: | :------------------: | :-----------: | :------------------------------------------------------------: |
 |  eventId  |       number?        |       -       |                  Filter matches by event ID.                   |
-| eventType | [MatchEventType?]()? |       -       |                 Filter matches by event type.                  |
-|  filter   |  [MatchFilter?]()?   |       -       | Filter matches by pre-set categories. Overrides other filters. |
+| eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
+|  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?   |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -106,7 +105,7 @@ HLTV.getMatches().then((res) => {
 })
 ```
 
-## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/LiveMatch.ts)**
+## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L25)**
 
 #### getMatchesStats
 
@@ -116,9 +115,9 @@ Parses all matches from the `hltv.org/stats/matches` page (1 request per page of
 | :----------------------: | :---------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
 |        startDate         |                                          string?                                          |       -       |                     -                      |
 |         endDate          |                                          string?                                          |       -       |                     -                      |
-|        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |                     -                      |
-|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)[]?        |       -       |                     -                      |
-|      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |                     -                      |
+|        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
+|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |                     -                      |
+|      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
 | delayBetweenPageRequests |                                          number?                                          |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
@@ -127,7 +126,7 @@ HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/MatchStats.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatchStats.ts#L15)**
 
 ---
 
@@ -163,7 +162,7 @@ HLTV.getMatchMapStats({id: 49968}).then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchMapStats.ts#L63)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatchMapStats.ts#L80)**
 
 ---
 
@@ -181,7 +180,7 @@ HLTV.getStreams().then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullStream.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getStreams.ts#L12)**
 
 ---
 
@@ -199,7 +198,7 @@ HLTV.getRecentThreads().then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/Thread.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getRecentThreads.ts#L11)**
 
 #### getTeamRanking
 
@@ -221,7 +220,7 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/TeamRanking.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeamRanking.ts#L6)**
 
 ---
 
@@ -239,7 +238,7 @@ HLTV.getTeam({id: 6137}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeam.ts#L21)**
 
 ---
 
@@ -257,7 +256,7 @@ HLTV.getTeamByName({name: "BIG"}).then(res => {
 })
 ```
 
-**[See getTeam schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeam.ts)**
+**[See getTeam schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeam.ts#L21)**
 
 ---
 
@@ -271,6 +270,10 @@ Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `
 | currentRosterOnly | boolean? |     false     | Return stats about the current roster only |
 |     startDate     | string?  |       -       |                     -                      |
 |      endDate      | string?  |       -       |                     -                      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
+| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
+|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
@@ -278,7 +281,7 @@ HLTV.getTeamStats({id: 6137}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullTeamStats.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeamStats.ts#L28)**
 
 ---
 
@@ -296,7 +299,7 @@ HLTV.getPlayer({id: 6137}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getPlayer.ts#L20)**
 
 ---
 
@@ -314,7 +317,7 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 })
 ```
 
-**[See getPlayer schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayer.ts)**
+**[See getPlayer schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getPlayer.ts#L20)**
 
 #### getPlayerStats
 
@@ -325,10 +328,10 @@ Parses the info from `hltv.org/stats/players/*` (3 requests)
 |      id       |                                          number                                           |       -       |      -      |
 |   startDate   |                                          string                                           |       -       |      -      |
 |    endDate    |                                          string                                           |       -       |      -      |
-|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
-| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
-|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
-|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
+| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
+|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 HLTV.getPlayerStats({id: 7998}).then(res => {
@@ -336,7 +339,7 @@ HLTV.getPlayerStats({id: 7998}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullPlayerStats.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getPlayerStats.ts#L23)**
 
 ---
 
@@ -348,12 +351,12 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 | :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
 |   startDate   |                                          string?                                          |       -       |      -      |
 |    endDate    |                                          string?                                          |       -       |      -      |
-|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/enums/MatchType.ts)?     |       -       |      -      |
-| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/RankingFilter.ts)? |       -       |      -      |
-|     maps      |        [GameMap[]](https://github.com/gigobyte/HLTV/blob/master/src/enums/Map.ts)?        |       -       |      -      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
+| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
+|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
 |  minMapCount  |                                          number?                                          |       -       |      -      |
 |    country    |                                         string[]                                          |       -       |      -      |
-|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/enums/BestOfFilter.ts)?  |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
@@ -362,7 +365,7 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/PlayerRanking.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getPlayerRanking.ts#L12)**
 
 ---
 
@@ -372,7 +375,7 @@ Parses the info from the `hltv.org/events` page (1 request)
 
 |       Option       |    Type    | Default value |                     Description                     |
 | :----------------: | :--------: | :-----------: | :-------------------------------------------------: |
-|     eventType      | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|     eventType      | [EventType](https://github.com/gigobyte/HLTV/blob/master/src/shared/EventType.ts)? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
 |    prizePoolMin    |  number?   |       -       |              Minimum prize pool (USD$)              |
 |    prizePoolMax    |  number?   |       -       |              Maximum prize pool (USD$)              |
 |  attendingTeamIds  | number[]?  |       -       |                          -                          |
@@ -384,7 +387,7 @@ HLTV.getEvents().then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/EventResult.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
 
 ---
 
@@ -402,7 +405,7 @@ HLTV.getEvent({id: 3389}).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvent.ts#L43)**
 
 ---
 
@@ -420,7 +423,7 @@ HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
 })
 ```
 
-**[See getEvent schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
+**[See getEvent schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvent.ts#L43)**
 
 ---
 
@@ -430,7 +433,7 @@ Parses the info from the `hltv.org/events/archive` page (1 request per page of r
 
 |          Option          |    Type    | Default value |                     Description                     |
 | :----------------------: | :--------: | :-----------: | :-------------------------------------------------: |
-|        eventType         | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|        eventType         | [EventType](https://github.com/gigobyte/HLTV/blob/master/src/shared/EventType.ts)? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
 |        startDate         |  string?   |       -       |                          -                          |
 |         endDate          |  string?   |       -       |                          -                          |
 |       prizePoolMin       |  number?   |       -       |              Minimum prize pool (USD$)              |
@@ -444,6 +447,8 @@ HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res =>
     ...
 })
 ```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
 
 ---
 
@@ -469,9 +474,9 @@ HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data, done) => {
 
 ```
 
-The `onLogUpdate` callback is passed an [LogUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/LogUpdate.ts) object
+The `onLogUpdate` callback is passed an [LogUpdate](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/connectToScorebot.ts#L117) object
 
-The `onScoreboardUpdate` callback is passed an [ScoreboardUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/ScoreboardUpdate.ts) object
+The `onScoreboardUpdate` callback is passed an [ScoreboardUpdate](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/connectToScorebot.ts#L161) object
 
 ---
 
