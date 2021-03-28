@@ -14,6 +14,8 @@ import { getPlayerRanking } from './endpoints/getPlayerRanking'
 import { getPlayerStats } from './endpoints/getPlayerStats'
 import { getRecentThreads } from './endpoints/getRecentThreads'
 import { getStreams } from './endpoints/getStreams'
+import { getTeam } from './endpoints/getTeam'
+import { getTeamByName } from './endpoints/getTeamByName'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -44,11 +46,19 @@ export class Hltv {
   getPlayerStats = getPlayerStats(this.config as HLTVConfig)
   getRecentThreads = getRecentThreads(this.config as HLTVConfig)
   getStreams = getStreams(this.config as HLTVConfig)
+  getTeam = getTeam(this.config as HLTVConfig)
+  getTeamByName = getTeamByName(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
-  public createInstance(config: HLTVConfig) {
+  public createInstance(config: Partial<HLTVConfig>) {
     return new Hltv(config)
   }
+
+  public TEAM_PLACEHOLDER_IMAGE =
+    'https://www.hltv.org/img/static/team/placeholder.svg'
+
+  public PLAYER_PLACEHOLDER_IMAGE =
+    'https://static.hltv.org/images/playerprofile/bodyshot/unknown.png'
 }
 
 const hltv = new Hltv()
@@ -114,6 +124,9 @@ export type { Thread } from './endpoints/getRecentThreads'
 
 export { StreamCategory } from './endpoints/getStreams'
 export type { FullStream } from './endpoints/getStreams'
+
+export { TeamPlayerType } from './endpoints/getTeam'
+export type { FullTeam, FullTeamPlayer } from './endpoints/getTeam'
 
 export { GameMap } from './shared/GameMap'
 export { MatchFormat } from './shared/MatchFormat'

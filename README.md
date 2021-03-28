@@ -33,6 +33,8 @@ Table of contents
   - [getEvent](#getevent)
   - [getEventByName](#geteventbyname)
   - [connectToScorebot](#connecttoscorebot)
+  - [TEAM_PLACEHOLDER_IMAGE](#teamplaceholderimage)
+  - [PLAYER_PLACEHOLDER_IMAGE](#playerplaceholderimage)
 
 ## Installation
 
@@ -224,7 +226,7 @@ HLTV.getTeamRanking({year: '2017', month: 'may', day: '29'}).then((res) => {
 
 #### getTeam
 
-Parses the info from the `hltv.org/team/` page (2 requests)
+Parses the info from the `hltv.org/team/` page (1 request)
 
 | Option |  Type  | Default value | Description |
 | :----: | :----: | :-----------: | :---------: |
@@ -462,3 +464,21 @@ HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data, done) => {
 The `onLogUpdate` callback is passed an [LogUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/LogUpdate.ts) object
 
 The `onScoreboardUpdate` callback is passed an [ScoreboardUpdate](https://github.com/gigobyte/HLTV/blob/master/src/models/ScoreboardUpdate.ts) object
+
+---
+
+#### TEAM_PLACEHOLDER_IMAGE
+
+```javascript
+HLTV.TEAM_PLACEHOLDER_IMAGE
+// https://www.hltv.org/img/static/team/placeholder.svg
+```
+
+---
+
+#### PLAYER_PLACEHOLDER_IMAGE
+
+```javascript
+HLTV.PLAYER_PLACEHOLDER_IMAGE
+// https://static.hltv.org/images/playerprofile/bodyshot/unknown.png
+```

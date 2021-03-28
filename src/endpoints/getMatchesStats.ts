@@ -4,7 +4,7 @@ import { HLTVPage, HLTVScraper } from '../scraper'
 import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
-import { fetchPage, getIdAt, sleep } from '../utils'
+import { fetchPage, generateRandomSuffix, getIdAt, sleep } from '../utils'
 import { RankingFilter } from '../shared/RankingFilter'
 import { MatchType } from '../shared/MatchType'
 
@@ -14,6 +14,7 @@ export interface GetMatchesStatsArguments {
   matchType?: MatchType
   maps?: GameMap[]
   rankingFilter?: RankingFilter
+  playerId?: number
   delayBetweenPageRequests?: number
 }
 
@@ -40,6 +41,14 @@ export const getMatchesStats = (config: HLTVConfig) => async (
     ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
     ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {})
   })
+
+  let baseUrl = 'https://www.hltv.org/stats/matches'
+
+  if (options.playerId) {
+    baseUrl = `https://www.hltv.org/stats/players/matches/${
+      options.playerId
+    }/${generateRandomSuffix()}`
+  }
 
   let page = 0
   let $: HLTVPage

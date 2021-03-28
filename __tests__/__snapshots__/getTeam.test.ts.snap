@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTeam 1`] = `
+Object {
+  "achievements": Array [],
+  "age": undefined,
+  "country": Object {
+    "code": "SE",
+    "name": "Sweden",
+  },
+  "facebook": undefined,
+  "id": 4608,
+  "ign": "frankdude",
+  "image": undefined,
+  "instagram": undefined,
+  "name": "Frank Sjöström",
+  "news": Array [],
+  "statistics": undefined,
+  "team": undefined,
+  "teams": Array [],
+  "twitch": undefined,
+  "twitter": undefined,
+}
+`;
+
+exports[`getTeam 2`] = `
+Object {
+  "achievements": Array [],
+  "age": undefined,
+  "country": Object {
+    "code": "UA",
+    "name": "Ukraine",
+  },
+  "facebook": undefined,
+  "id": 460,
+  "ign": "Alesinho",
+  "image": undefined,
+  "instagram": undefined,
+  "name": "Aleksey Karamyshev",
+  "news": Array [],
+  "statistics": undefined,
+  "team": Object {
+    "id": 3094,
+    "name": "Naruto",
+  },
+  "teams": Array [
+    Object {
+      "id": 3094,
+      "leaveDate": 1614726000000,
+      "name": "Naruto",
+      "startDate": 1614726000000,
+      "trophies": Array [],
+    },
+  ],
+  "twitch": undefined,
+  "twitter": undefined,
+}
+`;
