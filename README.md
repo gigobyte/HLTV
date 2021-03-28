@@ -93,11 +93,11 @@ HLTV.getMatch({id: 2306295}).then(res => {
 
 Parses all matches from the `hltv.org/matches/` page (1 request)
 
-|  Option   |         Type         | Default Value |                          Description                           |
-| :-------: | :------------------: | :-----------: | :------------------------------------------------------------: |
-|  eventId  |       number?        |       -       |                  Filter matches by event ID.                   |
+|  Option   |                                              Type                                              | Default Value |                          Description                           |
+| :-------: | :--------------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
+|  eventId  |                                            number?                                             |       -       |                  Filter matches by event ID.                   |
 | eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
-|  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?   |       -       | Filter matches by pre-set categories. Overrides other filters. |
+|  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?  |       -       | Filter matches by pre-set categories. Overrides other filters. |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -111,14 +111,14 @@ HLTV.getMatches().then((res) => {
 
 Parses all matches from the `hltv.org/stats/matches` page (1 request per page of results)
 
-|          Option          |                                           Type                                            | Default Value |                Description                 |
-| :----------------------: | :---------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
-|        startDate         |                                          string?                                          |       -       |                     -                      |
-|         endDate          |                                          string?                                          |       -       |                     -                      |
+|          Option          |                                            Type                                            | Default Value |                Description                 |
+| :----------------------: | :----------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        startDate         |                                          string?                                           |       -       |                     -                      |
+|         endDate          |                                          string?                                           |       -       |                     -                      |
 |        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
-|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |                     -                      |
+|           maps           |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |                     -                      |
 |      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
-| delayBetweenPageRequests |                                          number?                                          |       0       | Used to prevent CloudFlare throttling (ms) |
+| delayBetweenPageRequests |                                          number?                                           |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
@@ -265,16 +265,16 @@ HLTV.getTeamByName({name: "BIG"}).then(res => {
 
 Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `currentRosterOnly` is true)
 
-|      Option       |   Type   | Default value |                Description                 |
-| :---------------: | :------: | :-----------: | :----------------------------------------: |
-|        id         |  number  |       -       |                The team id                 |
-| currentRosterOnly | boolean? |     false     | Return stats about the current roster only |
-|     startDate     | string?  |       -       |                     -                      |
-|      endDate      | string?  |       -       |                     -                      |
-|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
-| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
-|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
-|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
+|      Option       |                                            Type                                            | Default value |                Description                 |
+| :---------------: | :----------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        id         |                                           number                                           |       -       |                The team id                 |
+| currentRosterOnly |                                          boolean?                                          |     false     | Return stats about the current roster only |
+|     startDate     |                                          string?                                           |       -       |                     -                      |
+|      endDate      |                                          string?                                           |       -       |                     -                      |
+|     matchType     |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
+|   rankingFilter   | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
+|       maps        |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |                     -                      |
+|      bestOfX      |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
 
 ```javascript
 HLTV.getTeamStats({id: 6137}).then(res => {
@@ -324,14 +324,14 @@ HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
 
 Parses the info from `hltv.org/stats/players/*` (3 requests)
 
-|    Option     |                                           Type                                            | Default value | Description |
-| :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
-|      id       |                                          number                                           |       -       |      -      |
-|   startDate   |                                          string                                           |       -       |      -      |
-|    endDate    |                                          string                                           |       -       |      -      |
+|    Option     |                                            Type                                            | Default value | Description |
+| :-----------: | :----------------------------------------------------------------------------------------: | :-----------: | :---------: |
+|      id       |                                           number                                           |       -       |      -      |
+|   startDate   |                                           string                                           |       -       |      -      |
+|    endDate    |                                           string                                           |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
-|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
+|     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
@@ -348,15 +348,15 @@ HLTV.getPlayerStats({id: 7998}).then(res => {
 
 Parses the info from `hltv.org/stats/players` page (1 request)
 
-|    Option     |                                           Type                                            | Default value | Description |
-| :-----------: | :---------------------------------------------------------------------------------------: | :-----------: | :---------: |
-|   startDate   |                                          string?                                          |       -       |      -      |
-|    endDate    |                                          string?                                          |       -       |      -      |
+|    Option     |                                            Type                                            | Default value | Description |
+| :-----------: | :----------------------------------------------------------------------------------------: | :-----------: | :---------: |
+|   startDate   |                                          string?                                           |       -       |      -      |
+|    endDate    |                                          string?                                           |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
-|     maps      |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?        |       -       |      -      |
-|  minMapCount  |                                          number?                                          |       -       |      -      |
-|    country    |                                         string[]                                          |       -       |      -      |
+|     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
+|  minMapCount  |                                          number?                                           |       -       |      -      |
+|    country    |                                          string[]                                          |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
@@ -374,13 +374,13 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 Parses the info from the `hltv.org/events` page (1 request)
 
-|       Option       |    Type    | Default value |                     Description                     |
-| :----------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|       Option       |                                        Type                                        | Default value |                     Description                     |
+| :----------------: | :--------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------: |
 |     eventType      | [EventType](https://github.com/gigobyte/HLTV/blob/master/src/shared/EventType.ts)? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
-|    prizePoolMin    |  number?   |       -       |              Minimum prize pool (USD$)              |
-|    prizePoolMax    |  number?   |       -       |              Maximum prize pool (USD$)              |
-|  attendingTeamIds  | number[]?  |       -       |                          -                          |
-| attendingPlayerIds | number[]?  |       -       |                          -                          |
+|    prizePoolMin    |                                      number?                                       |       -       |              Minimum prize pool (USD$)              |
+|    prizePoolMax    |                                      number?                                       |       -       |              Maximum prize pool (USD$)              |
+|  attendingTeamIds  |                                     number[]?                                      |       -       |                          -                          |
+| attendingPlayerIds |                                     number[]?                                      |       -       |                          -                          |
 
 ```javascript
 HLTV.getEvents().then(res => {
@@ -432,16 +432,16 @@ HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
 
 Parses the info from the `hltv.org/events/archive` page (1 request per page of results)
 
-|          Option          |    Type    | Default value |                     Description                     |
-| :----------------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|          Option          |                                        Type                                        | Default value |                     Description                     |
+| :----------------------: | :--------------------------------------------------------------------------------: | :-----------: | :-------------------------------------------------: |
 |        eventType         | [EventType](https://github.com/gigobyte/HLTV/blob/master/src/shared/EventType.ts)? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
-|        startDate         |  string?   |       -       |                          -                          |
-|         endDate          |  string?   |       -       |                          -                          |
-|       prizePoolMin       |  number?   |       -       |              Minimum prize pool (USD$)              |
-|       prizePoolMax       |  number?   |       -       |              Maximum prize pool (USD$)              |
-|     attendingTeamIds     | number[]?  |       -       |                          -                          |
-|    attendingPlayerIds    | number[]?  |       -       |                          -                          |
-| delayBetweenPageRequests |  number?   |       0       |     Used to prevent CloudFlare throttling (ms)      |
+|        startDate         |                                      string?                                       |       -       |                          -                          |
+|         endDate          |                                      string?                                       |       -       |                          -                          |
+|       prizePoolMin       |                                      number?                                       |       -       |              Minimum prize pool (USD$)              |
+|       prizePoolMax       |                                      number?                                       |       -       |              Maximum prize pool (USD$)              |
+|     attendingTeamIds     |                                     number[]?                                      |       -       |                          -                          |
+|    attendingPlayerIds    |                                     number[]?                                      |       -       |                          -                          |
+| delayBetweenPageRequests |                                      number?                                       |       0       |     Used to prevent CloudFlare throttling (ms)      |
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
