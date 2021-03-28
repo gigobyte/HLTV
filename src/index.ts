@@ -18,6 +18,7 @@ import { getTeam } from './endpoints/getTeam'
 import { getTeamByName } from './endpoints/getTeamByName'
 import { getTeamRanking } from './endpoints/getTeamRanking'
 import { getTeamStats } from './endpoints/getTeamStats'
+import { getPastEvents } from './endpoints/getPastEvents'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -38,6 +39,7 @@ export class Hltv {
   getMatches = getMatches(this.config as HLTVConfig)
   getEvent = getEvent(this.config as HLTVConfig)
   getEvents = getEvents(this.config as HLTVConfig)
+  getPastEvents = getPastEvents(this.config as HLTVConfig)
   getEventByName = getEventByName(this.config as HLTVConfig)
   getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
   getMatchStats = getMatchStats(this.config as HLTVConfig)
@@ -97,8 +99,7 @@ export type {
   FullEventTeam
 } from './endpoints/getEvent'
 
-export { EventType } from './endpoints/getEvents'
-export type { EventPreview } from './endpoints/getEvents'
+export type { EventPreview, GetEventsArguments } from './endpoints/getEvents'
 
 export type { FullMatchStats } from './endpoints/getMatchStats'
 
@@ -134,6 +135,8 @@ export type { FullTeam, FullTeamPlayer } from './endpoints/getTeam'
 
 export type { TeamRanking, GetTeamArguments } from './endpoints/getTeamRanking'
 
+export type { GetPastEventsArguments } from './endpoints/getPastEvents'
+
 export { GameMap } from './shared/GameMap'
 export { MatchFormat } from './shared/MatchFormat'
 export { RankingFilter } from './shared/RankingFilter'
@@ -144,3 +147,4 @@ export type { Country } from './shared/Country'
 export type { Event } from './shared/Event'
 export type { Player } from './shared/Player'
 export type { Team } from './shared/Team'
+export type { EventType } from './shared/EventType'

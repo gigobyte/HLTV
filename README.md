@@ -32,6 +32,7 @@ Table of contents
   - [getEvents](#getevents)
   - [getEvent](#getevent)
   - [getEventByName](#geteventbyname)
+  - [getPastEvents](#getpastevents)
   - [connectToScorebot](#connecttoscorebot)
   - [TEAM_PLACEHOLDER_IMAGE](#teamplaceholderimage)
   - [PLAYER_PLACEHOLDER_IMAGE](#playerplaceholderimage)
@@ -369,11 +370,13 @@ HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res
 
 Parses the info from the `hltv.org/events` page (1 request)
 
-|    Option    |    Type    | Default value |                     Description                     |
-| :----------: | :--------: | :-----------: | :-------------------------------------------------: |
-|  eventType   | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
-| prizePoolMin |  number?   |       -       |              Minimum prize pool (USD$)              |
-| prizePoolMax |  number?   |       -       |              Maximum prize pool (USD$)              |
+|       Option       |    Type    | Default value |                     Description                     |
+| :----------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|     eventType      | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|    prizePoolMin    |  number?   |       -       |              Minimum prize pool (USD$)              |
+|    prizePoolMax    |  number?   |       -       |              Maximum prize pool (USD$)              |
+|  attendingTeamIds  | number[]?  |       -       |                          -                          |
+| attendingPlayerIds | number[]?  |       -       |                          -                          |
 
 ```javascript
 HLTV.getEvents().then(res => {
@@ -382,24 +385,6 @@ HLTV.getEvents().then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/EventResult.ts)**
-
----
-
-#### getOngoingEvents
-
-Parses the info from the `hltv.org/events` page (1 request)
-
-| Option | Type | Default value | Description |
-| :----: | :--: | :-----------: | :---------: |
-|   -    |  -   |       -       |      -      |
-
-```javascript
-HLTV.getOngoingEvents().then(res => {
-    ...
-})
-```
-
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/OngoingEventResult.ts)**
 
 ---
 
@@ -436,6 +421,29 @@ HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
 ```
 
 **[See getEvent schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullEvent.ts)**
+
+---
+
+#### getPastEvents
+
+Parses the info from the `hltv.org/events/archive` page (1 request per page of results)
+
+|          Option          |    Type    | Default value |                     Description                     |
+| :----------------------: | :--------: | :-----------: | :-------------------------------------------------: |
+|        eventType         | EventType? |       -       | Event type e.g. EventSize.Major, EventSize.LocalLAN |
+|        startDate         |  string?   |       -       |                          -                          |
+|         endDate          |  string?   |       -       |                          -                          |
+|       prizePoolMin       |  number?   |       -       |              Minimum prize pool (USD$)              |
+|       prizePoolMax       |  number?   |       -       |              Maximum prize pool (USD$)              |
+|     attendingTeamIds     | number[]?  |       -       |                          -                          |
+|    attendingPlayerIds    | number[]?  |       -       |                          -                          |
+| delayBetweenPageRequests |  number?   |       0       |     Used to prevent CloudFlare throttling (ms)      |
+
+```javascript
+HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res => {
+    ...
+})
+```
 
 ---
 

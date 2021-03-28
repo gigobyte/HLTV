@@ -2,6 +2,7 @@ import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
 import { Country } from '../shared/Country'
+import { EventType } from '../shared/EventType'
 import { fetchPage, getIdAt, parseNumber } from '../utils'
 
 export interface EventPreview {
@@ -14,28 +15,25 @@ export interface EventPreview {
   location?: Country
 }
 
-export enum EventType {
-  Major = 'MAJOR',
-  InternationalLAN = 'INTLLAN',
-  RegionalLAN = 'REGIONALLAN',
-  LocalLAN = 'LOCALLAN',
-  Online = 'ONLINE',
-  Other = 'OTHER'
-}
-
-export const getEvents = (config: HLTVConfig) => async ({
-  eventType,
-  prizePoolMin,
-  prizePoolMax
-}: {
+export interface GetEventsArguments {
   eventType?: EventType
   prizePoolMin?: number
   prizePoolMax?: number
-} = {}): Promise<EventPreview[]> => {
+  attendingTeamIds?: number[]
+  attendingPlayerIds?: number[]
+}
+
+export const getEvents = (config: HLTVConfig) => async (
+  options: GetEventsArguments = {}
+): Promise<EventPreview[]> => {
   const query = stringify({
-    ...(eventType ? { eventType } : {}),
-    ...(prizePoolMin ? { prizeMin: prizePoolMin } : {}),
-    ...(prizePoolMax ? { prizeMax: prizePoolMax } : {})
+    ...(options.eventType ? { eventType: options.eventType } : {}),
+    ...(options.prizePoolMin ? { prizeMin: options.prizePoolMin } : {}),
+    ...(options.prizePoolMax ? { prizeMax: options.prizePoolMax } : {}),
+    ...(options.attendingTeamIds ? { team: options.attendingTeamIds } : {}),
+    ...(options.attendingPlayerIds
+      ? { player: options.attendingPlayerIds }
+      : {})
   })
 
   const $ = HLTVScraper(
@@ -132,7 +130,7 @@ export const getEvents = (config: HLTVConfig) => async ({
         .numFromAttr('data-unix')!
 
       const location = {
-        name: el.find('.smallCountry .col-desc').text(),
+        name: el.find('.smallCountry .col-desc').text().replace(' | ', ''),
         code: el
           .find('.smallCountry img.flag')
           .attr('src')

@@ -4,7 +4,7 @@ import { HLTVPage, HLTVScraper } from '../scraper'
 import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
-import { fetchPage, generateRandomSuffix, getIdAt, sleep } from '../utils'
+import { fetchPage, getIdAt, sleep } from '../utils'
 import { RankingFilter } from '../shared/RankingFilter'
 import { MatchType } from '../shared/MatchType'
 
@@ -32,7 +32,7 @@ export interface MatchStatsPreview {
 
 export const getMatchesStats = (config: HLTVConfig) => async (
   options: GetMatchesStatsArguments
-): Promise<any> => {
+): Promise<MatchStatsPreview[]> => {
   const query = stringify({
     ...(options.startDate ? { startDate: options.startDate } : {}),
     ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -108,7 +108,7 @@ export const getMatchesStats = (config: HLTVConfig) => async (
           return { mapStatsId, date, map, team1, team2, event, result }
         })
     )
-  } while ($('.matches-table tbody tr').length !== 0)
+  } while ($('.matches-table tbody tr').exists())
 
   return matches
 }
