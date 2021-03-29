@@ -38,7 +38,9 @@ export const getTeamRanking = (config: HLTVConfig) => async ({
 }: GetTeamArguments = {}): Promise<TeamRanking[]> => {
   let $ = HLTVScraper(
     await fetchPage(
-      `https://www.hltv.org/ranking/teams/${year}/${month}/${day}`,
+      `https://www.hltv.org/ranking/teams/${year ?? ''}/${month ?? ''}/${
+        day ?? ''
+      }`,
       config.loadPage
     )
   )
