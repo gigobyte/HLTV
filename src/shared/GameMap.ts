@@ -36,7 +36,7 @@ export const fromMapSlug = (slug: string): GameMap => {
       return GameMap.Nuke
     case 'tcn':
       return GameMap.Tuscan
-    case 'vertigo':
+    case 'vtg':
       return GameMap.Vertigo
     case '-':
       return GameMap.Default
