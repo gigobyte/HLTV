@@ -76,13 +76,17 @@ export const getTeamStats = (config: HLTVConfig) => async (
     )
   )
 
+  const name = $('.context-item-name').last().text()
+  const currentTeam = { id: options.id, name }
+
   const currentLineup = getPlayersByContainer(
     getContainerByText($, 'Current lineup')
   )
 
-  const currentRosterQuery = `lineup=${currentLineup
-    .map((x) => x.id)
-    .join('&lineup=')}&minLineupMatch=0`
+  const currentRosterQuery = stringify({
+    lineup: currentLineup.map((x) => x.id!),
+    minLineupMatch: 0
+  })
 
   if (options.currentRosterOnly) {
     $ = HLTVScraper(
@@ -144,9 +148,6 @@ export const getTeamStats = (config: HLTVConfig) => async (
     draws,
     losses
   }
-
-  const name = $('.context-item-name').last().text()
-  const currentTeam = { id: options.id, name }
 
   const matches = m$('.stats-table tbody tr')
     .toArray()
