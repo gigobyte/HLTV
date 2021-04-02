@@ -459,21 +459,21 @@ HLTV.getPastEvents({ startDate: '2019-01-01', endDate: '2019-01-10' }).then(res 
 
 Parses the info from the `hltv.org/results` page (1 request per page of results)
 
-|          Option          |                                            Type                                            | Default value |                Description                 |
-| :----------------------: | :----------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
-|        startDate         |                                          string?                                           |       -       |                     -                      |
-|         endDate          |                                          string?                                           |       -       |                     -                      |
-|        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
-|      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
-|           maps           |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |                     -                      |
-|        countries         |                                          string[]                                          |       -       |                     -                      |
-|         bestOfX          |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
-|      contentFilters      | [ContentFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
-|         eventIds         |                                         number[]?                                          |       -       |                     -                      |
-|        playerIds         |                                         number[]?                                          |       -       |                     -                      |
-|         teamIds          |                                         number[]?                                          |       -       |                     -                      |
-|           game           |    [GameType](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?    |       -       |                     -                      |
-| delayBetweenPageRequests |                                          number?                                           |       -       | Used to prevent CloudFlare throttling (ms) |
+|          Option          |                                              Type                                               | Default value |                Description                 |
+| :----------------------: | :---------------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        startDate         |                                             string?                                             |       -       |                     -                      |
+|         endDate          |                                             string?                                             |       -       |                     -                      |
+|        matchType         | [ResultMatchType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L9)? |       -       |                     -                      |
+|      rankingFilter       |   [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)?    |       -       |                     -                      |
+|           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?         |       -       |                     -                      |
+|        countries         |                                            string[]                                             |       -       |                     -                      |
+|         bestOfX          |    [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?     |       -       |                     -                      |
+|      contentFilters      | [ContentFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L14)?  |       -       |                     -                      |
+|         eventIds         |                                            number[]?                                            |       -       |                     -                      |
+|        playerIds         |                                            number[]?                                            |       -       |                     -                      |
+|         teamIds          |                                            number[]?                                            |       -       |                     -                      |
+|           game           |    [GameType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L21)?    |       -       |                     -                      |
+| delayBetweenPageRequests |                                             number?                                             |       -       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
