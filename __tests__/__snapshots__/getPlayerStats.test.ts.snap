@@ -2820,7 +2820,7 @@ Object {
       "date": 1590847200000,
       "deaths": 14,
       "kills": 12,
-      "map": "default",
+      "map": "de_vertigo",
       "mapStatsId": 103377,
       "rating": 0.93,
       "team1": Object {
@@ -5364,7 +5364,7 @@ Object {
       "date": 1558628700000,
       "deaths": 18,
       "kills": 18,
-      "map": "default",
+      "map": "de_vertigo",
       "mapStatsId": 86392,
       "rating": 0.99,
       "team1": Object {
