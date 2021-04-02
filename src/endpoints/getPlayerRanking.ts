@@ -26,7 +26,7 @@ export interface GetPlayerRankingOptions {
   rankingFilter?: RankingFilter
   maps?: GameMap[]
   minMapCount?: number
-  country?: string[]
+  countries?: string[]
   bestOfX?: BestOfFilter
 }
 
@@ -40,7 +40,7 @@ export const getPlayerRanking = (config: HLTVConfig) => async (
     ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {}),
     ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
     ...(options.minMapCount ? { minMapCount: options.minMapCount } : {}),
-    ...(options.country ? { country: options.country } : {}),
+    ...(options.countries ? { country: options.countries } : {}),
     ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
   })
 

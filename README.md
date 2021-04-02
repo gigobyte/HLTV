@@ -32,6 +32,7 @@ Table of contents
   - [getEvent](#getevent)
   - [getEventByName](#geteventbyname)
   - [getPastEvents](#getpastevents)
+  - [getResults](#getresults)
   - [connectToScorebot](#connecttoscorebot)
   - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
   - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
@@ -80,7 +81,7 @@ Parses most information from a match page (1 request)
 |   id   | number |       -       | The match id |
 
 ```javascript
-HLTV.getMatch({id: 2306295}).then(res => {
+HLTV.getMatch({ id: 2306295 }).then(res => {
     ...
 })
 ```
@@ -122,7 +123,7 @@ Parses all matches from the `hltv.org/stats/matches` page (1 request per page of
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
-HLTV.getMatchesStats({startDate: '2017-07-10', endDate: '2017-07-18'}).then((res) => {
+HLTV.getMatchesStats({ startDate: '2017-07-10', endDate: '2017-07-18' }).then((res) => {
   ...
 })
 ```
@@ -140,7 +141,7 @@ Parses info from the `hltv.org/stats/matches/*/*` all maps stats page (1 request
 |   id   | number |       -       |      -      |
 
 ```javascript
-HLTV.getMatchStats({id: 62979}).then((res) => {
+HLTV.getMatchStats({ id: 62979 }).then((res) => {
   ...
 })
 ```
@@ -158,7 +159,7 @@ Parses info from the `hltv.org/stats/matches/mapstatsid/*/*` single map stats pa
 |   id   | number |       -       |      -      |
 
 ```javascript
-HLTV.getMatchMapStats({id: 49968}).then((res) => {
+HLTV.getMatchMapStats({ id: 49968 }).then((res) => {
   ...
 })
 ```
@@ -215,8 +216,8 @@ Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
 HLTV.getTeamRanking()
-HLTV.getTeamRanking({country: 'Thailand'})
-HLTV.getTeamRanking({year: 2017, month: 'may', day: 29}).then((res) => {
+HLTV.getTeamRanking({ country: 'Thailand' })
+HLTV.getTeamRanking({ year: 2017, month: 'may', day: 29 }).then((res) => {
   ...
 })
 ```
@@ -234,7 +235,7 @@ Parses the info from the `hltv.org/team/` page (1 request)
 |   id   | number |       -       | The team id |
 
 ```javascript
-HLTV.getTeam({id: 6137}).then(res => {
+HLTV.getTeam({ id: 6137 }).then(res => {
     ...
 })
 ```
@@ -252,7 +253,7 @@ Same as getTeam but accepts a team name instead of ID. (2 requests)
 |  name  | string |       -       | The team name |
 
 ```javascript
-HLTV.getTeamByName({name: "BIG"}).then(res => {
+HLTV.getTeamByName({ name: "BIG" }).then(res => {
     ...
 })
 ```
@@ -277,7 +278,7 @@ Parses the info from the `hltv.org/stats/teams/*` page (4 requests + 1 more if `
 |      bestOfX      |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
 
 ```javascript
-HLTV.getTeamStats({id: 6137}).then(res => {
+HLTV.getTeamStats({ id: 6137 }).then(res => {
     ...
 })
 ```
@@ -295,7 +296,7 @@ Parses the info from the `hltv.org/player/*` page (1 request)
 |   id   | number |       -       | The player id |
 
 ```javascript
-HLTV.getPlayer({id: 6137}).then(res => {
+HLTV.getPlayer({ id: 6137 }).then(res => {
     ...
 })
 ```
@@ -313,7 +314,7 @@ Same as getPlayer but accepts a player name instead of ID. (2 requests)
 |  name  | string |       -       | The player name |
 
 ```javascript
-HLTV.getPlayerByName({name: "chrisJ"}).then(res => {
+HLTV.getPlayerByName({ name: "chrisJ" }).then(res => {
     ...
 })
 ```
@@ -335,7 +336,7 @@ Parses the info from `hltv.org/stats/players/*` (3 requests)
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
-HLTV.getPlayerStats({id: 7998}).then(res => {
+HLTV.getPlayerStats({ id: 7998 }).then(res => {
     ...
 })
 ```
@@ -356,12 +357,12 @@ Parses the info from `hltv.org/stats/players` page (1 request)
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
 |     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
 |  minMapCount  |                                          number?                                           |       -       |      -      |
-|    country    |                                          string[]                                          |       -       |      -      |
+|   countries   |                                          string[]                                          |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
 
 ```javascript
 // If you don't provide a filter the latest ranking will be parsed
-HLTV.getPlayerRanking({startDate: '2018-07-01', endDate: '2018-10-01'}).then(res => {
+HLTV.getPlayerRanking({ startDate: '2018-07-01', endDate: '2018-10-01' }).then(res => {
     ...
 })
 ```
@@ -401,7 +402,7 @@ Parses the info from the `hltv.org/event/` page (1 request)
 |   id   | number |       -       | The event id |
 
 ```javascript
-HLTV.getEvent({id: 3389}).then(res => {
+HLTV.getEvent({ id: 3389 }).then(res => {
     ...
 })
 ```
@@ -419,7 +420,7 @@ Same as getEvent but accepts a event name instead of ID. (2 requests)
 |  name  | string |       -       | The event name |
 
 ```javascript
-HLTV.getEventByName({name: "IEM Katowice 2019"}).then(res => {
+HLTV.getEventByName({ name: "IEM Katowice 2019" }).then(res => {
     ...
 })
 ```
@@ -445,7 +446,7 @@ Parses the info from the `hltv.org/events/archive` page (1 request per page of r
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
-HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res => {
+HLTV.getPastEvents({ startDate: '2019-01-01', endDate: '2019-01-10' }).then(res => {
     ...
 })
 ```
@@ -453,6 +454,35 @@ HLTV.getPastEvents({startDate: '2019-01-01', endDate: '2019-01-10'}).then(res =>
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
 
 ---
+
+#### getResults
+
+Parses the info from the `hltv.org/results` page (1 request per page of results)
+
+|          Option          |                                            Type                                            | Default value |                Description                 |
+| :----------------------: | :----------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        startDate         |                                          string?                                           |       -       |                     -                      |
+|         endDate          |                                          string?                                           |       -       |                     -                      |
+|        matchType         |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
+|      rankingFilter       | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
+|           maps           |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |                     -                      |
+|        countries         |                                          string[]                                          |       -       |                     -                      |
+|         bestOfX          |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
+|      contentFilters      | [ContentFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
+|         eventIds         |                                         number[]?                                          |       -       |                     -                      |
+|        playerIds         |                                         number[]?                                          |       -       |                     -                      |
+|         teamIds          |                                         number[]?                                          |       -       |                     -                      |
+|           game           |    [GameType](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?    |       -       |                     -                      |
+| delayBetweenPageRequests |                                          number?                                           |       -       | Used to prevent CloudFlare throttling (ms) |
+
+```javascript
+// ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
+HLTV.getResults({ eventIds: [1617], bestOfX: [BestOfFilter.BO3] }).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
 
 #### connectToScorebot
 
@@ -468,11 +498,15 @@ Presents an interface to receive data when the HLTV scorebot updates
 |    onDisconnect    | function? |       -       |                     Callback that is called when the scorebot disconnects                      |
 
 ```javascript
-HLTV.connectToScorebot({id: 2311609, onScoreboardUpdate: (data, done) => {
+HLTV.connectToScorebot({
+  id: 2311609,
+  onScoreboardUpdate: (data, done) => {
     // if you call done() the socket connection will close.
-}, onLogUpdate: (data, done) => {
-    ...
-}})
+  },
+  onLogUpdate: (data, done) => {
+      ...
+  }
+})
 
 ```
 

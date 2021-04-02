@@ -20,3 +20,4 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getTeamStats({ id: 10566 }))
 // log(HLTV.getPastEvents({ startDate: '2019-3-1', endDate: '2019-3-29' }))
 // log(HLTV.getTeamRanking())
+// log(HLTV.getResults({ eventIds: [1617] }))

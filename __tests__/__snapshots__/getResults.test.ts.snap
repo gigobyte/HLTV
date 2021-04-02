@@ -1,0 +1,873 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getTeamStats 1`] = `
+Array [
+  Object {
+    "date": 1446405696000,
+    "format": "bo3",
+    "id": 2298989,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "name": "Envy",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1446393472000,
+    "format": "bo3",
+    "id": 2298988,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1446384767000,
+    "format": "bo3",
+    "id": 2298987,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "name": "Envy",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+  },
+  Object {
+    "date": 1446324175000,
+    "format": "bo3",
+    "id": 2298974,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/chtJ6EB33l3skLz3TELR4z.svg?ixlib=java-2.1.0&s=2919627b3f897eeab102c0a31ba1af6a",
+      "name": "Luminosity",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1446312489000,
+    "format": "bo3",
+    "id": 2298973,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 4,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
+      "name": "TSM",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "name": "NIP",
+    },
+  },
+  Object {
+    "date": 1446302961000,
+    "format": "bo3",
+    "id": 2298972,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+  },
+  Object {
+    "date": 1446292101000,
+    "format": "bo3",
+    "id": 2298971,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 4,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "name": "Envy",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+  },
+  Object {
+    "date": 1446241945000,
+    "format": "bo3",
+    "id": 2298963,
+    "result": Object {
+      "team1": 1,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
+      "name": "CLG",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1446228635000,
+    "format": "bo3",
+    "id": 2298962,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/xem4ejU2wb6vVi3LCMWLNe.svg?ixlib=java-2.1.0&s=ebda1ce5f5bdb0a5cd6acb8ecb3bc28a",
+      "name": "Titan",
+    },
+  },
+  Object {
+    "date": 1446219860000,
+    "format": "bo3",
+    "id": 2298961,
+    "result": Object {
+      "team1": 1,
+      "team2": 2,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
+      "name": "mousesports",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+  },
+  Object {
+    "date": 1446201869000,
+    "format": "bo3",
+    "id": 2298960,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
+      "name": "Cloud9",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+  },
+  Object {
+    "date": 1446156867000,
+    "format": "bo1",
+    "id": 2298956,
+    "map": "de_mirage",
+    "result": Object {
+      "team1": 16,
+      "team2": 9,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "name": "Envy",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1446151631000,
+    "format": "bo1",
+    "id": 2298954,
+    "map": "de_train",
+    "result": Object {
+      "team1": 16,
+      "team2": 7,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/xem4ejU2wb6vVi3LCMWLNe.svg?ixlib=java-2.1.0&s=ebda1ce5f5bdb0a5cd6acb8ecb3bc28a",
+      "name": "Titan",
+    },
+  },
+  Object {
+    "date": 1446146314000,
+    "format": "bo1",
+    "id": 2298950,
+    "map": "de_dust2",
+    "result": Object {
+      "team1": 16,
+      "team2": 6,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
+      "name": "TSM",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+  },
+  Object {
+    "date": 1446140942000,
+    "format": "bo1",
+    "id": 2298948,
+    "map": "de_inferno",
+    "result": Object {
+      "team1": 13,
+      "team2": 16,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/chtJ6EB33l3skLz3TELR4z.svg?ixlib=java-2.1.0&s=2919627b3f897eeab102c0a31ba1af6a",
+      "name": "Luminosity",
+    },
+  },
+  Object {
+    "date": 1446134133000,
+    "format": "bo1",
+    "id": 2298955,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 14,
+      "team2": 16,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/w2EJ4p_IcYGMu0Cs2G4ZUn.png?ixlib=java-2.1.0&w=50&s=747bd21df637f066a412aaad3a30e4c0",
+      "name": "Dignitas",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
+      "name": "CLG",
+    },
+  },
+  Object {
+    "date": 1446127615000,
+    "format": "bo1",
+    "id": 2298953,
+    "map": "de_mirage",
+    "result": Object {
+      "team1": 11,
+      "team2": 16,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+      "name": "Liquid",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "name": "NIP",
+    },
+  },
+  Object {
+    "date": 1446122108000,
+    "format": "bo1",
+    "id": 2298949,
+    "map": "de_overpass",
+    "result": Object {
+      "team1": 8,
+      "team2": 16,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Upn7lSBAXHRFRtmuiQn5Me.svg?ixlib=java-2.1.0&s=82618c94ea7d2de4b4297dd84353d020",
+      "name": "FlipSid3",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
+      "name": "mousesports",
+    },
+  },
+  Object {
+    "date": 1446114805000,
+    "format": "bo1",
+    "id": 2298947,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 13,
+      "team2": 16,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Prx1ZJyiy8Ozg7eX2kt_1p.svg?ixlib=java-2.1.0&s=2612f705217cd5d6fed4e13ed97fd4ac",
+      "name": "Vexed",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
+      "name": "Cloud9",
+    },
+  },
+  Object {
+    "date": 1446063413000,
+    "format": "bo1",
+    "id": 2298930,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 16,
+      "team2": 12,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/M3SCIuW6tSvu0eOuwtqq_g.svg?ixlib=java-2.1.0&s=8d2c3d27d3f19e166f33b7fa443c3589",
+      "name": "CLG",
+    },
+  },
+  Object {
+    "date": 1446058402000,
+    "format": "bo1",
+    "id": 2298929,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 16,
+      "team2": 6,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/caSZsIlWR3MQuSWMCJDj8V.svg?ixlib=java-2.1.0&s=52dab8f2955522087be3c5d43013bea8",
+      "name": "Envy",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/w2EJ4p_IcYGMu0Cs2G4ZUn.png?ixlib=java-2.1.0&w=50&s=747bd21df637f066a412aaad3a30e4c0",
+      "name": "Dignitas",
+    },
+  },
+  Object {
+    "date": 1446053786000,
+    "format": "bo1",
+    "id": 2298928,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 13,
+      "team2": 16,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/xem4ejU2wb6vVi3LCMWLNe.svg?ixlib=java-2.1.0&s=ebda1ce5f5bdb0a5cd6acb8ecb3bc28a",
+      "name": "Titan",
+    },
+  },
+  Object {
+    "date": 1446048415000,
+    "format": "bo1",
+    "id": 2298927,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 19,
+      "team2": 15,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/yZ6Bpuui1rW3jocXQ68XgZ.svg?ixlib=java-2.1.0&s=f39be1d3e7baf30a4e7f0b1216720875",
+      "name": "Virtus.pro",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+      "name": "Liquid",
+    },
+  },
+  Object {
+    "date": 1446042314000,
+    "format": "bo1",
+    "id": 2298926,
+    "map": "de_inferno",
+    "result": Object {
+      "team1": 16,
+      "team2": 8,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
+      "name": "mousesports",
+    },
+  },
+  Object {
+    "date": 1446037456000,
+    "format": "bo1",
+    "id": 2298925,
+    "map": "de_cache",
+    "result": Object {
+      "team1": 16,
+      "team2": 6,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Jnkztxfkp3Y8FQMetCLDGJ.svg?ixlib=java-2.1.0&s=8d267189d93ac9229b2ef200ffcbadca",
+      "name": "TSM",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Upn7lSBAXHRFRtmuiQn5Me.svg?ixlib=java-2.1.0&s=82618c94ea7d2de4b4297dd84353d020",
+      "name": "FlipSid3",
+    },
+  },
+  Object {
+    "date": 1446033367000,
+    "format": "bo1",
+    "id": 2298924,
+    "map": "de_dust2",
+    "result": Object {
+      "team1": 16,
+      "team2": 11,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/chtJ6EB33l3skLz3TELR4z.svg?ixlib=java-2.1.0&s=2919627b3f897eeab102c0a31ba1af6a",
+      "name": "Luminosity",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/bEgST6XoNV4ZdenRKzCQyl.svg?ixlib=java-2.1.0&s=bd9b10a8dfe7b3640103745687389e3c",
+      "name": "Cloud9",
+    },
+  },
+  Object {
+    "date": 1446028304000,
+    "format": "bo1",
+    "id": 2298923,
+    "map": "de_cbble",
+    "result": Object {
+      "team1": 16,
+      "team2": 10,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Prx1ZJyiy8Ozg7eX2kt_1p.svg?ixlib=java-2.1.0&s=2612f705217cd5d6fed4e13ed97fd4ac",
+      "name": "Vexed",
+    },
+  },
+]
+`;
+
+exports[`getTeamStats 2`] = `
+Array [
+  Object {
+    "date": 1585079534000,
+    "format": "bo3",
+    "id": 2340089,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 4,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+  },
+  Object {
+    "date": 1585011400000,
+    "format": "bo3",
+    "id": 2340068,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/0-i_bEjrf3v4eYqaG0Bix7.svg?ixlib=java-2.1.0&s=4eecbec277f018772a9b92c22da1a459",
+      "name": "Complexity",
+    },
+  },
+  Object {
+    "date": 1584826085000,
+    "format": "bo3",
+    "id": 2340074,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/Qnpb1nBNLJUCyf4fRMFbzr.svg?ixlib=java-2.1.0&s=a798b973c429361844ee174e07ae2401",
+      "name": "forZe",
+    },
+  },
+  Object {
+    "date": 1584647940000,
+    "format": "bo3",
+    "id": 2340399,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/yQB6cm3KZ_BcyrgppBQMjc.svg?ixlib=java-2.1.0&s=06825290bfb61c9f8467f5c323f51974",
+      "name": "BIG",
+    },
+  },
+  Object {
+    "date": 1584475854000,
+    "format": "bo3",
+    "id": 2340396,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/BsZIWHm_LTud4G18e6HeF9.svg?ixlib=java-2.1.0&s=beafe2dbc70349bed9f573f223d041ab",
+      "name": "North",
+    },
+  },
+  Object {
+    "date": 1583089505000,
+    "format": "bo5",
+    "id": 2339402,
+    "result": Object {
+      "team1": 0,
+      "team2": 3,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
+      "name": "G2",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1583008399000,
+    "format": "bo3",
+    "id": 2339401,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/9bgXHp-oh1oaXr7F0mTGmd.svg?ixlib=java-2.1.0&s=f567161ab183001be33948b98c4b2067",
+      "name": "Astralis",
+    },
+  },
+  Object {
+    "date": 1582922295000,
+    "format": "bo3",
+    "id": 2339399,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/JMeLLbWKCIEJrmfPaqOz4O.svg?ixlib=java-2.1.0&s=c02caf90234d3a3ebac074c84ba1ea62",
+      "name": "Liquid",
+    },
+  },
+  Object {
+    "date": 1582829037000,
+    "format": "bo3",
+    "id": 2339397,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa",
+      "name": "FaZe",
+    },
+  },
+  Object {
+    "date": 1582731367000,
+    "format": "bo3",
+    "id": 2339390,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 2,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "name": "NIP",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1582664890000,
+    "format": "bo3",
+    "id": 2339383,
+    "result": Object {
+      "team1": 1,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/dLtWEdSV58lIX1amAFggy0.svg?ixlib=java-2.1.0&s=f24d0a7b3ef24ed57184a51d35202b4e",
+      "name": "fnatic",
+    },
+  },
+  Object {
+    "date": 1582567373000,
+    "format": "bo3",
+    "id": 2339375,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/SMhzsxzbkIrgqCOOKGRXlW.svg?ixlib=java-2.1.0&s=e6a9ce0345c7d703e5eaac14307f69aa",
+      "name": "FaZe",
+    },
+  },
+  Object {
+    "date": 1581283729000,
+    "format": "bo3",
+    "id": 2339103,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/R0CzydpyX02BnkAYhy3I89.svg?ixlib=java-2.1.0&s=8c5833d6069ef924fdbb2e220fefea00",
+      "name": "Complexity",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1581269721000,
+    "format": "bo3",
+    "id": 2339102,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb",
+      "name": "Vitality",
+    },
+  },
+  Object {
+    "date": 1581188905000,
+    "format": "bo3",
+    "id": 2339100,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/9bgXHp-oh1oaXr7F0mTGmd.svg?ixlib=java-2.1.0&s=f567161ab183001be33948b98c4b2067",
+      "name": "Astralis",
+    },
+  },
+  Object {
+    "date": 1581098478000,
+    "format": "bo3",
+    "id": 2339098,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb",
+      "name": "Vitality",
+    },
+  },
+  Object {
+    "date": 1581008490000,
+    "format": "bo5",
+    "id": 2339164,
+    "result": Object {
+      "team1": 3,
+      "team2": 1,
+    },
+    "stars": 3,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
+      "name": "mousesports",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1580921752000,
+    "format": "bo3",
+    "id": 2339163,
+    "result": Object {
+      "team1": 2,
+      "team2": 0,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/WQl1L0NmsdhupV8S-fzQvA.svg?ixlib=java-2.1.0&s=7550f0c714f66781c2545e633ea582e2",
+      "name": "GODSENT",
+    },
+  },
+  Object {
+    "date": 1580654790000,
+    "format": "bo3",
+    "id": 2339157,
+    "result": Object {
+      "team1": 0,
+      "team2": 2,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/7b6DouMNGWcqENDx1vw_Ot.png?ixlib=java-2.1.0&w=50&s=5ffc85bfbc0398d0a826590a790a08a6",
+      "name": "OG",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+  },
+  Object {
+    "date": 1580593968000,
+    "format": "bo3",
+    "id": 2339155,
+    "result": Object {
+      "team1": 2,
+      "team2": 1,
+    },
+    "stars": 1,
+    "team1": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",
+      "name": "Natus Vincere",
+    },
+    "team2": Object {
+      "logo": "https://img-cdn.hltv.org/teamlogo/WQl1L0NmsdhupV8S-fzQvA.svg?ixlib=java-2.1.0&s=7550f0c714f66781c2545e633ea582e2",
+      "name": "GODSENT",
+    },
+  },
+]
+`;
