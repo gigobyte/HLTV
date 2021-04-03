@@ -1,10 +1,7 @@
 import HLTV from '../src/'
 import { GameMap } from '../src/shared/GameMap'
 import { BestOfFilter } from '../src/shared/BestOfFilter'
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+import { sleep } from '../src/utils'
 
 test('getMatchStats', async () => {
   await sleep(3000)
@@ -24,4 +21,5 @@ test('getMatchStats', async () => {
       maps: [GameMap.Cobblestone]
     })
   ).toMatchSnapshot()
+  await sleep(3000)
 }, 30000)

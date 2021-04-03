@@ -356,43 +356,49 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
       return map
     }, {} as Record<string, Partial<PlayerStats>>)
 
-  const playerOverviewStats = m$('.stats-table tbody tr')
-    .toArray()
-    .map((el) => {
-      const id = el.find('.st-player a').attrThen('href', getIdAt(3))!
-      const performanceStats = playerPerformanceStats[id]
-      const rating = el.find('.st-rating').numFromText()
+  const getPlayerOverviewStats = (el: HLTVPageElement) => {
+    const id = el.find('.st-player a').attrThen('href', getIdAt(3))!
+    const performanceStats = playerPerformanceStats[id]
+    const rating = el.find('.st-rating').numFromText()
 
-      return {
-        player: {
-          id,
-          name: el.find('.st-player a').text()
-        },
-        kills: el.find('.st-kills').contents().first().numFromText()!,
-        hsKills: Number(
-          el.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')
-        ),
-        assists: el.find('.st-assists').contents().first().numFromText()!,
-        flashAssists: Number(
-          el.find('.st-assists .gtSmartphone-only').text().replace(/\(|\)/g, '')
-        ),
-        deaths: el.find('.st-deaths').numFromText()!,
-        KAST: el
-          .find('.st-kdratio')
-          .textThen((x) => parseNumber(x.replace('%', ''))),
-        killDeathsDifference: el.find('.st-kddiff').numFromText(),
-        ADR: el.find('.st-adr').numFromText(),
-        firstKillsDifference: el.find('.st-fkdiff').numFromText(),
-        ...(el.find('.st-rating .ratingDesc').text() === '2.0'
-          ? { rating2: rating }
-          : { rating1: rating }),
-        ...(performanceStats as any)
-      }
-    })
+    return {
+      player: {
+        id,
+        name: el.find('.st-player a').text()
+      },
+      kills: el.find('.st-kills').contents().first().numFromText()!,
+      hsKills: Number(
+        el.find('.st-kills .gtSmartphone-only').text().replace(/\(|\)/g, '')
+      ),
+      assists: el.find('.st-assists').contents().first().numFromText()!,
+      flashAssists: Number(
+        el.find('.st-assists .gtSmartphone-only').text().replace(/\(|\)/g, '')
+      ),
+      deaths: el.find('.st-deaths').numFromText()!,
+      KAST: el
+        .find('.st-kdratio')
+        .textThen((x) => parseNumber(x.replace('%', ''))),
+      killDeathsDifference: el.find('.st-kddiff').numFromText(),
+      ADR: el.find('.st-adr').numFromText(),
+      firstKillsDifference: el.find('.st-fkdiff').numFromText(),
+      ...(el.find('.st-rating .ratingDesc').text() === '2.0'
+        ? { rating2: rating }
+        : { rating1: rating }),
+      ...(performanceStats as any)
+    }
+  }
 
   return {
-    team1: playerOverviewStats.slice(0, 5),
-    team2: playerOverviewStats.slice(5)
+    team1: m$('.stats-table')
+      .first()
+      .find('tbody tr')
+      .toArray()
+      .map(getPlayerOverviewStats),
+    team2: m$('.stats-table')
+      .last()
+      .find('tbody tr')
+      .toArray()
+      .map(getPlayerOverviewStats)
   }
 }
 

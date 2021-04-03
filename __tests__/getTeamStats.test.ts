@@ -1,8 +1,5 @@
 import HLTV from '../src/'
-
-function sleep(ms: number): Promise<void> {
-  return new Promise((resolve) => setTimeout(resolve, ms))
-}
+import { sleep } from '../src/utils'
 
 const FULL = 9863
 const EMPTY = 9918
@@ -10,5 +7,7 @@ const EMPTY = 9918
 test('getTeamStats', async () => {
   await sleep(3000)
   expect(await HLTV.getTeamStats({ id: FULL })).toMatchSnapshot()
+  await sleep(3000)
   expect(await HLTV.getTeamStats({ id: EMPTY })).toMatchSnapshot()
+  await sleep(3000)
 }, 30000)

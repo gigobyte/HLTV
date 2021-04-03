@@ -154,7 +154,7 @@ Object {
     Object {
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "place": "5-8th",
     },
@@ -3000,7 +3000,7 @@ Object {
       "date": 1599598800000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_dust2",
       "mapStatsId": 108492,
@@ -3021,7 +3021,7 @@ Object {
       "date": 1599598800000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_mirage",
       "mapStatsId": 108489,
@@ -3042,7 +3042,7 @@ Object {
       "date": 1599598800000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_inferno",
       "mapStatsId": 108484,
@@ -3105,7 +3105,7 @@ Object {
       "date": 1599080400000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_mirage",
       "mapStatsId": 108177,
@@ -3126,7 +3126,7 @@ Object {
       "date": 1599080400000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_inferno",
       "mapStatsId": 108176,
@@ -3147,7 +3147,7 @@ Object {
       "date": 1599080400000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_vertigo",
       "mapStatsId": 108172,
@@ -3168,7 +3168,7 @@ Object {
       "date": 1599080400000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_overpass",
       "mapStatsId": 108164,
@@ -3189,7 +3189,7 @@ Object {
       "date": 1598994000000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_dust2",
       "mapStatsId": 108118,
@@ -3210,7 +3210,7 @@ Object {
       "date": 1598994000000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_train",
       "mapStatsId": 108112,
@@ -3231,7 +3231,7 @@ Object {
       "date": 1598994000000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_mirage",
       "mapStatsId": 108107,
@@ -3252,7 +3252,7 @@ Object {
       "date": 1598994000000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_vertigo",
       "mapStatsId": 108099,
@@ -3273,7 +3273,7 @@ Object {
       "date": 1598994000000,
       "event": Object {
         "id": 5511,
-        "name": "Vie.gg Legend Series",
+        "name": "Vie.gg Legend Series 2020",
       },
       "map": "de_train",
       "mapStatsId": 108095,
