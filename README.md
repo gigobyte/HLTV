@@ -451,7 +451,7 @@ HLTV.getPastEvents({ startDate: '2019-01-01', endDate: '2019-01-10' }).then(res 
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getPastEvents.ts#L8)**
 
 ---
 
