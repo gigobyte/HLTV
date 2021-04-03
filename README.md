@@ -86,7 +86,7 @@ HLTV.getMatch({ id: 2306295 }).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatch.ts#L71)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatch.ts#L79)**
 
 ---
 
