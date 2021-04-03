@@ -13,7 +13,7 @@ export interface PastEventPreview {
   dateEnd: number
   numberOfTeams: number
   prizePool: string
-  location?: Country
+  location: Country
 }
 
 export interface GetPastEventsArguments {

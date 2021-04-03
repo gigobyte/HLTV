@@ -82,15 +82,20 @@ export const getEvents = (config: HLTVConfig) => async (
         .last()
         .numFromAttr('data-unix')!
 
-      const location = {
-        name: el.find('.big-event-location').text(),
-        code: el
-          .find('.location-top-teams img.flag')
-          .attr('src')
-          .split('/')
-          .pop()!
-          .split('.')[0]
-      }
+      const locationName = el.find('.big-event-location').text()
+
+      const location =
+        locationName !== 'TBA'
+          ? {
+              name: locationName,
+              code: el
+                .find('.location-top-teams img.flag')
+                .attr('src')
+                .split('/')
+                .pop()!
+                .split('.')[0]
+            }
+          : undefined
 
       const prizePool = el
         .find('.additional-info tr')
