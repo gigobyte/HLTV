@@ -1,9 +1,20 @@
 import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVPage, HLTVScraper } from '../scraper'
-import { EventType } from '../shared/EventType'
+import { Country } from '../shared/Country'
+import { EventType, fromText } from '../shared/EventType'
 import { fetchPage, getIdAt, parseNumber, sleep } from '../utils'
-import { EventPreview } from './getEvents'
+
+export interface PastEventPreview {
+  id: number
+  type: EventType
+  name: string
+  dateStart: number
+  dateEnd: number
+  numberOfTeams: number
+  prizePool: string
+  location?: Country
+}
 
 export interface GetPastEventsArguments {
   startDate?: string
@@ -18,7 +29,7 @@ export interface GetPastEventsArguments {
 
 export const getPastEvents = (config: HLTVConfig) => async (
   options: GetPastEventsArguments
-): Promise<EventPreview[]> => {
+): Promise<PastEventPreview[]> => {
   const query = stringify({
     ...(options.startDate ? { startDate: options.startDate } : {}),
     ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -33,7 +44,7 @@ export const getPastEvents = (config: HLTVConfig) => async (
 
   let page = 0
   let $: HLTVPage
-  let events: EventPreview[] = []
+  let events: PastEventPreview[] = []
 
   do {
     await sleep(options.delayBetweenPageRequests ?? 0)
@@ -60,6 +71,10 @@ export const getPastEvents = (config: HLTVConfig) => async (
             .find('.text-ellipsis')
             .text()
 
+          const type = fromText(
+            el.find('.table tr').first().find('td').last().text()
+          )!
+
           const dateStart = el
             .find('td span[data-unix]')
             .first()
@@ -81,13 +96,14 @@ export const getPastEvents = (config: HLTVConfig) => async (
           }
 
           const prizePool = el.find('.prizePoolEllipsis').text()
-          const numberOfTeams = parseNumber(
+          const numberOfTeams = Number(
             el.find('.prizePoolEllipsis').prev().text().replace('+', '')
           )
 
           return {
             id,
             name,
+            type,
             dateStart,
             dateEnd,
             location,

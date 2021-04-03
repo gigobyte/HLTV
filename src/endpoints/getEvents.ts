@@ -13,6 +13,7 @@ export interface EventPreview {
   numberOfTeams?: number
   prizePool?: string
   location?: Country
+  featured: boolean
 }
 
 export interface GetEventsArguments {
@@ -40,6 +41,10 @@ export const getEvents = (config: HLTVConfig) => async (
     await fetchPage(`https://www.hltv.org/events?${query}`, config.loadPage)
   )
 
+  const featuredOngoingEvents = $('.tab-content[id="FEATURED"] a.ongoing-event')
+    .toArray()
+    .map((el) => el.attrThen('href', getIdAt(2)))
+
   const ongoingEvents = $('.tab-content[id="ALL"] a.ongoing-event')
     .toArray()
     .map((el) => {
@@ -56,7 +61,9 @@ export const getEvents = (config: HLTVConfig) => async (
         .last()
         .numFromAttr('data-unix')!
 
-      return { id, name, dateStart, dateEnd }
+      const featured = featuredOngoingEvents.includes(id)
+
+      return { id, name, dateStart, dateEnd, featured }
     })
 
   const bigUpcomingEvents = $('a.big-event')
@@ -103,7 +110,8 @@ export const getEvents = (config: HLTVConfig) => async (
         dateEnd,
         location,
         prizePool,
-        numberOfTeams
+        numberOfTeams,
+        featured: true
       }
     })
 
@@ -151,7 +159,8 @@ export const getEvents = (config: HLTVConfig) => async (
         dateEnd,
         location,
         prizePool,
-        numberOfTeams
+        numberOfTeams,
+        featured: false
       }
     })
 
