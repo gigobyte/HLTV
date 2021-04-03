@@ -7,7 +7,7 @@ export const getEventByName = (config: HLTVConfig) => async ({
   name: string
 }): Promise<FullEvent> => {
   const pageContent = JSON.parse(
-    await config.loadPage!(`https://www.hltv.org/events/search?term=${name}`)
+    await config.loadPage!(`https://www.hltv.org/search?term=${name}`)
   )
   const firstResult = pageContent[0].events[0]
 
