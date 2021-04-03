@@ -482,7 +482,7 @@ HLTV.getResults({ eventIds: [1617], bestOfX: [BestOfFilter.BO3] }).then(res => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getEvents.ts#L8)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L31)**
 
 #### connectToScorebot
 
