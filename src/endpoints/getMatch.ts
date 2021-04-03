@@ -16,6 +16,14 @@ import {
   MatchFormatLocation
 } from '../shared/MatchFormat'
 
+export enum MatchStatus {
+  Live = 'Live',
+  Postponed = 'Postponed',
+  Over = 'Over',
+  Scheduled = 'Scheduled',
+  Deleted = 'Deleted'
+}
+
 export interface Demo {
   name: string
   link: string
@@ -73,6 +81,7 @@ export interface FullMatch {
   statsId?: number
   title?: string
   date?: number
+  significance?: string
   format?: {
     type: MatchFormat
     location?: MatchFormatLocation
@@ -101,14 +110,6 @@ export interface FullMatch {
   playerOfTheMatch?: Player
 }
 
-export enum MatchStatus {
-  Live = 'Live',
-  Postponed = 'Postponed',
-  Over = 'Over',
-  Scheduled = 'Scheduled',
-  Deleted = 'Deleted'
-}
-
 export const getMatch = (config: HLTVConfig) => async ({
   id
 }: {
@@ -124,7 +125,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   const title = $('.timeAndEvent .text').trimText()
   const date = $('.timeAndEvent .date').numFromAttr('data-unix')
   const format = getFormat($)
-
+  const significance = getMatchSignificance($)
   const status = getMatchStatus($)
   const hasScorebot = $('#scoreboardElement').exists()
   const statsId = getStatsId($)
@@ -147,6 +148,7 @@ export const getMatch = (config: HLTVConfig) => async ({
   return {
     id,
     statsId,
+    significance,
     team1,
     team2,
     winnerTeam,
@@ -267,7 +269,12 @@ function getOdds($: HLTVPage): ProviderOdds[] {
       )
 
       return {
-        provider: providerUrl.hostname,
+        provider: providerUrl.hostname
+          .split('.')
+          .reverse()
+          .splice(0, 2)
+          .reverse()
+          .join('.'),
         team1: convertOdds ? percentageToDecimalOdd(oddTeam1) : oddTeam1,
         team2: convertOdds ? percentageToDecimalOdd(oddTeam2) : oddTeam2
       }
@@ -530,12 +537,21 @@ function getFormat($: HLTVPage) {
     return
   }
 
-  const [format, location] = $('.preformatted-text').lines()[0].split(' (')
+  const [format, location] = $('.preformatted-text')
+    .lines()[0]
+    .split(' (')
+    .map((x) => x.trim())
 
   return {
-    type: fromFullMatchFormat(format.trim()),
-    location: location
-      ?.trim()
-      ?.substring(0, location.length - 1) as MatchFormatLocation
+    type: fromFullMatchFormat(format),
+    location: location?.substring(0, location.length - 1) as MatchFormatLocation
   }
+}
+
+function getMatchSignificance($: HLTVPage) {
+  const additionalInfo = $('.preformatted-text').lines()
+  return additionalInfo
+    .find((x) => x.startsWith('*'))
+    ?.slice(1)
+    .trim()
 }
