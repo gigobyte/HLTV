@@ -366,13 +366,16 @@ function getPlayers($: HLTVPage) {
       .find('.flagAlign')
       .toArray()
       .map(getMatchPlayer),
-    team2: $('div.players')
-      .last()
-      .find('tr')
-      .last()
-      .find('.flagAlign')
-      .toArray()
-      .map(getMatchPlayer)
+    team2:
+      $('div.players').length > 1
+        ? $('div.players')
+            .last()
+            .find('tr')
+            .last()
+            .find('.flagAlign')
+            .toArray()
+            .map(getMatchPlayer)
+        : []
   }
 }
 
