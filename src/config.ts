@@ -17,7 +17,15 @@ export const defaultLoadPage = (
       {
         gzip: true,
         agent: httpAgent,
-        headers: { 'User-Agent': randomUseragent.getRandom() }
+        headers: {
+          'User-Agent': randomUseragent.getRandom((ue) =>
+            [
+              '/Browsers - Windows',
+              '/Browsers - Linux',
+              '/Browsers - Mac'
+            ].includes(ue.folder)
+          )
+        }
       },
       (err, __, body) => {
         if (err) {
