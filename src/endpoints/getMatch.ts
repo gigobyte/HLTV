@@ -192,7 +192,9 @@ function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
   return $(`.team${n}-gradient`).exists()
     ? {
         name: $(`.team${n}-gradient .teamName`).text(),
-        id: $(`.team${n}-gradient a`).attrThen('href', getIdAt(2))
+        id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
+          href ? getIdAt(2, href) : undefined
+        )
       }
     : undefined
 }
@@ -367,7 +369,7 @@ function getPlayers($: HLTVPage) {
       .toArray()
       .map(getMatchPlayer),
     team2: $('div.players')
-      .last()
+      .eq(1)
       .find('tr')
       .last()
       .find('.flagAlign')
@@ -379,11 +381,11 @@ function getPlayers($: HLTVPage) {
 function getStreams($: HLTVPage): Stream[] {
   return $('.stream-box-embed')
     .toArray()
-    .filter((el) => el.find('.flagAlign').exists())
+    .filter((el) => el.find('.stream-flag').exists())
     .map((streamEl) => ({
-      name: streamEl.find('.flagAlign').text(),
+      name: streamEl.text(),
       link: streamEl.attr('data-stream-embed'),
-      viewers: streamEl.find('.viewers').numFromText()!
+      viewers: streamEl.find('.viewers.gtSmartphone-only').numFromText()!
     }))
     .concat(
       $('.stream-box.hltv-live').exists()
