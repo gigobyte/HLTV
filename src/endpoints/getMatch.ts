@@ -330,8 +330,8 @@ function getMaps($: HLTVPage): MapResult[] {
       if (team1TotalRounds && team2TotalRounds) {
         const halfsString = mapEl.find('.results-center-half-score').trimText()!
         const halfs = halfsString
-          .substring(1, halfsString.length - 1)
-          .split('; ')
+          .split(' ')
+          .map((x) => x.replace(/\(|\)|;/g, ''))
           .map((half) => ({
             team1Rounds: Number(half.split(':')[0]),
             team2Rounds: Number(half.split(':')[1])
