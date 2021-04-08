@@ -110,7 +110,7 @@ HLTV.getMatches().then((res) => {
 })
 ```
 
-## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L25)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L25)**
 
 #### getMatchesStats
 
