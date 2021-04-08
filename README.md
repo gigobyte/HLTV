@@ -64,8 +64,12 @@ You can create an instance of HLTV with a custom config if you want to.
 
 ```javascript
 const myHLTV = HLTV.createInstance({ loadPage: (url) => axios.get(url) })
-//or
+// or
 const myHLTV = HLTV.createInstance({ loadPage: (url) => fetch(url) })
+// or you can just use the HLTV export directly to use the default settings
+import HLTV from 'hltv'
+
+HLTV.getMatch({ ... })
 ```
 
 **[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/config.ts)**
