@@ -508,7 +508,7 @@ HLTV.getNews({ year: 2020, month: 'may' }).then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeamRanking.ts#L6)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getNews.ts#L7)**
 
 #### connectToScorebot
 
