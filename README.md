@@ -150,7 +150,7 @@ HLTV.getMatchStats({ id: 62979 }).then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchStats.ts#L40)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatchStats.ts#L15)**
 
 ---
 
