@@ -75,14 +75,16 @@ export const getMatches = (config: HLTVConfig) => async ({
           name:
             el.find('.matchTeamName').first().text() ||
             el.find('.team1 .team').text(),
-          id: el.numFromAttr('team1')
+          id: el.numFromAttr('team1'),
+          logo: el.find('.matchTeamLogo').first().attr('src')
         }
 
         team2 = {
           name:
             el.find('.matchTeamName').eq(1).text() ||
             el.find('.team2 .team').text(),
-          id: el.numFromAttr('team2')
+          id: el.numFromAttr('team2'),
+          logo: el.find('.matchTeamLogo').eq(1).attr('src')
         }
       }
 
