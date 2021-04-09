@@ -93,7 +93,7 @@ export const getResults = (config: HLTVConfig) => async (
     page++
 
     results.push(
-      ...$('.result-con')
+      ...$('.allres .result-con')
         .toArray()
         .map((el) => {
           const id = el.children().first().attrThen('href', getIdAt(2))!

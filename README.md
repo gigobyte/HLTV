@@ -33,6 +33,7 @@ Table of contents
   - [getEventByName](#geteventbyname)
   - [getPastEvents](#getpastevents)
   - [getResults](#getresults)
+  - [getNews](#getnews)
   - [connectToScorebot](#connecttoscorebot)
   - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
   - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
@@ -64,8 +65,12 @@ You can create an instance of HLTV with a custom config if you want to.
 
 ```javascript
 const myHLTV = HLTV.createInstance({ loadPage: (url) => axios.get(url) })
-//or
+// or
 const myHLTV = HLTV.createInstance({ loadPage: (url) => fetch(url) })
+// or you can just use the HLTV export directly to use the default settings
+import HLTV from 'hltv'
+
+HLTV.getMatch({ ... })
 ```
 
 **[See config schema](https://github.com/gigobyte/HLTV/blob/master/src/config.ts)**
@@ -106,7 +111,7 @@ HLTV.getMatches().then((res) => {
 })
 ```
 
-## **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L25)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L25)**
 
 #### getMatchesStats
 
@@ -146,7 +151,7 @@ HLTV.getMatchStats({ id: 62979 }).then((res) => {
 })
 ```
 
-**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/models/FullMatchStats.ts#L40)**
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatchStats.ts#L15)**
 
 ---
 
@@ -483,6 +488,27 @@ HLTV.getResults({ eventIds: [1617], bestOfX: [BestOfFilter.BO3] }).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L31)**
+
+#### getNews
+
+Parses the info from the `hltv.org/news/archive/` page (1 request)
+
+|  Option  |                                                                      Type                                                                      | Default Value |                        Description                         |
+| :------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------: |
+|   year   |      2005 \| 2006 \| 2007 \| 2008 \| 2009 \| 2010 \| 2011 \| 2012 \| 2013 \| 2014 \| 2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021      |       -       | If you specify a `year` you must specify a `month` as well |
+|  month   | 'january' \| 'february' \| 'march' \| 'april' \| 'may' \| 'june' \| 'july' \| 'august' \| 'september' \| 'october' \| 'november' \| 'december' |       -       | If you specify a `month` you must specify a `year` as well |
+| eventIds |                                                                   number[]?                                                                    |       -       |                             -                              |
+
+```javascript
+// If you don't provide a filter the latest news will be parsed
+HLTV.getNews()
+HLTV.getNews({ eventIds: [3491] })
+HLTV.getNews({ year: 2020, month: 'may' }).then((res) => {
+  ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getNews.ts#L7)**
 
 #### connectToScorebot
 
