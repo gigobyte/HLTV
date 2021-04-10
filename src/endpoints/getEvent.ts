@@ -117,7 +117,7 @@ export const getEvent = (config: HLTVConfig) => async ({
       }
     })
 
-  const numberOfTeams = $('.teamsNumber').numFromText()!
+  const numberOfTeams = $('td.teamsNumber').numFromText()!
 
   const teams = $('.team-box')
     .toArray()
@@ -153,7 +153,10 @@ export const getEvent = (config: HLTVConfig) => async ({
     .map((el) => {
       const name = el.find('.video-discription-text').text()
       const link = el.data('mp4-url')
-      const thumbnail = el.data('thumbnail')
+
+      const [thumbnailBase] = el.data('thumbnail').split('-preview-')
+      const thumbnail = `${thumbnailBase}-preview.jpg`
+
       const team1Name = el
         .find('.video-team')
         .first()
