@@ -160,7 +160,7 @@ export const getEvent = (config: HLTVConfig) => async ({
         .find('.video-team-img')
         .first()
         .attr('title')
-      const team1 = teams.find((x) => x.name === team1Name)!
+      const team1 = teams.find((x) => x.name === team1Name)
 
       const team2Name = el
         .find('.video-team')
@@ -168,16 +168,18 @@ export const getEvent = (config: HLTVConfig) => async ({
         .find('.video-team-img')
         .first()
         .attr('title')
-      const team2 = teams.find((x) => x.name === team2Name)!
+      const team2 = teams.find((x) => x.name === team2Name)
 
-      const views = Number($('.thumbnail-view-count').text().split(' ')[0])
+      const views = Number(
+        el.find('.thumbnail-view-count').text().split(' ')[0]
+      )
 
       return {
         name,
         link,
         thumbnail,
-        team1: { id: team1.id, name: team1.name },
-        team2: { id: team2.id, name: team2.name },
+        team1: { id: team1?.id, name: team1?.name ?? team1Name },
+        team2: { id: team2?.id, name: team2?.name ?? team2Name },
         views
       }
     })
