@@ -290,6 +290,10 @@ Object {
   "name": "Aleksandr Kostyliev",
   "news": Array [
     Object {
+      "link": "/news/31490/complexity-advance-to-second-round-of-esl-pro-league-playoffs-over-navi",
+      "name": "Complexity advance to second round of ESL Pro League playoffs over NAVI",
+    },
+    Object {
       "link": "/news/31474/esl-pro-league-season-13-playoffs-fantasy-goes-live-with-prizes",
       "name": "ESL Pro League Season 13 Playoffs Fantasy goes live with prizes",
     },
@@ -3492,11 +3496,11 @@ Object {
   ],
   "statistics": Object {
     "deathsPerRound": 0.59,
-    "headshots": 34.1,
-    "killsPerRound": 0.88,
-    "mapsPlayed": 43,
-    "rating": 1.35,
-    "roundsContributed": 75.1,
+    "headshots": 34.2,
+    "killsPerRound": 0.87,
+    "mapsPlayed": 45,
+    "rating": 1.34,
+    "roundsContributed": 75,
   },
   "team": Object {
     "id": 4608,

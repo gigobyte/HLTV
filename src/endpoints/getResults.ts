@@ -4,7 +4,7 @@ import { HLTVPage, HLTVScraper } from '../scraper'
 import { BestOfFilter } from '../shared/BestOfFilter'
 import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { RankingFilter } from '../shared/RankingFilter'
-import { fetchPage, getIdAt, sleep } from '../utils'
+import { fetchPage, getIdAt, notNull, sleep } from '../utils'
 
 export enum ResultsMatchType {
   LAN = 'Lan',
@@ -92,11 +92,20 @@ export const getResults = (config: HLTVConfig) => async (
 
     page++
 
+    const featuredResults = $('.big-results .result-con')
+      .toArray()
+      .map((el) => el.children().first().attrThen('href', getIdAt(2)))
+
     results.push(
-      ...$('.allres .result-con')
+      ...$('.result-con')
         .toArray()
         .map((el) => {
           const id = el.children().first().attrThen('href', getIdAt(2))!
+
+          if (featuredResults.includes(id)) {
+            return null
+          }
+
           const stars = el.find('.stars i').length
           const date = el.numFromAttr('data-zonedgrouping-entry-unix')!
           const format = el.find('.map-text').text()
@@ -129,6 +138,7 @@ export const getResults = (config: HLTVConfig) => async (
               : { map: fromMapSlug(format), format: 'bo1' })
           }
         })
+        .filter(notNull)
     )
   } while ($('.result-con').exists())
 

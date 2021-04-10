@@ -13,6 +13,7 @@ Array [
     "name": "Winner of the Future 2017",
     "numberOfTeams": 8,
     "prizePool": "$4,725",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1513508400000,
@@ -25,6 +26,7 @@ Array [
     "name": "ECS Season 4 Finals",
     "numberOfTeams": 8,
     "prizePool": "$660,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1512903600000,
@@ -37,6 +39,7 @@ Array [
     "name": "ESL Pro League Season 6 Finals",
     "numberOfTeams": 12,
     "prizePool": "$750,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1512817200000,
@@ -49,6 +52,7 @@ Array [
     "name": "ROG MASTERS 2017 Grand Finals",
     "numberOfTeams": 6,
     "prizePool": "$235,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1512817200000,
@@ -61,6 +65,7 @@ Array [
     "name": "Gfinity Elite Series Season 2",
     "numberOfTeams": 8,
     "prizePool": "$110,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1512298800000,
@@ -73,6 +78,7 @@ Array [
     "name": "DreamHack Open Winter 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511694000000,
@@ -85,6 +91,7 @@ Array [
     "name": "FCDB Cup 2017",
     "numberOfTeams": 8,
     "prizePool": "$40,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511694000000,
@@ -97,6 +104,7 @@ Array [
     "name": "WESG 2017 Europe & CIS Regional Finals Female",
     "numberOfTeams": 8,
     "prizePool": "$16,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511694000000,
@@ -109,6 +117,7 @@ Array [
     "name": "WESG 2017 Europe & CIS Regional Finals",
     "numberOfTeams": 20,
     "prizePool": "$92,500",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511607600000,
@@ -121,6 +130,7 @@ Array [
     "name": "BLAST Pro Series Copenhagen 2017",
     "numberOfTeams": 6,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511434800000,
@@ -133,6 +143,7 @@ Array [
     "name": "China Top 2017 Shenzhen",
     "numberOfTeams": 4,
     "prizePool": "$113,361",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511089200000,
@@ -145,6 +156,7 @@ Array [
     "name": "IEM Oakland 2017",
     "numberOfTeams": 12,
     "prizePool": "$300,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511002800000,
@@ -157,6 +169,7 @@ Array [
     "name": "WEGL 2017 Super Fight Invitational",
     "numberOfTeams": 4,
     "prizePool": "$53,580",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1511002800000,
@@ -169,6 +182,7 @@ Array [
     "name": "ZEN League Season 2 Finals",
     "numberOfTeams": 4,
     "prizePool": "$24,300",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1510484400000,
@@ -181,6 +195,7 @@ Array [
     "name": "iBUYPOWER Masters 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1510398000000,
@@ -193,6 +208,7 @@ Array [
     "name": "IeSF World Championship 2017",
     "numberOfTeams": 16,
     "prizePool": "$17,978",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509879600000,
@@ -205,6 +221,7 @@ Array [
     "name": "Americas Minor - ELEAGUE Major 2018",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509879600000,
@@ -217,6 +234,7 @@ Array [
     "name": "Europe Minor - ELEAGUE Major 2018",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509879600000,
@@ -229,6 +247,7 @@ Array [
     "name": "SL i-League Invitational Shanghai 2017",
     "numberOfTeams": 8,
     "prizePool": "$150,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509271200000,
@@ -241,6 +260,7 @@ Array [
     "name": "CIS Minor - ELEAGUE Major 2018",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509271200000,
@@ -253,6 +273,7 @@ Array [
     "name": "Asia Minor - ELEAGUE Major 2018",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509271200000,
@@ -265,6 +286,7 @@ Array [
     "name": "EPICENTER 2017",
     "numberOfTeams": 8,
     "prizePool": "$490,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1509184800000,
@@ -277,6 +299,7 @@ Array [
     "name": "ESL Clash of Nations",
     "numberOfTeams": 8,
     "prizePool": "$10,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1508752800000,
@@ -289,6 +312,7 @@ Array [
     "name": "EPICENTER 2017 Wild Card Qualifier",
     "numberOfTeams": 4,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1508666400000,
@@ -301,6 +325,7 @@ Array [
     "name": "DreamHack Open Denver 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1508666400000,
@@ -313,6 +338,7 @@ Array [
     "name": "eXTREMESLAND 2017 Asia Finals",
     "numberOfTeams": 16,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1508061600000,
@@ -325,6 +351,7 @@ Array [
     "name": "ROG MASTERS 2017 EMEA Finals",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1507888800000,
@@ -337,6 +364,7 @@ Array [
     "name": "ELEAGUE CS:GO Premier 2017",
     "numberOfTeams": 16,
     "prizePool": "$1,000,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1507370400000,
@@ -349,6 +377,7 @@ Array [
     "name": "NGC Masters 2017",
     "numberOfTeams": 8,
     "prizePool": "$17,585",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1506852000000,
@@ -361,6 +390,7 @@ Array [
     "name": "China Top 2017 Kunshan",
     "numberOfTeams": 4,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1506247200000,
@@ -373,6 +403,7 @@ Array [
     "name": "ESEA Season 25 MDL Global Challenge",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1505642400000,
@@ -385,6 +416,7 @@ Array [
     "name": "ESL One New York 2017",
     "numberOfTeams": 8,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1505037600000,
@@ -397,6 +429,7 @@ Array [
     "name": "Cross Border Esport 2017",
     "numberOfTeams": 24,
     "prizePool": "$15,300",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1505037600000,
@@ -409,6 +442,7 @@ Array [
     "name": "DreamHack Open Montreal 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1505037600000,
@@ -421,6 +455,7 @@ Array [
     "name": "ESG Tour Mykonos 2017",
     "numberOfTeams": 8,
     "prizePool": "$235,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1504432800000,
@@ -433,6 +468,7 @@ Array [
     "name": "GIRLGAMER Esports Festival 2017",
     "numberOfTeams": 4,
     "prizePool": "$12,781",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1504432800000,
@@ -445,6 +481,7 @@ Array [
     "name": "DreamHack Masters Malmö 2017",
     "numberOfTeams": 16,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1504346400000,
@@ -457,6 +494,7 @@ Array [
     "name": "iiyama CS:GO HomeMasters #3 Finals",
     "numberOfTeams": 2,
     "prizePool": "$3,569",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1504346400000,
@@ -469,6 +507,7 @@ Array [
     "name": "Gfinity Elite Series Season 1",
     "numberOfTeams": 8,
     "prizePool": "$110,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1503828000000,
@@ -481,6 +520,7 @@ Array [
     "name": "Binary Dragons Prestige LAN",
     "numberOfTeams": 8,
     "prizePool": "$10,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1500804000000,
@@ -493,6 +533,7 @@ Array [
     "name": "DreamHack Open Atlanta 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1500112800000,
@@ -505,6 +546,7 @@ Array [
     "name": "DreamHack Open Valencia 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1499594400000,
@@ -517,6 +559,7 @@ Array [
     "name": "ESL One Cologne 2017",
     "numberOfTeams": 16,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1498989600000,
@@ -529,6 +572,7 @@ Array [
     "name": "PGL Major Krakow 2017 Main Qualifier",
     "numberOfTeams": 16,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1498384800000,
@@ -541,6 +585,7 @@ Array [
     "name": "ECS Season 3 Finals",
     "numberOfTeams": 8,
     "prizePool": "$660,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1498298400000,
@@ -553,6 +598,7 @@ Array [
     "name": "Legend Series #2 Finals",
     "numberOfTeams": 4,
     "prizePool": "$3,360",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497866400000,
@@ -565,6 +611,7 @@ Array [
     "name": "ESU Masters 2017",
     "numberOfTeams": 8,
     "prizePool": "$11,468",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497866400000,
@@ -577,6 +624,7 @@ Array [
     "name": "DreamHack Open Summer 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497780000000,
@@ -589,6 +637,7 @@ Array [
     "name": "Adrenaline Cyber League 2017",
     "numberOfTeams": 4,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497780000000,
@@ -601,6 +650,7 @@ Array [
     "name": "ZEN Esports Network League Season 1 Finals",
     "numberOfTeams": 4,
     "prizePool": "$37,184",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497780000000,
@@ -613,6 +663,7 @@ Array [
     "name": "Europe Minor - PGL Major Krakow 2017",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497607200000,
@@ -625,6 +676,7 @@ Array [
     "name": "ELEAGUE Clash for Cash",
     "numberOfTeams": 2,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497175200000,
@@ -637,6 +689,7 @@ Array [
     "name": "CIS Minor - PGL Major Krakow 2017",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1497175200000,
@@ -649,6 +702,7 @@ Array [
     "name": "Americas Minor - PGL Major Krakow 2017",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1496570400000,
@@ -661,6 +715,7 @@ Array [
     "name": "Asia Minor - PGL Major Krakow 2017",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1496570400000,
@@ -673,6 +728,7 @@ Array [
     "name": "ESL Pro League Season 5 Finals",
     "numberOfTeams": 12,
     "prizePool": "$750,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1495965600000,
@@ -685,6 +741,7 @@ Array [
     "name": "GeForce Cup 2017",
     "numberOfTeams": 8,
     "prizePool": "$30,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1495879200000,
@@ -697,6 +754,7 @@ Array [
     "name": "The Adria Masters Season 1 Finals",
     "numberOfTeams": 4,
     "prizePool": "$5,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1494756000000,
@@ -709,6 +767,7 @@ Array [
     "name": "HTC 2v2 Invitational by PGL",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1494756000000,
@@ -721,6 +780,7 @@ Array [
     "name": "ESEA Season 24 MDL Global Challenge",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1494237600000,
@@ -733,6 +793,7 @@ Array [
     "name": "DreamHack Open Tours 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1494151200000,
@@ -745,6 +806,7 @@ Array [
     "name": "4Gamers CS:GO Masters",
     "numberOfTeams": 6,
     "prizePool": "$10,997",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1494151200000,
@@ -757,6 +819,7 @@ Array [
     "name": "IEM Sydney 2017",
     "numberOfTeams": 8,
     "prizePool": "$200,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1493546400000,
@@ -769,6 +832,7 @@ Array [
     "name": "DreamHack Open Austin 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1492941600000,
@@ -781,6 +845,7 @@ Array [
     "name": "cs_summit Spring 2017",
     "numberOfTeams": 8,
     "prizePool": "$150,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1492250400000,
@@ -793,6 +858,7 @@ Array [
     "name": "Copenhagen Games 2017",
     "numberOfTeams": 16,
     "prizePool": "$56,300",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1492250400000,
@@ -805,6 +871,7 @@ Array [
     "name": "Copenhagen Games 2017 Female",
     "numberOfTeams": 28,
     "prizePool": "$15,025",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1492164000000,
@@ -817,6 +884,7 @@ Array [
     "name": "Copenhagen Games 2017 BYOC Qualifier",
     "numberOfTeams": 76,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1491732000000,
@@ -829,6 +897,7 @@ Array [
     "name": "SL i-League StarSeries Season 3 Finals",
     "numberOfTeams": 16,
     "prizePool": "$300,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1491040800000,
@@ -841,6 +910,7 @@ Array [
     "name": "Legend Series #1 Finals",
     "numberOfTeams": 2,
     "prizePool": "$2,917",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1489921200000,
@@ -853,6 +923,7 @@ Array [
     "name": "China Cup 2017",
     "numberOfTeams": 6,
     "prizePool": "$99,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1488711600000,
@@ -865,6 +936,7 @@ Array [
     "name": "IEM Katowice 2017",
     "numberOfTeams": 12,
     "prizePool": "$250,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1488538800000,
@@ -877,6 +949,7 @@ Array [
     "name": "Intel Challenge Katowice 2017",
     "numberOfTeams": 8,
     "prizePool": "$30,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1487502000000,
@@ -889,6 +962,7 @@ Array [
     "name": "DreamHack Masters Las Vegas 2017",
     "numberOfTeams": 16,
     "prizePool": "$450,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1486206000000,
@@ -901,6 +975,7 @@ Array [
     "name": "Assembly Winter 2017",
     "numberOfTeams": 16,
     "prizePool": "$15,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1484478000000,
@@ -913,6 +988,7 @@ Array [
     "name": "DreamHack ASTRO Open Leipzig 2017",
     "numberOfTeams": 8,
     "prizePool": "$100,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1484478000000,
@@ -925,6 +1001,7 @@ Array [
     "name": "WESG 2016 World Finals",
     "numberOfTeams": 24,
     "prizePool": "$1,500,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1483873200000,
@@ -937,6 +1014,7 @@ Array [
     "name": "ESEA Season 23 MDL Global Challenge",
     "numberOfTeams": 8,
     "prizePool": "$50,000",
+    "type": "INTLLAN",
   },
   Object {
     "dateEnd": 1483873200000,
@@ -949,6 +1027,7 @@ Array [
     "name": "ASUS ROG Community Challenge Grand Finals 2017",
     "numberOfTeams": 8,
     "prizePool": "Other",
+    "type": "INTLLAN",
   },
 ]
 `;

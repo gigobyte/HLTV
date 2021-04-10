@@ -1,7 +1,7 @@
 import HLTV from '../src/'
 import { sleep } from '../src/utils'
 
-test('getTeamStats', async () => {
+test('getResults', async () => {
   await sleep(3000)
   expect(await HLTV.getResults({ eventIds: [1617] })).toMatchSnapshot()
   await sleep(3000)

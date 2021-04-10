@@ -588,7 +588,11 @@ Object {
           },
           Object {
             "team1Rounds": 9,
-            "team2Rounds": NaN,
+            "team2Rounds": 6,
+          },
+          Object {
+            "team1Rounds": 16,
+            "team2Rounds": 11,
           },
         ],
         "team1TotalRounds": 31,
