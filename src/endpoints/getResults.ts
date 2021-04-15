@@ -92,7 +92,7 @@ export const getResults = (config: HLTVConfig) => async (
 
     page++
 
-    const featuredResults = $('.big-results .result-con')
+    let featuredResults = $('.big-results .result-con')
       .toArray()
       .map((el) => el.children().first().attrThen('href', getIdAt(2)))
 
@@ -103,6 +103,7 @@ export const getResults = (config: HLTVConfig) => async (
           const id = el.children().first().attrThen('href', getIdAt(2))!
 
           if (featuredResults.includes(id)) {
+            featuredResults = featuredResults.filter((x) => x !== id)
             return null
           }
 
