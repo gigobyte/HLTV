@@ -333,8 +333,8 @@ Parses the info from `hltv.org/stats/players/*` (3 requests)
 |    Option     |                                            Type                                            | Default value | Description |
 | :-----------: | :----------------------------------------------------------------------------------------: | :-----------: | :---------: |
 |      id       |                                           number                                           |       -       |      -      |
-|   startDate   |                                           string                                           |       -       |      -      |
-|    endDate    |                                           string                                           |       -       |      -      |
+|   startDate   |                                          string?                                           |       -       |      -      |
+|    endDate    |                                          string?                                           |       -       |      -      |
 |   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
 |     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
@@ -478,7 +478,7 @@ Parses the info from the `hltv.org/results` page (1 request per page of results)
 |        playerIds         |                                            number[]?                                            |       -       |                     -                      |
 |         teamIds          |                                            number[]?                                            |       -       |                     -                      |
 |           game           |    [GameType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L21)?    |       -       |                     -                      |
-| delayBetweenPageRequests |                                             number?                                             |       -       | Used to prevent CloudFlare throttling (ms) |
+| delayBetweenPageRequests |                                             number?                                             |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
