@@ -194,7 +194,24 @@ Object {
   "maps": Array [
     Object {
       "name": "de_dust2",
-      "result": undefined,
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 15,
+            "team1Side": "t",
+            "team2Rounds": 0,
+            "team2Side": "ct",
+          },
+          Object {
+            "team1Rounds": 1,
+            "team1Side": "ct",
+            "team2Rounds": 0,
+            "team2Side": "t",
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 0,
+      },
       "statsId": 73147,
     },
     Object {
@@ -203,11 +220,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 5,
+            "team1Side": "t",
             "team2Rounds": 10,
+            "team2Side": "ct",
           },
           Object {
             "team1Rounds": 9,
+            "team1Side": "ct",
             "team2Rounds": 6,
+            "team2Side": "t",
           },
         ],
         "team1TotalRounds": 14,
@@ -221,11 +242,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 7,
+            "team1Side": "ct",
             "team2Rounds": 8,
+            "team2Side": "t",
           },
           Object {
             "team1Rounds": 5,
+            "team1Side": "t",
             "team2Rounds": 8,
+            "team2Side": "ct",
           },
         ],
         "team1TotalRounds": 12,
@@ -566,11 +591,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 8,
+            "team1Side": "ct",
             "team2Rounds": 7,
+            "team2Side": "t",
           },
           Object {
             "team1Rounds": 8,
+            "team1Side": "t",
             "team2Rounds": 2,
+            "team2Side": "ct",
           },
         ],
         "team1TotalRounds": 16,
@@ -584,15 +613,21 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 6,
+            "team1Side": "t",
             "team2Rounds": 9,
+            "team2Side": "ct",
           },
           Object {
             "team1Rounds": 9,
+            "team1Side": "ct",
             "team2Rounds": 6,
+            "team2Side": "t",
           },
           Object {
             "team1Rounds": 16,
+            "team1Side": undefined,
             "team2Rounds": 11,
+            "team2Side": undefined,
           },
         ],
         "team1TotalRounds": 31,
@@ -861,11 +896,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 6,
+            "team1Side": "t",
             "team2Rounds": 9,
+            "team2Side": "ct",
           },
           Object {
             "team1Rounds": 4,
+            "team1Side": "ct",
             "team2Rounds": 7,
+            "team2Side": "t",
           },
         ],
         "team1TotalRounds": 10,
@@ -879,11 +918,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 4,
+            "team1Side": "ct",
             "team2Rounds": 11,
+            "team2Side": "t",
           },
           Object {
             "team1Rounds": 12,
+            "team1Side": "t",
             "team2Rounds": 2,
+            "team2Side": "ct",
           },
         ],
         "team1TotalRounds": 16,
@@ -897,11 +940,15 @@ Object {
         "halfResults": Array [
           Object {
             "team1Rounds": 9,
+            "team1Side": "t",
             "team2Rounds": 6,
+            "team2Side": "ct",
           },
           Object {
             "team1Rounds": 7,
+            "team1Side": "ct",
             "team2Rounds": 4,
+            "team2Side": "t",
           },
         ],
         "team1TotalRounds": 16,

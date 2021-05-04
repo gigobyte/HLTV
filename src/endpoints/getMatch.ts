@@ -58,6 +58,8 @@ export interface ProviderOdds {
 export interface MapHalfResult {
   team1Rounds: number
   team2Rounds: number
+  team1Side: string | undefined
+  team2Side: string | undefined
 }
 
 export interface MapResult {
@@ -327,15 +329,31 @@ function getMaps($: HLTVPage): MapResult[] {
 
       let result
 
-      if (team1TotalRounds && team2TotalRounds) {
-        const halfsString = mapEl.find('.results-center-half-score').trimText()!
-        const halfs = halfsString
-          .split(' ')
-          .map((x) => x.replace(/\(|\)|;/g, ''))
-          .map((half) => ({
-            team1Rounds: Number(half.split(':')[0]),
-            team2Rounds: Number(half.split(':')[1])
-          }))
+      if (team1TotalRounds >= 0 && team2TotalRounds >= 0) {
+        const halfSpans = mapEl
+          .find('.results-center-half-score')
+          .children('span')
+          .toArray()
+        let halfIndex = 0
+        const halfs = []
+        const halfArrays: Array<Array<HLTVPageElement>> = [[]]
+        for (const span of halfSpans) {
+          const text = span.trimText()
+          const isNumber = Number(text)
+          if (isNumber >= 0) {
+            halfArrays[halfIndex].push(span)
+            if (halfArrays[halfIndex].length === 2) {
+              halfs.push({
+                team1Side: halfArrays[halfIndex][0].attr('class'),
+                team2Side: halfArrays[halfIndex][1].attr('class'),
+                team1Rounds: Number(halfArrays[halfIndex][0].trimText()),
+                team2Rounds: Number(halfArrays[halfIndex][1].trimText())
+              })
+              halfIndex++
+              halfArrays[halfIndex] = []
+            }
+          }
+        }
 
         result = {
           team1TotalRounds,
