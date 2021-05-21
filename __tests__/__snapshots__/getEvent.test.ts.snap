@@ -23,7 +23,7 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106330568-preview.jpg",
-      "views": 351,
+      "views": 361,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106318896.mp4",
@@ -51,7 +51,7 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106334846-preview.jpg",
-      "views": 52,
+      "views": 53,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106327119.mp4",
@@ -124,6 +124,20 @@ Object {
       "views": 32,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106972135.mp4",
+      "name": "M1 | hades - 1vs3 clutch (T - pre-plant situation)",
+      "team1": Object {
+        "id": 10426,
+        "name": "Wisla Krakow",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106972135-preview.jpg",
+      "views": 31,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106321539.mp4",
       "name": "M3 | shellzi - quick 1vs2 clutch (T - post-plant situation)",
       "team1": Object {
@@ -138,20 +152,6 @@ Object {
       "views": 29,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106972135.mp4",
-      "name": "M1 | hades - 1vs3 clutch (T - pre-plant situation)",
-      "team1": Object {
-        "id": 10426,
-        "name": "Wisla Krakow",
-      },
-      "team2": Object {
-        "id": 10697,
-        "name": "BLINK",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106972135-preview.jpg",
-      "views": 27,
-    },
-    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915.mp4",
       "name": "M1 | Nodios - 4 AK kills on the bombsite B offensive to set Copenhagen Flames on map point",
       "team1": Object {
@@ -163,6 +163,20 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915-preview.jpg",
+      "views": 19,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672.mp4",
+      "name": "M2 | hades - 1vs2 AWP clutch (CT - post-plant situation)",
+      "team1": Object {
+        "id": 10426,
+        "name": "Wisla Krakow",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672-preview.jpg",
       "views": 19,
     },
     Object {
@@ -180,8 +194,8 @@ Object {
       "views": 16,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672.mp4",
-      "name": "M2 | hades - 1vs2 AWP clutch (CT - post-plant situation)",
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164.mp4",
+      "name": "M2 | sinnopsyy - 1vs2 clutch (CT - post-plant situation) to mark his 3rd clutch in consecutive rounds",
       "team1": Object {
         "id": 10426,
         "name": "Wisla Krakow",
@@ -190,7 +204,7 @@ Object {
         "id": 10697,
         "name": "BLINK",
       },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672-preview.jpg",
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164-preview.jpg",
       "views": 16,
     },
     Object {
@@ -208,8 +222,8 @@ Object {
       "views": 15,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164.mp4",
-      "name": "M2 | sinnopsyy - 1vs2 clutch (CT - post-plant situation) to mark his 3rd clutch in consecutive rounds",
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106987945.mp4",
+      "name": "M2 | gxx- - 1vs2 clutch (T - post-plant situation)",
       "team1": Object {
         "id": 10426,
         "name": "Wisla Krakow",
@@ -218,8 +232,8 @@ Object {
         "id": 10697,
         "name": "BLINK",
       },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164-preview.jpg",
-      "views": 15,
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106987945-preview.jpg",
+      "views": 14,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1107008047.mp4",
@@ -236,20 +250,6 @@ Object {
       "views": 14,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106987945.mp4",
-      "name": "M2 | gxx- - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 10426,
-        "name": "Wisla Krakow",
-      },
-      "team2": Object {
-        "id": 10697,
-        "name": "BLINK",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106987945-preview.jpg",
-      "views": 12,
-    },
-    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106997482.mp4",
       "name": "M2 | sinnopsyy - 1vs2 clutch (T - post-plant situation) in the following round",
       "team1": Object {
@@ -261,7 +261,7 @@ Object {
         "name": "BLINK",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106997482-preview.jpg",
-      "views": 12,
+      "views": 13,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106995202.mp4",
@@ -275,7 +275,7 @@ Object {
         "name": "BLINK",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106995202-preview.jpg",
-      "views": 11,
+      "views": 12,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1107004368.mp4",
@@ -303,7 +303,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105473052-preview.jpg",
-      "views": 62,
+      "views": 66,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105505492.mp4",
@@ -317,21 +317,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105505492-preview.jpg",
-      "views": 29,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105476554.mp4",
-      "name": "M2 | sXe - 1vs2 clutch (T - bomb planted after 1 clutch kill)",
-      "team1": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "team2": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105476554-preview.jpg",
-      "views": 28,
+      "views": 41,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105489583.mp4",
@@ -345,7 +331,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105489583-preview.jpg",
-      "views": 28,
+      "views": 37,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525.mp4",
@@ -359,21 +345,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525-preview.jpg",
-      "views": 27,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105465184.mp4",
-      "name": "M1 | jabbi - 4 AK HS kills on the bombsite B offensive",
-      "team1": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "team2": Object {
-        "id": 7187,
-        "name": "Nexus",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105465184-preview.jpg",
-      "views": 25,
+      "views": 35,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105494048.mp4",
@@ -387,7 +359,35 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105494048-preview.jpg",
-      "views": 24,
+      "views": 34,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105476554.mp4",
+      "name": "M2 | sXe - 1vs2 clutch (T - bomb planted after 1 clutch kill)",
+      "team1": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "team2": Object {
+        "id": 7187,
+        "name": "Nexus",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105476554-preview.jpg",
+      "views": 29,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105465184.mp4",
+      "name": "M1 | jabbi - 4 AK HS kills on the bombsite B offensive",
+      "team1": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "team2": Object {
+        "id": 7187,
+        "name": "Nexus",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105465184-preview.jpg",
+      "views": 27,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105485834.mp4",
@@ -401,7 +401,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105485834-preview.jpg",
-      "views": 19,
+      "views": 20,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105500005.mp4",
@@ -415,7 +415,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105500005-preview.jpg",
-      "views": 12,
+      "views": 13,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105468127.mp4",
@@ -443,7 +443,7 @@ Object {
         "name": "UMX",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104404178-preview.jpg",
-      "views": 34,
+      "views": 35,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104386645.mp4",
@@ -471,7 +471,21 @@ Object {
         "name": "UMX",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104402365-preview.jpg",
-      "views": 16,
+      "views": 18,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104396313.mp4",
+      "name": "M1 | Tadpole - 4 AK kills on the bombsite A offensive (2vs4 situation)",
+      "team1": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "team2": Object {
+        "id": 10879,
+        "name": "UMX",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104396313-preview.jpg",
+      "views": 13,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104376053.mp4",
@@ -516,6 +530,20 @@ Object {
       "views": 13,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104391315.mp4",
+      "name": "M1 | Extinct - 1vs3 clutch (T - bomb planted after 2 clutch kills) - pistol round (Part 2 - 1/3 frags)",
+      "team1": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "team2": Object {
+        "id": 10879,
+        "name": "UMX",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104391315-preview.jpg",
+      "views": 12,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104381822.mp4",
       "name": "M2 | Maka - 1vs2 AWP clutch (CT - bomb planted after 1 clutch kill)",
       "team1": Object {
@@ -530,8 +558,8 @@ Object {
       "views": 12,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104396313.mp4",
-      "name": "M1 | Tadpole - 4 AK kills on the bombsite A offensive (2vs4 situation)",
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104399864.mp4",
+      "name": "M1 | arTisT - 1vs2 clutch (T - post-plant situation)",
       "team1": Object {
         "id": 7461,
         "name": "Copenhagen Flames",
@@ -540,22 +568,8 @@ Object {
         "id": 10879,
         "name": "UMX",
       },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104396313-preview.jpg",
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104399864-preview.jpg",
       "views": 11,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104391315.mp4",
-      "name": "M1 | Extinct - 1vs3 clutch (T - bomb planted after 2 clutch kills) - pistol round (Part 2 - 1/3 frags)",
-      "team1": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "team2": Object {
-        "id": 10879,
-        "name": "UMX",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104391315-preview.jpg",
-      "views": 9,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104392480.mp4",
@@ -569,21 +583,7 @@ Object {
         "name": "UMX",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104392480-preview.jpg",
-      "views": 8,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104399864.mp4",
-      "name": "M1 | arTisT - 1vs2 clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "team2": Object {
-        "id": 10879,
-        "name": "UMX",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104399864-preview.jpg",
-      "views": 8,
+      "views": 10,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104398399.mp4",
@@ -597,7 +597,7 @@ Object {
         "name": "UMX",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1104398399-preview.jpg",
-      "views": 7,
+      "views": 9,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102806712.mp4",
@@ -667,7 +667,7 @@ Object {
         "name": "K23",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102818613-preview.jpg",
-      "views": 49,
+      "views": 53,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102787853.mp4",
@@ -681,7 +681,7 @@ Object {
         "name": "Galaxy Racer",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102787853-preview.jpg",
-      "views": 40,
+      "views": 41,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102785716.mp4",
@@ -695,7 +695,7 @@ Object {
         "name": "Galaxy Racer",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102785716-preview.jpg",
-      "views": 27,
+      "views": 28,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/vod-958723787-offset-22238.mp4",
@@ -723,7 +723,7 @@ Object {
         "name": "Lyngby Vikings",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098626087-preview.jpg",
-      "views": 57,
+      "views": 58,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098598957.mp4",
@@ -737,21 +737,7 @@ Object {
         "name": "Wisla Krakow",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098598957-preview.jpg",
-      "views": 25,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098594928.mp4",
-      "name": "M2 | hades - 1vs2 AWP clutch (CT - pre-plant situation) to set Wisla Krakow on map point",
-      "team1": Object {
-        "id": 8813,
-        "name": "Illuminar",
-      },
-      "team2": Object {
-        "id": 10426,
-        "name": "Wisla Krakow",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098594928-preview.jpg",
-      "views": 15,
+      "views": 27,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098591040.mp4",
@@ -765,7 +751,21 @@ Object {
         "name": "Wisla Krakow",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098591040-preview.jpg",
-      "views": 14,
+      "views": 19,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098594928.mp4",
+      "name": "M2 | hades - 1vs2 AWP clutch (CT - pre-plant situation) to set Wisla Krakow on map point",
+      "team1": Object {
+        "id": 8813,
+        "name": "Illuminar",
+      },
+      "team2": Object {
+        "id": 10426,
+        "name": "Wisla Krakow",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098594928-preview.jpg",
+      "views": 16,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098578729.mp4",
@@ -863,7 +863,7 @@ Object {
         "name": "Wisla Krakow",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098574997-preview.jpg",
-      "views": 8,
+      "views": 9,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098580742.mp4",
@@ -891,7 +891,7 @@ Object {
         "name": "Astralis Talent",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1096964271-preview.jpg",
-      "views": 90,
+      "views": 91,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097017124.mp4",
@@ -905,7 +905,7 @@ Object {
         "name": "Tricked",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097017124-preview.jpg",
-      "views": 40,
+      "views": 41,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097019643.mp4",
@@ -919,7 +919,7 @@ Object {
         "name": "Tricked",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097019643-preview.jpg",
-      "views": 32,
+      "views": 33,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097053197.mp4",
@@ -933,7 +933,7 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097053197-preview.jpg",
-      "views": 16,
+      "views": 19,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1096960527.mp4",
@@ -950,6 +950,20 @@ Object {
       "views": 15,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097056636.mp4",
+      "name": "M1 | Void - 1vs2 AWP clutch (T - post-plant situation)",
+      "team1": Object {
+        "id": 10954,
+        "name": "Astralis Talent",
+      },
+      "team2": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097056636-preview.jpg",
+      "views": 14,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097064271.mp4",
       "name": "M1 | Zyphon - quick 1vs2 clutch (T - post-plant situation)",
       "team1": Object {
@@ -962,20 +976,6 @@ Object {
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097064271-preview.jpg",
       "views": 14,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097056636.mp4",
-      "name": "M1 | Void - 1vs2 AWP clutch (T - post-plant situation)",
-      "team1": Object {
-        "id": 10954,
-        "name": "Astralis Talent",
-      },
-      "team2": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097056636-preview.jpg",
-      "views": 13,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097030428.mp4",
@@ -992,6 +992,20 @@ Object {
       "views": 12,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097067947.mp4",
+      "name": "M2 | nicoodoz - 1vs2 Deagle clutch (CT - post-plant situation) to set Copenhagen Flames on match point",
+      "team1": Object {
+        "id": 10954,
+        "name": "Astralis Talent",
+      },
+      "team2": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097067947-preview.jpg",
+      "views": 12,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097033619.mp4",
       "name": "M1 | Lucky - 1vs2 AWP clutch (T - post-plant situation)",
       "team1": Object {
@@ -1004,20 +1018,6 @@ Object {
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097033619-preview.jpg",
       "views": 11,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097067947.mp4",
-      "name": "M2 | nicoodoz - 1vs2 Deagle clutch (CT - post-plant situation) to set Copenhagen Flames on match point",
-      "team1": Object {
-        "id": 10954,
-        "name": "Astralis Talent",
-      },
-      "team2": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097067947-preview.jpg",
-      "views": 10,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097039306.mp4",
@@ -1688,7 +1688,7 @@ Object {
         "name": "eUnited",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C396086130-preview.jpg",
-      "views": 755,
+      "views": 756,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C396116386.mp4",
@@ -1730,7 +1730,7 @@ Object {
         "name": "eUnited",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C396076522-preview.jpg",
-      "views": 208,
+      "views": 209,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C396025046.mp4",
@@ -1926,7 +1926,7 @@ Object {
         "name": "Envy",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395410772-preview.jpg",
-      "views": 110,
+      "views": 111,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395615978.mp4",
@@ -1996,7 +1996,7 @@ Object {
         "name": "Envy",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395412463-preview.jpg",
-      "views": 86,
+      "views": 87,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395555369.mp4",
@@ -2010,7 +2010,7 @@ Object {
         "name": "Swole Patrol",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395555369-preview.jpg",
-      "views": 80,
+      "views": 81,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395554222.mp4",
@@ -2055,6 +2055,20 @@ Object {
       "views": 67,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395391126.mp4",
+      "name": "M1 | WARDELL - 4 AUG kills (3 HS) on the bombsite A defense (anti-eco)",
+      "team1": Object {
+        "id": 7801,
+        "name": "Ghost",
+      },
+      "team2": Object {
+        "id": 5991,
+        "name": "Envy",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395391126-preview.jpg",
+      "views": 52,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395554790.mp4",
       "name": "M2 | vanity - 4 kills (2 AUG, 2 USP-S) on the Arch defense (finishing frags - clean round - vs pistols)",
       "team1": Object {
@@ -2069,20 +2083,6 @@ Object {
       "views": 52,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395391126.mp4",
-      "name": "M1 | WARDELL - 4 AUG kills (3 HS) on the bombsite A defense (anti-eco)",
-      "team1": Object {
-        "id": 7801,
-        "name": "Ghost",
-      },
-      "team2": Object {
-        "id": 5991,
-        "name": "Envy",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395391126-preview.jpg",
-      "views": 51,
-    },
-    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395392178.mp4",
       "name": "M1 | Nifty - 4 AK kills to eliminate 4/5 of the CTs pushing from Long to Double Doors Long (anti-eco)",
       "team1": Object {
@@ -2094,7 +2094,7 @@ Object {
         "name": "Envy",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395392178-preview.jpg",
-      "views": 48,
+      "views": 49,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395618146.mp4",
@@ -2150,7 +2150,7 @@ Object {
         "name": "Envy",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395393629-preview.jpg",
-      "views": 39,
+      "views": 40,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C395611071.mp4",
@@ -2178,7 +2178,7 @@ Object {
         "name": "Envy",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C395393962-preview.jpg",
-      "views": 29,
+      "views": 30,
     },
   ],
   "id": 4356,
