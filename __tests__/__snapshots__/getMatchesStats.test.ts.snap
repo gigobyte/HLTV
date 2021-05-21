@@ -9,7 +9,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_dust2",
-    "mapStatId": 115605,
+    "mapStatsId": 115605,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -29,8 +29,8 @@ Array [
       "id": 5724,
       "name": "WESG 2021 LatAm North",
     },
-    "map": "default",
-    "mapStatId": 115603,
+    "map": "de_vertigo",
+    "mapStatsId": 115603,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -51,7 +51,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_inferno",
-    "mapStatId": 115598,
+    "mapStatsId": 115598,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -72,7 +72,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_overpass",
-    "mapStatId": 115600,
+    "mapStatsId": 115600,
     "result": Object {
       "team1": 16,
       "team2": 19,
@@ -93,7 +93,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_inferno",
-    "mapStatId": 115596,
+    "mapStatsId": 115596,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -114,7 +114,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_train",
-    "mapStatId": 115604,
+    "mapStatsId": 115604,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -135,7 +135,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_dust2",
-    "mapStatId": 115602,
+    "mapStatsId": 115602,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -156,7 +156,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115597,
+    "mapStatsId": 115597,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -177,7 +177,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_train",
-    "mapStatId": 115599,
+    "mapStatsId": 115599,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -197,8 +197,8 @@ Array [
       "id": 5769,
       "name": "ESEA Winter Cash Cup 6 North America",
     },
-    "map": "default",
-    "mapStatId": 115595,
+    "map": "de_vertigo",
+    "mapStatsId": 115595,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -219,7 +219,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115594,
+    "mapStatsId": 115594,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -240,7 +240,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115592,
+    "mapStatsId": 115592,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -261,7 +261,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_train",
-    "mapStatId": 115589,
+    "mapStatsId": 115589,
     "result": Object {
       "team1": 16,
       "team2": 7,
@@ -282,7 +282,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_train",
-    "mapStatId": 115591,
+    "mapStatsId": 115591,
     "result": Object {
       "team1": 16,
       "team2": 7,
@@ -303,7 +303,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115588,
+    "mapStatsId": 115588,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -324,7 +324,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_inferno",
-    "mapStatId": 115593,
+    "mapStatsId": 115593,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -345,7 +345,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_mirage",
-    "mapStatId": 115590,
+    "mapStatsId": 115590,
     "result": Object {
       "team1": 16,
       "team2": 3,
@@ -366,7 +366,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_overpass",
-    "mapStatId": 115587,
+    "mapStatsId": 115587,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -387,7 +387,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115585,
+    "mapStatsId": 115585,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -408,7 +408,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_mirage",
-    "mapStatId": 115582,
+    "mapStatsId": 115582,
     "result": Object {
       "team1": 19,
       "team2": 17,
@@ -429,7 +429,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_inferno",
-    "mapStatId": 115584,
+    "mapStatsId": 115584,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -450,7 +450,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_train",
-    "mapStatId": 115579,
+    "mapStatsId": 115579,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -471,7 +471,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115577,
+    "mapStatsId": 115577,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -491,8 +491,8 @@ Array [
       "id": 5770,
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
-    "map": "default",
-    "mapStatId": 115581,
+    "map": "de_vertigo",
+    "mapStatsId": 115581,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -513,7 +513,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115576,
+    "mapStatsId": 115576,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -534,7 +534,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115586,
+    "mapStatsId": 115586,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -555,7 +555,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_train",
-    "mapStatId": 115580,
+    "mapStatsId": 115580,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -576,7 +576,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_dust2",
-    "mapStatId": 115578,
+    "mapStatsId": 115578,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -596,8 +596,8 @@ Array [
       "id": 5552,
       "name": "IEM Katowice 2021",
     },
-    "map": "default",
-    "mapStatId": 115574,
+    "map": "de_vertigo",
+    "mapStatsId": 115574,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -617,8 +617,8 @@ Array [
       "id": 5765,
       "name": "Esportal Nordic Invitational 2021",
     },
-    "map": "default",
-    "mapStatId": 115575,
+    "map": "de_vertigo",
+    "mapStatsId": 115575,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -639,7 +639,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_dust2",
-    "mapStatId": 115572,
+    "mapStatsId": 115572,
     "result": Object {
       "team1": 19,
       "team2": 16,
@@ -660,7 +660,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115571,
+    "mapStatsId": 115571,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -681,7 +681,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115570,
+    "mapStatsId": 115570,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -702,7 +702,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_dust2",
-    "mapStatId": 115566,
+    "mapStatsId": 115566,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -723,7 +723,7 @@ Array [
       "name": "ESEA Winter Cash Cup 6 North America",
     },
     "map": "de_train",
-    "mapStatId": 115565,
+    "mapStatsId": 115565,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -744,7 +744,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_inferno",
-    "mapStatId": 115569,
+    "mapStatsId": 115569,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -765,7 +765,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_train",
-    "mapStatId": 115567,
+    "mapStatsId": 115567,
     "result": Object {
       "team1": 17,
       "team2": 19,
@@ -786,7 +786,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_mirage",
-    "mapStatId": 115564,
+    "mapStatsId": 115564,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -807,7 +807,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_nuke",
-    "mapStatId": 115563,
+    "mapStatsId": 115563,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -828,7 +828,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_mirage",
-    "mapStatId": 115562,
+    "mapStatsId": 115562,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -849,7 +849,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_dust2",
-    "mapStatId": 115559,
+    "mapStatsId": 115559,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -870,7 +870,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_train",
-    "mapStatId": 115558,
+    "mapStatsId": 115558,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -891,7 +891,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_train",
-    "mapStatId": 115560,
+    "mapStatsId": 115560,
     "result": Object {
       "team1": 19,
       "team2": 17,
@@ -912,7 +912,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_nuke",
-    "mapStatId": 115557,
+    "mapStatsId": 115557,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -933,7 +933,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_nuke",
-    "mapStatId": 115554,
+    "mapStatsId": 115554,
     "result": Object {
       "team1": 16,
       "team2": 3,
@@ -954,7 +954,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115550,
+    "mapStatsId": 115550,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -975,7 +975,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_nuke",
-    "mapStatId": 115556,
+    "mapStatsId": 115556,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -996,7 +996,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_train",
-    "mapStatId": 115555,
+    "mapStatsId": 115555,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -1016,8 +1016,8 @@ Array [
       "id": 5768,
       "name": "Ghetto eGames Cup 2",
     },
-    "map": "default",
-    "mapStatId": 115551,
+    "map": "de_vertigo",
+    "mapStatsId": 115551,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -1038,7 +1038,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_inferno",
-    "mapStatId": 115553,
+    "mapStatsId": 115553,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -1059,7 +1059,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_dust2",
-    "mapStatId": 115549,
+    "mapStatsId": 115549,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -1080,7 +1080,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_mirage",
-    "mapStatId": 115552,
+    "mapStatsId": 115552,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -1101,7 +1101,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_dust2",
-    "mapStatId": 115548,
+    "mapStatsId": 115548,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -1122,7 +1122,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115544,
+    "mapStatsId": 115544,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -1143,7 +1143,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_dust2",
-    "mapStatId": 115542,
+    "mapStatsId": 115542,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -1164,7 +1164,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115543,
+    "mapStatsId": 115543,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -1185,7 +1185,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_train",
-    "mapStatId": 115541,
+    "mapStatsId": 115541,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -1206,7 +1206,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_dust2",
-    "mapStatId": 115545,
+    "mapStatsId": 115545,
     "result": Object {
       "team1": 22,
       "team2": 20,
@@ -1227,7 +1227,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_train",
-    "mapStatId": 115540,
+    "mapStatsId": 115540,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -1248,7 +1248,7 @@ Array [
       "name": "Ghetto eGames Cup 2",
     },
     "map": "de_inferno",
-    "mapStatId": 115538,
+    "mapStatsId": 115538,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -1269,7 +1269,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115539,
+    "mapStatsId": 115539,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -1290,7 +1290,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115537,
+    "mapStatsId": 115537,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -1311,7 +1311,7 @@ Array [
       "name": "Esportal Nordic Invitational 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115536,
+    "mapStatsId": 115536,
     "result": Object {
       "team1": 16,
       "team2": 4,
@@ -1331,8 +1331,8 @@ Array [
       "id": 5765,
       "name": "Esportal Nordic Invitational 2021",
     },
-    "map": "default",
-    "mapStatId": 115535,
+    "map": "de_vertigo",
+    "mapStatsId": 115535,
     "result": Object {
       "team1": 1,
       "team2": 16,
@@ -1353,7 +1353,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115534,
+    "mapStatsId": 115534,
     "result": Object {
       "team1": 16,
       "team2": 7,
@@ -1374,7 +1374,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115532,
+    "mapStatsId": 115532,
     "result": Object {
       "team1": 19,
       "team2": 15,
@@ -1395,7 +1395,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_mirage",
-    "mapStatId": 115530,
+    "mapStatsId": 115530,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -1416,7 +1416,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115531,
+    "mapStatsId": 115531,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -1437,7 +1437,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115529,
+    "mapStatsId": 115529,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -1458,7 +1458,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_inferno",
-    "mapStatId": 115528,
+    "mapStatsId": 115528,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -1478,8 +1478,8 @@ Array [
       "id": 5724,
       "name": "WESG 2021 LatAm North",
     },
-    "map": "default",
-    "mapStatId": 115525,
+    "map": "de_vertigo",
+    "mapStatsId": 115525,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -1500,7 +1500,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_nuke",
-    "mapStatId": 115520,
+    "mapStatsId": 115520,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -1521,7 +1521,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_overpass",
-    "mapStatId": 115527,
+    "mapStatsId": 115527,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -1542,7 +1542,7 @@ Array [
       "name": "WESG 2021 LatAm North",
     },
     "map": "de_nuke",
-    "mapStatId": 115523,
+    "mapStatsId": 115523,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -1563,7 +1563,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_mirage",
-    "mapStatId": 115524,
+    "mapStatsId": 115524,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -1584,7 +1584,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_dust2",
-    "mapStatId": 115521,
+    "mapStatsId": 115521,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -1605,7 +1605,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_nuke",
-    "mapStatId": 115526,
+    "mapStatsId": 115526,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -1625,8 +1625,8 @@ Array [
       "id": 5767,
       "name": "Liga PRO #2 - FEB/21",
     },
-    "map": "default",
-    "mapStatId": 115522,
+    "map": "de_vertigo",
+    "mapStatsId": 115522,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -1646,8 +1646,8 @@ Array [
       "id": 5757,
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
-    "map": "default",
-    "mapStatId": 115519,
+    "map": "de_vertigo",
+    "mapStatsId": 115519,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -1668,7 +1668,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115512,
+    "mapStatsId": 115512,
     "result": Object {
       "team1": 16,
       "team2": 3,
@@ -1689,7 +1689,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115513,
+    "mapStatsId": 115513,
     "result": Object {
       "team1": 16,
       "team2": 4,
@@ -1710,7 +1710,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_mirage",
-    "mapStatId": 115511,
+    "mapStatsId": 115511,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -1731,7 +1731,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_dust2",
-    "mapStatId": 115515,
+    "mapStatsId": 115515,
     "result": Object {
       "team1": 25,
       "team2": 22,
@@ -1752,7 +1752,7 @@ Array [
       "name": "Liga PRO #2 - FEB/21",
     },
     "map": "de_nuke",
-    "mapStatId": 115507,
+    "mapStatsId": 115507,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -1773,7 +1773,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_mirage",
-    "mapStatId": 115514,
+    "mapStatsId": 115514,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -1794,7 +1794,7 @@ Array [
       "name": "WESG 2021 LatAm South",
     },
     "map": "de_train",
-    "mapStatId": 115509,
+    "mapStatsId": 115509,
     "result": Object {
       "team1": 17,
       "team2": 19,
@@ -1814,8 +1814,8 @@ Array [
       "id": 5760,
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
-    "map": "default",
-    "mapStatId": 115508,
+    "map": "de_vertigo",
+    "mapStatsId": 115508,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -1836,7 +1836,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115505,
+    "mapStatsId": 115505,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -1857,7 +1857,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_inferno",
-    "mapStatId": 115506,
+    "mapStatsId": 115506,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -1878,7 +1878,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_train",
-    "mapStatId": 115504,
+    "mapStatsId": 115504,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -1899,7 +1899,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115503,
+    "mapStatsId": 115503,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -1920,7 +1920,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_overpass",
-    "mapStatId": 115502,
+    "mapStatsId": 115502,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -1941,7 +1941,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115500,
+    "mapStatsId": 115500,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -1962,7 +1962,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_train",
-    "mapStatId": 115501,
+    "mapStatsId": 115501,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -1983,7 +1983,7 @@ Array [
       "name": "IEM Katowice 2021",
     },
     "map": "de_overpass",
-    "mapStatId": 115499,
+    "mapStatsId": 115499,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2004,7 +2004,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_nuke",
-    "mapStatId": 115498,
+    "mapStatsId": 115498,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -2025,7 +2025,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115497,
+    "mapStatsId": 115497,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2046,7 +2046,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115496,
+    "mapStatsId": 115496,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2067,7 +2067,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115495,
+    "mapStatsId": 115495,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -2088,7 +2088,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115494,
+    "mapStatsId": 115494,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -2109,7 +2109,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115493,
+    "mapStatsId": 115493,
     "result": Object {
       "team1": 16,
       "team2": 4,
@@ -2130,7 +2130,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115492,
+    "mapStatsId": 115492,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -2151,7 +2151,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_mirage",
-    "mapStatId": 115490,
+    "mapStatsId": 115490,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -2172,7 +2172,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115485,
+    "mapStatsId": 115485,
     "result": Object {
       "team1": 22,
       "team2": 19,
@@ -2193,14 +2193,14 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115491,
+    "mapStatsId": 115491,
     "result": Object {
       "team1": 14,
       "team2": 16,
     },
     "team1": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
     "team2": Object {
       "id": 10469,
@@ -2213,15 +2213,15 @@ Array [
       "id": 5757,
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
-    "map": "default",
-    "mapStatId": 115488,
+    "map": "de_vertigo",
+    "mapStatsId": 115488,
     "result": Object {
       "team1": 11,
       "team2": 16,
     },
     "team1": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
     "team2": Object {
       "id": 10469,
@@ -2235,7 +2235,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115481,
+    "mapStatsId": 115481,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -2246,7 +2246,7 @@ Array [
     },
     "team2": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
   },
   Object {
@@ -2255,8 +2255,8 @@ Array [
       "id": 5757,
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
-    "map": "default",
-    "mapStatId": 115489,
+    "map": "de_vertigo",
+    "mapStatsId": 115489,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -2277,7 +2277,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115482,
+    "mapStatsId": 115482,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -2298,7 +2298,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_mirage",
-    "mapStatId": 115484,
+    "mapStatsId": 115484,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -2319,7 +2319,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115480,
+    "mapStatsId": 115480,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -2340,7 +2340,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115483,
+    "mapStatsId": 115483,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -2361,7 +2361,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115479,
+    "mapStatsId": 115479,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -2382,7 +2382,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115478,
+    "mapStatsId": 115478,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -2403,7 +2403,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115474,
+    "mapStatsId": 115474,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -2424,7 +2424,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_dust2",
-    "mapStatId": 115476,
+    "mapStatsId": 115476,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -2445,7 +2445,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115472,
+    "mapStatsId": 115472,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -2465,8 +2465,8 @@ Array [
       "id": 5722,
       "name": "WESG 2021 Brazil",
     },
-    "map": "default",
-    "mapStatId": 115475,
+    "map": "de_vertigo",
+    "mapStatsId": 115475,
     "result": Object {
       "team1": 16,
       "team2": 0,
@@ -2487,7 +2487,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_inferno",
-    "mapStatId": 115473,
+    "mapStatsId": 115473,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -2508,7 +2508,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115477,
+    "mapStatsId": 115477,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -2529,7 +2529,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115471,
+    "mapStatsId": 115471,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2550,7 +2550,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115464,
+    "mapStatsId": 115464,
     "result": Object {
       "team1": 19,
       "team2": 22,
@@ -2571,7 +2571,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115470,
+    "mapStatsId": 115470,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -2592,7 +2592,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115462,
+    "mapStatsId": 115462,
     "result": Object {
       "team1": 19,
       "team2": 16,
@@ -2613,7 +2613,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_inferno",
-    "mapStatId": 115469,
+    "mapStatsId": 115469,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -2634,7 +2634,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115460,
+    "mapStatsId": 115460,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -2655,14 +2655,14 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115468,
+    "mapStatsId": 115468,
     "result": Object {
       "team1": 9,
       "team2": 16,
     },
     "team1": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
     "team2": Object {
       "id": 10948,
@@ -2676,7 +2676,7 @@ Array [
       "name": "DreamHack Open March 2021 North America Closed Qualifier",
     },
     "map": "de_train",
-    "mapStatId": 115459,
+    "mapStatsId": 115459,
     "result": Object {
       "team1": 16,
       "team2": 0,
@@ -2687,7 +2687,7 @@ Array [
     },
     "team2": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
   },
   Object {
@@ -2697,7 +2697,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_train",
-    "mapStatId": 115467,
+    "mapStatsId": 115467,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2718,7 +2718,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_nuke",
-    "mapStatId": 115457,
+    "mapStatsId": 115457,
     "result": Object {
       "team1": 19,
       "team2": 17,
@@ -2739,7 +2739,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115461,
+    "mapStatsId": 115461,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -2760,7 +2760,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_mirage",
-    "mapStatId": 115455,
+    "mapStatsId": 115455,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -2781,7 +2781,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115453,
+    "mapStatsId": 115453,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -2802,7 +2802,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_overpass",
-    "mapStatId": 115456,
+    "mapStatsId": 115456,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -2823,7 +2823,7 @@ Array [
       "name": "DreamHack Open March 2021 South America Closed Qualifier",
     },
     "map": "de_nuke",
-    "mapStatId": 115454,
+    "mapStatsId": 115454,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -2844,7 +2844,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115451,
+    "mapStatsId": 115451,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -2865,7 +2865,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115448,
+    "mapStatsId": 115448,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -2886,7 +2886,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_mirage",
-    "mapStatId": 115452,
+    "mapStatsId": 115452,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -2907,7 +2907,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_train",
-    "mapStatId": 115450,
+    "mapStatsId": 115450,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -2928,7 +2928,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_nuke",
-    "mapStatId": 115447,
+    "mapStatsId": 115447,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -2949,7 +2949,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_nuke",
-    "mapStatId": 115449,
+    "mapStatsId": 115449,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -2970,7 +2970,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115446,
+    "mapStatsId": 115446,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -2990,8 +2990,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115444,
+    "map": "de_vertigo",
+    "mapStatsId": 115444,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -3012,7 +3012,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115441,
+    "mapStatsId": 115441,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -3032,8 +3032,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115445,
+    "map": "de_vertigo",
+    "mapStatsId": 115445,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -3054,7 +3054,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115443,
+    "mapStatsId": 115443,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -3075,7 +3075,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115442,
+    "mapStatsId": 115442,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -3096,7 +3096,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115440,
+    "mapStatsId": 115440,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -3117,7 +3117,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115439,
+    "mapStatsId": 115439,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -3138,7 +3138,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115436,
+    "mapStatsId": 115436,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -3159,7 +3159,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_overpass",
-    "mapStatId": 115438,
+    "mapStatsId": 115438,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -3180,7 +3180,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115437,
+    "mapStatsId": 115437,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -3201,7 +3201,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_inferno",
-    "mapStatId": 115435,
+    "mapStatsId": 115435,
     "result": Object {
       "team1": 16,
       "team2": 7,
@@ -3222,7 +3222,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115432,
+    "mapStatsId": 115432,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -3243,7 +3243,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115434,
+    "mapStatsId": 115434,
     "result": Object {
       "team1": 16,
       "team2": 7,
@@ -3264,7 +3264,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_mirage",
-    "mapStatId": 115431,
+    "mapStatsId": 115431,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -3285,14 +3285,14 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115433,
+    "mapStatsId": 115433,
     "result": Object {
       "team1": 10,
       "team2": 16,
     },
     "team1": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
     "team2": Object {
       "id": 10948,
@@ -3306,7 +3306,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_nuke",
-    "mapStatId": 115430,
+    "mapStatsId": 115430,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -3317,7 +3317,7 @@ Array [
     },
     "team2": Object {
       "id": 10282,
-      "name": "Oceanus",
+      "name": "OCG",
     },
   },
   Object {
@@ -3327,7 +3327,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_train",
-    "mapStatId": 115429,
+    "mapStatsId": 115429,
     "result": Object {
       "team1": 16,
       "team2": 0,
@@ -3348,7 +3348,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_mirage",
-    "mapStatId": 115428,
+    "mapStatsId": 115428,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -3369,7 +3369,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_dust2",
-    "mapStatId": 115426,
+    "mapStatsId": 115426,
     "result": Object {
       "team1": 19,
       "team2": 15,
@@ -3390,7 +3390,7 @@ Array [
       "name": "WESG 2021 Brazil",
     },
     "map": "de_train",
-    "mapStatId": 115425,
+    "mapStatsId": 115425,
     "result": Object {
       "team1": 2,
       "team2": 16,
@@ -3410,8 +3410,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115424,
+    "map": "de_vertigo",
+    "mapStatsId": 115424,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -3432,7 +3432,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_train",
-    "mapStatId": 115420,
+    "mapStatsId": 115420,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -3453,7 +3453,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115412,
+    "mapStatsId": 115412,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -3473,8 +3473,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115423,
+    "map": "de_vertigo",
+    "mapStatsId": 115423,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -3495,7 +3495,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115418,
+    "mapStatsId": 115418,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -3516,7 +3516,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_dust2",
-    "mapStatId": 115413,
+    "mapStatsId": 115413,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -3537,7 +3537,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_inferno",
-    "mapStatId": 115422,
+    "mapStatsId": 115422,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -3558,7 +3558,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_mirage",
-    "mapStatId": 115419,
+    "mapStatsId": 115419,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -3578,8 +3578,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115416,
+    "map": "de_vertigo",
+    "mapStatsId": 115416,
     "result": Object {
       "team1": 19,
       "team2": 16,
@@ -3600,7 +3600,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_inferno",
-    "mapStatId": 115421,
+    "mapStatsId": 115421,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -3621,7 +3621,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_overpass",
-    "mapStatId": 115414,
+    "mapStatsId": 115414,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -3642,7 +3642,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115411,
+    "mapStatsId": 115411,
     "result": Object {
       "team1": 16,
       "team2": 4,
@@ -3663,7 +3663,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115410,
+    "mapStatsId": 115410,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -3683,8 +3683,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115415,
+    "map": "de_vertigo",
+    "mapStatsId": 115415,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -3705,7 +3705,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115408,
+    "mapStatsId": 115408,
     "result": Object {
       "team1": 17,
       "team2": 19,
@@ -3726,7 +3726,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115405,
+    "mapStatsId": 115405,
     "result": Object {
       "team1": 16,
       "team2": 2,
@@ -3747,7 +3747,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115402,
+    "mapStatsId": 115402,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -3768,7 +3768,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115407,
+    "mapStatsId": 115407,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -3789,7 +3789,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115404,
+    "mapStatsId": 115404,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -3810,7 +3810,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_overpass",
-    "mapStatId": 115400,
+    "mapStatsId": 115400,
     "result": Object {
       "team1": 17,
       "team2": 19,
@@ -3831,7 +3831,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_mirage",
-    "mapStatId": 115406,
+    "mapStatsId": 115406,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -3851,8 +3851,8 @@ Array [
       "id": 5727,
       "name": "European Development Championship 2",
     },
-    "map": "default",
-    "mapStatId": 115403,
+    "map": "de_vertigo",
+    "mapStatsId": 115403,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -3873,7 +3873,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_train",
-    "mapStatId": 115399,
+    "mapStatsId": 115399,
     "result": Object {
       "team1": 16,
       "team2": 5,
@@ -3894,7 +3894,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115395,
+    "mapStatsId": 115395,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -3915,7 +3915,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115392,
+    "mapStatsId": 115392,
     "result": Object {
       "team1": 16,
       "team2": 3,
@@ -3936,7 +3936,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115396,
+    "mapStatsId": 115396,
     "result": Object {
       "team1": 22,
       "team2": 19,
@@ -3957,7 +3957,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115393,
+    "mapStatsId": 115393,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -3978,7 +3978,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115389,
+    "mapStatsId": 115389,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -3999,7 +3999,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_overpass",
-    "mapStatId": 115394,
+    "mapStatsId": 115394,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4020,7 +4020,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_mirage",
-    "mapStatId": 115391,
+    "mapStatsId": 115391,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -4041,7 +4041,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_nuke",
-    "mapStatId": 115385,
+    "mapStatsId": 115385,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -4062,7 +4062,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_dust2",
-    "mapStatId": 115384,
+    "mapStatsId": 115384,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -4083,7 +4083,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_nuke",
-    "mapStatId": 115381,
+    "mapStatsId": 115381,
     "result": Object {
       "team1": 25,
       "team2": 28,
@@ -4104,7 +4104,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_dust2",
-    "mapStatId": 115378,
+    "mapStatsId": 115378,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -4125,7 +4125,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_nuke",
-    "mapStatId": 115380,
+    "mapStatsId": 115380,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -4145,8 +4145,8 @@ Array [
       "id": 5705,
       "name": "ESEA Premier Season 36 Australia",
     },
-    "map": "default",
-    "mapStatId": 115376,
+    "map": "de_vertigo",
+    "mapStatsId": 115376,
     "result": Object {
       "team1": 16,
       "team2": 8,
@@ -4167,7 +4167,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115383,
+    "mapStatsId": 115383,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -4187,8 +4187,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115379,
+    "map": "de_vertigo",
+    "mapStatsId": 115379,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -4209,7 +4209,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115377,
+    "mapStatsId": 115377,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -4230,7 +4230,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_nuke",
-    "mapStatId": 115373,
+    "mapStatsId": 115373,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -4251,7 +4251,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115375,
+    "mapStatsId": 115375,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4272,7 +4272,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115374,
+    "mapStatsId": 115374,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4293,7 +4293,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115372,
+    "mapStatsId": 115372,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -4314,7 +4314,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_inferno",
-    "mapStatId": 115368,
+    "mapStatsId": 115368,
     "result": Object {
       "team1": 2,
       "team2": 16,
@@ -4335,7 +4335,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_nuke",
-    "mapStatId": 115364,
+    "mapStatsId": 115364,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -4356,7 +4356,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_nuke",
-    "mapStatId": 115371,
+    "mapStatsId": 115371,
     "result": Object {
       "team1": 16,
       "team2": 2,
@@ -4377,7 +4377,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_inferno",
-    "mapStatId": 115367,
+    "mapStatsId": 115367,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4398,7 +4398,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115360,
+    "mapStatsId": 115360,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -4419,7 +4419,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_nuke",
-    "mapStatId": 115370,
+    "mapStatsId": 115370,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -4440,7 +4440,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_dust2",
-    "mapStatId": 115366,
+    "mapStatsId": 115366,
     "result": Object {
       "team1": 12,
       "team2": 16,
@@ -4460,8 +4460,8 @@ Array [
       "id": 5704,
       "name": "ESEA Premier Season 36 North America",
     },
-    "map": "default",
-    "mapStatId": 115358,
+    "map": "de_vertigo",
+    "mapStatsId": 115358,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -4482,7 +4482,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_inferno",
-    "mapStatId": 115369,
+    "mapStatsId": 115369,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -4503,7 +4503,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_mirage",
-    "mapStatId": 115362,
+    "mapStatsId": 115362,
     "result": Object {
       "team1": 17,
       "team2": 19,
@@ -4524,7 +4524,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_overpass",
-    "mapStatId": 115365,
+    "mapStatsId": 115365,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -4545,7 +4545,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_mirage",
-    "mapStatId": 115359,
+    "mapStatsId": 115359,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -4566,7 +4566,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_train",
-    "mapStatId": 115361,
+    "mapStatsId": 115361,
     "result": Object {
       "team1": 16,
       "team2": 2,
@@ -4587,7 +4587,7 @@ Array [
       "name": "ESEA Premier Season 36 North America",
     },
     "map": "de_nuke",
-    "mapStatId": 115357,
+    "mapStatsId": 115357,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -4608,7 +4608,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_overpass",
-    "mapStatId": 115355,
+    "mapStatsId": 115355,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -4629,7 +4629,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_train",
-    "mapStatId": 115346,
+    "mapStatsId": 115346,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4650,7 +4650,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_inferno",
-    "mapStatId": 115342,
+    "mapStatsId": 115342,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -4671,7 +4671,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_dust2",
-    "mapStatId": 115353,
+    "mapStatsId": 115353,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -4692,7 +4692,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_nuke",
-    "mapStatId": 115345,
+    "mapStatsId": 115345,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -4712,8 +4712,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115338,
+    "map": "de_vertigo",
+    "mapStatsId": 115338,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -4734,7 +4734,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_inferno",
-    "mapStatId": 115349,
+    "mapStatsId": 115349,
     "result": Object {
       "team1": 24,
       "team2": 28,
@@ -4755,7 +4755,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_mirage",
-    "mapStatId": 115339,
+    "mapStatsId": 115339,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -4776,7 +4776,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_train",
-    "mapStatId": 115347,
+    "mapStatsId": 115347,
     "result": Object {
       "team1": 22,
       "team2": 18,
@@ -4796,8 +4796,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115341,
+    "map": "de_vertigo",
+    "mapStatsId": 115341,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -4817,8 +4817,8 @@ Array [
       "id": 5701,
       "name": "ESEA Premier Season 36 Europe",
     },
-    "map": "default",
-    "mapStatId": 115344,
+    "map": "de_vertigo",
+    "mapStatsId": 115344,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -4839,7 +4839,7 @@ Array [
       "name": "ESEA Premier Season 36 Europe",
     },
     "map": "de_overpass",
-    "mapStatId": 115337,
+    "mapStatsId": 115337,
     "result": Object {
       "team1": 16,
       "team2": 3,
@@ -4860,7 +4860,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115343,
+    "mapStatsId": 115343,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -4881,7 +4881,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115336,
+    "mapStatsId": 115336,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -4902,7 +4902,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_overpass",
-    "mapStatId": 115340,
+    "mapStatsId": 115340,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -4923,7 +4923,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115335,
+    "mapStatsId": 115335,
     "result": Object {
       "team1": 16,
       "team2": 10,
@@ -4944,7 +4944,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_nuke",
-    "mapStatId": 115334,
+    "mapStatsId": 115334,
     "result": Object {
       "team1": 6,
       "team2": 16,
@@ -4965,7 +4965,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_dust2",
-    "mapStatId": 115320,
+    "mapStatsId": 115320,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -4985,8 +4985,8 @@ Array [
       "id": 5727,
       "name": "European Development Championship 2",
     },
-    "map": "default",
-    "mapStatId": 115319,
+    "map": "de_vertigo",
+    "mapStatsId": 115319,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -5007,7 +5007,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115330,
+    "mapStatsId": 115330,
     "result": Object {
       "team1": 15,
       "team2": 19,
@@ -5028,7 +5028,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115318,
+    "mapStatsId": 115318,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -5049,7 +5049,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115316,
+    "mapStatsId": 115316,
     "result": Object {
       "team1": 16,
       "team2": 12,
@@ -5070,7 +5070,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_train",
-    "mapStatId": 115317,
+    "mapStatsId": 115317,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -5091,7 +5091,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115314,
+    "mapStatsId": 115314,
     "result": Object {
       "team1": 5,
       "team2": 16,
@@ -5112,7 +5112,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_nuke",
-    "mapStatId": 115315,
+    "mapStatsId": 115315,
     "result": Object {
       "team1": 16,
       "team2": 14,
@@ -5133,7 +5133,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_inferno",
-    "mapStatId": 115313,
+    "mapStatsId": 115313,
     "result": Object {
       "team1": 9,
       "team2": 16,
@@ -5154,7 +5154,7 @@ Array [
       "name": "European Development Championship 2",
     },
     "map": "de_dust2",
-    "mapStatId": 115310,
+    "mapStatsId": 115310,
     "result": Object {
       "team1": 13,
       "team2": 16,
@@ -5175,7 +5175,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115312,
+    "mapStatsId": 115312,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -5195,8 +5195,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115309,
+    "map": "de_vertigo",
+    "mapStatsId": 115309,
     "result": Object {
       "team1": 16,
       "team2": 11,
@@ -5217,7 +5217,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115311,
+    "mapStatsId": 115311,
     "result": Object {
       "team1": 16,
       "team2": 9,
@@ -5238,7 +5238,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115308,
+    "mapStatsId": 115308,
     "result": Object {
       "team1": 0,
       "team2": 16,
@@ -5259,7 +5259,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_overpass",
-    "mapStatId": 115307,
+    "mapStatsId": 115307,
     "result": Object {
       "team1": 16,
       "team2": 13,
@@ -5280,7 +5280,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_nuke",
-    "mapStatId": 115304,
+    "mapStatsId": 115304,
     "result": Object {
       "team1": 7,
       "team2": 16,
@@ -5301,7 +5301,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_inferno",
-    "mapStatId": 115305,
+    "mapStatsId": 115305,
     "result": Object {
       "team1": 16,
       "team2": 6,
@@ -5322,7 +5322,7 @@ Array [
       "name": "ESEA Premier Season 36 Australia",
     },
     "map": "de_nuke",
-    "mapStatId": 115301,
+    "mapStatsId": 115301,
     "result": Object {
       "team1": 4,
       "team2": 16,
@@ -5342,8 +5342,8 @@ Array [
       "id": 5751,
       "name": "Snow Sweet Snow 2 Regionals",
     },
-    "map": "default",
-    "mapStatId": 115306,
+    "map": "de_vertigo",
+    "mapStatsId": 115306,
     "result": Object {
       "team1": 10,
       "team2": 16,
@@ -5364,7 +5364,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_mirage",
-    "mapStatId": 115303,
+    "mapStatsId": 115303,
     "result": Object {
       "team1": 14,
       "team2": 16,
@@ -5385,7 +5385,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_inferno",
-    "mapStatId": 115299,
+    "mapStatsId": 115299,
     "result": Object {
       "team1": 8,
       "team2": 16,
@@ -5406,7 +5406,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_nuke",
-    "mapStatId": 115302,
+    "mapStatsId": 115302,
     "result": Object {
       "team1": 11,
       "team2": 16,
@@ -5427,7 +5427,7 @@ Array [
       "name": "Snow Sweet Snow 2 Regionals",
     },
     "map": "de_dust2",
-    "mapStatId": 115300,
+    "mapStatsId": 115300,
     "result": Object {
       "team1": 16,
       "team2": 8,
