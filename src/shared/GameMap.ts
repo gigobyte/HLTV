@@ -11,6 +11,7 @@ export enum GameMap {
   Tuscan = 'de_tuscan',
   Vertigo = 'de_vertigo',
   Season = 'de_season',
+  Ancient = 'de_ancient',
   Default = 'default'
 }
 
@@ -38,6 +39,8 @@ export const fromMapSlug = (slug: string): GameMap => {
       return GameMap.Tuscan
     case 'vtg':
       return GameMap.Vertigo
+    case 'anc':
+      return GameMap.Ancient
     case '-':
       return GameMap.Default
     default:
@@ -74,6 +77,8 @@ export const fromMapName = (name: string): GameMap => {
       return GameMap.Tuscan
     case 'Vertigo':
       return GameMap.Vertigo
+    case 'Ancient':
+      return GameMap.Ancient
     case 'Default':
       return GameMap.Default
     default:
@@ -103,6 +108,8 @@ export const toMapFilter = (map: GameMap): string => {
       return 'de_tuscan'
     case GameMap.Vertigo:
       return 'de_vertigo'
+    case GameMap.Ancient:
+      return 'de_ancient'
     case GameMap.Season:
       return 'de_season'
     case GameMap.TBA:
