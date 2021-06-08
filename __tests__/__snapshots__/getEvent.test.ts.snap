@@ -23,7 +23,7 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106330568-preview.jpg",
-      "views": 361,
+      "views": 362,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106318896.mp4",
@@ -37,7 +37,7 @@ Object {
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106318896-preview.jpg",
-      "views": 53,
+      "views": 54,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106334846.mp4",
@@ -135,7 +135,7 @@ Object {
         "name": "BLINK",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106972135-preview.jpg",
-      "views": 31,
+      "views": 32,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106321539.mp4",
@@ -152,20 +152,6 @@ Object {
       "views": 29,
     },
     Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915.mp4",
-      "name": "M1 | Nodios - 4 AK kills on the bombsite B offensive to set Copenhagen Flames on map point",
-      "team1": Object {
-        "id": 8515,
-        "name": "OFFSET",
-      },
-      "team2": Object {
-        "id": 7461,
-        "name": "Copenhagen Flames",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915-preview.jpg",
-      "views": 19,
-    },
-    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672.mp4",
       "name": "M2 | hades - 1vs2 AWP clutch (CT - post-plant situation)",
       "team1": Object {
@@ -177,6 +163,20 @@ Object {
         "name": "BLINK",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106985672-preview.jpg",
+      "views": 20,
+    },
+    Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915.mp4",
+      "name": "M1 | Nodios - 4 AK kills on the bombsite B offensive to set Copenhagen Flames on map point",
+      "team1": Object {
+        "id": 8515,
+        "name": "OFFSET",
+      },
+      "team2": Object {
+        "id": 7461,
+        "name": "Copenhagen Flames",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106271915-preview.jpg",
       "views": 19,
     },
     Object {
@@ -194,6 +194,20 @@ Object {
       "views": 16,
     },
     Object {
+      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106978258.mp4",
+      "name": "M1 | SZPERO - 1vs2 clutch (CT - pre-plant situation)",
+      "team1": Object {
+        "id": 10426,
+        "name": "Wisla Krakow",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106978258-preview.jpg",
+      "views": 16,
+    },
+    Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164.mp4",
       "name": "M2 | sinnopsyy - 1vs2 clutch (CT - post-plant situation) to mark his 3rd clutch in consecutive rounds",
       "team1": Object {
@@ -206,20 +220,6 @@ Object {
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106999164-preview.jpg",
       "views": 16,
-    },
-    Object {
-      "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106978258.mp4",
-      "name": "M1 | SZPERO - 1vs2 clutch (CT - pre-plant situation)",
-      "team1": Object {
-        "id": 10426,
-        "name": "Wisla Krakow",
-      },
-      "team2": Object {
-        "id": 10697,
-        "name": "BLINK",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106978258-preview.jpg",
-      "views": 15,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106987945.mp4",
@@ -317,7 +317,7 @@ Object {
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105505492-preview.jpg",
-      "views": 41,
+      "views": 42,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105489583.mp4",
@@ -681,7 +681,7 @@ Object {
         "name": "Galaxy Racer",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102787853-preview.jpg",
-      "views": 41,
+      "views": 42,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102785716.mp4",
@@ -695,7 +695,7 @@ Object {
         "name": "Galaxy Racer",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1102785716-preview.jpg",
-      "views": 28,
+      "views": 29,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/vod-958723787-offset-22238.mp4",
@@ -709,7 +709,7 @@ Object {
         "name": "Galaxy Racer",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/vod-958723787-offset-22238-preview.jpg",
-      "views": 25,
+      "views": 26,
     },
     Object {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098626087.mp4",
@@ -1417,7 +1417,7 @@ Object {
       },
     },
   ],
-  "prizePool": "$32,000",
+  "prizePool": "$24,000",
   "relatedEvents": Array [
     Object {
       "id": 5751,

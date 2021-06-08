@@ -290,6 +290,26 @@ Object {
   "name": "Aleksandr Kostyliev",
   "news": Array [
     Object {
+      "link": "/news/31845/navi-entropiq-to-play-epic-league-cis-fifth-place-decider-on-tuesday",
+      "name": "NAVI, Entropiq to play EPIC League CIS fifth-place decider on Tuesday",
+    },
+    Object {
+      "link": "/news/31824/spirit-eliminate-navi-from-epic-league-cis-virtuspro-move-past-entropiq",
+      "name": "Spirit eliminate NAVI from EPIC League CIS; Virtus.pro move past Entropiq",
+    },
+    Object {
+      "link": "/news/31811/akumas-sergiz-on-beating-navi-the-emotions-are-unreal",
+      "name": "Akuma's Sergiz on beating NAVI: \\"The emotions are unreal\\"",
+    },
+    Object {
+      "link": "/news/31809/akuma-shock-navi-in-epic-league-cis",
+      "name": "Akuma shock NAVI in EPIC League CIS",
+    },
+    Object {
+      "link": "/news/31784/navi-defeat-gambit-to-advance-to-epic-league-cis-playoffs",
+      "name": "NAVI defeat Gambit to advance to EPIC League CIS playoffs",
+    },
+    Object {
       "link": "/news/31760/entropiq-upset-navi-in-epic-league-cis",
       "name": "Entropiq upset NAVI in EPIC League CIS",
     },
@@ -3551,12 +3571,12 @@ Object {
     },
   ],
   "statistics": Object {
-    "deathsPerRound": 0.61,
-    "headshots": 36.7,
-    "killsPerRound": 0.87,
-    "mapsPlayed": 40,
-    "rating": 1.33,
-    "roundsContributed": 74.7,
+    "deathsPerRound": 0.62,
+    "headshots": 36.2,
+    "killsPerRound": 0.88,
+    "mapsPlayed": 45,
+    "rating": 1.34,
+    "roundsContributed": 74.9,
   },
   "team": Object {
     "id": 4608,
