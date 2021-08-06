@@ -133,6 +133,7 @@ export const HLTVScraper = (root: cheerio.Root): HLTVPage => {
   const selector = (selector: string): HLTVPageElement => {
     return attachMethods(root(selector))
   }
+  Object.assign(selector, root)
 
   return selector as HLTVPage
 }
