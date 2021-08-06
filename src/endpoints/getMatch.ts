@@ -110,66 +110,64 @@ export interface FullMatch {
   playerOfTheMatch?: Player
 }
 
-export const getMatch = (config: HLTVConfig) => async ({
-  id
-}: {
-  id: number
-}): Promise<FullMatch> => {
-  const $ = HLTVScraper(
-    await fetchPage(
-      `https://www.hltv.org/matches/${id}/${generateRandomSuffix()}`,
-      config.loadPage
+export const getMatch =
+  (config: HLTVConfig) =>
+  async ({ id }: { id: number }): Promise<FullMatch> => {
+    const $ = HLTVScraper(
+      await fetchPage(
+        `https://www.hltv.org/matches/${id}/${generateRandomSuffix()}`,
+        config.loadPage
+      )
     )
-  )
 
-  const title = $('.timeAndEvent .text').trimText()
-  const date = $('.timeAndEvent .date').numFromAttr('data-unix')
-  const format = getFormat($)
-  const significance = getMatchSignificance($)
-  const status = getMatchStatus($)
-  const hasScorebot = $('#scoreboardElement').exists()
-  const statsId = getStatsId($)
-  const team1 = getTeam($, 1)
-  const team2 = getTeam($, 2)
-  const vetoes = getVetoes($, team1, team2)
-  const event = getEvent($)
-  const odds = getOdds($)
-  const oddsCommunity = getCommunityOdds($)
-  const maps = getMaps($)
-  const players = getPlayers($)
-  const streams = getStreams($)
-  const demos = getDemos($)
-  const highlightedPlayers = getHighlightedPlayers($)
-  const headToHead = getHeadToHead($)
-  const highlights = getHighlights($, team1, team2)
-  const playerOfTheMatch = getPlayerOfTheMatch($)
-  const winnerTeam = getWinnerTeam($, team1, team2)
+    const title = $('.timeAndEvent .text').trimText()
+    const date = $('.timeAndEvent .date').numFromAttr('data-unix')
+    const format = getFormat($)
+    const significance = getMatchSignificance($)
+    const status = getMatchStatus($)
+    const hasScorebot = $('#scoreboardElement').exists()
+    const statsId = getStatsId($)
+    const team1 = getTeam($, 1)
+    const team2 = getTeam($, 2)
+    const vetoes = getVetoes($, team1, team2)
+    const event = getEvent($)
+    const odds = getOdds($)
+    const oddsCommunity = getCommunityOdds($)
+    const maps = getMaps($)
+    const players = getPlayers($)
+    const streams = getStreams($)
+    const demos = getDemos($)
+    const highlightedPlayers = getHighlightedPlayers($)
+    const headToHead = getHeadToHead($)
+    const highlights = getHighlights($, team1, team2)
+    const playerOfTheMatch = getPlayerOfTheMatch($, players)
+    const winnerTeam = getWinnerTeam($, team1, team2)
 
-  return {
-    id,
-    statsId,
-    significance,
-    team1,
-    team2,
-    winnerTeam,
-    date,
-    format,
-    event,
-    maps,
-    players,
-    streams,
-    status,
-    title,
-    hasScorebot,
-    highlightedPlayers,
-    playerOfTheMatch,
-    headToHead,
-    vetoes,
-    highlights,
-    demos,
-    odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
+    return {
+      id,
+      statsId,
+      significance,
+      team1,
+      team2,
+      winnerTeam,
+      date,
+      format,
+      event,
+      maps,
+      players,
+      streams,
+      status,
+      title,
+      hasScorebot,
+      highlightedPlayers,
+      playerOfTheMatch,
+      headToHead,
+      vetoes,
+      highlights,
+      demos,
+      odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
+    }
   }
-}
 
 function getMatchStatus($: HLTVPage): MatchStatus {
   let status = MatchStatus.Scheduled
@@ -506,18 +504,20 @@ function getStatsId($: HLTVPage): number | undefined {
   }
 }
 
-function getPlayerOfTheMatch($: HLTVPage): Player | undefined {
-  const playerLink: string | undefined = $('.highlighted-player')
-    .find('.flag')
-    .next()
-    .attr('href')
+function getPlayerOfTheMatch(
+  $: HLTVPage,
+  players: Record<string, Player[]>
+): Player | undefined {
+  const playerName: string | undefined = $(
+    '.highlighted-player .player-nick'
+  ).text()
 
-  return playerLink
-    ? {
-        name: playerLink.split('/').pop()!,
-        id: Number(playerLink.split('/')[2])
-      }
-    : undefined
+  if (playerName) {
+    return (
+      players.team1.find((x) => x.name === playerName) ||
+      players.team2.find((x) => x.name === playerName)
+    )
+  }
 }
 
 function getWinnerTeam(
