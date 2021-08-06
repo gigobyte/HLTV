@@ -58,90 +58,92 @@ export interface GetResultsArguments {
   delayBetweenPageRequests?: number
 }
 
-export const getResults = (config: HLTVConfig) => async (
-  options: GetResultsArguments
-): Promise<FullMatchResult[]> => {
-  const query = stringify({
-    ...(options.startDate ? { startDate: options.startDate } : {}),
-    ...(options.endDate ? { endDate: options.endDate } : {}),
-    ...(options.matchType ? { matchType: options.matchType } : {}),
-    ...(options.rankingFilter ? { rankingFilter: options.rankingFilter } : {}),
-    ...(options.maps ? { map: options.maps.map(toMapFilter) } : {}),
-    ...(options.bestOfX ? { bestOfX: options.bestOfX } : {}),
-    ...(options.countries ? { country: options.countries } : {}),
-    ...(options.contentFilters ? { content: options.contentFilters } : {}),
-    ...(options.eventIds ? { event: options.eventIds } : {}),
-    ...(options.playerIds ? { player: options.playerIds } : {}),
-    ...(options.teamIds ? { team: options.teamIds } : {}),
-    ...(options.game ? { gameType: options.game } : {})
-  })
+export const getResults =
+  (config: HLTVConfig) =>
+  async (options: GetResultsArguments): Promise<FullMatchResult[]> => {
+    const query = stringify({
+      ...(options.startDate ? { startDate: options.startDate } : {}),
+      ...(options.endDate ? { endDate: options.endDate } : {}),
+      ...(options.matchType ? { matchType: options.matchType } : {}),
+      ...(options.rankingFilter
+        ? { rankingFilter: options.rankingFilter }
+        : {}),
+      ...(options.maps ? { map: options.maps.map(toMapFilter) } : {}),
+      ...(options.bestOfX ? { bestOfX: options.bestOfX } : {}),
+      ...(options.countries ? { country: options.countries } : {}),
+      ...(options.contentFilters ? { content: options.contentFilters } : {}),
+      ...(options.eventIds ? { event: options.eventIds } : {}),
+      ...(options.playerIds ? { player: options.playerIds } : {}),
+      ...(options.teamIds ? { team: options.teamIds } : {}),
+      ...(options.game ? { gameType: options.game } : {})
+    })
 
-  let page = 0
-  let $: HLTVPage
-  let results: FullMatchResult[] = []
+    let page = 0
+    let $: HLTVPage
+    let results: FullMatchResult[] = []
 
-  do {
-    await sleep(options.delayBetweenPageRequests ?? 0)
+    do {
+      await sleep(options.delayBetweenPageRequests ?? 0)
 
-    $ = HLTVScraper(
-      await fetchPage(
-        `https://www.hltv.org/results?${query}&offset=${page * 100}`,
-        config.loadPage
+      $ = HLTVScraper(
+        await fetchPage(
+          `https://www.hltv.org/results?${query}&offset=${page * 100}`,
+          config.loadPage
+        )
       )
-    )
 
-    page++
+      page++
 
-    let featuredResults = $('.big-results .result-con')
-      .toArray()
-      .map((el) => el.children().first().attrThen('href', getIdAt(2)))
-
-    results.push(
-      ...$('.result-con')
+      let featuredResults = $('.big-results .result-con')
         .toArray()
-        .map((el) => {
-          const id = el.children().first().attrThen('href', getIdAt(2))!
+        .map((el) => el.children().first().attrThen('href', getIdAt(2)))
 
-          if (featuredResults.includes(id)) {
-            featuredResults = featuredResults.filter((x) => x !== id)
-            return null
-          }
+      results.push(
+        ...$('.result-con')
+          .toArray()
+          .map((el) => {
+            const id = el.children().first().attrThen('href', getIdAt(2))!
 
-          const stars = el.find('.stars i').length
-          const date = el.numFromAttr('data-zonedgrouping-entry-unix')!
-          const format = el.find('.map-text').text()
+            if (featuredResults.includes(id)) {
+              featuredResults = featuredResults.filter((x) => x !== id)
+              return null
+            }
 
-          const team1 = {
-            name: el.find('div.team').first().text(),
-            logo: el.find('img.team-logo').first().attr('src')
-          }
+            const stars = el.find('.stars i').length
+            const date = el.numFromAttr('data-zonedgrouping-entry-unix')!
+            const format = el.find('.map-text').text()
 
-          const team2 = {
-            name: el.find('div.team').last().text(),
-            logo: el.find('img.team-logo').last().attr('src')
-          }
+            const team1 = {
+              name: el.find('div.team').first().text(),
+              logo: el.find('img.team-logo').first().attr('src')
+            }
 
-          const [team1Result, team2Result] = el
-            .find('.result-score')
-            .text()
-            .split(' - ')
-            .map(Number)
+            const team2 = {
+              name: el.find('div.team').last().text(),
+              logo: el.find('img.team-logo').last().attr('src')
+            }
 
-          return {
-            id,
-            stars,
-            date,
-            team1,
-            team2,
-            result: { team1: team1Result, team2: team2Result },
-            ...(format.includes('bo')
-              ? { format }
-              : { map: fromMapSlug(format), format: 'bo1' })
-          }
-        })
-        .filter(notNull)
-    )
-  } while ($('.result-con').exists())
+            const [team1Result, team2Result] = el
+              .find('.result-score')
+              .text()
+              .split(' - ')
+              .map(Number)
 
-  return results
-}
+            return {
+              id,
+              stars,
+              date,
+              team1,
+              team2,
+              result: { team1: team1Result, team2: team2Result },
+              ...(format.includes('bo')
+                ? { format }
+                : { map: fromMapSlug(format), format: 'bo1' })
+            }
+          })
+          .filter(notNull)
+      )
+    } while ($('.result-con').exists())
+
+    return results
+  }

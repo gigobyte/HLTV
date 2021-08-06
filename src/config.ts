@@ -8,34 +8,33 @@ export interface HLTVConfig {
   httpAgent: HttpsAgent | HttpAgent
 }
 
-export const defaultLoadPage = (
-  httpAgent: HttpsAgent | HttpAgent | undefined
-) => (url: string) =>
-  new Promise<string>((resolve) => {
-    request.get(
-      url,
-      {
-        gzip: true,
-        agent: httpAgent,
-        headers: {
-          'User-Agent': randomUseragent.getRandom((ue) =>
-            [
-              '/Browsers - Windows',
-              '/Browsers - Linux',
-              '/Browsers - Mac'
-            ].includes(ue.folder)
-          )
-        }
-      },
-      (err, __, body) => {
-        if (err) {
-          throw err
-        }
+export const defaultLoadPage =
+  (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
+    new Promise<string>((resolve) => {
+      request.get(
+        url,
+        {
+          gzip: true,
+          agent: httpAgent,
+          headers: {
+            'User-Agent': randomUseragent.getRandom((ue) =>
+              [
+                '/Browsers - Windows',
+                '/Browsers - Linux',
+                '/Browsers - Mac'
+              ].includes(ue.folder)
+            )
+          }
+        },
+        (err, __, body) => {
+          if (err) {
+            throw err
+          }
 
-        resolve(body)
-      }
-    )
-  })
+          resolve(body)
+        }
+      )
+    })
 
 const defaultAgent = new HttpsAgent()
 
