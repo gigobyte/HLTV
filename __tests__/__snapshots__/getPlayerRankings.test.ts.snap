@@ -11,6 +11,7 @@ Array [
       "name": "Jame",
     },
     "rating2": 1.44,
+    "rounds": 211,
     "teams": Array [
       Object {
         "id": 8120,
@@ -27,6 +28,7 @@ Array [
       "name": "Qikert",
     },
     "rating2": 1.21,
+    "rounds": 211,
     "teams": Array [
       Object {
         "id": 8120,
@@ -43,6 +45,7 @@ Array [
       "name": "buster",
     },
     "rating2": 1.21,
+    "rounds": 211,
     "teams": Array [
       Object {
         "id": 8120,
@@ -59,6 +62,7 @@ Array [
       "name": "hampus",
     },
     "rating2": 1.1,
+    "rounds": 186,
     "teams": Array [
       Object {
         "id": 9928,
@@ -75,6 +79,7 @@ Array [
       "name": "lollipop21k",
     },
     "rating2": 1.09,
+    "rounds": 132,
     "teams": Array [
       Object {
         "id": 7969,
@@ -91,6 +96,7 @@ Array [
       "name": "dennis",
     },
     "rating2": 1.09,
+    "rounds": 160,
     "teams": Array [
       Object {
         "id": 9928,
@@ -107,6 +113,7 @@ Array [
       "name": "spellfull",
     },
     "rating2": 1.04,
+    "rounds": 132,
     "teams": Array [
       Object {
         "id": 7969,
@@ -123,6 +130,7 @@ Array [
       "name": "boX",
     },
     "rating2": 1.02,
+    "rounds": 132,
     "teams": Array [
       Object {
         "id": 7969,
@@ -139,6 +147,7 @@ Array [
       "name": "SANJI",
     },
     "rating2": 1.01,
+    "rounds": 195,
     "teams": Array [
       Object {
         "id": 8120,
@@ -155,6 +164,7 @@ Array [
       "name": "AdreN",
     },
     "rating2": 1.01,
+    "rounds": 211,
     "teams": Array [
       Object {
         "id": 8120,
@@ -171,6 +181,7 @@ Array [
       "name": "RuStY",
     },
     "rating2": 1.01,
+    "rounds": 186,
     "teams": Array [
       Object {
         "id": 9928,
@@ -187,6 +198,7 @@ Array [
       "name": "nawwk",
     },
     "rating2": 0.99,
+    "rounds": 186,
     "teams": Array [
       Object {
         "id": 9928,
@@ -203,6 +215,7 @@ Array [
       "name": "mds",
     },
     "rating2": 0.98,
+    "rounds": 132,
     "teams": Array [
       Object {
         "id": 7969,
@@ -219,6 +232,7 @@ Array [
       "name": "Jyo",
     },
     "rating2": 0.97,
+    "rounds": 132,
     "teams": Array [
       Object {
         "id": 7969,
@@ -240,6 +254,7 @@ Array [
       "name": "XANTARES",
     },
     "rating1": 1.28,
+    "rounds": 3781,
     "teams": Array [
       Object {
         "id": 5929,
@@ -256,6 +271,7 @@ Array [
       "name": "coldzera",
     },
     "rating1": 1.24,
+    "rounds": 3494,
     "teams": Array [
       Object {
         "id": 6137,
@@ -276,6 +292,7 @@ Array [
       "name": "Calyx",
     },
     "rating1": 1.19,
+    "rounds": 3026,
     "teams": Array [
       Object {
         "id": 5929,
@@ -296,6 +313,7 @@ Array [
       "name": "s1mple",
     },
     "rating1": 1.18,
+    "rounds": 2954,
     "teams": Array [
       Object {
         "id": 4608,
@@ -320,6 +338,7 @@ Array [
       "name": "Twistzz",
     },
     "rating1": 1.18,
+    "rounds": 2903,
     "teams": Array [
       Object {
         "id": 5973,
@@ -344,6 +363,7 @@ Array [
       "name": "fer",
     },
     "rating1": 1.15,
+    "rounds": 3475,
     "teams": Array [
       Object {
         "id": 6137,
@@ -364,6 +384,7 @@ Array [
       "name": "kennyS",
     },
     "rating1": 1.15,
+    "rounds": 4112,
     "teams": Array [
       Object {
         "id": 5991,
@@ -388,6 +409,7 @@ Array [
       "name": "zhokiNg",
     },
     "rating1": 1.15,
+    "rounds": 2993,
     "teams": Array [
       Object {
         "id": 7606,
@@ -408,6 +430,7 @@ Array [
       "name": "Savage",
     },
     "rating1": 1.14,
+    "rounds": 2526,
     "teams": Array [
       Object {
         "id": 7606,
@@ -428,6 +451,7 @@ Array [
       "name": "paz",
     },
     "rating1": 1.14,
+    "rounds": 3058,
     "teams": Array [
       Object {
         "id": 5929,
@@ -444,6 +468,7 @@ Array [
       "name": "HEN1",
     },
     "rating1": 1.14,
+    "rounds": 2855,
     "teams": Array [
       Object {
         "id": 7010,
@@ -464,6 +489,7 @@ Array [
       "name": "mixwell",
     },
     "rating1": 1.13,
+    "rounds": 2342,
     "teams": Array [
       Object {
         "id": 6615,
@@ -480,6 +506,7 @@ Array [
       "name": "Magisk",
     },
     "rating1": 1.13,
+    "rounds": 2454,
     "teams": Array [
       Object {
         "id": 5422,
@@ -504,6 +531,7 @@ Array [
       "name": "Happy",
     },
     "rating1": 1.12,
+    "rounds": 4467,
     "teams": Array [
       Object {
         "id": 5991,
@@ -520,6 +548,7 @@ Array [
       "name": "DavCost",
     },
     "rating1": 1.12,
+    "rounds": 3474,
     "teams": Array [
       Object {
         "id": 7020,
@@ -536,6 +565,7 @@ Array [
       "name": "k0nfig",
     },
     "rating1": 1.12,
+    "rounds": 3902,
     "teams": Array [
       Object {
         "id": 5422,
@@ -556,6 +586,7 @@ Array [
       "name": "valde",
     },
     "rating1": 1.12,
+    "rounds": 2715,
     "teams": Array [
       Object {
         "id": 7533,
@@ -580,6 +611,7 @@ Array [
       "name": "oskar",
     },
     "rating1": 1.11,
+    "rounds": 2997,
     "teams": Array [
       Object {
         "id": 4494,
@@ -600,6 +632,7 @@ Array [
       "name": "tabseN",
     },
     "rating1": 1.11,
+    "rounds": 2924,
     "teams": Array [
       Object {
         "id": 7532,
@@ -624,6 +657,7 @@ Array [
       "name": "MICHU",
     },
     "rating1": 1.11,
+    "rounds": 4463,
     "teams": Array [
       Object {
         "id": 6134,
@@ -648,6 +682,7 @@ Array [
       "name": "boltz",
     },
     "rating1": 1.1,
+    "rounds": 3876,
     "teams": Array [
       Object {
         "id": 7010,
@@ -672,6 +707,7 @@ Array [
       "name": "autimatic",
     },
     "rating1": 1.1,
+    "rounds": 2834,
     "teams": Array [
       Object {
         "id": 5752,
@@ -696,6 +732,7 @@ Array [
       "name": "NAF",
     },
     "rating1": 1.1,
+    "rounds": 3750,
     "teams": Array [
       Object {
         "id": 6615,
@@ -720,6 +757,7 @@ Array [
       "name": "felps",
     },
     "rating1": 1.1,
+    "rounds": 2431,
     "teams": Array [
       Object {
         "id": 6137,
@@ -744,6 +782,7 @@ Array [
       "name": "bondik",
     },
     "rating1": 1.09,
+    "rounds": 3940,
     "teams": Array [
       Object {
         "id": 5988,
@@ -764,6 +803,7 @@ Array [
       "name": "jks",
     },
     "rating1": 1.09,
+    "rounds": 3053,
     "teams": Array [
       Object {
         "id": 6211,
@@ -780,6 +820,7 @@ Array [
       "name": "Skadoodle",
     },
     "rating1": 1.09,
+    "rounds": 2758,
     "teams": Array [
       Object {
         "id": 5752,
@@ -796,6 +837,7 @@ Array [
       "name": "KRIMZ",
     },
     "rating1": 1.09,
+    "rounds": 3157,
     "teams": Array [
       Object {
         "id": 4991,
@@ -812,6 +854,7 @@ Array [
       "name": "FalleN",
     },
     "rating1": 1.09,
+    "rounds": 3547,
     "teams": Array [
       Object {
         "id": 6137,
@@ -832,6 +875,7 @@ Array [
       "name": "v1c7oR",
     },
     "rating1": 1.09,
+    "rounds": 3191,
     "teams": Array [
       Object {
         "id": 8513,
@@ -856,6 +900,7 @@ Array [
       "name": "cajunb",
     },
     "rating1": 1.09,
+    "rounds": 2877,
     "teams": Array [
       Object {
         "id": 7533,
@@ -880,6 +925,7 @@ Array [
       "name": "flusha",
     },
     "rating1": 1.09,
+    "rounds": 3331,
     "teams": Array [
       Object {
         "id": 4991,
@@ -900,6 +946,7 @@ Array [
       "name": "nitr0",
     },
     "rating1": 1.08,
+    "rounds": 3613,
     "teams": Array [
       Object {
         "id": 5973,
@@ -916,6 +963,7 @@ Array [
       "name": "olofmeister",
     },
     "rating1": 1.08,
+    "rounds": 2355,
     "teams": Array [
       Object {
         "id": 4991,
@@ -932,6 +980,7 @@ Array [
       "name": "Kjaerbye",
     },
     "rating1": 1.08,
+    "rounds": 2812,
     "teams": Array [
       Object {
         "id": 5422,
@@ -952,6 +1001,7 @@ Array [
       "name": "nex",
     },
     "rating1": 1.08,
+    "rounds": 3099,
     "teams": Array [
       Object {
         "id": 7532,
@@ -972,6 +1022,7 @@ Array [
       "name": "COLDYY1",
     },
     "rating1": 1.08,
+    "rounds": 3031,
     "teams": Array [
       Object {
         "id": 7020,
@@ -988,6 +1039,7 @@ Array [
       "name": "GuardiaN",
     },
     "rating1": 1.07,
+    "rounds": 2884,
     "teams": Array [
       Object {
         "id": 4608,
@@ -1004,6 +1056,7 @@ Array [
       "name": "RUSH",
     },
     "rating1": 1.07,
+    "rounds": 3425,
     "teams": Array [
       Object {
         "id": 6615,
@@ -1028,6 +1081,7 @@ Array [
       "name": "Lekr0",
     },
     "rating1": 1.07,
+    "rounds": 2530,
     "teams": Array [
       Object {
         "id": 4991,
@@ -1048,6 +1102,7 @@ Array [
       "name": "Snax",
     },
     "rating1": 1.06,
+    "rounds": 4134,
     "teams": Array [
       Object {
         "id": 5378,
@@ -1056,14 +1111,15 @@ Array [
     ],
   },
   Object {
-    "kd": 1.08,
-    "kdDiff": 223,
-    "maps": 163,
+    "kd": 1.07,
+    "kdDiff": 220,
+    "maps": 164,
     "player": Object {
       "id": 7322,
       "name": "apEX",
     },
     "rating1": 1.06,
+    "rounds": 4272,
     "teams": Array [
       Object {
         "id": 5991,
@@ -1088,6 +1144,7 @@ Array [
       "name": "EliGE",
     },
     "rating1": 1.06,
+    "rounds": 3657,
     "teams": Array [
       Object {
         "id": 5973,
@@ -1104,6 +1161,7 @@ Array [
       "name": "shroud",
     },
     "rating1": 1.06,
+    "rounds": 2453,
     "teams": Array [
       Object {
         "id": 5752,
@@ -1120,6 +1178,7 @@ Array [
       "name": "robiin",
     },
     "rating1": 1.06,
+    "rounds": 3209,
     "teams": Array [
       Object {
         "id": 6407,
@@ -1144,6 +1203,7 @@ Array [
       "name": "NBK-",
     },
     "rating1": 1.06,
+    "rounds": 3907,
     "teams": Array [
       Object {
         "id": 5991,
@@ -1164,6 +1224,7 @@ Array [
       "name": "AZR",
     },
     "rating1": 1.06,
+    "rounds": 3080,
     "teams": Array [
       Object {
         "id": 6211,
@@ -1180,6 +1241,7 @@ Array [
       "name": "Stewie2K",
     },
     "rating1": 1.06,
+    "rounds": 2425,
     "teams": Array [
       Object {
         "id": 5752,
@@ -1196,6 +1258,7 @@ Array [
       "name": "byali",
     },
     "rating1": 1.06,
+    "rounds": 4220,
     "teams": Array [
       Object {
         "id": 5378,
@@ -1212,6 +1275,7 @@ Array [
       "name": "keev",
     },
     "rating1": 1.06,
+    "rounds": 3250,
     "teams": Array [
       Object {
         "id": 4501,
@@ -1236,6 +1300,7 @@ Array [
       "name": "WorldEdit",
     },
     "rating1": 1.06,
+    "rounds": 3232,
     "teams": Array [
       Object {
         "id": 5988,
@@ -1252,6 +1317,7 @@ Array [
       "name": "SPELLAN",
     },
     "rating1": 1.06,
+    "rounds": 3148,
     "teams": Array [
       Object {
         "id": 7397,
@@ -1276,6 +1342,7 @@ Array [
       "name": "jmqa",
     },
     "rating1": 1.05,
+    "rounds": 3395,
     "teams": Array [
       Object {
         "id": 7367,
@@ -1304,6 +1371,7 @@ Array [
       "name": "n0thing",
     },
     "rating1": 1.05,
+    "rounds": 2379,
     "teams": Array [
       Object {
         "id": 5752,
@@ -1320,6 +1388,7 @@ Array [
       "name": "suNny",
     },
     "rating1": 1.05,
+    "rounds": 2619,
     "teams": Array [
       Object {
         "id": 4494,
@@ -1344,6 +1413,7 @@ Array [
       "name": "flamie",
     },
     "rating1": 1.05,
+    "rounds": 3400,
     "teams": Array [
       Object {
         "id": 4608,
@@ -1360,6 +1430,7 @@ Array [
       "name": "ScreaM",
     },
     "rating1": 1.05,
+    "rounds": 2956,
     "teams": Array [
       Object {
         "id": 5991,
@@ -1384,6 +1455,7 @@ Array [
       "name": "ptr",
     },
     "rating1": 1.05,
+    "rounds": 2633,
     "teams": Array [
       Object {
         "id": 6673,
@@ -1404,6 +1476,7 @@ Array [
       "name": "stfN",
     },
     "rating1": 1.05,
+    "rounds": 3326,
     "teams": Array [
       Object {
         "id": 4501,
@@ -1428,6 +1501,7 @@ Array [
       "name": "MINISE",
     },
     "rating1": 1.04,
+    "rounds": 2826,
     "teams": Array [
       Object {
         "id": 6896,
@@ -1456,6 +1530,7 @@ Array [
       "name": "twist",
     },
     "rating1": 1.04,
+    "rounds": 2715,
     "teams": Array [
       Object {
         "id": 6902,
@@ -1484,6 +1559,7 @@ Array [
       "name": "AdreN",
     },
     "rating1": 1.04,
+    "rounds": 2923,
     "teams": Array [
       Object {
         "id": 6651,
@@ -1504,6 +1580,7 @@ Array [
       "name": "Furlan",
     },
     "rating1": 1.04,
+    "rounds": 4199,
     "teams": Array [
       Object {
         "id": 8068,
@@ -1532,6 +1609,7 @@ Array [
       "name": "mouz",
     },
     "rating1": 1.04,
+    "rounds": 4179,
     "teams": Array [
       Object {
         "id": 6134,
@@ -1556,6 +1634,7 @@ Array [
       "name": "kzy",
     },
     "rating1": 1.04,
+    "rounds": 2759,
     "teams": Array [
       Object {
         "id": 4501,
@@ -1580,6 +1659,7 @@ Array [
       "name": "aizy",
     },
     "rating1": 1.04,
+    "rounds": 3116,
     "teams": Array [
       Object {
         "id": 7533,
@@ -1604,6 +1684,7 @@ Array [
       "name": "MODDII",
     },
     "rating1": 1.03,
+    "rounds": 3050,
     "teams": Array [
       Object {
         "id": 7175,
@@ -1628,6 +1709,7 @@ Array [
       "name": "jdm64",
     },
     "rating1": 1.03,
+    "rounds": 3562,
     "teams": Array [
       Object {
         "id": 5973,
@@ -1648,6 +1730,7 @@ Array [
       "name": "SZPERO",
     },
     "rating1": 1.03,
+    "rounds": 4483,
     "teams": Array [
       Object {
         "id": 6134,
@@ -1672,6 +1755,7 @@ Array [
       "name": "tarik",
     },
     "rating1": 1.03,
+    "rounds": 3680,
     "teams": Array [
       Object {
         "id": 5974,
@@ -1696,6 +1780,7 @@ Array [
       "name": "DESPE",
     },
     "rating1": 1.03,
+    "rounds": 2561,
     "teams": Array [
       Object {
         "id": 5929,
@@ -1712,6 +1797,7 @@ Array [
       "name": "bodyy",
     },
     "rating1": 1.03,
+    "rounds": 2516,
     "teams": Array [
       Object {
         "id": 5995,
@@ -1732,6 +1818,7 @@ Array [
       "name": "LUCAS1",
     },
     "rating1": 1.03,
+    "rounds": 2855,
     "teams": Array [
       Object {
         "id": 7010,
@@ -1752,6 +1839,7 @@ Array [
       "name": "Dima",
     },
     "rating1": 1.03,
+    "rounds": 3348,
     "teams": Array [
       Object {
         "id": 7020,
@@ -1772,6 +1860,7 @@ Array [
       "name": "ANGE1",
     },
     "rating1": 1.03,
+    "rounds": 3955,
     "teams": Array [
       Object {
         "id": 5310,
@@ -1788,6 +1877,7 @@ Array [
       "name": "mou",
     },
     "rating1": 1.03,
+    "rounds": 2931,
     "teams": Array [
       Object {
         "id": 6651,
@@ -1808,6 +1898,7 @@ Array [
       "name": "SHOOWTiME",
     },
     "rating1": 1.02,
+    "rounds": 2510,
     "teams": Array [
       Object {
         "id": 6290,
@@ -1832,6 +1923,7 @@ Array [
       "name": "bubble",
     },
     "rating1": 1.02,
+    "rounds": 3404,
     "teams": Array [
       Object {
         "id": 8513,
@@ -1852,6 +1944,31 @@ Array [
     ],
   },
   Object {
+    "kd": 1.06,
+    "kdDiff": 129,
+    "maps": 125,
+    "player": Object {
+      "id": 1225,
+      "name": "shox",
+    },
+    "rating1": 1.02,
+    "rounds": 3245,
+    "teams": Array [
+      Object {
+        "id": 5995,
+        "name": "G2",
+      },
+      Object {
+        "id": 5284,
+        "name": "Titan",
+      },
+      Object {
+        "id": 5991,
+        "name": "Envy",
+      },
+    ],
+  },
+  Object {
     "kd": 1.03,
     "kdDiff": 58,
     "maps": 114,
@@ -1860,6 +1977,7 @@ Array [
       "name": "Spiidi",
     },
     "rating1": 1.02,
+    "rounds": 3064,
     "teams": Array [
       Object {
         "id": 8637,
@@ -1880,30 +1998,6 @@ Array [
     ],
   },
   Object {
-    "kd": 1.05,
-    "kdDiff": 119,
-    "maps": 124,
-    "player": Object {
-      "id": 1225,
-      "name": "shox",
-    },
-    "rating1": 1.02,
-    "teams": Array [
-      Object {
-        "id": 5995,
-        "name": "G2",
-      },
-      Object {
-        "id": 5284,
-        "name": "Titan",
-      },
-      Object {
-        "id": 5991,
-        "name": "Envy",
-      },
-    ],
-  },
-  Object {
     "kd": 1.01,
     "kdDiff": 23,
     "maps": 107,
@@ -1912,6 +2006,7 @@ Array [
       "name": "USTILO",
     },
     "rating1": 1.02,
+    "rounds": 2817,
     "teams": Array [
       Object {
         "id": 6211,
@@ -1928,6 +2023,7 @@ Array [
       "name": "syrsoN",
     },
     "rating1": 1.02,
+    "rounds": 2883,
     "teams": Array [
       Object {
         "id": 4501,
@@ -1944,6 +2040,7 @@ Array [
       "name": "Snappi",
     },
     "rating1": 1.02,
+    "rounds": 2997,
     "teams": Array [
       Object {
         "id": 7175,
@@ -1968,6 +2065,7 @@ Array [
       "name": "rallen",
     },
     "rating1": 1.01,
+    "rounds": 4669,
     "teams": Array [
       Object {
         "id": 6134,
@@ -1992,6 +2090,7 @@ Array [
       "name": "markeloff",
     },
     "rating1": 1.01,
+    "rounds": 2794,
     "teams": Array [
       Object {
         "id": 5988,
@@ -2008,6 +2107,7 @@ Array [
       "name": "TaZ",
     },
     "rating1": 1.01,
+    "rounds": 4072,
     "teams": Array [
       Object {
         "id": 5378,
@@ -2024,6 +2124,7 @@ Array [
       "name": "RpK",
     },
     "rating1": 1.01,
+    "rounds": 3669,
     "teams": Array [
       Object {
         "id": 5991,
@@ -2048,6 +2149,7 @@ Array [
       "name": "Zero",
     },
     "rating1": 1.01,
+    "rounds": 2606,
     "teams": Array [
       Object {
         "id": 5310,
@@ -2064,6 +2166,7 @@ Array [
       "name": "Friis",
     },
     "rating1": 1,
+    "rounds": 3450,
     "teams": Array [
       Object {
         "id": 6137,
@@ -2092,6 +2195,7 @@ Array [
       "name": "Pimp",
     },
     "rating1": 1,
+    "rounds": 2483,
     "teams": Array [
       Object {
         "id": 5422,
@@ -2116,6 +2220,7 @@ Array [
       "name": "tiziaN",
     },
     "rating1": 1,
+    "rounds": 3820,
     "teams": Array [
       Object {
         "id": 4501,
@@ -2136,6 +2241,7 @@ Array [
       "name": "chrisJ",
     },
     "rating1": 1,
+    "rounds": 3636,
     "teams": Array [
       Object {
         "id": 4494,
@@ -2152,6 +2258,7 @@ Array [
       "name": "GruBy",
     },
     "rating1": 1,
+    "rounds": 3105,
     "teams": Array [
       Object {
         "id": 8068,
@@ -2176,6 +2283,7 @@ Array [
       "name": "JW",
     },
     "rating1": 1,
+    "rounds": 3381,
     "teams": Array [
       Object {
         "id": 4991,
@@ -2196,6 +2304,7 @@ Array [
       "name": "steel",
     },
     "rating1": 1,
+    "rounds": 3040,
     "teams": Array [
       Object {
         "id": 7010,
@@ -2220,6 +2329,7 @@ Array [
       "name": "S0tF1k",
     },
     "rating1": 0.99,
+    "rounds": 3333,
     "teams": Array [
       Object {
         "id": 7020,
@@ -2240,6 +2350,7 @@ Array [
       "name": "BENDJI",
     },
     "rating1": 0.99,
+    "rounds": 2944,
     "teams": Array [
       Object {
         "id": 6407,
@@ -2260,6 +2371,7 @@ Array [
       "name": "reltuC",
     },
     "rating1": 0.99,
+    "rounds": 2955,
     "teams": Array [
       Object {
         "id": 5974,
@@ -2276,6 +2388,7 @@ Array [
       "name": "AcilioN",
     },
     "rating1": 0.98,
+    "rounds": 3596,
     "teams": Array [
       Object {
         "id": 6137,
@@ -2296,6 +2409,7 @@ Array [
       "name": "stanislaw",
     },
     "rating1": 0.98,
+    "rounds": 3211,
     "teams": Array [
       Object {
         "id": 6615,
@@ -2316,6 +2430,7 @@ Array [
       "name": "DeadFox",
     },
     "rating1": 0.98,
+    "rounds": 3074,
     "teams": Array [
       Object {
         "id": 5310,
@@ -2336,6 +2451,7 @@ Array [
       "name": "pashaBiceps",
     },
     "rating1": 0.98,
+    "rounds": 4137,
     "teams": Array [
       Object {
         "id": 5378,
@@ -2352,6 +2468,7 @@ Array [
       "name": "SEMPHIS",
     },
     "rating1": 0.98,
+    "rounds": 2575,
     "teams": Array [
       Object {
         "id": 5996,
@@ -2376,6 +2493,7 @@ Array [
       "name": "TACO",
     },
     "rating1": 0.97,
+    "rounds": 3091,
     "teams": Array [
       Object {
         "id": 6137,
@@ -2396,6 +2514,7 @@ Array [
       "name": "Dosia",
     },
     "rating1": 0.97,
+    "rounds": 3066,
     "teams": Array [
       Object {
         "id": 6651,
@@ -2420,6 +2539,7 @@ Array [
       "name": "NEO",
     },
     "rating1": 0.97,
+    "rounds": 4220,
     "teams": Array [
       Object {
         "id": 5378,
@@ -2436,6 +2556,7 @@ Array [
       "name": "TENZKI",
     },
     "rating1": 0.97,
+    "rounds": 2738,
     "teams": Array [
       Object {
         "id": 5422,
@@ -2460,6 +2581,7 @@ Array [
       "name": "Nifty",
     },
     "rating1": 0.97,
+    "rounds": 2464,
     "teams": Array [
       Object {
         "id": 6211,
@@ -2480,6 +2602,7 @@ Array [
       "name": "kRYSTAL",
     },
     "rating1": 0.97,
+    "rounds": 3033,
     "teams": Array [
       Object {
         "id": 5395,
@@ -2504,6 +2627,7 @@ Array [
       "name": "Ex6TenZ",
     },
     "rating1": 0.96,
+    "rounds": 2895,
     "teams": Array [
       Object {
         "id": 4674,
@@ -2524,6 +2648,7 @@ Array [
       "name": "STYKO",
     },
     "rating1": 0.96,
+    "rounds": 3343,
     "teams": Array [
       Object {
         "id": 5310,
@@ -2544,6 +2669,7 @@ Array [
       "name": "seized",
     },
     "rating1": 0.96,
+    "rounds": 3576,
     "teams": Array [
       Object {
         "id": 4608,
@@ -2564,6 +2690,7 @@ Array [
       "name": "innocent",
     },
     "rating1": 0.95,
+    "rounds": 3598,
     "teams": Array [
       Object {
         "id": 6372,
@@ -2592,6 +2719,7 @@ Array [
       "name": "FugLy",
     },
     "rating1": 0.95,
+    "rounds": 3056,
     "teams": Array [
       Object {
         "id": 6673,
@@ -2616,6 +2744,7 @@ Array [
       "name": "ngiN",
     },
     "rating1": 0.95,
+    "rounds": 2783,
     "teams": Array [
       Object {
         "id": 5929,
@@ -2632,6 +2761,7 @@ Array [
       "name": "Edward",
     },
     "rating1": 0.94,
+    "rounds": 3353,
     "teams": Array [
       Object {
         "id": 4608,
@@ -2648,6 +2778,7 @@ Array [
       "name": "crisby",
     },
     "rating1": 0.93,
+    "rounds": 3074,
     "teams": Array [
       Object {
         "id": 4501,
@@ -2672,6 +2803,7 @@ Array [
       "name": "MSL",
     },
     "rating1": 0.92,
+    "rounds": 5032,
     "teams": Array [
       Object {
         "id": 5422,
@@ -2692,6 +2824,7 @@ Array [
       "name": "hooch",
     },
     "rating1": 0.92,
+    "rounds": 3124,
     "teams": Array [
       Object {
         "id": 7489,
@@ -2712,6 +2845,7 @@ Array [
       "name": "waterfaLLZ",
     },
     "rating1": 0.92,
+    "rounds": 2443,
     "teams": Array [
       Object {
         "id": 7367,
@@ -2736,14 +2870,15 @@ Array [
       "name": "denis",
     },
     "rating1": 0.91,
+    "rounds": 3573,
     "teams": Array [
-      Object {
-        "id": 8637,
-        "name": "Sprout",
-      },
       Object {
         "id": 4494,
         "name": "mousesports",
+      },
+      Object {
+        "id": 8637,
+        "name": "Sprout",
       },
     ],
   },
@@ -2756,6 +2891,7 @@ Array [
       "name": "FNS",
     },
     "rating1": 0.91,
+    "rounds": 3120,
     "teams": Array [
       Object {
         "id": 5974,
@@ -2776,6 +2912,7 @@ Array [
       "name": "SIXER",
     },
     "rating1": 0.91,
+    "rounds": 2488,
     "teams": Array [
       Object {
         "id": 5991,
@@ -2792,6 +2929,7 @@ Array [
       "name": "advent",
     },
     "rating1": 0.9,
+    "rounds": 2502,
     "teams": Array [
       Object {
         "id": 7606,
@@ -2812,6 +2950,7 @@ Array [
       "name": "gob b",
     },
     "rating1": 0.9,
+    "rounds": 2982,
     "teams": Array [
       Object {
         "id": 7532,
@@ -2836,6 +2975,7 @@ Array [
       "name": "daps",
     },
     "rating1": 0.9,
+    "rounds": 2481,
     "teams": Array [
       Object {
         "id": 6673,
@@ -2860,6 +3000,7 @@ Array [
       "name": "Zeus",
     },
     "rating1": 0.9,
+    "rounds": 3447,
     "teams": Array [
       Object {
         "id": 4608,
@@ -2880,6 +3021,7 @@ Array [
       "name": "pronax",
     },
     "rating1": 0.89,
+    "rounds": 2619,
     "teams": Array [
       Object {
         "id": 4991,
@@ -2904,6 +3046,7 @@ Array [
       "name": "HUNDEN",
     },
     "rating1": 0.85,
+    "rounds": 4545,
     "teams": Array [
       Object {
         "id": 4602,
@@ -2932,6 +3075,7 @@ Array [
       "name": "B1ad3",
     },
     "rating1": 0.84,
+    "rounds": 2834,
     "teams": Array [
       Object {
         "id": 5988,
