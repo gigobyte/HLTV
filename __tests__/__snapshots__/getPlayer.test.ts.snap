@@ -68,6 +68,13 @@ Object {
     },
     Object {
       "event": Object {
+        "id": 5469,
+        "name": "IEM Cologne 2021",
+      },
+      "place": "1st",
+    },
+    Object {
+      "event": Object {
         "id": 4901,
         "name": "IEM Katowice 2020",
       },
@@ -285,10 +292,138 @@ Object {
   "facebook": undefined,
   "id": 7998,
   "ign": "s1mple",
-  "image": "https://img-cdn.hltv.org/playerbodyshot/QNTzHmdKTV1o6HWOQyWHdA.png?ixlib=java-2.1.0&w=400&s=b01c4fdb6b3cde55c6a7aac872bd175e",
+  "image": "https://img-cdn.hltv.org/playerbodyshot/RGemStZHTfFk8AAjkJrbTR.png?ixlib=java-2.1.0&w=400&s=59b0a61f6f217bc6c1dd54bd4e0aa837",
   "instagram": "https://www.instagram.com/s1mpleo",
   "name": "Aleksandr Kostyliev",
   "news": Array [
+    Object {
+      "link": "/news/32124/navi-on-top-faze-return-to-relevance-in-july-team-ranking",
+      "name": "NAVI on top, FaZe return to relevance in July Team Ranking",
+    },
+    Object {
+      "link": "/news/32111/majors-return-a-legend-retires-and-the-colossus-crashes-a-mid-season-recap",
+      "name": "Majors return, a legend retires, and the Colossus crashes: A mid-season recap",
+    },
+    Object {
+      "link": "/news/32087/vod-iem-cologne-breakdown-roster-rumor-roundup-on-hltv-confirmed",
+      "name": "[VOD] IEM Cologne breakdown, roster rumor roundup on HLTV Confirmed",
+    },
+    Object {
+      "link": "/news/32080/video-s1mple-hltv-mvp-of-iem-cologne",
+      "name": "Video: s1mple - HLTV MVP of IEM Cologne",
+    },
+    Object {
+      "link": "/news/32079/navi-climb-to-no-1-world-ranking-after-iem-cologne-win",
+      "name": "NAVI climb to No. 1 world ranking after IEM Cologne win",
+    },
+    Object {
+      "link": "/news/32077/cologne-victory-brings-navi-one-win-away-from-intel-grand-slam-title",
+      "name": "Cologne victory brings NAVI one win away from Intel Grand Slam title",
+    },
+    Object {
+      "link": "/news/32076/s1mple-awarded-iem-cologne-mvp",
+      "name": "s1mple awarded IEM Cologne MVP",
+    },
+    Object {
+      "link": "/news/32075/navi-beat-g2-3-0-to-win-iem-cologne",
+      "name": "NAVI beat G2 3-0 to win IEM Cologne",
+    },
+    Object {
+      "link": "/news/32074/navi-defeat-faze-to-set-up-iem-cologne-grand-final-match-against-g2",
+      "name": "NAVI defeat FaZe to set up IEM Cologne grand final match against G2",
+    },
+    Object {
+      "link": "/news/32071/b1ad3-we-believe-that-we-can-beat-any-team-in-the-playoffs-and-we-have-already-defeated-all-of-them-online-but-any-of-them-can-surprise",
+      "name": "B1ad3: \\"We believe that we can beat any team in the playoffs and we have already defeated all of them online, but any of them can surprise\\"",
+    },
+    Object {
+      "link": "/news/32056/what-we-learned-from-iem-colognes-group-stage",
+      "name": "What we learned from IEM Cologne's group stage",
+    },
+    Object {
+      "link": "/news/32054/iem-cologne-group-stage-fantasy-winners-found-playoffs-game-live",
+      "name": "IEM Cologne group stage Fantasy winners found, playoffs game live",
+    },
+    Object {
+      "link": "/news/32052/faze-eliminate-heroic-to-secure-iem-cologne-playoff-berth-navi-through-to-semi-finals-over-astralis",
+      "name": "FaZe eliminate Heroic to secure IEM Cologne playoff berth, NAVI through to semi-finals over Astralis",
+    },
+    Object {
+      "link": "/news/32044/navi-defeat-vitality-to-secure-iem-cologne-playoff-spot-big-see-off-liquid",
+      "name": "NAVI defeat Vitality to secure IEM Cologne playoff spot; BIG see off Liquid",
+    },
+    Object {
+      "link": "/news/32035/video-s1mple-vs-renegades",
+      "name": "Video: s1mple vs. Renegades",
+    },
+    Object {
+      "link": "/news/32033/vitality-subdue-furia-navi-beat-back-renegades-at-iem-cologne",
+      "name": "Vitality subdue FURIA; NAVI beat back Renegades at IEM Cologne",
+    },
+    Object {
+      "link": "/news/32025/b1ad3-if-theres-a-great-rivalry-between-top-teams-they-always-improve-each-other-its-a-natural-process",
+      "name": "B1ad3: \\"If there's a great rivalry between top teams, they always improve each other; it's a natural process\\"",
+    },
+    Object {
+      "link": "/news/32019/video-s1mple-mvp-of-starladder-cis-rmr",
+      "name": "Video: s1mple - MVP of StarLadder CIS RMR",
+    },
+    Object {
+      "link": "/news/32024/iem-cologne-team-list-finalized-12-highest-ranked-squads-in-competition",
+      "name": "IEM Cologne team list finalized: 12 highest-ranked squads in competition",
+    },
+    Object {
+      "link": "/news/32005/back-to-lan-five-key-storylines-of-iem-cologne",
+      "name": "Back to LAN: five key storylines of IEM Cologne",
+    },
+    Object {
+      "link": "/news/31989/seven-years-of-cologne-mvps",
+      "name": "Seven years of Cologne MVPs",
+    },
+    Object {
+      "link": "/news/31999/navi-reverse-sweep-gambit-to-win-starladder-cis-rmr",
+      "name": "NAVI reverse sweep Gambit to win StarLadder CIS RMR",
+    },
+    Object {
+      "link": "/news/31952/fantasy-game-for-starladder-cis-rmr-goes-live",
+      "name": "Fantasy game for StarLadder CIS RMR goes live",
+    },
+    Object {
+      "link": "/news/31941/video-s1mple-vs-g2",
+      "name": "Video: s1mple vs. G2",
+    },
+    Object {
+      "link": "/news/31945/hobbit-claims-blast-premier-spring-final-mvp-award",
+      "name": "Hobbit claims BLAST Premier Spring Final MVP award",
+    },
+    Object {
+      "link": "/news/31943/gambit-beat-navi-in-blast-premier-spring-final-to-win-third-big-title-in-2021",
+      "name": "Gambit beat NAVI in BLAST Premier Spring final to win third big title in 2021",
+    },
+    Object {
+      "link": "/news/31942/navi-clinch-blast-premier-final-spot-to-set-up-rematch-with-gambit",
+      "name": "NAVI clinch BLAST Premier final spot to set up rematch with Gambit",
+    },
+    Object {
+      "link": "/news/31938/gambit-move-past-navi-to-book-blast-premier-grand-final-spot",
+      "name": "Gambit move past NAVI to book BLAST Premier grand final spot",
+    },
+    Object {
+      "link": "/news/31931/navi-to-face-gambit-in-blast-premier-upper-final-after-taking-down-big",
+      "name": "NAVI to face Gambit in BLAST Premier upper final after taking down BIG",
+    },
+    Object {
+      "link": "/news/31926/navi-edge-past-faze-in-blast-premier-spring-final-upper-bracket",
+      "name": "NAVI edge past FaZe in BLAST Premier Spring Final upper bracket",
+    },
+    Object {
+      "link": "/news/31915/s1mple-we-just-want-to-show-that-we-can-win-tournament-after-tournament",
+      "name": "s1mple: \\"We just want to show that we can win tournament after tournament\\"",
+    },
+    Object {
+      "link": "/news/31909/ax1le-secures-second-mvp-award-at-iem-summer",
+      "name": "Ax1Le secures second MVP award at IEM Summer",
+    },
     Object {
       "link": "/news/31845/navi-entropiq-to-play-epic-league-cis-fifth-place-decider-on-tuesday",
       "name": "NAVI, Entropiq to play EPIC League CIS fifth-place decider on Tuesday",
@@ -3571,12 +3706,12 @@ Object {
     },
   ],
   "statistics": Object {
-    "deathsPerRound": 0.62,
-    "headshots": 36.2,
+    "deathsPerRound": 0.6,
+    "headshots": 38.2,
     "killsPerRound": 0.88,
-    "mapsPlayed": 45,
-    "rating": 1.34,
-    "roundsContributed": 74.9,
+    "mapsPlayed": 75,
+    "rating": 1.36,
+    "roundsContributed": 75.8,
   },
   "team": Object {
     "id": 4608,
@@ -3589,6 +3724,14 @@ Object {
       "name": "Natus Vincere",
       "startDate": 1471644000000,
       "trophies": Array [
+        Object {
+          "id": 5469,
+          "name": "IEM Cologne 2021",
+        },
+        Object {
+          "id": 5937,
+          "name": "StarLadder CIS RMR 2021",
+        },
         Object {
           "id": 5728,
           "name": "DreamHack Masters Spring 2021",
