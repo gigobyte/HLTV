@@ -21,7 +21,8 @@ export enum MatchStatus {
   Postponed = 'Postponed',
   Over = 'Over',
   Scheduled = 'Scheduled',
-  Deleted = 'Deleted'
+  Deleted = 'Deleted',
+  Notfound = 'NotFound'
 }
 
 export interface Demo {
@@ -175,12 +176,19 @@ function getMatchStatus($: HLTVPage): MatchStatus {
   switch ($('.countdown').trimText()) {
     case 'LIVE':
       status = MatchStatus.Live
+      break
     case 'Match postponed':
       status = MatchStatus.Postponed
+      break
     case 'Match deleted':
       status = MatchStatus.Deleted
+      break
     case 'Match over':
       status = MatchStatus.Over
+      break
+    default:
+      status = MatchStatus.Notfound
+      break
   }
 
   return status
