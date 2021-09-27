@@ -21,8 +21,7 @@ export enum MatchStatus {
   Postponed = 'Postponed',
   Over = 'Over',
   Scheduled = 'Scheduled',
-  Deleted = 'Deleted',
-  Notfound = 'NotFound'
+  Deleted = 'Deleted'
 }
 
 export interface Demo {
@@ -185,9 +184,6 @@ function getMatchStatus($: HLTVPage): MatchStatus {
       break
     case 'Match over':
       status = MatchStatus.Over
-      break
-    default:
-      status = MatchStatus.Notfound
       break
   }
 
