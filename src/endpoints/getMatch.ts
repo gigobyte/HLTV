@@ -21,7 +21,8 @@ export enum MatchStatus {
   Postponed = 'Postponed',
   Over = 'Over',
   Scheduled = 'Scheduled',
-  Deleted = 'Deleted'
+  Deleted = 'Deleted',
+  Notfound = 'NotFound'
 }
 
 export interface Demo {
@@ -112,62 +113,62 @@ export interface FullMatch {
 
 export const getMatch =
   (config: HLTVConfig) =>
-  async ({ id }: { id: number }): Promise<FullMatch> => {
-    const $ = HLTVScraper(
-      await fetchPage(
-        `https://www.hltv.org/matches/${id}/${generateRandomSuffix()}`,
-        config.loadPage
+    async ({ id }: { id: number }): Promise<FullMatch> => {
+      const $ = HLTVScraper(
+        await fetchPage(
+          `https://www.hltv.org/matches/${id}/${generateRandomSuffix()}`,
+          config.loadPage
+        )
       )
-    )
 
-    const title = $('.timeAndEvent .text').trimText()
-    const date = $('.timeAndEvent .date').numFromAttr('data-unix')
-    const format = getFormat($)
-    const significance = getMatchSignificance($)
-    const status = getMatchStatus($)
-    const hasScorebot = $('#scoreboardElement').exists()
-    const statsId = getStatsId($)
-    const team1 = getTeam($, 1)
-    const team2 = getTeam($, 2)
-    const vetoes = getVetoes($, team1, team2)
-    const event = getEvent($)
-    const odds = getOdds($)
-    const oddsCommunity = getCommunityOdds($)
-    const maps = getMaps($)
-    const players = getPlayers($)
-    const streams = getStreams($)
-    const demos = getDemos($)
-    const highlightedPlayers = getHighlightedPlayers($)
-    const headToHead = getHeadToHead($)
-    const highlights = getHighlights($, team1, team2)
-    const playerOfTheMatch = getPlayerOfTheMatch($, players)
-    const winnerTeam = getWinnerTeam($, team1, team2)
+      const title = $('.timeAndEvent .text').trimText()
+      const date = $('.timeAndEvent .date').numFromAttr('data-unix')
+      const format = getFormat($)
+      const significance = getMatchSignificance($)
+      const status = getMatchStatus($)
+      const hasScorebot = $('#scoreboardElement').exists()
+      const statsId = getStatsId($)
+      const team1 = getTeam($, 1)
+      const team2 = getTeam($, 2)
+      const vetoes = getVetoes($, team1, team2)
+      const event = getEvent($)
+      const odds = getOdds($)
+      const oddsCommunity = getCommunityOdds($)
+      const maps = getMaps($)
+      const players = getPlayers($)
+      const streams = getStreams($)
+      const demos = getDemos($)
+      const highlightedPlayers = getHighlightedPlayers($)
+      const headToHead = getHeadToHead($)
+      const highlights = getHighlights($, team1, team2)
+      const playerOfTheMatch = getPlayerOfTheMatch($, players)
+      const winnerTeam = getWinnerTeam($, team1, team2)
 
-    return {
-      id,
-      statsId,
-      significance,
-      team1,
-      team2,
-      winnerTeam,
-      date,
-      format,
-      event,
-      maps,
-      players,
-      streams,
-      status,
-      title,
-      hasScorebot,
-      highlightedPlayers,
-      playerOfTheMatch,
-      headToHead,
-      vetoes,
-      highlights,
-      demos,
-      odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
+      return {
+        id,
+        statsId,
+        significance,
+        team1,
+        team2,
+        winnerTeam,
+        date,
+        format,
+        event,
+        maps,
+        players,
+        streams,
+        status,
+        title,
+        hasScorebot,
+        highlightedPlayers,
+        playerOfTheMatch,
+        headToHead,
+        vetoes,
+        highlights,
+        demos,
+        odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
+      }
     }
-  }
 
 function getMatchStatus($: HLTVPage): MatchStatus {
   let status = MatchStatus.Scheduled
@@ -185,6 +186,9 @@ function getMatchStatus($: HLTVPage): MatchStatus {
     case 'Match over':
       status = MatchStatus.Over
       break
+    default:
+      status = MatchStatus.Notfound
+      break
   }
 
   return status
@@ -193,11 +197,11 @@ function getMatchStatus($: HLTVPage): MatchStatus {
 function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
   return $(`.team${n}-gradient`).exists()
     ? {
-        name: $(`.team${n}-gradient .teamName`).text(),
-        id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
-          href ? getIdAt(2, href) : undefined
-        )
-      }
+      name: $(`.team${n}-gradient .teamName`).text(),
+      id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
+        href ? getIdAt(2, href) : undefined
+      )
+    }
     : undefined
 }
 
@@ -323,8 +327,8 @@ function getMaps($: HLTVPage): MapResult[] {
 
       const statsId = mapEl.find('.results-stats').exists()
         ? mapEl
-            .find('.results-stats')
-            .attrThen('href', (x) => Number(x.split('/')[4]))
+          .find('.results-stats')
+          .attrThen('href', (x) => Number(x.split('/')[4]))
         : undefined
 
       let result
@@ -392,26 +396,26 @@ function getStreams($: HLTVPage): Stream[] {
     .concat(
       $('.stream-box.hltv-live').exists()
         ? [
-            {
-              name: 'HLTV Live',
-              link: $('.stream-box.hltv-live a').attr('href'),
-              viewers: -1
-            }
-          ]
+          {
+            name: 'HLTV Live',
+            link: $('.stream-box.hltv-live a').attr('href'),
+            viewers: -1
+          }
+        ]
         : []
     )
     .concat(
       $('.stream-box.gotv').exists()
         ? [
-            {
-              name: 'GOTV',
-              link: $('.stream-box.gotv')
-                .text()
-                .replace('GOTV: connect', '')
-                .trim(),
-              viewers: -1
-            }
-          ]
+          {
+            name: 'GOTV',
+            link: $('.stream-box.gotv')
+              .text()
+              .replace('GOTV: connect', '')
+              .trim(),
+            viewers: -1
+          }
+        ]
         : []
     )
 }
@@ -445,19 +449,19 @@ function getHighlightedPlayers($: HLTVPage) {
 
   return highlightedPlayer1.exists() && highlightedPlayer2.exists()
     ? {
-        team1: {
-          name: $('.lineups-compare-left .lineups-compare-playername').text(),
-          id: $('.lineups-compare-left .lineups-compare-player-links a')
-            .first()
-            .attrThen('href', getIdAt(2))
-        },
-        team2: {
-          name: $('.lineups-compare-right .lineups-compare-playername').text(),
-          id: $('.lineups-compare-right .lineups-compare-player-links a')
-            .first()
-            .attrThen('href', getIdAt(2))
-        }
+      team1: {
+        name: $('.lineups-compare-left .lineups-compare-playername').text(),
+        id: $('.lineups-compare-left .lineups-compare-player-links a')
+          .first()
+          .attrThen('href', getIdAt(2))
+      },
+      team2: {
+        name: $('.lineups-compare-right .lineups-compare-playername').text(),
+        id: $('.lineups-compare-right .lineups-compare-player-links a')
+          .first()
+          .attrThen('href', getIdAt(2))
       }
+    }
     : undefined
 }
 
@@ -492,11 +496,11 @@ function getHeadToHead($: HLTVPage): HeadToHeadResult[] {
 function getHighlights($: HLTVPage, team1?: Team, team2?: Team): Highlight[] {
   return team1 && team2
     ? $('.highlight')
-        .toArray()
-        .map((highlightEl) => ({
-          link: highlightEl.attr('data-highlight-embed'),
-          title: highlightEl.text()
-        }))
+      .toArray()
+      .map((highlightEl) => ({
+        link: highlightEl.attr('data-highlight-embed'),
+        title: highlightEl.text()
+      }))
     : []
 }
 
