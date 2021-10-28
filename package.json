@@ -1,5 +1,5 @@
 {
-  "name": "hltv",
+  "name": "@sofwar/hltv",
   "version": "3.3.3",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
@@ -10,7 +10,10 @@
     "test": "jest",
     "pretty": "prettier --write \"**/*.ts\""
   },
-  "repository": "git+https://github.com/gigobyte/HLTV.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofwar/HLTV.git"
+  },
   "keywords": [
     "hltv",
     "api",
@@ -35,9 +38,9 @@
   "author": "Stanislav Iliev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gigobyte/HLTV/issues"
+    "url": "https://github.com/sofwar/HLTV/issues"
   },
-  "homepage": "https://github.com/gigobyte/HLTV#readme",
+  "homepage": "https://github.com/sofwar/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.30",
     "@types/jest": "26.0.24",
@@ -58,5 +61,8 @@
     "request": "2.88.2",
     "socket.io-client": "2.4.0",
     "uuid": "8.3.2"
+  },
+  "directories": {
+    "lib": "lib"
   }
 }
