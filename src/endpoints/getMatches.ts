@@ -49,11 +49,13 @@ export const getMatches =
       await fetchPage(`https://www.hltv.org/matches?${query}`, config.loadPage)
     )
 
-    const events = $('.event-filter-popup a')
+    const events = $('.events-container a')
       .toArray()
       .map((el) => ({
         id: el.attrThen('href', (x) => Number(x.split('=').pop())),
-        name: el.find('.event-name').text()
+        name: el.find('.event-name').text() !== '' 
+          ? el.find('.event-name').text() 
+          : el.find('.featured-event-tooltip-content').text()
       }))
 
     return $('.liveMatch-container')
