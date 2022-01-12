@@ -11,6 +11,7 @@ export interface EventPreview {
   dateStart: number
   dateEnd: number
   numberOfTeams?: number
+  allMatchesListed?: boolean
   prizePool?: string
   location?: Country
   featured: boolean
@@ -107,8 +108,10 @@ export const getEvents =
           .text()
 
         const numberOfTeams = parseNumber(
-          el.find('.additional-info tr').first().find('td').eq(2).text()
+          el.find('.additional-info tr').first().find('td').eq(2).text().split("+")[0]
         )
+
+        const allMatchesListed = !el.find('.additional-info tr').first().find('td').eq(2).text().includes("+")
 
         return {
           id,
@@ -118,6 +121,7 @@ export const getEvents =
           location,
           prizePool,
           numberOfTeams,
+          allMatchesListed,
           featured: true
         }
       })
@@ -156,8 +160,10 @@ export const getEvents =
 
         const prizePool = el.find('.prizePoolEllipsis').text()
         const numberOfTeams = parseNumber(
-          el.find('.prizePoolEllipsis').prev().text()
+          el.find('.prizePoolEllipsis').prev().text().split("+")[0]
         )
+
+        const allMatchesListed = !el.find('.prizePoolEllipsis').prev().text().includes("+")
 
         return {
           id,
@@ -167,6 +173,7 @@ export const getEvents =
           location,
           prizePool,
           numberOfTeams,
+          allMatchesListed,
           featured: false
         }
       })

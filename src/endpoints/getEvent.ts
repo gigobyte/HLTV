@@ -48,7 +48,8 @@ export interface FullEvent {
   dateEnd?: number
   prizePool: string
   location: Country
-  numberOfTeams?: number
+  numberOfTeams: number
+  allMatchesListed: boolean
   teams: FullEventTeam[]
   prizeDistribution: FullEventPrizeDistribution[]
   relatedEvents: Event[]
@@ -115,7 +116,9 @@ export const getEvent =
         }
       })
 
-    const numberOfTeams = $('td.teamsNumber').numFromText()!
+    const numberOfTeams = parseNumber($('td.teamsNumber').text().split("+")[0])!
+
+    const allMatchesListed = !$('td.teamsNumber').text().includes("+")!
 
     const teams = $('.team-box')
       .toArray()
@@ -201,6 +204,7 @@ export const getEvent =
       prizePool,
       location,
       numberOfTeams,
+      allMatchesListed,
       teams,
       prizeDistribution,
       relatedEvents,
