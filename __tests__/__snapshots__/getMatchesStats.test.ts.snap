@@ -804,7 +804,7 @@ Array [
     "date": 1614463800000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_nuke",
     "mapStatsId": 115563,
@@ -825,7 +825,7 @@ Array [
     "date": 1614463800000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_mirage",
     "mapStatsId": 115562,
@@ -972,7 +972,7 @@ Array [
     "date": 1614451200000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_nuke",
     "mapStatsId": 115556,
@@ -993,7 +993,7 @@ Array [
     "date": 1614451200000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_train",
     "mapStatsId": 115555,
@@ -1014,7 +1014,7 @@ Array [
     "date": 1614451200000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_vertigo",
     "mapStatsId": 115551,
@@ -1049,7 +1049,7 @@ Array [
     },
     "team2": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
   },
   Object {
@@ -1066,7 +1066,7 @@ Array [
     },
     "team1": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
     "team2": Object {
       "id": 8113,
@@ -1203,7 +1203,7 @@ Array [
     "date": 1614434400000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_dust2",
     "mapStatsId": 115545,
@@ -1224,7 +1224,7 @@ Array [
     "date": 1614434400000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_train",
     "mapStatsId": 115540,
@@ -1245,7 +1245,7 @@ Array [
     "date": 1614434400000,
     "event": Object {
       "id": 5768,
-      "name": "Ghetto eGames Cup 2",
+      "name": "Ghetto eGames Season 1 Cup 2",
     },
     "map": "de_inferno",
     "mapStatsId": 115538,
@@ -1826,7 +1826,7 @@ Array [
     },
     "team2": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
   },
   Object {
@@ -1843,7 +1843,7 @@ Array [
     },
     "team1": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
     "team2": Object {
       "id": 10669,
@@ -2393,7 +2393,7 @@ Array [
     },
     "team2": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
   },
   Object {
@@ -2410,7 +2410,7 @@ Array [
     },
     "team1": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
     "team2": Object {
       "id": 11010,
@@ -2813,7 +2813,7 @@ Array [
     },
     "team2": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
   },
   Object {
@@ -2830,7 +2830,7 @@ Array [
     },
     "team1": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
     "team2": Object {
       "id": 10669,
@@ -3044,7 +3044,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -3061,7 +3061,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 8068,
@@ -3086,7 +3086,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -3376,7 +3376,7 @@ Array [
     },
     "team1": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
     "team2": Object {
       "id": 9213,
@@ -3401,7 +3401,7 @@ Array [
     },
     "team2": Object {
       "id": 10815,
-      "name": "Havan Liberty",
+      "name": "Liberty",
     },
   },
   Object {
@@ -3842,7 +3842,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -3863,7 +3863,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -3880,7 +3880,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 8637,
@@ -3905,7 +3905,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -3922,7 +3922,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 4602,
@@ -4909,7 +4909,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 9735,
@@ -4934,7 +4934,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -5119,7 +5119,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 5310,
@@ -5144,7 +5144,7 @@ Array [
     },
     "team2": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
   },
   Object {
@@ -5161,7 +5161,7 @@ Array [
     },
     "team1": Object {
       "id": 10577,
-      "name": "Sinners",
+      "name": "SINNERS",
     },
     "team2": Object {
       "id": 5310,
