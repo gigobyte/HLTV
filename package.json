@@ -7,7 +7,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.release.json",
     "start": "ts-node src/playground",
-    "test": "jest",
+    "test": "jest --runInBand",
     "pretty": "prettier --write \"**/*.ts\""
   },
   "repository": "git+https://github.com/gigobyte/HLTV.git",
