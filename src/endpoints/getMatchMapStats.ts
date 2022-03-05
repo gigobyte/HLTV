@@ -401,8 +401,6 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
 }
 
 export function getPerformanceOverview(p$: HLTVPage) {
-  console.log(p$.html())
-
   return p$('.overview-table tr')
     .toArray()
     .slice(1)
