@@ -41,6 +41,7 @@ export interface FullTeamStats {
   currentLineup: Player[]
   historicPlayers: Player[]
   standins: Player[]
+  substitutes: Player[]
   matches: MatchStatsPreview[]
   mapStats: Record<GameMap, TeamMapStats>
   events: TeamStatsEvent[]
@@ -101,6 +102,10 @@ export const getTeamStats =
 
     const historicPlayers = getPlayersByContainer(
       getContainerByText($, 'Historic players')
+    )
+
+    const substitutes = getPlayersByContainer(
+      getContainerByText($, 'Substitutes')
     )
 
     const standins = getPlayersByContainer(getContainerByText($, 'Standins'))
@@ -231,6 +236,7 @@ export const getTeamStats =
       currentLineup,
       historicPlayers,
       standins,
+      substitutes,
       events,
       mapStats
     }

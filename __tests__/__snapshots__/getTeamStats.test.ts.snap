@@ -8,23 +8,107 @@ Object {
       "name": "niki1",
     },
     Object {
-      "id": 10762,
-      "name": "Rock1nG",
-    },
-    Object {
       "id": 14380,
       "name": "Patrick",
-    },
-    Object {
-      "id": 15385,
-      "name": "KalubeR",
     },
     Object {
       "id": 16412,
       "name": "rafftu",
     },
+    Object {
+      "id": 20114,
+      "name": "shaiK",
+    },
+    Object {
+      "id": 21345,
+      "name": "hybrid",
+    },
   ],
   "events": Array [
+    Object {
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "place": "2nd",
+    },
+    Object {
+      "event": Object {
+        "id": 5814,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4",
+      },
+      "place": "13-16th",
+    },
+    Object {
+      "event": Object {
+        "id": 6292,
+        "name": "ESL Challenger Anaheim 2022 Europe Open Qualifier 2",
+      },
+      "place": "9-16th",
+    },
+    Object {
+      "event": Object {
+        "id": 6271,
+        "name": "KeyDrop Cup 1",
+      },
+      "place": "3-4th",
+    },
+    Object {
+      "event": Object {
+        "id": 6246,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4 Closed Qualifier",
+      },
+      "place": "9-16th",
+    },
+    Object {
+      "event": Object {
+        "id": 6077,
+        "name": "IEM Fall 2021 Europe Open Qualifier 2",
+      },
+      "place": "5-8th",
+    },
+    Object {
+      "event": Object {
+        "id": 6076,
+        "name": "IEM Fall 2021 Europe Open Qualifier 1",
+      },
+      "place": "9-16th",
+    },
+    Object {
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "place": "7-8th",
+    },
+    Object {
+      "event": Object {
+        "id": 5952,
+        "name": "A1 Gaming League Season 4",
+      },
+      "place": "1st",
+    },
+    Object {
+      "event": Object {
+        "id": 5934,
+        "name": "European Development Championship 4 Closed Qualifier",
+      },
+      "place": "9-16th",
+    },
+    Object {
+      "event": Object {
+        "id": 5701,
+        "name": "ESEA Premier Season 36 Europe",
+      },
+      "place": "15th",
+    },
+    Object {
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "place": "7-8th",
+    },
     Object {
       "event": Object {
         "id": 5785,
@@ -35,7 +119,7 @@ Object {
     Object {
       "event": Object {
         "id": 5754,
-        "name": "ESEA Winter Cash Cup 5 Europe",
+        "name": "ESEA Winter 2020 Cash Cup 5 Europe",
       },
       "place": "3-4th",
     },
@@ -45,13 +129,6 @@ Object {
         "name": "Snow Sweet Snow 1 Regionals",
       },
       "place": "25-32nd",
-    },
-    Object {
-      "event": Object {
-        "id": 5701,
-        "name": "ESEA Premier Season 36 Europe",
-      },
-      "place": "-",
     },
     Object {
       "event": Object {
@@ -133,7 +210,7 @@ Object {
     Object {
       "event": Object {
         "id": 5558,
-        "name": "ESEA Summer Cash Cup 4 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 4 Europe",
       },
       "place": "3-4th",
     },
@@ -210,7 +287,7 @@ Object {
     Object {
       "event": Object {
         "id": 5486,
-        "name": "ESEA Summer Cash Cup 1 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 1 Europe",
       },
       "place": "1st",
     },
@@ -557,40 +634,57 @@ Object {
       "name": "blocker",
     },
     Object {
-      "id": 15384,
-      "name": "doublemagic",
-    },
-    Object {
-      "id": 16410,
-      "name": "Duplicate",
-    },
-    Object {
-      "id": 20097,
-      "name": "h4rn",
-    },
-    Object {
-      "id": 13464,
-      "name": "mar",
-    },
-    Object {
       "id": 20388,
       "name": "milky",
+    },
+    Object {
+      "id": 17146,
+      "name": "numb",
     },
     Object {
       "id": 17145,
       "name": "Rainwaker",
     },
     Object {
-      "id": 20114,
-      "name": "shaiK",
+      "id": 10762,
+      "name": "Rock1nG",
     },
     Object {
       "id": 13992,
       "name": "Zix",
     },
+    Object {
+      "id": 15384,
+      "name": "doublemagic",
+    },
+    Object {
+      "id": 13464,
+      "name": "mar",
+    },
+    Object {
+      "id": 16410,
+      "name": "Duplicate",
+    },
+    Object {
+      "id": 15385,
+      "name": "KalubeR",
+    },
+    Object {
+      "id": 20097,
+      "name": "h4rn",
+    },
   ],
   "id": 9863,
   "mapStats": Object {
+    "de_ancient": Object {
+      "draws": 0,
+      "losses": 2,
+      "roundWinPAfterFirstDeath": 26,
+      "roundWinPAfterFirstKill": 70.9,
+      "totalRounds": 105,
+      "winRate": 50,
+      "wins": 2,
+    },
     "de_cache": Object {
       "draws": 0,
       "losses": 1,
@@ -602,69 +696,972 @@ Object {
     },
     "de_dust2": Object {
       "draws": 0,
-      "losses": 39,
-      "roundWinPAfterFirstDeath": 24.7,
-      "roundWinPAfterFirstKill": 71.6,
-      "totalRounds": 1877,
-      "winRate": 44.3,
-      "wins": 31,
+      "losses": 41,
+      "roundWinPAfterFirstDeath": 25,
+      "roundWinPAfterFirstKill": 71.7,
+      "totalRounds": 2009,
+      "winRate": 44.6,
+      "wins": 33,
     },
     "de_inferno": Object {
       "draws": 0,
-      "losses": 51,
-      "roundWinPAfterFirstDeath": 27.6,
+      "losses": 58,
+      "roundWinPAfterFirstDeath": 27.9,
       "roundWinPAfterFirstKill": 70.5,
-      "totalRounds": 2361,
-      "winRate": 44,
-      "wins": 40,
+      "totalRounds": 2660,
+      "winRate": 43.1,
+      "wins": 44,
     },
     "de_mirage": Object {
       "draws": 0,
-      "losses": 39,
-      "roundWinPAfterFirstDeath": 27.3,
-      "roundWinPAfterFirstKill": 70.1,
-      "totalRounds": 1869,
-      "winRate": 43.5,
-      "wins": 30,
+      "losses": 42,
+      "roundWinPAfterFirstDeath": 27.1,
+      "roundWinPAfterFirstKill": 70.5,
+      "totalRounds": 2003,
+      "winRate": 43.2,
+      "wins": 32,
     },
     "de_nuke": Object {
       "draws": 0,
-      "losses": 6,
-      "roundWinPAfterFirstDeath": 16.8,
-      "roundWinPAfterFirstKill": 58.8,
-      "totalRounds": 175,
-      "winRate": 14.3,
-      "wins": 1,
+      "losses": 10,
+      "roundWinPAfterFirstDeath": 18.3,
+      "roundWinPAfterFirstKill": 67.8,
+      "totalRounds": 357,
+      "winRate": 28.6,
+      "wins": 4,
     },
     "de_overpass": Object {
       "draws": 0,
-      "losses": 34,
-      "roundWinPAfterFirstDeath": 29.2,
+      "losses": 39,
+      "roundWinPAfterFirstDeath": 28,
       "roundWinPAfterFirstKill": 71.9,
-      "totalRounds": 2033,
-      "winRate": 56.4,
-      "wins": 44,
+      "totalRounds": 2244,
+      "winRate": 54.7,
+      "wins": 47,
     },
     "de_train": Object {
       "draws": 0,
-      "losses": 41,
-      "roundWinPAfterFirstDeath": 28.7,
-      "roundWinPAfterFirstKill": 73.5,
-      "totalRounds": 2480,
-      "winRate": 55.9,
+      "losses": 42,
+      "roundWinPAfterFirstDeath": 28.6,
+      "roundWinPAfterFirstKill": 73.4,
+      "totalRounds": 2506,
+      "winRate": 55.3,
       "wins": 52,
     },
     "de_vertigo": Object {
       "draws": 0,
-      "losses": 25,
-      "roundWinPAfterFirstDeath": 26.7,
-      "roundWinPAfterFirstKill": 69.2,
-      "totalRounds": 1179,
-      "winRate": 43.2,
-      "wins": 19,
+      "losses": 26,
+      "roundWinPAfterFirstDeath": 27,
+      "roundWinPAfterFirstKill": 69.5,
+      "totalRounds": 1260,
+      "winRate": 44.7,
+      "wins": 21,
     },
   },
   "matches": Array [
+    Object {
+      "date": 1645308000000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 134166,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10386,
+        "name": "SKADE",
+      },
+    },
+    Object {
+      "date": 1645308000000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 134163,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10386,
+        "name": "SKADE",
+      },
+    },
+    Object {
+      "date": 1645308000000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_ancient",
+      "mapStatsId": 134159,
+      "result": Object {
+        "team1": 10,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10386,
+        "name": "SKADE",
+      },
+    },
+    Object {
+      "date": 1645308000000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 134155,
+      "result": Object {
+        "team1": 16,
+        "team2": 14,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10386,
+        "name": "SKADE",
+      },
+    },
+    Object {
+      "date": 1644616800000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 133764,
+      "result": Object {
+        "team1": 16,
+        "team2": 13,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11455,
+        "name": "Endangered",
+      },
+    },
+    Object {
+      "date": 1644616800000,
+      "event": Object {
+        "id": 6386,
+        "name": "A1 Gaming League Season 5",
+      },
+      "map": "de_ancient",
+      "mapStatsId": 133760,
+      "result": Object {
+        "team1": 16,
+        "team2": 10,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11455,
+        "name": "Endangered",
+      },
+    },
+    Object {
+      "date": 1638309600000,
+      "event": Object {
+        "id": 6292,
+        "name": "ESL Challenger Anaheim 2022 Europe Open Qualifier 2",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 131255,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    },
+    Object {
+      "date": 1638223200000,
+      "event": Object {
+        "id": 5814,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 131133,
+      "result": Object {
+        "team1": 7,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1638223200000,
+      "event": Object {
+        "id": 5814,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 131129,
+      "result": Object {
+        "team1": 12,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1638050400000,
+      "event": Object {
+        "id": 5814,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 131020,
+      "result": Object {
+        "team1": 14,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9287,
+        "name": "Unique",
+      },
+    },
+    Object {
+      "date": 1638050400000,
+      "event": Object {
+        "id": 5814,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4",
+      },
+      "map": "de_dust2",
+      "mapStatsId": 131017,
+      "result": Object {
+        "team1": 16,
+        "team2": 12,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9287,
+        "name": "Unique",
+      },
+    },
+    Object {
+      "date": 1638050400000,
+      "event": Object {
+        "id": 6271,
+        "name": "KeyDrop Cup 1",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 131015,
+      "result": Object {
+        "team1": 13,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10116,
+        "name": "hREDS",
+      },
+    },
+    Object {
+      "date": 1638050400000,
+      "event": Object {
+        "id": 6271,
+        "name": "KeyDrop Cup 1",
+      },
+      "map": "de_ancient",
+      "mapStatsId": 131012,
+      "result": Object {
+        "team1": 10,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10116,
+        "name": "hREDS",
+      },
+    },
+    Object {
+      "date": 1637964000000,
+      "event": Object {
+        "id": 6271,
+        "name": "KeyDrop Cup 1",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 130952,
+      "result": Object {
+        "team1": 16,
+        "team2": 7,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11219,
+        "name": "INDE IRAE",
+      },
+    },
+    Object {
+      "date": 1637964000000,
+      "event": Object {
+        "id": 6271,
+        "name": "KeyDrop Cup 1",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 130947,
+      "result": Object {
+        "team1": 16,
+        "team2": 3,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11066,
+        "name": "Fiend",
+      },
+    },
+    Object {
+      "date": 1636408800000,
+      "event": Object {
+        "id": 6246,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4 Closed Qualifier",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 129825,
+      "result": Object {
+        "team1": 17,
+        "team2": 19,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 8840,
+        "name": "Lynn Vision",
+      },
+    },
+    Object {
+      "date": 1636408800000,
+      "event": Object {
+        "id": 6246,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4 Closed Qualifier",
+      },
+      "map": "de_ancient",
+      "mapStatsId": 129824,
+      "result": Object {
+        "team1": 16,
+        "team2": 11,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 8840,
+        "name": "Lynn Vision",
+      },
+    },
+    Object {
+      "date": 1636408800000,
+      "event": Object {
+        "id": 6246,
+        "name": "Funspark ULTI 2021 Europe Regional Series 4 Closed Qualifier",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 129823,
+      "result": Object {
+        "team1": 14,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 8840,
+        "name": "Lynn Vision",
+      },
+    },
+    Object {
+      "date": 1630530000000,
+      "event": Object {
+        "id": 6077,
+        "name": "IEM Fall 2021 Europe Open Qualifier 2",
+      },
+      "map": "de_dust2",
+      "mapStatsId": 125822,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10426,
+        "name": "Wisla Krakow",
+      },
+    },
+    Object {
+      "date": 1630530000000,
+      "event": Object {
+        "id": 6077,
+        "name": "IEM Fall 2021 Europe Open Qualifier 2",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 125810,
+      "result": Object {
+        "team1": 16,
+        "team2": 14,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    },
+    Object {
+      "date": 1630098000000,
+      "event": Object {
+        "id": 6076,
+        "name": "IEM Fall 2021 Europe Open Qualifier 1",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 125479,
+      "result": Object {
+        "team1": 9,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 7865,
+        "name": "HAVU",
+      },
+    },
+    Object {
+      "date": 1625432400000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 123245,
+      "result": Object {
+        "team1": 4,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11003,
+        "name": "DBL PONEY",
+      },
+    },
+    Object {
+      "date": 1625432400000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_vertigo",
+      "mapStatsId": 123243,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11003,
+        "name": "DBL PONEY",
+      },
+    },
+    Object {
+      "date": 1625346000000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_vertigo",
+      "mapStatsId": 123217,
+      "result": Object {
+        "team1": 16,
+        "team2": 14,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10888,
+        "name": "EC Kyiv",
+      },
+    },
+    Object {
+      "date": 1625346000000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 123210,
+      "result": Object {
+        "team1": 16,
+        "team2": 8,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10888,
+        "name": "EC Kyiv",
+      },
+    },
+    Object {
+      "date": 1625346000000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 123202,
+      "result": Object {
+        "team1": 10,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10888,
+        "name": "EC Kyiv",
+      },
+    },
+    Object {
+      "date": 1625086800000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 123023,
+      "result": Object {
+        "team1": 16,
+        "team2": 14,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11001,
+        "name": "ONYX",
+      },
+    },
+    Object {
+      "date": 1625086800000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 123019,
+      "result": Object {
+        "team1": 16,
+        "team2": 11,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11001,
+        "name": "ONYX",
+      },
+    },
+    Object {
+      "date": 1624914000000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 122911,
+      "result": Object {
+        "team1": 12,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9802,
+        "name": "Budapest Five",
+      },
+    },
+    Object {
+      "date": 1624914000000,
+      "event": Object {
+        "id": 5978,
+        "name": "ESEA Advanced Season 37 Europe",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 122903,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9802,
+        "name": "Budapest Five",
+      },
+    },
+    Object {
+      "date": 1622926800000,
+      "event": Object {
+        "id": 5952,
+        "name": "A1 Gaming League Season 4",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 121569,
+      "result": Object {
+        "team1": 16,
+        "team2": 9,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11161,
+        "name": "FORFRIENDS",
+      },
+    },
+    Object {
+      "date": 1622926800000,
+      "event": Object {
+        "id": 5952,
+        "name": "A1 Gaming League Season 4",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 121567,
+      "result": Object {
+        "team1": 10,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11161,
+        "name": "FORFRIENDS",
+      },
+    },
+    Object {
+      "date": 1622926800000,
+      "event": Object {
+        "id": 5952,
+        "name": "A1 Gaming League Season 4",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 121565,
+      "result": Object {
+        "team1": 16,
+        "team2": 10,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11161,
+        "name": "FORFRIENDS",
+      },
+    },
+    Object {
+      "date": 1622926800000,
+      "event": Object {
+        "id": 5952,
+        "name": "A1 Gaming League Season 4",
+      },
+      "map": "de_vertigo",
+      "mapStatsId": 121564,
+      "result": Object {
+        "team1": 16,
+        "team2": 8,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11161,
+        "name": "FORFRIENDS",
+      },
+    },
+    Object {
+      "date": 1622149200000,
+      "event": Object {
+        "id": 5934,
+        "name": "European Development Championship 4 Closed Qualifier",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 121106,
+      "result": Object {
+        "team1": 12,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11154,
+        "name": "ex-Marlian",
+      },
+    },
+    Object {
+      "date": 1622149200000,
+      "event": Object {
+        "id": 5934,
+        "name": "European Development Championship 4 Closed Qualifier",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 121103,
+      "result": Object {
+        "team1": 5,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11154,
+        "name": "ex-Marlian",
+      },
+    },
+    Object {
+      "date": 1618606800000,
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "map": "de_dust2",
+      "mapStatsId": 118476,
+      "result": Object {
+        "team1": 20,
+        "team2": 22,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10333,
+        "name": "Sangal",
+      },
+    },
+    Object {
+      "date": 1618606800000,
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 118468,
+      "result": Object {
+        "team1": 8,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10333,
+        "name": "Sangal",
+      },
+    },
+    Object {
+      "date": 1618520400000,
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "map": "de_train",
+      "mapStatsId": 118377,
+      "result": Object {
+        "team1": 10,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+    },
+    Object {
+      "date": 1618520400000,
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 118374,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+    },
+    Object {
+      "date": 1618520400000,
+      "event": Object {
+        "id": 5829,
+        "name": "ESEA Premier Season 36 Europe Relegation",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 118365,
+      "result": Object {
+        "team1": 16,
+        "team2": 9,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10697,
+        "name": "BLINK",
+      },
+    },
+    Object {
+      "date": 1618434000000,
+      "event": Object {
+        "id": 5701,
+        "name": "ESEA Premier Season 36 Europe",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 118294,
+      "result": Object {
+        "team1": 16,
+        "team2": 13,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 8248,
+        "name": "PACT",
+      },
+    },
+    Object {
+      "date": 1618434000000,
+      "event": Object {
+        "id": 5701,
+        "name": "ESEA Premier Season 36 Europe",
+      },
+      "map": "de_dust2",
+      "mapStatsId": 118291,
+      "result": Object {
+        "team1": 19,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 8248,
+        "name": "PACT",
+      },
+    },
     Object {
       "date": 1616018400000,
       "event": Object {
@@ -1131,7 +2128,7 @@ Object {
       "date": 1613253600000,
       "event": Object {
         "id": 5754,
-        "name": "ESEA Winter Cash Cup 5 Europe",
+        "name": "ESEA Winter 2020 Cash Cup 5 Europe",
       },
       "map": "de_mirage",
       "mapStatsId": 114936,
@@ -1152,7 +2149,7 @@ Object {
       "date": 1613253600000,
       "event": Object {
         "id": 5754,
-        "name": "ESEA Winter Cash Cup 5 Europe",
+        "name": "ESEA Winter 2020 Cash Cup 5 Europe",
       },
       "map": "de_overpass",
       "mapStatsId": 114931,
@@ -1173,7 +2170,7 @@ Object {
       "date": 1613253600000,
       "event": Object {
         "id": 5754,
-        "name": "ESEA Winter Cash Cup 5 Europe",
+        "name": "ESEA Winter 2020 Cash Cup 5 Europe",
       },
       "map": "de_vertigo",
       "mapStatsId": 114925,
@@ -2132,7 +3129,7 @@ Object {
       },
       "team2": Object {
         "id": 10577,
-        "name": "Sinners",
+        "name": "SINNERS",
       },
     },
     Object {
@@ -2153,7 +3150,7 @@ Object {
       },
       "team2": Object {
         "id": 10577,
-        "name": "Sinners",
+        "name": "SINNERS",
       },
     },
     Object {
@@ -2643,7 +3640,7 @@ Object {
       "date": 1601154000000,
       "event": Object {
         "id": 5558,
-        "name": "ESEA Summer Cash Cup 4 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 4 Europe",
       },
       "map": "de_mirage",
       "mapStatsId": 109297,
@@ -2664,7 +3661,7 @@ Object {
       "date": 1601154000000,
       "event": Object {
         "id": 5558,
-        "name": "ESEA Summer Cash Cup 4 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 4 Europe",
       },
       "map": "de_train",
       "mapStatsId": 109289,
@@ -2685,7 +3682,7 @@ Object {
       "date": 1601154000000,
       "event": Object {
         "id": 5558,
-        "name": "ESEA Summer Cash Cup 4 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 4 Europe",
       },
       "map": "de_dust2",
       "mapStatsId": 109282,
@@ -4071,7 +5068,7 @@ Object {
       "date": 1597525200000,
       "event": Object {
         "id": 5486,
-        "name": "ESEA Summer Cash Cup 1 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 1 Europe",
       },
       "map": "de_train",
       "mapStatsId": 107326,
@@ -4092,7 +5089,7 @@ Object {
       "date": 1597525200000,
       "event": Object {
         "id": 5486,
-        "name": "ESEA Summer Cash Cup 1 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 1 Europe",
       },
       "map": "de_overpass",
       "mapStatsId": 107320,
@@ -4113,7 +5110,7 @@ Object {
       "date": 1597525200000,
       "event": Object {
         "id": 5486,
-        "name": "ESEA Summer Cash Cup 1 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 1 Europe",
       },
       "map": "de_dust2",
       "mapStatsId": 107310,
@@ -4134,7 +5131,7 @@ Object {
       "date": 1597525200000,
       "event": Object {
         "id": 5486,
-        "name": "ESEA Summer Cash Cup 1 Europe",
+        "name": "ESEA Summer 2020 Cash Cup 1 Europe",
       },
       "map": "de_inferno",
       "mapStatsId": 107300,
@@ -7697,7 +8694,7 @@ Object {
       },
       "team2": Object {
         "id": 5540,
-        "name": "ttc",
+        "name": "TTC",
       },
     },
     Object {
@@ -7718,7 +8715,7 @@ Object {
       },
       "team2": Object {
         "id": 5540,
-        "name": "ttc",
+        "name": "TTC",
       },
     },
     Object {
@@ -9629,7 +10626,7 @@ Object {
       },
       "team2": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
     },
     Object {
@@ -9650,7 +10647,7 @@ Object {
       },
       "team2": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
     },
     Object {
@@ -10183,12 +11180,12 @@ Object {
   "overview": Object {
     "draws": 0,
     "kdRatio": 0.97,
-    "losses": 236,
-    "mapsPlayed": 453,
-    "roundsPlayed": 12003,
-    "totalDeaths": 41084,
-    "totalKills": 39766,
-    "wins": 217,
+    "losses": 261,
+    "mapsPlayed": 496,
+    "roundsPlayed": 13173,
+    "totalDeaths": 45092,
+    "totalKills": 43621,
+    "wins": 235,
   },
   "standins": Array [
     Object {
@@ -10216,14 +11213,11 @@ Object {
       "name": "SHiPZ",
     },
     Object {
-      "id": 17146,
-      "name": "numb",
-    },
-    Object {
       "id": 7834,
       "name": "v1c7oR",
     },
   ],
+  "substitutes": Array [],
 }
 `;
 
@@ -10338,5 +11332,6 @@ Object {
       "name": "MILENK0",
     },
   ],
+  "substitutes": Array [],
 }
 `;
