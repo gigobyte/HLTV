@@ -17,9 +17,10 @@ export enum MatchFilter {
 }
 
 export interface GetMatchesArguments {
-  eventId?: number
+  eventIds?: number[]
   eventType?: MatchEventType
   filter?: MatchFilter
+  teamIds?: number[]
 }
 
 export interface MatchPreview {
@@ -36,13 +37,14 @@ export interface MatchPreview {
 
 export const getMatches =
   (config: HLTVConfig) =>
-  async ({ eventId, eventType, filter }: GetMatchesArguments = {}): Promise<
+  async ({ eventIds, eventType, filter, teamIds }: GetMatchesArguments = {}): Promise<
     MatchPreview[]
   > => {
     const query = stringify({
-      ...(eventId ? { event: eventId } : {}),
+      ...(eventIds ? { event: eventIds } : {}),
       ...(eventType ? { eventType } : {}),
-      ...(filter ? { predefinedFilter: filter } : {})
+      ...(filter ? { predefinedFilter: filter } : {}),
+			...(teamIds ? { team: teamIds } : {})
     })
 
     const $ = HLTVScraper(

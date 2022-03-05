@@ -104,6 +104,7 @@ Parses all matches from the `hltv.org/matches/` page (1 request)
 |  eventId  |                                            number?                                             |       -       |                  Filter matches by event ID.                   |
 | eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
 |  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?  |       -       | Filter matches by pre-set categories. Overrides other filters. |
+|  teamIds  |                                            number[]?                                           |       -       |                                -                               |
 
 ```javascript
 HLTV.getMatches().then((res) => {
