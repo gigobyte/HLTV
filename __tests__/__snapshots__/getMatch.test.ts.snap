@@ -53,7 +53,7 @@ Object {
       "result": "16 - 12",
       "winner": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
     },
     Object {
@@ -79,7 +79,7 @@ Object {
       "result": "19 - 16",
       "winner": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
     },
     Object {
@@ -105,7 +105,7 @@ Object {
       "result": "16 - 8",
       "winner": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
     },
     Object {
@@ -291,7 +291,7 @@ Object {
   "streams": Array [],
   "team1": Object {
     "id": 4494,
-    "name": "mousesports",
+    "name": "MOUZ",
   },
   "team2": Object {
     "id": 7533,
@@ -303,7 +303,7 @@ Object {
       "map": "de_overpass",
       "team": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
       "type": "removed",
     },
@@ -319,7 +319,7 @@ Object {
       "map": "de_dust2",
       "team": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
       "type": "picked",
     },
@@ -335,7 +335,7 @@ Object {
       "map": "de_train",
       "team": Object {
         "id": 4494,
-        "name": "mousesports",
+        "name": "MOUZ",
       },
       "type": "removed",
     },
@@ -434,7 +434,7 @@ Object {
   "streams": Array [],
   "team1": Object {
     "id": 4494,
-    "name": "mousesports",
+    "name": "MOUZ",
   },
   "team2": Object {
     "id": 4901,
@@ -444,7 +444,7 @@ Object {
   "vetoes": Array [],
   "winnerTeam": Object {
     "id": 4494,
-    "name": "mousesports",
+    "name": "MOUZ",
   },
 }
 `;
@@ -804,7 +804,7 @@ Object {
   },
   "significance": undefined,
   "statsId": undefined,
-  "status": "Over",
+  "status": "Deleted",
   "streams": Array [],
   "team1": Object {
     "id": 5422,

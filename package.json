@@ -8,6 +8,7 @@
     "build": "tsc -p tsconfig.release.json",
     "start": "ts-node src/playground",
     "test": "jest --runInBand",
+    "test:approve": "jest --runInBand --updateSnapshot",
     "pretty": "prettier --write \"**/*.ts\""
   },
   "repository": "git+https://github.com/gigobyte/HLTV.git",
