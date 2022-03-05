@@ -68,9 +68,11 @@ export const getPlayer =
       ? $('.bodyshot-img-square').attr('src')
       : $('.bodyshot-img').attr('src')
 
-    const image = imageUrl.includes('bodyshot/unknown.png')
-      ? undefined
-      : imageUrl
+    const image =
+      imageUrl.includes('bodyshot/unknown.png') ||
+      imageUrl.includes('static/player/player_silhouette.png')
+        ? undefined
+        : imageUrl
 
     const age = isRegularPlayer
       ? $('.profile-player-stat-value')
