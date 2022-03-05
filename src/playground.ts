@@ -6,7 +6,7 @@ const log = (promise: Promise<any>) =>
     .catch((err) => console.log(err))
 
 // log(HLTV.getMatch({ id: 2346924 }))
-log(HLTV.getMatches({teamIds: [7532, 4869] }))
+// log(HLTV.getMatches())
 // log(HLTV.getEvent({ id: 5741 }))
 // log(HLTV.getEvents())
 // log(HLTV.getMatchMapStats({ id: 115827 }))

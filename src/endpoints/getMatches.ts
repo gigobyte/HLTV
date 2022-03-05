@@ -44,7 +44,7 @@ export const getMatches =
       ...(eventIds ? { event: eventIds } : {}),
       ...(eventType ? { eventType } : {}),
       ...(filter ? { predefinedFilter: filter } : {}),
-			...(teamIds ? { team: teamIds } : {})
+      ...(teamIds ? { team: teamIds } : {})
     })
 
     const $ = HLTVScraper(
