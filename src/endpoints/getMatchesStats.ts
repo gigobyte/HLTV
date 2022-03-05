@@ -32,7 +32,9 @@ export interface MatchStatsPreview {
 
 export const getMatchesStats =
   (config: HLTVConfig) =>
-  async (options: GetMatchesStatsArguments): Promise<MatchStatsPreview[]> => {
+  async (
+    options: GetMatchesStatsArguments = {}
+  ): Promise<MatchStatsPreview[]> => {
     const query = stringify({
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),

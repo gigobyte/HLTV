@@ -6,8 +6,8 @@ const EMPTY = 460
 
 test('getTeam', async () => {
   await sleep(3000)
-  expect(await HLTV.getPlayer({ id: FULL })).toMatchSnapshot()
+  expect(await HLTV.getTeam({ id: FULL })).toMatchSnapshot()
   await sleep(3000)
-  expect(await HLTV.getPlayer({ id: EMPTY })).toMatchSnapshot()
+  expect(await HLTV.getTeam({ id: EMPTY })).toMatchSnapshot()
   await sleep(3000)
 }, 30000)
