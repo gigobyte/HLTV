@@ -55,6 +55,14 @@ export const getMatches =
         id: el.attrThen('href', (x) => Number(x.split('=').pop())),
         name: el.find('.event-name').text()
       }))
+      .concat(
+        $('.events-container a')
+          .toArray()
+          .map((el) => ({
+            id: el.attrThen('href', (x) => Number(x.split('=').pop())),
+            name: el.find('.featured-event-tooltip-content').text()
+          }))
+      )
 
     return $('.liveMatch-container')
       .toArray()
