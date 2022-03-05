@@ -30,7 +30,7 @@ Array [
     },
     "stars": 3,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
     "team2": Object {
@@ -88,7 +88,7 @@ Array [
       "name": "TSM",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
   },
@@ -156,7 +156,7 @@ Array [
     },
     "stars": 2,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
     "team2": Object {
@@ -175,7 +175,7 @@ Array [
     "stars": 2,
     "team1": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
-      "name": "mousesports",
+      "name": "MOUZ",
     },
     "team2": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/zFLwAELOD15BjJSDMMNBWQ.png?ixlib=java-2.1.0&w=50&s=affb583e6716d8ee904826992255cc4b",
@@ -287,7 +287,7 @@ Array [
     },
     "stars": 3,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/w2EJ4p_IcYGMu0Cs2G4ZUn.png?ixlib=java-2.1.0&w=50&s=747bd21df637f066a412aaad3a30e4c0",
+      "logo": "https://img-cdn.hltv.org/teamlogo/_4q0csb9EDsrG9SAZ9k5tC.png?ixlib=java-2.1.0&w=50&s=a48d2323f5ed624a9dda2205888b5ead",
       "name": "Dignitas",
     },
     "team2": Object {
@@ -310,7 +310,7 @@ Array [
       "name": "Liquid",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/mbY2YeFKUAbL9NyO6ab7-c.png?ixlib=java-2.1.0&w=50&s=33901dc1e88dc81e479574095806fcb9",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
   },
@@ -330,7 +330,7 @@ Array [
     },
     "team2": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
-      "name": "mousesports",
+      "name": "MOUZ",
     },
   },
   Object {
@@ -386,7 +386,7 @@ Array [
       "name": "Envy",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/w2EJ4p_IcYGMu0Cs2G4ZUn.png?ixlib=java-2.1.0&w=50&s=747bd21df637f066a412aaad3a30e4c0",
+      "logo": "https://img-cdn.hltv.org/teamlogo/_4q0csb9EDsrG9SAZ9k5tC.png?ixlib=java-2.1.0&w=50&s=a48d2323f5ed624a9dda2205888b5ead",
       "name": "Dignitas",
     },
   },
@@ -401,7 +401,7 @@ Array [
     },
     "stars": 2,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
     "team2": Object {
@@ -444,7 +444,7 @@ Array [
     },
     "team2": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
-      "name": "mousesports",
+      "name": "MOUZ",
     },
   },
   Object {
@@ -681,7 +681,7 @@ Array [
     },
     "stars": 2,
     "team1": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/-ttGATBV_P_HcZazxNNtIb.png?ixlib=java-2.1.0&w=50&s=ba94f7812d1f47183a83f3f34ab959eb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/BSmtTpoXWe5bkSQ1Xk9bBQ.svg?ixlib=java-2.1.0&s=a0edf9bc3edb8680461c858fa21fe7fe",
       "name": "NIP",
     },
     "team2": Object {
@@ -757,7 +757,7 @@ Array [
       "name": "Natus Vincere",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/P-nn64asnwkfr-t4zy4-56.svg?ixlib=java-2.1.0&s=bf04a800f490bd93ee377c5daf72e3ac",
       "name": "Vitality",
     },
   },
@@ -793,7 +793,7 @@ Array [
       "name": "Natus Vincere",
     },
     "team2": Object {
-      "logo": "https://img-cdn.hltv.org/teamlogo/GAlByJtDTnkgbb9p_71SUL.png?ixlib=java-2.1.0&w=50&s=2838cd78a5ebb5c9fea4c485908e9dbb",
+      "logo": "https://img-cdn.hltv.org/teamlogo/P-nn64asnwkfr-t4zy4-56.svg?ixlib=java-2.1.0&s=bf04a800f490bd93ee377c5daf72e3ac",
       "name": "Vitality",
     },
   },
@@ -808,7 +808,7 @@ Array [
     "stars": 3,
     "team1": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/1YWxVoOcvOf3R9Z0-HWyeU.svg?ixlib=java-2.1.0&s=07f948624704c960960b962a9c0416c3",
-      "name": "mousesports",
+      "name": "MOUZ",
     },
     "team2": Object {
       "logo": "https://img-cdn.hltv.org/teamlogo/kixzGZIb9IYAAv-1vGrGev.svg?ixlib=java-2.1.0&s=8f9986a391fcb1adfbfff021b824a937",

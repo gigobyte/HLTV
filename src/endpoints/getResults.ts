@@ -46,7 +46,6 @@ export interface GetResultsArguments {
   startDate?: string
   endDate?: string
   matchType?: ResultsMatchType
-  rankingFilter?: RankingFilter
   maps?: GameMap[]
   bestOfX?: BestOfFilter
   countries?: string[]
@@ -55,6 +54,7 @@ export interface GetResultsArguments {
   playerIds?: number[]
   teamIds?: number[]
   game?: GameType
+  stars?: 1 | 2 | 3 | 4 | 5
   delayBetweenPageRequests?: number
 }
 
@@ -65,9 +65,6 @@ export const getResults =
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),
       ...(options.matchType ? { matchType: options.matchType } : {}),
-      ...(options.rankingFilter
-        ? { rankingFilter: options.rankingFilter }
-        : {}),
       ...(options.maps ? { map: options.maps.map(toMapFilter) } : {}),
       ...(options.bestOfX ? { bestOfX: options.bestOfX } : {}),
       ...(options.countries ? { country: options.countries } : {}),
@@ -75,7 +72,8 @@ export const getResults =
       ...(options.eventIds ? { event: options.eventIds } : {}),
       ...(options.playerIds ? { player: options.playerIds } : {}),
       ...(options.teamIds ? { team: options.teamIds } : {}),
-      ...(options.game ? { gameType: options.game } : {})
+      ...(options.game ? { gameType: options.game } : {}),
+      ...(options.stars ? { stars: options.stars } : {})
     })
 
     let page = 0

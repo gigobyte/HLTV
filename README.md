@@ -469,7 +469,7 @@ Parses the info from the `hltv.org/results` page (1 request per page of results)
 |        startDate         |                                             string?                                             |       -       |                     -                      |
 |         endDate          |                                             string?                                             |       -       |                     -                      |
 |        matchType         | [ResultMatchType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L9)? |       -       |                     -                      |
-|      rankingFilter       |   [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)?    |       -       |                     -                      |
+|          stars           |                                      1 \| 2 \| 3 \| 4 \| 5                                      |       -       |                     -                      |
 |           maps           |        [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?         |       -       |                     -                      |
 |        countries         |                                            string[]                                             |       -       |                     -                      |
 |         bestOfX          |    [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?     |       -       |                     -                      |
