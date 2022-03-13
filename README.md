@@ -339,6 +339,7 @@ Parses the info from `hltv.org/stats/players/*` (3 requests)
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
 |     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
+|    eventIds    |                                          number[]?                                          |       -       |      -      |
 
 ```javascript
 HLTV.getPlayerStats({ id: 7998 }).then(res => {
