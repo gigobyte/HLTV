@@ -12,7 +12,7 @@ export interface TeamRanking {
 }
 
 export interface GetTeamArguments {
-  year?: 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021
+  year?: 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022
   month?:
     | 'january'
     | 'february'
