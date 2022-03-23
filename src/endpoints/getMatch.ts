@@ -76,6 +76,11 @@ export interface Stream {
   viewers: number
 }
 
+export interface Score {
+  team1: number
+  team2: number
+}
+
 export interface FullMatch {
   id: number
   statsId?: number
@@ -88,6 +93,7 @@ export interface FullMatch {
   }
   status: MatchStatus
   hasScorebot: boolean
+  score: Score
   team1?: Team
   team2?: Team
   winnerTeam?: Team
@@ -126,6 +132,7 @@ export const getMatch =
     const significance = getMatchSignificance($)
     const status = getMatchStatus($)
     const hasScorebot = $('#scoreboardElement').exists()
+    const score = getScore($)
     const statsId = getStatsId($)
     const team1 = getTeam($, 1)
     const team2 = getTeam($, 2)
@@ -159,6 +166,7 @@ export const getMatch =
       status,
       title,
       hasScorebot,
+      score,
       highlightedPlayers,
       playerOfTheMatch,
       headToHead,
@@ -168,6 +176,15 @@ export const getMatch =
       odds: odds.concat(oddsCommunity ? [oddsCommunity] : [])
     }
   }
+
+function getScore($: HLTVPage): Score {
+  const t1 = $('.team1-gradient').find('div').eq(1).text()
+  const t2 = $('.team2-gradient').find('div').eq(1).text();
+  return {
+    team1: !!t1 ? parseInt(t1) : 0,
+    team2: !!t2 ? parseInt(t2) : 0
+  }
+}
 
 function getMatchStatus($: HLTVPage): MatchStatus {
   let status = MatchStatus.Scheduled
