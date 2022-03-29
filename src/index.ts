@@ -21,6 +21,7 @@ import { getTeamStats } from './endpoints/getTeamStats'
 import { getPastEvents } from './endpoints/getPastEvents'
 import { getResults } from './endpoints/getResults'
 import { getNews } from './endpoints/getNews'
+import { getEventStats } from "./endpoints/getEventStats";
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -43,6 +44,7 @@ export class Hltv {
   getEvents = getEvents(this.config as HLTVConfig)
   getPastEvents = getPastEvents(this.config as HLTVConfig)
   getEventByName = getEventByName(this.config as HLTVConfig)
+  getEventStats = getEventStats(this.config as HLTVConfig)
   getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
   getMatchStats = getMatchStats(this.config as HLTVConfig)
   getMatchesStats = getMatchesStats(this.config as HLTVConfig)
