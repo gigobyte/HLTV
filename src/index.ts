@@ -21,7 +21,7 @@ import { getTeamStats } from './endpoints/getTeamStats'
 import { getPastEvents } from './endpoints/getPastEvents'
 import { getResults } from './endpoints/getResults'
 import { getNews } from './endpoints/getNews'
-import { getEventStats } from "./endpoints/getEventStats";
+import { getEventStats } from './endpoints/getEventStats'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
