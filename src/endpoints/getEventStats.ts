@@ -51,12 +51,9 @@ const getPistolStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
-  async (options: {
-    eventId: number
-    startDate?: string
-    endDate?: string
-  }) => {
+  async (options: GetEventStatsArguments) => {
     const query = stringify({
+      event: options.eventId,
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
@@ -71,10 +68,12 @@ const getPistolStats =
       .map((el) => {
         const player = {
           ign: el.find('.playerCol a').text(),
-          pistolRoundsPlayed: el.find('.statsDetail').eq(1).text(),
-          pistolKdDiff: el.find('.kdDiffCol').text(),
-          pistolKd: el.find('.statsDetail').eq(1).text(),
-          pistolRating: el.find('.ratingCol').text()
+          pistolStats: {
+            pistolRoundsPlayed: el.find('.statsDetail').eq(1).text(),
+            pistolKdDiff: el.find('.kdDiffCol').text(),
+            pistolKd: el.find('.statsDetail').eq(1).text(),
+            pistolRating: el.find('.ratingCol').text()
+          }
         }
         return player
       })
@@ -85,12 +84,9 @@ const getOpeningStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
-  async (options: {
-    eventId: number
-    startDate?: string
-    endDate?: string
-  }) => {
+  async (options: GetEventStatsArguments) => {
     const query = stringify({
+      event: options.eventId,
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
@@ -104,11 +100,13 @@ const getOpeningStats =
       .map((el) => {
         const player = {
           ign: el.find('.playerColSmall a').text(),
-          openingKpr: el.find('.statsDetail').first().text(),
-          openingDpr: el.find('.statsDetail').eq(1).text(),
-          openingAttemps: el.find('.statsDetail').eq(2).text(),
-          openingSuccess: el.find('.statsDetail').eq(3).text(),
-          openingRating: el.find('.statsDetail').eq(4).text()
+          openingStats: {
+            openingKpr: el.find('.statsDetail').first().text(),
+            openingDpr: el.find('.statsDetail').eq(1).text(),
+            openingAttemps: el.find('.statsDetail').eq(2).text(),
+            openingSuccess: el.find('.statsDetail').eq(3).text(),
+            openingRating: el.find('.statsDetail').eq(4).text()
+          }
         }
         return player
       })
@@ -119,12 +117,9 @@ const getFlashStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
-  async (options: {
-    eventId: number
-    startDate?: string
-    endDate?: string
-  }) => {
+  async (options: GetEventStatsArguments) => {
     const query = stringify({
+      event: options.eventId,
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
@@ -139,12 +134,14 @@ const getFlashStats =
       .map((el) => {
         const player = {
           ign: el.find('.playerColSmall a').text(),
-          flashThrown: el.find('.statsDetail').eq(1).text(),
-          flashBlinded: el.find('.statsDetail').eq(2).text(),
-          oppFlashed: el.find('.flashed-opponent-col').text(),
-          flashDiff: el.find('.flash-col').first().text(),
-          flashAssists: el.find('.statsDetail').eq(4).text(),
-          flashSuccess: el.find('.statsDetail').eq(5).text()
+          flashStats: {
+            flashThrown: el.find('.statsDetail').eq(1).text(),
+            flashBlinded: el.find('.statsDetail').eq(2).text(),
+            oppFlashed: el.find('.flashed-opponent-col').text(),
+            flashDiff: el.find('.flash-col').first().text(),
+            flashAssists: el.find('.statsDetail').eq(4).text(),
+            flashSuccess: el.find('.statsDetail').eq(5).text()
+          }
         }
         return player
       })
@@ -155,38 +152,34 @@ export const getEventStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
-  async (options: {
-    eventId: number
-    startDate?: string
-    endDate?: string
-    flash?: boolean
-    opening?: boolean
-    pistol?: boolean
-  }): Promise<any> => {
+  async (options: GetEventStatsArguments): Promise<any> => {
     const query = stringify({
+      event: options.eventId,
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
+
     const $ = await fetchPage(
-      `https://www.hltv.org/stats/players?event=${options.eventId}`,
+      `https://www.hltv.org/stats/players?${query}`,
       config.loadPage
     ).then(HLTVScraper)
 
     // Overview stats
-    const overviewStatsList = $('.stats-table > tbody')
+    const overviewStatsList: PlayerEventStats[] = $('.stats-table > tbody')
       .children()
       .toArray()
       .map((el) => {
         const player = {
           ign: el.find('.playerCol a').text(),
           team: el.find('.teamCol a img').attr('title'),
-          mapsPlayed: el.find('.statsDetail').first().text(),
-          roundsPlayed: el.find('.statsDetail').eq(1).text(),
-          kdDiff: el.find('.kdDiffCol').text(),
-          kd: el.find('.statsDetail').eq(2).text(),
-          rating: el.find('.ratingCol').text()
+          overviewStats: {
+            mapsPlayed: el.find('.statsDetail').first().text(),
+            roundsPlayed: el.find('.statsDetail').eq(1).text(),
+            kdDiff: el.find('.kdDiffCol').text(),
+            kdRatio: el.find('.statsDetail').eq(2).text(),
+            rating: el.find('.ratingCol').text()
+          }
         }
-
         return player
       })
 
@@ -207,25 +200,25 @@ export const getEventStats =
         ? await getPistolStats(config)({ eventId: options.eventId })
         : undefined
 
-    overviewStatsList.map((overallplayer, i) => {
-      flashList?.map((flashplayer, j) => {
+    stats.map((overallplayer, i) => {
+      flashList?.map((flashplayer) => {
         if (overallplayer.ign === flashplayer.ign) {
-          overviewStatsList[i] = { ...overviewStatsList[i], ...flashplayer }
+          stats[i].flashStats = flashplayer.flashStats
         }
       })
 
-      openingList?.map((openplayer, j) => {
+      openingList?.map((openplayer) => {
         if (overallplayer.ign === openplayer.ign) {
-          overviewStatsList[i] = { ...overviewStatsList[i], ...openplayer }
+          stats[i].openingStats = openplayer.openingStats
         }
       })
 
-      pistolList?.map((pistolplayer, j) => {
+      pistolList?.map((pistolplayer) => {
         if (overallplayer.ign === pistolplayer.ign) {
-          overviewStatsList[i] = { ...overviewStatsList[i], ...pistolplayer }
+          stats[i].pistolStats = pistolplayer.pistolStats
         }
       })
     })
 
-    return overviewStatsList
+    return stats
   }
