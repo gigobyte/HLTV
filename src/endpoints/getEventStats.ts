@@ -1,8 +1,52 @@
 import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
-import { fetchPage, getIdAt } from '../utils'
+import { fetchPage } from '../utils'
 
+export interface GetEventStatsArguments {
+  eventId: number
+  startDate?: string
+  endDate?: string
+  flash?: boolean
+  opening?: boolean
+  pistol?: boolean
+}
+
+// TODO : Upgrade types :D
+
+export interface PlayerEventStats {
+  ign: string
+  team: string
+  overviewStats: {
+    mapsPlayed: string
+    roundsPlayed: string
+    kdDiff: string
+    kdRatio: string
+    rating: string
+  }
+  flashStats?: {
+    flashThrown: string
+    flashBlinded: string
+    oppFlashed: string
+    flashDiff: string
+    flashAssists: string
+    flashSuccess: string
+  }
+
+  pistolStats?: {
+    pistolRoundsPlayed: string
+    pistolKdDiff: string
+    pistolKd: string
+    pistolRating: string
+  }
+  openingStats?: {
+    openingKpr: string
+    openingDpr: string
+    openingAttemps: string
+    openingSuccess: string
+    openingRating: string
+  }
+}
 const getPistolStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
