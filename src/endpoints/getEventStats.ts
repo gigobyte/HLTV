@@ -152,7 +152,7 @@ export const getEventStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
-  async (options: GetEventStatsArguments): Promise<any> => {
+  async (options: GetEventStatsArguments) => {
     const query = stringify({
       event: options.eventId,
       ...(options.startDate ? { startDate: options.startDate } : {}),
