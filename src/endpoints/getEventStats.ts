@@ -1,5 +1,5 @@
 import { stringify } from 'querystring'
-import { defaultConfig, HLTVConfig } from '../config'
+import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
 import { fetchPage, getIdAt } from '../utils'
 
@@ -148,20 +148,19 @@ export const getEventStats =
 
     let stats = overviewStatsList
 
-    // ⚠️ it uses the default config, bad thing because it circumvents proxies etc :/
     // Should add other params
 
     let flashList =
       options.flash === true
-        ? await getFlashStats(defaultConfig)({ eventId: options.eventId })
+        ? await getFlashStats(config)({ eventId: options.eventId })
         : undefined
     let openingList =
       options.opening === true
-        ? await getOpeningStats(defaultConfig)({ eventId: options.eventId })
+        ? await getOpeningStats(config)({ eventId: options.eventId })
         : undefined
     let pistolList =
       options.pistol === true
-        ? await getPistolStats(defaultConfig)({ eventId: options.eventId })
+        ? await getPistolStats(config)({ eventId: options.eventId })
         : undefined
 
     overviewStatsList.map((overallplayer, i) => {
