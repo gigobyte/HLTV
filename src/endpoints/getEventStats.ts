@@ -58,7 +58,7 @@ const getPistolStats =
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
     const $p = await fetchPage(
-      `https://www.hltv.org/stats/players/pistols?event=${options.eventId}`,
+      `https://www.hltv.org/stats/players/pistols?${query}`,
       config.loadPage
     ).then(HLTVScraper)
 
@@ -91,7 +91,7 @@ const getOpeningStats =
       ...(options.endDate ? { endDate: options.endDate } : {})
     })
     const $o = await fetchPage(
-      `https://www.hltv.org/stats/players/openingkills?event=${options.eventId}`,
+      `https://www.hltv.org/stats/players/openingkills?${query}`,
       config.loadPage
     ).then(HLTVScraper)
 
@@ -125,7 +125,7 @@ const getFlashStats =
     })
 
     const $f = await fetchPage(
-      `https://www.hltv.org/stats/players/flashbangs?event=${options.eventId}`,
+      `https://www.hltv.org/stats/players/flashbangs?${query}`,
       config.loadPage
     ).then(HLTVScraper)
 
