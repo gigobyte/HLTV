@@ -13,7 +13,7 @@ export interface FullStream {
   name: string
   category: StreamCategory
   country: Country
-  hltvLink: string
+  link: string
   viewers: number
 }
 
@@ -44,9 +44,9 @@ export const getStreams =
           }
 
           const viewers = parseInt(el.attr('data-frontpage-stream-viewers'))!
-          const hltvLink = el.attr('data-frontpage-stream-embed-src')
+          const link = el.attr('data-frontpage-stream-embed-src')
 
-          const stream = { name, category, country, viewers, hltvLink }
+          const stream = { name, category, country, viewers, link }
 
           return stream
         })
