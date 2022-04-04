@@ -14,15 +14,11 @@ export interface FullStream {
   category: StreamCategory
   country: Country
   hltvLink: string
-  realLink?: string
   viewers: number
 }
 
 export const getStreams =
-  (config: HLTVConfig) =>
-  async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<
-    FullStream[]
-  > => {
+  (config: HLTVConfig) => async (): Promise<FullStream[]> => {
     const $ = HLTVScraper(
       await fetchPage(
         `https://www.hltv.org/${generateRandomSuffix()}`,
@@ -31,11 +27,14 @@ export const getStreams =
     )
 
     const streams = await Promise.all(
-      $('a.col-box.streamer')
+      $('.streams-list')
+        .children()
         .toArray()
         .map(async (el) => {
-          const name = el.find('.name').text()
-          const category = el.children().first().attr('title') as StreamCategory
+          const name = el.attr('data-frontpage-stream-title')
+          const category = el.attr(
+            'data-frontpage-stream-type'
+          ) as StreamCategory
 
           const country: Country = {
             name: el.find('.flag').attr('title'),
@@ -44,20 +43,10 @@ export const getStreams =
               .attrThen('src', (x) => x.split('/').pop()?.split('.')[0]!)
           }
 
-          const viewers = el.contents().last().numFromText()!
-          const hltvLink = el.attr('href')
+          const viewers = parseInt(el.attr('data-frontpage-stream-viewers'))!
+          const hltvLink = el.attr('data-frontpage-stream-embed-src')
 
           const stream = { name, category, country, viewers, hltvLink }
-
-          if (loadLinks) {
-            const $streamPage = await fetchPage(
-              `https://www.hltv.org/${hltvLink}`,
-              config.loadPage
-            )
-            const realLink = $streamPage('iframe').attr('src')
-
-            return { ...stream, realLink }
-          }
 
           return stream
         })
