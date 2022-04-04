@@ -176,11 +176,7 @@ HLTV.getMatchMapStats({ id: 49968 }).then((res) => {
 
 #### getStreams
 
-Parses all streams present on the front page of HLTV (1 request + 1 request per stream if `loadLinks` is true)
-
-|  Option   |  Type   | Default Value |                                      Description                                      |
-| :-------: | :-----: | :-----------: | :-----------------------------------------------------------------------------------: |
-| loadLinks | boolean |     false     | Enables parsing of the stream links (every stream is an additional separate request). |
+Parses all streams present on the front page of HLTV (1 request)
 
 ```javascript
 HLTV.getStreams().then((res) => {
