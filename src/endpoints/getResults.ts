@@ -4,7 +4,6 @@ import { HLTVPage, HLTVScraper } from '../scraper'
 import { BestOfFilter } from '../shared/BestOfFilter'
 import { Event } from '../shared/Event'
 import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
-import { RankingFilter } from '../shared/RankingFilter'
 import { fetchPage, getIdAt, notNull, sleep } from '../utils'
 
 export enum ResultsMatchType {
