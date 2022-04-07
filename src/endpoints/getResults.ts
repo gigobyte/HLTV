@@ -2,6 +2,7 @@ import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVPage, HLTVScraper } from '../scraper'
 import { BestOfFilter } from '../shared/BestOfFilter'
+import { Event } from '../shared/Event'
 import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
 import { RankingFilter } from '../shared/RankingFilter'
 import { fetchPage, getIdAt, notNull, sleep } from '../utils'
@@ -31,6 +32,7 @@ export interface ResultTeam {
 export interface FullMatchResult {
   id: number
   date: number
+  event: Event
   team1: ResultTeam
   team2: ResultTeam
   stars: number
@@ -111,6 +113,7 @@ export const getResults =
             const stars = el.find('.stars i').length
             const date = el.numFromAttr('data-zonedgrouping-entry-unix')!
             const format = el.find('.map-text').text()
+            const event = { name: el.find('.event-name').text() }
 
             const team1 = {
               name: el.find('div.team').first().text(),
@@ -130,6 +133,7 @@ export const getResults =
 
             return {
               id,
+              event,
               stars,
               date,
               team1,
