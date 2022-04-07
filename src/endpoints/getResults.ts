@@ -61,7 +61,7 @@ export interface GetResultsArguments {
 
 export const getResults =
   (config: HLTVConfig) =>
-  async (options: GetResultsArguments): Promise<FullMatchResult[]> => {
+  async (options: GetResultsArguments = {}): Promise<FullMatchResult[]> => {
     const query = stringify({
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),
