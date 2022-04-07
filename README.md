@@ -12,31 +12,32 @@ Table of contents
 
 - [Installation](#installation)
 - [Usage](#usage)
+    - [Configuration](#configuration)
 - [API](#api)
-  - [getMatch](#getmatch)
-  - [getMatches](#getmatches)
-  - [getMatchesStats](#getmatchesstats)
-  - [getMatchStats](#getmatchstats)
-  - [getMatchMapStats](#getmatchmapstats)
-  - [getStreams](#getstreams)
-  - [getRecentThreads](#getrecentthreads)
-  - [getTeamRanking](#getteamranking)
-  - [getTeam](#getteam)
-  - [getTeamByName](#getteambyname)
-  - [getTeamStats](#getteamstats)
-  - [getPlayer](#getplayer)
-  - [getPlayerByName](#getplayerbyname)
-  - [getPlayerStats](#getplayerstats)
-  - [getPlayerRanking](#getplayerranking)
-  - [getEvents](#getevents)
-  - [getEvent](#getevent)
-  - [getEventByName](#geteventbyname)
-  - [getPastEvents](#getpastevents)
-  - [getResults](#getresults)
-  - [getNews](#getnews)
-  - [connectToScorebot](#connecttoscorebot)
-  - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
-  - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
+    - [getMatch](#getmatch)
+    - [getMatches](#getmatches)
+    - [getMatchesStats](#getmatchesstats)
+    - [getMatchStats](#getmatchstats)
+    - [getMatchMapStats](#getmatchmapstats)
+    - [getStreams](#getstreams)
+    - [getRecentThreads](#getrecentthreads)
+    - [getTeamRanking](#getteamranking)
+    - [getTeam](#getteam)
+    - [getTeamByName](#getteambyname)
+    - [getTeamStats](#getteamstats)
+    - [getPlayer](#getplayer)
+    - [getPlayerByName](#getplayerbyname)
+    - [getPlayerStats](#getplayerstats)
+    - [getPlayerRanking](#getplayerranking)
+    - [getEvents](#getevents)
+    - [getEvent](#getevent)
+    - [getEventByName](#geteventbyname)
+    - [getPastEvents](#getpastevents)
+    - [getResults](#getresults)
+    - [getNews](#getnews)
+    - [connectToScorebot](#connecttoscorebot)
+    - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
+    - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
 
 ## Installation
 
@@ -476,9 +477,12 @@ Parses the info from the `hltv.org/results` page (1 request per page of results)
 |        playerIds         |                                            number[]?                                            |       -       |                     -                      |
 |         teamIds          |                                            number[]?                                            |       -       |                     -                      |
 |           game           |    [GameType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getResults.ts#L21)?    |       -       |                     -                      |
+| pages |                                             number?                                             |       0       | Number of pages to load |
 | delayBetweenPageRequests |                                             number?                                             |       0       | Used to prevent CloudFlare throttling (ms) |
 
 ```javascript
+// If you don't provide a filter the latest 100 results (first page) will be parsed
+HLTV.getResults()
 // ! BE CAREFUL, THIS CAN MAKE A LOT OF REQUESTS IF THERE ARE A LOT OF PAGES
 HLTV.getResults({ eventIds: [1617], bestOfX: [BestOfFilter.BO3] }).then(res => {
     ...
