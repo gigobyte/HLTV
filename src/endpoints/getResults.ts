@@ -56,6 +56,7 @@ export interface GetResultsArguments {
   game?: GameType
   stars?: 1 | 2 | 3 | 4 | 5
   delayBetweenPageRequests?: number
+  pages?: number
 }
 
 export const getResults =
@@ -141,7 +142,7 @@ export const getResults =
           })
           .filter(notNull)
       )
-    } while ($('.result-con').exists())
+    } while ($('.result-con').exists() && page < (options.pages || 0))
 
     return results
   }
