@@ -37,9 +37,12 @@ export interface MatchPreview {
 
 export const getMatches =
   (config: HLTVConfig) =>
-  async ({ eventIds, eventType, filter, teamIds }: GetMatchesArguments = {}): Promise<
-    MatchPreview[]
-  > => {
+  async ({
+    eventIds,
+    eventType,
+    filter,
+    teamIds
+  }: GetMatchesArguments = {}): Promise<MatchPreview[]> => {
     const query = stringify({
       ...(eventIds ? { event: eventIds } : {}),
       ...(eventType ? { eventType } : {}),
