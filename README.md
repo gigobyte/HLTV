@@ -104,7 +104,7 @@ Parses all matches from the `hltv.org/matches/` page (1 request)
 |  eventId  |                                            number?                                             |       -       |                  Filter matches by event ID.                   |
 | eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
 |  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?  |       -       | Filter matches by pre-set categories. Overrides other filters. |
-|  teamIds  |                                            number[]?                                           |       -       |                                -                               |
+|  teamIds  |                                           number[]?                                            |       -       |                               -                                |
 
 ```javascript
 HLTV.getMatches().then((res) => {
@@ -214,7 +214,7 @@ Parses the info from the `hltv.org/ranking/teams/` page (1 request)
 
 | Option  |                                                                      Type                                                                      | Default Value |                   Description                    |
 | :-----: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------------: |
-|  year   |                                              2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021 \| 2022                                             |       -       |                        -                         |
+|  year   |                                          2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021 \| 2022                                          |       -       |                        -                         |
 |  month  | 'january' \| 'february' \| 'march' \| 'april' \| 'may' \| 'june' \| 'july' \| 'august' \| 'september' \| 'october' \| 'november' \| 'december' |       -       |                        -                         |
 |   day   |                                                                    number?                                                                     |       -       |                        -                         |
 | country |                                                                    string?                                                                     |       -       | Must be capitalized (`'Brazil'`, `'France'` etc) |
@@ -340,7 +340,7 @@ Parses the info from `hltv.org/stats/players/*` (3 requests)
 | rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
 |     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
 |    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
-|    eventIds    |                                          number[]?                                          |       -       |      -      |
+|   eventIds    |                                         number[]?                                          |       -       |      -      |
 
 ```javascript
 HLTV.getPlayerStats({ id: 7998 }).then(res => {
@@ -497,7 +497,7 @@ Parses the info from the `hltv.org/news/archive/` page (1 request)
 
 |  Option  |                                                                      Type                                                                      | Default Value |                        Description                         |
 | :------: | :--------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------: |
-|   year   |      2005 \| 2006 \| 2007 \| 2008 \| 2009 \| 2010 \| 2011 \| 2012 \| 2013 \| 2014 \| 2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021 \| 2022  |       -       | If you specify a `year` you must specify a `month` as well |
+|   year   |  2005 \| 2006 \| 2007 \| 2008 \| 2009 \| 2010 \| 2011 \| 2012 \| 2013 \| 2014 \| 2015 \| 2016 \| 2017 \| 2018 \| 2019 \| 2020 \| 2021 \| 2022  |       -       | If you specify a `year` you must specify a `month` as well |
 |  month   | 'january' \| 'february' \| 'march' \| 'april' \| 'may' \| 'june' \| 'july' \| 'august' \| 'september' \| 'october' \| 'november' \| 'december' |       -       | If you specify a `month` you must specify a `year` as well |
 | eventIds |                                                                   number[]?                                                                    |       -       |                             -                              |
 

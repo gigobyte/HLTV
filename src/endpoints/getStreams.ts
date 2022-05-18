@@ -1,7 +1,7 @@
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
 import { Country } from '../shared/Country'
-import { fetchPage, generateRandomSuffix } from '../utils'
+import { fetchPage, generateRandomSuffix, parseNumber } from '../utils'
 
 export enum StreamCategory {
   TopPlayer = 'Top player',
@@ -13,16 +13,12 @@ export interface FullStream {
   name: string
   category: StreamCategory
   country: Country
-  hltvLink: string
-  realLink?: string
+  link: string
   viewers: number
 }
 
 export const getStreams =
-  (config: HLTVConfig) =>
-  async ({ loadLinks }: { loadLinks?: boolean } = {}): Promise<
-    FullStream[]
-  > => {
+  (config: HLTVConfig) => async (): Promise<FullStream[]> => {
     const $ = HLTVScraper(
       await fetchPage(
         `https://www.hltv.org/${generateRandomSuffix()}`,
@@ -31,33 +27,28 @@ export const getStreams =
     )
 
     const streams = await Promise.all(
-      $('a.col-box.streamer')
+      $('.streams-stream')
         .toArray()
         .map(async (el) => {
-          const name = el.find('.name').text()
-          const category = el.children().first().attr('title') as StreamCategory
+          const name = el.find('.streams-name').text()
+          const category = el
+            .find('.streams-category')
+            .attr('title') as StreamCategory
 
           const country: Country = {
-            name: el.find('.flag').attr('title'),
+            name: el.find('.streams-flag').attr('title'),
             code: el
-              .find('.flag')
+              .find('.streams-flag')
               .attrThen('src', (x) => x.split('/').pop()?.split('.')[0]!)
           }
 
-          const viewers = el.contents().last().numFromText()!
-          const hltvLink = el.attr('href')
+          const viewers = el
+            .find('.streams-viewers')
+            .textThen((x) => parseNumber(x.replace(/\(|\)/g, '')))!
 
-          const stream = { name, category, country, viewers, hltvLink }
+          const link = el.data('frontpage-stream-embed-src')
 
-          if (loadLinks) {
-            const $streamPage = await fetchPage(
-              `https://www.hltv.org/${hltvLink}`,
-              config.loadPage
-            )
-            const realLink = $streamPage('iframe').attr('src')
-
-            return { ...stream, realLink }
-          }
+          const stream = { name, category, country, viewers, link }
 
           return stream
         })
