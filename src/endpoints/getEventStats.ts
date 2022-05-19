@@ -1,7 +1,7 @@
 import { stringify } from 'querystring'
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
-import { fetchPage } from '../utils'
+import { fetchPage, parseNumber } from '../utils'
 
 export interface GetEventStatsArguments {
   eventId: number
@@ -10,6 +10,7 @@ export interface GetEventStatsArguments {
   flash?: boolean
   opening?: boolean
   pistol?: boolean
+  side?: 'COUNTER_TERRORIST' | 'COUNTER_TERRORIST'
 }
 
 // TODO : Upgrade types :D
@@ -18,45 +19,51 @@ export interface PlayerEventStats {
   ign: string
   team: string
   overviewStats: {
-    mapsPlayed: string
-    roundsPlayed: string
-    kdDiff: string
-    kdRatio: string
-    rating: string
+    mapsPlayed: number
+    roundsPlayed: number
+    kdDiff: number
+    kdRatio: number
+    rating: number
   }
   flashStats?: {
-    flashThrown: string
+    flashThrown: number
     flashBlinded: string
     oppFlashed: string
-    flashDiff: string
-    flashAssists: string
-    flashSuccess: string
+    flashDiff: number
+    flashAssists: number
+    flashSuccess: number
   }
 
   pistolStats?: {
-    pistolRoundsPlayed: string
-    pistolKdDiff: string
-    pistolKd: string
-    pistolRating: string
+    pistolRoundsPlayed: number
+    pistolKdDiff: number
+    pistolKd: number
+    pistolRating: number
   }
   openingStats?: {
-    openingKpr: string
-    openingDpr: string
+    openingKpr: number
+    openingDpr: number
     openingAttemps: string
     openingSuccess: string
-    openingRating: string
+    openingRating: number
   }
 }
+
+const createQuery = (options: GetEventStatsArguments) => {
+  return stringify({
+    event: options.eventId,
+    ...(options.startDate ? { startDate: options.startDate } : {}),
+    ...(options.endDate ? { endDate: options.endDate } : {}),
+    ...(options.side ? { side: options.side } : {})
+  })
+}
+
 const getPistolStats =
   (config: HLTVConfig) =>
   // TODO : add parameters such as sides etc.
 
   async (options: GetEventStatsArguments) => {
-    const query = stringify({
-      event: options.eventId,
-      ...(options.startDate ? { startDate: options.startDate } : {}),
-      ...(options.endDate ? { endDate: options.endDate } : {})
-    })
+    const query = createQuery(options)
     const $p = await fetchPage(
       `https://www.hltv.org/stats/players/pistols?${query}`,
       config.loadPage
@@ -69,10 +76,10 @@ const getPistolStats =
         const player = {
           ign: el.find('.playerCol a').text(),
           pistolStats: {
-            pistolRoundsPlayed: el.find('.statsDetail').eq(1).text(),
-            pistolKdDiff: el.find('.kdDiffCol').text(),
-            pistolKd: el.find('.statsDetail').eq(1).text(),
-            pistolRating: el.find('.ratingCol').text()
+            pistolRoundsPlayed: Number(el.find('.statsDetail').eq(1).text()),
+            pistolKdDiff: Number(el.find('.kdDiffCol').text()),
+            pistolKd: Number(el.find('.statsDetail').eq(1).text()),
+            pistolRating: Number(el.find('.ratingCol').text())
           }
         }
         return player
@@ -85,11 +92,7 @@ const getOpeningStats =
   // TODO : add parameters such as sides etc.
 
   async (options: GetEventStatsArguments) => {
-    const query = stringify({
-      event: options.eventId,
-      ...(options.startDate ? { startDate: options.startDate } : {}),
-      ...(options.endDate ? { endDate: options.endDate } : {})
-    })
+    const query = createQuery(options)
     const $o = await fetchPage(
       `https://www.hltv.org/stats/players/openingkills?${query}`,
       config.loadPage
@@ -101,11 +104,11 @@ const getOpeningStats =
         const player = {
           ign: el.find('.playerColSmall a').text(),
           openingStats: {
-            openingKpr: el.find('.statsDetail').first().text(),
-            openingDpr: el.find('.statsDetail').eq(1).text(),
+            openingKpr: Number(el.find('.statsDetail').first().text()),
+            openingDpr: Number(el.find('.statsDetail').eq(1).text()),
             openingAttemps: el.find('.statsDetail').eq(2).text(),
             openingSuccess: el.find('.statsDetail').eq(3).text(),
-            openingRating: el.find('.statsDetail').eq(4).text()
+            openingRating: Number(el.find('.statsDetail').eq(4).text())
           }
         }
         return player
@@ -118,11 +121,7 @@ const getFlashStats =
   // TODO : add parameters such as sides etc.
 
   async (options: GetEventStatsArguments) => {
-    const query = stringify({
-      event: options.eventId,
-      ...(options.startDate ? { startDate: options.startDate } : {}),
-      ...(options.endDate ? { endDate: options.endDate } : {})
-    })
+    const query = createQuery(options)
 
     const $f = await fetchPage(
       `https://www.hltv.org/stats/players/flashbangs?${query}`,
@@ -135,12 +134,12 @@ const getFlashStats =
         const player = {
           ign: el.find('.playerColSmall a').text(),
           flashStats: {
-            flashThrown: el.find('.statsDetail').eq(1).text(),
+            flashThrown: Number(el.find('.statsDetail').eq(1).text()),
             flashBlinded: el.find('.statsDetail').eq(2).text(),
             oppFlashed: el.find('.flashed-opponent-col').text(),
-            flashDiff: el.find('.flash-col').first().text(),
-            flashAssists: el.find('.statsDetail').eq(4).text(),
-            flashSuccess: el.find('.statsDetail').eq(5).text()
+            flashDiff: Number(el.find('.flash-col').first().text()),
+            flashAssists: Number(el.find('.statsDetail').eq(4).text()),
+            flashSuccess: Number(el.find('.statsDetail').eq(5).text())
           }
         }
         return player
@@ -153,11 +152,7 @@ export const getEventStats =
   // TODO : add parameters such as sides etc.
 
   async (options: GetEventStatsArguments) => {
-    const query = stringify({
-      event: options.eventId,
-      ...(options.startDate ? { startDate: options.startDate } : {}),
-      ...(options.endDate ? { endDate: options.endDate } : {})
-    })
+    const query = createQuery(options)
 
     const $ = await fetchPage(
       `https://www.hltv.org/stats/players?${query}`,
@@ -173,11 +168,11 @@ export const getEventStats =
           ign: el.find('.playerCol a').text(),
           team: el.find('.teamCol a img').attr('title'),
           overviewStats: {
-            mapsPlayed: el.find('.statsDetail').first().text(),
-            roundsPlayed: el.find('.statsDetail').eq(1).text(),
-            kdDiff: el.find('.kdDiffCol').text(),
-            kdRatio: el.find('.statsDetail').eq(2).text(),
-            rating: el.find('.ratingCol').text()
+            mapsPlayed: Number(el.find('.statsDetail').first().text()),
+            roundsPlayed: Number(el.find('.statsDetail').eq(1).text()),
+            kdDiff: Number(el.find('.kdDiffCol').text()),
+            kdRatio: Number(el.find('.statsDetail').eq(2).text()),
+            rating: Number(el.find('.ratingCol').text())
           }
         }
         return player
