@@ -4,27 +4,25 @@ exports[`getTeamStats 1`] = `
 Object {
   "currentLineup": Array [
     Object {
-      "id": 8917,
-      "name": "niki1",
-    },
-    Object {
-      "id": 14380,
-      "name": "Patrick",
-    },
-    Object {
-      "id": 16412,
-      "name": "rafftu",
-    },
-    Object {
-      "id": 20114,
-      "name": "shaiK",
-    },
-    Object {
-      "id": 21345,
-      "name": "hybrid",
+      "id": 3183,
+      "name": "spyleadeR",
     },
   ],
   "events": Array [
+    Object {
+      "event": Object {
+        "id": 6464,
+        "name": "TWR Eastern European Masters Spring 2022 Last Chance Qualifier",
+      },
+      "place": "3-4th",
+    },
+    Object {
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "place": "7-8th",
+    },
     Object {
       "event": Object {
         "id": 6386,
@@ -630,8 +628,40 @@ Object {
   ],
   "historicPlayers": Array [
     Object {
+      "id": 21345,
+      "name": "hybrid",
+    },
+    Object {
+      "id": 8917,
+      "name": "niki1",
+    },
+    Object {
+      "id": 14380,
+      "name": "Patrick",
+    },
+    Object {
+      "id": 20114,
+      "name": "shaiK",
+    },
+    Object {
       "id": 10697,
       "name": "blocker",
+    },
+    Object {
+      "id": 15384,
+      "name": "doublemagic",
+    },
+    Object {
+      "id": 16410,
+      "name": "Duplicate",
+    },
+    Object {
+      "id": 15385,
+      "name": "KalubeR",
+    },
+    Object {
+      "id": 13464,
+      "name": "mar",
     },
     Object {
       "id": 20388,
@@ -640,6 +670,10 @@ Object {
     Object {
       "id": 17146,
       "name": "numb",
+    },
+    Object {
+      "id": 16412,
+      "name": "rafftu",
     },
     Object {
       "id": 17145,
@@ -654,22 +688,6 @@ Object {
       "name": "Zix",
     },
     Object {
-      "id": 15384,
-      "name": "doublemagic",
-    },
-    Object {
-      "id": 13464,
-      "name": "mar",
-    },
-    Object {
-      "id": 16410,
-      "name": "Duplicate",
-    },
-    Object {
-      "id": 15385,
-      "name": "KalubeR",
-    },
-    Object {
       "id": 20097,
       "name": "h4rn",
     },
@@ -678,11 +696,11 @@ Object {
   "mapStats": Object {
     "de_ancient": Object {
       "draws": 0,
-      "losses": 2,
-      "roundWinPAfterFirstDeath": 26,
-      "roundWinPAfterFirstKill": 70.9,
-      "totalRounds": 105,
-      "winRate": 50,
+      "losses": 3,
+      "roundWinPAfterFirstDeath": 26.9,
+      "roundWinPAfterFirstKill": 69.2,
+      "totalRounds": 132,
+      "winRate": 40,
       "wins": 2,
     },
     "de_cache": Object {
@@ -696,47 +714,47 @@ Object {
     },
     "de_dust2": Object {
       "draws": 0,
-      "losses": 41,
-      "roundWinPAfterFirstDeath": 25,
+      "losses": 42,
+      "roundWinPAfterFirstDeath": 24.9,
       "roundWinPAfterFirstKill": 71.7,
-      "totalRounds": 2009,
-      "winRate": 44.6,
+      "totalRounds": 2044,
+      "winRate": 44,
       "wins": 33,
     },
     "de_inferno": Object {
       "draws": 0,
-      "losses": 58,
+      "losses": 60,
       "roundWinPAfterFirstDeath": 27.9,
-      "roundWinPAfterFirstKill": 70.5,
-      "totalRounds": 2660,
-      "winRate": 43.1,
+      "roundWinPAfterFirstKill": 70.4,
+      "totalRounds": 2711,
+      "winRate": 42.3,
       "wins": 44,
     },
     "de_mirage": Object {
       "draws": 0,
       "losses": 42,
-      "roundWinPAfterFirstDeath": 27.1,
-      "roundWinPAfterFirstKill": 70.5,
-      "totalRounds": 2003,
-      "winRate": 43.2,
-      "wins": 32,
+      "roundWinPAfterFirstDeath": 27.2,
+      "roundWinPAfterFirstKill": 70.7,
+      "totalRounds": 2062,
+      "winRate": 44.7,
+      "wins": 34,
     },
     "de_nuke": Object {
       "draws": 0,
       "losses": 10,
-      "roundWinPAfterFirstDeath": 18.3,
-      "roundWinPAfterFirstKill": 67.8,
-      "totalRounds": 357,
-      "winRate": 28.6,
-      "wins": 4,
+      "roundWinPAfterFirstDeath": 19.4,
+      "roundWinPAfterFirstKill": 69,
+      "totalRounds": 385,
+      "winRate": 33.3,
+      "wins": 5,
     },
     "de_overpass": Object {
       "draws": 0,
-      "losses": 39,
+      "losses": 40,
       "roundWinPAfterFirstDeath": 28,
       "roundWinPAfterFirstKill": 71.9,
-      "totalRounds": 2244,
-      "winRate": 54.7,
+      "totalRounds": 2274,
+      "winRate": 54,
       "wins": 47,
     },
     "de_train": Object {
@@ -759,6 +777,174 @@ Object {
     },
   },
   "matches": Array [
+    Object {
+      "date": 1647295200000,
+      "event": Object {
+        "id": 6464,
+        "name": "TWR Eastern European Masters Spring 2022 Last Chance Qualifier",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 135413,
+      "result": Object {
+        "team1": 6,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11518,
+        "name": "Bad News Eagles",
+      },
+    },
+    Object {
+      "date": 1647295200000,
+      "event": Object {
+        "id": 6464,
+        "name": "TWR Eastern European Masters Spring 2022 Last Chance Qualifier",
+      },
+      "map": "de_ancient",
+      "mapStatsId": 135404,
+      "result": Object {
+        "team1": 11,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11518,
+        "name": "Bad News Eagles",
+      },
+    },
+    Object {
+      "date": 1647295200000,
+      "event": Object {
+        "id": 6464,
+        "name": "TWR Eastern European Masters Spring 2022 Last Chance Qualifier",
+      },
+      "map": "de_nuke",
+      "mapStatsId": 135399,
+      "result": Object {
+        "team1": 16,
+        "team2": 12,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 11518,
+        "name": "Bad News Eagles",
+      },
+    },
+    Object {
+      "date": 1646517600000,
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "map": "de_dust2",
+      "mapStatsId": 134853,
+      "result": Object {
+        "team1": 16,
+        "team2": 19,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 10973,
+        "name": "Anonymo",
+      },
+    },
+    Object {
+      "date": 1646517600000,
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "map": "de_overpass",
+      "mapStatsId": 134830,
+      "result": Object {
+        "team1": 14,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1646517600000,
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 134819,
+      "result": Object {
+        "team1": 16,
+        "team2": 14,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1646517600000,
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "map": "de_inferno",
+      "mapStatsId": 134811,
+      "result": Object {
+        "team1": 13,
+        "team2": 16,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1646517600000,
+      "event": Object {
+        "id": 6401,
+        "name": "PGL Major Antwerp 2022 Europe RMR Open Qualifier 4",
+      },
+      "map": "de_mirage",
+      "mapStatsId": 134804,
+      "result": Object {
+        "team1": 16,
+        "team2": 13,
+      },
+      "team1": Object {
+        "id": 9863,
+        "name": "FATE",
+      },
+      "team2": Object {
+        "id": 9648,
+        "name": "KOVA",
+      },
+    },
     Object {
       "date": 1645308000000,
       "event": Object {
@@ -11180,12 +11366,12 @@ Object {
   "overview": Object {
     "draws": 0,
     "kdRatio": 0.97,
-    "losses": 261,
-    "mapsPlayed": 496,
-    "roundsPlayed": 13173,
-    "totalDeaths": 45092,
-    "totalKills": 43621,
-    "wins": 235,
+    "losses": 266,
+    "mapsPlayed": 504,
+    "roundsPlayed": 13403,
+    "totalDeaths": 45943,
+    "totalKills": 44367,
+    "wins": 238,
   },
   "standins": Array [
     Object {
@@ -11203,10 +11389,6 @@ Object {
     Object {
       "id": 2799,
       "name": "bubble",
-    },
-    Object {
-      "id": 3183,
-      "name": "spyleadeR",
     },
     Object {
       "id": 11343,

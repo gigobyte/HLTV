@@ -77,7 +77,7 @@ export interface GetPlayerStatsArguments {
   rankingFilter?: RankingFilter
   maps?: GameMap[]
   bestOfX?: BestOfFilter
-  eventIds? : number[]
+  eventIds?: number[]
 }
 
 export const getPlayerStats =
@@ -92,7 +92,7 @@ export const getPlayerStats =
         : {}),
       ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
       ...(options.bestOfX ? { bestOfX: options.bestOfX } : {}),
-      ...(options.eventIds ? {event : options.eventIds} : {})
+      ...(options.eventIds ? { event: options.eventIds } : {})
     })
 
     const [$, i$, m$] = await Promise.all([
