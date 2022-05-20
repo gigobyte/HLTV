@@ -332,6 +332,138 @@ Object {
   "name": "Aleksandr Kostyliev",
   "news": Array [
     Object {
+      "link": "/news/33849/pgl-major-antwerp-2022-playoffs-fantasy-game-now-open-to-play",
+      "name": "PGL Major Antwerp 2022 playoffs Fantasy game now open to play",
+    },
+    Object {
+      "link": "/news/33824/navi-clinch-second-pgl-major-playoffs-spot",
+      "name": "NAVI clinch second PGL Major playoffs spot",
+    },
+    Object {
+      "link": "/news/33803/navi-take-down-g2-big-dispatch-imperial",
+      "name": "NAVI take down G2, BIG dispatch Imperial",
+    },
+    Object {
+      "link": "/news/33717/could-furia-be-dark-horses-at-antwerp",
+      "name": "Could FURIA be dark horses at Antwerp?",
+    },
+    Object {
+      "link": "/news/33794/bulletpoints-pgl-major-antwerp-legends",
+      "name": "Bulletpoints: PGL Major Antwerp Legends",
+    },
+    Object {
+      "link": "/news/33796/fantasy-game-for-pgl-major-antwerp-legends-stage-is-now-live",
+      "name": "Fantasy game for PGL Major Antwerp Legends Stage is now live",
+    },
+    Object {
+      "link": "/news/33733/blunders-from-majors-past",
+      "name": " Blunders from Majors past",
+    },
+    Object {
+      "link": "/news/33631/expert-take-age-and-motivation-in-counter-strike",
+      "name": "Expert take: Age and motivation in Counter-Strike",
+    },
+    Object {
+      "link": "/news/33719/feel-good-stories-from-majors-past",
+      "name": "Feel good stories from Majors past",
+    },
+    Object {
+      "link": "/news/33716/team-ranking-april-2022",
+      "name": "Team Ranking: April 2022",
+    },
+    Object {
+      "link": "/news/33648/outsiders-qualify-for-pgl-major-navi-secure-final-legends-spot",
+      "name": "Outsiders qualify for PGL Major, NAVI secure final Legends spot",
+    },
+    Object {
+      "link": "/news/33642/video-s1mple-1v3s-vitality",
+      "name": "Video: s1mple 1v3s Vitality",
+    },
+    Object {
+      "link": "/news/33640/navi-qualify-for-major-fnatic-eliminated",
+      "name": "NAVI qualify for Major, fnatic eliminated",
+    },
+    Object {
+      "link": "/news/33629/heroic-qualify-for-antwerp-major-unique-eliminate-quazar",
+      "name": "Heroic qualify for Antwerp Major, Unique eliminate QUAZAR",
+    },
+    Object {
+      "link": "/news/33622/heroic-faze-navi-one-win-away-from-major-spot",
+      "name": "Heroic, FaZe, NAVI one win away from Major spot",
+    },
+    Object {
+      "link": "/news/33610/when-do-counter-strike-players-peak",
+      "name": "When do Counter-Strike players peak?",
+    },
+    Object {
+      "link": "/news/33514/opinion-should-we-be-worried-for-vitality",
+      "name": "Opinion: Should we be worried for Vitality?",
+    },
+    Object {
+      "link": "/news/33600/fantasy-pgl-major-antwerp-europe-rmr-a-game-goes-live",
+      "name": "Fantasy: PGL Major Antwerp Europe RMR A game goes live",
+    },
+    Object {
+      "link": "/news/33580/faze-return-to-no-1-for-the-first-time-in-four-years",
+      "name": "FaZe return to No. 1 for the first time in four years",
+    },
+    Object {
+      "link": "/news/33554/20-years-of-hltvorg",
+      "name": "20 years of HLTV.org",
+    },
+    Object {
+      "link": "/news/33557/faze-sweep-navi-set-up-semi-final-against-furia",
+      "name": "FaZe sweep NAVI, set up semi-final against FURIA",
+    },
+    Object {
+      "link": "/news/33535/team-ranking-march-2022",
+      "name": "Team Ranking: March 2022",
+    },
+    Object {
+      "link": "/news/33524/esl-pro-league-s15-playoffs-fantasy-game-open-to-play",
+      "name": "ESL Pro League S15 Playoffs Fantasy game open to play",
+    },
+    Object {
+      "link": "/news/33522/navi-overcome-astralis-set-up-first-place-decider-against-heroic",
+      "name": "NAVI overcome Astralis, set up first place decider against Heroic",
+    },
+    Object {
+      "link": "/news/33520/boombl4-back-in-action-on-day-4-of-epl-group-d",
+      "name": "Boombl4 back in action on day 4 of EPL Group D",
+    },
+    Object {
+      "link": "/news/33518/navi-secure-pro-league-playoff-berth-after-besting-complexity",
+      "name": "NAVI secure Pro League playoff berth after besting Complexity",
+    },
+    Object {
+      "link": "/news/33512/navi-cruise-past-evil-geniuses-with-a-2-0-win",
+      "name": "NAVI cruise past Evil Geniuses with a 2-0 win",
+    },
+    Object {
+      "link": "/news/33506/navi-defeat-ago-in-esl-pro-league-group-d-opening-match-after-record-breaking-71-round-second-map",
+      "name": "NAVI defeat AGO in ESL Pro League Group D opening match after record-breaking 71 round second map",
+    },
+    Object {
+      "link": "/news/33501/boombl4-to-miss-start-of-esl-pro-league",
+      "name": "Boombl4 to miss start of ESL Pro League",
+    },
+    Object {
+      "link": "/news/33500/bulletpoints-esl-pro-league-s15-group-d",
+      "name": "Bulletpoints: ESL Pro League S15 Group D",
+    },
+    Object {
+      "link": "/news/33480/fantasy-esl-pro-league-s15-group-d-game-goes-live",
+      "name": "Fantasy: ESL Pro League S15 Group D game goes live",
+    },
+    Object {
+      "link": "/news/33440/is-the-modern-awper-really-too-passive",
+      "name": "Is the modern AWPer really too passive?",
+    },
+    Object {
+      "link": "/news/33378/was-fazes-katowice-victory-the-best-fairy-tale-run-in-csgo",
+      "name": "Was FaZe's Katowice victory the best fairy-tale run in CS:GO?",
+    },
+    Object {
       "link": "/news/33365/iem-katowice-storylines-in-numbers",
       "name": "IEM Katowice storylines in numbers",
     },
@@ -4201,12 +4333,12 @@ Object {
     },
   ],
   "statistics": Object {
-    "deathsPerRound": 0.61,
-    "headshots": 38.6,
+    "deathsPerRound": 0.58,
+    "headshots": 35.6,
     "killsPerRound": 0.87,
-    "mapsPlayed": 34,
-    "rating": 1.34,
-    "roundsContributed": 76.3,
+    "mapsPlayed": 37,
+    "rating": 1.36,
+    "roundsContributed": 76.9,
   },
   "team": Object {
     "id": 4608,
