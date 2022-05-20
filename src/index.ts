@@ -21,6 +21,7 @@ import { getTeamStats } from './endpoints/getTeamStats'
 import { getPastEvents } from './endpoints/getPastEvents'
 import { getResults } from './endpoints/getResults'
 import { getNews } from './endpoints/getNews'
+import { getAces } from './endpoints/getAces'
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -59,6 +60,7 @@ export class Hltv {
   getResults = getResults(this.config as HLTVConfig)
   getNews = getNews(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
+  getAces = getAces(this.config as HLTVConfig)
 
   public createInstance(config: Partial<HLTVConfig>) {
     return new Hltv(config)
