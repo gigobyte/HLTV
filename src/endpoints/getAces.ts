@@ -17,9 +17,18 @@ export interface GetAceArguments {
   eventIds?: number[]
 }
 
+export interface Ace {
+  date: string
+  team1: string
+  team2: string
+  map: string
+  player: string
+  round: number
+}
+
 export const getAces =
   (config: HLTVConfig) =>
-  async (options: GetAceArguments): Promise<any> => {
+  async (options: GetAceArguments): Promise<Ace[]> => {
     const query = stringify({
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -44,7 +53,7 @@ export const getAces =
           team2: el.children().toArray()[2].find('a .gtSmartphone-only').text(),
           map: el.find('.statsMapPlayed .dynamic-map-name-full').text(),
           player: el.children().toArray()[4].find('a').text(),
-          round: el.find('.text-center').text()
+          round: Number(el.find('.text-center').text())
         }
         return ace
       })

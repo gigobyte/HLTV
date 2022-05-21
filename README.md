@@ -34,6 +34,7 @@ Table of contents
   - [getPastEvents](#getpastevents)
   - [getResults](#getresults)
   - [getNews](#getnews)
+  - [getAces](#getaces)
   - [connectToScorebot](#connecttoscorebot)
   - [TEAM_PLACEHOLDER_IMAGE](#team_placeholder_image)
   - [PLAYER_PLACEHOLDER_IMAGE](#player_placeholder_image)
@@ -511,6 +512,29 @@ HLTV.getNews({ year: 2020, month: 'may' }).then((res) => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getNews.ts#L7)**
+
+#### getAces
+
+Parses the info from the `hltv.org/stats/aces` page (1 request)
+If you don't specify options, the page might be heavy (~3 Mo).
+
+|    Option     |                                            Type                                            | Default value | Description |
+| :-----------: | :----------------------------------------------------------------------------------------: | :-----------: | :---------: |
+|   startDate   |                                          string?                                           |       -       |      -      |
+|    endDate    |                                          string?                                           |       -       |      -      |
+|   matchType   |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |      -      |
+| rankingFilter | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |      -      |
+|     maps      |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |      -      |
+|    bestOfX    |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |      -      |
+|   eventIds    |                                         number[]?                                          |       -       |      -      |
+
+```javascript
+HLTV.getAces({ eventIds: [5605] }).then(res => {
+    ...
+})
+```
+
+**[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getAces.ts#L20)**
 
 #### connectToScorebot
 
