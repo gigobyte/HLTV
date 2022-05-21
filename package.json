@@ -50,11 +50,11 @@
     "jest": "28.1.0",
     "prettier": "2.6.2",
     "ts-jest": "28.0.2",
-    "ts-node": "10.7.0",
+    "ts-node": "10.8.0",
     "typescript": "4.6.4"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.10",
+    "cheerio": "1.0.0-rc.11",
     "request": "2.88.2",
     "socket.io-client": "2.4.0",
     "uuid": "8.3.2"
