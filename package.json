@@ -47,7 +47,7 @@
     "@types/socket.io-client": "1.4.36",
     "@types/user-agents": "1.0.2",
     "@types/uuid": "8.3.4",
-    "jest": "28.1.1",
+    "jest": "28.1.2",
     "prettier": "2.7.1",
     "ts-jest": "28.0.5",
     "ts-node": "10.8.1",
