@@ -40,6 +40,10 @@ export interface FullMatchResult {
     team1: number
     team2: number
   }
+  event: {
+    name: string
+    logo: string
+  }
 }
 
 export interface GetResultsArguments {
@@ -127,6 +131,11 @@ export const getResults =
               .split(' - ')
               .map(Number)
 
+            const event = {
+              name: el.find('.event-name').text(),
+              logo: el.find('.event-logo').attr('src')
+            }
+
             return {
               id,
               stars,
@@ -136,7 +145,8 @@ export const getResults =
               result: { team1: team1Result, team2: team2Result },
               ...(format.includes('bo')
                 ? { format }
-                : { map: fromMapSlug(format), format: 'bo1' })
+                : { map: fromMapSlug(format), format: 'bo1' }),
+              event
             }
           })
           .filter(notNull)
