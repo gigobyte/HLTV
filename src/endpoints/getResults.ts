@@ -40,9 +40,9 @@ export interface FullMatchResult {
     team1: number
     team2: number
   }
-  event: {
+  event?: {
     name: string
-    logo: string
+    logo?: string
   }
 }
 
@@ -131,10 +131,8 @@ export const getResults =
               .split(' - ')
               .map(Number)
 
-            const event = {
-              name: el.find('.event-name').text(),
-              logo: el.find('.event-logo').attr('src')
-            }
+            const eventName = el.find('span.event-name').text()
+            const eventLogo = el.find('img.event-logo').attr('src')
 
             return {
               id,
@@ -146,7 +144,13 @@ export const getResults =
               ...(format.includes('bo')
                 ? { format }
                 : { map: fromMapSlug(format), format: 'bo1' }),
-              event
+              event:
+                eventName.length > 0
+                  ? {
+                      name: eventName,
+                      logo: eventLogo
+                    }
+                  : undefined
             }
           })
           .filter(notNull)
