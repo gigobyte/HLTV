@@ -74,7 +74,7 @@ export const getTeamRanking =
         }
 
         const changeText = el.find('.change').text()
-        const isNew = changeText === 'New'
+        const isNew = changeText === 'NEW TEAM'
         const change = changeText === '-' || isNew ? 0 : Number(changeText)
 
         return { points, place, team, change, isNew }
