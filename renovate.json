@@ -3,6 +3,7 @@
   "ignorePaths": [],
   "ignoreDeps": ["socket.io-client"],
   "automerge": true,
+  "enabled": false,
   "major": {
     "automerge": false
   },
