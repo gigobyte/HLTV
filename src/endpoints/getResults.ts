@@ -28,11 +28,17 @@ export interface ResultTeam {
   logo: string
 }
 
+export interface ResultEvent {
+    name: string
+    logo: string
+}
+
 export interface FullMatchResult {
   id: number
   date: number
   team1: ResultTeam
   team2: ResultTeam
+    event: ResultEvent
   stars: number
   format: string
   map?: GameMap
@@ -92,9 +98,9 @@ export const getResults =
 
       page++
 
-      let featuredResults = $('.big-results .result-con')
-        .toArray()
-        .map((el) => el.children().first().attrThen('href', getIdAt(2)))
+        let featuredResults = $('.big-results .result-con')
+            .toArray()
+            .map((el) => el.children().first().attrThen('href', getIdAt(2)))
 
       results.push(
         ...$('.result-con')
@@ -102,13 +108,13 @@ export const getResults =
           .map((el) => {
             const id = el.children().first().attrThen('href', getIdAt(2))!
 
-            if (featuredResults.includes(id)) {
-              featuredResults = featuredResults.filter((x) => x !== id)
-              return null
-            }
-
+              if (featuredResults.includes(id)) {
+                  featuredResults = featuredResults.filter((x) => x !== id)
+                  return null
+              }
             const stars = el.find('.stars i').length
             const date = el.numFromAttr('data-zonedgrouping-entry-unix')!
+              const eventName = el.find('.event-name').text()
             const format = el.find('.map-text').text()
 
             const team1 = {
@@ -121,6 +127,10 @@ export const getResults =
               logo: el.find('img.team-logo').last().attr('src')
             }
 
+              const event = {
+                  name: el.find('.event-name').text(),
+                  logo: el.find('img.event-logo').first().attr('src')
+              }
             const [team1Result, team2Result] = el
               .find('.result-score')
               .text()
@@ -131,6 +141,7 @@ export const getResults =
               id,
               stars,
               date,
+                event,
               team1,
               team2,
               result: { team1: team1Result, team2: team2Result },
