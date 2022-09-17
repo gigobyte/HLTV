@@ -1,6 +1,6 @@
 {
   "name": "hltv-next",
-  "version": "3.5.1",
+  "version": "3.5.2",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -41,8 +41,7 @@
   "homepage": "https://github.com/gigobyte/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.31",
-    "@types/jest": "29.5.1",
-    "@types/node": "18.15.11",
+    "@types/jest": "28.1.7",
     "@types/random-useragent": "0.3.1",
     "@types/request": "2.48.8",
     "@types/socket.io-client": "1.4.36",
@@ -54,8 +53,10 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
-    "cheerio": "1.0.0-rc.12",
     "got-scraping": "3.2.13",
-    "socket.io-client": "2.4.0"
+    "cheerio": "^1.0.0-rc.12",
+    "request": "2.88.2",
+    "socket.io-client": "2.4.0",
+    "uuid": "8.3.2"
   }
 }

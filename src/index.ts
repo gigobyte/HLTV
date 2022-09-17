@@ -21,6 +21,7 @@ import { getTeamStats } from './endpoints/getTeamStats'
 import { getPastEvents } from './endpoints/getPastEvents'
 import { getResults } from './endpoints/getResults'
 import { getNews } from './endpoints/getNews'
+import { getRssNews } from "./endpoints/getRssNews"
 
 export class Hltv {
   constructor(private config: Partial<HLTVConfig> = {}) {
@@ -58,6 +59,7 @@ export class Hltv {
   getTeamStats = getTeamStats(this.config as HLTVConfig)
   getResults = getResults(this.config as HLTVConfig)
   getNews = getNews(this.config as HLTVConfig)
+  getRssNews = getRssNews(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
 
   public createInstance(config: Partial<HLTVConfig>) {
@@ -153,6 +155,8 @@ export type {
 } from './endpoints/getResults'
 
 export type { NewsPreview, GetNewsArguments } from './endpoints/getNews'
+
+export type { RssArticle } from './endpoints/getRssNews'
 
 export { GameMap } from './shared/GameMap'
 export { MatchFormat } from './shared/MatchFormat'
