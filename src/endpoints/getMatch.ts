@@ -329,7 +329,7 @@ function getMaps($: HLTVPage): MapResult[] {
 
       let result
 
-      if (team1TotalRounds && team2TotalRounds) {
+      if (!isNaN(team1TotalRounds) && !isNaN(team2TotalRounds)) {
         const halfsString = mapEl.find('.results-center-half-score').trimText()!
         const halfs = halfsString
           .split(' ')
