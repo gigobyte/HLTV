@@ -253,7 +253,7 @@ function getEvent($: HLTVPage): Event {
 }
 
 function getOdds($: HLTVPage): ProviderOdds[] {
-  return $('[class^="world"] tr.provider:not(.hidden)')
+  return $('tr.provider:not(.hidden)')
     .toArray()
     .filter((el) => el.find('.noOdds').length === 0)
     .map((oddElement) => {
@@ -381,12 +381,12 @@ function getPlayers($: HLTVPage) {
 }
 
 function getStreams($: HLTVPage): Stream[] {
-  return $('.stream-box-embed')
+  return $('.stream-box')
     .toArray()
     .filter((el) => el.find('.stream-flag').exists())
     .map((streamEl) => ({
-      name: streamEl.text(),
-      link: streamEl.attr('data-stream-embed'),
+      name: streamEl.find('.stream-box-embed').text(),
+      link: streamEl.find('.stream-box-embed').attr('data-stream-embed'),
       viewers: streamEl.find('.viewers.gtSmartphone-only').numFromText()!
     }))
     .concat(
@@ -420,9 +420,9 @@ function getDemos($: HLTVPage): Demo[] {
   return $('[class="stream-box"]:not(:has(.stream-box-embed))')
     .toArray()
     .map(function (demoEl) {
-    if (demoEl.attr('data-demo-link')) {
-      return { name: 'GOTV Demo', link: demoEl.attr('data-demo-link') };
-    } 
+      if (demoEl.attr('data-demo-link')) {
+        return { name: 'GOTV Demo', link: demoEl.attr('data-demo-link') }
+      }
 
       return {
         name: demoEl.text(),
