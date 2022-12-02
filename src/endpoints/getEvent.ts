@@ -91,7 +91,7 @@ export const getEvent =
         id: el.find('a').attrThen('href', getIdAt(2))
       }))
 
-    const prizeDistribution = $('.placement')
+    const prizeDistribution = $('.placements .placement')
       .toArray()
       .map((el) => {
         const otherPrize =
