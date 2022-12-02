@@ -417,17 +417,15 @@ function getStreams($: HLTVPage): Stream[] {
 }
 
 function getDemos($: HLTVPage): Demo[] {
-  return $('div[class="stream-box"]:not(:has(.stream-box-embed))')
+  return $('[class="stream-box"]:not(:has(.stream-box-embed))')
     .toArray()
-    .map((demoEl) => {
-      const gotvEl = demoEl.find('.left-right-padding')
-
-      if (gotvEl.length !== 0) {
-        return { name: gotvEl.text(), link: gotvEl.attr('href') }
-      }
+    .map(function (demoEl) {
+    if (demoEl.attr('data-demo-link')) {
+      return { name: 'GOTV Demo', link: demoEl.attr('data-demo-link') };
+    } 
 
       return {
-        name: demoEl.find('.spoiler').text(),
+        name: demoEl.text(),
         link: demoEl.attr('data-stream-embed')
       }
     })
