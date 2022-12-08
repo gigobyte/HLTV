@@ -331,13 +331,16 @@ function getMaps($: HLTVPage): MapResult[] {
 
       if (!isNaN(team1TotalRounds) && !isNaN(team2TotalRounds)) {
         const halfsString = mapEl.find('.results-center-half-score').trimText()!
-        const halfs = halfsString
-          .split(' ')
-          .map((x) => x.replace(/\(|\)|;/g, ''))
-          .map((half) => ({
-            team1Rounds: Number(half.split(':')[0]),
-            team2Rounds: Number(half.split(':')[1])
-          }))
+        let halfs = [{team1Rounds: 0, team2Rounds: 0}, {team1Rounds: 0, team2Rounds: 0}]
+        if (halfsString) {
+            halfs = halfsString
+              .split(' ')
+              .map((x) => x.replace(/\(|\)|;/g, ''))
+              .map((half) => ({
+                team1Rounds: Number(half.split(':')[0]),
+                team2Rounds: Number(half.split(':')[1])
+              }))
+        }
 
         result = {
           team1TotalRounds,
