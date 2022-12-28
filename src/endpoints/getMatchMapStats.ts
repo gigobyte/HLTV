@@ -387,12 +387,12 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
   }
 
   return {
-    team1: m$('.stats-table')
+    team1: m$('.stats-table.totalstats')
       .first()
       .find('tbody tr')
       .toArray()
       .map(getPlayerOverviewStats),
-    team2: m$('.stats-table')
+    team2: m$('.stats-table.totalstats')
       .last()
       .find('tbody tr')
       .toArray()
