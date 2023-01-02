@@ -3,6 +3,7 @@ import { HLTVScraper } from '../scraper'
 import { Article } from '../shared/Article'
 import { Country } from '../shared/Country'
 import { Player } from '../shared/Player'
+import { logoFromSrc } from '../shared/Team'
 import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
 
 export enum TeamPlayerType {
@@ -43,8 +44,7 @@ export const getTeam =
     )
 
     const name = $('.profile-team-name').text()
-    const logoSrc = $('.teamlogo').attr('src')
-    const logo = logoSrc.includes('placeholder.svg') ? undefined : logoSrc
+    const logo = logoFromSrc($('.teamlogo').attr('src'))
     const facebook = $('.facebook').parent().attr('href')
     const twitter = $('.twitter').parent().attr('href')
     const instagram = $('.instagram').parent().attr('href')

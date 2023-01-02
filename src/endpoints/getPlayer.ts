@@ -1,7 +1,7 @@
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
 import { Country } from '../shared/Country'
-import { Team } from '../shared/Team'
+import { logoFromSrc, Team } from '../shared/Team'
 import { Event } from '../shared/Event'
 import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
 import { Article } from '../shared/Article'
@@ -105,18 +105,20 @@ export const getPlayer =
       ? $('span.profile-player-stat-value').last().trimText() !== '-'
       : $('.playerTeam .listRight').trimText() !== 'No team'
 
-    let team
+    let team: Team | undefined = undefined
 
     if (hasTeam) {
       if (isRegularPlayer) {
         team = {
           name: $('.profile-player-stat-value a').trimText()!,
-          id: $('.profile-player-stat-value a').attrThen('href', getIdAt(2))
+          id: $('.profile-player-stat-value a').attrThen('href', getIdAt(2)),
+          logo: logoFromSrc($('.profile-player-stat-value img').attr('src'))
         }
       } else {
         team = {
           name: $('.playerTeam a').trimText()!,
-          id: $('.playerTeam a').attrThen('href', getIdAt(2))
+          id: $('.playerTeam a').attrThen('href', getIdAt(2)),
+          logo: logoFromSrc($('.playerTeam img').attr('src'))
         }
       }
     }
@@ -154,25 +156,28 @@ export const getPlayer =
 
     const teams = $('.team-breakdown .team')
       .toArray()
-      .map((el) => ({
-        id: el.find('.team-name-cell a').attrThen('href', getIdAt(2)),
-        name: el.find('.team-name').text(),
-        startDate: el
-          .find('.time-period-cell [data-unix]')
-          .first()
-          .numFromAttr('data-unix')!,
-        leaveDate: el
-          .find('.time-period-cell [data-unix]')
-          .last()
-          .numFromAttr('data-unix')!,
-        trophies: el
-          .find('.trophy-row-trophy a')
-          .toArray()
-          .map((trophyEl) => ({
-            id: trophyEl.attrThen('href', getIdAt(2)),
-            name: trophyEl.find('img').attr('title')
-          }))
-      }))
+      .map(
+        (el): FullPlayerTeam => ({
+          id: el.find('.team-name-cell a').attrThen('href', getIdAt(2)),
+          name: el.find('.team-name').text(),
+          logo: logoFromSrc(el.find('.team-logo').attr('src')),
+          startDate: el
+            .find('.time-period-cell [data-unix]')
+            .first()
+            .numFromAttr('data-unix')!,
+          leaveDate: el
+            .find('.time-period-cell [data-unix]')
+            .last()
+            .numFromAttr('data-unix')!,
+          trophies: el
+            .find('.trophy-row-trophy a')
+            .toArray()
+            .map((trophyEl) => ({
+              id: trophyEl.attrThen('href', getIdAt(2)),
+              name: trophyEl.find('img').attr('title')
+            }))
+        })
+      )
 
     const news = $('#newsBox a')
       .toArray()
