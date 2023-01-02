@@ -1,5 +1,5 @@
 import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
+import { HLTVPageElement, HLTVScraper } from '../scraper'
 import { Country } from '../shared/Country'
 import { Team } from '../shared/Team'
 import { Event } from '../shared/Event'
@@ -8,7 +8,7 @@ import { Article } from '../shared/Article'
 
 export interface FullPlayerTeam extends Team {
   startDate: number
-  leaveDate: number
+  leaveDate?: number
   trophies: Event[]
 }
 
@@ -152,6 +152,16 @@ export const getPlayer =
         }
       }))
 
+    const getLeaveDate = (el: HLTVPageElement) => {
+      const dates = el.find('.time-period-cell [data-unix]')
+
+      if (dates.length < 2) {
+        return undefined
+      }
+
+      return dates.last().numFromAttr('data-unix')!
+    }
+
     const teams = $('.team-breakdown .team')
       .toArray()
       .map((el) => ({
@@ -161,10 +171,7 @@ export const getPlayer =
           .find('.time-period-cell [data-unix]')
           .first()
           .numFromAttr('data-unix')!,
-        leaveDate: el
-          .find('.time-period-cell [data-unix]')
-          .last()
-          .numFromAttr('data-unix')!,
+        leaveDate: getLeaveDate(el),
         trophies: el
           .find('.trophy-row-trophy a')
           .toArray()
