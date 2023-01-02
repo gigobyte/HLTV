@@ -4,5 +4,16 @@ export interface Team {
   logo?: string
 }
 
-export const logoFromSrc = (logoSrc: string): string | undefined =>
-  logoSrc.includes('placeholder.svg') ? undefined : logoSrc
+export const logoFromSrc = (
+  logoSrc: string | undefined
+): string | undefined => {
+  if (!logoSrc) {
+    return undefined
+  }
+
+  if (logoSrc.includes('placeholder.svg')) {
+    return undefined
+  }
+
+  return logoSrc
+}

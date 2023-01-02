@@ -102,7 +102,8 @@ export const getPlayer =
         }
 
     const hasTeam = isRegularPlayer
-      ? $('span.profile-player-stat-value').last().trimText() !== '-'
+      ? $('span.profile-player-stat-value').last().trimText() !== '-' &&
+        $('span.profile-player-stat-value').last().trimText() !== 'No team'
       : $('.playerTeam .listRight').trimText() !== 'No team'
 
     let team: Team | undefined = undefined
