@@ -42,6 +42,8 @@ export const fromMapSlug = (slug: string): GameMap => {
       return GameMap.Vertigo
     case 'anc':
       return GameMap.Ancient
+    case 'anb':
+      return GameMap.Anubis
     case '-':
       return GameMap.Default
     default:
@@ -118,6 +120,7 @@ export const toMapFilter = (map: GameMap): string => {
     case GameMap.Season:
       return 'de_season'
     case GameMap.TBA:
+      return 'tba'
     case GameMap.Default: {
       throw new Error(`Invalid map filter - ${map}`)
     }
