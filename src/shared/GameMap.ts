@@ -12,6 +12,7 @@ export enum GameMap {
   Vertigo = 'de_vertigo',
   Season = 'de_season',
   Ancient = 'de_ancient',
+  Anubis = 'de_anubis',
   Default = 'default'
 }
 
@@ -79,6 +80,8 @@ export const fromMapName = (name: string): GameMap => {
       return GameMap.Vertigo
     case 'Ancient':
       return GameMap.Ancient
+    case 'Anubis':
+      return GameMap.Anubis
     case 'Default':
       return GameMap.Default
     default:
@@ -110,6 +113,8 @@ export const toMapFilter = (map: GameMap): string => {
       return 'de_vertigo'
     case GameMap.Ancient:
       return 'de_ancient'
+    case GameMap.Anubis:
+      return 'de_anubis'
     case GameMap.Season:
       return 'de_season'
     case GameMap.TBA:
