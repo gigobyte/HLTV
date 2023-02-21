@@ -69,8 +69,8 @@ export const getPlayer =
       : $('.bodyshot-img').attr('src')
 
     const image =
-      imageUrl.includes('bodyshot/unknown.png') ||
-      imageUrl.includes('static/player/player_silhouette.png')
+      imageUrl?.includes('bodyshot/unknown.png') ||
+      imageUrl?.includes('static/player/player_silhouette.png')
         ? undefined
         : imageUrl
 
