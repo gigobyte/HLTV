@@ -32,7 +32,7 @@ export interface FullTeam {
   rankingDevelopment: number[]
   ongoingEvents: Event[]
   endedEvents: Event[]
-  news?: Article[]
+  news: Article[]
 }
 
 export const getTeam =
@@ -150,7 +150,7 @@ export const getTeam =
       rankingDevelopment,
       ongoingEvents,
       endedEvents,
-      // news
+      news
     }
   }
 
