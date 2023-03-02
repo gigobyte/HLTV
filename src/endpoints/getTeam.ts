@@ -1,5 +1,6 @@
 import { HLTVConfig } from '../config'
 import { HLTVScraper } from '../scraper'
+import { Event } from '../shared/Event'
 import { Article } from '../shared/Article'
 import { Country } from '../shared/Country'
 import { Player } from '../shared/Player'
@@ -29,7 +30,9 @@ export interface FullTeam {
   rank?: number
   players: FullTeamPlayer[]
   rankingDevelopment: number[]
-  news: Article[]
+  ongoingEvents: Event[]
+  endedEvents: Event[]
+  news?: Article[]
 }
 
 export const getTeam =
@@ -113,6 +116,20 @@ export const getTeam =
       )
     }
 
+    const ongoingEvents = $('#eventsBox #ongoingEvents a')
+      .toArray()
+      .map((el) => ({
+        name: el.find('div.eventbox-eventname').text(),
+        id: el.attrThen('href', getIdAt(2))!
+      }))
+
+    const endedEvents = $('#eventsBox #endedEvents a')
+      .toArray()
+      .map((el) => ({
+        name: el.find('div.eventbox-eventname').text(),
+        id: el.attrThen('href', getIdAt(2))!
+      }))
+
     const news = $('#newsBox a')
       .toArray()
       .map((el) => ({
@@ -131,7 +148,9 @@ export const getTeam =
       rank,
       players,
       rankingDevelopment,
-      news
+      ongoingEvents,
+      endedEvents,
+      // news
     }
   }
 
