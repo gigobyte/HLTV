@@ -44,6 +44,7 @@ export interface FullEvent {
   id: number
   name: string
   logo: string
+  banner: string
   dateStart?: number
   dateEnd?: number
   prizePool: string
@@ -70,6 +71,7 @@ export const getEvent =
 
     const name = $('.event-hub-title').text()
     const logo = $('.sidebar-first-level').find('.event-logo').attr('src')
+    const banner = $('.event-hub-image').attr('src')
     const prizePool = $('td.prizepool').text()
 
     const dateStart = $('td.eventdate span[data-unix]')
@@ -196,6 +198,7 @@ export const getEvent =
       id,
       name,
       logo,
+      banner,
       dateStart,
       dateEnd,
       prizePool,
