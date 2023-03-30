@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import { v4 as uuidv4 } from 'uuid'
+import { randomUUID } from 'crypto'
 
 export const fetchPage = async (
   url: string,
@@ -23,7 +23,7 @@ export const fetchPage = async (
 }
 
 export const generateRandomSuffix = () => {
-  return uuidv4()
+  return randomUUID()
 }
 
 export const percentageToDecimalOdd = (odd: number): number =>
