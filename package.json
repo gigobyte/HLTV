@@ -1,6 +1,6 @@
 {
   "name": "hltv-next",
-  "version": "3.5.5",
+  "version": "3.5.6",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
