@@ -42,6 +42,7 @@
   "devDependencies": {
     "@types/cheerio": "0.22.31",
     "@types/jest": "29.5.1",
+    "@types/node": "18.15.11",
     "@types/random-useragent": "0.3.1",
     "@types/request": "2.48.8",
     "@types/socket.io-client": "1.4.36",
@@ -53,10 +54,8 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
+    "cheerio": "1.0.0-rc.12",
     "got-scraping": "3.2.13",
-    "cheerio": "^1.0.0-rc.12",
-    "request": "2.88.2",
-    "socket.io-client": "4.6.1",
-    "uuid": "9.0.0"
+    "socket.io-client": "4.6.1"
   }
 }
