@@ -1,6 +1,6 @@
 import { Agent as HttpsAgent } from 'https'
 import { Agent as HttpAgent } from 'http'
-import { gotScraping } from 'got-scraping'
+import request from "request";
 
 export interface HLTVConfig {
   loadPage: (url: string) => Promise<string>
@@ -9,9 +9,22 @@ export interface HLTVConfig {
 
 export const defaultLoadPage =
   (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
-    gotScraping({ url, agent: { http: httpAgent, https: httpAgent } }).then(
-      (res) => res.body
-    )
+      new Promise<string>((resolve) => {
+          request.get(
+              url,
+              {
+                  gzip: true,
+                  agent: httpAgent
+              },
+              (err, __, body) => {
+                  if (err) {
+                      throw err
+                  }
+
+                  resolve(body)
+              }
+          )
+      })
 
 const defaultAgent = new HttpsAgent()
 

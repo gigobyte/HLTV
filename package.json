@@ -1,6 +1,6 @@
 {
   "name": "hltv-next",
-  "version": "3.5.7",
+  "version": "3.5.8",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -55,7 +55,6 @@
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "got-scraping": "3.2.13",
     "socket.io-client": "4.6.1"
   }
 }
