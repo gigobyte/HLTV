@@ -1,211 +1,224 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`getMatch 1`] = `
-Object {
+{
   "date": 1535888100000,
-  "demos": Array [
-    Object {
+  "demos": [
+    {
       "link": "/download/demo/43030",
       "name": "GOTV Demo",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s&parent=www.hltv.org",
       "name": "DreamHack (Pre-Match Analysis)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s&parent=www.hltv.org",
       "name": "DreamHack (Map 1 - Dust 2)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s&parent=www.hltv.org",
       "name": "DreamHack (Map 2 - Inferno)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s&parent=www.hltv.org",
       "name": "DreamHack (Map 3 - Mirage)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s&parent=www.hltv.org",
       "name": "DreamHack (Winning Moment)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s&parent=www.hltv.org",
       "name": "DreamHack (Post-Match Analysis)",
     },
   ],
-  "event": Object {
+  "event": {
     "id": 3389,
     "name": "DreamHack Masters Stockholm 2018",
   },
-  "format": Object {
+  "format": {
     "location": undefined,
     "type": "bo3",
   },
   "hasScorebot": false,
-  "headToHead": Array [
-    Object {
+  "headToHead": [
+    {
       "date": 1527526761000,
-      "event": Object {
+      "event": {
         "id": 3666,
         "name": "StarSeries i-League Season 5",
       },
       "map": "trn",
       "result": "16 - 12",
-      "winner": Object {
+      "winner": {
         "id": 4494,
         "name": "MOUZ",
       },
     },
-    Object {
+    {
       "date": 1527526761000,
-      "event": Object {
+      "event": {
         "id": 3666,
         "name": "StarSeries i-League Season 5",
       },
       "map": "mrg",
       "result": "7 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7533,
         "name": "North",
       },
     },
-    Object {
+    {
       "date": 1527526761000,
-      "event": Object {
+      "event": {
         "id": 3666,
         "name": "StarSeries i-League Season 5",
       },
       "map": "d2",
       "result": "19 - 16",
-      "winner": Object {
+      "winner": {
         "id": 4494,
         "name": "MOUZ",
       },
     },
-    Object {
+    {
       "date": 1520359509000,
-      "event": Object {
+      "event": {
         "id": 3361,
         "name": "ESL Pro League Season 7 Europe",
       },
       "map": "trn",
       "result": "13 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7533,
         "name": "North",
       },
     },
-    Object {
+    {
       "date": 1520355703000,
-      "event": Object {
+      "event": {
         "id": 3361,
         "name": "ESL Pro League Season 7 Europe",
       },
       "map": "inf",
       "result": "16 - 8",
-      "winner": Object {
+      "winner": {
         "id": 4494,
         "name": "MOUZ",
       },
     },
-    Object {
+    {
       "date": 1506461343000,
-      "event": Object {
+      "event": {
         "id": 2866,
         "name": "ESL Pro League Season 6 Europe",
       },
       "map": "mrg",
       "result": "14 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7533,
         "name": "North",
       },
     },
-    Object {
+    {
       "date": 1506457458000,
-      "event": Object {
+      "event": {
         "id": 2866,
         "name": "ESL Pro League Season 6 Europe",
       },
       "map": "cbl",
       "result": "12 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7533,
         "name": "North",
       },
     },
   ],
   "highlightedPlayers": undefined,
-  "highlights": Array [
-    Object {
+  "highlights": [
+    {
       "link": "https://clips.twitch.tv/embed?clip=AgreeableEagerGerbilBatChest&autoplay=true&parent=www.hltv.org",
       "title": "suNny triple entry frag (Dust2)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=AgitatedEncouragingClipsdadCurseLit&autoplay=true&parent=www.hltv.org",
       "title": "Snax 1v2 clutch (Dust2) ",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=RoundTawdryHamsterWTRuck&autoplay=true&parent=www.hltv.org",
       "title": "chrisJ 1v2 clutch (Dust2)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=CuteSpicyMonitorWow&autoplay=true&parent=www.hltv.org",
       "title": "MSL triple kill hold (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=PiercingExuberantDunlinLitFam&autoplay=true&parent=www.hltv.org",
       "title": "niko defends the with a 3k (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=ClearExpensiveQueleaKreygasm&autoplay=true&parent=www.hltv.org",
       "title": "MSL snipes down three on the defense (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=SquareSmellyZucchiniPRChase&autoplay=true&parent=www.hltv.org",
       "title": "suNny taps down three in the second pistol round (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=FancyInventiveBaboonNomNom&autoplay=true&parent=www.hltv.org",
       "title": "valde takes down three to steal the round (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=ObeseMistyKangarooOMGScoots&autoplay=true&parent=www.hltv.org",
       "title": "oskar snipes down three to keep mouz alive (Infeno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=CalmSneakySquidEagleEye&autoplay=true&parent=www.hltv.org",
       "title": "niko 3k to steal the map (Inferno)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=HomelyOnerousBeaverGivePLZ&autoplay=true&parent=www.hltv.org",
       "title": "aizy triple kill hold (Mirage)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=AnnoyingAbstemiousWebSmoocherZ&autoplay=true&parent=www.hltv.org",
       "title": "Kjaerbye quick double to steal the round (Mirage)",
     },
-    Object {
+    {
       "link": "https://clips.twitch.tv/embed?clip=FancyCulturedDolphinYouDontSay&autoplay=true&parent=www.hltv.org",
       "title": "MSL triple kill hold to earn map point (Mirage)",
     },
   ],
   "id": 2325765,
-  "maps": Array [
-    Object {
+  "maps": [
+    {
       "name": "de_dust2",
-      "result": undefined,
+      "result": {
+        "halfResults": [
+          {
+            "team1Rounds": 15,
+            "team2Rounds": 0,
+          },
+          {
+            "team1Rounds": 1,
+            "team2Rounds": 0,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 0,
+      },
       "statsId": 73147,
     },
-    Object {
+    {
       "name": "de_inferno",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 5,
             "team2Rounds": 10,
           },
-          Object {
+          {
             "team1Rounds": 9,
             "team2Rounds": 6,
           },
@@ -215,15 +228,15 @@ Object {
       },
       "statsId": 73164,
     },
-    Object {
+    {
       "name": "de_mirage",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 7,
             "team2Rounds": 8,
           },
-          Object {
+          {
             "team1Rounds": 5,
             "team2Rounds": 8,
           },
@@ -234,52 +247,52 @@ Object {
       "statsId": 73165,
     },
   ],
-  "odds": Array [],
-  "playerOfTheMatch": Object {
+  "odds": [],
+  "playerOfTheMatch": {
     "id": 11816,
     "name": "ropz",
   },
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 798,
         "name": "oskar",
       },
-      Object {
+      {
         "id": 2730,
         "name": "chrisJ",
       },
-      Object {
+      {
         "id": 11816,
         "name": "ropz",
       },
-      Object {
+      {
         "id": 5479,
         "name": "suNny",
       },
-      Object {
+      {
         "id": 2553,
         "name": "Snax",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 7156,
         "name": "MSL",
       },
-      Object {
+      {
         "id": 8095,
         "name": "aizy",
       },
-      Object {
+      {
         "id": 9031,
         "name": "valde",
       },
-      Object {
+      {
         "id": 8394,
         "name": "Kjaerbye",
       },
-      Object {
+      {
         "id": 10264,
         "name": "niko",
       },
@@ -288,71 +301,132 @@ Object {
   "significance": "Semi-final",
   "statsId": 59400,
   "status": "Over",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+  ],
+  "team1": {
     "id": 4494,
     "name": "MOUZ",
   },
-  "team2": Object {
+  "team2": {
     "id": 7533,
     "name": "North",
   },
   "title": undefined,
-  "vetoes": Array [
-    Object {
+  "vetoes": [
+    {
       "map": "de_overpass",
-      "team": Object {
+      "team": {
         "id": 4494,
         "name": "MOUZ",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_cache",
-      "team": Object {
+      "team": {
         "id": 7533,
         "name": "North",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_dust2",
-      "team": Object {
+      "team": {
         "id": 4494,
         "name": "MOUZ",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_inferno",
-      "team": Object {
+      "team": {
         "id": 7533,
         "name": "North",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_train",
-      "team": Object {
+      "team": {
         "id": 4494,
         "name": "MOUZ",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_nuke",
-      "team": Object {
+      "team": {
         "id": 7533,
         "name": "North",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_mirage",
       "type": "leftover",
     },
   ],
-  "winnerTeam": Object {
+  "winnerTeam": {
     "id": 7533,
     "name": "North",
   },
@@ -360,69 +434,69 @@ Object {
 `;
 
 exports[`getMatch 2`] = `
-Object {
+{
   "date": 1392668100000,
-  "demos": Array [],
-  "event": Object {
+  "demos": [],
+  "event": {
     "id": 1315,
     "name": "ESL Pro Series Germany Spring 2014 Cup #1",
   },
   "format": undefined,
   "hasScorebot": false,
-  "headToHead": Array [],
+  "headToHead": [],
   "highlightedPlayers": undefined,
-  "highlights": Array [],
+  "highlights": [],
   "id": 2290099,
-  "maps": Array [
-    Object {
+  "maps": [
+    {
       "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
   ],
-  "odds": Array [],
+  "odds": [],
   "playerOfTheMatch": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 5794,
         "name": "tabseN",
       },
-      Object {
+      {
         "id": 7964,
         "name": "cadiaN",
       },
-      Object {
+      {
         "id": 5796,
         "name": "tiziaN",
       },
-      Object {
+      {
         "id": 2730,
         "name": "chrisJ",
       },
-      Object {
+      {
         "id": 3252,
         "name": "LEGIJA",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 7499,
         "name": "Spiidi",
       },
-      Object {
+      {
         "id": 2326,
         "name": "xall",
       },
-      Object {
+      {
         "id": 7246,
         "name": "stavros",
       },
-      Object {
+      {
         "id": 7208,
         "name": "smn",
       },
-      Object {
+      {
         "id": 7214,
         "name": "strux1",
       },
@@ -431,18 +505,18 @@ Object {
   "significance": undefined,
   "statsId": undefined,
   "status": "Over",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [],
+  "team1": {
     "id": 4494,
     "name": "MOUZ",
   },
-  "team2": Object {
+  "team2": {
     "id": 4901,
     "name": "3DMAX",
   },
   "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
+  "vetoes": [],
+  "winnerTeam": {
     "id": 4494,
     "name": "MOUZ",
   },
@@ -450,72 +524,72 @@ Object {
 `;
 
 exports[`getMatch 3`] = `
-Object {
+{
   "date": 1352228400000,
-  "demos": Array [],
-  "event": Object {
+  "demos": [],
+  "event": {
     "id": 982,
     "name": "ESL Pro Series Germany Winter Season 2012",
   },
   "format": undefined,
   "hasScorebot": false,
-  "headToHead": Array [],
+  "headToHead": [],
   "highlightedPlayers": undefined,
-  "highlights": Array [],
+  "highlights": [],
   "id": 2186795,
-  "maps": Array [
-    Object {
+  "maps": [
+    {
       "name": "de_nuke",
       "result": undefined,
       "statsId": undefined,
     },
   ],
-  "odds": Array [],
-  "playerOfTheMatch": Object {
+  "odds": [],
+  "playerOfTheMatch": {
     "id": 7226,
     "name": "fl0w",
   },
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 7224,
         "name": "caLipo",
       },
-      Object {
+      {
         "id": 7225,
         "name": "cavy",
       },
-      Object {
+      {
         "id": 7226,
         "name": "fl0w",
       },
-      Object {
+      {
         "id": 7227,
         "name": "kev1n",
       },
-      Object {
+      {
         "id": 7321,
         "name": "TuGuX",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 7209,
         "name": "H1T",
       },
-      Object {
+      {
         "id": 7212,
         "name": "miLo",
       },
-      Object {
+      {
         "id": 7213,
         "name": "wNe",
       },
-      Object {
+      {
         "id": 7258,
         "name": "tomo",
       },
-      Object {
+      {
         "id": 7342,
         "name": "constarr",
       },
@@ -524,18 +598,18 @@ Object {
   "significance": undefined,
   "statsId": undefined,
   "status": "Over",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [],
+  "team1": {
     "id": 4498,
     "name": "Red Dead",
   },
-  "team2": Object {
+  "team2": {
     "id": 4499,
     "name": "CPLAY",
   },
   "title": undefined,
-  "vetoes": Array [],
-  "winnerTeam": Object {
+  "vetoes": [],
+  "winnerTeam": {
     "id": 4498,
     "name": "Red Dead",
   },
@@ -543,32 +617,32 @@ Object {
 `;
 
 exports[`getMatch 4`] = `
-Object {
+{
   "date": 1451157000000,
-  "demos": Array [],
-  "event": Object {
+  "demos": [],
+  "event": {
     "id": 2092,
     "name": "StarLadder Regional Minor Championship CIS Closed Qualifier",
   },
-  "format": Object {
+  "format": {
     "location": undefined,
     "type": "bo3",
   },
   "hasScorebot": false,
-  "headToHead": Array [],
+  "headToHead": [],
   "highlightedPlayers": undefined,
-  "highlights": Array [],
+  "highlights": [],
   "id": 2300113,
-  "maps": Array [
-    Object {
+  "maps": [
+    {
       "name": "de_cache",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 8,
             "team2Rounds": 7,
           },
-          Object {
+          {
             "team1Rounds": 8,
             "team2Rounds": 2,
           },
@@ -578,19 +652,19 @@ Object {
       },
       "statsId": undefined,
     },
-    Object {
+    {
       "name": "de_mirage",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 6,
             "team2Rounds": 9,
           },
-          Object {
+          {
             "team1Rounds": 9,
             "team2Rounds": 6,
           },
-          Object {
+          {
             "team1Rounds": 16,
             "team2Rounds": 11,
           },
@@ -600,55 +674,55 @@ Object {
       },
       "statsId": undefined,
     },
-    Object {
+    {
       "name": "de_inferno",
       "result": undefined,
       "statsId": undefined,
     },
   ],
-  "odds": Array [],
+  "odds": [],
   "playerOfTheMatch": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 737,
         "name": "Fox",
       },
-      Object {
+      {
         "id": 3410,
         "name": "ROBO",
       },
-      Object {
+      {
         "id": 3499,
         "name": "pixel",
       },
-      Object {
+      {
         "id": 9890,
         "name": "hoax",
       },
-      Object {
+      {
         "id": 7973,
         "name": "El Patron",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 7404,
         "name": "insom",
       },
-      Object {
+      {
         "id": 7793,
         "name": "DSTR",
       },
-      Object {
+      {
         "id": 8120,
         "name": "PLAZ",
       },
-      Object {
+      {
         "id": 7794,
-        "name": "Egor K.",
+        "name": "Egor K",
       },
-      Object {
+      {
         "id": 7406,
         "name": "latro",
       },
@@ -657,55 +731,55 @@ Object {
   "significance": "1/4 final. Winners will secure a spot at the CIS Minor Championship",
   "statsId": undefined,
   "status": "Over",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [],
+  "team1": {
     "id": 6594,
     "name": "420pm",
   },
-  "team2": Object {
+  "team2": {
     "id": 6599,
     "name": "KULAK",
   },
   "title": undefined,
-  "vetoes": Array [
-    Object {
+  "vetoes": [
+    {
       "map": "de_train",
-      "team": Object {
+      "team": {
         "id": 6599,
         "name": "KULAK",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_cbble",
-      "team": Object {
+      "team": {
         "id": 6594,
         "name": "420pm",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_cache",
-      "team": Object {
+      "team": {
         "id": 6599,
         "name": "KULAK",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_mirage",
-      "team": Object {
+      "team": {
         "id": 6594,
         "name": "420pm",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_inferno",
       "type": "leftover",
     },
   ],
-  "winnerTeam": Object {
+  "winnerTeam": {
     "id": 6594,
     "name": "420pm",
   },
@@ -713,90 +787,90 @@ Object {
 `;
 
 exports[`getMatch 5`] = `
-Object {
+{
   "date": 1506182400000,
-  "demos": Array [],
-  "event": Object {
+  "demos": [],
+  "event": {
     "id": 3057,
     "name": "ECS Season 4 EU Promotion",
   },
   "format": undefined,
   "hasScorebot": false,
-  "headToHead": Array [
-    Object {
+  "headToHead": [
+    {
       "date": 1495389933000,
-      "event": Object {
+      "event": {
         "id": 2792,
         "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
       },
       "map": "nuke",
       "result": "14 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7175,
         "name": "Heroic",
       },
     },
-    Object {
+    {
       "date": 1495389933000,
-      "event": Object {
+      "event": {
         "id": 2792,
         "name": "ESL One Cologne 2017 - Europe Closed Qualifier",
       },
       "map": "inf",
       "result": "4 - 16",
-      "winner": Object {
+      "winner": {
         "id": 7175,
         "name": "Heroic",
       },
     },
   ],
   "highlightedPlayers": undefined,
-  "highlights": Array [],
+  "highlights": [],
   "id": 2315069,
-  "maps": Array [],
-  "odds": Array [],
+  "maps": [],
+  "odds": [],
   "playerOfTheMatch": undefined,
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 629,
         "name": "fox",
       },
-      Object {
+      {
         "id": 1485,
         "name": "RUBINO",
       },
-      Object {
+      {
         "id": 8248,
         "name": "jkaem",
       },
-      Object {
+      {
         "id": 8151,
         "name": "AcilioN",
       },
-      Object {
+      {
         "id": 3997,
         "name": "loWel",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 922,
         "name": "Snappi",
       },
-      Object {
+      {
         "id": 545,
         "name": "MODDII",
       },
-      Object {
+      {
         "id": 8611,
         "name": "es3tag",
       },
-      Object {
+      {
         "id": 10264,
         "name": "niko",
       },
-      Object {
+      {
         "id": 8783,
         "name": "JUGi",
       },
@@ -805,65 +879,65 @@ Object {
   "significance": undefined,
   "statsId": undefined,
   "status": "Deleted",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [],
+  "team1": {
     "id": 5422,
     "name": "Dignitas",
   },
-  "team2": Object {
+  "team2": {
     "id": 7175,
     "name": "Heroic",
   },
   "title": undefined,
-  "vetoes": Array [],
+  "vetoes": [],
   "winnerTeam": undefined,
 }
 `;
 
 exports[`getMatch 6`] = `
-Object {
+{
   "date": 1615485900000,
-  "demos": Array [
-    Object {
+  "demos": [
+    {
       "link": "/download/demo/62836",
       "name": "GOTV Demo",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=36m40s&parent=www.hltv.org",
       "name": "Singularity (Map 1 - Train)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=1h41m55s&parent=www.hltv.org",
       "name": "Singularity (Map 2 - Inferno)",
     },
-    Object {
+    {
       "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=3h9m15s&parent=www.hltv.org",
       "name": "Singularity (Map 3 - Mirage)",
     },
   ],
-  "event": Object {
+  "event": {
     "id": 5701,
     "name": "ESEA Premier Season 36 Europe",
   },
-  "format": Object {
+  "format": {
     "location": "Online",
     "type": "bo3",
   },
   "hasScorebot": false,
-  "headToHead": Array [],
+  "headToHead": [],
   "highlightedPlayers": undefined,
-  "highlights": Array [],
+  "highlights": [],
   "id": 2346506,
-  "maps": Array [
-    Object {
+  "maps": [
+    {
       "name": "de_train",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 6,
             "team2Rounds": 9,
           },
-          Object {
+          {
             "team1Rounds": 4,
             "team2Rounds": 7,
           },
@@ -873,15 +947,15 @@ Object {
       },
       "statsId": 116197,
     },
-    Object {
+    {
       "name": "de_inferno",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 4,
             "team2Rounds": 11,
           },
-          Object {
+          {
             "team1Rounds": 12,
             "team2Rounds": 2,
           },
@@ -891,15 +965,15 @@ Object {
       },
       "statsId": 116206,
     },
-    Object {
+    {
       "name": "de_mirage",
-      "result": Object {
-        "halfResults": Array [
-          Object {
+      "result": {
+        "halfResults": [
+          {
             "team1Rounds": 9,
             "team2Rounds": 6,
           },
-          Object {
+          {
             "team1Rounds": 7,
             "team2Rounds": 4,
           },
@@ -910,52 +984,52 @@ Object {
       "statsId": 116211,
     },
   ],
-  "odds": Array [],
-  "playerOfTheMatch": Object {
+  "odds": [],
+  "playerOfTheMatch": {
     "id": 15385,
     "name": "KalubeR",
   },
-  "players": Object {
-    "team1": Array [
-      Object {
+  "players": {
+    "team1": [
+      {
         "id": 8917,
         "name": "niki1",
       },
-      Object {
+      {
         "id": 10762,
         "name": "Rock1nG",
       },
-      Object {
+      {
         "id": 14380,
         "name": "Patrick",
       },
-      Object {
+      {
         "id": 15385,
         "name": "KalubeR",
       },
-      Object {
+      {
         "id": 16412,
         "name": "rafftu",
       },
     ],
-    "team2": Array [
-      Object {
+    "team2": [
+      {
         "id": 7414,
         "name": "smF",
       },
-      Object {
+      {
         "id": 7965,
         "name": "larsen",
       },
-      Object {
+      {
         "id": 9903,
         "name": "notaN",
       },
-      Object {
+      {
         "id": 12048,
         "name": "Remoy",
       },
-      Object {
+      {
         "id": 16731,
         "name": "IceBerg",
       },
@@ -964,73 +1038,395 @@ Object {
   "significance": "Group A",
   "statsId": 79738,
   "status": "Over",
-  "streams": Array [],
-  "team1": Object {
+  "streams": [
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+    {
+      "link": undefined,
+      "name": "",
+      "viewers": undefined,
+    },
+  ],
+  "team1": {
     "id": 9863,
     "name": "FATE",
   },
-  "team2": Object {
+  "team2": {
     "id": 6978,
     "name": "Singularity",
   },
   "title": undefined,
-  "vetoes": Array [
-    Object {
+  "vetoes": [
+    {
       "map": "de_nuke",
-      "team": Object {
+      "team": {
         "id": 9863,
         "name": "FATE",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_dust2",
-      "team": Object {
+      "team": {
         "id": 6978,
         "name": "Singularity",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_train",
-      "team": Object {
+      "team": {
         "id": 9863,
         "name": "FATE",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_inferno",
-      "team": Object {
+      "team": {
         "id": 6978,
         "name": "Singularity",
       },
       "type": "picked",
     },
-    Object {
+    {
       "map": "de_vertigo",
-      "team": Object {
+      "team": {
         "id": 9863,
         "name": "FATE",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_overpass",
-      "team": Object {
+      "team": {
         "id": 6978,
         "name": "Singularity",
       },
       "type": "removed",
     },
-    Object {
+    {
       "map": "de_mirage",
       "type": "leftover",
     },
   ],
-  "winnerTeam": Object {
+  "winnerTeam": {
     "id": 9863,
     "name": "FATE",
   },
+}
+`;
+
+exports[`getMatch 7`] = `
+{
+  "date": 1684171800000,
+  "demos": [],
+  "event": {
+    "id": 6793,
+    "name": "BLAST.tv Paris Major 2023",
+  },
+  "format": {
+    "location": "LAN",
+    "type": "bo3",
+  },
+  "hasScorebot": false,
+  "headToHead": [],
+  "highlightedPlayers": {
+    "team1": {
+      "id": 13915,
+      "name": "YEKINDAR",
+    },
+    "team2": {
+      "id": 5388,
+      "name": "rallen",
+    },
+  },
+  "highlights": [],
+  "id": 2363888,
+  "maps": [
+    {
+      "name": "tba",
+      "result": undefined,
+      "statsId": undefined,
+    },
+    {
+      "name": "tba",
+      "result": undefined,
+      "statsId": undefined,
+    },
+    {
+      "name": "tba",
+      "result": undefined,
+      "statsId": undefined,
+    },
+  ],
+  "odds": [
+    {
+      "provider": "GGBet",
+      "team1": 1.26,
+      "team2": 3.79,
+    },
+    {
+      "provider": "Bet365",
+      "team1": 1.3,
+      "team2": 3.4,
+    },
+    {
+      "provider": "Lootbet",
+      "team1": 1.3,
+      "team2": 3.4,
+    },
+    {
+      "provider": "Thunderpick",
+      "team1": 1.28,
+      "team2": 3.3,
+    },
+    {
+      "provider": "1xbet",
+      "team1": 1.35,
+      "team2": 3.26,
+    },
+    {
+      "provider": "Pinnacle",
+      "team1": 1.38,
+      "team2": 3.07,
+    },
+    {
+      "provider": "Betwinner",
+      "team1": 1.27,
+      "team2": 3.76,
+    },
+    {
+      "provider": "csgoempire",
+      "team1": 1.3,
+      "team2": 3.57,
+    },
+    {
+      "provider": "Unibet",
+      "team1": 1.3,
+      "team2": 3.35,
+    },
+    {
+      "provider": "22bet",
+      "team1": 1.34,
+      "team2": 3.24,
+    },
+    {
+      "provider": "22bet",
+      "team1": 1.29,
+      "team2": 3.42,
+    },
+    {
+      "provider": "vulkan",
+      "team1": 1.26,
+      "team2": 3.79,
+    },
+    {
+      "provider": "bcgame",
+      "team1": 1.28,
+      "team2": 3.3,
+    },
+    {
+      "provider": "roobet",
+      "team1": 1.28,
+      "team2": 3.3,
+    },
+    {
+      "provider": "vave",
+      "team1": 1.29,
+      "team2": 3.42,
+    },
+    {
+      "provider": "Coinplay",
+      "team1": 1.35,
+      "team2": 3.26,
+    },
+    {
+      "provider": "community",
+      "team1": 1.46,
+      "team2": 3.19,
+    },
+  ],
+  "playerOfTheMatch": undefined,
+  "players": {
+    "team1": [
+      {
+        "id": 7687,
+        "name": "nitr0",
+      },
+      {
+        "id": 8738,
+        "name": "EliGE",
+      },
+      {
+        "id": 13249,
+        "name": "oSee",
+      },
+      {
+        "id": 8520,
+        "name": "NAF",
+      },
+      {
+        "id": 13915,
+        "name": "YEKINDAR",
+      },
+    ],
+    "team2": [
+      {
+        "id": 13018,
+        "name": "Thomas",
+      },
+      {
+        "id": 20358,
+        "name": "volt",
+      },
+      {
+        "id": 18571,
+        "name": "CYPHER",
+      },
+      {
+        "id": 5388,
+        "name": "rallen",
+      },
+      {
+        "id": 7996,
+        "name": "CRUC1AL",
+      },
+    ],
+  },
+  "significance": "Legends stage swiss round 4 (teams with a 2-1 record). Winner advances to the Champions Stage.",
+  "statsId": undefined,
+  "status": "Scheduled",
+  "streams": [
+    {
+      "link": "https://player.twitch.tv/?channel=blastpremier&autoplay=true&parent=www.hltv.org",
+      "name": "BLAST Premier",
+      "viewers": 54421,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=ohnePixel&autoplay=true&parent=www.hltv.org",
+      "name": "ohnePixel",
+      "viewers": 30970,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=izakooo&autoplay=true&parent=www.hltv.org",
+      "name": "IzakOOO",
+      "viewers": 12260,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=relog_ru&autoplay=true&parent=www.hltv.org",
+      "name": "Relog Media",
+      "viewers": 12223,
+    },
+    {
+      "link": "https://www.youtube.com/embed/CdXHhVAdmlE?autoplay=1",
+      "name": "BLAST Premier (YouTube)",
+      "viewers": 11221,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=csgomc_ua&autoplay=true&parent=www.hltv.org",
+      "name": "Maincast",
+      "viewers": 4571,
+    },
+    {
+      "link": "https://player.blast.tv/embed/live/082d4d50-0ccd-4827-ae19-c3eee4914580",
+      "name": "BLAST.tv A",
+      "viewers": 2929,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=bysl4m&autoplay=true&parent=www.hltv.org",
+      "name": "sL4M",
+      "viewers": 2878,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=pituherranz&autoplay=true&parent=www.hltv.org",
+      "name": "Pitu Herranz",
+      "viewers": 2524,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=rtparenacsgo&autoplay=true&parent=www.hltv.org",
+      "name": "RTP Arena",
+      "viewers": 1710,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=richardlewisreports&autoplay=true&parent=www.hltv.org",
+      "name": "Richard Lewis",
+      "viewers": 1380,
+    },
+    {
+      "link": "https://www.youtube.com/embed/GoDGOI4tnDU?autoplay=1",
+      "name": "Maincast (YouTube)",
+      "viewers": 859,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=yleeurheilu&autoplay=true&parent=www.hltv.org",
+      "name": "Yle e-urheilu",
+      "viewers": 340,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=nookyyy&autoplay=true&parent=www.hltv.org",
+      "name": "nooky",
+      "viewers": 196,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=fragster_de_cs&autoplay=true&parent=www.hltv.org",
+      "name": "Fragster",
+      "viewers": 163,
+    },
+    {
+      "link": "https://www.youtube.com/embed/ud1O-eVLO_o?autoplay=1",
+      "name": "Focus Fire",
+      "viewers": 40,
+    },
+    {
+      "link": "https://player.twitch.tv/?channel=jackyesports&autoplay=true&parent=www.hltv.org",
+      "name": "Jacky",
+      "viewers": 0,
+    },
+    {
+      "link": "/live?matchId=2363888",
+      "name": "HLTV Live",
+      "viewers": -1,
+    },
+    {
+      "link": "GOTV: playcast "https://gotv.blast.tv/major-a" (Rules: https://blast.tv/major/community-guidelines)",
+      "name": "GOTV",
+      "viewers": -1,
+    },
+  ],
+  "team1": {
+    "id": 5973,
+    "name": "Liquid",
+  },
+  "team2": {
+    "id": 11164,
+    "name": "Into the Breach",
+  },
+  "title": undefined,
+  "vetoes": [],
+  "winnerTeam": undefined,
 }
 `;

@@ -268,17 +268,30 @@ function getOdds($: HLTVPage): ProviderOdds[] {
         oddElement.find('.odds-cell').last().find('a').text().replace('%', '')
       )
 
-      const providerUrl = new URL(
-        oddElement.find('td').first().find('a').attr('href')!
-      )
-
-      return {
-        provider: providerUrl.hostname
+      //pick provider name from logo img tag alt if provider redirect is made via hltv custom url
+      const providerHref = oddElement.find('td').first().find('a').attr('href')!
+      let providerName = ''
+      if (providerHref.startsWith('/')) {
+        providerName = oddElement
+          .find('td')
+          .first()
+          .find('a')
+          .find('img')
+          .first()
+          .attr('alt')!
+          .split('Logo for ')[1]
+          .split(' ')[0]
+      } else {
+        const providerUrl = new URL(providerHref)
+        providerName = providerUrl.hostname
           .split('.')
           .reverse()
           .splice(0, 2)
           .reverse()
-          .join('.'),
+          .join('.')
+      }
+      return {
+        provider: providerName,
         team1: convertOdds ? percentageToDecimalOdd(oddTeam1) : oddTeam1,
         team2: convertOdds ? percentageToDecimalOdd(oddTeam2) : oddTeam2
       }
@@ -331,15 +344,18 @@ function getMaps($: HLTVPage): MapResult[] {
 
       if (!isNaN(team1TotalRounds) && !isNaN(team2TotalRounds)) {
         const halfsString = mapEl.find('.results-center-half-score').trimText()!
-        let halfs = [{team1Rounds: 0, team2Rounds: 0}, {team1Rounds: 0, team2Rounds: 0}]
+        let halfs = [
+          { team1Rounds: 0, team2Rounds: 0 },
+          { team1Rounds: 0, team2Rounds: 0 }
+        ]
         if (halfsString) {
-            halfs = halfsString
-              .split(' ')
-              .map((x) => x.replace(/\(|\)|;/g, ''))
-              .map((half) => ({
-                team1Rounds: Number(half.split(':')[0]),
-                team2Rounds: Number(half.split(':')[1])
-              }))
+          halfs = halfsString
+            .split(' ')
+            .map((x) => x.replace(/\(|\)|;/g, ''))
+            .map((half) => ({
+              team1Rounds: Number(half.split(':')[0]),
+              team2Rounds: Number(half.split(':')[1])
+            }))
         }
 
         result = {
