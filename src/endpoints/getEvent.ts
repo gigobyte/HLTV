@@ -95,7 +95,9 @@ export const getEvent =
       .toArray()
       .map((el) => {
         const otherPrize =
-          el.find('.prizeMoney').first().next().text() || undefined
+          el.find('.spot-prize').text() ||
+          el.find('.prize').first().next().text() ||
+          undefined
 
         const qualifiesFor = !!otherPrize
           ? relatedEvents.find((event) => event.name === otherPrize)
@@ -103,7 +105,7 @@ export const getEvent =
 
         return {
           place: el.children().eq(1).text(),
-          prize: el.find('.prizeMoney').first().text() || undefined,
+          prize: el.find('.prize').first().text() || undefined,
           qualifiesFor,
           otherPrize: !qualifiesFor ? otherPrize : undefined,
           team: el.find('.team').children().exists()
