@@ -23,6 +23,10 @@
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },
+    "snapshotFormat": {
+      "escapeString": true,
+      "printBasicPrototype": true
+    },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",

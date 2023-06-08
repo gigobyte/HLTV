@@ -194,7 +194,20 @@ Object {
   "maps": Array [
     Object {
       "name": "de_dust2",
-      "result": undefined,
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 15,
+            "team2Rounds": 0,
+          },
+          Object {
+            "team1Rounds": 1,
+            "team2Rounds": 0,
+          },
+        ],
+        "team1TotalRounds": 16,
+        "team2TotalRounds": 0,
+      },
       "statsId": 73147,
     },
     Object {
@@ -288,7 +301,73 @@ Object {
   "significance": "Semi-final",
   "statsId": 59400,
   "status": "Over",
-  "streams": Array [],
+  "streams": Array [
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h6m9s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=3h28m35s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=4h17m45s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=5h34m10s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h23m45s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v304885542&autoplay=true&t=6h26m32s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://www.hltv.org/download/demo/43030",
+      "name": "GOTV",
+      "viewers": -1,
+    },
+  ],
   "team1": Object {
     "id": 4494,
     "name": "MOUZ",
@@ -646,7 +725,7 @@ Object {
       },
       Object {
         "id": 7794,
-        "name": "Egor K.",
+        "name": "Egor K",
       },
       Object {
         "id": 7406,
@@ -964,7 +1043,43 @@ Object {
   "significance": "Group A",
   "statsId": 79738,
   "status": "Over",
-  "streams": Array [],
+  "streams": Array [
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=36m40s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=1h41m55s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=3h9m15s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=36m40s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=1h41m55s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v945431422&autoplay=true&t=3h9m15s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://www.hltv.org/download/demo/62836",
+      "name": "GOTV",
+      "viewers": -1,
+    },
+  ],
   "team1": Object {
     "id": 9863,
     "name": "FATE",
@@ -1031,6 +1146,238 @@ Object {
   "winnerTeam": Object {
     "id": 9863,
     "name": "FATE",
+  },
+}
+`;
+
+exports[`getMatch 7`] = `
+Object {
+  "date": 1685952000000,
+  "demos": Array [
+    Object {
+      "link": "/download/demo/80335",
+      "name": "GOTV Demo",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=18m13s&parent=www.hltv.org",
+      "name": "EU Pro League (Map 1 - Nuke)",
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=2h10m30s&parent=www.hltv.org",
+      "name": "EU Pro League (Map 2 - Mirage)",
+    },
+  ],
+  "event": Object {
+    "id": 7223,
+    "name": "European Pro League Season 8",
+  },
+  "format": Object {
+    "location": "Online",
+    "type": "bo3",
+  },
+  "hasScorebot": false,
+  "headToHead": Array [],
+  "highlightedPlayers": undefined,
+  "highlights": Array [],
+  "id": 2364892,
+  "maps": Array [
+    Object {
+      "name": "de_nuke",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 8,
+            "team2Rounds": 7,
+          },
+          Object {
+            "team1Rounds": 7,
+            "team2Rounds": 8,
+          },
+          Object {
+            "team1Rounds": 7,
+            "team2Rounds": 10,
+          },
+        ],
+        "team1TotalRounds": 22,
+        "team2TotalRounds": 25,
+      },
+      "statsId": 158370,
+    },
+    Object {
+      "name": "de_mirage",
+      "result": Object {
+        "halfResults": Array [
+          Object {
+            "team1Rounds": 5,
+            "team2Rounds": 10,
+          },
+          Object {
+            "team1Rounds": 10,
+            "team2Rounds": 5,
+          },
+          Object {
+            "team1Rounds": 2,
+            "team2Rounds": 4,
+          },
+        ],
+        "team1TotalRounds": 17,
+        "team2TotalRounds": 19,
+      },
+      "statsId": 158376,
+    },
+    Object {
+      "name": "de_ancient",
+      "result": undefined,
+      "statsId": undefined,
+    },
+  ],
+  "odds": Array [],
+  "playerOfTheMatch": Object {
+    "id": 21062,
+    "name": "MATYS",
+  },
+  "players": Object {
+    "team1": Array [
+      Object {
+        "id": 22011,
+        "name": "kadziu",
+      },
+      Object {
+        "id": 11287,
+        "name": "darko",
+      },
+      Object {
+        "id": 20246,
+        "name": "gRuChA",
+      },
+      Object {
+        "id": 21763,
+        "name": "ultimate",
+      },
+      Object {
+        "id": 20637,
+        "name": "b1elany",
+      },
+    ],
+    "team2": Array [
+      Object {
+        "id": 22123,
+        "name": "T4gg3D",
+      },
+      Object {
+        "id": 21062,
+        "name": "MATYS",
+      },
+      Object {
+        "id": 14388,
+        "name": "The eLiVe",
+      },
+      Object {
+        "id": 21299,
+        "name": "sAvana1",
+      },
+      Object {
+        "id": 13567,
+        "name": "Blogg1s",
+      },
+    ],
+  },
+  "significance": "Upper bracket quarter-final",
+  "statsId": 97599,
+  "status": "Over",
+  "streams": Array [
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=18m13s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=2h10m30s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=18m13s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://player.twitch.tv/?video=v1838239560&autoplay=true&t=2h10m30s&parent=www.hltv.org",
+      "name": "VOD",
+      "viewers": -1,
+    },
+    Object {
+      "link": "https://www.hltv.org/download/demo/80335",
+      "name": "GOTV",
+      "viewers": -1,
+    },
+  ],
+  "team1": Object {
+    "id": 10905,
+    "name": "PGE Turow",
+  },
+  "team2": Object {
+    "id": 10695,
+    "name": "Sampi",
+  },
+  "title": undefined,
+  "vetoes": Array [
+    Object {
+      "map": "de_overpass",
+      "team": Object {
+        "id": 10905,
+        "name": "PGE Turow",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_vertigo",
+      "team": Object {
+        "id": 10695,
+        "name": "Sampi",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_nuke",
+      "team": Object {
+        "id": 10905,
+        "name": "PGE Turow",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_mirage",
+      "team": Object {
+        "id": 10695,
+        "name": "Sampi",
+      },
+      "type": "picked",
+    },
+    Object {
+      "map": "de_inferno",
+      "team": Object {
+        "id": 10905,
+        "name": "PGE Turow",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_anubis",
+      "team": Object {
+        "id": 10695,
+        "name": "Sampi",
+      },
+      "type": "removed",
+    },
+    Object {
+      "map": "de_ancient",
+      "type": "leftover",
+    },
+  ],
+  "winnerTeam": Object {
+    "id": 10695,
+    "name": "Sampi",
   },
 }
 `;
