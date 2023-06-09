@@ -8,7 +8,7 @@ import { Article } from '../shared/Article'
 
 export interface FullPlayerTeam extends Team {
   startDate: number
-  leaveDate: number
+  leaveDate?: number
   trophies: Event[]
 }
 
@@ -163,8 +163,8 @@ export const getPlayer =
           .numFromAttr('data-unix')!,
         leaveDate: el
           .find('.time-period-cell [data-unix]')
-          .last()
-          .numFromAttr('data-unix')!,
+          .eq(1)
+          .numFromAttr('data-unix'),
         trophies: el
           .find('.trophy-row-trophy a')
           .toArray()
