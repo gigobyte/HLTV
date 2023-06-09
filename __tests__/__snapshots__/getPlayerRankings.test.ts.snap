@@ -330,15 +330,15 @@ Array [
     ],
   },
   Object {
-    "kd": 1.23,
-    "kdDiff": 430,
-    "maps": 111,
+    "kd": 1.22,
+    "kdDiff": 420,
+    "maps": 112,
     "player": Object {
       "id": 10394,
       "name": "Twistzz",
     },
-    "rating1": 1.18,
-    "rounds": 2903,
+    "rating1": 1.17,
+    "rounds": 2927,
     "teams": Array [
       Object {
         "id": 5973,
@@ -557,27 +557,6 @@ Array [
     ],
   },
   Object {
-    "kd": 1.14,
-    "kdDiff": 364,
-    "maps": 149,
-    "player": Object {
-      "id": 9078,
-      "name": "k0nfig",
-    },
-    "rating1": 1.12,
-    "rounds": 3902,
-    "teams": Array [
-      Object {
-        "id": 5422,
-        "name": "Dignitas",
-      },
-      Object {
-        "id": 7533,
-        "name": "North",
-      },
-    ],
-  },
-  Object {
     "kd": 1.15,
     "kdDiff": 262,
     "maps": 103,
@@ -599,6 +578,27 @@ Array [
       Object {
         "id": 7059,
         "name": "X",
+      },
+    ],
+  },
+  Object {
+    "kd": 1.14,
+    "kdDiff": 362,
+    "maps": 150,
+    "player": Object {
+      "id": 9078,
+      "name": "k0nfig",
+    },
+    "rating1": 1.11,
+    "rounds": 3926,
+    "teams": Array [
+      Object {
+        "id": 5422,
+        "name": "Dignitas",
+      },
+      Object {
+        "id": 7533,
+        "name": "North",
       },
     ],
   },
@@ -625,14 +625,14 @@ Array [
   },
   Object {
     "kd": 1.11,
-    "kdDiff": 227,
+    "kdDiff": 222,
     "maps": 114,
     "player": Object {
       "id": 5794,
       "name": "tabseN",
     },
     "rating1": 1.11,
-    "rounds": 2946,
+    "rounds": 2948,
     "teams": Array [
       Object {
         "id": 7532,
@@ -675,14 +675,14 @@ Array [
   },
   Object {
     "kd": 1.17,
-    "kdDiff": 415,
-    "maps": 156,
+    "kdDiff": 410,
+    "maps": 153,
     "player": Object {
       "id": 8568,
       "name": "boltz",
     },
     "rating1": 1.1,
-    "rounds": 3940,
+    "rounds": 3876,
     "teams": Array [
       Object {
         "id": 7010,
@@ -1112,14 +1112,14 @@ Array [
   },
   Object {
     "kd": 1.07,
-    "kdDiff": 220,
-    "maps": 164,
+    "kdDiff": 222,
+    "maps": 165,
     "player": Object {
       "id": 7322,
       "name": "apEX",
     },
     "rating1": 1.06,
-    "rounds": 4272,
+    "rounds": 4296,
     "teams": Array [
       Object {
         "id": 5991,
@@ -1836,7 +1836,7 @@ Array [
     "maps": 126,
     "player": Object {
       "id": 8125,
-      "name": "Dima",
+      "name": "Dimaoneshot",
     },
     "rating1": 1.03,
     "rounds": 3348,
@@ -1980,12 +1980,12 @@ Array [
     "rounds": 3064,
     "teams": Array [
       Object {
-        "id": 8637,
-        "name": "Sprout",
-      },
-      Object {
         "id": 4494,
         "name": "MOUZ",
+      },
+      Object {
+        "id": 8637,
+        "name": "Sprout",
       },
       Object {
         "id": 5395,
@@ -2016,14 +2016,31 @@ Array [
   },
   Object {
     "kd": 1.05,
-    "kdDiff": 91,
-    "maps": 114,
+    "kdDiff": 93,
+    "maps": 108,
+    "player": Object {
+      "id": 7266,
+      "name": "syrsoN",
+    },
+    "rating1": 1.02,
+    "rounds": 2883,
+    "teams": Array [
+      Object {
+        "id": 4501,
+        "name": "ALTERNATE aTTaX",
+      },
+    ],
+  },
+  Object {
+    "kd": 1.04,
+    "kdDiff": 88,
+    "maps": 115,
     "player": Object {
       "id": 922,
       "name": "Snappi",
     },
     "rating1": 1.02,
-    "rounds": 2997,
+    "rounds": 3021,
     "teams": Array [
       Object {
         "id": 7175,
@@ -2036,23 +2053,6 @@ Array [
       Object {
         "id": 7059,
         "name": "X",
-      },
-    ],
-  },
-  Object {
-    "kd": 1.05,
-    "kdDiff": 87,
-    "maps": 109,
-    "player": Object {
-      "id": 7266,
-      "name": "syrsoN",
-    },
-    "rating1": 1.02,
-    "rounds": 2905,
-    "teams": Array [
-      Object {
-        "id": 4501,
-        "name": "ALTERNATE aTTaX",
       },
     ],
   },
@@ -2212,6 +2212,27 @@ Array [
     ],
   },
   Object {
+    "kd": 1.02,
+    "kdDiff": 57,
+    "maps": 146,
+    "player": Object {
+      "id": 5796,
+      "name": "tiziaN",
+    },
+    "rating1": 1,
+    "rounds": 3820,
+    "teams": Array [
+      Object {
+        "id": 4501,
+        "name": "ALTERNATE aTTaX",
+      },
+      Object {
+        "id": 5093,
+        "name": "KILLERFISH",
+      },
+    ],
+  },
+  Object {
     "kd": 1.01,
     "kdDiff": 33,
     "maps": 135,
@@ -2225,27 +2246,6 @@ Array [
       Object {
         "id": 4494,
         "name": "MOUZ",
-      },
-    ],
-  },
-  Object {
-    "kd": 1.02,
-    "kdDiff": 51,
-    "maps": 147,
-    "player": Object {
-      "id": 5796,
-      "name": "tiziaN",
-    },
-    "rating1": 1,
-    "rounds": 3842,
-    "teams": Array [
-      Object {
-        "id": 4501,
-        "name": "ALTERNATE aTTaX",
-      },
-      Object {
-        "id": 5093,
-        "name": "KILLERFISH",
       },
     ],
   },

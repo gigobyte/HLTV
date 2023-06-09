@@ -5,6 +5,27 @@ Object {
   "achievements": Array [
     Object {
       "event": Object {
+        "id": 6793,
+        "name": "BLAST.tv Paris Major 2023",
+      },
+      "place": "Legends",
+    },
+    Object {
+      "event": Object {
+        "id": 6586,
+        "name": "IEM Rio Major 2022",
+      },
+      "place": "1/4 final",
+    },
+    Object {
+      "event": Object {
+        "id": 6372,
+        "name": "PGL Major Antwerp 2022",
+      },
+      "place": "2nd",
+    },
+    Object {
+      "event": Object {
         "id": 4866,
         "name": "PGL Major Stockholm 2021",
       },
@@ -72,6 +93,48 @@ Object {
         "name": "DreamHack Winter 2014",
       },
       "place": "1/4 final",
+    },
+    Object {
+      "event": Object {
+        "id": 6864,
+        "name": "IEM Rio 2023",
+      },
+      "place": "3-4th",
+    },
+    Object {
+      "event": Object {
+        "id": 6862,
+        "name": "ESL Pro League Season 17",
+      },
+      "place": "3-4th",
+    },
+    Object {
+      "event": Object {
+        "id": 6809,
+        "name": "IEM Katowice 2023",
+      },
+      "place": "3-4th",
+    },
+    Object {
+      "event": Object {
+        "id": 6140,
+        "name": "IEM Cologne 2022",
+      },
+      "place": "2nd",
+    },
+    Object {
+      "event": Object {
+        "id": 6345,
+        "name": "BLAST Premier Spring Final 2022",
+      },
+      "place": "1st",
+    },
+    Object {
+      "event": Object {
+        "id": 6372,
+        "name": "PGL Major Antwerp 2022",
+      },
+      "place": "2nd",
     },
     Object {
       "event": Object {
@@ -319,7 +382,7 @@ Object {
       "place": "2nd",
     },
   ],
-  "age": 24,
+  "age": 25,
   "country": Object {
     "code": "UA",
     "name": "Ukraine",
@@ -327,10 +390,822 @@ Object {
   "facebook": undefined,
   "id": 7998,
   "ign": "s1mple",
-  "image": "https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3",
+  "image": "https://img-cdn.hltv.org/playerbodyshot/M_HZ0vz7Cd9dNP7lS283jo.png?ixlib=java-2.1.0&w=400&s=dd291b44af34444878bc9db7fbd89e29",
   "instagram": "https://www.instagram.com/s1mpleo",
-  "name": "Aleksandr Kostyliev",
+  "name": "Oleksandr Kostyliev",
   "news": Array [
+    Object {
+      "link": "/news/36388/blast-release-spring-final-schedule-and-opening-matchups",
+      "name": "BLAST release Spring Final schedule and opening matchups",
+    },
+    Object {
+      "link": "/news/36353/best-five-of-blasttv-major-paris-2023",
+      "name": "Best five of BLAST.tv Major Paris 2023",
+    },
+    Object {
+      "link": "/news/36341/zywoo-claims-blasttv-paris-major-mvp-medal",
+      "name": "ZywOo claims BLAST.tv Paris Major MVP medal",
+    },
+    Object {
+      "link": "/news/36338/blast-paris-major-showmatch-rosters-revealed",
+      "name": "BLAST Paris Major showmatch rosters revealed",
+    },
+    Object {
+      "link": "/news/36306/faze-eliminate-navi-and-clinch-paris-major-playoffs-spot",
+      "name": "FaZe eliminate NAVI and clinch Paris Major playoffs spot",
+    },
+    Object {
+      "link": "/news/36298/the-biggest-stories-and-plays-from-day-three-of-blasttv-paris-major-legends-stage",
+      "name": "The biggest stories and plays from day three of BLAST.tv Paris Major Legends Stage",
+    },
+    Object {
+      "link": "/news/36297/woro2k-first-we-need-to-believe-and-after-that-you-can-do-everything",
+      "name": "Woro2k: \\"First we need to believe and after that you can do everything\\"",
+    },
+    Object {
+      "link": "/news/36295/monte-maul-navi-to-secure-blast-paris-major-playoff-berth",
+      "name": "Monte maul NAVI to secure BLAST Paris Major playoff berth",
+    },
+    Object {
+      "link": "/news/36289/paris-major-legends-stage-round-4-matchups-determined",
+      "name": "Paris Major Legends Stage round 4 matchups determined",
+    },
+    Object {
+      "link": "/news/36282/into-the-breach-claim-another-upset-to-close-legends-stage-1-1-matches",
+      "name": "Into the Breach claim another upset to close Legends Stage 1-1 matches",
+    },
+    Object {
+      "link": "/news/36270/yekindar-bullies-navi-as-liquid-move-to-2-0-pool-in-paris",
+      "name": "YEKINDAR bullies NAVI as Liquid move to 2-0 pool in Paris",
+    },
+    Object {
+      "link": "/news/36260/blasttv-paris-major-2023-legends-stage-fantasy-game-open-to-play",
+      "name": "BLAST.tv Paris Major 2023 Legends Stage Fantasy game open to play",
+    },
+    Object {
+      "link": "/news/36197/flashback-the-rise-and-fall-of-french-counter-strike",
+      "name": "Flashback: The rise and fall of French Counter-Strike",
+    },
+    Object {
+      "link": "/news/36186/the-best-players-to-have-never-won-a-csgo-major-before-paris",
+      "name": "The best players to have never won a CS:GO Major before Paris",
+    },
+    Object {
+      "link": "/news/36168/who-are-the-modern-day-big-game-counter-strike-players",
+      "name": "Who are the modern day big game Counter-Strike players?",
+    },
+    Object {
+      "link": "/news/36137/iem-rio-showmatch-rosters-revealed",
+      "name": "IEM Rio showmatch rosters revealed",
+    },
+    Object {
+      "link": "/news/36136/heroic-2-0-navi-to-make-iem-rio-grand-final",
+      "name": "Heroic 2-0 NAVI to make IEM Rio grand final",
+    },
+    Object {
+      "link": "/news/36132/iem-rio-semi-finals-day-as-it-happened",
+      "name": "IEM Rio: semi-finals day as it happened",
+    },
+    Object {
+      "link": "/news/36117/the-biggest-stories-and-plays-from-iem-rio-day-three",
+      "name": "The biggest stories and plays from IEM Rio day three",
+    },
+    Object {
+      "link": "/news/36111/iem-rio-day-three-as-it-happened",
+      "name": "IEM Rio: Day three as it happened",
+    },
+    Object {
+      "link": "/news/36115/navi-earn-iem-rio-semi-finals-berth-over-big",
+      "name": "NAVI earn IEM Rio semi-finals berth over BIG",
+    },
+    Object {
+      "link": "/news/35883/intel-grand-slams-compared",
+      "name": "Intel Grand Slams compared",
+    },
+    Object {
+      "link": "/news/36086/iem-rio-day-one-as-it-happened",
+      "name": "IEM Rio: Day one as it happened",
+    },
+    Object {
+      "link": "/news/36092/navi-beat-nip-to-secure-iem-rio-playoff-spot",
+      "name": "NAVI beat NIP to secure IEM Rio playoff spot",
+    },
+    Object {
+      "link": "/news/36075/iem-rio-fantasy-game-open-to-play",
+      "name": "IEM Rio Fantasy game open to play",
+    },
+    Object {
+      "link": "/news/35930/europe-rmr-round-2-matchups-set",
+      "name": "Europe RMR round 2 matchups set",
+    },
+    Object {
+      "link": "/news/35908/europe-rmr-a-in-bullet-points-three-things-to-know-about-each-team",
+      "name": "Europe RMR A in bullet points: Three things to know about each team",
+    },
+    Object {
+      "link": "/news/35920/peacemaker-departs-teamone-after-two-months",
+      "name": "peacemaker departs TeamOne after two months",
+    },
+    Object {
+      "link": "/news/35860/faze-take-down-navi-set-up-epl-s17-title-decider-versus-cloud9",
+      "name": "FaZe take down NAVI; set up EPL S17 title decider versus Cloud9",
+    },
+    Object {
+      "link": "/news/35855/navi-defeat-heroic-to-secure-epl-semi-final-spot",
+      "name": "NAVI defeat Heroic to secure EPL semi-final spot",
+    },
+    Object {
+      "link": "/news/35838/navi-eliminate-outsiders-from-esl-pro-league-season-17",
+      "name": "NAVI eliminate Outsiders from ESL Pro League Season 17",
+    },
+    Object {
+      "link": "/news/35833/navi-move-past-00nation-in-malta-to-set-up-outsiders-clash",
+      "name": "NAVI move past 00NATION in Malta to set up Outsiders clash",
+    },
+    Object {
+      "link": "/news/35815/navi-qualify-for-epl-s17-playoffs-over-spirit",
+      "name": "NAVI qualify for EPL S17 playoffs over Spirit",
+    },
+    Object {
+      "link": "/news/35813/navi-defeat-rare-atom-to-qualify-for-lower-bracket-final",
+      "name": "NAVI defeat Rare Atom to qualify for lower bracket final",
+    },
+    Object {
+      "link": "/news/35806/s1mple-comes-alive-on-decider-as-navi-send-astralis-to-last-chance-stage-in-malta",
+      "name": "s1mple comes alive on decider as NAVI send Astralis to last chance stage in Malta",
+    },
+    Object {
+      "link": "/news/35796/forze-send-navi-down-to-epl-group-d-lower-bracket",
+      "name": "FORZE send NAVI down to EPL Group D lower bracket",
+    },
+    Object {
+      "link": "/news/35683/who-are-the-top-esl-impact-players-doppelgngers",
+      "name": "Who are the top ESL Impact players' doppelgängers?",
+    },
+    Object {
+      "link": "/news/35622/saving-how-bad-is-it",
+      "name": "Saving: How bad is it?",
+    },
+    Object {
+      "link": "/news/35716/niko-this-is-the-first-time-my-team-is-very-open-to-problems",
+      "name": "NiKo: \\"This is the first time my team is very open to problems\\"",
+    },
+    Object {
+      "link": "/news/35531/using-clutch-stats-effectively",
+      "name": "Using clutch stats effectively",
+    },
+    Object {
+      "link": "/news/35588/s1mple-some-of-our-players-were-too-scared-to-play-against-such-a-good-team-like-heroic",
+      "name": "s1mple: \\"Some of our players were too scared to play against such a good team like Heroic\\"",
+    },
+    Object {
+      "link": "/news/35581/navi-defeat-outsiders-to-face-heroic-in-iem-katowice-semi-finals",
+      "name": "NAVI defeat Outsiders; to face Heroic in IEM Katowice semi-finals",
+    },
+    Object {
+      "link": "/news/35576/can-anyone-stop-g2-at-iem-katowice",
+      "name": "Can anyone stop G2 at IEM Katowice?",
+    },
+    Object {
+      "link": "/news/35570/g2-streak-jabbis-new-zenith-and-other-key-takeaways-from-iem-katowice-groups",
+      "name": "G2 streak, jabbi's new zenith and other key takeaways from IEM Katowice groups",
+    },
+    Object {
+      "link": "/news/35537/navi-advance-to-iem-katowice-playoffs-send-liquid-to-lower-bracket",
+      "name": "NAVI advance to IEM Katowice playoffs; send Liquid to lower bracket",
+    },
+    Object {
+      "link": "/news/35523/navi-dismantle-cloud9-in-opening-round-of-iem-katowice",
+      "name": "NAVI dismantle Cloud9 in opening round of IEM Katowice",
+    },
+    Object {
+      "link": "/news/35483/what-did-blast-spring-groups-tell-us-about-the-new-navi",
+      "name": "What did BLAST Spring Groups tell us about the new NAVI?",
+    },
+    Object {
+      "link": "/news/35472/navi-overcome-complexity-to-qualify-for-blast-spring-final",
+      "name": "NAVI overcome Complexity to qualify for BLAST Spring Final",
+    },
+    Object {
+      "link": "/news/35457/g2-book-blast-spring-final-spot-with-dominant-win-over-navi",
+      "name": "G2 book BLAST Spring Final spot with dominant win over NAVI",
+    },
+    Object {
+      "link": "/news/35389/how-trading-stats-can-show-a-teams-structure-and-why-heroic-stand-out",
+      "name": "How trading stats can show a team's structure — and why Heroic stand out",
+    },
+    Object {
+      "link": "/news/35450/navi-defeat-nip-to-advance-to-blast-spring-group-c-final",
+      "name": "NAVI defeat NIP to advance to BLAST Spring Group C final",
+    },
+    Object {
+      "link": "/news/35440/nip-hand-big-second-blast-spring-groups-defeat",
+      "name": "NIP hand BIG second BLAST Spring Groups defeat",
+    },
+    Object {
+      "link": "/news/35438/g2-stave-off-navi-to-earn-group-final-berth-in-copenhagen",
+      "name": "G2 stave off NAVI to earn group final berth in Copenhagen",
+    },
+    Object {
+      "link": "/news/35427/navi-fend-off-nip-to-set-up-g2-matchup",
+      "name": "NAVI fend off NIP to set up G2 matchup",
+    },
+    Object {
+      "link": "/news/35382/hltv-award-show-recap-who-were-the-winners",
+      "name": "HLTV Award Show recap: Who were the winners?",
+    },
+    Object {
+      "link": "/news/35387/video-top-10-highlights-of-2022",
+      "name": "Video: Top 10 highlights of 2022",
+    },
+    Object {
+      "link": "/news/35383/video-hltvorgs-top-20-players-of-2022",
+      "name": "Video: HLTV.org's Top 20 players of 2022",
+    },
+    Object {
+      "link": "/news/35378/the-hltv-award-show-panels-best-five-of-2022",
+      "name": "The HLTV Award Show panel's best five of 2022",
+    },
+    Object {
+      "link": "/news/35374/top-20-players-of-2022-zywoo-2",
+      "name": "Top 20 players of 2022: ZywOo (2)",
+    },
+    Object {
+      "link": "/news/35380/top-20-players-of-2022-s1mple-1",
+      "name": "Top 20 players of 2022: s1mple (1)",
+    },
+    Object {
+      "link": "/news/35379/top-20-players-of-2022-sh1ro-3",
+      "name": "Top 20 players of 2022: sh1ro (3)",
+    },
+    Object {
+      "link": "/news/35365/top-20-players-of-2022-three-left-in-the-running",
+      "name": "Top 20 players of 2022: Three left in the running",
+    },
+    Object {
+      "link": "/news/35311/hltv-no-1-players-through-the-years",
+      "name": "HLTV No. 1 players through the years",
+    },
+    Object {
+      "link": "/news/35371/top-20-players-of-2022-ax1le-4",
+      "name": "Top 20 players of 2022: Ax1Le (4)",
+    },
+    Object {
+      "link": "/news/35367/top-20-players-of-2022-niko-5",
+      "name": "Top 20 players of 2022: NiKo (5)",
+    },
+    Object {
+      "link": "/news/35362/s1mple-sh1ro-karrigan-among-attendees-of-the-hltv-award-show",
+      "name": "s1mple, sh1ro, karrigan among attendees of the HLTV Award Show",
+    },
+    Object {
+      "link": "/news/35361/top-20-players-of-2022-broky-6",
+      "name": "Top 20 players of 2022: broky (6)",
+    },
+    Object {
+      "link": "/news/35334/top-20-players-of-2022-m0nesy-7",
+      "name": "Top 20 players of 2022: m0NESY (7)",
+    },
+    Object {
+      "link": "/news/35350/top-20-players-of-2022-ropz-8",
+      "name": "Top 20 players of 2022: ropz (8)",
+    },
+    Object {
+      "link": "/news/35344/top-20-players-of-2022-stavn-10",
+      "name": "Top 20 players of 2022: stavn (10)",
+    },
+    Object {
+      "link": "/news/35343/top-20-players-of-2022-twistzz-11",
+      "name": "Top 20 players of 2022: Twistzz (11)",
+    },
+    Object {
+      "link": "/news/35340/top-20-players-of-2022-blamef-12",
+      "name": "Top 20 players of 2022: blameF (12)",
+    },
+    Object {
+      "link": "/news/35323/top-20-players-of-2022-b1t-16",
+      "name": "Top 20 players of 2022: b1t (16)",
+    },
+    Object {
+      "link": "/news/35322/top-20-players-of-2022-spinx-18",
+      "name": "Top 20 players of 2022: Spinx (18)",
+    },
+    Object {
+      "link": "/news/35316/top-20-players-of-2022-yuurih-19",
+      "name": "Top 20 players of 2022: yuurih (19)",
+    },
+    Object {
+      "link": "/news/35308/hltv-award-show-nominees-for-panel-awards-unveiled",
+      "name": "HLTV Award Show: Nominees for panel awards unveiled",
+    },
+    Object {
+      "link": "/news/35302/the-evps-of-blast-premier-world-final-2022",
+      "name": "The EVPs of BLAST Premier World Final 2022",
+    },
+    Object {
+      "link": "/news/35300/how-did-the-bold-predictions-for-2022-fare",
+      "name": "How did the Bold Predictions for 2022 fare?",
+    },
+    Object {
+      "link": "/news/35285/navi-charity-tournament-fantasy-game-live",
+      "name": "NAVI charity tournament Fantasy game live",
+    },
+    Object {
+      "link": "/news/35262/navi-charity-tournament-rosters-announced",
+      "name": "NAVI charity tournament rosters announced",
+    },
+    Object {
+      "link": "/news/35215/the-evps-of-blast-premier-fall-final-2022",
+      "name": "The EVPs of BLAST Premier Fall Final 2022",
+    },
+    Object {
+      "link": "/news/35258/liquid-defeat-navi-to-secure-semi-final-spot-in-abu-dhabi",
+      "name": "Liquid defeat NAVI to secure semi-final spot in Abu Dhabi",
+    },
+    Object {
+      "link": "/news/35254/how-have-m4-preferences-changed-following-the-silencer-nerf",
+      "name": "How have M4 preferences changed following the silencer nerf?",
+    },
+    Object {
+      "link": "/news/35251/navi-send-heroic-packing-from-blast-world-final",
+      "name": "NAVI send Heroic packing from BLAST World Final",
+    },
+    Object {
+      "link": "/news/35247/vitality-spoil-navis-six-man-roster-debut-in-blast-world-final-opener",
+      "name": "Vitality spoil NAVI's six-man roster debut in BLAST World Final opener",
+    },
+    Object {
+      "link": "/news/35238/hltvorg-live-from-abu-dhabi",
+      "name": "HLTV.org live from Abu Dhabi",
+    },
+    Object {
+      "link": "/news/35237/magic-skybox-molotov-patched-in-latest-csgo-update",
+      "name": "\\"Magic\\" skybox molotov patched in latest CS:GO update *",
+    },
+    Object {
+      "link": "/news/35234/s1mple-we-need-to-forget-about-old-victories-we-are-not-major-winners",
+      "name": "s1mple: \\"We need to forget about old victories, we are not Major winners\\"",
+    },
+    Object {
+      "link": "/news/35207/will-the-post-iem-rio-order-stick-in-abu-dhabi",
+      "name": "Will the post-IEM Rio order stick in Abu Dhabi?",
+    },
+    Object {
+      "link": "/news/35224/s1mple-and-zywoo-to-team-up-in-navi-charity-tournament",
+      "name": "s1mple and ZywOo to team up in NAVI charity tournament",
+    },
+    Object {
+      "link": "/news/35212/blast-premier-world-final-fantasy-game-live",
+      "name": "BLAST Premier World Final fantasy game live",
+    },
+    Object {
+      "link": "/news/35173/the-iem-rio-major-evps",
+      "name": "The IEM Rio Major EVPs",
+    },
+    Object {
+      "link": "/news/35127/who-benefits-from-anubis-addition",
+      "name": "Who benefits from Anubis' addition?",
+    },
+    Object {
+      "link": "/news/35154/ninjas-in-pyjamas-pass-navi-after-thriller-series-in-copenhagen",
+      "name": "Ninjas in Pyjamas pass NAVI after thriller series in Copenhagen",
+    },
+    Object {
+      "link": "/news/35151/nitr0-stars-as-liquid-beat-navi-to-secure-semi-final-spot-in-copenhagen",
+      "name": "nitr0 stars as Liquid beat NAVI to secure semi-final spot in Copenhagen",
+    },
+    Object {
+      "link": "/news/35137/navi-defeat-fluxo-in-blast-fall-final-opener",
+      "name": "NAVI defeat Fluxo in BLAST Fall Final opener",
+    },
+    Object {
+      "link": "/news/35126/b1ad3-confirms-nipl-will-play-some-maps-at-world-final-we-want-him-to-show-what-hes-capable-of",
+      "name": "B1ad3 confirms nipl will play \\"some maps\\" at World Final: \\"We want him to show what he's capable of\\"",
+    },
+    Object {
+      "link": "/news/35128/s1mple-the-organization-and-team-need-to-finally-decide-with-what-roster-we-want-to-continue-in-2023",
+      "name": "s1mple: \\"The organization and team need to finally decide with what roster we want to continue in 2023\\"",
+    },
+    Object {
+      "link": "/news/35124/what-teams-are-fighting-for-at-blast-fall-final",
+      "name": "What teams are fighting for at BLAST Fall Final",
+    },
+    Object {
+      "link": "/news/35101/fantasy-game-open-for-blast-premier-fall-final",
+      "name": "Fantasy game open for BLAST Premier Fall Final",
+    },
+    Object {
+      "link": "/news/35060/furia-eliminate-navi-to-keep-major-dream-alive-for-brazil",
+      "name": "FURIA eliminate NAVI to keep Major dream alive for Brazil",
+    },
+    Object {
+      "link": "/news/35055/can-furia-grasp-brazils-best-chance-to-win-a-major-in-years",
+      "name": "Can FURIA grasp Brazil's best chance to win a Major in years?",
+    },
+    Object {
+      "link": "/news/35051/s1mple-from-antwerp-to-this-major-all-teams-have-become-much-stronger",
+      "name": "s1mple: \\"From Antwerp to this Major all teams have become much stronger\\"",
+    },
+    Object {
+      "link": "/news/35049/cloud9-vs-navi-a-reignited-rivalry-with-a-major-trophy-on-the-line",
+      "name": "Cloud9 vs. NAVI: A reignited rivalry with a Major trophy on the line",
+    },
+    Object {
+      "link": "/news/35042/iem-rio-major-champions-stage-fantasy-game-now-open-to-play",
+      "name": "IEM Rio Major Champions Stage Fantasy game now open to play",
+    },
+    Object {
+      "link": "/news/35031/final-iem-rio-major-legends-stage-matchups-determined",
+      "name": "Final IEM Rio Major Legends Stage matchups determined",
+    },
+    Object {
+      "link": "/news/35021/navi-knock-out-bad-news-eagles-in-iem-rios-legends-stage",
+      "name": "NAVI knock out Bad News Eagles in IEM Rio's Legends Stage",
+    },
+    Object {
+      "link": "/news/35001/vitality-send-faze-to-elimination-pool-cloud9-come-back-versus-navi",
+      "name": "Vitality send FaZe to elimination pool; Cloud9 come back versus NAVI",
+    },
+    Object {
+      "link": "/news/34995/navi-outlast-vitality-heroic-defeat-outsiders-in-iem-rio-legends-stage",
+      "name": "NAVI outlast Vitality; Heroic defeat Outsiders in IEM Rio Legends Stage",
+    },
+    Object {
+      "link": "/news/34990/zywoo-vs-s1mple-a-clash-of-titans-to-start-the-legends-stage",
+      "name": "ZywOo vs. s1mple: A clash of titans to start the Legends Stage",
+    },
+    Object {
+      "link": "/news/34986/iem-rio-major-legends-stage-fantasy-game-live",
+      "name": "IEM Rio Major Legends Stage Fantasy game live",
+    },
+    Object {
+      "link": "/news/34983/two-top-5-matchups-in-first-round-of-iem-rio-legends-stage",
+      "name": "Two top-5 matchups in first round of IEM Rio Legends Stage",
+    },
+    Object {
+      "link": "/news/34830/iem-rio-major-profile-cloud9",
+      "name": "IEM Rio Major profile: Cloud9",
+    },
+    Object {
+      "link": "/news/34916/iem-rio-major-profile-natus-vincere",
+      "name": "IEM Rio Major profile: Natus Vincere",
+    },
+    Object {
+      "link": "/news/34892/iem-rio-major-profile-liquid",
+      "name": "IEM Rio Major profile: Liquid",
+    },
+    Object {
+      "link": "/news/34891/iem-rio-major-profile-ence",
+      "name": "IEM Rio Major profile: ENCE",
+    },
+    Object {
+      "link": "/news/34894/device-to-return-to-astralis-report",
+      "name": "device to return to Astralis - Report",
+    },
+    Object {
+      "link": "/news/34847/iem-rio-major-profile-vitality",
+      "name": "IEM Rio Major profile: Vitality",
+    },
+    Object {
+      "link": "/news/34842/why-is-there-no-clear-favorite-for-the-rio-major",
+      "name": "Why is there no clear favorite for the Rio Major?",
+    },
+    Object {
+      "link": "/news/34843/s1mple-signs-three-year-extension-with-navi",
+      "name": "s1mple signs three-year extension with NAVI",
+    },
+    Object {
+      "link": "/news/34833/edward-and-smooya-set-to-clash-in-charity-showmatch",
+      "name": "Edward and smooya set to clash in charity showmatch",
+    },
+    Object {
+      "link": "/news/34743/navi-breeze-past-outsiders-to-qualify-for-iem-rio-major-ecstatic-eliminated",
+      "name": "NAVI breeze past Outsiders to qualify for IEM Rio Major; ECSTATIC eliminated",
+    },
+    Object {
+      "link": "/news/34726/navi-defeat-mouz-outsiders-upset-heroic-in-malta",
+      "name": "NAVI defeat MOUZ, Outsiders upset Heroic in Malta",
+    },
+    Object {
+      "link": "/news/34692/is-deko-the-truth",
+      "name": "Is deko the truth?",
+    },
+    Object {
+      "link": "/news/34673/g2-defeat-navi-2-1-set-to-face-vitality-in-esl-pro-league-semi-finals",
+      "name": "G2 defeat NAVI 2-1; set to face Vitality in ESL Pro League semi-finals",
+    },
+    Object {
+      "link": "/news/34662/navi-beat-heroic-to-set-up-g2-matchup",
+      "name": "NAVI beat Heroic to set up G2 matchup",
+    },
+    Object {
+      "link": "/news/34661/steam-issues-cause-two-hour-long-delay-at-epl-frustrations-ensue",
+      "name": "Steam issues cause two hour-long delay at EPL, frustrations ensue *",
+    },
+    Object {
+      "link": "/news/34617/a-look-at-inconsistency",
+      "name": "A look at inconsistency",
+    },
+    Object {
+      "link": "/news/34618/triumph-and-tragedy-the-legacy-of-stewie2k",
+      "name": "Triumph and tragedy: The legacy of Stewie2K",
+    },
+    Object {
+      "link": "/news/34631/markeloff-to-make-appearance-in-charity-showmatch",
+      "name": "markeloff to make appearance in charity showmatch",
+    },
+    Object {
+      "link": "/news/34609/s1mple-bolsters-edwards-team-for-kinguin-legends-final",
+      "name": "s1mple bolsters Edward's Team for Kinguin Legends final",
+    },
+    Object {
+      "link": "/news/34586/complexity-upset-astralis-to-open-pro-league-campaign",
+      "name": "Complexity upset Astralis to open Pro League campaign",
+    },
+    Object {
+      "link": "/news/34431/we-paired-current-and-former-academy-players-with-their-top-tier-doppelgngers",
+      "name": "We paired current and former academy players with their top tier doppelgängers",
+    },
+    Object {
+      "link": "/news/34542/vitality-top-epl-group-a-with-win-over-navi-lock-in-playoffs",
+      "name": "Vitality top EPL Group A with win over NAVI; lock in playoffs",
+    },
+    Object {
+      "link": "/news/34533/endpoint-stun-navi-to-secure-first-win-in-malta",
+      "name": "Endpoint stun NAVI to secure first win in Malta",
+    },
+    Object {
+      "link": "/news/34530/natus-vincere-move-past-fnatic-at-epl",
+      "name": "Natus Vincere move past fnatic at EPL",
+    },
+    Object {
+      "link": "/news/34523/natus-vincere-kick-off-epl-with-victory-over-spirit",
+      "name": "Natus Vincere kick off EPL with victory over Spirit",
+    },
+    Object {
+      "link": "/news/34499/s1mple-only-after-we-get-better-results-well-feel-like-number-one",
+      "name": "s1mple: \\"Only after we get better results, we'll feel like number one\\"",
+    },
+    Object {
+      "link": "/news/34498/navi-beat-vitality-to-qualify-for-blast-fall-final",
+      "name": "NAVI beat Vitality to qualify for BLAST Fall Final",
+    },
+    Object {
+      "link": "/news/34492/vitality-beat-g2-to-advance-to-gauntlet-bracket-final",
+      "name": "Vitality beat G2 to advance to gauntlet bracket final",
+    },
+    Object {
+      "link": "/news/34465/s1mple-to-return-for-blast-premier-fall-groups-knockout-stage",
+      "name": "s1mple to return for BLAST Premier Fall Groups knockout stage",
+    },
+    Object {
+      "link": "/news/34401/csgo10-a-return-to-normality-2021",
+      "name": "CSGO10: A return to normality (2021)",
+    },
+    Object {
+      "link": "/news/34445/b1ad3-i-think-headtr1ck-is-not-ready-to-play-versus-tier-one-comfortably-enough",
+      "name": "B1ad3: \\"I think headtr1ck is not ready to play versus tier one comfortably enough\\"",
+    },
+    Object {
+      "link": "/news/34444/navi-top-group-b-over-liquid",
+      "name": "NAVI top Group B over Liquid",
+    },
+    Object {
+      "link": "/news/34438/csgo10-overcoming-unprecedented-challenges-2020",
+      "name": "CSGO10: Overcoming unprecedented challenges (2020)",
+    },
+    Object {
+      "link": "/news/34437/hallzerk-when-i-heard-complexity-was-looking-at-me-there-was-no-doubt-in-my-mind",
+      "name": "hallzerk: \\"When I heard Complexity was looking at me, there was no doubt in my mind\\"",
+    },
+    Object {
+      "link": "/news/34436/complexity-upset-navi-to-secure-opening-victory-in-copenhagen",
+      "name": "Complexity upset NAVI to secure opening victory in Copenhagen",
+    },
+    Object {
+      "link": "/news/34423/headtr1ck-to-step-in-for-s1mple-at-blast-premier-fall-groups",
+      "name": "headtr1ck to step in for s1mple at BLAST Premier Fall Groups",
+    },
+    Object {
+      "link": "/news/34416/csgo10-astralis-take-over-the-world-2018",
+      "name": "CSGO10: Astralis take over the world (2018)",
+    },
+    Object {
+      "link": "/news/34379/the-2022-off-season-roster-shuffle-recap",
+      "name": "The 2022 off-season roster shuffle recap",
+    },
+    Object {
+      "link": "/news/34403/csgo10-the-rise-of-brazilian-counter-strike-2016",
+      "name": "CSGO10: The rise of Brazilian Counter-Strike (2016)",
+    },
+    Object {
+      "link": "/news/34391/csgo10-global-offensive-starts-to-boom-in-first-multi-major-year-2014",
+      "name": "CSGO10: Global Offensive starts to boom in first multi-Major year (2014)",
+    },
+    Object {
+      "link": "/news/34317/what-are-csgos-easiest-and-hardest-t-sided-positions",
+      "name": "What are CS:GO's easiest and hardest T-sided positions?",
+    },
+    Object {
+      "link": "/news/34322/team-ranking-july-2022",
+      "name": "Team Ranking: July 2022",
+    },
+    Object {
+      "link": "/news/34294/what-are-csgos-easiest-and-hardest-ct-positions",
+      "name": "What are CS:GO's easiest and hardest CT positions?",
+    },
+    Object {
+      "link": "/news/34296/the-evps-of-iem-cologne-2022",
+      "name": "The EVPs of IEM Cologne 2022",
+    },
+    Object {
+      "link": "/news/34293/video-s1mple-mvp-of-iem-cologne-2022",
+      "name": "Video: s1mple - MVP of IEM Cologne 2022",
+    },
+    Object {
+      "link": "/news/34273/iem-cologne-final-becomes-most-watched-non-major-csgo-match-of-all-time",
+      "name": "IEM Cologne final becomes most-watched non-Major CS:GO match of all time",
+    },
+    Object {
+      "link": "/news/34271/s1mple-i-think-this-was-the-hardest-final-that-ive-ever-played",
+      "name": "s1mple: \\"I think this was the hardest final that I've ever played\\"",
+    },
+    Object {
+      "link": "/news/34270/s1mple-crowned-mvp-of-iem-cologne",
+      "name": "s1mple crowned MVP of IEM Cologne",
+    },
+    Object {
+      "link": "/news/34269/faze-take-down-navi-3-2-in-mammoth-grand-final-in-cologne",
+      "name": "FaZe take down NAVI 3-2 in mammoth grand final in Cologne",
+    },
+    Object {
+      "link": "/news/34267/faze-end-movistar-riders-dream-run-set-up-grand-final-against-navi",
+      "name": "FaZe end Movistar Riders' dream run; set up grand final against NAVI",
+    },
+    Object {
+      "link": "/news/34266/navi-best-astralis-to-reach-iem-cologne-grand-final",
+      "name": "NAVI best Astralis to reach IEM Cologne grand final",
+    },
+    Object {
+      "link": "/news/34249/can-anyone-stop-faze-and-navi-in-cologne",
+      "name": "Can anyone stop FaZe and NAVI in Cologne?",
+    },
+    Object {
+      "link": "/news/34246/the-best-players-from-iem-colognes-group-stage",
+      "name": "The best players from IEM Cologne's group stage",
+    },
+    Object {
+      "link": "/news/34243/iem-cologne-playoffs-fantasy-game-now-open-to-play",
+      "name": "IEM Cologne playoffs Fantasy game now open to play",
+    },
+    Object {
+      "link": "/news/34231/navi-end-movistar-riders-win-streak-and-claim-cologne-semi-final-spot",
+      "name": "NAVI end Movistar Riders' win streak and claim Cologne semi-final spot",
+    },
+    Object {
+      "link": "/news/34217/video-s1mple-1v3s-nip-to-complete-the-ace",
+      "name": "Video: s1mple 1v3s NIP to complete the ace",
+    },
+    Object {
+      "link": "/news/34212/navi-dismantle-nip-to-qualify-for-playoffs",
+      "name": "NAVI dismantle NIP to qualify for playoffs",
+    },
+    Object {
+      "link": "/news/34202/navi-open-cologne-campaign-with-victory-over-mouz",
+      "name": "NAVI open Cologne campaign with victory over MOUZ",
+    },
+    Object {
+      "link": "/news/34194/the-new-navi-masterstroke-or-a-flash-in-the-pan",
+      "name": "The new NAVI: Masterstroke or a flash in the pan?",
+    },
+    Object {
+      "link": "/news/34174/iem-cologne-no-clear-favorite-going-into-the-season-finale",
+      "name": "IEM Cologne: No clear favorite going into the season finale",
+    },
+    Object {
+      "link": "/news/34173/nine-moments-that-made-cologne-what-it-is-today",
+      "name": "Nine moments that made Cologne what it is today",
+    },
+    Object {
+      "link": "/news/34122/who-are-csgos-map-specialists",
+      "name": "Who are CS:GO's map specialists?",
+    },
+    Object {
+      "link": "/news/34132/video-s1mple-mvp-of-blast-premier-spring-final",
+      "name": "Video: s1mple - MVP of BLAST Premier Spring Final",
+    },
+    Object {
+      "link": "/news/34103/sdy-set-to-play-for-navi-at-iem-cologne",
+      "name": "sdy set to play for NAVI at IEM Cologne",
+    },
+    Object {
+      "link": "/news/34089/is-double-awping-worth-it",
+      "name": "Is double AWPing worth it?",
+    },
+    Object {
+      "link": "/news/34096/the-evps-of-blast-premier-spring-final",
+      "name": "The EVPs of BLAST Premier Spring Final",
+    },
+    Object {
+      "link": "/news/34085/s1mple-on-sdy-i-hope-he-will-play-in-cologne",
+      "name": "s1mple on sdy: \\"I hope he will play in Cologne\\"",
+    },
+    Object {
+      "link": "/news/34084/s1mple-breaks-mvp-record-with-blast-spring-medal",
+      "name": "s1mple breaks MVP record with BLAST Spring medal",
+    },
+    Object {
+      "link": "/news/34083/navi-dominate-vitality-to-win-blast-premier-spring-final",
+      "name": "NAVI dominate Vitality to win BLAST Premier Spring Final",
+    },
+    Object {
+      "link": "/news/34078/navi-move-on-to-blast-grand-final-over-og",
+      "name": "NAVI move on to BLAST grand final over OG",
+    },
+    Object {
+      "link": "/news/34072/navi-plow-through-faze-to-set-up-rematch-with-og",
+      "name": "NAVI plow through FaZe to set up rematch with OG",
+    },
+    Object {
+      "link": "/news/34068/sdy-on-playing-with-s1mple-its-one-hell-of-an-experience",
+      "name": "sdy on playing with s1mple: \\"It’s one hell of an experience\\"",
+    },
+    Object {
+      "link": "/news/34065/navi-eliminate-big-from-blast-spring-final",
+      "name": "NAVI eliminate BIG from BLAST Spring Final",
+    },
+    Object {
+      "link": "/news/34057/og-prevail-against-navi-in-blast-spring-final-opener",
+      "name": "OG prevail against NAVI in BLAST Spring Final opener",
+    },
+    Object {
+      "link": "/news/34048/s1mple-maybe-i-will-take-a-break-i-need-to-set-up-my-life-not-travel-with-the-same-bag-for-six-months",
+      "name": "s1mple: \\"Maybe I will take a break; I need to set up my life, not travel with the same bag for six months\\"",
+    },
+    Object {
+      "link": "/news/33991/pinnacle-cup-championship-is-heroics-event-to-lose",
+      "name": "Pinnacle Cup Championship is Heroic's event to lose",
+    },
+    Object {
+      "link": "/news/33982/team-ranking-may-2022",
+      "name": "Team Ranking: May 2022",
+    },
+    Object {
+      "link": "/news/33921/why-are-modern-igls-so-aggressive",
+      "name": "Why are modern IGLs so aggressive?",
+    },
+    Object {
+      "link": "/news/33946/krimbo-my-mentality-wasnt-the-best-half-a-year-ago-and-i-really-worked-on-it",
+      "name": "Krimbo: \\"My mentality wasn't the best half a year ago and I really worked on it\\"",
+    },
+    Object {
+      "link": "/news/33944/zonic-on-coaching-an-international-team-teamplay-and-the-tactical-aspects-are-very-limited",
+      "name": "zonic on coaching an international team: \\"Teamplay and the tactical aspects are very limited\\"",
+    },
+    Object {
+      "link": "/news/33907/pgl-major-antwerp-2022-the-evps",
+      "name": "PGL Major Antwerp 2022: The EVPs",
+    },
+    Object {
+      "link": "/news/33888/best-photos-from-the-pgl-major-antwerp",
+      "name": "Best photos from the PGL Major Antwerp",
+    },
+    Object {
+      "link": "/news/33884/rain-claims-pgl-major-antwerp-mvp-award",
+      "name": "rain claims PGL Major Antwerp MVP award",
+    },
+    Object {
+      "link": "/news/33882/faze-defeat-navi-2-0-to-win-pgl-major-antwerp",
+      "name": "FaZe defeat NAVI 2-0 to win PGL Major Antwerp",
+    },
+    Object {
+      "link": "/news/33881/five-reasons-to-watch-the-pgl-major-grand-final",
+      "name": "Five reasons to watch the PGL Major grand final",
+    },
+    Object {
+      "link": "/news/33879/video-faze-and-navi-brush-off-underdogs-to-set-up-dream-final-major-recap-by-ggbet-ft-moses",
+      "name": "Video: FaZe and NAVI brush off underdogs to set up dream final - Major Recap by GG.BET (ft. moses)",
+    },
+    Object {
+      "link": "/news/33877/s1mple-were-hungry-for-a-second-in-a-row",
+      "name": "s1mple: \\"We're hungry for a second in a row\\"",
+    },
+    Object {
+      "link": "/news/33876/navi-ravage-ence-to-set-up-final-showdown-against-faze",
+      "name": "NAVI ravage ENCE to set up final showdown against FaZe",
+    },
+    Object {
+      "link": "/news/33872/who-are-the-pgl-major-mvp-frontrunners",
+      "name": "Who are the PGL Major MVP frontrunners?",
+    },
+    Object {
+      "link": "/news/33870/b1ad3-if-you-want-to-win-the-second-major-in-a-row-you-need-to-beat-all-the-best-teams",
+      "name": "B1ad3: \\"If you want to win the second Major in a row, you need to beat all the best teams\\"",
+    },
+    Object {
+      "link": "/news/33868/navi-hold-out-against-heroic-to-claim-semi-final-spot",
+      "name": "NAVI hold out against Heroic to claim semi-final spot",
+    },
     Object {
       "link": "/news/33849/pgl-major-antwerp-2022-playoffs-fantasy-game-now-open-to-play",
       "name": "PGL Major Antwerp 2022 playoffs Fantasy game now open to play",
@@ -4333,12 +5208,12 @@ Object {
     },
   ],
   "statistics": Object {
-    "deathsPerRound": 0.58,
-    "headshots": 35.6,
-    "killsPerRound": 0.87,
-    "mapsPlayed": 37,
-    "rating": 1.36,
-    "roundsContributed": 76.9,
+    "deathsPerRound": 0.61,
+    "headshots": 36.6,
+    "killsPerRound": 0.78,
+    "mapsPlayed": 40,
+    "rating": 1.21,
+    "roundsContributed": 71.8,
   },
   "team": Object {
     "id": 4608,
@@ -4347,10 +5222,14 @@ Object {
   "teams": Array [
     Object {
       "id": 4608,
-      "leaveDate": 1471644000000,
+      "leaveDate": undefined,
       "name": "Natus Vincere",
       "startDate": 1471644000000,
       "trophies": Array [
+        Object {
+          "id": 6345,
+          "name": "BLAST Premier Spring Final 2022",
+        },
         Object {
           "id": 5608,
           "name": "BLAST Premier World Final 2021",

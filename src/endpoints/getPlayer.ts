@@ -52,21 +52,14 @@ export const getPlayer =
       )
     )
 
-    const isRegularPlayer = $('.standard-box.profileTopBox').exists()
-
-    const nameText = isRegularPlayer
-      ? $('.player-realname').trimText()
-      : $('.playerRealname').trimText()
+    const nameText = $('.playerRealname').trimText()
 
     const name = nameText === '-' ? undefined : nameText
 
-    const ign = isRegularPlayer
-      ? $('.player-nick').text()
-      : $('.playerNickname').text()
+    const ign = $('.playerNickname').text()
 
-    const imageUrl = isRegularPlayer
-      ? $('.bodyshot-img-square').attr('src')
-      : $('.bodyshot-img').attr('src')
+    const imageUrl =
+      $('.profile-img').attr('src') || $('.bodyshot-img').attr('src')
 
     const image =
       imageUrl.includes('bodyshot/unknown.png') ||
@@ -74,50 +67,31 @@ export const getPlayer =
         ? undefined
         : imageUrl
 
-    const age = isRegularPlayer
-      ? $('.profile-player-stat-value')
-          .first()
-          .textThen((x) => parseNumber(x.split(' ')[0]))
-      : $('.playerAge .listRight').textThen((x) => parseNumber(x.split(' ')[0]))
+    const age = $('.playerAge .listRight').textThen((x) =>
+      parseNumber(x.split(' ')[0])
+    )
 
     const twitter = $('.twitter').parent().attr('href')
     const twitch = $('.twitch').parent().attr('href')
     const facebook = $('.facebook').parent().attr('href')
     const instagram = $('.instagram').parent().attr('href')
 
-    const country = isRegularPlayer
-      ? {
-          name: $('.player-realname .flag').attr('alt'),
-          code: $('.player-realname .flag').attrThen(
-            'src',
-            (x) => x.split('/').pop()?.split('.')[0]!
-          )
-        }
-      : {
-          name: $('.playerRealname .flag').attr('alt')!,
-          code: $('.playerRealname .flag').attrThen(
-            'src',
-            (x) => x.split('/').pop()?.split('.')[0]!
-          )
-        }
+    const country = {
+      name: $('.playerRealname .flag').attr('alt')!,
+      code: $('.playerRealname .flag').attrThen(
+        'src',
+        (x) => x.split('/').pop()?.split('.')[0]!
+      )
+    }
 
-    const hasTeam = isRegularPlayer
-      ? $('span.profile-player-stat-value').last().trimText() !== '-'
-      : $('.playerTeam .listRight').trimText() !== 'No team'
+    const hasTeam = $('.playerTeam .listRight').trimText() !== 'No team'
 
     let team
 
     if (hasTeam) {
-      if (isRegularPlayer) {
-        team = {
-          name: $('.profile-player-stat-value a').trimText()!,
-          id: $('.profile-player-stat-value a').attrThen('href', getIdAt(2))
-        }
-      } else {
-        team = {
-          name: $('.playerTeam a').trimText()!,
-          id: $('.playerTeam a').attrThen('href', getIdAt(2))
-        }
+      team = {
+        name: $('.playerTeam a').trimText()!,
+        id: $('.playerTeam a').attrThen('href', getIdAt(2))
       }
     }
 
