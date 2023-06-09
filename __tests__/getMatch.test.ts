@@ -25,4 +25,4 @@ test('getMatch', async () => {
   await sleep(3000)
   expect(await HLTV.getMatch({ id: MATCH_FROM_2023 })).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 50000)

@@ -2,12 +2,7 @@
 
 exports[`getTeamStats 1`] = `
 Object {
-  "currentLineup": Array [
-    Object {
-      "id": 3183,
-      "name": "spyleadeR",
-    },
-  ],
+  "currentLineup": Array [],
   "events": Array [
     Object {
       "event": Object {
@@ -628,8 +623,24 @@ Object {
   ],
   "historicPlayers": Array [
     Object {
-      "id": 21345,
-      "name": "hybrid",
+      "id": 10697,
+      "name": "blocker",
+    },
+    Object {
+      "id": 15384,
+      "name": "doublemagic",
+    },
+    Object {
+      "id": 17146,
+      "name": "numb",
+    },
+    Object {
+      "id": 13992,
+      "name": "Zix",
+    },
+    Object {
+      "id": 17145,
+      "name": "Rainwaker",
     },
     Object {
       "id": 8917,
@@ -640,56 +651,44 @@ Object {
       "name": "Patrick",
     },
     Object {
-      "id": 20114,
-      "name": "shaiK",
-    },
-    Object {
-      "id": 10697,
-      "name": "blocker",
-    },
-    Object {
-      "id": 15384,
-      "name": "doublemagic",
-    },
-    Object {
-      "id": 16410,
-      "name": "Duplicate",
-    },
-    Object {
-      "id": 15385,
-      "name": "KalubeR",
+      "id": 16412,
+      "name": "rafftu",
     },
     Object {
       "id": 13464,
       "name": "mar",
     },
     Object {
-      "id": 20388,
-      "name": "milky",
+      "id": 3183,
+      "name": "spyleadeR",
     },
     Object {
-      "id": 17146,
-      "name": "numb",
+      "id": 20097,
+      "name": "h4rn",
     },
     Object {
-      "id": 16412,
-      "name": "rafftu",
+      "id": 20114,
+      "name": "shaiK",
     },
     Object {
-      "id": 17145,
-      "name": "Rainwaker",
+      "id": 21345,
+      "name": "hybrid",
     },
     Object {
       "id": 10762,
       "name": "Rock1nG",
     },
     Object {
-      "id": 13992,
-      "name": "Zix",
+      "id": 15385,
+      "name": "KalubeR",
     },
     Object {
-      "id": 20097,
-      "name": "h4rn",
+      "id": 16410,
+      "name": "Duplicate",
+    },
+    Object {
+      "id": 20388,
+      "name": "milky",
     },
   ],
   "id": 9863,
@@ -2097,7 +2096,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -2118,7 +2117,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -2139,7 +2138,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -4029,7 +4028,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -4260,7 +4259,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -4281,7 +4280,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -5037,7 +5036,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -5058,7 +5057,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -5079,7 +5078,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -7683,7 +7682,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -9762,7 +9761,7 @@ Object {
       },
       "team2": Object {
         "id": 9139,
-        "name": "Brute",
+        "name": "BRUTE",
       },
     },
     Object {
@@ -9783,7 +9782,7 @@ Object {
       },
       "team2": Object {
         "id": 9139,
-        "name": "Brute",
+        "name": "BRUTE",
       },
     },
     Object {
