@@ -196,7 +196,8 @@ function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
         name: $(`.team${n}-gradient .teamName`).text(),
         id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
           href ? getIdAt(2, href) : undefined
-        )
+        ),
+        rank: Number($(".teamRanking").toArray()[n-1].text().replace(/[^0-9]/g, ''))
       }
     : undefined
 }
