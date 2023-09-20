@@ -101,7 +101,7 @@ Parses all matches from the `hltv.org/matches/` page (1 request)
 
 |  Option   |                                              Type                                              | Default Value |                          Description                           |
 | :-------: | :--------------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
-|  eventId  |                                            number?                                             |       -       |                  Filter matches by event ID.                   |
+| eventIds  |                                           number[]?                                            |       -       |                  Filter matches by event IDs.                  |
 | eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
 |  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?  |       -       | Filter matches by pre-set categories. Overrides other filters. |
 |  teamIds  |                                           number[]?                                            |       -       |                               -                                |
