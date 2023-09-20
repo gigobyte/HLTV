@@ -7,6 +7,7 @@ import {
   fetchPage,
   generateRandomSuffix,
   getIdAt,
+  parseNumber,
   percentageToDecimalOdd
 } from '../utils'
 import { Player } from '../shared/Player'
@@ -76,6 +77,10 @@ export interface Stream {
   viewers: number
 }
 
+export interface FullMatchTeam extends Team {
+  rank?: number
+}
+
 export interface FullMatch {
   id: number
   statsId?: number
@@ -88,9 +93,9 @@ export interface FullMatch {
   }
   status: MatchStatus
   hasScorebot: boolean
-  team1?: Team
-  team2?: Team
-  winnerTeam?: Team
+  team1?: FullMatchTeam
+  team2?: FullMatchTeam
+  winnerTeam?: FullMatchTeam
   vetoes: Veto[]
   event: Event
   odds: ProviderOdds[]
@@ -190,13 +195,18 @@ function getMatchStatus($: HLTVPage): MatchStatus {
   return status
 }
 
-function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
+function getTeam($: HLTVPage, n: 1 | 2): FullMatchTeam | undefined {
   return $(`.team${n}-gradient`).exists()
     ? {
         name: $(`.team${n}-gradient .teamName`).text(),
         id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
           href ? getIdAt(2, href) : undefined
-        )
+        ),
+        rank: $('.teamRanking a')
+          .eq(n - 1)
+          .contents()
+          .eq(1)
+          .textThen((x) => parseNumber(x.replace(/#/g, '')))
       }
     : undefined
 }
