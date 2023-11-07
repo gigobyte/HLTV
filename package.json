@@ -1,6 +1,6 @@
 {
-  "name": "hltv",
-  "version": "3.5.0",
+  "name": "hltv-next",
+  "version": "3.5.9",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,7 +11,7 @@
     "test:approve": "jest --runInBand --updateSnapshot",
     "pretty": "prettier --write \"**/*.ts\""
   },
-  "repository": "git+https://github.com/gigobyte/HLTV.git",
+  "repository": "git+https://github.com/zsunamy/HLTV.git",
   "keywords": [
     "hltv",
     "api",
@@ -40,9 +40,9 @@
   "author": "Stanislav Iliev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gigobyte/HLTV/issues"
+    "url": "https://github.com/zsunamy/HLTV/issues"
   },
-  "homepage": "https://github.com/gigobyte/HLTV#readme",
+  "homepage": "https://github.com/zsunamy/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.34",
     "@types/jest": "29.5.7",
@@ -60,6 +60,7 @@
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
     "got-scraping": "3.2.15",
+    "request": "^2.88.2",
     "socket.io-client": "2.4.0"
   }
 }
