@@ -2,36 +2,2468 @@
 
 exports[`getPlayerStats 1`] = `
 Object {
-  "age": 24,
+  "age": 25,
   "country": Object {
     "code": "UA",
     "name": "Ukraine",
   },
   "id": 7998,
   "ign": "s1mple",
-  "image": "https://img-cdn.hltv.org/playerbodyshot/Q2u6AgnDNYQ3dyObwN4JBX.png?ixlib=java-2.1.0&w=400&s=5e19fa63867872bd78409f6e757ff6c3",
+  "image": "https://img-cdn.hltv.org/playerbodyshot/M_HZ0vz7Cd9dNP7lS283jo.png?ixlib=java-2.1.0&w=400&s=dd291b44af34444878bc9db7fbd89e29",
   "individualStatistics": Object {
-    "firstKillInWonRounds": 20.8,
-    "fiveKillRounds": 62,
-    "fourKillRounds": 491,
-    "grenadeKills": 191,
-    "oneKillRounds": 12802,
-    "openingDeaths": 3634,
+    "firstKillInWonRounds": 20.7,
+    "fiveKillRounds": 69,
+    "fourKillRounds": 521,
+    "grenadeKills": 224,
+    "oneKillRounds": 14043,
+    "openingDeaths": 4011,
     "openingKillRating": 1.24,
-    "openingKillRatio": 1.62,
-    "openingKills": 5888,
-    "otherKills": 249,
-    "pistolKills": 5945,
-    "rifleKills": 14383,
-    "roundsWithKills": 22079,
-    "smgKills": 881,
-    "sniperKills": 13166,
-    "teamWinPercentAfterFirstKill": 75.1,
-    "threeKillRounds": 2208,
-    "twoKillRounds": 6516,
-    "zeroKillRounds": 18517,
+    "openingKillRatio": 1.6,
+    "openingKills": 6428,
+    "otherKills": 281,
+    "pistolKills": 6393,
+    "rifleKills": 15599,
+    "roundsWithKills": 24095,
+    "smgKills": 949,
+    "sniperKills": 14442,
+    "teamWinPercentAfterFirstKill": 75,
+    "threeKillRounds": 2394,
+    "twoKillRounds": 7068,
+    "zeroKillRounds": 20436,
   },
   "matches": Array [
+    Object {
+      "date": 1684229400000,
+      "deaths": 31,
+      "kills": 29,
+      "map": "default",
+      "mapStatsId": 156851,
+      "rating": 1,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1684229400000,
+      "deaths": 14,
+      "kills": 9,
+      "map": "de_mirage",
+      "mapStatsId": 156849,
+      "rating": 0.77,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1684229400000,
+      "deaths": 21,
+      "kills": 24,
+      "map": "de_overpass",
+      "mapStatsId": 156848,
+      "rating": 1.25,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1684152000000,
+      "deaths": 17,
+      "kills": 8,
+      "map": "de_nuke",
+      "mapStatsId": 156820,
+      "rating": 0.46,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11811,
+        "name": "Monte",
+      },
+    },
+    Object {
+      "date": 1684152000000,
+      "deaths": 22,
+      "kills": 15,
+      "map": "default",
+      "mapStatsId": 156818,
+      "rating": 0.76,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11811,
+        "name": "Monte",
+      },
+    },
+    Object {
+      "date": 1684056600000,
+      "deaths": 12,
+      "kills": 23,
+      "map": "de_overpass",
+      "mapStatsId": 156789,
+      "rating": 1.53,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1683991200000,
+      "deaths": 12,
+      "kills": 22,
+      "map": "de_inferno",
+      "mapStatsId": 156771,
+      "rating": 1.62,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1683970200000,
+      "deaths": 16,
+      "kills": 17,
+      "map": "de_mirage",
+      "mapStatsId": 156761,
+      "rating": 1.12,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9928,
+        "name": "GamerLegion",
+      },
+    },
+    Object {
+      "date": 1682192700000,
+      "deaths": 17,
+      "kills": 23,
+      "map": "de_ancient",
+      "mapStatsId": 155781,
+      "rating": 1.28,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1682192700000,
+      "deaths": 35,
+      "kills": 32,
+      "map": "de_overpass",
+      "mapStatsId": 155775,
+      "rating": 0.97,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1681925400000,
+      "deaths": 9,
+      "kills": 23,
+      "map": "de_inferno",
+      "mapStatsId": 155620,
+      "rating": 1.62,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1681925400000,
+      "deaths": 26,
+      "kills": 38,
+      "map": "de_mirage",
+      "mapStatsId": 155612,
+      "rating": 1.32,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1681760700000,
+      "deaths": 16,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 155522,
+      "rating": 0.97,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1681760700000,
+      "deaths": 12,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 155519,
+      "rating": 1.49,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1681740000000,
+      "deaths": 13,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 155493,
+      "rating": 1.34,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6248,
+        "name": "TheMongolz",
+      },
+    },
+    Object {
+      "date": 1680881400000,
+      "deaths": 16,
+      "kills": 15,
+      "map": "de_ancient",
+      "mapStatsId": 154911,
+      "rating": 0.96,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1680881400000,
+      "deaths": 12,
+      "kills": 20,
+      "map": "de_inferno",
+      "mapStatsId": 154908,
+      "rating": 1.55,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1680794100000,
+      "deaths": 10,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 154845,
+      "rating": 1.46,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11283,
+        "name": "Falcons",
+      },
+    },
+    Object {
+      "date": 1680776400000,
+      "deaths": 20,
+      "kills": 25,
+      "map": "de_inferno",
+      "mapStatsId": 154823,
+      "rating": 1.12,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11164,
+        "name": "Into the Breach",
+      },
+    },
+    Object {
+      "date": 1679771100000,
+      "deaths": 19,
+      "kills": 14,
+      "map": "de_mirage",
+      "mapStatsId": 154254,
+      "rating": 0.8,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1679771100000,
+      "deaths": 19,
+      "kills": 24,
+      "map": "de_nuke",
+      "mapStatsId": 154245,
+      "rating": 1.48,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1679771100000,
+      "deaths": 13,
+      "kills": 24,
+      "map": "de_ancient",
+      "mapStatsId": 154238,
+      "rating": 1.6,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1679683500000,
+      "deaths": 13,
+      "kills": 21,
+      "map": "de_inferno",
+      "mapStatsId": 154163,
+      "rating": 1.41,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1679683500000,
+      "deaths": 17,
+      "kills": 25,
+      "map": "default",
+      "mapStatsId": 154149,
+      "rating": 1.47,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1679495400000,
+      "deaths": 13,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 153948,
+      "rating": 1.45,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1679495400000,
+      "deaths": 18,
+      "kills": 23,
+      "map": "de_ancient",
+      "mapStatsId": 153940,
+      "rating": 1.26,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1679421600000,
+      "deaths": 12,
+      "kills": 16,
+      "map": "de_mirage",
+      "mapStatsId": 153869,
+      "rating": 1.2,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11309,
+        "name": "00NATION",
+      },
+    },
+    Object {
+      "date": 1679421600000,
+      "deaths": 18,
+      "kills": 10,
+      "map": "de_overpass",
+      "mapStatsId": 153860,
+      "rating": 0.72,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11309,
+        "name": "00NATION",
+      },
+    },
+    Object {
+      "date": 1679421600000,
+      "deaths": 19,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 153843,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11309,
+        "name": "00NATION",
+      },
+    },
+    Object {
+      "date": 1679153400000,
+      "deaths": 12,
+      "kills": 15,
+      "map": "de_nuke",
+      "mapStatsId": 153649,
+      "rating": 1.03,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7020,
+        "name": "Spirit",
+      },
+    },
+    Object {
+      "date": 1679153400000,
+      "deaths": 17,
+      "kills": 27,
+      "map": "default",
+      "mapStatsId": 153645,
+      "rating": 1.25,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7020,
+        "name": "Spirit",
+      },
+    },
+    Object {
+      "date": 1679077800000,
+      "deaths": 11,
+      "kills": 18,
+      "map": "de_overpass",
+      "mapStatsId": 153577,
+      "rating": 1.17,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11514,
+        "name": "Rare Atom",
+      },
+    },
+    Object {
+      "date": 1679077800000,
+      "deaths": 8,
+      "kills": 14,
+      "map": "de_nuke",
+      "mapStatsId": 153573,
+      "rating": 1.43,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11514,
+        "name": "Rare Atom",
+      },
+    },
+    Object {
+      "date": 1679077800000,
+      "deaths": 26,
+      "kills": 29,
+      "map": "de_inferno",
+      "mapStatsId": 153568,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11514,
+        "name": "Rare Atom",
+      },
+    },
+    Object {
+      "date": 1678991400000,
+      "deaths": 17,
+      "kills": 33,
+      "map": "de_inferno",
+      "mapStatsId": 153508,
+      "rating": 1.71,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6665,
+        "name": "Astralis",
+      },
+    },
+    Object {
+      "date": 1678991400000,
+      "deaths": 15,
+      "kills": 10,
+      "map": "de_overpass",
+      "mapStatsId": 153502,
+      "rating": 0.81,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6665,
+        "name": "Astralis",
+      },
+    },
+    Object {
+      "date": 1678991400000,
+      "deaths": 15,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 153488,
+      "rating": 0.96,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6665,
+        "name": "Astralis",
+      },
+    },
+    Object {
+      "date": 1678892400000,
+      "deaths": 15,
+      "kills": 24,
+      "map": "de_inferno",
+      "mapStatsId": 153369,
+      "rating": 1.36,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8135,
+        "name": "FORZE",
+      },
+    },
+    Object {
+      "date": 1678892400000,
+      "deaths": 21,
+      "kills": 20,
+      "map": "de_ancient",
+      "mapStatsId": 153360,
+      "rating": 1.09,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8135,
+        "name": "FORZE",
+      },
+    },
+    Object {
+      "date": 1678892400000,
+      "deaths": 12,
+      "kills": 32,
+      "map": "de_overpass",
+      "mapStatsId": 153350,
+      "rating": 1.78,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8135,
+        "name": "FORZE",
+      },
+    },
+    Object {
+      "date": 1676126100000,
+      "deaths": 19,
+      "kills": 12,
+      "map": "de_mirage",
+      "mapStatsId": 150927,
+      "rating": 0.77,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1676126100000,
+      "deaths": 15,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 150922,
+      "rating": 1.09,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1676039400000,
+      "deaths": 16,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 150862,
+      "rating": 1.05,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1676039400000,
+      "deaths": 14,
+      "kills": 23,
+      "map": "de_overpass",
+      "mapStatsId": 150858,
+      "rating": 1.32,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1675799100000,
+      "deaths": 16,
+      "kills": 17,
+      "map": "de_nuke",
+      "mapStatsId": 150746,
+      "rating": 1.06,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1675799100000,
+      "deaths": 17,
+      "kills": 11,
+      "map": "de_inferno",
+      "mapStatsId": 150741,
+      "rating": 0.86,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1675621800000,
+      "deaths": 21,
+      "kills": 25,
+      "map": "default",
+      "mapStatsId": 150624,
+      "rating": 1.14,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1675621800000,
+      "deaths": 8,
+      "kills": 18,
+      "map": "de_inferno",
+      "mapStatsId": 150613,
+      "rating": 1.58,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1675510200000,
+      "deaths": 13,
+      "kills": 22,
+      "map": "de_inferno",
+      "mapStatsId": 150525,
+      "rating": 1.56,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1675510200000,
+      "deaths": 16,
+      "kills": 18,
+      "map": "de_ancient",
+      "mapStatsId": 150520,
+      "rating": 1.01,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1674928200000,
+      "deaths": 20,
+      "kills": 31,
+      "map": "de_overpass",
+      "mapStatsId": 150152,
+      "rating": 1.49,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674928200000,
+      "deaths": 13,
+      "kills": 12,
+      "map": "de_inferno",
+      "mapStatsId": 150148,
+      "rating": 1.13,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674928200000,
+      "deaths": 18,
+      "kills": 15,
+      "map": "default",
+      "mapStatsId": 150138,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674750900000,
+      "deaths": 19,
+      "kills": 14,
+      "map": "de_nuke",
+      "mapStatsId": 150001,
+      "rating": 0.83,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1674750900000,
+      "deaths": 13,
+      "kills": 11,
+      "map": "de_inferno",
+      "mapStatsId": 149994,
+      "rating": 1,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1674655200000,
+      "deaths": 8,
+      "kills": 27,
+      "map": "de_overpass",
+      "mapStatsId": 149909,
+      "rating": 2.07,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1674655200000,
+      "deaths": 17,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 149899,
+      "rating": 1.07,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1674655200000,
+      "deaths": 12,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 149889,
+      "rating": 1.41,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1674482400000,
+      "deaths": 21,
+      "kills": 27,
+      "map": "de_inferno",
+      "mapStatsId": 149762,
+      "rating": 1.22,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1674482400000,
+      "deaths": 15,
+      "kills": 21,
+      "map": "de_nuke",
+      "mapStatsId": 149751,
+      "rating": 1.19,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1674299700000,
+      "deaths": 9,
+      "kills": 24,
+      "map": "de_overpass",
+      "mapStatsId": 149612,
+      "rating": 1.77,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1674299700000,
+      "deaths": 19,
+      "kills": 29,
+      "map": "de_mirage",
+      "mapStatsId": 149606,
+      "rating": 1.21,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1674299700000,
+      "deaths": 17,
+      "kills": 12,
+      "map": "de_inferno",
+      "mapStatsId": 149599,
+      "rating": 0.79,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1671713400000,
+      "deaths": 24,
+      "kills": 17,
+      "map": "de_tuscan",
+      "mapStatsId": 149129,
+      "rating": 0.62,
+      "team1": Object {
+        "id": 12079,
+        "name": "One Shot",
+      },
+      "team2": Object {
+        "id": 12081,
+        "name": "You Shall Not Pass",
+      },
+    },
+    Object {
+      "date": 1671190200000,
+      "deaths": 18,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 148880,
+      "rating": 1.06,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1671190200000,
+      "deaths": 16,
+      "kills": 18,
+      "map": "de_ancient",
+      "mapStatsId": 148874,
+      "rating": 1.08,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1671190200000,
+      "deaths": 16,
+      "kills": 24,
+      "map": "de_overpass",
+      "mapStatsId": 148865,
+      "rating": 1.12,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1671105000000,
+      "deaths": 20,
+      "kills": 24,
+      "map": "de_nuke",
+      "mapStatsId": 148809,
+      "rating": 1.2,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1671105000000,
+      "deaths": 16,
+      "kills": 20,
+      "map": "de_ancient",
+      "mapStatsId": 148800,
+      "rating": 1.1,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1671105000000,
+      "deaths": 17,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 148795,
+      "rating": 1.14,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1671042300000,
+      "deaths": 17,
+      "kills": 21,
+      "map": "de_nuke",
+      "mapStatsId": 148764,
+      "rating": 1.21,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1671042300000,
+      "deaths": 28,
+      "kills": 23,
+      "map": "de_inferno",
+      "mapStatsId": 148759,
+      "rating": 0.98,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1669400700000,
+      "deaths": 21,
+      "kills": 16,
+      "map": "de_overpass",
+      "mapStatsId": 147239,
+      "rating": 0.87,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1669400700000,
+      "deaths": 27,
+      "kills": 40,
+      "map": "de_mirage",
+      "mapStatsId": 147235,
+      "rating": 1.35,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1669400700000,
+      "deaths": 17,
+      "kills": 14,
+      "map": "de_inferno",
+      "mapStatsId": 147228,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1669309800000,
+      "deaths": 16,
+      "kills": 27,
+      "map": "de_mirage",
+      "mapStatsId": 147161,
+      "rating": 1.5,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1669309800000,
+      "deaths": 17,
+      "kills": 20,
+      "map": "de_dust2",
+      "mapStatsId": 147157,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1669309800000,
+      "deaths": 20,
+      "kills": 21,
+      "map": "de_inferno",
+      "mapStatsId": 147151,
+      "rating": 1.11,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1669220100000,
+      "deaths": 14,
+      "kills": 22,
+      "map": "de_mirage",
+      "mapStatsId": 147093,
+      "rating": 1.39,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11837,
+        "name": "Fluxo",
+      },
+    },
+    Object {
+      "date": 1669220100000,
+      "deaths": 14,
+      "kills": 26,
+      "map": "de_dust2",
+      "mapStatsId": 147091,
+      "rating": 1.32,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11837,
+        "name": "Fluxo",
+      },
+    },
+    Object {
+      "date": 1668199500000,
+      "deaths": 20,
+      "kills": 16,
+      "map": "de_mirage",
+      "mapStatsId": 146711,
+      "rating": 0.93,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1668199500000,
+      "deaths": 21,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 146710,
+      "rating": 0.79,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1668199500000,
+      "deaths": 21,
+      "kills": 21,
+      "map": "de_nuke",
+      "mapStatsId": 146709,
+      "rating": 0.9,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1667931600000,
+      "deaths": 15,
+      "kills": 13,
+      "map": "de_dust2",
+      "mapStatsId": 146667,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1667931600000,
+      "deaths": 15,
+      "kills": 27,
+      "map": "de_mirage",
+      "mapStatsId": 146663,
+      "rating": 1.57,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1667829600000,
+      "deaths": 15,
+      "kills": 20,
+      "map": "de_nuke",
+      "mapStatsId": 146634,
+      "rating": 1.41,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11518,
+        "name": "Bad News Eagles",
+      },
+    },
+    Object {
+      "date": 1667829600000,
+      "deaths": 6,
+      "kills": 25,
+      "map": "de_ancient",
+      "mapStatsId": 146631,
+      "rating": 2.15,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11518,
+        "name": "Bad News Eagles",
+      },
+    },
+    Object {
+      "date": 1667743200000,
+      "deaths": 17,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 146594,
+      "rating": 1.08,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1667687700000,
+      "deaths": 17,
+      "kills": 17,
+      "map": "de_mirage",
+      "mapStatsId": 146576,
+      "rating": 1.09,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1667666700000,
+      "deaths": 28,
+      "kills": 40,
+      "map": "de_mirage",
+      "mapStatsId": 146561,
+      "rating": 1.35,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1665077100000,
+      "deaths": 14,
+      "kills": 25,
+      "map": "de_inferno",
+      "mapStatsId": 144943,
+      "rating": 1.85,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1665077100000,
+      "deaths": 20,
+      "kills": 30,
+      "map": "de_mirage",
+      "mapStatsId": 144938,
+      "rating": 1.45,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 11595,
+        "name": "Outsiders",
+      },
+    },
+    Object {
+      "date": 1664996100000,
+      "deaths": 15,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 144887,
+      "rating": 1.3,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+    },
+    Object {
+      "date": 1664910000000,
+      "deaths": 4,
+      "kills": 15,
+      "map": "de_dust2",
+      "mapStatsId": 144841,
+      "rating": 1.43,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 8813,
+        "name": "Illuminar",
+      },
+    },
+    Object {
+      "date": 1664558100000,
+      "deaths": 19,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 144660,
+      "rating": 1.13,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1664558100000,
+      "deaths": 13,
+      "kills": 20,
+      "map": "de_inferno",
+      "mapStatsId": 144653,
+      "rating": 1.09,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1664558100000,
+      "deaths": 13,
+      "kills": 28,
+      "map": "de_dust2",
+      "mapStatsId": 144643,
+      "rating": 1.55,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 5995,
+        "name": "G2",
+      },
+    },
+    Object {
+      "date": 1664387400000,
+      "deaths": 7,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 144508,
+      "rating": 1.58,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1664387400000,
+      "deaths": 17,
+      "kills": 28,
+      "map": "de_inferno",
+      "mapStatsId": 144503,
+      "rating": 1.6,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1664387400000,
+      "deaths": 19,
+      "kills": 23,
+      "map": "de_mirage",
+      "mapStatsId": 144496,
+      "rating": 1.14,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1663508700000,
+      "deaths": 24,
+      "kills": 28,
+      "map": "de_nuke",
+      "mapStatsId": 143676,
+      "rating": 1.16,
+      "team1": Object {
+        "id": 11939,
+        "name": "Edward's Team",
+      },
+      "team2": Object {
+        "id": 11936,
+        "name": "Maikelele's Team",
+      },
+    },
+    Object {
+      "date": 1663508700000,
+      "deaths": 28,
+      "kills": 19,
+      "map": "de_mirage",
+      "mapStatsId": 143673,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 11939,
+        "name": "Edward's Team",
+      },
+      "team2": Object {
+        "id": 11936,
+        "name": "Maikelele's Team",
+      },
+    },
+    Object {
+      "date": 1663508700000,
+      "deaths": 23,
+      "kills": 30,
+      "map": "de_vertigo",
+      "mapStatsId": 143665,
+      "rating": 1.35,
+      "team1": Object {
+        "id": 11939,
+        "name": "Edward's Team",
+      },
+      "team2": Object {
+        "id": 11936,
+        "name": "Maikelele's Team",
+      },
+    },
+    Object {
+      "date": 1662312600000,
+      "deaths": 18,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 142705,
+      "rating": 1.13,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1662312600000,
+      "deaths": 15,
+      "kills": 18,
+      "map": "de_mirage",
+      "mapStatsId": 142698,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1662312600000,
+      "deaths": 16,
+      "kills": 10,
+      "map": "de_inferno",
+      "mapStatsId": 142691,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1662226200000,
+      "deaths": 20,
+      "kills": 26,
+      "map": "de_overpass",
+      "mapStatsId": 142642,
+      "rating": 1.26,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1662226200000,
+      "deaths": 21,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 142631,
+      "rating": 1.17,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1662226200000,
+      "deaths": 16,
+      "kills": 24,
+      "map": "de_inferno",
+      "mapStatsId": 142618,
+      "rating": 1.45,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1662114600000,
+      "deaths": 20,
+      "kills": 18,
+      "map": "de_dust2",
+      "mapStatsId": 142515,
+      "rating": 0.91,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7234,
+        "name": "Endpoint",
+      },
+    },
+    Object {
+      "date": 1662114600000,
+      "deaths": 14,
+      "kills": 10,
+      "map": "de_ancient",
+      "mapStatsId": 142512,
+      "rating": 0.7,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7234,
+        "name": "Endpoint",
+      },
+    },
+    Object {
+      "date": 1662044400000,
+      "deaths": 14,
+      "kills": 11,
+      "map": "de_inferno",
+      "mapStatsId": 142471,
+      "rating": 0.94,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1662044400000,
+      "deaths": 11,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 142463,
+      "rating": 1.61,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1662044400000,
+      "deaths": 20,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 142457,
+      "rating": 1,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1661941800000,
+      "deaths": 14,
+      "kills": 19,
+      "map": "de_dust2",
+      "mapStatsId": 142395,
+      "rating": 1.21,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7020,
+        "name": "Spirit",
+      },
+    },
+    Object {
+      "date": 1661941800000,
+      "deaths": 17,
+      "kills": 18,
+      "map": "de_nuke",
+      "mapStatsId": 142393,
+      "rating": 1.04,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7020,
+        "name": "Spirit",
+      },
+    },
+    Object {
+      "date": 1661617200000,
+      "deaths": 17,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 142190,
+      "rating": 1.37,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1661617200000,
+      "deaths": 16,
+      "kills": 13,
+      "map": "de_inferno",
+      "mapStatsId": 142170,
+      "rating": 1.01,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1658066400000,
+      "deaths": 20,
+      "kills": 17,
+      "map": "de_nuke",
+      "mapStatsId": 140900,
+      "rating": 0.87,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1658066400000,
+      "deaths": 19,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 140889,
+      "rating": 1.07,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1658066400000,
+      "deaths": 24,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 140881,
+      "rating": 0.89,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1658066400000,
+      "deaths": 18,
+      "kills": 25,
+      "map": "de_overpass",
+      "mapStatsId": 140872,
+      "rating": 1.33,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1658066400000,
+      "deaths": 18,
+      "kills": 25,
+      "map": "de_inferno",
+      "mapStatsId": 140861,
+      "rating": 1.38,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1657978200000,
+      "deaths": 25,
+      "kills": 23,
+      "map": "de_mirage",
+      "mapStatsId": 140823,
+      "rating": 0.92,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6665,
+        "name": "Astralis",
+      },
+    },
+    Object {
+      "date": 1657978200000,
+      "deaths": 10,
+      "kills": 26,
+      "map": "de_nuke",
+      "mapStatsId": 140822,
+      "rating": 1.8,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6665,
+        "name": "Astralis",
+      },
+    },
+    Object {
+      "date": 1657463400000,
+      "deaths": 14,
+      "kills": 22,
+      "map": "de_overpass",
+      "mapStatsId": 140590,
+      "rating": 1.33,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7718,
+        "name": "Movistar Riders",
+      },
+    },
+    Object {
+      "date": 1657463400000,
+      "deaths": 14,
+      "kills": 26,
+      "map": "de_mirage",
+      "mapStatsId": 140585,
+      "rating": 1.32,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7718,
+        "name": "Movistar Riders",
+      },
+    },
+    Object {
+      "date": 1657463400000,
+      "deaths": 18,
+      "kills": 25,
+      "map": "de_inferno",
+      "mapStatsId": 140582,
+      "rating": 1.29,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7718,
+        "name": "Movistar Riders",
+      },
+    },
+    Object {
+      "date": 1657288800000,
+      "deaths": 13,
+      "kills": 19,
+      "map": "de_nuke",
+      "mapStatsId": 140434,
+      "rating": 1.21,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1657288800000,
+      "deaths": 6,
+      "kills": 22,
+      "map": "de_overpass",
+      "mapStatsId": 140426,
+      "rating": 1.96,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1657202400000,
+      "deaths": 13,
+      "kills": 16,
+      "map": "de_inferno",
+      "mapStatsId": 140376,
+      "rating": 1.11,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+    },
+    Object {
+      "date": 1657202400000,
+      "deaths": 20,
+      "kills": 29,
+      "map": "de_mirage",
+      "mapStatsId": 140370,
+      "rating": 1.55,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+    },
+    Object {
+      "date": 1657202400000,
+      "deaths": 16,
+      "kills": 26,
+      "map": "de_nuke",
+      "mapStatsId": 140363,
+      "rating": 1.38,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+    },
+    Object {
+      "date": 1655656200000,
+      "deaths": 8,
+      "kills": 17,
+      "map": "de_overpass",
+      "mapStatsId": 139472,
+      "rating": 1.45,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1655656200000,
+      "deaths": 15,
+      "kills": 23,
+      "map": "de_mirage",
+      "mapStatsId": 139463,
+      "rating": 1.32,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1655563200000,
+      "deaths": 17,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 139439,
+      "rating": 1.5,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1655563200000,
+      "deaths": 20,
+      "kills": 26,
+      "map": "de_inferno",
+      "mapStatsId": 139436,
+      "rating": 1.41,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1655563200000,
+      "deaths": 14,
+      "kills": 23,
+      "map": "de_dust2",
+      "mapStatsId": 139430,
+      "rating": 1.47,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1655476200000,
+      "deaths": 10,
+      "kills": 28,
+      "map": "de_inferno",
+      "mapStatsId": 139397,
+      "rating": 2.29,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1655476200000,
+      "deaths": 11,
+      "kills": 18,
+      "map": "de_dust2",
+      "mapStatsId": 139392,
+      "rating": 1.44,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1655394000000,
+      "deaths": 10,
+      "kills": 19,
+      "map": "de_dust2",
+      "mapStatsId": 139354,
+      "rating": 1.21,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1655394000000,
+      "deaths": 13,
+      "kills": 28,
+      "map": "de_mirage",
+      "mapStatsId": 139344,
+      "rating": 1.74,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1655307000000,
+      "deaths": 23,
+      "kills": 15,
+      "map": "de_ancient",
+      "mapStatsId": 139314,
+      "rating": 0.76,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1655307000000,
+      "deaths": 18,
+      "kills": 16,
+      "map": "de_mirage",
+      "mapStatsId": 139311,
+      "rating": 0.96,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1655307000000,
+      "deaths": 13,
+      "kills": 22,
+      "map": "de_inferno",
+      "mapStatsId": 139308,
+      "rating": 1.47,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 10503,
+        "name": "OG",
+      },
+    },
+    Object {
+      "date": 1653242400000,
+      "deaths": 22,
+      "kills": 17,
+      "map": "de_nuke",
+      "mapStatsId": 138277,
+      "rating": 0.73,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1653242400000,
+      "deaths": 30,
+      "kills": 28,
+      "map": "de_inferno",
+      "mapStatsId": 138273,
+      "rating": 1.04,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1653157500000,
+      "deaths": 16,
+      "kills": 30,
+      "map": "de_dust2",
+      "mapStatsId": 138220,
+      "rating": 1.78,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4869,
+        "name": "ENCE",
+      },
+    },
+    Object {
+      "date": 1653157500000,
+      "deaths": 15,
+      "kills": 28,
+      "map": "de_nuke",
+      "mapStatsId": 138219,
+      "rating": 1.75,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 4869,
+        "name": "ENCE",
+      },
+    },
+    Object {
+      "date": 1653067800000,
+      "deaths": 13,
+      "kills": 19,
+      "map": "de_nuke",
+      "mapStatsId": 138189,
+      "rating": 1.26,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1653067800000,
+      "deaths": 17,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 138187,
+      "rating": 1.08,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1653067800000,
+      "deaths": 17,
+      "kills": 16,
+      "map": "de_inferno",
+      "mapStatsId": 138184,
+      "rating": 0.9,
+      "team1": Object {
+        "id": 4608,
+        "name": "Natus Vincere",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
     Object {
       "date": 1652631300000,
       "deaths": 14,
@@ -45,7 +2477,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -61,7 +2493,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -77,7 +2509,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -125,7 +2557,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -141,7 +2573,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -637,7 +3069,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -653,7 +3085,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -669,7 +3101,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -685,7 +3117,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -701,7 +3133,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -1277,7 +3709,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -1293,7 +3725,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -2413,7 +4845,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -2429,7 +4861,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -2797,7 +5229,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -2813,7 +5245,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -4541,7 +6973,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -4557,7 +6989,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -4573,7 +7005,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -4621,7 +7053,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -4637,7 +7069,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -4749,7 +7181,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -4765,7 +7197,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -5325,7 +7757,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -5341,7 +7773,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -5821,7 +8253,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -5837,7 +8269,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -5937,134 +8369,6 @@ Object {
       },
     },
     Object {
-      "date": 1590944700000,
-      "deaths": 19,
-      "kills": 16,
-      "map": "de_inferno",
-      "mapStatsId": 103460,
-      "rating": 0.94,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-    },
-    Object {
-      "date": 1590944700000,
-      "deaths": 15,
-      "kills": 18,
-      "map": "de_train",
-      "mapStatsId": 103458,
-      "rating": 1.19,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-    },
-    Object {
-      "date": 1590944700000,
-      "deaths": 13,
-      "kills": 23,
-      "map": "de_nuke",
-      "mapStatsId": 103455,
-      "rating": 1.47,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-    },
-    Object {
-      "date": 1590944700000,
-      "deaths": 8,
-      "kills": 21,
-      "map": "de_dust2",
-      "mapStatsId": 103448,
-      "rating": 2.12,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-    },
-    Object {
-      "date": 1590944700000,
-      "deaths": 13,
-      "kills": 21,
-      "map": "de_mirage",
-      "mapStatsId": 103441,
-      "rating": 1.49,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-    },
-    Object {
-      "date": 1590847200000,
-      "deaths": 17,
-      "kills": 27,
-      "map": "de_nuke",
-      "mapStatsId": 103386,
-      "rating": 1.36,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 6667,
-        "name": "FaZe",
-      },
-    },
-    Object {
-      "date": 1590847200000,
-      "deaths": 14,
-      "kills": 12,
-      "map": "de_vertigo",
-      "mapStatsId": 103377,
-      "rating": 0.93,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 6667,
-        "name": "FaZe",
-      },
-    },
-    Object {
-      "date": 1590847200000,
-      "deaths": 12,
-      "kills": 28,
-      "map": "de_inferno",
-      "mapStatsId": 103374,
-      "rating": 1.77,
-      "team1": Object {
-        "id": 4608,
-        "name": "Natus Vincere",
-      },
-      "team2": Object {
-        "id": 6667,
-        "name": "FaZe",
-      },
-    },
-    Object {
       "date": 1590766200000,
       "deaths": 18,
       "kills": 27,
@@ -6077,7 +8381,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -6093,7 +8397,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -6653,7 +8957,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -6669,7 +8973,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -6685,7 +8989,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -6925,7 +9229,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -6941,7 +9245,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -7677,7 +9981,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -7997,7 +10301,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -8013,7 +10317,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -8077,7 +10381,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -8093,7 +10397,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -8349,7 +10653,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -8365,7 +10669,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -8525,7 +10829,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -8541,7 +10845,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -8685,7 +10989,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -9165,7 +11469,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -9181,7 +11485,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -9197,7 +11501,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -9741,7 +12045,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -9997,7 +12301,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -10013,7 +12317,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -10029,7 +12333,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -10573,7 +12877,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -10589,7 +12893,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -10861,7 +13165,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -11549,7 +13853,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -11565,7 +13869,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -11581,7 +13885,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -12413,7 +14717,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -12429,7 +14733,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -14845,7 +17149,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -14861,7 +17165,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -15021,7 +17325,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -15037,7 +17341,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -15053,7 +17357,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -15149,7 +17453,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -15165,7 +17469,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -15513,7 +17817,7 @@ Object {
       "rating": 1.59,
       "team1": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
       "team2": Object {
         "id": 5995,
@@ -15529,7 +17833,7 @@ Object {
       "rating": 1.21,
       "team1": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
       "team2": Object {
         "id": 5995,
@@ -16029,7 +18333,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -16045,7 +18349,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -16877,7 +19181,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -16893,7 +19197,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -17405,7 +19709,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -17421,7 +19725,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -19293,7 +21597,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -19309,7 +21613,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -19533,7 +21837,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -19725,7 +22029,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -20605,7 +22909,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -20621,7 +22925,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -20637,7 +22941,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -20749,7 +23053,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -21213,7 +23517,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -22973,7 +25277,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -22989,7 +25293,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -23117,7 +25421,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -23485,7 +25789,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -23949,7 +26253,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -24125,7 +26429,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -24477,7 +26781,7 @@ Object {
       },
       "team2": Object {
         "id": 4411,
-        "name": "NIP",
+        "name": "Ninjas in Pyjamas",
       },
     },
     Object {
@@ -24625,20 +26929,20 @@ Object {
       },
     },
   ],
-  "name": "Aleksandr Kostyliev",
+  "name": "Oleksandr Kostyliev",
   "overviewStatistics": Object {
     "assistsPerRound": 0.1,
-    "damagePerRound": 86.5,
-    "deaths": 25863,
-    "deathsPerRound": 0.64,
-    "grenadeDamagePerRound": 2.4,
-    "headshots": 41.2,
+    "damagePerRound": 85.7,
+    "deaths": 28277,
+    "deathsPerRound": 0.63,
+    "grenadeDamagePerRound": 2.5,
+    "headshots": 41.1,
     "kdRatio": 1.34,
-    "kills": 34749,
-    "killsPerRound": 0.86,
-    "mapsPlayed": 1537,
-    "rating1": 1.25,
-    "roundsPlayed": 40596,
+    "kills": 37807,
+    "killsPerRound": 0.85,
+    "mapsPlayed": 1681,
+    "rating1": 1.24,
+    "roundsPlayed": 44531,
     "savedByTeammatePerRound": 0.08,
     "savedTeammatesPerRound": 0.11,
   },
@@ -25041,36 +27345,2052 @@ Object {
 
 exports[`getPlayerStats 3`] = `
 Object {
-  "age": 21,
+  "age": 22,
   "country": Object {
     "code": "KZ",
     "name": "Kazakhstan",
   },
   "id": 11940,
   "ign": "neaLaN",
-  "image": "https://img-cdn.hltv.org/playerbodyshot/Qt3fS2N8tneajbvxDirlaw.png?ixlib=java-2.1.0&w=400&s=f0888eb650dbab4a417a3e0254681a27",
+  "image": "https://img-cdn.hltv.org/playerbodyshot/JkCqSAdMVEf0I1v4iSaLml.png?ixlib=java-2.1.0&w=400&s=95166f47213a71c99c89130c1a40f12c",
   "individualStatistics": Object {
-    "firstKillInWonRounds": 14.1,
-    "fiveKillRounds": 17,
-    "fourKillRounds": 127,
-    "grenadeKills": 208,
-    "oneKillRounds": 8283,
-    "openingDeaths": 3031,
+    "firstKillInWonRounds": 14.2,
+    "fiveKillRounds": 18,
+    "fourKillRounds": 141,
+    "grenadeKills": 232,
+    "oneKillRounds": 9285,
+    "openingDeaths": 3425,
     "openingKillRating": 0.99,
-    "openingKillRatio": 0.92,
-    "openingKills": 2790,
-    "otherKills": 76,
-    "pistolKills": 3111,
-    "rifleKills": 13511,
-    "roundsWithKills": 12561,
-    "smgKills": 970,
-    "sniperKills": 229,
-    "teamWinPercentAfterFirstKill": 71.5,
-    "threeKillRounds": 920,
-    "twoKillRounds": 3214,
-    "zeroKillRounds": 15243,
+    "openingKillRatio": 0.91,
+    "openingKills": 3133,
+    "otherKills": 83,
+    "pistolKills": 3478,
+    "rifleKills": 15122,
+    "roundsWithKills": 14058,
+    "smgKills": 1059,
+    "sniperKills": 258,
+    "teamWinPercentAfterFirstKill": 71.4,
+    "threeKillRounds": 1019,
+    "twoKillRounds": 3595,
+    "zeroKillRounds": 17144,
   },
   "matches": Array [
+    Object {
+      "date": 1685462400000,
+      "deaths": 25,
+      "kills": 17,
+      "map": "de_overpass",
+      "mapStatsId": 157869,
+      "rating": 0.83,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1685462400000,
+      "deaths": 15,
+      "kills": 9,
+      "map": "default",
+      "mapStatsId": 157863,
+      "rating": 0.75,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1685386800000,
+      "deaths": 23,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 157789,
+      "rating": 0.92,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1684547700000,
+      "deaths": 14,
+      "kills": 15,
+      "map": "de_mirage",
+      "mapStatsId": 156964,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 10813,
+        "name": "Eros",
+      },
+    },
+    Object {
+      "date": 1684541400000,
+      "deaths": 16,
+      "kills": 25,
+      "map": "de_mirage",
+      "mapStatsId": 156957,
+      "rating": 1.4,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 12279,
+        "name": "puggers",
+      },
+    },
+    Object {
+      "date": 1684288200000,
+      "deaths": 19,
+      "kills": 10,
+      "map": "de_mirage",
+      "mapStatsId": 156884,
+      "rating": 0.48,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11948,
+        "name": "Nouns",
+      },
+    },
+    Object {
+      "date": 1684284300000,
+      "deaths": 15,
+      "kills": 19,
+      "map": "de_mirage",
+      "mapStatsId": 156880,
+      "rating": 1.25,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 12105,
+        "name": "Cartel terraza",
+      },
+    },
+    Object {
+      "date": 1683104400000,
+      "deaths": 18,
+      "kills": 10,
+      "map": "de_nuke",
+      "mapStatsId": 156399,
+      "rating": 0.62,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11811,
+        "name": "Monte",
+      },
+    },
+    Object {
+      "date": 1683104400000,
+      "deaths": 32,
+      "kills": 22,
+      "map": "default",
+      "mapStatsId": 156394,
+      "rating": 0.88,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11811,
+        "name": "Monte",
+      },
+    },
+    Object {
+      "date": 1682957400000,
+      "deaths": 17,
+      "kills": 14,
+      "map": "de_inferno",
+      "mapStatsId": 156319,
+      "rating": 0.96,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4674,
+        "name": "LDLC",
+      },
+    },
+    Object {
+      "date": 1682957400000,
+      "deaths": 13,
+      "kills": 21,
+      "map": "default",
+      "mapStatsId": 156313,
+      "rating": 1.37,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4674,
+        "name": "LDLC",
+      },
+    },
+    Object {
+      "date": 1682668800000,
+      "deaths": 20,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 156091,
+      "rating": 1.02,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11737,
+        "name": "EYEBALLERS",
+      },
+    },
+    Object {
+      "date": 1682668800000,
+      "deaths": 14,
+      "kills": 17,
+      "map": "de_overpass",
+      "mapStatsId": 156085,
+      "rating": 1.17,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11737,
+        "name": "EYEBALLERS",
+      },
+    },
+    Object {
+      "date": 1682668800000,
+      "deaths": 22,
+      "kills": 14,
+      "map": "de_mirage",
+      "mapStatsId": 156084,
+      "rating": 0.69,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11737,
+        "name": "EYEBALLERS",
+      },
+    },
+    Object {
+      "date": 1681605000000,
+      "deaths": 17,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 155445,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 10464,
+        "name": "timbermen",
+      },
+    },
+    Object {
+      "date": 1681600800000,
+      "deaths": 14,
+      "kills": 18,
+      "map": "de_inferno",
+      "mapStatsId": 155429,
+      "rating": 1.22,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11613,
+        "name": "Snakes Den",
+      },
+    },
+    Object {
+      "date": 1681259400000,
+      "deaths": 18,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 155115,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 12241,
+        "name": "WITHOUT WARNING",
+      },
+    },
+    Object {
+      "date": 1680976800000,
+      "deaths": 19,
+      "kills": 11,
+      "map": "de_overpass",
+      "mapStatsId": 154995,
+      "rating": 0.72,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 10669,
+        "name": "Paquetá",
+      },
+    },
+    Object {
+      "date": 1680976800000,
+      "deaths": 22,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 154994,
+      "rating": 1.19,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 10669,
+        "name": "Paquetá",
+      },
+    },
+    Object {
+      "date": 1680976800000,
+      "deaths": 16,
+      "kills": 7,
+      "map": "de_inferno",
+      "mapStatsId": 154990,
+      "rating": 0.65,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 10669,
+        "name": "Paquetá",
+      },
+    },
+    Object {
+      "date": 1680894600000,
+      "deaths": 22,
+      "kills": 11,
+      "map": "de_mirage",
+      "mapStatsId": 154924,
+      "rating": 0.72,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1680828000000,
+      "deaths": 17,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 154874,
+      "rating": 1.06,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9455,
+        "name": "Imperial",
+      },
+    },
+    Object {
+      "date": 1677324600000,
+      "deaths": 16,
+      "kills": 13,
+      "map": "de_nuke",
+      "mapStatsId": 152062,
+      "rating": 0.81,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11585,
+        "name": "IHC",
+      },
+    },
+    Object {
+      "date": 1677324600000,
+      "deaths": 13,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 152044,
+      "rating": 1.53,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11585,
+        "name": "IHC",
+      },
+    },
+    Object {
+      "date": 1677324600000,
+      "deaths": 17,
+      "kills": 18,
+      "map": "de_inferno",
+      "mapStatsId": 152038,
+      "rating": 1.08,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11585,
+        "name": "IHC",
+      },
+    },
+    Object {
+      "date": 1677151800000,
+      "deaths": 21,
+      "kills": 16,
+      "map": "de_overpass",
+      "mapStatsId": 151887,
+      "rating": 0.84,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1677151800000,
+      "deaths": 18,
+      "kills": 16,
+      "map": "default",
+      "mapStatsId": 151878,
+      "rating": 1.03,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1677090600000,
+      "deaths": 16,
+      "kills": 11,
+      "map": "de_mirage",
+      "mapStatsId": 151850,
+      "rating": 0.69,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1677090600000,
+      "deaths": 18,
+      "kills": 8,
+      "map": "de_inferno",
+      "mapStatsId": 151845,
+      "rating": 0.63,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1676861100000,
+      "deaths": 17,
+      "kills": 20,
+      "map": "de_overpass",
+      "mapStatsId": 151707,
+      "rating": 1.19,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 6947,
+        "name": "TeamOne",
+      },
+    },
+    Object {
+      "date": 1676861100000,
+      "deaths": 23,
+      "kills": 25,
+      "map": "default",
+      "mapStatsId": 151706,
+      "rating": 1.2,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 6947,
+        "name": "TeamOne",
+      },
+    },
+    Object {
+      "date": 1676845800000,
+      "deaths": 8,
+      "kills": 13,
+      "map": "de_overpass",
+      "mapStatsId": 151692,
+      "rating": 1.29,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5479,
+        "name": "Mythic",
+      },
+    },
+    Object {
+      "date": 1676845800000,
+      "deaths": 12,
+      "kills": 21,
+      "map": "de_inferno",
+      "mapStatsId": 151686,
+      "rating": 1.44,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5479,
+        "name": "Mythic",
+      },
+    },
+    Object {
+      "date": 1676833200000,
+      "deaths": 20,
+      "kills": 18,
+      "map": "default",
+      "mapStatsId": 151672,
+      "rating": 0.98,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9215,
+        "name": "MIBR",
+      },
+    },
+    Object {
+      "date": 1676833200000,
+      "deaths": 15,
+      "kills": 18,
+      "map": "de_overpass",
+      "mapStatsId": 151667,
+      "rating": 1.22,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9215,
+        "name": "MIBR",
+      },
+    },
+    Object {
+      "date": 1676763000000,
+      "deaths": 12,
+      "kills": 14,
+      "map": "de_inferno",
+      "mapStatsId": 151609,
+      "rating": 1.17,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11826,
+        "name": "Vendetta",
+      },
+    },
+    Object {
+      "date": 1676696400000,
+      "deaths": 15,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 151475,
+      "rating": 1.37,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11538,
+        "name": "REIGN",
+      },
+    },
+    Object {
+      "date": 1676678400000,
+      "deaths": 23,
+      "kills": 32,
+      "map": "de_nuke",
+      "mapStatsId": 151454,
+      "rating": 1.36,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 12154,
+        "name": "yur",
+      },
+    },
+    Object {
+      "date": 1676249400000,
+      "deaths": 20,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 151020,
+      "rating": 0.86,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9943,
+        "name": "ATK",
+      },
+    },
+    Object {
+      "date": 1676242800000,
+      "deaths": 25,
+      "kills": 30,
+      "map": "de_nuke",
+      "mapStatsId": 151016,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 12141,
+        "name": "Demon Time",
+      },
+    },
+    Object {
+      "date": 1675512000000,
+      "deaths": 19,
+      "kills": 17,
+      "map": "default",
+      "mapStatsId": 150529,
+      "rating": 0.92,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8813,
+        "name": "Illuminar",
+      },
+    },
+    Object {
+      "date": 1675512000000,
+      "deaths": 28,
+      "kills": 26,
+      "map": "de_nuke",
+      "mapStatsId": 150522,
+      "rating": 0.98,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8813,
+        "name": "Illuminar",
+      },
+    },
+    Object {
+      "date": 1675363800000,
+      "deaths": 22,
+      "kills": 15,
+      "map": "de_mirage",
+      "mapStatsId": 150447,
+      "rating": 0.78,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8637,
+        "name": "Sprout",
+      },
+    },
+    Object {
+      "date": 1675363800000,
+      "deaths": 19,
+      "kills": 24,
+      "map": "de_ancient",
+      "mapStatsId": 150439,
+      "rating": 1.3,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8637,
+        "name": "Sprout",
+      },
+    },
+    Object {
+      "date": 1675254600000,
+      "deaths": 18,
+      "kills": 11,
+      "map": "de_inferno",
+      "mapStatsId": 150351,
+      "rating": 0.82,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4991,
+        "name": "fnatic",
+      },
+    },
+    Object {
+      "date": 1674828000000,
+      "deaths": 16,
+      "kills": 19,
+      "map": "de_overpass",
+      "mapStatsId": 150052,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674828000000,
+      "deaths": 18,
+      "kills": 16,
+      "map": "de_inferno",
+      "mapStatsId": 150046,
+      "rating": 1,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674828000000,
+      "deaths": 19,
+      "kills": 10,
+      "map": "default",
+      "mapStatsId": 150037,
+      "rating": 0.63,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5005,
+        "name": "Complexity",
+      },
+    },
+    Object {
+      "date": 1674568800000,
+      "deaths": 18,
+      "kills": 7,
+      "map": "de_mirage",
+      "mapStatsId": 149824,
+      "rating": 0.45,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1674568800000,
+      "deaths": 17,
+      "kills": 6,
+      "map": "de_overpass",
+      "mapStatsId": 149819,
+      "rating": 0.34,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1674568800000,
+      "deaths": 18,
+      "kills": 25,
+      "map": "de_nuke",
+      "mapStatsId": 149812,
+      "rating": 1.44,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1674315600000,
+      "deaths": 15,
+      "kills": 5,
+      "map": "de_inferno",
+      "mapStatsId": 149622,
+      "rating": 0.5,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1674315600000,
+      "deaths": 19,
+      "kills": 13,
+      "map": "de_overpass",
+      "mapStatsId": 149617,
+      "rating": 0.81,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9565,
+        "name": "Vitality",
+      },
+    },
+    Object {
+      "date": 1674136800000,
+      "deaths": 25,
+      "kills": 11,
+      "map": "de_overpass",
+      "mapStatsId": 149509,
+      "rating": 0.65,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1674136800000,
+      "deaths": 17,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 149503,
+      "rating": 1.17,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1674136800000,
+      "deaths": 19,
+      "kills": 9,
+      "map": "de_inferno",
+      "mapStatsId": 149495,
+      "rating": 0.7,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7175,
+        "name": "Heroic",
+      },
+    },
+    Object {
+      "date": 1667422800000,
+      "deaths": 20,
+      "kills": 14,
+      "map": "de_overpass",
+      "mapStatsId": 146521,
+      "rating": 0.77,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1667422800000,
+      "deaths": 19,
+      "kills": 5,
+      "map": "de_dust2",
+      "mapStatsId": 146518,
+      "rating": 0.27,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1667311200000,
+      "deaths": 26,
+      "kills": 26,
+      "map": "de_nuke",
+      "mapStatsId": 146456,
+      "rating": 0.95,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9996,
+        "name": "9z",
+      },
+    },
+    Object {
+      "date": 1667257200000,
+      "deaths": 18,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 146448,
+      "rating": 1.14,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+    },
+    Object {
+      "date": 1667239200000,
+      "deaths": 17,
+      "kills": 22,
+      "map": "de_nuke",
+      "mapStatsId": 146431,
+      "rating": 1.24,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11585,
+        "name": "IHC",
+      },
+    },
+    Object {
+      "date": 1666376400000,
+      "deaths": 18,
+      "kills": 10,
+      "map": "de_nuke",
+      "mapStatsId": 145916,
+      "rating": 0.54,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11837,
+        "name": "Fluxo",
+      },
+    },
+    Object {
+      "date": 1666376400000,
+      "deaths": 18,
+      "kills": 17,
+      "map": "de_mirage",
+      "mapStatsId": 145912,
+      "rating": 1,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11837,
+        "name": "Fluxo",
+      },
+    },
+    Object {
+      "date": 1666376400000,
+      "deaths": 29,
+      "kills": 15,
+      "map": "de_dust2",
+      "mapStatsId": 145903,
+      "rating": 0.68,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11837,
+        "name": "Fluxo",
+      },
+    },
+    Object {
+      "date": 1665325800000,
+      "deaths": 26,
+      "kills": 27,
+      "map": "de_overpass",
+      "mapStatsId": 145100,
+      "rating": 1.14,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1665325800000,
+      "deaths": 35,
+      "kills": 34,
+      "map": "de_ancient",
+      "mapStatsId": 145089,
+      "rating": 1.13,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1665064800000,
+      "deaths": 19,
+      "kills": 15,
+      "map": "de_mirage",
+      "mapStatsId": 144932,
+      "rating": 1.01,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9996,
+        "name": "9z",
+      },
+    },
+    Object {
+      "date": 1665064800000,
+      "deaths": 20,
+      "kills": 14,
+      "map": "de_dust2",
+      "mapStatsId": 144927,
+      "rating": 0.87,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9996,
+        "name": "9z",
+      },
+    },
+    Object {
+      "date": 1665064800000,
+      "deaths": 12,
+      "kills": 12,
+      "map": "de_overpass",
+      "mapStatsId": 144921,
+      "rating": 1.12,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9996,
+        "name": "9z",
+      },
+    },
+    Object {
+      "date": 1664985600000,
+      "deaths": 19,
+      "kills": 23,
+      "map": "de_nuke",
+      "mapStatsId": 144873,
+      "rating": 1.13,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1664968500000,
+      "deaths": 12,
+      "kills": 14,
+      "map": "de_mirage",
+      "mapStatsId": 144858,
+      "rating": 1.03,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11948,
+        "name": "Nouns",
+      },
+    },
+    Object {
+      "date": 1664127000000,
+      "deaths": 22,
+      "kills": 18,
+      "map": "de_nuke",
+      "mapStatsId": 144296,
+      "rating": 0.9,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1664127000000,
+      "deaths": 23,
+      "kills": 26,
+      "map": "de_overpass",
+      "mapStatsId": 144284,
+      "rating": 1.19,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    Object {
+      "date": 1664015400000,
+      "deaths": 17,
+      "kills": 13,
+      "map": "de_nuke",
+      "mapStatsId": 144176,
+      "rating": 0.77,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7718,
+        "name": "Movistar Riders",
+      },
+    },
+    Object {
+      "date": 1664015400000,
+      "deaths": 14,
+      "kills": 16,
+      "map": "de_overpass",
+      "mapStatsId": 144172,
+      "rating": 1.15,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7718,
+        "name": "Movistar Riders",
+      },
+    },
+    Object {
+      "date": 1663941600000,
+      "deaths": 12,
+      "kills": 16,
+      "map": "de_dust2",
+      "mapStatsId": 144095,
+      "rating": 1.24,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1663941600000,
+      "deaths": 14,
+      "kills": 25,
+      "map": "de_overpass",
+      "mapStatsId": 144088,
+      "rating": 1.52,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11251,
+        "name": "Eternal Fire",
+      },
+    },
+    Object {
+      "date": 1663867800000,
+      "deaths": 19,
+      "kills": 13,
+      "map": "de_dust2",
+      "mapStatsId": 144022,
+      "rating": 0.86,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1663867800000,
+      "deaths": 15,
+      "kills": 8,
+      "map": "de_inferno",
+      "mapStatsId": 144012,
+      "rating": 0.72,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5973,
+        "name": "Liquid",
+      },
+    },
+    Object {
+      "date": 1663756200000,
+      "deaths": 19,
+      "kills": 7,
+      "map": "de_dust2",
+      "mapStatsId": 143875,
+      "rating": 0.43,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1663756200000,
+      "deaths": 20,
+      "kills": 16,
+      "map": "de_inferno",
+      "mapStatsId": 143872,
+      "rating": 0.97,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 5752,
+        "name": "Cloud9",
+      },
+    },
+    Object {
+      "date": 1662156000000,
+      "deaths": 12,
+      "kills": 10,
+      "map": "de_mirage",
+      "mapStatsId": 142561,
+      "rating": 0.95,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 9943,
+        "name": "ATK",
+      },
+    },
+    Object {
+      "date": 1662075000000,
+      "deaths": 16,
+      "kills": 22,
+      "map": "de_ancient",
+      "mapStatsId": 142500,
+      "rating": 1.22,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11599,
+        "name": "BHOP",
+      },
+    },
+    Object {
+      "date": 1662075000000,
+      "deaths": 21,
+      "kills": 14,
+      "map": "de_inferno",
+      "mapStatsId": 142497,
+      "rating": 0.98,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11599,
+        "name": "BHOP",
+      },
+    },
+    Object {
+      "date": 1662069600000,
+      "deaths": 21,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 142493,
+      "rating": 0.94,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 6947,
+        "name": "TeamOne",
+      },
+    },
+    Object {
+      "date": 1661994600000,
+      "deaths": 25,
+      "kills": 23,
+      "map": "de_nuke",
+      "mapStatsId": 142430,
+      "rating": 0.94,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 11388,
+        "name": "Limitless",
+      },
+    },
+    Object {
+      "date": 1661434800000,
+      "deaths": 19,
+      "kills": 14,
+      "map": "de_inferno",
+      "mapStatsId": 142034,
+      "rating": 0.84,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1661434800000,
+      "deaths": 11,
+      "kills": 15,
+      "map": "de_overpass",
+      "mapStatsId": 142029,
+      "rating": 1.09,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1661434800000,
+      "deaths": 18,
+      "kills": 17,
+      "map": "de_nuke",
+      "mapStatsId": 142023,
+      "rating": 0.95,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 4411,
+        "name": "Ninjas in Pyjamas",
+      },
+    },
+    Object {
+      "date": 1661092800000,
+      "deaths": 18,
+      "kills": 8,
+      "map": "de_mirage",
+      "mapStatsId": 141798,
+      "rating": 0.56,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 7532,
+        "name": "BIG",
+      },
+    },
+    Object {
+      "date": 1661079600000,
+      "deaths": 20,
+      "kills": 10,
+      "map": "de_inferno",
+      "mapStatsId": 141785,
+      "rating": 0.71,
+      "team1": Object {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "team2": Object {
+        "id": 6667,
+        "name": "FaZe",
+      },
+    },
+    Object {
+      "date": 1657990800000,
+      "deaths": 21,
+      "kills": 16,
+      "map": "de_dust2",
+      "mapStatsId": 140837,
+      "rating": 0.85,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11387,
+        "name": "UNGENTIUM",
+      },
+    },
+    Object {
+      "date": 1657990800000,
+      "deaths": 18,
+      "kills": 9,
+      "map": "de_inferno",
+      "mapStatsId": 140832,
+      "rating": 0.71,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11387,
+        "name": "UNGENTIUM",
+      },
+    },
+    Object {
+      "date": 1657990800000,
+      "deaths": 17,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 140827,
+      "rating": 0.71,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11387,
+        "name": "UNGENTIUM",
+      },
+    },
+    Object {
+      "date": 1657904400000,
+      "deaths": 22,
+      "kills": 12,
+      "map": "de_overpass",
+      "mapStatsId": 140812,
+      "rating": 0.62,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10888,
+        "name": "EC Kyiv",
+      },
+    },
+    Object {
+      "date": 1657904400000,
+      "deaths": 21,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 140805,
+      "rating": 0.99,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10888,
+        "name": "EC Kyiv",
+      },
+    },
+    Object {
+      "date": 1654956000000,
+      "deaths": 18,
+      "kills": 17,
+      "map": "de_ancient",
+      "mapStatsId": 139197,
+      "rating": 1.07,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11665,
+        "name": "ex-MAD Lions",
+      },
+    },
+    Object {
+      "date": 1654956000000,
+      "deaths": 18,
+      "kills": 23,
+      "map": "de_mirage",
+      "mapStatsId": 139193,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11665,
+        "name": "ex-MAD Lions",
+      },
+    },
+    Object {
+      "date": 1654794000000,
+      "deaths": 15,
+      "kills": 18,
+      "map": "de_ancient",
+      "mapStatsId": 139136,
+      "rating": 1.07,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10621,
+        "name": "1WIN",
+      },
+    },
+    Object {
+      "date": 1654794000000,
+      "deaths": 19,
+      "kills": 14,
+      "map": "de_dust2",
+      "mapStatsId": 139131,
+      "rating": 0.94,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10621,
+        "name": "1WIN",
+      },
+    },
+    Object {
+      "date": 1654707600000,
+      "deaths": 24,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 139081,
+      "rating": 0.87,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1654707600000,
+      "deaths": 20,
+      "kills": 17,
+      "map": "de_nuke",
+      "mapStatsId": 139079,
+      "rating": 0.9,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1654707600000,
+      "deaths": 16,
+      "kills": 25,
+      "map": "de_ancient",
+      "mapStatsId": 139077,
+      "rating": 1.38,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1654524000000,
+      "deaths": 17,
+      "kills": 19,
+      "map": "de_ancient",
+      "mapStatsId": 138996,
+      "rating": 1.04,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 4762,
+        "name": "Hellslayers",
+      },
+    },
+    Object {
+      "date": 1654524000000,
+      "deaths": 21,
+      "kills": 18,
+      "map": "de_overpass",
+      "mapStatsId": 138993,
+      "rating": 0.82,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 4762,
+        "name": "Hellslayers",
+      },
+    },
+    Object {
+      "date": 1654016400000,
+      "deaths": 20,
+      "kills": 22,
+      "map": "de_dust2",
+      "mapStatsId": 138768,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 8637,
+        "name": "Sprout",
+      },
+    },
+    Object {
+      "date": 1654016400000,
+      "deaths": 19,
+      "kills": 20,
+      "map": "de_mirage",
+      "mapStatsId": 138758,
+      "rating": 1.06,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 8637,
+        "name": "Sprout",
+      },
+    },
+    Object {
+      "date": 1654016400000,
+      "deaths": 18,
+      "kills": 18,
+      "map": "de_ancient",
+      "mapStatsId": 138752,
+      "rating": 1,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 8637,
+        "name": "Sprout",
+      },
+    },
+    Object {
+      "date": 1653757200000,
+      "deaths": 19,
+      "kills": 12,
+      "map": "de_overpass",
+      "mapStatsId": 138608,
+      "rating": 0.66,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11665,
+        "name": "ex-MAD Lions",
+      },
+    },
+    Object {
+      "date": 1653757200000,
+      "deaths": 20,
+      "kills": 15,
+      "map": "de_vertigo",
+      "mapStatsId": 138595,
+      "rating": 0.83,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11665,
+        "name": "ex-MAD Lions",
+      },
+    },
+    Object {
+      "date": 1653746400000,
+      "deaths": 16,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 138586,
+      "rating": 0.95,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11387,
+        "name": "UNGENTIUM",
+      },
+    },
+    Object {
+      "date": 1653746400000,
+      "deaths": 28,
+      "kills": 29,
+      "map": "de_ancient",
+      "mapStatsId": 138578,
+      "rating": 1.11,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11387,
+        "name": "UNGENTIUM",
+      },
+    },
+    Object {
+      "date": 1653571800000,
+      "deaths": 18,
+      "kills": 19,
+      "map": "de_nuke",
+      "mapStatsId": 138472,
+      "rating": 1,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 8135,
+        "name": "FORZE",
+      },
+    },
+    Object {
+      "date": 1653571800000,
+      "deaths": 21,
+      "kills": 14,
+      "map": "de_mirage",
+      "mapStatsId": 138465,
+      "rating": 0.83,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 8135,
+        "name": "FORZE",
+      },
+    },
+    Object {
+      "date": 1653501600000,
+      "deaths": 18,
+      "kills": 25,
+      "map": "de_dust2",
+      "mapStatsId": 138449,
+      "rating": 1.3,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1653501600000,
+      "deaths": 17,
+      "kills": 17,
+      "map": "de_ancient",
+      "mapStatsId": 138441,
+      "rating": 0.96,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1653501600000,
+      "deaths": 20,
+      "kills": 17,
+      "map": "de_mirage",
+      "mapStatsId": 138426,
+      "rating": 0.97,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 10831,
+        "name": "Entropiq",
+      },
+    },
+    Object {
+      "date": 1653485400000,
+      "deaths": 21,
+      "kills": 17,
+      "map": "de_dust2",
+      "mapStatsId": 138415,
+      "rating": 1.02,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11501,
+        "name": "HEET",
+      },
+    },
+    Object {
+      "date": 1653485400000,
+      "deaths": 18,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 138409,
+      "rating": 0.89,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11501,
+        "name": "HEET",
+      },
+    },
+    Object {
+      "date": 1653485400000,
+      "deaths": 23,
+      "kills": 22,
+      "map": "de_overpass",
+      "mapStatsId": 138398,
+      "rating": 1,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11501,
+        "name": "HEET",
+      },
+    },
+    Object {
+      "date": 1653476400000,
+      "deaths": 19,
+      "kills": 13,
+      "map": "de_dust2",
+      "mapStatsId": 138393,
+      "rating": 0.75,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 7653,
+        "name": "Isurus",
+      },
+    },
+    Object {
+      "date": 1653476400000,
+      "deaths": 30,
+      "kills": 40,
+      "map": "de_inferno",
+      "mapStatsId": 138389,
+      "rating": 1.49,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 7653,
+        "name": "Isurus",
+      },
+    },
+    Object {
+      "date": 1653066900000,
+      "deaths": 13,
+      "kills": 12,
+      "map": "de_mirage",
+      "mapStatsId": 138186,
+      "rating": 0.94,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11651,
+        "name": "CloudRunners",
+      },
+    },
+    Object {
+      "date": 1653066900000,
+      "deaths": 11,
+      "kills": 16,
+      "map": "de_inferno",
+      "mapStatsId": 138183,
+      "rating": 1.18,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11651,
+        "name": "CloudRunners",
+      },
+    },
+    Object {
+      "date": 1653062400000,
+      "deaths": 9,
+      "kills": 23,
+      "map": "de_inferno",
+      "mapStatsId": 138178,
+      "rating": 1.86,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11702,
+        "name": "MOONBOYS",
+      },
+    },
+    Object {
+      "date": 1652991300000,
+      "deaths": 15,
+      "kills": 21,
+      "map": "de_mirage",
+      "mapStatsId": 138145,
+      "rating": 1.34,
+      "team1": Object {
+        "id": 7244,
+        "name": "K23",
+      },
+      "team2": Object {
+        "id": 11219,
+        "name": "INDE IRAE",
+      },
+    },
     Object {
       "date": 1651737600000,
       "deaths": 13,
@@ -27036,7 +31356,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -27052,7 +31372,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -27520,38 +31840,6 @@ Object {
       },
     },
     Object {
-      "date": 1633119000000,
-      "deaths": 8,
-      "kills": 9,
-      "map": "de_overpass",
-      "mapStatsId": 127875,
-      "rating": 1.17,
-      "team1": Object {
-        "id": 7244,
-        "name": "K23",
-      },
-      "team2": Object {
-        "id": 8135,
-        "name": "forZe",
-      },
-    },
-    Object {
-      "date": 1633116600000,
-      "deaths": 4,
-      "kills": 1,
-      "map": "de_overpass",
-      "mapStatsId": 127867,
-      "rating": 0.6,
-      "team1": Object {
-        "id": 7244,
-        "name": "K23",
-      },
-      "team2": Object {
-        "id": 9287,
-        "name": "Unique",
-      },
-    },
-    Object {
       "date": 1633100700000,
       "deaths": 21,
       "kills": 13,
@@ -27628,7 +31916,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -28732,7 +33020,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -28748,7 +33036,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -29420,7 +33708,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -29436,7 +33724,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -29452,7 +33740,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -29468,7 +33756,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -29484,7 +33772,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32220,7 +36508,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32236,7 +36524,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32796,7 +37084,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32812,7 +37100,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32828,7 +37116,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32844,7 +37132,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32860,7 +37148,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32876,7 +37164,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -32956,7 +37244,7 @@ Object {
       },
       "team2": Object {
         "id": 10817,
-        "name": "Invictus Int",
+        "name": "Invictus International",
       },
     },
     Object {
@@ -32972,7 +37260,7 @@ Object {
       },
       "team2": Object {
         "id": 10817,
-        "name": "Invictus Int",
+        "name": "Invictus International",
       },
     },
     Object {
@@ -33884,7 +38172,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -33900,7 +38188,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -34540,7 +38828,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -34556,7 +38844,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -34572,7 +38860,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -35836,7 +40124,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -35852,7 +40140,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -35932,7 +40220,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -35948,7 +40236,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -35964,7 +40252,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -36124,7 +40412,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -36140,7 +40428,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -36156,7 +40444,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -37212,7 +41500,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -37228,7 +41516,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -37372,7 +41660,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -37820,7 +42108,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -39644,7 +43932,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -39660,7 +43948,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -39676,7 +43964,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -40508,7 +44796,7 @@ Object {
       },
       "team2": Object {
         "id": 8135,
-        "name": "forZe",
+        "name": "FORZE",
       },
     },
     Object {
@@ -41762,24 +46050,24 @@ Object {
   ],
   "name": "Sanzhar Iskhakov",
   "overviewStatistics": Object {
-    "assistsPerRound": 0.14,
-    "damagePerRound": 74,
-    "deaths": 19365,
+    "assistsPerRound": 0.13,
+    "damagePerRound": 73.8,
+    "deaths": 21701,
     "deathsPerRound": 0.7,
     "grenadeDamagePerRound": 4.8,
-    "headshots": 55.9,
+    "headshots": 55.7,
     "kdRatio": 0.93,
-    "kills": 18064,
+    "kills": 20186,
     "killsPerRound": 0.65,
-    "mapsPlayed": 1043,
+    "mapsPlayed": 1167,
     "rating2": 1,
-    "roundsPlayed": 27804,
+    "roundsPlayed": 31202,
     "savedByTeammatePerRound": 0.09,
     "savedTeammatesPerRound": 0.09,
   },
   "team": Object {
-    "id": 7244,
-    "name": "K23",
+    "id": 10399,
+    "name": "Evil Geniuses",
   },
 }
 `;

@@ -49,6 +49,7 @@ Table of contents
 Please use with caution and try to limit the rate and amount of your requests if you value your access to HLTV. Each method has the number of requests it makes to HLTV documented in this README. This is important if you want to implement some kind of throttling yourself.
 
 ```javascript
+// In .mjs files and if you're using a bundler
 import HLTV from 'hltv'
 // Or if you're stuck with CommonJS
 const { HLTV } = require('hltv')
@@ -60,7 +61,7 @@ You can create an instance of HLTV with a custom config if you want to.
 
 |  Option   |                Type                |         Default value          |                                   Description                                   |
 | :-------: | :--------------------------------: | :----------------------------: | :-----------------------------------------------------------------------------: |
-| loadPage  | (url: string) => Promise\<string\> | based on the 'request' library |      Function that will be called when the library makes a request to HLTV      |
+| loadPage  | (url: string) => Promise\<string\> | based on the 'got' library |      Function that will be called when the library makes a request to HLTV      |
 | httpAgent |             HttpAgent              |           HttpsAgent           | Http agent used when sending a request and connecting to the scorebot websocket |
 
 ```javascript
@@ -101,7 +102,7 @@ Parses all matches from the `hltv.org/matches/` page (1 request)
 
 |  Option   |                                              Type                                              | Default Value |                          Description                           |
 | :-------: | :--------------------------------------------------------------------------------------------: | :-----------: | :------------------------------------------------------------: |
-|  eventId  |                                            number?                                             |       -       |                  Filter matches by event ID.                   |
+| eventIds  |                                           number[]?                                            |       -       |                  Filter matches by event IDs.                  |
 | eventType | [MatchEventType](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L8)? |       -       |                 Filter matches by event type.                  |
 |  filter   |  [MatchFilter](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getMatches.ts#L14)?  |       -       | Filter matches by pre-set categories. Overrides other filters. |
 |  teamIds  |                                           number[]?                                            |       -       |                               -                                |

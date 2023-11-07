@@ -7,6 +7,7 @@ import {
   fetchPage,
   generateRandomSuffix,
   getIdAt,
+  parseNumber,
   percentageToDecimalOdd
 } from '../utils'
 import { Player } from '../shared/Player'
@@ -76,6 +77,10 @@ export interface Stream {
   viewers: number
 }
 
+export interface FullMatchTeam extends Team {
+  rank?: number
+}
+
 export interface FullMatch {
   id: number
   statsId?: number
@@ -88,9 +93,9 @@ export interface FullMatch {
   }
   status: MatchStatus
   hasScorebot: boolean
-  team1?: Team
-  team2?: Team
-  winnerTeam?: Team
+  team1?: FullMatchTeam
+  team2?: FullMatchTeam
+  winnerTeam?: FullMatchTeam
   vetoes: Veto[]
   event: Event
   odds: ProviderOdds[]
@@ -190,13 +195,18 @@ function getMatchStatus($: HLTVPage): MatchStatus {
   return status
 }
 
-function getTeam($: HLTVPage, n: 1 | 2): Team | undefined {
+function getTeam($: HLTVPage, n: 1 | 2): FullMatchTeam | undefined {
   return $(`.team${n}-gradient`).exists()
     ? {
         name: $(`.team${n}-gradient .teamName`).text(),
         id: $(`.team${n}-gradient a`).attrThen('href', (href) =>
           href ? getIdAt(2, href) : undefined
-        )
+        ),
+        rank: $('.teamRanking a')
+          .eq(n - 1)
+          .contents()
+          .eq(1)
+          .textThen((x) => parseNumber(x.replace(/#/g, '')))
       }
     : undefined
 }
@@ -268,17 +278,13 @@ function getOdds($: HLTVPage): ProviderOdds[] {
         oddElement.find('.odds-cell').last().find('a').text().replace('%', '')
       )
 
-      const providerUrl = new URL(
-        oddElement.find('td').first().find('a').attr('href')!
-      )
-
       return {
-        provider: providerUrl.hostname
-          .split('.')
-          .reverse()
-          .splice(0, 2)
-          .reverse()
-          .join('.'),
+        provider: oddElement
+          .find('td')
+          .first()
+          .find('a img')
+          .first()
+          .attr('title'),
         team1: convertOdds ? percentageToDecimalOdd(oddTeam1) : oddTeam1,
         team2: convertOdds ? percentageToDecimalOdd(oddTeam2) : oddTeam2
       }
@@ -331,15 +337,18 @@ function getMaps($: HLTVPage): MapResult[] {
 
       if (!isNaN(team1TotalRounds) && !isNaN(team2TotalRounds)) {
         const halfsString = mapEl.find('.results-center-half-score').trimText()!
-        let halfs = [{team1Rounds: 0, team2Rounds: 0}, {team1Rounds: 0, team2Rounds: 0}]
+        let halfs = [
+          { team1Rounds: 0, team2Rounds: 0 },
+          { team1Rounds: 0, team2Rounds: 0 }
+        ]
         if (halfsString) {
-            halfs = halfsString
-              .split(' ')
-              .map((x) => x.replace(/\(|\)|;/g, ''))
-              .map((half) => ({
-                team1Rounds: Number(half.split(':')[0]),
-                team2Rounds: Number(half.split(':')[1])
-              }))
+          halfs = halfsString
+            .split(' ')
+            .map((x) => x.replace(/\(|\)|;/g, ''))
+            .map((half) => ({
+              team1Rounds: Number(half.split(':')[0]),
+              team2Rounds: Number(half.split(':')[1])
+            }))
         }
 
         result = {
@@ -388,9 +397,11 @@ function getStreams($: HLTVPage): Stream[] {
     .toArray()
     .filter((el) => el.find('.stream-flag').exists())
     .map((streamEl) => ({
-      name: streamEl.find('.stream-box-embed').text(),
-      link: streamEl.find('.stream-box-embed').attr('data-stream-embed'),
-      viewers: streamEl.find('.viewers.gtSmartphone-only').numFromText()!
+      name: streamEl.find('.stream-box-embed').text() || 'VOD',
+      link:
+        streamEl.data('stream-embed') ||
+        streamEl.find('.stream-box-embed').attr('data-stream-embed'),
+      viewers: streamEl.find('.viewers.gtSmartphone-only').numFromText() ?? -1
     }))
     .concat(
       $('.stream-box.hltv-live').exists()
@@ -404,14 +415,13 @@ function getStreams($: HLTVPage): Stream[] {
         : []
     )
     .concat(
-      $('.stream-box.gotv').exists()
+      $('[data-demo-link-button]').exists()
         ? [
             {
               name: 'GOTV',
-              link: $('.stream-box.gotv')
-                .text()
-                .replace('GOTV: connect', '')
-                .trim(),
+              link: `https://www.hltv.org${$('[data-demo-link-button]').data(
+                'demo-link'
+              )}`,
               viewers: -1
             }
           ]
