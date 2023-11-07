@@ -47,7 +47,7 @@
     "@types/cheerio": "0.22.34",
     "@types/jest": "29.5.7",
     "@types/node": "18.18.8",
-    "@types/random-useragent": "0.3.2",
+    "@types/random-useragent": "0.3.3",
     "@types/request": "2.48.11",
     "@types/socket.io-client": "1.4.36",
     "@types/user-agents": "1.0.3",
