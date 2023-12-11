@@ -59,7 +59,7 @@
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "got-scraping": "4.0.2",
+    "got-scraping": "4.0.3",
     "socket.io-client": "2.4.0"
   }
 }
