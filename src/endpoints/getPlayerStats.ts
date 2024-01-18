@@ -1,13 +1,18 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { BestOfFilter } from '../shared/BestOfFilter'
-import { Country } from '../shared/Country'
-import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
-import { MatchType } from '../shared/MatchType'
-import { RankingFilter } from '../shared/RankingFilter'
-import { Team } from '../shared/Team'
-import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import { BestOfFilter } from '../shared/BestOfFilter.js'
+import type { Country } from '../shared/Country.js'
+import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap.js'
+import { MatchType } from '../shared/MatchType.js'
+import { RankingFilter } from '../shared/RankingFilter.js'
+import type { Team } from '../shared/Team.js'
+import {
+  fetchPage,
+  generateRandomSuffix,
+  getIdAt,
+  parseNumber
+} from '../utils.js'
 
 export interface PlayerStatsMatch {
   date: number

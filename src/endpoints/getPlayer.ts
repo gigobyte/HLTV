@@ -1,10 +1,15 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Country } from '../shared/Country'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
-import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
-import { Article } from '../shared/Article'
+import { type HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import { type Country } from '../shared/Country.js'
+import { type Team } from '../shared/Team.js'
+import { type Event } from '../shared/Event.js'
+import {
+  fetchPage,
+  generateRandomSuffix,
+  getIdAt,
+  parseNumber
+} from '../utils.js'
+import { type Article } from '../shared/Article.js'
 
 export interface FullPlayerTeam extends Team {
   startDate: number

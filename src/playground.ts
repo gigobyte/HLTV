@@ -1,4 +1,4 @@
-import { HLTV } from './index'
+import { GameMap, HLTV } from './index.js'
 
 const log = (promise: Promise<any>) =>
   promise
@@ -23,3 +23,5 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getTeamRanking())
 // log(HLTV.getResults({ eventIds: [1617] }))
 // log(HLTV.getNews())
+
+log(HLTV.getDetailedTeamMapStats({ id: 10566, maps: [GameMap.Dust2] }))

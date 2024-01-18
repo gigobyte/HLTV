@@ -1,7 +1,7 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Country } from '../shared/Country'
-import { fetchPage, generateRandomSuffix, parseNumber } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Country } from '../shared/Country.js'
+import { fetchPage, generateRandomSuffix, parseNumber } from '../utils.js'
 
 export enum StreamCategory {
   TopPlayer = 'Top player',

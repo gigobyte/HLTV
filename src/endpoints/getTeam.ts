@@ -1,9 +1,14 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Article } from '../shared/Article'
-import { Country } from '../shared/Country'
-import { Player } from '../shared/Player'
-import { fetchPage, generateRandomSuffix, getIdAt, parseNumber } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Article } from '../shared/Article.js'
+import type { Country } from '../shared/Country.js'
+import type { Player } from '../shared/Player.js'
+import {
+  fetchPage,
+  generateRandomSuffix,
+  getIdAt,
+  parseNumber
+} from '../utils.js'
 
 export enum TeamPlayerType {
   Coach = 'Coach',

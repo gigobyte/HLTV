@@ -9,9 +9,10 @@ export interface HLTVConfig {
 
 export const defaultLoadPage =
   (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
-    gotScraping({ url, agent: { http: httpAgent, https: httpAgent } }).then(
-      (res) => res.body
-    )
+    gotScraping({
+      url,
+      agent: { http: httpAgent, https: httpAgent as HttpsAgent | undefined }
+    }).then((res) => res.body)
 
 const defaultAgent = new HttpsAgent()
 

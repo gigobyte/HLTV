@@ -1,10 +1,10 @@
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
-import { fromMapName, GameMap } from '../shared/GameMap'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
-import { fetchPage, getIdAt, notNull, parseNumber } from '../utils'
-import { Player } from '../shared/Player'
+import type { HLTVConfig } from '../config.js'
+import { type HLTVPage, type HLTVPageElement, HLTVScraper } from '../scraper.js'
+import { fromMapName, GameMap } from '../shared/GameMap.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
+import { fetchPage, getIdAt, notNull, parseNumber } from '../utils.js'
+import type { Player } from '../shared/Player.js'
 
 export interface PlayerStats {
   player: Player
@@ -285,38 +285,46 @@ export function getStatsOverview($: HLTVPage) {
   const teamStats = $('.match-info-row')
     .toArray()
     .slice(1)
-    .reduce((res, el, i) => {
-      const prop = getOverviewPropertyFromLabel(el.find('.bold').text())
+    .reduce(
+      (res, el, i) => {
+        const prop = getOverviewPropertyFromLabel(el.find('.bold').text())
 
-      if (!prop) {
+        if (!prop) {
+          return res
+        }
+
+        const [team1, team2] = el.find('.right').text().split(' : ').map(Number)
+        res[prop] = { team1, team2 }
+
         return res
-      }
-
-      const [team1, team2] = el.find('.right').text().split(' : ').map(Number)
-      res[prop] = { team1, team2 }
-
-      return res
-    }, {} as Record<string, any>)
+      },
+      {} as Record<string, any>
+    )
 
   const mostX = $('.most-x-box')
     .toArray()
-    .reduce((res, el, i) => {
-      const prop = getOverviewPropertyFromLabel(el.find('.most-x-title').text())
+    .reduce(
+      (res, el, i) => {
+        const prop = getOverviewPropertyFromLabel(
+          el.find('.most-x-title').text()
+        )
 
-      if (!prop) {
+        if (!prop) {
+          return res
+        }
+
+        const playerHref = el.find('.name > a').attr('href')
+
+        res[prop] = {
+          id: playerHref ? getIdAt(3, playerHref) : undefined,
+          name: $('.most-x-box').eq(i).find('.name > a').text(),
+          value: $('.most-x-box').eq(i).find('.valueName').numFromText()
+        }
+
         return res
-      }
-
-      const playerHref = el.find('.name > a').attr('href')
-
-      res[prop] = {
-        id: playerHref ? getIdAt(3, playerHref) : undefined,
-        name: $('.most-x-box').eq(i).find('.name > a').text(),
-        value: $('.most-x-box').eq(i).find('.valueName').numFromText()
-      }
-
-      return res
-    }, {} as Record<string, any>)
+      },
+      {} as Record<string, any>
+    )
 
   return { ...teamStats, ...mostX } as any
 }
@@ -324,25 +332,30 @@ export function getStatsOverview($: HLTVPage) {
 export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
   const playerPerformanceStats = p$('.highlighted-player')
     .toArray()
-    .reduce((map, el) => {
-      const graphData = el.find('.graph.small').attr('data-fusionchart-config')!
-      const { playerId, ...data } = {
-        playerId: Number(
-          el.find('.headline span a').attr('href')!.split('/')[2]
-        ),
-        killsPerRound: Number(
-          graphData.split('Kills per round: ')[1].split('"')[0]
-        ),
-        deathsPerRound: Number(
-          graphData.split('Deaths / round: ')[1].split('"')[0]
-        ),
-        impact: Number(graphData.split('Impact rating: ')[1].split('"')[0])
-      }
+    .reduce(
+      (map, el) => {
+        const graphData = el
+          .find('.graph.small')
+          .attr('data-fusionchart-config')!
+        const { playerId, ...data } = {
+          playerId: Number(
+            el.find('.headline span a').attr('href')!.split('/')[2]
+          ),
+          killsPerRound: Number(
+            graphData.split('Kills per round: ')[1].split('"')[0]
+          ),
+          deathsPerRound: Number(
+            graphData.split('Deaths / round: ')[1].split('"')[0]
+          ),
+          impact: Number(graphData.split('Impact rating: ')[1].split('"')[0])
+        }
 
-      map[playerId] = data
+        map[playerId] = data
 
-      return map
-    }, {} as Record<string, Partial<PlayerStats>>)
+        return map
+      },
+      {} as Record<string, Partial<PlayerStats>>
+    )
 
   const getPlayerOverviewStats = (el: HLTVPageElement) => {
     const id = el.find('.st-player a').attrThen('href', getIdAt(3))!

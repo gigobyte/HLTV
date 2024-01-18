@@ -1,17 +1,17 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Country } from '../shared/Country'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Country } from '../shared/Country.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
 import {
   fetchPage,
   generateRandomSuffix,
   getIdAt,
   notNull,
   parseNumber
-} from '../utils'
-import { fromMapName, GameMap } from '../shared/GameMap'
-import { Article } from '../shared/Article'
+} from '../utils.js'
+import { fromMapName, GameMap } from '../shared/GameMap.js'
+import type { Article } from '../shared/Article.js'
 
 export interface FullEventTeam extends Team {
   reasonForParticipation?: string

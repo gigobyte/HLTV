@@ -1,39 +1,41 @@
-import { defaultConfig, defaultLoadPage, HLTVConfig } from './config'
-import { getMatch } from './endpoints/getMatch'
-import { connectToScorebot } from './endpoints/connectToScorebot'
-import { getMatches } from './endpoints/getMatches'
-import { getEvent } from './endpoints/getEvent'
-import { getEventByName } from './endpoints/getEventByName'
-import { getEvents } from './endpoints/getEvents'
-import { getMatchMapStats } from './endpoints/getMatchMapStats'
-import { getMatchStats } from './endpoints/getMatchStats'
-import { getMatchesStats } from './endpoints/getMatchesStats'
-import { getPlayer } from './endpoints/getPlayer'
-import { getPlayerByName } from './endpoints/getPlayerByName'
-import { getPlayerRanking } from './endpoints/getPlayerRanking'
-import { getPlayerStats } from './endpoints/getPlayerStats'
-import { getRecentThreads } from './endpoints/getRecentThreads'
-import { getStreams } from './endpoints/getStreams'
-import { getTeam } from './endpoints/getTeam'
-import { getTeamByName } from './endpoints/getTeamByName'
-import { getTeamRanking } from './endpoints/getTeamRanking'
-import { getTeamStats } from './endpoints/getTeamStats'
-import { getPastEvents } from './endpoints/getPastEvents'
-import { getResults } from './endpoints/getResults'
-import { getNews } from './endpoints/getNews'
+import { defaultConfig, defaultLoadPage, type HLTVConfig } from './config.js'
+import { getMatch } from './endpoints/getMatch.js'
+import { connectToScorebot } from './endpoints/connectToScorebot.js'
+import { getMatches } from './endpoints/getMatches.js'
+import { getEvent } from './endpoints/getEvent.js'
+import { getEventByName } from './endpoints/getEventByName.js'
+import { getEvents } from './endpoints/getEvents.js'
+import { getMatchMapStats } from './endpoints/getMatchMapStats.js'
+import { getMatchStats } from './endpoints/getMatchStats.js'
+import { getMatchesStats } from './endpoints/getMatchesStats.js'
+import { getPlayer } from './endpoints/getPlayer.js'
+import { getPlayerByName } from './endpoints/getPlayerByName.js'
+import { getPlayerRanking } from './endpoints/getPlayerRanking.js'
+import { getPlayerStats } from './endpoints/getPlayerStats.js'
+import { getRecentThreads } from './endpoints/getRecentThreads.js'
+import { getStreams } from './endpoints/getStreams.js'
+import { getTeam } from './endpoints/getTeam.js'
+import { getTeamByName } from './endpoints/getTeamByName.js'
+import { getTeamRanking } from './endpoints/getTeamRanking.js'
+import { getTeamStats } from './endpoints/getTeamStats.js'
+import { getPastEvents } from './endpoints/getPastEvents.js'
+import { getResults } from './endpoints/getResults.js'
+import { getNews } from './endpoints/getNews.js'
+import { getDetailedTeamMapStats } from './endpoints/getDetailedTeamMapStats.js'
 
 export class Hltv {
-  constructor(private config: Partial<HLTVConfig> = {}) {
-    if (config.httpAgent && !config.loadPage) {
-      config.loadPage = defaultLoadPage(config.httpAgent)
+  private config: Partial<HLTVConfig> = {}
+  constructor(config?: Partial<HLTVConfig>) {
+    if (this.config.httpAgent && !this.config.loadPage) {
+      this.config.loadPage = defaultLoadPage(this.config.httpAgent)
     }
 
-    if (!config.httpAgent) {
-      config.httpAgent = defaultConfig.httpAgent
+    if (!this.config.httpAgent) {
+      this.config.httpAgent = defaultConfig.httpAgent
     }
 
-    if (!config.loadPage) {
-      config.loadPage = defaultConfig.loadPage
+    if (!this.config.loadPage) {
+      this.config.loadPage = defaultConfig.loadPage
     }
   }
 
@@ -59,6 +61,7 @@ export class Hltv {
   getResults = getResults(this.config as HLTVConfig)
   getNews = getNews(this.config as HLTVConfig)
   connectToScorebot = connectToScorebot(this.config as HLTVConfig)
+  getDetailedTeamMapStats = getDetailedTeamMapStats(this.config as HLTVConfig)
 
   public createInstance(config: Partial<HLTVConfig>) {
     return new Hltv(config)
@@ -76,7 +79,7 @@ const hltv = new Hltv()
 export default hltv
 export { hltv as HLTV }
 
-export { MatchStatus } from './endpoints/getMatch'
+export { MatchStatus } from './endpoints/getMatch.js'
 export type {
   Demo,
   Highlight,
@@ -87,13 +90,19 @@ export type {
   MapResult,
   Stream,
   FullMatch as Match
-} from './endpoints/getMatch'
+} from './endpoints/getMatch.js'
 
-export { MatchEventType, MatchFilter } from './endpoints/getMatches'
-export type { MatchPreview, GetMatchesArguments } from './endpoints/getMatches'
+export { MatchEventType, MatchFilter } from './endpoints/getMatches.js'
+export type {
+  MatchPreview,
+  GetMatchesArguments
+} from './endpoints/getMatches.js'
 
-export { WinType } from './endpoints/connectToScorebot'
-export type { ScoreboardUpdate, LogUpdate } from './endpoints/connectToScorebot'
+export { WinType } from './endpoints/connectToScorebot.js'
+export type {
+  ScoreboardUpdate,
+  LogUpdate
+} from './endpoints/connectToScorebot.js'
 
 export type {
   FullEvent,
@@ -101,67 +110,70 @@ export type {
   FullEventFormat,
   FullEventPrizeDistribution,
   FullEventTeam
-} from './endpoints/getEvent'
+} from './endpoints/getEvent.js'
 
-export type { EventPreview, GetEventsArguments } from './endpoints/getEvents'
+export type { EventPreview, GetEventsArguments } from './endpoints/getEvents.js'
 
-export type { FullMatchStats } from './endpoints/getMatchStats'
+export type { FullMatchStats } from './endpoints/getMatchStats.js'
 
 export type {
   GetMatchesStatsArguments,
   MatchStatsPreview
-} from './endpoints/getMatchesStats'
+} from './endpoints/getMatchesStats.js'
 
 export type {
   FullPlayerTeam,
   PlayerAchievement,
   FullPlayer
-} from './endpoints/getPlayer'
+} from './endpoints/getPlayer.js'
 
 export type {
   PlayerRanking,
   GetPlayerRankingOptions
-} from './endpoints/getPlayerRanking'
+} from './endpoints/getPlayerRanking.js'
 
 export type {
   FullPlayerStats,
   GetPlayerStatsArguments
-} from './endpoints/getPlayerStats'
+} from './endpoints/getPlayerStats.js'
 
-export { ThreadCategory } from './endpoints/getRecentThreads'
-export type { Thread } from './endpoints/getRecentThreads'
+export { ThreadCategory } from './endpoints/getRecentThreads.js'
+export type { Thread } from './endpoints/getRecentThreads.js'
 
-export { StreamCategory } from './endpoints/getStreams'
-export type { FullStream } from './endpoints/getStreams'
+export { StreamCategory } from './endpoints/getStreams.js'
+export type { FullStream } from './endpoints/getStreams.js'
 
-export { TeamPlayerType } from './endpoints/getTeam'
-export type { FullTeam, FullTeamPlayer } from './endpoints/getTeam'
+export { TeamPlayerType } from './endpoints/getTeam.js'
+export type { FullTeam, FullTeamPlayer } from './endpoints/getTeam.js'
 
-export type { TeamRanking, GetTeamArguments } from './endpoints/getTeamRanking'
+export type {
+  TeamRanking,
+  GetTeamArguments
+} from './endpoints/getTeamRanking.js'
 
-export type { GetPastEventsArguments } from './endpoints/getPastEvents'
+export type { GetPastEventsArguments } from './endpoints/getPastEvents.js'
 
 export {
   ResultsMatchType,
   ContentFilter,
   GameType
-} from './endpoints/getResults'
+} from './endpoints/getResults.js'
 export type {
   FullMatchResult,
   ResultTeam,
   GetResultsArguments
-} from './endpoints/getResults'
+} from './endpoints/getResults.js'
 
-export type { NewsPreview, GetNewsArguments } from './endpoints/getNews'
+export type { NewsPreview, GetNewsArguments } from './endpoints/getNews.js'
 
-export { GameMap } from './shared/GameMap'
-export { MatchFormat } from './shared/MatchFormat'
-export { RankingFilter } from './shared/RankingFilter'
-export { MatchType } from './shared/MatchType'
-export { BestOfFilter } from './shared/BestOfFilter'
-export type { Article } from './shared/Article'
-export type { Country } from './shared/Country'
-export type { Event } from './shared/Event'
-export type { Player } from './shared/Player'
-export type { Team } from './shared/Team'
-export type { EventType } from './shared/EventType'
+export { GameMap } from './shared/GameMap.js'
+export { MatchFormat } from './shared/MatchFormat.js'
+export { RankingFilter } from './shared/RankingFilter.js'
+export { MatchType } from './shared/MatchType.js'
+export { BestOfFilter } from './shared/BestOfFilter.js'
+export type { Article } from './shared/Article.js'
+export type { Country } from './shared/Country.js'
+export type { Event } from './shared/Event.js'
+export type { Player } from './shared/Player.js'
+export type { Team } from './shared/Team.js'
+export type { EventType } from './shared/EventType.js'

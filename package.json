@@ -6,7 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.release.json",
-    "start": "ts-node src/playground",
+    "start": "tsx ./src/playground.ts",
     "test": "jest --runInBand",
     "test:approve": "jest --runInBand --updateSnapshot",
     "pretty": "prettier --write \"**/*.ts\""
@@ -19,6 +19,7 @@
     "parser",
     "csgo"
   ],
+  "type": "module",
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
@@ -55,11 +56,12 @@
     "prettier": "3.2.4",
     "ts-jest": "29.1.1",
     "ts-node": "10.9.2",
+    "tsx": "^4.7.0",
     "typescript": "5.3.3"
   },
   "dependencies": {
     "cheerio": "1.0.0-rc.12",
-    "got-scraping": "4.0.3",
+    "got-scraping": "^4.0.3",
     "socket.io-client": "2.4.0"
   }
 }

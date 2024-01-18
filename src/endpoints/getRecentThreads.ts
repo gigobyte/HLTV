@@ -1,6 +1,6 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { fetchPage, generateRandomSuffix } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import { fetchPage, generateRandomSuffix } from '../utils.js'
 
 export enum ThreadCategory {
   CS = 'cs',

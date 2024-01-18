@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import { parseNumber } from './utils'
+import { parseNumber } from './utils.js'
 
 export interface HLTVPage extends cheerio.Root {
   (selector: string): HLTVPageElement

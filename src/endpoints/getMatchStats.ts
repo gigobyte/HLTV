@@ -1,16 +1,16 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
-import { fetchPage, getIdAt } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
+import { fetchPage, getIdAt } from '../utils.js'
 import {
-  MapStatsOverview,
-  TeamsPerformanceOverview,
-  PlayerStats,
+  type MapStatsOverview,
+  type TeamsPerformanceOverview,
+  type PlayerStats,
   getStatsOverview,
   getPlayerStats,
   getPerformanceOverview
-} from './getMatchMapStats'
+} from './getMatchMapStats.js'
 
 export interface FullMatchStats {
   id: number

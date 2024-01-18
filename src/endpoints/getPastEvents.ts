@@ -1,9 +1,9 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVScraper } from '../scraper'
-import { Country } from '../shared/Country'
-import { EventType, fromText } from '../shared/EventType'
-import { fetchPage, getIdAt, parseNumber, sleep } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { type HLTVPage, HLTVScraper } from '../scraper.js'
+import type { Country } from '../shared/Country.js'
+import { EventType, fromText } from '../shared/EventType.js'
+import { fetchPage, getIdAt, parseNumber, sleep } from '../utils.js'
 
 export interface PastEventPreview {
   id: number

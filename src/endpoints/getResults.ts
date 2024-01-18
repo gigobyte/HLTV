@@ -1,10 +1,9 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVScraper } from '../scraper'
-import { BestOfFilter } from '../shared/BestOfFilter'
-import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
-import { RankingFilter } from '../shared/RankingFilter'
-import { fetchPage, getIdAt, notNull, sleep } from '../utils'
+import { type HLTVConfig } from '../config.js'
+import { type HLTVPage, HLTVScraper } from '../scraper.js'
+import { BestOfFilter } from '../shared/BestOfFilter.js'
+import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap.js'
+import { fetchPage, getIdAt, notNull, sleep } from '../utils.js'
 
 export enum ResultsMatchType {
   LAN = 'Lan',
