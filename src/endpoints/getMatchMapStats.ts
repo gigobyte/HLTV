@@ -3,7 +3,13 @@ import { type HLTVPage, type HLTVPageElement, HLTVScraper } from '../scraper.js'
 import { fromMapName, GameMap } from '../shared/GameMap.js'
 import type { Team } from '../shared/Team.js'
 import type { Event } from '../shared/Event.js'
-import { fetchPage, getIdAt, notNull, parseNumber } from '../utils.js'
+import {
+  fetchPage,
+  generateRandomSuffix,
+  getIdAt,
+  notNull,
+  parseNumber
+} from '../utils.js'
 import type { Player } from '../shared/Player.js'
 
 export interface PlayerStats {
@@ -104,11 +110,11 @@ export const getMatchMapStats =
   async ({ id }: { id: number }): Promise<FullMatchMapStats> => {
     const [m$, p$] = await Promise.all([
       fetchPage(
-        `https://www.hltv.org/stats/matches/mapstatsid/${id}/-`,
+        `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
         config.loadPage
       ).then(HLTVScraper),
       fetchPage(
-        `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/-`,
+        `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
         config.loadPage
       ).then(HLTVScraper)
     ])

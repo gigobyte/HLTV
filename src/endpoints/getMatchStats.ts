@@ -2,7 +2,7 @@ import type { HLTVConfig } from '../config.js'
 import { HLTVScraper } from '../scraper.js'
 import type { Team } from '../shared/Team.js'
 import type { Event } from '../shared/Event.js'
-import { fetchPage, getIdAt } from '../utils.js'
+import { fetchPage, generateRandomSuffix, getIdAt } from '../utils.js'
 import {
   type MapStatsOverview,
   type TeamsPerformanceOverview,
@@ -37,11 +37,11 @@ export const getMatchStats =
   async ({ id }: { id: number }): Promise<FullMatchStats> => {
     const [m$, p$] = await Promise.all([
       fetchPage(
-        `https://www.hltv.org/stats/matches/${id}/-`,
+        `https://www.hltv.org/stats/matches/${id}/${generateRandomSuffix()}`,
         config.loadPage
       ).then(HLTVScraper),
       fetchPage(
-        `https://www.hltv.org/stats/matches/performance/${id}/-`,
+        `https://www.hltv.org/stats/matches/performance/${id}/${generateRandomSuffix()}`,
         config.loadPage
       ).then(HLTVScraper)
     ])

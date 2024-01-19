@@ -13,6 +13,10 @@ exports[`getTeam 1`] = `
   "name": "Natus Vincere",
   "news": [
     {
+      "link": "/news/37993/cloud9-navi-more-through-to-eu-rmrs-aurora-sinners-among-teams-eliminated",
+      "name": "Cloud9, NAVI, more through to EU RMRs; Aurora, SINNERS among teams eliminated",
+    },
+    {
       "link": "/news/37983/blast-premier-spring-groups-teams-format-schedule-prizes-talent",
       "name": "BLAST Premier Spring Groups teams, format, schedule, prizes, talent",
     },

@@ -131,4 +131,35 @@ exports[`getDetailedTeamMapStats 1`] = `
 }
 `;
 
-exports[`getDetailedTeamMapStats 2`] = `{}`;
+exports[`getDetailedTeamMapStats 2`] = `
+{
+  "de_overpass": {
+    "ctRoundWinPercent": 0,
+    "draws": 0,
+    "losses": 1,
+    "pistolRoundWinPercent": 0,
+    "pistolRounds": "2",
+    "pistolRoundsWon": "0",
+    "roundsWon": "3",
+    "tRoundWinPercent": 20,
+    "timesPlayed": "1",
+    "totalRounds": "19",
+    "winPercent": 0,
+    "wins": 0,
+  },
+  "de_train": {
+    "ctRoundWinPercent": 0,
+    "draws": 0,
+    "losses": 1,
+    "pistolRoundWinPercent": 0,
+    "pistolRounds": "2",
+    "pistolRoundsWon": "0",
+    "roundsWon": "1",
+    "tRoundWinPercent": 6.7,
+    "timesPlayed": "1",
+    "totalRounds": "17",
+    "winPercent": 0,
+    "wins": 0,
+  },
+}
+`;
