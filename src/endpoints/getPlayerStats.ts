@@ -127,7 +127,7 @@ export const getPlayerStats =
 
     const imageUrl =
       $('.summaryBodyshot').attr('src') || $('.summarySquare').attr('src')
-    const image = imageUrl.includes('bodyshot/unknown.png')
+    const image = imageUrl?.includes('bodyshot/unknown.png')
       ? undefined
       : imageUrl
 

@@ -1,5 +1,6 @@
-import HLTV from '../src/'
-import { sleep } from '../src/utils'
+import HLTV from '../src/index.js'
+import { sleep } from '../src/utils.js'
+import { expect, test } from 'vitest'
 
 const FULL = 7998
 const EMPTY_NEW_DESIGN = 7000

@@ -1,7 +1,8 @@
-import HLTV from '../src/'
-import { GameMap } from '../src/shared/GameMap'
-import { BestOfFilter } from '../src/shared/BestOfFilter'
-import { sleep } from '../src/utils'
+import HLTV from '../src/index.js'
+import { sleep } from '../src/utils.js'
+import { GameMap } from '../src/shared/GameMap.js'
+import { BestOfFilter } from '../src/shared/BestOfFilter.js'
+import { expect, test } from 'vitest'
 
 test('getMatchStats', async () => {
   await sleep(3000)

@@ -1,16 +1,20 @@
 import { stringify } from 'querystring'
 import type { HLTVConfig } from '../config.js'
-import {
-  getContainerByText,
-  getPlayersByContainer,
-  type GetTeamStatsArguments
-} from './getTeamStats.js'
 import { fromMapName, toMapFilter } from '../shared/GameMap.js'
 import { HLTVScraper, type HLTVPageElement } from '../scraper.js'
 import { fetchPage, generateRandomSuffix } from '../utils.js'
+import type {
+  BestOfFilter,
+  GameMap,
+  MatchType,
+  RankingFilter
+} from '../index.js'
 
 export const getDetailedTeamMapStats =
-  (config: HLTVConfig) => async (options: GetTeamStatsArguments) => {
+  (config: HLTVConfig) =>
+  async (
+    options: GetTeamStatsMapsArguments
+  ): Promise<Record<GameMap, DetailedTeamMapStats>> => {
     const query = stringify({
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -18,7 +22,7 @@ export const getDetailedTeamMapStats =
       ...(options.rankingFilter
         ? { rankingFilter: options.rankingFilter }
         : {}),
-      ...(options.maps ? { maps: options.maps.map(toMapFilter) } : {}),
+      ...(options.maps ? { maps: toMapFilter(options.maps) } : {}),
       ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
     })
     // let $ = HLTVScraper(
@@ -44,48 +48,111 @@ export const getDetailedTeamMapStats =
     const getMapStat = (mapEl: HLTVPageElement, i: number) =>
       mapEl.find('.stats-row').eq(i).children().last().text()
 
-    const parseMapStats = async (url: string) => {
-      const mps$ = await fetchPage(
-        'https://www.hltv.org' + url + generateRandomSuffix(),
-        config.loadPage
-      ).then(HLTVScraper)
+    const getDetailedMapStat = (mapEl: HLTVPageElement[], i: number) =>
+      mapEl[i]?.find('span').last().text()
+
+    const parseDetailedTeamMapStats = async (url: string, options?: string) => {
+      let addr = `https://www.hltv.org` + url + generateRandomSuffix()
+      addr += options ? +`?${options}` : ''
+      console.log('🚀 ~ parseDetailedTeamMapStats ~ addr:', addr)
+      const mps$ = await fetchPage(addr, config.loadPage).then(HLTVScraper)
       const stats = mps$('.stats-rows.standard-box').children().toArray()
-      const tRoundWinPercent = stats
-        .at(-1)
-        ?.find('span')
-        .toArray()
-        .at(-1)
-        ?.text()
-      console.log('🚀 ~ parseMapStats ~ tRoundWinPercent:', tRoundWinPercent)
+
+      const [wins, draws, losses] = getDetailedMapStat(stats, 1)
+        .split(' / ')
+        .map(Number)
+
+      const [
+        timesPlayed,
+        totalRounds,
+        roundsWon,
+        winPercent,
+        pistolRounds,
+        pistolRoundsWon,
+        pistolRoundWinPercent,
+        ctRoundWinPercent,
+        tRoundWinPercent
+      ] = [
+        getDetailedMapStat(stats, 0),
+        getDetailedMapStat(stats, 2),
+        getDetailedMapStat(stats, 3),
+        Number(getDetailedMapStat(stats, 4).split('%')[0]),
+        getDetailedMapStat(stats, 5),
+        getDetailedMapStat(stats, 6),
+        Number(getDetailedMapStat(stats, 7).split('%')[0]),
+        Number(getDetailedMapStat(stats, 8).split('%')[0]),
+        Number(getDetailedMapStat(stats, 9).split('%')[0])
+      ]
+      const result: DetailedTeamMapStats = {
+        timesPlayed,
+        wins,
+        draws,
+        losses,
+        totalRounds,
+        roundsWon,
+        winPercent,
+        pistolRounds,
+        pistolRoundsWon,
+        pistolRoundWinPercent,
+        ctRoundWinPercent,
+        tRoundWinPercent
+      }
+      return result
     }
 
-    const mapStats = mp$('.two-grid .col .stats-rows')
+    const mapStats = await mp$('.two-grid .col .stats-rows')
       .toArray()
       .reduce(
-        (stats, mapEl) => {
+        async (stats, mapEl) => {
           const mapName = fromMapName(
             mapEl.prev().find('.map-pool-map-name').text()
           )
 
-          const mapUrl = mapEl.prev().find('.map-pool a').attr('href')
-          parseMapStats(mapUrl)
+          let mapUrl: string | undefined = mapEl
+            .prev()
+            .find('.map-pool a')
+            .attr('href')
+          const options = mapUrl?.split('?')[1]
+          mapUrl = mapUrl.includes('?') ? mapUrl.split('?')[0] : mapUrl
+          const detailedTeamMapStats = mapUrl
+            ? await parseDetailedTeamMapStats(mapUrl, options)
+            : {}
 
           const [wins, draws, losses] = getMapStat(mapEl, 0)
             .split(' / ')
             .map(Number)
+          const newStats = await stats
+          newStats[mapName] = detailedTeamMapStats
 
-          stats[mapName] = {
-            wins,
-            draws,
-            losses,
-            winRate: Number(getMapStat(mapEl, 1).split('%')[0]),
-            totalRounds: Number(getMapStat(mapEl, 2)),
-            roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]),
-            roundWinPAfterFirstDeath: Number(getMapStat(mapEl, 4).split('%')[0])
-          }
-
-          return stats
+          return newStats
         },
-        {} as Record<string, any>
+        {} as Promise<Record<string, any>>
       )
+    return mapStats
   }
+
+export interface DetailedTeamMapStats {
+  timesPlayed: string | undefined
+  wins: number | undefined
+  draws: number | undefined
+  losses: number | undefined
+  totalRounds: string | undefined
+  roundsWon: string | undefined
+  winPercent: number | undefined
+  pistolRounds: string | undefined
+  pistolRoundsWon: string | undefined
+  pistolRoundWinPercent: number | undefined
+  ctRoundWinPercent: number | undefined
+  tRoundWinPercent: number | undefined
+}
+
+export interface GetTeamStatsMapsArguments {
+  id: number
+  currentRosterOnly?: boolean
+  startDate?: string
+  endDate?: string
+  matchType?: MatchType
+  rankingFilter?: RankingFilter
+  maps?: GameMap
+  bestOfX?: BestOfFilter
+}
