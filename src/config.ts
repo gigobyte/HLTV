@@ -84,9 +84,7 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
       responseBody?.includes(RATE_LIMITED) ||
       responseBody?.includes(JS_AND_COOKIE)
     ) {
-      console.log('waiting')
       await sleep(60000)
-      console.log('done waiting')
     }
     while (
       responseBody?.includes(CHALLENGE_MATCH || 'challenge-platform') ||
@@ -94,7 +92,6 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
         responseBody?.includes(JS_AND_COOKIE)) &&
         tryCount <= 10)
     ) {
-      console.log('reloading page')
       const newResponse = await page.waitForNavigation({
         timeout: 30000,
         waitUntil: 'domcontentloaded'
@@ -103,9 +100,7 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
       responseBody = await response?.text()
       // responseData = await response?.buffer()
       tryCount++
-      console.log('waiting')
       await sleep(10000)
-      console.log('done waiting')
     }
     responseHeaders = response?.headers()
     // const cookies = await page.cookies()
