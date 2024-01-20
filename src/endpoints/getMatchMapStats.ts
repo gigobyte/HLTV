@@ -108,24 +108,24 @@ export interface FullMatchMapStats {
 export const getMatchMapStats =
   (config: HLTVConfig) =>
   async ({ id }: { id: number }): Promise<FullMatchMapStats> => {
-    // const m$ = await fetchPage(
-    //   `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
-    //   config.loadMatchStatsPage
-    // ).then(HLTVScraper)
-    // const p$ = await fetchPage(
-    //   `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
-    //   config.loadMatchStatsPage
-    // ).then(HLTVScraper)
-    const [m$, p$] = await Promise.all([
-      fetchPage(
-        `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
-        config.loadMatchStatsPage
-      ).then(HLTVScraper),
-      fetchPage(
-        `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
-        config.loadMatchStatsPage
-      ).then(HLTVScraper)
-    ])
+    const m$ = await fetchPage(
+      `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
+      config.loadMatchStatsPage
+    ).then(HLTVScraper)
+    const p$ = await fetchPage(
+      `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
+      config.loadMatchStatsPage
+    ).then(HLTVScraper)
+    // const [m$, p$] = await Promise.all([
+    //   fetchPage(
+    //     `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
+    //     config.loadMatchStatsPage
+    //   ).then(HLTVScraper),
+    //   fetchPage(
+    //     `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
+    //     config.loadMatchStatsPage
+    //   ).then(HLTVScraper)
+    // ])
 
     const matchId = m$('.match-page-link').attrThen('href', getIdAt(2))!
     const halfsString = m$('.match-info-row .right').eq(0).text()
