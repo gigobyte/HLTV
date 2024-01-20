@@ -1,3 +1,5445 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`getMatchesStats 1`] = `[]`;
+exports[`getMatchesStats 1`] = `
+[
+  {
+    "date": 1614547800000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115605,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 9963,
+      "name": "Infinity",
+    },
+    "team2": {
+      "id": 10897,
+      "name": "STMN",
+    },
+  },
+  {
+    "date": 1614547800000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115603,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9963,
+      "name": "Infinity",
+    },
+    "team2": {
+      "id": 10897,
+      "name": "STMN",
+    },
+  },
+  {
+    "date": 1614547800000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115598,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 9963,
+      "name": "Infinity",
+    },
+    "team2": {
+      "id": 10897,
+      "name": "STMN",
+    },
+  },
+  {
+    "date": 1614547800000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115600,
+    "result": {
+      "team1": 16,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614547800000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115596,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614546000000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_train",
+    "mapStatsId": 115604,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614546000000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115602,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614546000000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115597,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+  },
+  {
+    "date": 1614546000000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_train",
+    "mapStatsId": 115599,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4773,
+      "name": "paiN",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614546000000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115595,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 4773,
+      "name": "paiN",
+    },
+  },
+  {
+    "date": 1614539400000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115594,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+  },
+  {
+    "date": 1614539400000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115592,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+  },
+  {
+    "date": 1614539400000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_train",
+    "mapStatsId": 115589,
+    "result": {
+      "team1": 16,
+      "team2": 7,
+    },
+    "team1": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614536700000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_train",
+    "mapStatsId": 115591,
+    "result": {
+      "team1": 16,
+      "team2": 7,
+    },
+    "team1": {
+      "id": 11003,
+      "name": "DBL PONEY",
+    },
+    "team2": {
+      "id": 11024,
+      "name": "StoichkovPeek",
+    },
+  },
+  {
+    "date": 1614536700000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115588,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11024,
+      "name": "StoichkovPeek",
+    },
+    "team2": {
+      "id": 11003,
+      "name": "DBL PONEY",
+    },
+  },
+  {
+    "date": 1614535200000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115593,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 9996,
+      "name": "9z",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614535200000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115590,
+    "result": {
+      "team1": 16,
+      "team2": 3,
+    },
+    "team1": {
+      "id": 9996,
+      "name": "9z",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614535200000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115587,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614528300000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115585,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10960,
+      "name": "Young Ninjas",
+    },
+    "team2": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+  },
+  {
+    "date": 1614528300000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115582,
+    "result": {
+      "team1": 19,
+      "team2": 17,
+    },
+    "team1": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+    "team2": {
+      "id": 10960,
+      "name": "Young Ninjas",
+    },
+  },
+  {
+    "date": 1614524400000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115584,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10996,
+      "name": "OL",
+    },
+    "team2": {
+      "id": 11024,
+      "name": "StoichkovPeek",
+    },
+  },
+  {
+    "date": 1614524400000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_train",
+    "mapStatsId": 115579,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 11024,
+      "name": "StoichkovPeek",
+    },
+    "team2": {
+      "id": 10996,
+      "name": "OL",
+    },
+  },
+  {
+    "date": 1614524400000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115577,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10996,
+      "name": "OL",
+    },
+    "team2": {
+      "id": 11024,
+      "name": "StoichkovPeek",
+    },
+  },
+  {
+    "date": 1614524400000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115581,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8813,
+      "name": "Illuminar",
+    },
+    "team2": {
+      "id": 11003,
+      "name": "DBL PONEY",
+    },
+  },
+  {
+    "date": 1614524400000,
+    "event": {
+      "id": 5770,
+      "name": "ESEA Winter 2020 Cash Cup 6 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115576,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8813,
+      "name": "Illuminar",
+    },
+    "team2": {
+      "id": 11003,
+      "name": "DBL PONEY",
+    },
+  },
+  {
+    "date": 1614520800000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115586,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+    "team2": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+  },
+  {
+    "date": 1614520800000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_train",
+    "mapStatsId": 115580,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+  },
+  {
+    "date": 1614520800000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115578,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+    "team2": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+  },
+  {
+    "date": 1614520800000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115574,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+  },
+  {
+    "date": 1614517500000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115575,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 10954,
+      "name": "Astralis Talent",
+    },
+  },
+  {
+    "date": 1614517500000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115572,
+    "result": {
+      "team1": 19,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 10954,
+      "name": "Astralis Talent",
+    },
+  },
+  {
+    "date": 1614477600000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115571,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614477600000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115570,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614471900000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115566,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 4773,
+      "name": "paiN",
+    },
+    "team2": {
+      "id": 9799,
+      "name": "Bad News Bears",
+    },
+  },
+  {
+    "date": 1614469800000,
+    "event": {
+      "id": 5769,
+      "name": "ESEA Winter 2020 Cash Cup 6 North America",
+    },
+    "map": "de_train",
+    "mapStatsId": 115565,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+    "team2": {
+      "id": 10357,
+      "name": "Rebirth",
+    },
+  },
+  {
+    "date": 1614468600000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115569,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614468600000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_train",
+    "mapStatsId": 115567,
+    "result": {
+      "team1": 17,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+    "team2": {
+      "id": 10709,
+      "name": "SWS",
+    },
+  },
+  {
+    "date": 1614468600000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115564,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614463800000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115563,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11023,
+      "name": "666",
+    },
+    "team2": {
+      "id": 10218,
+      "name": "Timechasers",
+    },
+  },
+  {
+    "date": 1614463800000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115562,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 10218,
+      "name": "Timechasers",
+    },
+    "team2": {
+      "id": 11023,
+      "name": "666",
+    },
+  },
+  {
+    "date": 1614459600000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115559,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 11022,
+      "name": "ex-Paquetá",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614459600000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_train",
+    "mapStatsId": 115558,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9213,
+      "name": "Santos",
+    },
+    "team2": {
+      "id": 11022,
+      "name": "ex-Paquetá",
+    },
+  },
+  {
+    "date": 1614459000000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_train",
+    "mapStatsId": 115560,
+    "result": {
+      "team1": 19,
+      "team2": 17,
+    },
+    "team1": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+    "team2": {
+      "id": 9455,
+      "name": "Imperial",
+    },
+  },
+  {
+    "date": 1614459000000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115557,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9455,
+      "name": "Imperial",
+    },
+    "team2": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+  },
+  {
+    "date": 1614452400000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115554,
+    "result": {
+      "team1": 16,
+      "team2": 3,
+    },
+    "team1": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+    "team2": {
+      "id": 11017,
+      "name": "VISU",
+    },
+  },
+  {
+    "date": 1614452400000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115550,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11017,
+      "name": "VISU",
+    },
+    "team2": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+  },
+  {
+    "date": 1614451200000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115556,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10218,
+      "name": "Timechasers",
+    },
+    "team2": {
+      "id": 10466,
+      "name": "SACRAMENTO",
+    },
+  },
+  {
+    "date": 1614451200000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_train",
+    "mapStatsId": 115555,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10218,
+      "name": "Timechasers",
+    },
+    "team2": {
+      "id": 10466,
+      "name": "SACRAMENTO",
+    },
+  },
+  {
+    "date": 1614451200000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115551,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10466,
+      "name": "SACRAMENTO",
+    },
+    "team2": {
+      "id": 10218,
+      "name": "Timechasers",
+    },
+  },
+  {
+    "date": 1614448800000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115553,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 8113,
+      "name": "Sharks",
+    },
+    "team2": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+  },
+  {
+    "date": 1614448800000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115549,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+    "team2": {
+      "id": 8113,
+      "name": "Sharks",
+    },
+  },
+  {
+    "date": 1614447000000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115552,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": {
+      "id": 5973,
+      "name": "Liquid",
+    },
+  },
+  {
+    "date": 1614447000000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115548,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5973,
+      "name": "Liquid",
+    },
+    "team2": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+  },
+  {
+    "date": 1614441600000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115544,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 11018,
+      "name": "megoshort",
+    },
+  },
+  {
+    "date": 1614441600000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115542,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11018,
+      "name": "megoshort",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614441600000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115543,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 10960,
+      "name": "Young Ninjas",
+    },
+    "team2": {
+      "id": 8930,
+      "name": "Granit",
+    },
+  },
+  {
+    "date": 1614441600000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_train",
+    "mapStatsId": 115541,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8930,
+      "name": "Granit",
+    },
+    "team2": {
+      "id": 10960,
+      "name": "Young Ninjas",
+    },
+  },
+  {
+    "date": 1614434400000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115545,
+    "result": {
+      "team1": 22,
+      "team2": 20,
+    },
+    "team1": {
+      "id": 11023,
+      "name": "666",
+    },
+    "team2": {
+      "id": 10818,
+      "name": "Save's",
+    },
+  },
+  {
+    "date": 1614434400000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_train",
+    "mapStatsId": 115540,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11023,
+      "name": "666",
+    },
+    "team2": {
+      "id": 10818,
+      "name": "Save's",
+    },
+  },
+  {
+    "date": 1614434400000,
+    "event": {
+      "id": 5768,
+      "name": "Ghetto eGames Season 1 Cup 2",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115538,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10818,
+      "name": "Save's",
+    },
+    "team2": {
+      "id": 11023,
+      "name": "666",
+    },
+  },
+  {
+    "date": 1614434400000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115539,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+    "team2": {
+      "id": 7020,
+      "name": "Spirit",
+    },
+  },
+  {
+    "date": 1614434400000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115537,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7020,
+      "name": "Spirit",
+    },
+    "team2": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+  },
+  {
+    "date": 1614430800000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115536,
+    "result": {
+      "team1": 16,
+      "team2": 4,
+    },
+    "team1": {
+      "id": 10954,
+      "name": "Astralis Talent",
+    },
+    "team2": {
+      "id": 9540,
+      "name": "Vilay",
+    },
+  },
+  {
+    "date": 1614430800000,
+    "event": {
+      "id": 5765,
+      "name": "Esportal Nordic Invitational 2021",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115535,
+    "result": {
+      "team1": 1,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9540,
+      "name": "Vilay",
+    },
+    "team2": {
+      "id": 10954,
+      "name": "Astralis Talent",
+    },
+  },
+  {
+    "date": 1614391200000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115534,
+    "result": {
+      "team1": 16,
+      "team2": 7,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614391200000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115532,
+    "result": {
+      "team1": 19,
+      "team2": 15,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614391200000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115530,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614391200000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115531,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614391200000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115529,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115528,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11021,
+      "name": "Guns and Rage",
+    },
+    "team2": {
+      "id": 10897,
+      "name": "STMN",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115525,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10897,
+      "name": "STMN",
+    },
+    "team2": {
+      "id": 11021,
+      "name": "Guns and Rage",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115520,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11021,
+      "name": "Guns and Rage",
+    },
+    "team2": {
+      "id": 10897,
+      "name": "STMN",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115527,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10330,
+      "name": "Supremacy",
+    },
+    "team2": {
+      "id": 9963,
+      "name": "Infinity",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5724,
+      "name": "WESG 2021 LatAm North",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115523,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 9963,
+      "name": "Infinity",
+    },
+    "team2": {
+      "id": 10330,
+      "name": "Supremacy",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115524,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8871,
+      "name": "Coscu Army",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614384900000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115521,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8871,
+      "name": "Coscu Army",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614384000000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115526,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614384000000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115522,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614376800000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115519,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614376800000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115512,
+    "result": {
+      "team1": 16,
+      "team2": 3,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614376800000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115513,
+    "result": {
+      "team1": 16,
+      "team2": 4,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614376800000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115511,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614373200000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115515,
+    "result": {
+      "team1": 25,
+      "team2": 22,
+    },
+    "team1": {
+      "id": 11022,
+      "name": "ex-Paquetá",
+    },
+    "team2": {
+      "id": 10709,
+      "name": "SWS",
+    },
+  },
+  {
+    "date": 1614373200000,
+    "event": {
+      "id": 5767,
+      "name": "Liga PRO #2 - FEB/21",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115507,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 11022,
+      "name": "ex-Paquetá",
+    },
+  },
+  {
+    "date": 1614373200000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115514,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8121,
+      "name": "Malvinas",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614373200000,
+    "event": {
+      "id": 5725,
+      "name": "WESG 2021 LatAm South",
+    },
+    "map": "de_train",
+    "mapStatsId": 115509,
+    "result": {
+      "team1": 17,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 8121,
+      "name": "Malvinas",
+    },
+    "team2": {
+      "id": 10786,
+      "name": "River Plate",
+    },
+  },
+  {
+    "date": 1614369600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115508,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+    "team2": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+  },
+  {
+    "date": 1614369600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115505,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+    "team2": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+  },
+  {
+    "date": 1614360600000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115506,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": {
+      "id": 6665,
+      "name": "Astralis",
+    },
+  },
+  {
+    "date": 1614360600000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_train",
+    "mapStatsId": 115504,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+    "team2": {
+      "id": 6665,
+      "name": "Astralis",
+    },
+  },
+  {
+    "date": 1614360600000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115503,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 6665,
+      "name": "Astralis",
+    },
+    "team2": {
+      "id": 5378,
+      "name": "Virtus.pro",
+    },
+  },
+  {
+    "date": 1614349200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115502,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+    "team2": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+  },
+  {
+    "date": 1614349200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115500,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+    "team2": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+  },
+  {
+    "date": 1614348000000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_train",
+    "mapStatsId": 115501,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+    "team2": {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+  },
+  {
+    "date": 1614348000000,
+    "event": {
+      "id": 5552,
+      "name": "IEM Katowice 2021",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115499,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4608,
+      "name": "Natus Vincere",
+    },
+    "team2": {
+      "id": 6651,
+      "name": "Gambit",
+    },
+  },
+  {
+    "date": 1614337200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115498,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614337200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115497,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+  },
+  {
+    "date": 1614337200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115496,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614326400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115495,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 10525,
+      "name": "100PG",
+    },
+  },
+  {
+    "date": 1614326400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115494,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 10525,
+      "name": "100PG",
+    },
+  },
+  {
+    "date": 1614326400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115493,
+    "result": {
+      "team1": 16,
+      "team2": 4,
+    },
+    "team1": {
+      "id": 10525,
+      "name": "100PG",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115492,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115490,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115485,
+    "result": {
+      "team1": 22,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115491,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10282,
+      "name": "OCG",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115488,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10282,
+      "name": "OCG",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115481,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+    "team2": {
+      "id": 10282,
+      "name": "OCG",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115489,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10985,
+      "name": "HeadShotKings",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115482,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 10985,
+      "name": "HeadShotKings",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115484,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+    "team2": {
+      "id": 5454,
+      "name": "SKDC",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115480,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5454,
+      "name": "SKDC",
+    },
+    "team2": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115483,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614305700000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115479,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115478,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11010,
+      "name": "Tropa do Inguiça",
+    },
+    "team2": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115474,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+    "team2": {
+      "id": 11010,
+      "name": "Tropa do Inguiça",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115476,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115472,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 9996,
+      "name": "9z",
+    },
+    "team2": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115475,
+    "result": {
+      "team1": 16,
+      "team2": 0,
+    },
+    "team1": {
+      "id": 8113,
+      "name": "Sharks",
+    },
+    "team2": {
+      "id": 8885,
+      "name": "FURIA Academy",
+    },
+  },
+  {
+    "date": 1614297600000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115473,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 8113,
+      "name": "Sharks",
+    },
+    "team2": {
+      "id": 8885,
+      "name": "FURIA Academy",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115477,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115471,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115464,
+    "result": {
+      "team1": 19,
+      "team2": 22,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115470,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10985,
+      "name": "HeadShotKings",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115462,
+    "result": {
+      "team1": 19,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10985,
+      "name": "HeadShotKings",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115469,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115460,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115468,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10282,
+      "name": "OCG",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614290400000,
+    "event": {
+      "id": 5757,
+      "name": "DreamHack Open March 2021 North America Closed Qualifier",
+    },
+    "map": "de_train",
+    "mapStatsId": 115459,
+    "result": {
+      "team1": 16,
+      "team2": 0,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10282,
+      "name": "OCG",
+    },
+  },
+  {
+    "date": 1614286800000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_train",
+    "mapStatsId": 115467,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10605,
+      "name": "Bravos",
+    },
+    "team2": {
+      "id": 9455,
+      "name": "Imperial",
+    },
+  },
+  {
+    "date": 1614286800000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115457,
+    "result": {
+      "team1": 19,
+      "team2": 17,
+    },
+    "team1": {
+      "id": 9455,
+      "name": "Imperial",
+    },
+    "team2": {
+      "id": 10605,
+      "name": "Bravos",
+    },
+  },
+  {
+    "date": 1614283200000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115461,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11010,
+      "name": "Tropa do Inguiça",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614283200000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115455,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11010,
+      "name": "Tropa do Inguiça",
+    },
+    "team2": {
+      "id": 9996,
+      "name": "9z",
+    },
+  },
+  {
+    "date": 1614283200000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115453,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9996,
+      "name": "9z",
+    },
+    "team2": {
+      "id": 11010,
+      "name": "Tropa do Inguiça",
+    },
+  },
+  {
+    "date": 1614283200000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115456,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+    "team2": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+  },
+  {
+    "date": 1614283200000,
+    "event": {
+      "id": 5760,
+      "name": "DreamHack Open March 2021 South America Closed Qualifier",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115454,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+    "team2": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+  },
+  {
+    "date": 1614264300000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115451,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614264300000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115448,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+  },
+  {
+    "date": 1614261600000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115452,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7718,
+      "name": "Movistar Riders",
+    },
+    "team2": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+  },
+  {
+    "date": 1614261600000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_train",
+    "mapStatsId": 115450,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+    "team2": {
+      "id": 7718,
+      "name": "Movistar Riders",
+    },
+  },
+  {
+    "date": 1614261600000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115447,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 7718,
+      "name": "Movistar Riders",
+    },
+    "team2": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+  },
+  {
+    "date": 1614261600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115449,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10525,
+      "name": "100PG",
+    },
+    "team2": {
+      "id": 10977,
+      "name": "Trident",
+    },
+  },
+  {
+    "date": 1614261600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115446,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10977,
+      "name": "Trident",
+    },
+    "team2": {
+      "id": 10525,
+      "name": "100PG",
+    },
+  },
+  {
+    "date": 1614251100000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115444,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+    "team2": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+  },
+  {
+    "date": 1614251100000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115441,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+    "team2": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+  },
+  {
+    "date": 1614250800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115445,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614250800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115443,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614250800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115442,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614240300000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115440,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 10808,
+      "name": "GROND",
+    },
+  },
+  {
+    "date": 1614240300000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115439,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10808,
+      "name": "GROND",
+    },
+    "team2": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+  },
+  {
+    "date": 1614240300000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115436,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 10808,
+      "name": "GROND",
+    },
+  },
+  {
+    "date": 1614240000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115438,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+    "team2": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+  },
+  {
+    "date": 1614240000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115437,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+    "team2": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115435,
+    "result": {
+      "team1": 16,
+      "team2": 7,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115432,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10747,
+      "name": "Secret Club",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115434,
+    "result": {
+      "team1": 16,
+      "team2": 7,
+    },
+    "team1": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+    "team2": {
+      "id": 10991,
+      "name": "Watch This",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115431,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10991,
+      "name": "Watch This",
+    },
+    "team2": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115433,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10282,
+      "name": "OCG",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614218400000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115430,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10282,
+      "name": "OCG",
+    },
+  },
+  {
+    "date": 1614209400000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_train",
+    "mapStatsId": 115429,
+    "result": {
+      "team1": 16,
+      "team2": 0,
+    },
+    "team1": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+    "team2": {
+      "id": 10709,
+      "name": "SWS",
+    },
+  },
+  {
+    "date": 1614209400000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115428,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10709,
+      "name": "SWS",
+    },
+    "team2": {
+      "id": 10669,
+      "name": "Paquetá",
+    },
+  },
+  {
+    "date": 1614200400000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115426,
+    "result": {
+      "team1": 19,
+      "team2": 15,
+    },
+    "team1": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+    "team2": {
+      "id": 9213,
+      "name": "Santos",
+    },
+  },
+  {
+    "date": 1614200400000,
+    "event": {
+      "id": 5722,
+      "name": "WESG 2021 Brazil",
+    },
+    "map": "de_train",
+    "mapStatsId": 115425,
+    "result": {
+      "team1": 2,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9213,
+      "name": "Santos",
+    },
+    "team2": {
+      "id": 10815,
+      "name": "Liberty",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115424,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+    "team2": {
+      "id": 10973,
+      "name": "Anonymo",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_train",
+    "mapStatsId": 115420,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+    "team2": {
+      "id": 10973,
+      "name": "Anonymo",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115412,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10973,
+      "name": "Anonymo",
+    },
+    "team2": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115423,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+    },
+    "team2": {
+      "id": 10333,
+      "name": "Sangal",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115418,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 10333,
+      "name": "Sangal",
+    },
+    "team2": {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+    },
+  },
+  {
+    "date": 1614189900000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115413,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+    },
+    "team2": {
+      "id": 10333,
+      "name": "Sangal",
+    },
+  },
+  {
+    "date": 1614189600000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115422,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 7969,
+      "name": "Nemiga",
+    },
+    "team2": {
+      "id": 7187,
+      "name": "Nexus",
+    },
+  },
+  {
+    "date": 1614189600000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115419,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 7969,
+      "name": "Nemiga",
+    },
+    "team2": {
+      "id": 7187,
+      "name": "Nexus",
+    },
+  },
+  {
+    "date": 1614189600000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115416,
+    "result": {
+      "team1": 19,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7187,
+      "name": "Nexus",
+    },
+    "team2": {
+      "id": 7969,
+      "name": "Nemiga",
+    },
+  },
+  {
+    "date": 1614189600000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115421,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9863,
+      "name": "FATE",
+    },
+    "team2": {
+      "id": 9806,
+      "name": "Apeks",
+    },
+  },
+  {
+    "date": 1614189600000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115414,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 9806,
+      "name": "Apeks",
+    },
+    "team2": {
+      "id": 9863,
+      "name": "FATE",
+    },
+  },
+  {
+    "date": 1614188400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115411,
+    "result": {
+      "team1": 16,
+      "team2": 4,
+    },
+    "team1": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614188400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115410,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+  },
+  {
+    "date": 1614186000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115415,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 10386,
+      "name": "SKADE",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614186000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115408,
+    "result": {
+      "team1": 17,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 10386,
+      "name": "SKADE",
+    },
+  },
+  {
+    "date": 1614178200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115405,
+    "result": {
+      "team1": 16,
+      "team2": 2,
+    },
+    "team1": {
+      "id": 10525,
+      "name": "100PG",
+    },
+    "team2": {
+      "id": 10808,
+      "name": "GROND",
+    },
+  },
+  {
+    "date": 1614178200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115402,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10808,
+      "name": "GROND",
+    },
+    "team2": {
+      "id": 10525,
+      "name": "100PG",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115407,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+    "team2": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115404,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+    "team2": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115400,
+    "result": {
+      "team1": 17,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+    "team2": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115406,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115403,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614175200000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_train",
+    "mapStatsId": 115399,
+    "result": {
+      "team1": 16,
+      "team2": 5,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+  },
+  {
+    "date": 1614165600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115395,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614165600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115392,
+    "result": {
+      "team1": 16,
+      "team2": 3,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+  },
+  {
+    "date": 1614164400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115396,
+    "result": {
+      "team1": 22,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10977,
+      "name": "Trident",
+    },
+    "team2": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+  },
+  {
+    "date": 1614164400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115393,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+    "team2": {
+      "id": 10977,
+      "name": "Trident",
+    },
+  },
+  {
+    "date": 1614164400000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115389,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10977,
+      "name": "Trident",
+    },
+    "team2": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+  },
+  {
+    "date": 1614164400000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115394,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7969,
+      "name": "Nemiga",
+    },
+    "team2": {
+      "id": 7718,
+      "name": "Movistar Riders",
+    },
+  },
+  {
+    "date": 1614164400000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115391,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 7718,
+      "name": "Movistar Riders",
+    },
+    "team2": {
+      "id": 7969,
+      "name": "Nemiga",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115385,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 10917,
+      "name": "Sylyx",
+    },
+    "team2": {
+      "id": 10998,
+      "name": "Ninja",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115384,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 10917,
+      "name": "Sylyx",
+    },
+    "team2": {
+      "id": 10998,
+      "name": "Ninja",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115381,
+    "result": {
+      "team1": 25,
+      "team2": 28,
+    },
+    "team1": {
+      "id": 6379,
+      "name": "Animal Squad",
+    },
+    "team2": {
+      "id": 7972,
+      "name": "R!OT",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115378,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 6379,
+      "name": "Animal Squad",
+    },
+    "team2": {
+      "id": 7972,
+      "name": "R!OT",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115380,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10672,
+      "name": "VERTEX",
+    },
+    "team2": {
+      "id": 8668,
+      "name": "ORDER",
+    },
+  },
+  {
+    "date": 1614157200000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115376,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 8668,
+      "name": "ORDER",
+    },
+    "team2": {
+      "id": 10672,
+      "name": "VERTEX",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115383,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10894,
+      "name": "Case",
+    },
+    "team2": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115379,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7674,
+      "name": "Ambush",
+    },
+    "team2": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115377,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+    "team2": {
+      "id": 10894,
+      "name": "Case",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115373,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 10894,
+      "name": "Case",
+    },
+    "team2": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115375,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 7674,
+      "name": "Ambush",
+    },
+  },
+  {
+    "date": 1614153600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115374,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7674,
+      "name": "Ambush",
+    },
+    "team2": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115372,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+    "team2": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115368,
+    "result": {
+      "team1": 2,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+    "team2": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115364,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10469,
+      "name": "Third Impact",
+    },
+    "team2": {
+      "id": 10304,
+      "name": "Triumph",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115371,
+    "result": {
+      "team1": 16,
+      "team2": 2,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10687,
+      "name": "Rise",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115367,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+    "team2": {
+      "id": 10687,
+      "name": "Rise",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115360,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10687,
+      "name": "Rise",
+    },
+    "team2": {
+      "id": 10948,
+      "name": "Extra Salt",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115370,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 9974,
+      "name": "GGPR",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115366,
+    "result": {
+      "team1": 12,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+    "team2": {
+      "id": 9974,
+      "name": "GGPR",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115358,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9974,
+      "name": "GGPR",
+    },
+    "team2": {
+      "id": 5479,
+      "name": "Mythic",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115369,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+    "team2": {
+      "id": 10258,
+      "name": "RBG",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115362,
+    "result": {
+      "team1": 17,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10258,
+      "name": "RBG",
+    },
+    "team2": {
+      "id": 10463,
+      "name": "Recon 5",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115365,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10624,
+      "name": "ImPerium",
+    },
+    "team2": {
+      "id": 10611,
+      "name": "High Coast",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115359,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 10611,
+      "name": "High Coast",
+    },
+    "team2": {
+      "id": 10624,
+      "name": "ImPerium",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_train",
+    "mapStatsId": 115361,
+    "result": {
+      "team1": 16,
+      "team2": 2,
+    },
+    "team1": {
+      "id": 9799,
+      "name": "Bad News Bears",
+    },
+    "team2": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+  },
+  {
+    "date": 1614132000000,
+    "event": {
+      "id": 5704,
+      "name": "ESEA Premier Season 36 North America",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115357,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 6987,
+      "name": "Eclipse",
+    },
+    "team2": {
+      "id": 9799,
+      "name": "Bad News Bears",
+    },
+  },
+  {
+    "date": 1614104400000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115355,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10567,
+      "name": "SAW",
+    },
+    "team2": {
+      "id": 10426,
+      "name": "Wisla Krakow",
+    },
+  },
+  {
+    "date": 1614104400000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_train",
+    "mapStatsId": 115346,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10567,
+      "name": "SAW",
+    },
+    "team2": {
+      "id": 10426,
+      "name": "Wisla Krakow",
+    },
+  },
+  {
+    "date": 1614104400000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115342,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10426,
+      "name": "Wisla Krakow",
+    },
+    "team2": {
+      "id": 10567,
+      "name": "SAW",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115353,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115345,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115338,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 4674,
+      "name": "LDLC",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115349,
+    "result": {
+      "team1": 24,
+      "team2": 28,
+    },
+    "team1": {
+      "id": 7187,
+      "name": "Nexus",
+    },
+    "team2": {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115339,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 4501,
+      "name": "ALTERNATE aTTaX",
+    },
+    "team2": {
+      "id": 7187,
+      "name": "Nexus",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_train",
+    "mapStatsId": 115347,
+    "result": {
+      "team1": 22,
+      "team2": 18,
+    },
+    "team1": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+    "team2": {
+      "id": 9863,
+      "name": "FATE",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115341,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 9863,
+      "name": "FATE",
+    },
+    "team2": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115344,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+    "team2": {
+      "id": 9806,
+      "name": "Apeks",
+    },
+  },
+  {
+    "date": 1614103800000,
+    "event": {
+      "id": 5701,
+      "name": "ESEA Premier Season 36 Europe",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115337,
+    "result": {
+      "team1": 16,
+      "team2": 3,
+    },
+    "team1": {
+      "id": 9806,
+      "name": "Apeks",
+    },
+    "team2": {
+      "id": 6978,
+      "name": "Singularity",
+    },
+  },
+  {
+    "date": 1614102000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115343,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10386,
+      "name": "SKADE",
+    },
+    "team2": {
+      "id": 10977,
+      "name": "Trident",
+    },
+  },
+  {
+    "date": 1614102000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115336,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10977,
+      "name": "Trident",
+    },
+    "team2": {
+      "id": 10386,
+      "name": "SKADE",
+    },
+  },
+  {
+    "date": 1614099600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115340,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+  },
+  {
+    "date": 1614099600000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115335,
+    "result": {
+      "team1": 16,
+      "team2": 10,
+    },
+    "team1": {
+      "id": 9735,
+      "name": "Lilmix",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614093000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115334,
+    "result": {
+      "team1": 6,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10567,
+      "name": "SAW",
+    },
+    "team2": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+  },
+  {
+    "date": 1614093000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115320,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+    "team2": {
+      "id": 10567,
+      "name": "SAW",
+    },
+  },
+  {
+    "date": 1614093000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115319,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 8637,
+      "name": "Sprout",
+    },
+    "team2": {
+      "id": 10567,
+      "name": "SAW",
+    },
+  },
+  {
+    "date": 1614088800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115330,
+    "result": {
+      "team1": 15,
+      "team2": 19,
+    },
+    "team1": {
+      "id": 10525,
+      "name": "100PG",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614088800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115318,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10525,
+      "name": "100PG",
+    },
+    "team2": {
+      "id": 8068,
+      "name": "AGO",
+    },
+  },
+  {
+    "date": 1614088800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115316,
+    "result": {
+      "team1": 16,
+      "team2": 12,
+    },
+    "team1": {
+      "id": 8068,
+      "name": "AGO",
+    },
+    "team2": {
+      "id": 10525,
+      "name": "100PG",
+    },
+  },
+  {
+    "date": 1614088800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_train",
+    "mapStatsId": 115317,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+    "team2": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+  },
+  {
+    "date": 1614088800000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115314,
+    "result": {
+      "team1": 5,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 4602,
+      "name": "Tricked",
+    },
+    "team2": {
+      "id": 9183,
+      "name": "Winstrike",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115315,
+    "result": {
+      "team1": 16,
+      "team2": 14,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 5310,
+      "name": "HellRaisers",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115313,
+    "result": {
+      "team1": 9,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 5310,
+      "name": "HellRaisers",
+    },
+    "team2": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5727,
+      "name": "European Development Championship 2",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115310,
+    "result": {
+      "team1": 13,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10577,
+      "name": "SINNERS",
+    },
+    "team2": {
+      "id": 5310,
+      "name": "HellRaisers",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115312,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+    "team2": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115309,
+    "result": {
+      "team1": 16,
+      "team2": 11,
+    },
+    "team1": {
+      "id": 10192,
+      "name": "eXploit",
+    },
+    "team2": {
+      "id": 11001,
+      "name": "ONYX",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115311,
+    "result": {
+      "team1": 16,
+      "team2": 9,
+    },
+    "team1": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+    "team2": {
+      "id": 10894,
+      "name": "Case",
+    },
+  },
+  {
+    "date": 1614078000000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115308,
+    "result": {
+      "team1": 0,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10894,
+      "name": "Case",
+    },
+    "team2": {
+      "id": 7865,
+      "name": "HAVU",
+    },
+  },
+  {
+    "date": 1614070800000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_overpass",
+    "mapStatsId": 115307,
+    "result": {
+      "team1": 16,
+      "team2": 13,
+    },
+    "team1": {
+      "id": 9881,
+      "name": "Rooster",
+    },
+    "team2": {
+      "id": 10990,
+      "name": "Simplicity",
+    },
+  },
+  {
+    "date": 1614070800000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115304,
+    "result": {
+      "team1": 7,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10990,
+      "name": "Simplicity",
+    },
+    "team2": {
+      "id": 9881,
+      "name": "Rooster",
+    },
+  },
+  {
+    "date": 1614070800000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115305,
+    "result": {
+      "team1": 16,
+      "team2": 6,
+    },
+    "team1": {
+      "id": 8668,
+      "name": "ORDER",
+    },
+    "team2": {
+      "id": 10828,
+      "name": "Caught off Guard",
+    },
+  },
+  {
+    "date": 1614070800000,
+    "event": {
+      "id": 5705,
+      "name": "ESEA Premier Season 36 Australia",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115301,
+    "result": {
+      "team1": 4,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10828,
+      "name": "Caught off Guard",
+    },
+    "team2": {
+      "id": 8668,
+      "name": "ORDER",
+    },
+  },
+  {
+    "date": 1614067200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_vertigo",
+    "mapStatsId": 115306,
+    "result": {
+      "team1": 10,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+  },
+  {
+    "date": 1614067200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_mirage",
+    "mapStatsId": 115303,
+    "result": {
+      "team1": 14,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+    "team2": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+  },
+  {
+    "date": 1614067200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_inferno",
+    "mapStatsId": 115299,
+    "result": {
+      "team1": 8,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 10983,
+      "name": "StylDunow",
+    },
+    "team2": {
+      "id": 7461,
+      "name": "Copenhagen Flames",
+    },
+  },
+  {
+    "date": 1614067200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_nuke",
+    "mapStatsId": 115302,
+    "result": {
+      "team1": 11,
+      "team2": 16,
+    },
+    "team1": {
+      "id": 7674,
+      "name": "Ambush",
+    },
+    "team2": {
+      "id": 10808,
+      "name": "GROND",
+    },
+  },
+  {
+    "date": 1614067200000,
+    "event": {
+      "id": 5751,
+      "name": "Snow Sweet Snow 2 Regionals",
+    },
+    "map": "de_dust2",
+    "mapStatsId": 115300,
+    "result": {
+      "team1": 16,
+      "team2": 8,
+    },
+    "team1": {
+      "id": 10808,
+      "name": "GROND",
+    },
+    "team2": {
+      "id": 7674,
+      "name": "Ambush",
+    },
+  },
+]
+`;
