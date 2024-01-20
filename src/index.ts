@@ -26,6 +26,8 @@ import { getDetailedTeamMapStats } from './endpoints/getDetailedTeamMapStats.js'
 export class Hltv {
   private config: Partial<HLTVConfig> = {}
   constructor(config?: Partial<HLTVConfig>) {
+    if (config) this.config = config
+
     if (this.config.httpAgent && !this.config.loadPage) {
       this.config.loadPage = defaultLoadPage(this.config.httpAgent)
     }
