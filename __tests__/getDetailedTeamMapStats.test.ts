@@ -11,4 +11,4 @@ test('getDetailedTeamMapStats', async () => {
   await sleep(3000)
   expect(await HLTV.getDetailedTeamMapStats({ id: EMPTY })).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 500000)

@@ -38,11 +38,11 @@ export const getMatchStats =
     const [m$, p$] = await Promise.all([
       fetchPage(
         `https://www.hltv.org/stats/matches/${id}/${generateRandomSuffix()}`,
-        config.loadPage
+        config.loadMatchStatsPage
       ).then(HLTVScraper),
       fetchPage(
-        `https://www.hltv.org/stats/matches/performance/${id}/${generateRandomSuffix()}`,
-        config.loadPage
+        `https://www.hltv.org/stats/matches/${id}/${generateRandomSuffix()}`,
+        config.loadMatchStatsPage
       ).then(HLTVScraper)
     ])
 

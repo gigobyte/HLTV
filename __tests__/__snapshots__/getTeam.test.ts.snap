@@ -13,6 +13,14 @@ exports[`getTeam 1`] = `
   "name": "Natus Vincere",
   "news": [
     {
+      "link": "/news/37988/preview-theres-a-reason-to-look-forward-to-blast-groups-again",
+      "name": "Preview: There's a reason to look forward to BLAST Groups again",
+    },
+    {
+      "link": "/news/37996/iem-katowice-play-in-matchups-and-groups-revealed",
+      "name": "IEM Katowice Play-in matchups and groups revealed",
+    },
+    {
       "link": "/news/37993/cloud9-navi-more-through-to-eu-rmrs-aurora-sinners-among-teams-eliminated",
       "name": "Cloud9, NAVI, more through to EU RMRs; Aurora, SINNERS among teams eliminated",
     },
@@ -14229,14 +14237,14 @@ exports[`getTeam 1`] = `
       "id": 7998,
       "mapsPlayed": 1247,
       "name": "s1mple",
-      "timeOnTeam": "7 years4 months",
+      "timeOnTeam": "7 years5 months",
       "type": "Benched",
     },
     {
       "id": 472,
       "mapsPlayed": 717,
       "name": "B1ad3",
-      "timeOnTeam": "4 years3 months",
+      "timeOnTeam": "4 years4 months",
       "type": "Coach",
     },
   ],

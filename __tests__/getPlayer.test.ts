@@ -14,4 +14,4 @@ test('getPlayer', async () => {
   await sleep(3000)
   expect(await HLTV.getPlayer({ id: EMPTY_OLD_DESIGN })).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 500000)

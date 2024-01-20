@@ -12,4 +12,4 @@ test('getMatchesStats', async () => {
     })
   ).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 500000)

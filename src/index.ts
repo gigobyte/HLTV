@@ -1,4 +1,9 @@
-import { defaultConfig, defaultLoadPage, type HLTVConfig } from './config.js'
+import {
+  defaultConfig,
+  defaultLoadMatchStatsPage,
+  defaultLoadPage,
+  type HLTVConfig
+} from './config.js'
 import { getMatch } from './endpoints/getMatch.js'
 import { connectToScorebot } from './endpoints/connectToScorebot.js'
 import { getMatches } from './endpoints/getMatches.js'
@@ -28,17 +33,45 @@ export class Hltv {
   constructor(config?: Partial<HLTVConfig>) {
     if (config) this.config = config
 
-    if (this.config.httpAgent && !this.config.loadPage) {
-      this.config.loadPage = defaultLoadPage(this.config.httpAgent)
-    }
-
     if (!this.config.httpAgent) {
       this.config.httpAgent = defaultConfig.httpAgent
+    }
+
+    this.config.loadMatchStatsPage ??= defaultLoadMatchStatsPage
+
+    if (this.config.httpAgent && !this.config.loadPage) {
+      this.config.loadPage = defaultLoadPage(this.config.httpAgent)
     }
 
     if (!this.config.loadPage) {
       this.config.loadPage = defaultConfig.loadPage
     }
+
+    this.getMatch = getMatch(this.config as HLTVConfig)
+    this.getMatches = getMatches(this.config as HLTVConfig)
+    this.getEvent = getEvent(this.config as HLTVConfig)
+    this.getEvents = getEvents(this.config as HLTVConfig)
+    this.getPastEvents = getPastEvents(this.config as HLTVConfig)
+    this.getEventByName = getEventByName(this.config as HLTVConfig)
+    this.getMatchMapStats = getMatchMapStats(this.config as HLTVConfig)
+    this.getMatchStats = getMatchStats(this.config as HLTVConfig)
+    this.getMatchesStats = getMatchesStats(this.config as HLTVConfig)
+    this.getPlayer = getPlayer(this.config as HLTVConfig)
+    this.getPlayerByName = getPlayerByName(this.config as HLTVConfig)
+    this.getPlayerRanking = getPlayerRanking(this.config as HLTVConfig)
+    this.getPlayerStats = getPlayerStats(this.config as HLTVConfig)
+    this.getRecentThreads = getRecentThreads(this.config as HLTVConfig)
+    this.getStreams = getStreams(this.config as HLTVConfig)
+    this.getTeam = getTeam(this.config as HLTVConfig)
+    this.getTeamByName = getTeamByName(this.config as HLTVConfig)
+    this.getTeamRanking = getTeamRanking(this.config as HLTVConfig)
+    this.getTeamStats = getTeamStats(this.config as HLTVConfig)
+    this.getResults = getResults(this.config as HLTVConfig)
+    this.getNews = getNews(this.config as HLTVConfig)
+    this.connectToScorebot = connectToScorebot(this.config as HLTVConfig)
+    this.getDetailedTeamMapStats = getDetailedTeamMapStats(
+      this.config as HLTVConfig
+    )
   }
 
   getMatch = getMatch(this.config as HLTVConfig)

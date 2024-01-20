@@ -8,6 +8,7 @@ export const fetchPage = async (
   const root = cheerio.load(await loadPage(url))
 
   const html = root.html()
+  console.log({ url, html })
 
   if (
     html.includes('error code:') ||

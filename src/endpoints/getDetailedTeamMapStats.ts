@@ -45,7 +45,7 @@ export const getDetailedTeamMapStats =
       const stats = mps$('.stats-rows.standard-box').children().toArray()
 
       const [wins, draws, losses] = getDetailedMapStat(stats, 1)
-        .split(' / ')
+        ?.split(' / ')
         .map(Number)
 
       const [

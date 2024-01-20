@@ -402,6 +402,10 @@ exports[`getPlayer 1`] = `
   "name": "Oleksandr Kostyliev",
   "news": [
     {
+      "link": "/news/37988/preview-theres-a-reason-to-look-forward-to-blast-groups-again",
+      "name": "Preview: There's a reason to look forward to BLAST Groups again",
+    },
+    {
       "link": "/news/37987/bold-predictions-for-2024-who-are-they",
       "name": "Bold Predictions for 2024: Who are they?",
     },

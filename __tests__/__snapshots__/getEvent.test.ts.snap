@@ -317,7 +317,7 @@ exports[`getEvent 1`] = `
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105505492-preview.jpg",
-      "views": 66,
+      "views": 68,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525.mp4",
@@ -331,7 +331,7 @@ exports[`getEvent 1`] = `
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525-preview.jpg",
-      "views": 58,
+      "views": 60,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105489583.mp4",
@@ -359,7 +359,7 @@ exports[`getEvent 1`] = `
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105494048-preview.jpg",
-      "views": 54,
+      "views": 56,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105476554.mp4",
@@ -2486,7 +2486,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/VTDBXTBq9qzQ71iTZOoU6Q/AT-cm%7CVTDBXTBq9qzQ71iTZOoU6Q-preview.jpg",
-      "views": 1343,
+      "views": 1345,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/xbDUpQG9R8apbObdSQFAsA/AT-cm%7CxbDUpQG9R8apbObdSQFAsA.mp4",
@@ -2892,7 +2892,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/tlCIjMtrH1geT9hu6Al8-Q/AT-cm%7CtlCIjMtrH1geT9hu6Al8-Q-preview.jpg",
-      "views": 7853,
+      "views": 7855,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/R28IgsW769X2rpKXzaFHVA/AT-cm%7CR28IgsW769X2rpKXzaFHVA.mp4",
@@ -2934,7 +2934,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/M1cNVBp2GiNspyDf5lIKPw/AT-cm%7CM1cNVBp2GiNspyDf5lIKPw-preview.jpg",
-      "views": 3435,
+      "views": 3437,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Q6vl03g4-tQwTM7to2bSKw/AT-cm%7CQ6vl03g4-tQwTM7to2bSKw.mp4",
@@ -2948,7 +2948,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Q6vl03g4-tQwTM7to2bSKw/AT-cm%7CQ6vl03g4-tQwTM7to2bSKw-preview.jpg",
-      "views": 3127,
+      "views": 3129,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/T5YnDZ9AKycNZvcIX0uB-w/AT-cm%7CT5YnDZ9AKycNZvcIX0uB-w.mp4",
@@ -3046,7 +3046,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/skZ3nq37R832hLHqu9JLhw/AT-cm%7CskZ3nq37R832hLHqu9JLhw-preview.jpg",
-      "views": 1055,
+      "views": 1057,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/hOLXGpLnUXVJP3eMssLoAQ/AT-cm%7ChOLXGpLnUXVJP3eMssLoAQ.mp4",
