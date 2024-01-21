@@ -15,8 +15,8 @@ export interface HLTVConfig {
 export const defaultLoadMatchStatsPage = async (url: string) => {
   const puppeteer = addExtra(puppeteerVanilla as any).use(StealthPlugin())
   const options = {
-    // headless: 'new',
-    headless: false,
+    headless: 'new',
+    // headless: false,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   }
   const browser = await puppeteer.launch(options as any)
