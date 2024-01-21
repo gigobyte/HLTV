@@ -30,9 +30,9 @@ const log = (promise: Promise<any>) =>
 
 // log(
 //   HLTV.getDetailedTeamMapStats({
-//     id: 10566
-//     // maps: [GameMap.Dust2]
-//     // startDate: '2023-10-19',
-//     // endDate: '2024-01-19'
+//     id: 10566,
+//     maps: GameMap.Dust2,
+//     startDate: '2023-10-19',
+//     endDate: '2024-01-19'
 //   })
 // )

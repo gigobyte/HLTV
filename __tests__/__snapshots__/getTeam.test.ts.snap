@@ -13,6 +13,10 @@ exports[`getTeam 1`] = `
   "name": "Natus Vincere",
   "news": [
     {
+      "link": "/news/37999/five-eu-rmr-spots-remain-as-closed-qualifiers-reach-end",
+      "name": "Five EU RMR spots remain as closed qualifiers reach end",
+    },
+    {
       "link": "/news/37988/preview-theres-a-reason-to-look-forward-to-blast-groups-again",
       "name": "Preview: There's a reason to look forward to BLAST Groups again",
     },
@@ -14202,7 +14206,7 @@ exports[`getTeam 1`] = `
       "id": 18987,
       "mapsPlayed": 433,
       "name": "b1t",
-      "timeOnTeam": "2 years11 months",
+      "timeOnTeam": "3 years",
       "type": "Starter",
     },
     {

@@ -24,6 +24,7 @@ Table of contents
   - [getTeam](#getteam)
   - [getTeamByName](#getteambyname)
   - [getTeamStats](#getteamstats)
+  - [getDetailedTeamMapStats](#getDetailedTeamMapStats)
   - [getPlayer](#getplayer)
   - [getPlayerByName](#getplayerbyname)
   - [getPlayerStats](#getplayerstats)
@@ -59,10 +60,10 @@ const { HLTV } = require('hltv')
 
 You can create an instance of HLTV with a custom config if you want to.
 
-|  Option   |                Type                |         Default value          |                                   Description                                   |
-| :-------: | :--------------------------------: | :----------------------------: | :-----------------------------------------------------------------------------: |
+|  Option   |                Type                |       Default value        |                                   Description                                   |
+| :-------: | :--------------------------------: | :------------------------: | :-----------------------------------------------------------------------------: |
 | loadPage  | (url: string) => Promise\<string\> | based on the 'got' library |      Function that will be called when the library makes a request to HLTV      |
-| httpAgent |             HttpAgent              |           HttpsAgent           | Http agent used when sending a request and connecting to the scorebot websocket |
+| httpAgent |             HttpAgent              |         HttpsAgent         | Http agent used when sending a request and connecting to the scorebot websocket |
 
 ```javascript
 const myHLTV = HLTV.createInstance({ loadPage: (url) => axios.get(url) })
@@ -291,6 +292,36 @@ HLTV.getTeamStats({ id: 6137 }).then(res => {
 ```
 
 **[See schema](https://github.com/gigobyte/HLTV/blob/master/src/endpoints/getTeamStats.ts#L28)**
+
+---
+
+#### getDetailedTeamMapStats
+
+Parses the info from hltv.org/stats/teams/maps/ (1 request + 1 request per map)
+
+|      Option       |                                            Type                                            | Default value |                Description                 |
+| :---------------: | :----------------------------------------------------------------------------------------: | :-----------: | :----------------------------------------: |
+|        id         |                                           number                                           |       -       |                The team id                 |
+| currentRosterOnly |                                          boolean?                                          |     false     | Return stats about the current roster only |
+|     startDate     |                                          string?                                           |       -       |                     -                      |
+|      endDate      |                                          string?                                           |       -       |                     -                      |
+|     matchType     |     [MatchType](https://github.com/gigobyte/HLTV/blob/master/src/shared/MatchType.ts)?     |       -       |                     -                      |
+|   rankingFilter   | [RankingFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/RankingFilter.ts)? |       -       |                     -                      |
+|       maps        |      [GameMap](https://github.com/gigobyte/HLTV/blob/master/src/shared/GameMap.ts)[]?      |       -       |                     -                      |
+|      bestOfX      |  [BestOfFilter](https://github.com/gigobyte/HLTV/blob/master/src/shared/BestOfFilter.ts)?  |       -       |                     -                      |
+
+```javascript
+HLTV.getDetailedTeamMapStats({
+  id: 10566,
+  maps: GameMap.Dust2,
+  startDate: '2023-10-19',
+  endDate: '2024-01-19'
+}).then(res => {
+  ...
+})
+```
+
+**[See schema](https://github.com/beermonsterdota/HLTV/blob/master/src/endpoints/getDetailedTeamMapStats.ts#L112)**
 
 ---
 

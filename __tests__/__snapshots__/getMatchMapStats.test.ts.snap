@@ -458,10 +458,7 @@ exports[`getMatchMapStats 2`] = `
       "team2": 1.28,
     },
   },
-  "performanceOverview": {
-    "team1": {},
-    "team2": {},
-  },
+  "performanceOverview": null,
   "playerStats": {
     "team1": [
       {
