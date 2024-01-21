@@ -1,4 +1,4 @@
-import { HLTV } from './index'
+import { GameMap, HLTV } from './index.js'
 
 const log = (promise: Promise<any>) =>
   promise
@@ -10,7 +10,11 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getEvent({ id: 6810 }))
 // log(HLTV.getEvents())
 // log(HLTV.getMatchMapStats({ id: 147749 }))
-// log(HLTV.getMatchStats({ id: 79924 }))
+// log(
+//   HLTV.getMatchStats({
+//     id: 102058
+//   })
+// )
 // log(HLTV.getMatchesStats())
 // log(HLTV.getPlayer({ id: 7998 }))
 // log(HLTV.getPlayerRanking())
@@ -23,3 +27,12 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getTeamRanking())
 // log(HLTV.getResults({ eventIds: [1617] }))
 // log(HLTV.getNews())
+
+// log(
+//   HLTV.getDetailedTeamMapStats({
+//     id: 10566,
+//     maps: GameMap.Dust2,
+//     startDate: '2023-10-19',
+//     endDate: '2024-01-19'
+//   })
+// )

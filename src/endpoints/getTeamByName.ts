@@ -1,5 +1,5 @@
-import { HLTVConfig } from '../config'
-import { FullTeam, getTeam } from './getTeam'
+import { type HLTVConfig } from '../config.js'
+import { type FullTeam, getTeam } from './getTeam.js'
 
 export const getTeamByName =
   (config: HLTVConfig) =>

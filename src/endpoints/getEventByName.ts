@@ -1,5 +1,5 @@
-import { HLTVConfig } from '../config'
-import { FullEvent, getEvent } from './getEvent'
+import { type HLTVConfig } from '../config.js'
+import { type FullEvent, getEvent } from './getEvent.js'
 
 export const getEventByName =
   (config: HLTVConfig) =>

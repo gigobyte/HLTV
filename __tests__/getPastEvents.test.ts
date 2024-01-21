@@ -1,6 +1,7 @@
-import HLTV from '../src'
-import { EventType } from '../src/shared/EventType'
-import { sleep } from '../src/utils'
+import HLTV from '../src/index.js'
+import { EventType } from '../src/shared/EventType.js'
+import { sleep } from '../src/utils.js'
+import { expect, test } from 'vitest'
 
 test('getPastEvents', async () => {
   await sleep(3000)
@@ -13,4 +14,4 @@ test('getPastEvents', async () => {
     })
   ).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 500000)

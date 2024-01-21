@@ -1,5 +1,6 @@
-import HLTV from '../src/'
-import { sleep } from '../src/utils'
+import HLTV from '../src/index.js'
+import { sleep } from '../src/utils.js'
+import { expect, test } from 'vitest'
 
 const FULL = 9863
 const EMPTY = 9918
@@ -10,4 +11,4 @@ test('getTeamStats', async () => {
   await sleep(3000)
   expect(await HLTV.getTeamStats({ id: EMPTY })).toMatchSnapshot()
   await sleep(3000)
-}, 30000)
+}, 500000)

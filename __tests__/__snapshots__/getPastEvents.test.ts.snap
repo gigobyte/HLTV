@@ -1,12 +1,12 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`getPastEvents 1`] = `
-Array [
-  Object {
+[
+  {
     "dateEnd": 1514113200000,
     "dateStart": 1513854000000,
     "id": 3464,
-    "location": Object {
+    "location": {
       "code": "RS",
       "name": "Belgrade, Serbia",
     },
@@ -15,11 +15,11 @@ Array [
     "prizePool": "$4,725",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1513508400000,
     "dateStart": 1513335600000,
     "id": 3313,
-    "location": Object {
+    "location": {
       "code": "MX",
       "name": "Cancun, Mexico",
     },
@@ -28,11 +28,11 @@ Array [
     "prizePool": "$660,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1512903600000,
     "dateStart": 1512471600000,
     "id": 3072,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Odense, Denmark",
     },
@@ -41,11 +41,11 @@ Array [
     "prizePool": "$750,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1512817200000,
     "dateStart": 1512558000000,
     "id": 3283,
-    "location": Object {
+    "location": {
       "code": "MY",
       "name": "Kuala Lumpur, Malaysia",
     },
@@ -54,11 +54,11 @@ Array [
     "prizePool": "$235,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1512817200000,
     "dateStart": 1507370400000,
     "id": 3201,
-    "location": Object {
+    "location": {
       "code": "GB",
       "name": "London, United Kingdom",
     },
@@ -67,11 +67,11 @@ Array [
     "prizePool": "$110,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1512298800000,
     "dateStart": 1512126000000,
     "id": 2574,
-    "location": Object {
+    "location": {
       "code": "SE",
       "name": "Jönköping, Sweden",
     },
@@ -80,11 +80,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511694000000,
     "dateStart": 1511607600000,
     "id": 3224,
-    "location": Object {
+    "location": {
       "code": "BY",
       "name": "Minsk, Belarus",
     },
@@ -93,11 +93,11 @@ Array [
     "prizePool": "$40,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511694000000,
     "dateStart": 1511434800000,
     "id": 3115,
-    "location": Object {
+    "location": {
       "code": "ES",
       "name": "Barcelona, Spain",
     },
@@ -106,11 +106,11 @@ Array [
     "prizePool": "$16,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511694000000,
     "dateStart": 1511434800000,
     "id": 3114,
-    "location": Object {
+    "location": {
       "code": "ES",
       "name": "Barcelona, Spain",
     },
@@ -119,11 +119,11 @@ Array [
     "prizePool": "$92,500",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511607600000,
     "dateStart": 1511521200000,
     "id": 2998,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Copenhagen, Denmark",
     },
@@ -132,11 +132,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511434800000,
     "dateStart": 1511089200000,
     "id": 3292,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Shenzhen, China",
     },
@@ -145,11 +145,11 @@ Array [
     "prizePool": "$113,361",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511089200000,
     "dateStart": 1510657200000,
     "id": 2956,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Burbank & Oakland, California, USA",
     },
@@ -158,11 +158,11 @@ Array [
     "prizePool": "$300,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511002800000,
     "dateStart": 1510916400000,
     "id": 3355,
-    "location": Object {
+    "location": {
       "code": "KR",
       "name": "Busan, South Korea",
     },
@@ -171,11 +171,11 @@ Array [
     "prizePool": "$53,580",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1511002800000,
     "dateStart": 1510916400000,
     "id": 3166,
-    "location": Object {
+    "location": {
       "code": "AU",
       "name": "Sydney, Australia",
     },
@@ -184,11 +184,11 @@ Array [
     "prizePool": "$24,300",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1510484400000,
     "dateStart": 1510398000000,
     "id": 3165,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Santa Ana, California, USA",
     },
@@ -197,11 +197,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1510398000000,
     "dateStart": 1510138800000,
     "id": 3069,
-    "location": Object {
+    "location": {
       "code": "KR",
       "name": "Busan, South Korea",
     },
@@ -210,11 +210,11 @@ Array [
     "prizePool": "$17,978",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509879600000,
     "dateStart": 1509620400000,
     "id": 3252,
-    "location": Object {
+    "location": {
       "code": "CA",
       "name": "Toronto, Canada",
     },
@@ -223,11 +223,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509879600000,
     "dateStart": 1509620400000,
     "id": 3251,
-    "location": Object {
+    "location": {
       "code": "RO",
       "name": "Bucharest, Romania",
     },
@@ -236,11 +236,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509879600000,
     "dateStart": 1509620400000,
     "id": 3190,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Shanghai, China",
     },
@@ -249,11 +249,11 @@ Array [
     "prizePool": "$150,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509271200000,
     "dateStart": 1509012000000,
     "id": 3250,
-    "location": Object {
+    "location": {
       "code": "RO",
       "name": "Bucharest, Romania",
     },
@@ -262,11 +262,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509271200000,
     "dateStart": 1509012000000,
     "id": 3249,
-    "location": Object {
+    "location": {
       "code": "KR",
       "name": "Seoul, South Korea",
     },
@@ -275,11 +275,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509271200000,
     "dateStart": 1508839200000,
     "id": 3133,
-    "location": Object {
+    "location": {
       "code": "RU",
       "name": "Saint Petersburg, Russia",
     },
@@ -288,11 +288,11 @@ Array [
     "prizePool": "$490,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1509184800000,
     "dateStart": 1509098400000,
     "id": 3204,
-    "location": Object {
+    "location": {
       "code": "ES",
       "name": "Madrid, Spain",
     },
@@ -301,11 +301,11 @@ Array [
     "prizePool": "$10,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1508752800000,
     "dateStart": 1508752800000,
     "id": 3153,
-    "location": Object {
+    "location": {
       "code": "RU",
       "name": "Saint Petersburg, Russia",
     },
@@ -314,11 +314,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1508666400000,
     "dateStart": 1508493600000,
     "id": 2573,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Denver, Colorado, USA",
     },
@@ -327,11 +327,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1508666400000,
     "dateStart": 1508407200000,
     "id": 2921,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Shanghai, China",
     },
@@ -340,11 +340,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1508061600000,
     "dateStart": 1507975200000,
     "id": 3183,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Krefeld, Germany",
     },
@@ -353,11 +353,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1507888800000,
     "dateStart": 1504864800000,
     "id": 3016,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Atlanta, Georgia, USA",
     },
@@ -366,11 +366,11 @@ Array [
     "prizePool": "$1,000,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1507370400000,
     "dateStart": 1507197600000,
     "id": 3101,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Husum, Germany",
     },
@@ -379,11 +379,11 @@ Array [
     "prizePool": "$17,585",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1506852000000,
     "dateStart": 1506679200000,
     "id": 3189,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Kunshan, China",
     },
@@ -392,11 +392,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1506247200000,
     "dateStart": 1506160800000,
     "id": 3046,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Burbank, California, USA",
     },
@@ -405,11 +405,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1505642400000,
     "dateStart": 1505469600000,
     "id": 2636,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "New York, New York, USA",
     },
@@ -418,11 +418,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1505037600000,
     "dateStart": 1504864800000,
     "id": 2973,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Sønderborg, Denmark",
     },
@@ -431,11 +431,11 @@ Array [
     "prizePool": "$15,300",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1505037600000,
     "dateStart": 1504864800000,
     "id": 2572,
-    "location": Object {
+    "location": {
       "code": "CA",
       "name": "Montreal, Canada",
     },
@@ -444,11 +444,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1505037600000,
     "dateStart": 1504778400000,
     "id": 3061,
-    "location": Object {
+    "location": {
       "code": "GR",
       "name": "Mykonos, Greece",
     },
@@ -457,11 +457,11 @@ Array [
     "prizePool": "$235,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1504432800000,
     "dateStart": 1504346400000,
     "id": 3140,
-    "location": Object {
+    "location": {
       "code": "MO",
       "name": "Ilhas, Macau",
     },
@@ -470,11 +470,11 @@ Array [
     "prizePool": "$12,781",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1504432800000,
     "dateStart": 1504087200000,
     "id": 2684,
-    "location": Object {
+    "location": {
       "code": "SE",
       "name": "Malmö, Sweden",
     },
@@ -483,11 +483,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1504346400000,
     "dateStart": 1504346400000,
     "id": 3085,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Peine, Germany",
     },
@@ -496,11 +496,11 @@ Array [
     "prizePool": "$3,569",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1504346400000,
     "dateStart": 1499508000000,
     "id": 2979,
-    "location": Object {
+    "location": {
       "code": "GB",
       "name": "London, United Kingdom",
     },
@@ -509,11 +509,11 @@ Array [
     "prizePool": "$110,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1503828000000,
     "dateStart": 1503741600000,
     "id": 3093,
-    "location": Object {
+    "location": {
       "code": "RU",
       "name": "Moscow, Russia",
     },
@@ -522,11 +522,11 @@ Array [
     "prizePool": "$10,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1500804000000,
     "dateStart": 1500631200000,
     "id": 2571,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Atlanta, Georgia, USA",
     },
@@ -535,11 +535,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1500112800000,
     "dateStart": 1499940000000,
     "id": 2570,
-    "location": Object {
+    "location": {
       "code": "ES",
       "name": "Valencia, Spain",
     },
@@ -548,11 +548,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1499594400000,
     "dateStart": 1499162400000,
     "id": 2635,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Cologne, Germany",
     },
@@ -561,11 +561,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1498989600000,
     "dateStart": 1498730400000,
     "id": 2721,
-    "location": Object {
+    "location": {
       "code": "RO",
       "name": "Bucharest, Romania",
     },
@@ -574,11 +574,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1498384800000,
     "dateStart": 1498212000000,
     "id": 2763,
-    "location": Object {
+    "location": {
       "code": "GB",
       "name": "London, United Kingdom",
     },
@@ -587,11 +587,11 @@ Array [
     "prizePool": "$660,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1498298400000,
     "dateStart": 1498298400000,
     "id": 2890,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Hamburg, Germany",
     },
@@ -600,11 +600,11 @@ Array [
     "prizePool": "$3,360",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497866400000,
     "dateStart": 1497693600000,
     "id": 2924,
-    "location": Object {
+    "location": {
       "code": "SE",
       "name": "Jönköping, Sweden",
     },
@@ -613,11 +613,11 @@ Array [
     "prizePool": "$11,468",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497866400000,
     "dateStart": 1497693600000,
     "id": 2569,
-    "location": Object {
+    "location": {
       "code": "SE",
       "name": "Jönköping, Sweden",
     },
@@ -626,11 +626,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497780000000,
     "dateStart": 1497780000000,
     "id": 2889,
-    "location": Object {
+    "location": {
       "code": "RU",
       "name": "Moscow, Russia",
     },
@@ -639,11 +639,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497780000000,
     "dateStart": 1497693600000,
     "id": 2884,
-    "location": Object {
+    "location": {
       "code": "AU",
       "name": "Sydney, Australia",
     },
@@ -652,11 +652,11 @@ Array [
     "prizePool": "$37,184",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497780000000,
     "dateStart": 1497520800000,
     "id": 2723,
-    "location": Object {
+    "location": {
       "code": "RO",
       "name": "Bucharest, Romania",
     },
@@ -665,11 +665,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497607200000,
     "dateStart": 1497607200000,
     "id": 2853,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Atlanta, Georgia, USA",
     },
@@ -678,11 +678,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497175200000,
     "dateStart": 1496916000000,
     "id": 2724,
-    "location": Object {
+    "location": {
       "code": "RU",
       "name": "Moscow, Russia",
     },
@@ -691,11 +691,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1497175200000,
     "dateStart": 1496916000000,
     "id": 2722,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Santa Ana, California, USA",
     },
@@ -704,11 +704,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1496570400000,
     "dateStart": 1496311200000,
     "id": 2725,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Beijing, China",
     },
@@ -717,11 +717,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1496570400000,
     "dateStart": 1496138400000,
     "id": 2557,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Dallas, Texas, USA",
     },
@@ -730,11 +730,11 @@ Array [
     "prizePool": "$750,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1495965600000,
     "dateStart": 1495879200000,
     "id": 2777,
-    "location": Object {
+    "location": {
       "code": "PL",
       "name": "Wroclaw, Poland",
     },
@@ -743,11 +743,11 @@ Array [
     "prizePool": "$30,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1495879200000,
     "dateStart": 1495879200000,
     "id": 2834,
-    "location": Object {
+    "location": {
       "code": "RS",
       "name": "Belgrade, Serbia",
     },
@@ -756,11 +756,11 @@ Array [
     "prizePool": "$5,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1494756000000,
     "dateStart": 1494669600000,
     "id": 2801,
-    "location": Object {
+    "location": {
       "code": "RO",
       "name": "Bucharest, Romania",
     },
@@ -769,11 +769,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1494756000000,
     "dateStart": 1494669600000,
     "id": 2749,
-    "location": Object {
+    "location": {
       "code": "GB",
       "name": "Leicester, United Kingdom",
     },
@@ -782,11 +782,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1494237600000,
     "dateStart": 1494064800000,
     "id": 2568,
-    "location": Object {
+    "location": {
       "code": "FR",
       "name": "Tours, France",
     },
@@ -795,11 +795,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1494151200000,
     "dateStart": 1494064800000,
     "id": 2807,
-    "location": Object {
+    "location": {
       "code": "PT",
       "name": "Lisbon, Portugal",
     },
@@ -808,11 +808,11 @@ Array [
     "prizePool": "$10,997",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1494151200000,
     "dateStart": 1493805600000,
     "id": 2713,
-    "location": Object {
+    "location": {
       "code": "AU",
       "name": "Sydney, Australia",
     },
@@ -821,11 +821,11 @@ Array [
     "prizePool": "$200,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1493546400000,
     "dateStart": 1493373600000,
     "id": 2567,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Austin, Texas, USA",
     },
@@ -834,11 +834,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1492941600000,
     "dateStart": 1492682400000,
     "id": 2641,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Los Angeles, California",
     },
@@ -847,11 +847,11 @@ Array [
     "prizePool": "$150,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1492250400000,
     "dateStart": 1492164000000,
     "id": 2753,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Copenhagen, Denmark",
     },
@@ -860,11 +860,11 @@ Array [
     "prizePool": "$56,300",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1492250400000,
     "dateStart": 1492077600000,
     "id": 2663,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Copenhagen, Denmark",
     },
@@ -873,11 +873,11 @@ Array [
     "prizePool": "$15,025",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1492164000000,
     "dateStart": 1492077600000,
     "id": 2675,
-    "location": Object {
+    "location": {
       "code": "DK",
       "name": "Copenhagen, Denmark",
     },
@@ -886,11 +886,11 @@ Array [
     "prizePool": "Other",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1491732000000,
     "dateStart": 1491300000000,
     "id": 2683,
-    "location": Object {
+    "location": {
       "code": "UA",
       "name": "Kiev, Ukraine",
     },
@@ -899,11 +899,11 @@ Array [
     "prizePool": "$300,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1491040800000,
     "dateStart": 1491040800000,
     "id": 2742,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Siek, Germany",
     },
@@ -912,11 +912,11 @@ Array [
     "prizePool": "$2,917",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1489921200000,
     "dateStart": 1489748400000,
     "id": 2160,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Chengde, China",
     },
@@ -925,11 +925,11 @@ Array [
     "prizePool": "$99,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1488711600000,
     "dateStart": 1488366000000,
     "id": 2637,
-    "location": Object {
+    "location": {
       "code": "PL",
       "name": "Katowice, Poland",
     },
@@ -938,11 +938,11 @@ Array [
     "prizePool": "$250,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1488538800000,
     "dateStart": 1488452400000,
     "id": 2662,
-    "location": Object {
+    "location": {
       "code": "PL",
       "name": "Katowice, Poland",
     },
@@ -951,11 +951,11 @@ Array [
     "prizePool": "$30,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1487502000000,
     "dateStart": 1487156400000,
     "id": 2541,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Las Vegas, Nevada, USA",
     },
@@ -964,11 +964,11 @@ Array [
     "prizePool": "$450,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1486206000000,
     "dateStart": 1486119600000,
     "id": 2649,
-    "location": Object {
+    "location": {
       "code": "FI",
       "name": "Helsinki, Finland",
     },
@@ -977,11 +977,11 @@ Array [
     "prizePool": "$15,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1484478000000,
     "dateStart": 1484305200000,
     "id": 2566,
-    "location": Object {
+    "location": {
       "code": "DE",
       "name": "Leipzig, Germany",
     },
@@ -990,11 +990,11 @@ Array [
     "prizePool": "$100,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1484478000000,
     "dateStart": 1484218800000,
     "id": 2564,
-    "location": Object {
+    "location": {
       "code": "CN",
       "name": "Changzhou, China",
     },
@@ -1003,11 +1003,11 @@ Array [
     "prizePool": "$1,500,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1483873200000,
     "dateStart": 1483700400000,
     "id": 2538,
-    "location": Object {
+    "location": {
       "code": "US",
       "name": "Burbank, California, USA",
     },
@@ -1016,11 +1016,11 @@ Array [
     "prizePool": "$50,000",
     "type": "INTLLAN",
   },
-  Object {
+  {
     "dateEnd": 1483873200000,
     "dateStart": 1483614000000,
     "id": 2642,
-    "location": Object {
+    "location": {
       "code": "SE",
       "name": "Stockholm, Sweden",
     },

@@ -1,13 +1,13 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { BestOfFilter } from '../shared/BestOfFilter'
-import { GameMap, toMapFilter } from '../shared/GameMap'
-import { MatchType } from '../shared/MatchType'
-import { Player } from '../shared/Player'
-import { RankingFilter } from '../shared/RankingFilter'
-import { Team } from '../shared/Team'
-import { fetchPage, getIdAt } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import { BestOfFilter } from '../shared/BestOfFilter.js'
+import { GameMap, toMapFilter } from '../shared/GameMap.js'
+import { MatchType } from '../shared/MatchType.js'
+import type { Player } from '../shared/Player.js'
+import { RankingFilter } from '../shared/RankingFilter.js'
+import type { Team } from '../shared/Team.js'
+import { fetchPage, getIdAt } from '../utils.js'
 
 export interface PlayerRanking {
   player: Player

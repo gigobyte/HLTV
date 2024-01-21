@@ -1,12 +1,12 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVScraper } from '../scraper'
-import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
-import { fetchPage, getIdAt, sleep } from '../utils'
-import { RankingFilter } from '../shared/RankingFilter'
-import { MatchType } from '../shared/MatchType'
+import type { HLTVConfig } from '../config.js'
+import { type HLTVPage, HLTVScraper } from '../scraper.js'
+import { fromMapSlug, GameMap, toMapFilter } from '../shared/GameMap.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
+import { fetchPage, getIdAt, sleep } from '../utils.js'
+import { RankingFilter } from '../shared/RankingFilter.js'
+import { MatchType } from '../shared/MatchType.js'
 
 export interface GetMatchesStatsArguments {
   startDate?: string

@@ -1,240 +1,240 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`getMatchStats 1`] = `
-Array [
-  Object {
+[
+  {
     "kd": 1.64,
     "kdDiff": 69,
     "maps": 8,
-    "player": Object {
+    "player": {
       "id": 13776,
       "name": "Jame",
     },
     "rating2": 1.44,
     "rounds": 211,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8120,
         "name": "AVANGAR",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.26,
     "kdDiff": 30,
     "maps": 8,
-    "player": Object {
+    "player": {
       "id": 13239,
       "name": "Qikert",
     },
     "rating2": 1.21,
     "rounds": 211,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8120,
         "name": "AVANGAR",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.35,
     "kdDiff": 43,
     "maps": 8,
-    "player": Object {
+    "player": {
       "id": 11942,
       "name": "buster",
     },
     "rating2": 1.21,
     "rounds": 211,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8120,
         "name": "AVANGAR",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 5,
     "maps": 6,
-    "player": Object {
+    "player": {
       "id": 9766,
       "name": "hampus",
     },
     "rating2": 1.1,
     "rounds": 186,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 9928,
         "name": "GamerLegion",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 9,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 13980,
       "name": "lollipop21k",
     },
     "rating2": 1.09,
     "rounds": 132,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7969,
         "name": "Nemiga",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 9,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 1146,
       "name": "dennis",
     },
     "rating2": 1.09,
     "rounds": 160,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 9928,
         "name": "GamerLegion",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.17,
     "kdDiff": 12,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 16384,
       "name": "spellfull",
     },
     "rating2": 1.04,
     "rounds": 132,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7969,
         "name": "Nemiga",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.87,
     "kdDiff": -12,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 13976,
       "name": "boX",
     },
     "rating2": 1.02,
     "rounds": 132,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7969,
         "name": "Nemiga",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.94,
     "kdDiff": -8,
     "maps": 7,
-    "player": Object {
+    "player": {
       "id": 11716,
       "name": "SANJI",
     },
     "rating2": 1.01,
     "rounds": 195,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8120,
         "name": "AVANGAR",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.94,
     "kdDiff": -8,
     "maps": 8,
-    "player": Object {
+    "player": {
       "id": 334,
       "name": "AdreN",
     },
     "rating2": 1.01,
     "rounds": 211,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8120,
         "name": "AVANGAR",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.91,
     "kdDiff": -13,
     "maps": 6,
-    "player": Object {
+    "player": {
       "id": 10784,
       "name": "RuStY",
     },
     "rating2": 1.01,
     "rounds": 186,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 9928,
         "name": "GamerLegion",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.06,
     "kdDiff": 7,
     "maps": 6,
-    "player": Object {
+    "player": {
       "id": 13670,
       "name": "nawwk",
     },
     "rating2": 0.99,
     "rounds": 186,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 9928,
         "name": "GamerLegion",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.9,
     "kdDiff": -9,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 11926,
       "name": "mds",
     },
     "rating2": 0.98,
     "rounds": 132,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7969,
         "name": "Nemiga",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.95,
     "kdDiff": -4,
     "maps": 5,
-    "player": Object {
+    "player": {
       "id": 12269,
       "name": "Jyo",
     },
     "rating2": 0.97,
     "rounds": 132,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7969,
         "name": "Nemiga",
       },
@@ -244,2840 +244,2840 @@ Array [
 `;
 
 exports[`getMatchStats 2`] = `
-Array [
-  Object {
+[
+  {
     "kd": 1.31,
     "kdDiff": 813,
     "maps": 148,
-    "player": Object {
+    "player": {
       "id": 7938,
       "name": "XANTARES",
     },
     "rating1": 1.28,
     "rounds": 3781,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5929,
         "name": "Space Soldiers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.37,
     "kdDiff": 783,
     "maps": 134,
-    "player": Object {
+    "player": {
       "id": 9216,
       "name": "coldzera",
     },
     "rating1": 1.24,
     "rounds": 3494,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.28,
     "kdDiff": 529,
     "maps": 120,
-    "player": Object {
+    "player": {
       "id": 8575,
       "name": "Calyx",
     },
     "rating1": 1.19,
     "rounds": 3026,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5929,
         "name": "Space Soldiers",
       },
-      Object {
+      {
         "id": 7018,
         "name": "DarkPassage",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.22,
     "kdDiff": 441,
     "maps": 113,
-    "player": Object {
+    "player": {
       "id": 7998,
       "name": "s1mple",
     },
     "rating1": 1.18,
     "rounds": 2954,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
-      Object {
+      {
         "id": 5988,
         "name": "FlipSid3",
       },
-      Object {
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.22,
     "kdDiff": 420,
     "maps": 112,
-    "player": Object {
+    "player": {
       "id": 10394,
       "name": "Twistzz",
     },
     "rating1": 1.17,
     "rounds": 2927,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5973,
         "name": "Liquid",
       },
-      Object {
+      {
         "id": 5996,
         "name": "TSM",
       },
-      Object {
+      {
         "id": 7557,
         "name": "Misfits",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.2,
     "kdDiff": 459,
     "maps": 133,
-    "player": Object {
+    "player": {
       "id": 8564,
       "name": "fer",
     },
     "rating1": 1.15,
     "rounds": 3475,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.26,
     "kdDiff": 646,
     "maps": 158,
-    "player": Object {
+    "player": {
       "id": 7167,
       "name": "kennyS",
     },
     "rating1": 1.15,
     "rounds": 4112,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.19,
     "kdDiff": 383,
     "maps": 120,
-    "player": Object {
+    "player": {
       "id": 8601,
       "name": "zhokiNg",
     },
     "rating1": 1.15,
     "rounds": 2993,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7606,
         "name": "ViCi",
       },
-      Object {
+      {
         "id": 6773,
         "name": "VG.CyberZen",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.21,
     "kdDiff": 341,
     "maps": 101,
-    "player": Object {
+    "player": {
       "id": 180,
       "name": "Savage",
     },
     "rating1": 1.14,
     "rounds": 2526,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7606,
         "name": "ViCi",
       },
-      Object {
+      {
         "id": 6773,
         "name": "VG.CyberZen",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.23,
     "kdDiff": 435,
     "maps": 121,
-    "player": Object {
+    "player": {
       "id": 9353,
       "name": "paz",
     },
     "rating1": 1.14,
     "rounds": 3058,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5929,
         "name": "Space Soldiers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.26,
     "kdDiff": 426,
     "maps": 116,
-    "player": Object {
+    "player": {
       "id": 8565,
       "name": "HEN1",
     },
     "rating1": 1.14,
     "rounds": 2855,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7010,
         "name": "Immortals",
       },
-      Object {
+      {
         "id": 6118,
         "name": "Tempo Storm",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.14,
     "kdDiff": 225,
     "maps": 93,
-    "player": Object {
+    "player": {
       "id": 8370,
       "name": "mixwell",
     },
     "rating1": 1.13,
     "rounds": 2342,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6615,
         "name": "OpTic",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.19,
     "kdDiff": 300,
     "maps": 97,
-    "player": Object {
+    "player": {
       "id": 9032,
       "name": "Magisk",
     },
     "rating1": 1.13,
     "rounds": 2454,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 7533,
         "name": "North",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.17,
     "kdDiff": 512,
     "maps": 174,
-    "player": Object {
+    "player": {
       "id": 7429,
       "name": "Happy",
     },
     "rating1": 1.12,
     "rounds": 4467,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.19,
     "kdDiff": 422,
     "maps": 132,
-    "player": Object {
+    "player": {
       "id": 8124,
       "name": "DavCost",
     },
     "rating1": 1.12,
     "rounds": 3474,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7020,
         "name": "Spirit",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.15,
     "kdDiff": 262,
     "maps": 103,
-    "player": Object {
+    "player": {
       "id": 9031,
       "name": "valde",
     },
     "rating1": 1.12,
     "rounds": 2715,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7533,
         "name": "North",
       },
-      Object {
+      {
         "id": 7175,
         "name": "Heroic",
       },
-      Object {
+      {
         "id": 7059,
         "name": "X",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.14,
     "kdDiff": 362,
     "maps": 150,
-    "player": Object {
+    "player": {
       "id": 9078,
       "name": "k0nfig",
     },
     "rating1": 1.11,
     "rounds": 3926,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 7533,
         "name": "North",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.16,
     "kdDiff": 320,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 798,
       "name": "oskar",
     },
     "rating1": 1.11,
     "rounds": 2997,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4494,
         "name": "MOUZ",
       },
-      Object {
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 222,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 5794,
       "name": "tabseN",
     },
     "rating1": 1.11,
     "rounds": 2948,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7532,
         "name": "BIG",
       },
-      Object {
+      {
         "id": 5395,
         "name": "PENTA",
       },
-      Object {
+      {
         "id": 6673,
         "name": "NRG",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.12,
     "kdDiff": 372,
     "maps": 175,
-    "player": Object {
+    "player": {
       "id": 7356,
       "name": "MICHU",
     },
     "rating1": 1.11,
     "rounds": 4463,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 6372,
         "name": "CSGL",
       },
-      Object {
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.17,
     "kdDiff": 410,
     "maps": 153,
-    "player": Object {
+    "player": {
       "id": 8568,
       "name": "boltz",
     },
     "rating1": 1.1,
     "rounds": 3876,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7010,
         "name": "Immortals",
       },
-      Object {
+      {
         "id": 6118,
         "name": "Tempo Storm",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.15,
     "kdDiff": 272,
     "maps": 112,
-    "player": Object {
+    "player": {
       "id": 8735,
       "name": "autimatic",
     },
     "rating1": 1.1,
     "rounds": 2834,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5752,
         "name": "Cloud9",
       },
-      Object {
+      {
         "id": 5996,
         "name": "TSM",
       },
-      Object {
+      {
         "id": 5005,
         "name": "Complexity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.18,
     "kdDiff": 425,
     "maps": 145,
-    "player": Object {
+    "player": {
       "id": 8520,
       "name": "NAF",
     },
     "rating1": 1.1,
     "rounds": 3750,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6615,
         "name": "OpTic",
       },
-      Object {
+      {
         "id": 6211,
         "name": "Renegades",
       },
-      Object {
+      {
         "id": 6292,
         "name": "Conquest",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 183,
     "maps": 100,
-    "player": Object {
+    "player": {
       "id": 9219,
       "name": "felps",
     },
     "rating1": 1.1,
     "rounds": 2431,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 6118,
         "name": "Tempo Storm",
       },
-      Object {
+      {
         "id": 7010,
         "name": "Immortals",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.14,
     "kdDiff": 358,
     "maps": 149,
-    "player": Object {
+    "player": {
       "id": 2131,
       "name": "bondik",
     },
     "rating1": 1.09,
     "rounds": 3940,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5988,
         "name": "FlipSid3",
       },
-      Object {
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.14,
     "kdDiff": 280,
     "maps": 117,
-    "player": Object {
+    "player": {
       "id": 4679,
       "name": "jks",
     },
     "rating1": 1.09,
     "rounds": 3053,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6211,
         "name": "Renegades",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.22,
     "kdDiff": 338,
     "maps": 111,
-    "player": Object {
+    "player": {
       "id": 7440,
       "name": "Skadoodle",
     },
     "rating1": 1.09,
     "rounds": 2758,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5752,
         "name": "Cloud9",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.16,
     "kdDiff": 320,
     "maps": 123,
-    "player": Object {
+    "player": {
       "id": 7528,
       "name": "KRIMZ",
     },
     "rating1": 1.09,
     "rounds": 3157,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.19,
     "kdDiff": 395,
     "maps": 136,
-    "player": Object {
+    "player": {
       "id": 2023,
       "name": "FalleN",
     },
     "rating1": 1.09,
     "rounds": 3547,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 244,
     "maps": 121,
-    "player": Object {
+    "player": {
       "id": 7834,
       "name": "v1c7oR",
     },
     "rating1": 1.09,
     "rounds": 3191,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8513,
         "name": "Windigo",
       },
-      Object {
+      {
         "id": 6226,
         "name": "E-frag.net",
       },
-      Object {
+      {
         "id": 6959,
         "name": "MK",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.17,
     "kdDiff": 286,
     "maps": 111,
-    "player": Object {
+    "player": {
       "id": 2469,
       "name": "cajunb",
     },
     "rating1": 1.09,
     "rounds": 2877,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7533,
         "name": "North",
       },
-      Object {
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 5996,
         "name": "TSM",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.14,
     "kdDiff": 293,
     "maps": 130,
-    "player": Object {
+    "player": {
       "id": 3055,
       "name": "flusha",
     },
     "rating1": 1.09,
     "rounds": 3331,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
-      Object {
+      {
         "id": 6902,
         "name": "GODSENT",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 261,
     "maps": 139,
-    "player": Object {
+    "player": {
       "id": 7687,
       "name": "nitr0",
     },
     "rating1": 1.08,
     "rounds": 3613,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.12,
     "kdDiff": 184,
     "maps": 95,
-    "player": Object {
+    "player": {
       "id": 885,
       "name": "olofmeister",
     },
     "rating1": 1.08,
     "rounds": 2355,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.15,
     "kdDiff": 278,
     "maps": 105,
-    "player": Object {
+    "player": {
       "id": 8394,
       "name": "Kjaerbye",
     },
     "rating1": 1.08,
     "rounds": 2812,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 7533,
         "name": "North",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.12,
     "kdDiff": 248,
     "maps": 115,
-    "player": Object {
+    "player": {
       "id": 7256,
       "name": "nex",
     },
     "rating1": 1.08,
     "rounds": 3099,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7532,
         "name": "BIG",
       },
-      Object {
+      {
         "id": 4494,
         "name": "MOUZ",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.13,
     "kdDiff": 248,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 9083,
       "name": "COLDYY1",
     },
     "rating1": 1.08,
     "rounds": 3031,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7020,
         "name": "Spirit",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.13,
     "kdDiff": 238,
     "maps": 113,
-    "player": Object {
+    "player": {
       "id": 2757,
       "name": "GuardiaN",
     },
     "rating1": 1.07,
     "rounds": 2884,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 256,
     "maps": 133,
-    "player": Object {
+    "player": {
       "id": 7805,
       "name": "RUSH",
     },
     "rating1": 1.07,
     "rounds": 3425,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6615,
         "name": "OpTic",
       },
-      Object {
+      {
         "id": 5752,
         "name": "Cloud9",
       },
-      Object {
+      {
         "id": 6292,
         "name": "Conquest",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 134,
     "maps": 97,
-    "player": Object {
+    "player": {
       "id": 9261,
       "name": "Lekr0",
     },
     "rating1": 1.07,
     "rounds": 2530,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
-      Object {
+      {
         "id": 6902,
         "name": "GODSENT",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.1,
     "kdDiff": 283,
     "maps": 156,
-    "player": Object {
+    "player": {
       "id": 2553,
       "name": "Snax",
     },
     "rating1": 1.06,
     "rounds": 4134,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 222,
     "maps": 165,
-    "player": Object {
+    "player": {
       "id": 7322,
       "name": "apEX",
     },
     "rating1": 1.06,
     "rounds": 4296,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.1,
     "kdDiff": 245,
     "maps": 140,
-    "player": Object {
+    "player": {
       "id": 8738,
       "name": "EliGE",
     },
     "rating1": 1.06,
     "rounds": 3657,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 174,
     "maps": 97,
-    "player": Object {
+    "player": {
       "id": 8349,
       "name": "shroud",
     },
     "rating1": 1.06,
     "rounds": 2453,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5752,
         "name": "Cloud9",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 168,
     "maps": 122,
-    "player": Object {
+    "player": {
       "id": 7700,
       "name": "robiin",
     },
     "rating1": 1.06,
     "rounds": 3209,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6407,
         "name": "DenDD",
       },
-      Object {
+      {
         "id": 4688,
         "name": "Epsilon",
       },
-      Object {
+      {
         "id": 6978,
         "name": "Singularity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 222,
     "maps": 150,
-    "player": Object {
+    "player": {
       "id": 7168,
       "name": "NBK-",
     },
     "rating1": 1.06,
     "rounds": 3907,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 157,
     "maps": 118,
-    "player": Object {
+    "player": {
       "id": 8082,
       "name": "AZR",
     },
     "rating1": 1.06,
     "rounds": 3080,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6211,
         "name": "Renegades",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 115,
     "maps": 97,
-    "player": Object {
+    "player": {
       "id": 8797,
       "name": "Stewie2K",
     },
     "rating1": 1.06,
     "rounds": 2425,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5752,
         "name": "Cloud9",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.09,
     "kdDiff": 247,
     "maps": 159,
-    "player": Object {
+    "player": {
       "id": 5386,
       "name": "byali",
     },
     "rating1": 1.06,
     "rounds": 4220,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.09,
     "kdDiff": 187,
     "maps": 125,
-    "player": Object {
+    "player": {
       "id": 5799,
       "name": "keev",
     },
     "rating1": 1.06,
     "rounds": 3250,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 7532,
         "name": "BIG",
       },
-      Object {
+      {
         "id": 5093,
         "name": "KILLERFISH",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.1,
     "kdDiff": 209,
     "maps": 124,
-    "player": Object {
+    "player": {
       "id": 7403,
       "name": "WorldEdit",
     },
     "rating1": 1.06,
     "rounds": 3232,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5988,
         "name": "FlipSid3",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.11,
     "kdDiff": 219,
     "maps": 123,
-    "player": Object {
+    "player": {
       "id": 11217,
       "name": "SPELLAN",
     },
     "rating1": 1.06,
     "rounds": 3148,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7397,
         "name": "Outlaws",
       },
-      Object {
+      {
         "id": 8513,
         "name": "Windigo",
       },
-      Object {
+      {
         "id": 8347,
         "name": "ex-Outlaws",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 164,
     "maps": 129,
-    "player": Object {
+    "player": {
       "id": 8368,
       "name": "jmqa",
     },
     "rating1": 1.05,
     "rounds": 3395,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7367,
         "name": "Quantum Bellator Fire",
       },
-      Object {
+      {
         "id": 5949,
         "name": "PiTER",
       },
-      Object {
+      {
         "id": 7489,
         "name": "EPG",
       },
-      Object {
+      {
         "id": 6724,
         "name": "Preparation",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.09,
     "kdDiff": 137,
     "maps": 95,
-    "player": Object {
+    "player": {
       "id": 203,
       "name": "n0thing",
     },
     "rating1": 1.05,
     "rounds": 2379,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5752,
         "name": "Cloud9",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 118,
     "maps": 99,
-    "player": Object {
+    "player": {
       "id": 5479,
       "name": "suNny",
     },
     "rating1": 1.05,
     "rounds": 2619,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4494,
         "name": "MOUZ",
       },
-      Object {
+      {
         "id": 4869,
         "name": "ENCE",
       },
-      Object {
+      {
         "id": 5395,
         "name": "PENTA",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.06,
     "kdDiff": 139,
     "maps": 130,
-    "player": Object {
+    "player": {
       "id": 7594,
       "name": "flamie",
     },
     "rating1": 1.05,
     "rounds": 3400,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 141,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 7390,
       "name": "ScreaM",
     },
     "rating1": 1.05,
     "rounds": 2956,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.1,
     "kdDiff": 171,
     "maps": 100,
-    "player": Object {
+    "player": {
       "id": 8707,
       "name": "ptr",
     },
     "rating1": 1.05,
     "rounds": 2633,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6673,
         "name": "NRG",
       },
-      Object {
+      {
         "id": 5005,
         "name": "Complexity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.09,
     "kdDiff": 201,
     "maps": 128,
-    "player": Object {
+    "player": {
       "id": 8800,
       "name": "stfN",
     },
     "rating1": 1.05,
     "rounds": 3326,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 5093,
         "name": "KILLERFISH",
       },
-      Object {
+      {
         "id": 5395,
         "name": "PENTA",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 89,
     "maps": 110,
-    "player": Object {
+    "player": {
       "id": 2826,
       "name": "MINISE",
     },
     "rating1": 1.04,
     "rounds": 2826,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6896,
         "name": "PRIDE",
       },
-      Object {
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 6372,
         "name": "CSGL",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 92,
     "maps": 106,
-    "player": Object {
+    "player": {
       "id": 7443,
       "name": "twist",
     },
     "rating1": 1.04,
     "rounds": 2715,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6902,
         "name": "GODSENT",
       },
-      Object {
+      {
         "id": 4991,
         "name": "fnatic",
       },
-      Object {
+      {
         "id": 6407,
         "name": "DenDD",
       },
-      Object {
+      {
         "id": 6685,
         "name": "Ancient",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 99,
     "maps": 113,
-    "player": Object {
+    "player": {
       "id": 334,
       "name": "AdreN",
     },
     "rating1": 1.04,
     "rounds": 2923,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6651,
         "name": "Gambit",
       },
-      Object {
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 137,
     "maps": 161,
-    "player": Object {
+    "player": {
       "id": 8327,
       "name": "Furlan",
     },
     "rating1": 1.04,
     "rounds": 4199,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8068,
         "name": "AGO",
       },
-      Object {
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 6375,
         "name": "Vexed",
       },
-      Object {
+      {
         "id": 6686,
         "name": "AGG",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.09,
     "kdDiff": 234,
     "maps": 164,
-    "player": Object {
+    "player": {
       "id": 8323,
       "name": "mouz",
     },
     "rating1": 1.04,
     "rounds": 4179,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 6372,
         "name": "CSGL",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 145,
     "maps": 106,
-    "player": Object {
+    "player": {
       "id": 3517,
       "name": "kzy",
     },
     "rating1": 1.04,
     "rounds": 2759,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 6343,
         "name": "EURONICS",
       },
-      Object {
+      {
         "id": 5093,
         "name": "KILLERFISH",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 102,
     "maps": 119,
-    "player": Object {
+    "player": {
       "id": 8095,
       "name": "aizy",
     },
     "rating1": 1.04,
     "rounds": 3116,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7533,
         "name": "North",
       },
-      Object {
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 6667,
         "name": "FaZe",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.06,
     "kdDiff": 126,
     "maps": 117,
-    "player": Object {
+    "player": {
       "id": 545,
       "name": "MODDII",
     },
     "rating1": 1.03,
     "rounds": 3050,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7175,
         "name": "Heroic",
       },
-      Object {
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 7059,
         "name": "X",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 175,
     "maps": 139,
-    "player": Object {
+    "player": {
       "id": 8346,
       "name": "jdm64",
     },
     "rating1": 1.03,
     "rounds": 3562,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5973,
         "name": "Liquid",
       },
-      Object {
+      {
         "id": 5974,
         "name": "CLG",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 195,
     "maps": 176,
-    "player": Object {
+    "player": {
       "id": 973,
       "name": "SZPERO",
     },
     "rating1": 1.03,
     "rounds": 4483,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 6372,
         "name": "CSGL",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 123,
     "maps": 145,
-    "player": Object {
+    "player": {
       "id": 8523,
       "name": "tarik",
     },
     "rating1": 1.03,
     "rounds": 3680,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5974,
         "name": "CLG",
       },
-      Object {
+      {
         "id": 6615,
         "name": "OpTic",
       },
-      Object {
+      {
         "id": 5752,
         "name": "Cloud9",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.08,
     "kdDiff": 127,
     "maps": 99,
-    "player": Object {
+    "player": {
       "id": 7980,
       "name": "DESPE",
     },
     "rating1": 1.03,
     "rounds": 2561,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5929,
         "name": "Space Soldiers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 113,
     "maps": 96,
-    "player": Object {
+    "player": {
       "id": 8374,
       "name": "bodyy",
     },
     "rating1": 1.03,
     "rounds": 2516,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 6045,
         "name": "LDLC White",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 96,
     "maps": 116,
-    "player": Object {
+    "player": {
       "id": 8566,
       "name": "LUCAS1",
     },
     "rating1": 1.03,
     "rounds": 2855,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7010,
         "name": "Immortals",
       },
-      Object {
+      {
         "id": 6118,
         "name": "Tempo Storm",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.02,
     "kdDiff": 55,
     "maps": 126,
-    "player": Object {
+    "player": {
       "id": 8125,
       "name": "Dimaoneshot",
     },
     "rating1": 1.03,
     "rounds": 3348,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7020,
         "name": "Spirit",
       },
-      Object {
+      {
         "id": 6471,
         "name": "YP",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.02,
     "kdDiff": 46,
     "maps": 153,
-    "player": Object {
+    "player": {
       "id": 339,
       "name": "ANGE1",
     },
     "rating1": 1.03,
     "rounds": 3955,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 126,
     "maps": 112,
-    "player": Object {
+    "player": {
       "id": 964,
       "name": "mou",
     },
     "rating1": 1.03,
     "rounds": 2931,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6651,
         "name": "Gambit",
       },
-      Object {
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 70,
     "maps": 99,
-    "player": Object {
+    "player": {
       "id": 9220,
       "name": "SHOOWTiME",
     },
     "rating1": 1.02,
     "rounds": 2510,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6290,
         "name": "Luminosity",
       },
-      Object {
+      {
         "id": 6118,
         "name": "Tempo Storm",
       },
-      Object {
+      {
         "id": 6334,
         "name": "Games Academy",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.07,
     "kdDiff": 143,
     "maps": 129,
-    "player": Object {
+    "player": {
       "id": 2799,
       "name": "bubble",
     },
     "rating1": 1.02,
     "rounds": 3404,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8513,
         "name": "Windigo",
       },
-      Object {
+      {
         "id": 6226,
         "name": "E-frag.net",
       },
-      Object {
+      {
         "id": 8347,
         "name": "ex-Outlaws",
       },
-      Object {
+      {
         "id": 6959,
         "name": "MK",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.06,
     "kdDiff": 129,
     "maps": 125,
-    "player": Object {
+    "player": {
       "id": 1225,
       "name": "shox",
     },
     "rating1": 1.02,
     "rounds": 3245,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
-      Object {
+      {
         "id": 5991,
         "name": "Envy",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.03,
     "kdDiff": 58,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 7499,
       "name": "Spiidi",
     },
     "rating1": 1.02,
     "rounds": 3064,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4494,
         "name": "MOUZ",
       },
-      Object {
+      {
         "id": 8637,
         "name": "Sprout",
       },
-      Object {
+      {
         "id": 5395,
         "name": "PENTA",
       },
-      Object {
+      {
         "id": 8452,
         "name": "Seed",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.01,
     "kdDiff": 23,
     "maps": 107,
-    "player": Object {
+    "player": {
       "id": 8771,
       "name": "USTILO",
     },
     "rating1": 1.02,
     "rounds": 2817,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6211,
         "name": "Renegades",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 93,
     "maps": 108,
-    "player": Object {
+    "player": {
       "id": 7266,
       "name": "syrsoN",
     },
     "rating1": 1.02,
     "rounds": 2883,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 88,
     "maps": 115,
-    "player": Object {
+    "player": {
       "id": 922,
       "name": "Snappi",
     },
     "rating1": 1.02,
     "rounds": 3021,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7175,
         "name": "Heroic",
       },
-      Object {
+      {
         "id": 4548,
         "name": "CPH Wolves",
       },
-      Object {
+      {
         "id": 7059,
         "name": "X",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 157,
     "maps": 181,
-    "player": Object {
+    "player": {
       "id": 5388,
       "name": "rallen",
     },
     "rating1": 1.01,
     "rounds": 4669,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6134,
         "name": "Kinguin",
       },
-      Object {
+      {
         "id": 6375,
         "name": "Vexed",
       },
-      Object {
+      {
         "id": 6686,
         "name": "AGG",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 74,
     "maps": 107,
-    "player": Object {
+    "player": {
       "id": 338,
       "name": "markeloff",
     },
     "rating1": 1.01,
     "rounds": 2794,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5988,
         "name": "FlipSid3",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.03,
     "kdDiff": 78,
     "maps": 153,
-    "player": Object {
+    "player": {
       "id": 161,
       "name": "TaZ",
     },
     "rating1": 1.01,
     "rounds": 4072,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 1,
     "kdDiff": 8,
     "maps": 142,
-    "player": Object {
+    "player": {
       "id": 7169,
       "name": "RpK",
     },
     "rating1": 1.01,
     "rounds": 3669,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.06,
     "kdDiff": 103,
     "maps": 99,
-    "player": Object {
+    "player": {
       "id": 8413,
       "name": "Zero",
     },
     "rating1": 1.01,
     "rounds": 2606,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.05,
     "kdDiff": 103,
     "maps": 131,
-    "player": Object {
+    "player": {
       "id": 7,
       "name": "Friis",
     },
     "rating1": 1,
     "rounds": 3450,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 7175,
         "name": "Heroic",
       },
-      Object {
+      {
         "id": 4602,
         "name": "Tricked",
       },
-      Object {
+      {
         "id": 7059,
         "name": "X",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.04,
     "kdDiff": 60,
     "maps": 98,
-    "player": Object {
+    "player": {
       "id": 7154,
       "name": "Pimp",
     },
     "rating1": 1,
     "rounds": 2483,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.02,
     "kdDiff": 57,
     "maps": 146,
-    "player": Object {
+    "player": {
       "id": 5796,
       "name": "tiziaN",
     },
     "rating1": 1,
     "rounds": 3820,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 5093,
         "name": "KILLERFISH",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.01,
     "kdDiff": 33,
     "maps": 135,
-    "player": Object {
+    "player": {
       "id": 2730,
       "name": "chrisJ",
     },
     "rating1": 1,
     "rounds": 3636,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4494,
         "name": "MOUZ",
       },
     ],
   },
-  Object {
+  {
     "kd": 1,
     "kdDiff": 5,
     "maps": 119,
-    "player": Object {
+    "player": {
       "id": 8570,
       "name": "GruBy",
     },
     "rating1": 1,
     "rounds": 3105,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 8068,
         "name": "AGO",
       },
-      Object {
+      {
         "id": 6375,
         "name": "Vexed",
       },
-      Object {
+      {
         "id": 6686,
         "name": "AGG",
       },
     ],
   },
-  Object {
+  {
     "kd": 1,
     "kdDiff": -7,
     "maps": 132,
-    "player": Object {
+    "player": {
       "id": 3849,
       "name": "JW",
     },
     "rating1": 1,
     "rounds": 3381,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
-      Object {
+      {
         "id": 6902,
         "name": "GODSENT",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.02,
     "kdDiff": 45,
     "maps": 119,
-    "player": Object {
+    "player": {
       "id": 7382,
       "name": "steel",
     },
     "rating1": 1,
     "rounds": 3040,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7010,
         "name": "Immortals",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
-      Object {
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.99,
     "kdDiff": -34,
     "maps": 126,
-    "player": Object {
+    "player": {
       "id": 9081,
       "name": "S0tF1k",
     },
     "rating1": 0.99,
     "rounds": 3333,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7020,
         "name": "Spirit",
       },
-      Object {
+      {
         "id": 6471,
         "name": "YP",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.99,
     "kdDiff": -22,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 8396,
       "name": "BENDJI",
     },
     "rating1": 0.99,
     "rounds": 2944,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6407,
         "name": "DenDD",
       },
-      Object {
+      {
         "id": 6978,
         "name": "Singularity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.02,
     "kdDiff": 43,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 8137,
       "name": "reltuC",
     },
     "rating1": 0.99,
     "rounds": 2955,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5974,
         "name": "CLG",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.99,
     "kdDiff": -16,
     "maps": 137,
-    "player": Object {
+    "player": {
       "id": 8151,
       "name": "AcilioN",
     },
     "rating1": 0.98,
     "rounds": 3596,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 4602,
         "name": "Tricked",
       },
     ],
   },
-  Object {
+  {
     "kd": 1,
     "kdDiff": -1,
     "maps": 126,
-    "player": Object {
+    "player": {
       "id": 8507,
       "name": "stanislaw",
     },
     "rating1": 0.98,
     "rounds": 3211,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6615,
         "name": "OpTic",
       },
-      Object {
+      {
         "id": 5973,
         "name": "Liquid",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.03,
     "kdDiff": 52,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 8716,
       "name": "DeadFox",
     },
     "rating1": 0.98,
     "rounds": 3074,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
-      Object {
+      {
         "id": 6405,
         "name": "Orgless",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.99,
     "kdDiff": -30,
     "maps": 156,
-    "player": Object {
+    "player": {
       "id": 317,
       "name": "pashaBiceps",
     },
     "rating1": 0.98,
     "rounds": 4137,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -33,
     "maps": 99,
-    "player": Object {
+    "player": {
       "id": 1915,
       "name": "SEMPHIS",
     },
     "rating1": 0.98,
     "rounds": 2575,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5996,
         "name": "TSM",
       },
-      Object {
+      {
         "id": 6301,
         "name": "Splyce",
       },
-      Object {
+      {
         "id": 5005,
         "name": "Complexity",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.01,
     "kdDiff": 22,
     "maps": 119,
-    "player": Object {
+    "player": {
       "id": 9217,
       "name": "TACO",
     },
     "rating1": 0.97,
     "rounds": 3091,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6137,
         "name": "SK",
       },
-      Object {
+      {
         "id": 6290,
         "name": "Luminosity",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -36,
     "maps": 117,
-    "player": Object {
+    "player": {
       "id": 735,
       "name": "Dosia",
     },
     "rating1": 0.97,
     "rounds": 3066,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6651,
         "name": "Gambit",
       },
-      Object {
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
-      Object {
+      {
         "id": 5138,
         "name": "Russia",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -54,
     "maps": 159,
-    "player": Object {
+    "player": {
       "id": 165,
       "name": "NEO",
     },
     "rating1": 0.97,
     "rounds": 4220,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5378,
         "name": "Virtus.pro",
       },
     ],
   },
-  Object {
+  {
     "kd": 1.01,
     "kdDiff": 11,
     "maps": 103,
-    "player": Object {
+    "player": {
       "id": 5287,
       "name": "TENZKI",
     },
     "rating1": 0.97,
     "rounds": 2738,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 7157,
         "name": "Rogue",
       },
-      Object {
+      {
         "id": 8543,
         "name": "MANS NOT HOT",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -31,
     "maps": 95,
-    "player": Object {
+    "player": {
       "id": 9069,
       "name": "Nifty",
     },
     "rating1": 0.97,
     "rounds": 2464,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6211,
         "name": "Renegades",
       },
-      Object {
+      {
         "id": 6736,
         "name": "Selfless",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -34,
     "maps": 113,
-    "player": Object {
+    "player": {
       "id": 7218,
       "name": "kRYSTAL",
     },
     "rating1": 0.97,
     "rounds": 3033,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5395,
         "name": "PENTA",
       },
-      Object {
+      {
         "id": 8637,
         "name": "Sprout",
       },
-      Object {
+      {
         "id": 8452,
         "name": "Seed",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -41,
     "maps": 112,
-    "player": Object {
+    "player": {
       "id": 7166,
       "name": "Ex6TenZ",
     },
     "rating1": 0.96,
     "rounds": 2895,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4674,
         "name": "LDLC",
       },
-      Object {
+      {
         "id": 5284,
         "name": "Titan",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.97,
     "kdDiff": -65,
     "maps": 129,
-    "player": Object {
+    "player": {
       "id": 6904,
       "name": "STYKO",
     },
     "rating1": 0.96,
     "rounds": 3343,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5310,
         "name": "HellRaisers",
       },
-      Object {
+      {
         "id": 4494,
         "name": "MOUZ",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.96,
     "kdDiff": -90,
     "maps": 138,
-    "player": Object {
+    "player": {
       "id": 3347,
       "name": "seized",
     },
     "rating1": 0.96,
     "rounds": 3576,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
-      Object {
+      {
         "id": 6651,
         "name": "Gambit",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.95,
     "kdDiff": -119,
     "maps": 137,
-    "player": Object {
+    "player": {
       "id": 3669,
       "name": "innocent",
     },
     "rating1": 0.95,
     "rounds": 3598,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6372,
         "name": "CSGL",
       },
-      Object {
+      {
         "id": 8637,
         "name": "Sprout",
       },
-      Object {
+      {
         "id": 5995,
         "name": "G2",
       },
-      Object {
+      {
         "id": 5395,
         "name": "PENTA",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.95,
     "kdDiff": -98,
     "maps": 120,
-    "player": Object {
+    "player": {
       "id": 8522,
       "name": "FugLy",
     },
     "rating1": 0.95,
     "rounds": 3056,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6673,
         "name": "NRG",
       },
-      Object {
+      {
         "id": 5973,
         "name": "Liquid",
       },
-      Object {
+      {
         "id": 5974,
         "name": "CLG",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.98,
     "kdDiff": -30,
     "maps": 109,
-    "player": Object {
+    "player": {
       "id": 9857,
       "name": "ngiN",
     },
     "rating1": 0.95,
     "rounds": 2783,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5929,
         "name": "Space Soldiers",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.94,
     "kdDiff": -132,
     "maps": 129,
-    "player": Object {
+    "player": {
       "id": 483,
       "name": "Edward",
     },
     "rating1": 0.94,
     "rounds": 3353,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.93,
     "kdDiff": -157,
     "maps": 117,
-    "player": Object {
+    "player": {
       "id": 1064,
       "name": "crisby",
     },
     "rating1": 0.93,
     "rounds": 3074,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 6343,
         "name": "EURONICS",
       },
-      Object {
+      {
         "id": 5093,
         "name": "KILLERFISH",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.9,
     "kdDiff": -358,
     "maps": 191,
-    "player": Object {
+    "player": {
       "id": 7156,
       "name": "MSL",
     },
     "rating1": 0.92,
     "rounds": 5032,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5422,
         "name": "Dignitas",
       },
-      Object {
+      {
         "id": 7533,
         "name": "North",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.92,
     "kdDiff": -186,
     "maps": 114,
-    "player": Object {
+    "player": {
       "id": 499,
       "name": "hooch",
     },
     "rating1": 0.92,
     "rounds": 3124,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7489,
         "name": "EPG",
       },
-      Object {
+      {
         "id": 6651,
         "name": "Gambit",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.91,
     "kdDiff": -162,
     "maps": 94,
-    "player": Object {
+    "player": {
       "id": 8727,
       "name": "waterfaLLZ",
     },
     "rating1": 0.92,
     "rounds": 2443,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7367,
         "name": "Quantum Bellator Fire",
       },
-      Object {
+      {
         "id": 5949,
         "name": "PiTER",
       },
-      Object {
+      {
         "id": 7489,
         "name": "EPG",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.89,
     "kdDiff": -275,
     "maps": 131,
-    "player": Object {
+    "player": {
       "id": 7511,
       "name": "denis",
     },
     "rating1": 0.91,
     "rounds": 3573,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4494,
         "name": "MOUZ",
       },
-      Object {
+      {
         "id": 8637,
         "name": "Sprout",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.91,
     "kdDiff": -190,
     "maps": 116,
-    "player": Object {
+    "player": {
       "id": 6451,
       "name": "FNS",
     },
     "rating1": 0.91,
     "rounds": 3120,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5974,
         "name": "CLG",
       },
-      Object {
+      {
         "id": 5996,
         "name": "TSM",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.93,
     "kdDiff": -113,
     "maps": 96,
-    "player": Object {
+    "player": {
       "id": 147,
       "name": "SIXER",
     },
     "rating1": 0.91,
     "rounds": 2488,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5991,
         "name": "Envy",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.93,
     "kdDiff": -105,
     "maps": 100,
-    "player": Object {
+    "player": {
       "id": 8600,
       "name": "advent",
     },
     "rating1": 0.9,
     "rounds": 2502,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7606,
         "name": "ViCi",
       },
-      Object {
+      {
         "id": 6773,
         "name": "VG.CyberZen",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.89,
     "kdDiff": -216,
     "maps": 113,
-    "player": Object {
+    "player": {
       "id": 136,
       "name": "gob b",
     },
     "rating1": 0.9,
     "rounds": 2982,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 7532,
         "name": "BIG",
       },
-      Object {
+      {
         "id": 4494,
         "name": "MOUZ",
       },
-      Object {
+      {
         "id": 6673,
         "name": "NRG",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.9,
     "kdDiff": -168,
     "maps": 96,
-    "player": Object {
+    "player": {
       "id": 8521,
       "name": "daps",
     },
     "rating1": 0.9,
     "rounds": 2481,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 6673,
         "name": "NRG",
       },
-      Object {
+      {
         "id": 6615,
         "name": "OpTic",
       },
-      Object {
+      {
         "id": 6292,
         "name": "Conquest",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.89,
     "kdDiff": -255,
     "maps": 133,
-    "player": Object {
+    "player": {
       "id": 484,
       "name": "Zeus",
     },
     "rating1": 0.9,
     "rounds": 3447,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4608,
         "name": "Natus Vincere",
       },
-      Object {
+      {
         "id": 6651,
         "name": "Gambit",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.87,
     "kdDiff": -236,
     "maps": 104,
-    "player": Object {
+    "player": {
       "id": 41,
       "name": "pronax",
     },
     "rating1": 0.89,
     "rounds": 2619,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4991,
         "name": "fnatic",
       },
-      Object {
+      {
         "id": 6902,
         "name": "GODSENT",
       },
-      Object {
+      {
         "id": 6685,
         "name": "Ancient",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.84,
     "kdDiff": -493,
     "maps": 177,
-    "player": Object {
+    "player": {
       "id": 7415,
       "name": "HUNDEN",
     },
     "rating1": 0.85,
     "rounds": 4545,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 4602,
         "name": "Tricked",
       },
-      Object {
+      {
         "id": 4501,
         "name": "ALTERNATE aTTaX",
       },
-      Object {
+      {
         "id": 4548,
         "name": "CPH Wolves",
       },
-      Object {
+      {
         "id": 5208,
         "name": "Reason",
       },
     ],
   },
-  Object {
+  {
     "kd": 0.82,
     "kdDiff": -352,
     "maps": 109,
-    "player": Object {
+    "player": {
       "id": 472,
       "name": "B1ad3",
     },
     "rating1": 0.84,
     "rounds": 2834,
-    "teams": Array [
-      Object {
+    "teams": [
+      {
         "id": 5988,
         "name": "FlipSid3",
       },

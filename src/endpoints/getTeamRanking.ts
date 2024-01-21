@@ -1,7 +1,7 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Team } from '../shared/Team'
-import { fetchPage, getIdAt } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Team } from '../shared/Team.js'
+import { fetchPage, getIdAt } from '../utils.js'
 
 export interface TeamRanking {
   team: Team

@@ -1,14 +1,14 @@
 import { stringify } from 'querystring'
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
-import { BestOfFilter } from '../shared/BestOfFilter'
-import { fromMapName, GameMap, toMapFilter } from '../shared/GameMap'
-import { MatchType } from '../shared/MatchType'
-import { Player } from '../shared/Player'
-import { Event } from '../shared/Event'
-import { RankingFilter } from '../shared/RankingFilter'
-import { fetchPage, generateRandomSuffix, getIdAt } from '../utils'
-import { MatchStatsPreview } from './getMatchesStats'
+import type { HLTVConfig } from '../config.js'
+import { type HLTVPage, type HLTVPageElement, HLTVScraper } from '../scraper.js'
+import { BestOfFilter } from '../shared/BestOfFilter.js'
+import { fromMapName, GameMap, toMapFilter } from '../shared/GameMap.js'
+import { MatchType } from '../shared/MatchType.js'
+import type { Player } from '../shared/Player.js'
+import type { Event } from '../shared/Event.js'
+import { RankingFilter } from '../shared/RankingFilter.js'
+import { fetchPage, generateRandomSuffix, getIdAt } from '../utils.js'
+import type { MatchStatsPreview } from './getMatchesStats.js'
 
 export interface TeamMapStats {
   wins: number
@@ -206,27 +206,30 @@ export const getTeamStats =
 
     const mapStats = mp$('.two-grid .col .stats-rows')
       .toArray()
-      .reduce((stats, mapEl) => {
-        const mapName = fromMapName(
-          mapEl.prev().find('.map-pool-map-name').text()
-        )
+      .reduce(
+        (stats, mapEl) => {
+          const mapName = fromMapName(
+            mapEl.prev().find('.map-pool-map-name').text()
+          )
 
-        const [wins, draws, losses] = getMapStat(mapEl, 0)
-          .split(' / ')
-          .map(Number)
+          const [wins, draws, losses] = getMapStat(mapEl, 0)
+            .split(' / ')
+            .map(Number)
 
-        stats[mapName] = {
-          wins,
-          draws,
-          losses,
-          winRate: Number(getMapStat(mapEl, 1).split('%')[0]),
-          totalRounds: Number(getMapStat(mapEl, 2)),
-          roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]),
-          roundWinPAfterFirstDeath: Number(getMapStat(mapEl, 4).split('%')[0])
-        }
+          stats[mapName] = {
+            wins,
+            draws,
+            losses,
+            winRate: Number(getMapStat(mapEl, 1).split('%')[0]),
+            totalRounds: Number(getMapStat(mapEl, 2)),
+            roundWinPAfterFirstKill: Number(getMapStat(mapEl, 3).split('%')[0]),
+            roundWinPAfterFirstDeath: Number(getMapStat(mapEl, 4).split('%')[0])
+          }
 
-        return stats
-      }, {} as Record<string, any>)
+          return stats
+        },
+        {} as Record<string, any>
+      )
 
     return {
       id: options.id,
@@ -242,14 +245,14 @@ export const getTeamStats =
     }
   }
 
-function getContainerByText($: HLTVPage, text: string) {
+export function getContainerByText($: HLTVPage, text: string) {
   return $('.standard-headline')
     .filter((_, el) => el.text() === text)
     .parent()
     .next()
 }
 
-function getPlayersByContainer(container: HLTVPageElement) {
+export function getPlayersByContainer(container: HLTVPageElement) {
   return container
     .find('.image-and-label')
     .toArray()

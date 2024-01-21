@@ -1,6 +1,6 @@
 import * as io from 'socket.io-client'
-import { fetchPage, generateRandomSuffix } from '../utils'
-import { HLTVConfig } from '../config'
+import { fetchPage, generateRandomSuffix } from '../utils.js'
+import type { HLTVConfig } from '../config.js'
 
 type Side = 'CT' | 'TERRORIST' | 'SPECTATOR'
 

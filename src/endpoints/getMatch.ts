@@ -1,21 +1,21 @@
-import { HLTVConfig } from '../config'
-import { HLTVPage, HLTVPageElement, HLTVScraper } from '../scraper'
-import { fromMapName, GameMap } from '../shared/GameMap'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
+import type { HLTVConfig } from '../config.js'
+import { type HLTVPage, type HLTVPageElement, HLTVScraper } from '../scraper.js'
+import { fromMapName, GameMap } from '../shared/GameMap.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
 import {
   fetchPage,
   generateRandomSuffix,
   getIdAt,
   parseNumber,
   percentageToDecimalOdd
-} from '../utils'
-import { Player } from '../shared/Player'
+} from '../utils.js'
+import type { Player } from '../shared/Player.js'
 import {
   fromFullMatchFormat,
   MatchFormat,
   MatchFormatLocation
-} from '../shared/MatchFormat'
+} from '../shared/MatchFormat.js'
 
 export enum MatchStatus {
   Live = 'Live',

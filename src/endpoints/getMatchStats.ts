@@ -1,16 +1,16 @@
-import { HLTVConfig } from '../config'
-import { HLTVScraper } from '../scraper'
-import { Team } from '../shared/Team'
-import { Event } from '../shared/Event'
-import { fetchPage, getIdAt } from '../utils'
+import type { HLTVConfig } from '../config.js'
+import { HLTVScraper } from '../scraper.js'
+import type { Team } from '../shared/Team.js'
+import type { Event } from '../shared/Event.js'
+import { fetchPage, generateRandomSuffix, getIdAt } from '../utils.js'
 import {
-  MapStatsOverview,
-  TeamsPerformanceOverview,
-  PlayerStats,
+  type MapStatsOverview,
+  type TeamsPerformanceOverview,
+  type PlayerStats,
   getStatsOverview,
   getPlayerStats,
   getPerformanceOverview
-} from './getMatchMapStats'
+} from './getMatchMapStats.js'
 
 export interface FullMatchStats {
   id: number
@@ -37,12 +37,12 @@ export const getMatchStats =
   async ({ id }: { id: number }): Promise<FullMatchStats> => {
     const [m$, p$] = await Promise.all([
       fetchPage(
-        `https://www.hltv.org/stats/matches/${id}/-`,
-        config.loadPage
+        `https://www.hltv.org/stats/matches/${id}/${generateRandomSuffix()}`,
+        config.loadMatchStatsPage
       ).then(HLTVScraper),
       fetchPage(
-        `https://www.hltv.org/stats/matches/performance/${id}/-`,
-        config.loadPage
+        `https://www.hltv.org/stats/matches/${id}/${generateRandomSuffix()}`,
+        config.loadMatchStatsPage
       ).then(HLTVScraper)
     ])
 

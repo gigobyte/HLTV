@@ -1,5 +1,5 @@
-import { HLTVConfig } from '../config'
-import { FullPlayer, getPlayer } from './getPlayer'
+import { type HLTVConfig } from '../config.js'
+import { type FullPlayer, getPlayer } from './getPlayer.js'
 
 export const getPlayerByName =
   (config: HLTVConfig) =>
