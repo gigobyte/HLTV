@@ -12,7 +12,22 @@ import {
 } from '../utils.js'
 import type { Player } from '../shared/Player.js'
 
-export interface PlayerStats {
+export interface PlayerStatsNoPerformance {
+  player: Player
+  kills: number
+  hsKills: number
+  assists: number
+  flashAssists: number
+  deaths: number
+  KAST?: number
+  killDeathsDifference: number
+  ADR?: number
+  firstKillsDifference: number
+  rating1?: number
+  rating2?: number
+}
+
+export interface PlayerStatsFull {
   player: Player
   killsPerRound?: number
   deathsPerRound?: number
@@ -29,6 +44,8 @@ export interface PlayerStats {
   rating1?: number
   rating2?: number
 }
+
+export type PlayerStats = PlayerStatsFull | PlayerStatsNoPerformance
 
 export interface TeamPerformance {
   kills: number
@@ -83,7 +100,7 @@ export interface MapStatsOverview {
   bestRating2?: PlayerStat
 }
 
-export interface FullMatchMapStats {
+export interface MatchMapStats {
   id: number
   matchId: number
   result: {
@@ -99,11 +116,35 @@ export interface FullMatchMapStats {
   overview: MapStatsOverview
   roundHistory: RoundOutcome[]
   playerStats: {
-    team1: PlayerStats[]
-    team2: PlayerStats[]
+    team1: PlayerStatsFull[]
+    team2: PlayerStatsFull[]
   }
   performanceOverview: TeamsPerformanceOverview
 }
+
+export interface MatchMapStatsNoPerformance {
+  id: number
+  matchId: number
+  result: {
+    team1TotalRounds: number
+    team2TotalRounds: number
+    halfResults: MapHalfResult[]
+  }
+  map: GameMap
+  date: number
+  team1: Team
+  team2: Team
+  event: Event
+  overview: MapStatsOverview
+  roundHistory: RoundOutcome[]
+  playerStats: {
+    team1: PlayerStatsNoPerformance[]
+    team2: PlayerStatsNoPerformance[]
+  }
+  performanceOverview: null
+}
+
+export type FullMatchMapStats = MatchMapStats | MatchMapStatsNoPerformance
 
 export const getMatchMapStats =
   (config: HLTVConfig) =>
@@ -115,7 +156,14 @@ export const getMatchMapStats =
     const p$ = await fetchPage(
       `https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()}`,
       config.loadMatchStatsPage
-    ).then(HLTVScraper)
+    )
+      .then(HLTVScraper)
+      .catch((e) => {
+        console.error(
+          `Error in load page https://www.hltv.org/stats/matches/performance/mapstatsid/${id}/${generateRandomSuffix()} - ${e.message}`
+        )
+        return null
+      })
     // const [m$, p$] = await Promise.all([
     //   fetchPage(
     //     `https://www.hltv.org/stats/matches/mapstatsid/${id}/${generateRandomSuffix()}`,
@@ -171,7 +219,9 @@ export const getMatchMapStats =
     const roundHistory = getRoundHistory(m$, team1, team2)
     const overview = getStatsOverview(m$)
     const playerStats = getPlayerStats(m$, p$)
-    const performanceOverview = getPerformanceOverview(p$)
+    const performanceOverview = p$
+      ? getPerformanceOverview(p$)
+      : getPerformanceOverview(p$)
 
     // TODO: kill matrix
     // TODO: equipment value
@@ -240,7 +290,7 @@ function getRoundHistory(
     .toArray()
     .map(getOutcome)
 
-  const doesTeam1StartAsCt = team1Outcomes[0].outcome.includes('ct')
+  const doesTeam1StartAsCt = team1Outcomes[0]?.outcome.includes('ct')
 
   const separatorIndex =
     $('.round-history-team-row .round-history-bar').last().index() - 2
@@ -248,21 +298,21 @@ function getRoundHistory(
   return Array.from(Array(team1Outcomes.length))
     .map((_, i) => {
       if (
-        team1Outcomes[i].outcome === 'emptyHistory' &&
-        team2Outcomes[i].outcome === 'emptyHistory'
+        team1Outcomes[i]?.outcome === 'emptyHistory' &&
+        team2Outcomes[i]?.outcome === 'emptyHistory'
       ) {
         return null
       }
 
       const outcome =
         team1Outcomes[i].outcome === 'emptyHistory'
-          ? (team2Outcomes[i].outcome as Outcome)
-          : (team1Outcomes[i].outcome as Outcome)
+          ? (team2Outcomes[i]?.outcome as Outcome)
+          : (team1Outcomes[i]?.outcome as Outcome)
 
       const score =
         team1Outcomes[i].outcome === 'emptyHistory'
-          ? team2Outcomes[i].score
-          : team1Outcomes[i].score
+          ? team2Outcomes[i]?.score
+          : team1Outcomes[i]?.score
 
       let tTeam
       let ctTeam
@@ -343,8 +393,8 @@ export function getStatsOverview($: HLTVPage) {
   return { ...teamStats, ...mostX } as any
 }
 
-export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
-  const playerPerformanceStats = p$('.highlighted-player')
+export function getPlayerStats(m$: HLTVPage, p$: HLTVPage | null) {
+  const playerPerformanceStats = p$?.('.highlighted-player')
     .toArray()
     .reduce(
       (map, el) => {
@@ -373,7 +423,7 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
 
   const getPlayerOverviewStats = (el: HLTVPageElement) => {
     const id = el.find('.st-player a').attrThen('href', getIdAt(3))!
-    const performanceStats = playerPerformanceStats[id]
+    const performanceStats = playerPerformanceStats?.[id]
     const rating = el.find('.st-rating').numFromText()
 
     return {
@@ -417,22 +467,28 @@ export function getPlayerStats(m$: HLTVPage, p$: HLTVPage) {
   }
 }
 
-export function getPerformanceOverview(p$: HLTVPage) {
-  return p$('.overview-table tr')
-    .toArray()
-    .slice(1)
-    .reduce(
-      (res, el) => {
-        const property = el
-          .find('.name-column')
-          .text()
-          .toLowerCase() as keyof TeamPerformance
+export function getPerformanceOverview(p$: HLTVPage): TeamsPerformanceOverview
+export function getPerformanceOverview(p$: null): null
+export function getPerformanceOverview(
+  p$: HLTVPage | null
+): TeamsPerformanceOverview | null {
+  return !p$
+    ? null
+    : p$('.overview-table tr')
+        .toArray()
+        .slice(1)
+        .reduce(
+          (res, el) => {
+            const property = el
+              .find('.name-column')
+              .text()
+              .toLowerCase() as keyof TeamPerformance
 
-        res.team1[property] = el.find('.team1-column').numFromText()!
-        res.team2[property] = el.find('.team2-column').numFromText()!
+            res.team1[property] = el.find('.team1-column').numFromText()!
+            res.team2[property] = el.find('.team2-column').numFromText()!
 
-        return res
-      },
-      { team1: {}, team2: {} } as TeamsPerformanceOverview
-    )
+            return res
+          },
+          { team1: {}, team2: {} } as TeamsPerformanceOverview
+        )
 }

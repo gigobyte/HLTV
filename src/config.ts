@@ -84,23 +84,22 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
       responseBody?.includes(RATE_LIMITED) ||
       responseBody?.includes(JS_AND_COOKIE)
     ) {
-      await sleep(60000)
+      await sleep(5000)
     }
     while (
       responseBody?.includes(CHALLENGE_MATCH || 'challenge-platform') ||
       ((responseBody?.includes(RATE_LIMITED) ||
         responseBody?.includes(JS_AND_COOKIE)) &&
-        tryCount <= 10)
+        tryCount <= 3)
     ) {
       const newResponse = await page.waitForNavigation({
-        timeout: 30000,
+        timeout: 10000,
         waitUntil: 'domcontentloaded'
       })
       if (newResponse) response = newResponse
       responseBody = await response?.text()
       // responseData = await response?.buffer()
       tryCount++
-      await sleep(10000)
     }
     responseHeaders = response?.headers()
     // const cookies = await page.cookies()
