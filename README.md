@@ -4,7 +4,7 @@
 <h1 align="center">
   <img src="https://www.hltv.org/img/static/TopLogo2x.png" alt="HLTV logo" width="200">
   <br>
-  The unofficial HLTV Node.js API
+  The unofficial HLTV Node.js API forked from <a href='https://github.com/gigobyte/HLTV' target="_blank">gigobyte</a>
   <br>
 </h1>
 

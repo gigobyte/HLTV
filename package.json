@@ -1,6 +1,6 @@
 {
-  "name": "hltv",
-  "version": "3.5.0",
+  "name": "@beermonster/hltv",
+  "version": "3.5.1",
   "description": "The unofficial HLTV Node.js API",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -11,7 +11,7 @@
     "test:approve": "vitest run -u --no-file-parallelism",
     "pretty": "prettier --write \"**/*.ts\""
   },
-  "repository": "git+https://github.com/gigobyte/HLTV.git",
+  "repository": "git+https://github.com/beermonsterdota/HLTV.git",
   "keywords": [
     "hltv",
     "api",
@@ -20,12 +20,12 @@
     "csgo"
   ],
   "type": "module",
-  "author": "Stanislav Iliev",
+  "author": "Stanislav Iliev & forked by beermonster",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gigobyte/HLTV/issues"
+    "url": "https://github.com/beermonsterdota/HLTV/issues"
   },
-  "homepage": "https://github.com/gigobyte/HLTV#readme",
+  "homepage": "https://github.com/beermonsterdota/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.35",
     "@types/node": "18.19.8",
