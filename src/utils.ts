@@ -37,7 +37,7 @@ export function getIdAt(index?: number, href?: string): any {
     case 1:
       return (href: string) => getIdAt(index!, href)
     default:
-      return parseNumber(href!.split('/')[index!])
+      return parseNumber(href?.split('/')[index!])
   }
 }
 

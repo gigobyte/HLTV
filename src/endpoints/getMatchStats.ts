@@ -76,7 +76,7 @@ export const getMatchStats =
         m$('.match-info-box .text-ellipsis')
           .first()
           .attr('href')
-          .split('event=')
+          ?.split('event=')
           .pop()
       ),
       name: m$('.match-info-box .text-ellipsis').first().text()

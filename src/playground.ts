@@ -10,11 +10,11 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getEvent({ id: 6810 }))
 // log(HLTV.getEvents())
 // log(HLTV.getMatchMapStats({ id: 147749 }))
-// log(
-//   HLTV.getMatchStats({
-//     id: 102058
-//   })
-// )
+log(
+  HLTV.getMatchStats({
+    id: 2368880
+  })
+)
 // log(HLTV.getMatchesStats())
 // log(HLTV.getPlayer({ id: 7998 }))
 // log(HLTV.getPlayerRanking())
