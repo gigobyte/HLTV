@@ -40,7 +40,7 @@ export const getDetailedTeamMapStats =
 
     const parseDetailedTeamMapStats = async (url: string, options?: string) => {
       let addr = `https://www.hltv.org` + url + generateRandomSuffix()
-      addr += options ? +`?${options}` : ''
+      addr += options ? `?${options}` : ''
       const mps$ = await fetchPage(addr, config.loadPage).then(HLTVScraper)
       const stats = mps$('.stats-rows.standard-box').children().toArray()
 
