@@ -15,7 +15,7 @@ export const getDetailedTeamMapStats =
   (config: HLTVConfig) =>
   async (
     options: GetTeamStatsMapsArguments
-  ): Promise<Partial<Record<GameMap, DetailedTeamMapStats>>> => {
+  ): Promise<Partial<Record<GameMap, DetailedTeamMapStats>> | null> => {
     const query = stringify({
       ...(options.startDate ? { startDate: options.startDate } : {}),
       ...(options.endDate ? { endDate: options.endDate } : {}),
@@ -113,7 +113,7 @@ export const getDetailedTeamMapStats =
       stats[mapName] = detailedTeamMapStats
       await sleep(1000)
     }
-    return stats
+    return Object.keys(stats).length > 0 ? stats : null
   }
 
 export interface DetailedTeamMapStats {
