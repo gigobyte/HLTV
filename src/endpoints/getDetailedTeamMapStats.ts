@@ -24,7 +24,8 @@ export const getDetailedTeamMapStats =
         ? { rankingFilter: options.rankingFilter }
         : {}),
       ...(options.maps ? { maps: toMapFilter(options.maps) } : {}),
-      ...(options.bestOfX ? { bestOfX: options.bestOfX } : {})
+      ...(options.bestOfX ? { bestOfX: options.bestOfX } : {}),
+      ...(options.csVersion ? { csVersion: options.csVersion } : {})
     })
     const mp$ = await fetchPage(
       `https://www.hltv.org/stats/teams/maps/${
@@ -32,6 +33,11 @@ export const getDetailedTeamMapStats =
       }/${generateRandomSuffix()}?${query}`,
       config.loadPage
     ).then(HLTVScraper)
+    // console.log(
+    //   `https://www.hltv.org/stats/teams/maps/${
+    //     options.id
+    //   }/${generateRandomSuffix()}?${query}`
+    // )
 
     const getMapStat = (mapEl: HLTVPageElement, i: number) =>
       mapEl.find('.stats-row').eq(i).children().last().text()

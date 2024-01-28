@@ -33,6 +33,7 @@ log(
     id: 9565,
     maps: GameMap.Mirage,
     startDate: '2023-10-27',
-    endDate: '2024-01-27'
+    endDate: '2024-01-27',
+    csVersion: 'CS2'
   })
 )
