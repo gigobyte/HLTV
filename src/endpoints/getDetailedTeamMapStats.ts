@@ -33,17 +33,12 @@ export const getDetailedTeamMapStats =
       }/${generateRandomSuffix()}?${query}`,
       config.loadPage
     ).then(HLTVScraper)
-    // console.log(
-    //   `https://www.hltv.org/stats/teams/maps/${
-    //     options.id
-    //   }/${generateRandomSuffix()}?${query}`
-    // )
 
     const getMapStat = (mapEl: HLTVPageElement, i: number) =>
       mapEl.find('.stats-row').eq(i).children().last().text()
 
     const getDetailedMapStat = (mapEl: HLTVPageElement[], i: number) =>
-      mapEl[i]?.find('span').last().text()
+      mapEl[i] ? mapEl[i].find('span').last().text() ?? null : null
 
     const parseDetailedTeamMapStats = async (url: string, options?: string) => {
       let addr = `https://www.hltv.org` + url + generateRandomSuffix()
@@ -51,9 +46,9 @@ export const getDetailedTeamMapStats =
       const mps$ = await fetchPage(addr, config.loadPage).then(HLTVScraper)
       const stats = mps$('.stats-rows.standard-box').children().toArray()
 
-      const [wins, draws, losses] = getDetailedMapStat(stats, 1)
-        ?.split(' / ')
-        .map(Number)
+      const [wins, draws, losses] = (
+        getDetailedMapStat(stats, 1)?.split(' / ') ?? []
+      ).map(Number)
 
       const [
         timesPlayed,
@@ -69,13 +64,14 @@ export const getDetailedTeamMapStats =
         getDetailedMapStat(stats, 0),
         getDetailedMapStat(stats, 2),
         getDetailedMapStat(stats, 3),
-        Number(getDetailedMapStat(stats, 4).split('%')[0]),
+        Number(getDetailedMapStat(stats, 4)?.split('%')[0]),
         getDetailedMapStat(stats, 5),
         getDetailedMapStat(stats, 6),
-        Number(getDetailedMapStat(stats, 7).split('%')[0]),
-        Number(getDetailedMapStat(stats, 8).split('%')[0]),
-        Number(getDetailedMapStat(stats, 9).split('%')[0])
+        Number(getDetailedMapStat(stats, 7)?.split('%')[0]),
+        Number(getDetailedMapStat(stats, 8)?.split('%')[0]),
+        Number(getDetailedMapStat(stats, 9)?.split('%')[0])
       ]
+      if (!timesPlayed) return null
       const result: DetailedTeamMapStats = {
         timesPlayed,
         wins,
@@ -110,25 +106,25 @@ export const getDetailedTeamMapStats =
         mapUrl,
         options
       )
-      stats[mapName] = detailedTeamMapStats
+      if (detailedTeamMapStats) stats[mapName] = detailedTeamMapStats
       await sleep(1000)
     }
     return Object.keys(stats).length > 0 ? stats : null
   }
 
 export interface DetailedTeamMapStats {
-  timesPlayed: string | undefined
-  wins: number | undefined
-  draws: number | undefined
-  losses: number | undefined
-  totalRounds: string | undefined
-  roundsWon: string | undefined
-  winPercent: number | undefined
-  pistolRounds: string | undefined
-  pistolRoundsWon: string | undefined
-  pistolRoundWinPercent: number | undefined
-  ctRoundWinPercent: number | undefined
-  tRoundWinPercent: number | undefined
+  timesPlayed: string | undefined | null
+  wins: number | undefined | null
+  draws: number | undefined | null
+  losses: number | undefined | null
+  totalRounds: string | undefined | null
+  roundsWon: string | undefined | null
+  winPercent: number | undefined | null
+  pistolRounds: string | undefined | null
+  pistolRoundsWon: string | undefined | null
+  pistolRoundWinPercent: number | undefined | null
+  ctRoundWinPercent: number | undefined | null
+  tRoundWinPercent: number | undefined | null
 }
 
 export interface GetTeamStatsMapsArguments {

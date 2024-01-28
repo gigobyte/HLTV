@@ -13,7 +13,9 @@ export const fetchPage = async (
     html.includes('error code:') ||
     html.includes('Sorry, you have been blocked') ||
     html.includes('Checking your browser before accessing') ||
-    html.includes('Enable JavaScript and cookies to continue')
+    html.includes('Enable JavaScript and cookies to continue') ||
+    html.includes('Access denied') ||
+    html.includes('restrict access')
   ) {
     throw new Error(
       'Access denied | www.hltv.org used Cloudflare to restrict access'

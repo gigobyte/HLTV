@@ -28,12 +28,23 @@ const log = (promise: Promise<any>) =>
 // log(HLTV.getResults({ eventIds: [1617] }))
 // log(HLTV.getNews())
 
-log(
-  HLTV.getDetailedTeamMapStats({
-    id: 9565,
-    maps: GameMap.Mirage,
-    startDate: '2023-10-27',
-    endDate: '2024-01-27',
-    csVersion: 'CSGO'
-  })
-)
+// log(
+//   HLTV.getDetailedTeamMapStats({
+//     id: 9565,
+//     maps: GameMap.Mirage,
+//     startDate: '2023-10-27',
+//     endDate: '2024-01-27',
+//     csVersion: 'CS2'
+//   })
+// )
+for (let i = 0; i < 100; i++) {
+  log(
+    HLTV.getDetailedTeamMapStats({
+      id: 6667,
+      maps: GameMap.Anubis,
+      startDate: '2023-10-28',
+      endDate: '2024-01-28',
+      csVersion: 'CS2'
+    })
+  )
+}
