@@ -9,6 +9,7 @@ import type {
   MatchType,
   RankingFilter
 } from '../index.js'
+import type { CSVersions } from '../shared/CSVersions.js'
 
 export const getDetailedTeamMapStats =
   (config: HLTVConfig) =>
@@ -133,4 +134,5 @@ export interface GetTeamStatsMapsArguments {
   rankingFilter?: RankingFilter
   maps?: GameMap
   bestOfX?: BestOfFilter
+  csVersion?: CSVersions
 }
