@@ -45,7 +45,7 @@
   "homepage": "https://github.com/gigobyte/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.35",
-    "@types/jest": "29.5.11",
+    "@types/jest": "29.5.12",
     "@types/node": "18.19.13",
     "@types/random-useragent": "0.3.3",
     "@types/request": "2.48.12",
