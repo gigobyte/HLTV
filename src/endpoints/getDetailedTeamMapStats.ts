@@ -61,12 +61,12 @@ export const getDetailedTeamMapStats =
         ctRoundWinPercent,
         tRoundWinPercent
       ] = [
-        getDetailedMapStat(stats, 0),
-        getDetailedMapStat(stats, 2),
-        getDetailedMapStat(stats, 3),
+        Number(getDetailedMapStat(stats, 0)),
+        Number(getDetailedMapStat(stats, 2)),
+        Number(getDetailedMapStat(stats, 3)),
         Number(getDetailedMapStat(stats, 4)?.split('%')[0]),
-        getDetailedMapStat(stats, 5),
-        getDetailedMapStat(stats, 6),
+        Number(getDetailedMapStat(stats, 5)),
+        Number(getDetailedMapStat(stats, 6)),
         Number(getDetailedMapStat(stats, 7)?.split('%')[0]),
         Number(getDetailedMapStat(stats, 8)?.split('%')[0]),
         Number(getDetailedMapStat(stats, 9)?.split('%')[0])
@@ -113,15 +113,15 @@ export const getDetailedTeamMapStats =
   }
 
 export interface DetailedTeamMapStats {
-  timesPlayed: string | undefined | null
+  timesPlayed: number | undefined | null
   wins: number | undefined | null
   draws: number | undefined | null
   losses: number | undefined | null
-  totalRounds: string | undefined | null
-  roundsWon: string | undefined | null
+  totalRounds: number | undefined | null
+  roundsWon: number | undefined | null
   winPercent: number | undefined | null
-  pistolRounds: string | undefined | null
-  pistolRoundsWon: string | undefined | null
+  pistolRounds: number | undefined | null
+  pistolRoundsWon: number | undefined | null
   pistolRoundWinPercent: number | undefined | null
   ctRoundWinPercent: number | undefined | null
   tRoundWinPercent: number | undefined | null

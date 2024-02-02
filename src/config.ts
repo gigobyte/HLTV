@@ -87,10 +87,10 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
       await sleep(5000)
     }
     while (
-      responseBody?.includes(CHALLENGE_MATCH || 'challenge-platform') ||
-      ((responseBody?.includes(RATE_LIMITED) ||
+      (responseBody?.includes(CHALLENGE_MATCH || 'challenge-platform') ||
+        responseBody?.includes(RATE_LIMITED) ||
         responseBody?.includes(JS_AND_COOKIE)) &&
-        tryCount <= 3)
+      tryCount <= 3
     ) {
       const newResponse = await page.waitForNavigation({
         timeout: 10000,
@@ -117,12 +117,14 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
   return new Promise<string>((res) => res(responseBody ?? ''))
 }
 export const defaultLoadPage =
-  (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) =>
-    gotScraping({
+  (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) => {
+    return gotScraping({
       url,
       agent: {
         http: httpAgent,
         https: httpAgent as HttpsAgent | undefined
+        // http: new HttpsAgent(),
+        // https: new HttpsAgent()
       },
       headerGeneratorOptions: {
         browsers: ['firefox'],
@@ -131,6 +133,7 @@ export const defaultLoadPage =
         operatingSystems: ['windows']
       }
     }).then((res) => res.body)
+  }
 
 const defaultAgent = new HttpsAgent()
 
