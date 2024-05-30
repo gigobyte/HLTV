@@ -216,12 +216,10 @@ function getRoundHistory(
   })
 
   const team1Outcomes = $('.round-history-team-row:nth-child(1)')
-    .first()
     .find('.round-history-outcome')
     .toArray()
     .map(getOutcome)
   const team2Outcomes = $('.round-history-team-row:nth-child(2)')
-    .last()
     .find('.round-history-outcome')
     .toArray()
     .map(getOutcome)
