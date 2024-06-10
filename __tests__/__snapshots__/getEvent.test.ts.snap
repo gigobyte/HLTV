@@ -23,7 +23,7 @@ exports[`getEvent 1`] = `
         "name": "Copenhagen Flames",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106330568-preview.jpg",
-      "views": 397,
+      "views": 401,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1106334846.mp4",
@@ -317,7 +317,7 @@ exports[`getEvent 1`] = `
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105505492-preview.jpg",
-      "views": 68,
+      "views": 70,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525.mp4",
@@ -331,7 +331,7 @@ exports[`getEvent 1`] = `
         "name": "Nexus",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105482525-preview.jpg",
-      "views": 60,
+      "views": 62,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1105489583.mp4",
@@ -737,7 +737,7 @@ exports[`getEvent 1`] = `
         "name": "Wisla Krakow",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098598957-preview.jpg",
-      "views": 31,
+      "views": 33,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098636540.mp4",
@@ -779,7 +779,7 @@ exports[`getEvent 1`] = `
         "name": "Wisla Krakow",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098594928-preview.jpg",
-      "views": 19,
+      "views": 21,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1098642815.mp4",
@@ -919,7 +919,7 @@ exports[`getEvent 1`] = `
         "name": "Tricked",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097019643-preview.jpg",
-      "views": 55,
+      "views": 57,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AT-cm%7C1097053197.mp4",
@@ -2458,7 +2458,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/99MRkKN_qJ94or-3H57PNw/AT-cm%7C99MRkKN_qJ94or-3H57PNw-preview.jpg",
-      "views": 3541,
+      "views": 4250,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/g2oNN2zGxsAxz1YWWDA8UA/AT-cm%7Cg2oNN2zGxsAxz1YWWDA8UA.mp4",
@@ -2472,7 +2472,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/g2oNN2zGxsAxz1YWWDA8UA/AT-cm%7Cg2oNN2zGxsAxz1YWWDA8UA-preview.jpg",
-      "views": 2137,
+      "views": 2241,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/VTDBXTBq9qzQ71iTZOoU6Q/AT-cm%7CVTDBXTBq9qzQ71iTZOoU6Q.mp4",
@@ -2486,7 +2486,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/VTDBXTBq9qzQ71iTZOoU6Q/AT-cm%7CVTDBXTBq9qzQ71iTZOoU6Q-preview.jpg",
-      "views": 1345,
+      "views": 1389,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/xbDUpQG9R8apbObdSQFAsA/AT-cm%7CxbDUpQG9R8apbObdSQFAsA.mp4",
@@ -2500,7 +2500,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/xbDUpQG9R8apbObdSQFAsA/AT-cm%7CxbDUpQG9R8apbObdSQFAsA-preview.jpg",
-      "views": 1217,
+      "views": 1253,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/-OcUwNAqrYCaZJnk7zhn3g/AT-cm%7C-OcUwNAqrYCaZJnk7zhn3g.mp4",
@@ -2514,7 +2514,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/-OcUwNAqrYCaZJnk7zhn3g/AT-cm%7C-OcUwNAqrYCaZJnk7zhn3g-preview.jpg",
-      "views": 945,
+      "views": 973,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/_cvs1vZTlQ8hQDhc5TVVIQ/AT-cm%7C_cvs1vZTlQ8hQDhc5TVVIQ.mp4",
@@ -2528,7 +2528,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/_cvs1vZTlQ8hQDhc5TVVIQ/AT-cm%7C_cvs1vZTlQ8hQDhc5TVVIQ-preview.jpg",
-      "views": 8118,
+      "views": 8332,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/sI7KrKUi_dGmmEKm9aYv2Q/AT-cm%7CsI7KrKUi_dGmmEKm9aYv2Q.mp4",
@@ -2542,7 +2542,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/sI7KrKUi_dGmmEKm9aYv2Q/AT-cm%7CsI7KrKUi_dGmmEKm9aYv2Q-preview.jpg",
-      "views": 3307,
+      "views": 3367,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/h2a7YisTiYulRCE-btys1Q/AT-cm%7Ch2a7YisTiYulRCE-btys1Q.mp4",
@@ -2556,7 +2556,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/h2a7YisTiYulRCE-btys1Q/AT-cm%7Ch2a7YisTiYulRCE-btys1Q-preview.jpg",
-      "views": 2803,
+      "views": 2855,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/rlnMvimq0I4jBFUpiseNVw/AT-cm%7CrlnMvimq0I4jBFUpiseNVw.mp4",
@@ -2570,7 +2570,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/rlnMvimq0I4jBFUpiseNVw/AT-cm%7CrlnMvimq0I4jBFUpiseNVw-preview.jpg",
-      "views": 2711,
+      "views": 2797,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/qI8lfMn6tDOdNLXuzBhvnQ/AT-cm%7CqI8lfMn6tDOdNLXuzBhvnQ.mp4",
@@ -2584,7 +2584,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/qI8lfMn6tDOdNLXuzBhvnQ/AT-cm%7CqI8lfMn6tDOdNLXuzBhvnQ-preview.jpg",
-      "views": 2279,
+      "views": 2313,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/SpLMA6gMfeV1OnLYk8S_TA/AT-cm%7CSpLMA6gMfeV1OnLYk8S_TA.mp4",
@@ -2598,21 +2598,21 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/SpLMA6gMfeV1OnLYk8S_TA/AT-cm%7CSpLMA6gMfeV1OnLYk8S_TA-preview.jpg",
-      "views": 2213,
+      "views": 2277,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/nBYxzSIgSuR335OKDgD8pQ/AT-cm%7CnBYxzSIgSuR335OKDgD8pQ.mp4",
       "name": "M3 | frozen (CT) wins the 1vs2 situation (frag wise) but fails to close out the match for MOUZ as the bomb timer is not in their favor",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/nBYxzSIgSuR335OKDgD8pQ/AT-cm%7CnBYxzSIgSuR335OKDgD8pQ-preview.jpg",
-      "views": 2085,
+      "views": 2099,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/_mSCrOchU3JHgKnJvdIj5Q/AT-cm%7C_mSCrOchU3JHgKnJvdIj5Q.mp4",
@@ -2626,77 +2626,77 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/_mSCrOchU3JHgKnJvdIj5Q/AT-cm%7C_mSCrOchU3JHgKnJvdIj5Q-preview.jpg",
-      "views": 1703,
+      "views": 1745,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/krITHhXlJdhpic6BgIsFjQ/AT-cm%7CkrITHhXlJdhpic6BgIsFjQ.mp4",
       "name": "M2 | torzsi - 1vs2 AWP clutch (CT - pre-plant situation)",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/krITHhXlJdhpic6BgIsFjQ/AT-cm%7CkrITHhXlJdhpic6BgIsFjQ-preview.jpg",
-      "views": 1251,
+      "views": 1265,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/pSoHc98s5zyABY9qhllDDg/AT-cm%7CpSoHc98s5zyABY9qhllDDg.mp4",
       "name": "M1 | xertioN - 4 AK kills (2 HS) on the bombsite A offensive (initial frags)",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/pSoHc98s5zyABY9qhllDDg/AT-cm%7CpSoHc98s5zyABY9qhllDDg-preview.jpg",
-      "views": 1147,
+      "views": 1149,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/BaMEa5bXdS9obOhtvhwkSA/AT-cm%7CBaMEa5bXdS9obOhtvhwkSA.mp4",
       "name": "M3 | TeSeS' 1vs4 clutch attempt (T - post-plant situation) is denied by the final CT (JDC)",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/BaMEa5bXdS9obOhtvhwkSA/AT-cm%7CBaMEa5bXdS9obOhtvhwkSA-preview.jpg",
-      "views": 1019,
+      "views": 1037,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/feJroGTfIcuF1xFmAQhHYw/AT-cm%7CfeJroGTfIcuF1xFmAQhHYw.mp4",
       "name": "M2 | cadiaN - 1vs2 clutch (T - bomb planted after 1 clutch kill)",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/feJroGTfIcuF1xFmAQhHYw/AT-cm%7CfeJroGTfIcuF1xFmAQhHYw-preview.jpg",
-      "views": 965,
+      "views": 973,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/mTIRIpaTM7pUZOPeaVyy2Q/AT-cm%7CmTIRIpaTM7pUZOPeaVyy2Q.mp4",
       "name": "M3 | TeSeS - 3 kills (2 M4A1-S, AK HS) on the defense",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 4494,
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/mTIRIpaTM7pUZOPeaVyy2Q/AT-cm%7CmTIRIpaTM7pUZOPeaVyy2Q-preview.jpg",
-      "views": 395,
+      "views": 399,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/hWz_xB6IhaDCHyULBT3buw/AT-cm%7ChWz_xB6IhaDCHyULBT3buw.mp4",
@@ -2710,7 +2710,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/hWz_xB6IhaDCHyULBT3buw/AT-cm%7ChWz_xB6IhaDCHyULBT3buw-preview.jpg",
-      "views": 4851,
+      "views": 4909,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/fEwV3BDby7rXjj5xPIbnaA/AT-cm%7CfEwV3BDby7rXjj5xPIbnaA.mp4",
@@ -2724,7 +2724,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/fEwV3BDby7rXjj5xPIbnaA/AT-cm%7CfEwV3BDby7rXjj5xPIbnaA-preview.jpg",
-      "views": 3699,
+      "views": 3725,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Io5NeIFMN00qfqwjHq2FOw/AT-cm%7CIo5NeIFMN00qfqwjHq2FOw.mp4",
@@ -2738,7 +2738,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Io5NeIFMN00qfqwjHq2FOw/AT-cm%7CIo5NeIFMN00qfqwjHq2FOw-preview.jpg",
-      "views": 3319,
+      "views": 3341,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/N4tVY1Yprz3nZ-BQ9EuL_A/AT-cm%7CN4tVY1Yprz3nZ-BQ9EuL_A.mp4",
@@ -2752,7 +2752,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/N4tVY1Yprz3nZ-BQ9EuL_A/AT-cm%7CN4tVY1Yprz3nZ-BQ9EuL_A-preview.jpg",
-      "views": 3213,
+      "views": 3239,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/ujchmq5YRgBH90XRPHOhgQ/AT-cm%7Cujchmq5YRgBH90XRPHOhgQ.mp4",
@@ -2766,7 +2766,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/ujchmq5YRgBH90XRPHOhgQ/AT-cm%7Cujchmq5YRgBH90XRPHOhgQ-preview.jpg",
-      "views": 2853,
+      "views": 2877,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/S4ACBe6mPxwyruAl3mCW_w/AT-cm%7CS4ACBe6mPxwyruAl3mCW_w.mp4",
@@ -2780,7 +2780,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/S4ACBe6mPxwyruAl3mCW_w/AT-cm%7CS4ACBe6mPxwyruAl3mCW_w-preview.jpg",
-      "views": 2803,
+      "views": 2815,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/heD2nB3um06XkP5ok6qEUw/AT-cm%7CheD2nB3um06XkP5ok6qEUw.mp4",
@@ -2794,7 +2794,7 @@ exports[`getEvent 5`] = `
         "name": "FaZe",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/heD2nB3um06XkP5ok6qEUw/AT-cm%7CheD2nB3um06XkP5ok6qEUw-preview.jpg",
-      "views": 1505,
+      "views": 1523,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/BrOYd-uVBVQ8WP-VHICCaw/AT-cm%7CBrOYd-uVBVQ8WP-VHICCaw.mp4",
@@ -2808,7 +2808,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/BrOYd-uVBVQ8WP-VHICCaw/AT-cm%7CBrOYd-uVBVQ8WP-VHICCaw-preview.jpg",
-      "views": 1097,
+      "views": 1103,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/WNysKHWdCGZvPqRW4nx5Sw/AT-cm%7CWNysKHWdCGZvPqRW4nx5Sw.mp4",
@@ -2822,7 +2822,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/WNysKHWdCGZvPqRW4nx5Sw/AT-cm%7CWNysKHWdCGZvPqRW4nx5Sw-preview.jpg",
-      "views": 973,
+      "views": 989,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Dvpo0Gvh3xB4oD7r6h5Nbw/AT-cm%7CDvpo0Gvh3xB4oD7r6h5Nbw.mp4",
@@ -2836,7 +2836,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Dvpo0Gvh3xB4oD7r6h5Nbw/AT-cm%7CDvpo0Gvh3xB4oD7r6h5Nbw-preview.jpg",
-      "views": 603,
+      "views": 609,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/emVJoY2WZii3jXyuXqdj5w/AT-cm%7CemVJoY2WZii3jXyuXqdj5w.mp4",
@@ -2850,7 +2850,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/emVJoY2WZii3jXyuXqdj5w/AT-cm%7CemVJoY2WZii3jXyuXqdj5w-preview.jpg",
-      "views": 539,
+      "views": 545,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/I2gP0CgvujBv7t2Fh8tIZg/AT-cm%7CI2gP0CgvujBv7t2Fh8tIZg.mp4",
@@ -2864,7 +2864,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/I2gP0CgvujBv7t2Fh8tIZg/AT-cm%7CI2gP0CgvujBv7t2Fh8tIZg-preview.jpg",
-      "views": 471,
+      "views": 479,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Gaf7clJBx4ApoTAQ3B7iqA/AT-cm%7CGaf7clJBx4ApoTAQ3B7iqA.mp4",
@@ -2892,7 +2892,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/tlCIjMtrH1geT9hu6Al8-Q/AT-cm%7CtlCIjMtrH1geT9hu6Al8-Q-preview.jpg",
-      "views": 7855,
+      "views": 7903,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/R28IgsW769X2rpKXzaFHVA/AT-cm%7CR28IgsW769X2rpKXzaFHVA.mp4",
@@ -2906,7 +2906,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/R28IgsW769X2rpKXzaFHVA/AT-cm%7CR28IgsW769X2rpKXzaFHVA-preview.jpg",
-      "views": 7085,
+      "views": 7141,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/tOMigj9P4OvxZh888IPhOg/AT-cm%7CtOMigj9P4OvxZh888IPhOg.mp4",
@@ -2920,7 +2920,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/tOMigj9P4OvxZh888IPhOg/AT-cm%7CtOMigj9P4OvxZh888IPhOg-preview.jpg",
-      "views": 4237,
+      "views": 4255,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/M1cNVBp2GiNspyDf5lIKPw/AT-cm%7CM1cNVBp2GiNspyDf5lIKPw.mp4",
@@ -2934,7 +2934,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/M1cNVBp2GiNspyDf5lIKPw/AT-cm%7CM1cNVBp2GiNspyDf5lIKPw-preview.jpg",
-      "views": 3437,
+      "views": 3465,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Q6vl03g4-tQwTM7to2bSKw/AT-cm%7CQ6vl03g4-tQwTM7to2bSKw.mp4",
@@ -2948,7 +2948,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Q6vl03g4-tQwTM7to2bSKw/AT-cm%7CQ6vl03g4-tQwTM7to2bSKw-preview.jpg",
-      "views": 3129,
+      "views": 3155,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/T5YnDZ9AKycNZvcIX0uB-w/AT-cm%7CT5YnDZ9AKycNZvcIX0uB-w.mp4",
@@ -2962,7 +2962,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/T5YnDZ9AKycNZvcIX0uB-w/AT-cm%7CT5YnDZ9AKycNZvcIX0uB-w-preview.jpg",
-      "views": 1855,
+      "views": 1869,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/FweHhRq0maqF5mGPYBs-bw/AT-cm%7CFweHhRq0maqF5mGPYBs-bw.mp4",
@@ -2976,7 +2976,7 @@ exports[`getEvent 5`] = `
         "name": "Cloud9",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/FweHhRq0maqF5mGPYBs-bw/AT-cm%7CFweHhRq0maqF5mGPYBs-bw-preview.jpg",
-      "views": 1299,
+      "views": 1303,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/mnM5umwRKy0XwIjwKmZXiQ/AT-cm%7CmnM5umwRKy0XwIjwKmZXiQ.mp4",
@@ -2987,10 +2987,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/mnM5umwRKy0XwIjwKmZXiQ/AT-cm%7CmnM5umwRKy0XwIjwKmZXiQ-preview.jpg",
-      "views": 1273,
+      "views": 1285,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/39a7kVhnk85vQJUZkT5Hlw/AT-cm%7C39a7kVhnk85vQJUZkT5Hlw.mp4",
@@ -3004,7 +3004,7 @@ exports[`getEvent 5`] = `
         "name": "Liquid",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/39a7kVhnk85vQJUZkT5Hlw/AT-cm%7C39a7kVhnk85vQJUZkT5Hlw-preview.jpg",
-      "views": 1149,
+      "views": 1161,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/AM5uqLhTUC_ngPR9G7-19g/AT-cm%7CAM5uqLhTUC_ngPR9G7-19g.mp4",
@@ -3018,7 +3018,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/AM5uqLhTUC_ngPR9G7-19g/AT-cm%7CAM5uqLhTUC_ngPR9G7-19g-preview.jpg",
-      "views": 1089,
+      "views": 1097,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/5ONvnKMhMEKGDM3z-D1MQg/AT-cm%7C5ONvnKMhMEKGDM3z-D1MQg.mp4",
@@ -3029,10 +3029,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/5ONvnKMhMEKGDM3z-D1MQg/AT-cm%7C5ONvnKMhMEKGDM3z-D1MQg-preview.jpg",
-      "views": 1077,
+      "views": 1083,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/skZ3nq37R832hLHqu9JLhw/AT-cm%7CskZ3nq37R832hLHqu9JLhw.mp4",
@@ -3046,7 +3046,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/skZ3nq37R832hLHqu9JLhw/AT-cm%7CskZ3nq37R832hLHqu9JLhw-preview.jpg",
-      "views": 1057,
+      "views": 1063,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/hOLXGpLnUXVJP3eMssLoAQ/AT-cm%7ChOLXGpLnUXVJP3eMssLoAQ.mp4",
@@ -3060,7 +3060,7 @@ exports[`getEvent 5`] = `
         "name": "Cloud9",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/hOLXGpLnUXVJP3eMssLoAQ/AT-cm%7ChOLXGpLnUXVJP3eMssLoAQ-preview.jpg",
-      "views": 1031,
+      "views": 1037,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/lO_zbUUW4Denu1w7GDRccw/AT-cm%7ClO_zbUUW4Denu1w7GDRccw.mp4",
@@ -3074,7 +3074,7 @@ exports[`getEvent 5`] = `
         "name": "Liquid",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/lO_zbUUW4Denu1w7GDRccw/AT-cm%7ClO_zbUUW4Denu1w7GDRccw-preview.jpg",
-      "views": 869,
+      "views": 881,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/sAA3u0UtfJ0WUKan-AWD2Q/AT-cm%7CsAA3u0UtfJ0WUKan-AWD2Q.mp4",
@@ -3085,10 +3085,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/sAA3u0UtfJ0WUKan-AWD2Q/AT-cm%7CsAA3u0UtfJ0WUKan-AWD2Q-preview.jpg",
-      "views": 791,
+      "views": 797,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/2EpWsr71xled4sCvOCqFsQ/AT-cm%7C2EpWsr71xled4sCvOCqFsQ.mp4",
@@ -3102,7 +3102,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/2EpWsr71xled4sCvOCqFsQ/AT-cm%7C2EpWsr71xled4sCvOCqFsQ-preview.jpg",
-      "views": 769,
+      "views": 771,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/nAFHukRVDklCLainuKycgQ/AT-cm%7CnAFHukRVDklCLainuKycgQ.mp4",
@@ -3116,7 +3116,7 @@ exports[`getEvent 5`] = `
         "name": "Liquid",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/nAFHukRVDklCLainuKycgQ/AT-cm%7CnAFHukRVDklCLainuKycgQ-preview.jpg",
-      "views": 751,
+      "views": 763,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/MeLri6-2xjW179WzUUoT3g/AT-cm%7CMeLri6-2xjW179WzUUoT3g.mp4",
@@ -3130,7 +3130,7 @@ exports[`getEvent 5`] = `
         "name": "Cloud9",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/MeLri6-2xjW179WzUUoT3g/AT-cm%7CMeLri6-2xjW179WzUUoT3g-preview.jpg",
-      "views": 639,
+      "views": 645,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/ij1eBp_wsKUbCxlESUhxnA/AT-cm%7Cij1eBp_wsKUbCxlESUhxnA.mp4",
@@ -3141,24 +3141,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/ij1eBp_wsKUbCxlESUhxnA/AT-cm%7Cij1eBp_wsKUbCxlESUhxnA-preview.jpg",
-      "views": 553,
-    },
-    {
-      "link": "https://clips-media-assets2.twitch.tv/1Ri6JTak0ZQoqqmsDkHgYQ/AT-cm%7C1Ri6JTak0ZQoqqmsDkHgYQ.mp4",
-      "name": "M2 | sjuush - 1vs2 clutch (T - post-plant situation)",
-      "team1": {
-        "id": 5995,
-        "name": "G2",
-      },
-      "team2": {
-        "id": 7175,
-        "name": "Heroic",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/1Ri6JTak0ZQoqqmsDkHgYQ/AT-cm%7C1Ri6JTak0ZQoqqmsDkHgYQ-preview.jpg",
-      "views": 473,
+      "views": 555,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/jFpII3WK87ZcNVJ4wAotDg/AT-cm%7CjFpII3WK87ZcNVJ4wAotDg.mp4",
@@ -3169,9 +3155,23 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/jFpII3WK87ZcNVJ4wAotDg/AT-cm%7CjFpII3WK87ZcNVJ4wAotDg-preview.jpg",
+      "views": 475,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/1Ri6JTak0ZQoqqmsDkHgYQ/AT-cm%7C1Ri6JTak0ZQoqqmsDkHgYQ.mp4",
+      "name": "M2 | sjuush - 1vs2 clutch (T - post-plant situation)",
+      "team1": {
+        "id": 5995,
+        "name": "G2",
+      },
+      "team2": {
+        "id": 7175,
+        "name": "HEROIC",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/1Ri6JTak0ZQoqqmsDkHgYQ/AT-cm%7C1Ri6JTak0ZQoqqmsDkHgYQ-preview.jpg",
       "views": 473,
     },
     {
@@ -3200,7 +3200,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Nj_-qw1FLOhmbE5rpK2xZg/AT-cm%7CNj_-qw1FLOhmbE5rpK2xZg-preview.jpg",
-      "views": 331,
+      "views": 333,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/vG0zfhH3YZ4s5pMtPFAQ4w/AT-cm%7CvG0zfhH3YZ4s5pMtPFAQ4w.mp4",
@@ -3214,7 +3214,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/vG0zfhH3YZ4s5pMtPFAQ4w/AT-cm%7CvG0zfhH3YZ4s5pMtPFAQ4w-preview.jpg",
-      "views": 231,
+      "views": 237,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/f_u1i0T0eyperKNzKgdjPw/AT-cm%7Cf_u1i0T0eyperKNzKgdjPw.mp4",
@@ -3228,7 +3228,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/f_u1i0T0eyperKNzKgdjPw/AT-cm%7Cf_u1i0T0eyperKNzKgdjPw-preview.jpg",
-      "views": 199,
+      "views": 203,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/wlbJC3UKB_dkMziToShA3A/AT-cm%7CwlbJC3UKB_dkMziToShA3A.mp4",
@@ -3242,7 +3242,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/wlbJC3UKB_dkMziToShA3A/AT-cm%7CwlbJC3UKB_dkMziToShA3A-preview.jpg",
-      "views": 185,
+      "views": 189,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/QEOyVccfm1mp0VjOr76OOQ/AT-cm%7CQEOyVccfm1mp0VjOr76OOQ.mp4",
@@ -3256,7 +3256,7 @@ exports[`getEvent 5`] = `
         "name": "Cloud9",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/QEOyVccfm1mp0VjOr76OOQ/AT-cm%7CQEOyVccfm1mp0VjOr76OOQ-preview.jpg",
-      "views": 129,
+      "views": 133,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/wZ2i3RbJHkJPKesI4Hkmhg/AT-cm%7CwZ2i3RbJHkJPKesI4Hkmhg.mp4",
@@ -3298,7 +3298,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/KBiZBNu2MHZhbGf1HTWP8g/AT-cm%7CKBiZBNu2MHZhbGf1HTWP8g-preview.jpg",
-      "views": 11769,
+      "views": 11781,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/pa8bK_UGGA4ZgSInZbWVgg/AT-cm%7Cpa8bK_UGGA4ZgSInZbWVgg.mp4",
@@ -3312,7 +3312,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/pa8bK_UGGA4ZgSInZbWVgg/AT-cm%7Cpa8bK_UGGA4ZgSInZbWVgg-preview.jpg",
-      "views": 5843,
+      "views": 5857,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/dWqTmKGIzu3idrPOfMSWzw/AT-cm%7CdWqTmKGIzu3idrPOfMSWzw.mp4",
@@ -3326,7 +3326,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/dWqTmKGIzu3idrPOfMSWzw/AT-cm%7CdWqTmKGIzu3idrPOfMSWzw-preview.jpg",
-      "views": 3707,
+      "views": 3719,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/bYmQ-VVJp1FyVOKVbSSCzA/AT-cm%7CbYmQ-VVJp1FyVOKVbSSCzA.mp4",
@@ -3340,7 +3340,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/bYmQ-VVJp1FyVOKVbSSCzA/AT-cm%7CbYmQ-VVJp1FyVOKVbSSCzA-preview.jpg",
-      "views": 2770,
+      "views": 2780,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/_ZrcEkbzMDu1W30MoqNI6Q/AT-cm%7C_ZrcEkbzMDu1W30MoqNI6Q.mp4",
@@ -3354,7 +3354,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/_ZrcEkbzMDu1W30MoqNI6Q/AT-cm%7C_ZrcEkbzMDu1W30MoqNI6Q-preview.jpg",
-      "views": 2613,
+      "views": 2619,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/4spKe_9nWsJlPa07SRSZSg/AT-cm%7C4spKe_9nWsJlPa07SRSZSg.mp4",
@@ -3368,7 +3368,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/4spKe_9nWsJlPa07SRSZSg/AT-cm%7C4spKe_9nWsJlPa07SRSZSg-preview.jpg",
-      "views": 1483,
+      "views": 1487,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/r4XUC3DAl2O924SrGKrFVA/AT-cm%7Cr4XUC3DAl2O924SrGKrFVA.mp4",
@@ -3410,7 +3410,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/6KbDguFe_fSwFltQMPqZkA/AT-cm%7C6KbDguFe_fSwFltQMPqZkA-preview.jpg",
-      "views": 869,
+      "views": 873,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/sOJ5HpOpzcr5zOq8XX8iFg/AT-cm%7CsOJ5HpOpzcr5zOq8XX8iFg.mp4",
@@ -3424,7 +3424,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/sOJ5HpOpzcr5zOq8XX8iFg/AT-cm%7CsOJ5HpOpzcr5zOq8XX8iFg-preview.jpg",
-      "views": 789,
+      "views": 793,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/8Ym867wDgT0_VQ0ON9l-Ng/AT-cm%7C8Ym867wDgT0_VQ0ON9l-Ng.mp4",
@@ -3438,7 +3438,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/8Ym867wDgT0_VQ0ON9l-Ng/AT-cm%7C8Ym867wDgT0_VQ0ON9l-Ng-preview.jpg",
-      "views": 741,
+      "views": 749,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/DWX_N-71PN7cWNTk3NGX2Q/AT-cm%7CDWX_N-71PN7cWNTk3NGX2Q.mp4",
@@ -3452,7 +3452,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/DWX_N-71PN7cWNTk3NGX2Q/AT-cm%7CDWX_N-71PN7cWNTk3NGX2Q-preview.jpg",
-      "views": 681,
+      "views": 683,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/U4hsvU3gNkTyjQ8ReSzxHg/AT-cm%7CU4hsvU3gNkTyjQ8ReSzxHg.mp4",
@@ -3466,7 +3466,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/U4hsvU3gNkTyjQ8ReSzxHg/AT-cm%7CU4hsvU3gNkTyjQ8ReSzxHg-preview.jpg",
-      "views": 533,
+      "views": 539,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/SpPG_aNrPKrDGR5u7HkVpQ/AT-cm%7CSpPG_aNrPKrDGR5u7HkVpQ.mp4",
@@ -3480,7 +3480,7 @@ exports[`getEvent 5`] = `
         "name": "ENCE",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/SpPG_aNrPKrDGR5u7HkVpQ/AT-cm%7CSpPG_aNrPKrDGR5u7HkVpQ-preview.jpg",
-      "views": 513,
+      "views": 515,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/IozrtlmbJAOmvcJU83AJ-Q/AT-cm%7CIozrtlmbJAOmvcJU83AJ-Q.mp4",
@@ -3494,7 +3494,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/IozrtlmbJAOmvcJU83AJ-Q/AT-cm%7CIozrtlmbJAOmvcJU83AJ-Q-preview.jpg",
-      "views": 475,
+      "views": 481,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/EdKHAXrqwCv0ethyyH0Fqw/AT-cm%7CEdKHAXrqwCv0ethyyH0Fqw.mp4",
@@ -3508,7 +3508,7 @@ exports[`getEvent 5`] = `
         "name": "Complexity",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/EdKHAXrqwCv0ethyyH0Fqw/AT-cm%7CEdKHAXrqwCv0ethyyH0Fqw-preview.jpg",
-      "views": 463,
+      "views": 465,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Tk0cZtlJXTpveYXNIYGI2g/AT-cm%7CTk0cZtlJXTpveYXNIYGI2g.mp4",
@@ -3522,7 +3522,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Tk0cZtlJXTpveYXNIYGI2g/AT-cm%7CTk0cZtlJXTpveYXNIYGI2g-preview.jpg",
-      "views": 443,
+      "views": 451,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/nvIn2IPCeTmwVI4dpUrEnQ/AT-cm%7CnvIn2IPCeTmwVI4dpUrEnQ.mp4",
@@ -3536,7 +3536,7 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/nvIn2IPCeTmwVI4dpUrEnQ/AT-cm%7CnvIn2IPCeTmwVI4dpUrEnQ-preview.jpg",
-      "views": 395,
+      "views": 401,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/hfoQzjnypnOmwP90uPTzaw/AT-cm%7ChfoQzjnypnOmwP90uPTzaw.mp4",
@@ -3550,7 +3550,21 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/hfoQzjnypnOmwP90uPTzaw/AT-cm%7ChfoQzjnypnOmwP90uPTzaw-preview.jpg",
-      "views": 373,
+      "views": 379,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/cKpQnMCTs5P2saduq9ucMw/AT-cm%7CcKpQnMCTs5P2saduq9ucMw.mp4",
+      "name": "M1 | KSCERATO - 4 kills (3 AK, USP-S HS) on the Mid defense (clean round - vs TEC9s)",
+      "team1": {
+        "id": 8297,
+        "name": "FURIA",
+      },
+      "team2": {
+        "id": 4494,
+        "name": "MOUZ",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/cKpQnMCTs5P2saduq9ucMw/AT-cm%7CcKpQnMCTs5P2saduq9ucMw-preview.jpg",
+      "views": 363,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/mV_EXrfvC4JsgL_ysjkCUQ/AT-cm%7CmV_EXrfvC4JsgL_ysjkCUQ.mp4",
@@ -3567,20 +3581,6 @@ exports[`getEvent 5`] = `
       "views": 362,
     },
     {
-      "link": "https://clips-media-assets2.twitch.tv/cKpQnMCTs5P2saduq9ucMw/AT-cm%7CcKpQnMCTs5P2saduq9ucMw.mp4",
-      "name": "M1 | KSCERATO - 4 kills (3 AK, USP-S HS) on the Mid defense (clean round - vs TEC9s)",
-      "team1": {
-        "id": 8297,
-        "name": "FURIA",
-      },
-      "team2": {
-        "id": 4494,
-        "name": "MOUZ",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/cKpQnMCTs5P2saduq9ucMw/AT-cm%7CcKpQnMCTs5P2saduq9ucMw-preview.jpg",
-      "views": 359,
-    },
-    {
       "link": "https://clips-media-assets2.twitch.tv/8OkVX64B2zKF_26eHiIOew/AT-cm%7C8OkVX64B2zKF_26eHiIOew.mp4",
       "name": "M2 OT | wiz's 1vs3 clutch attempt (T - post-plant) is denied by the final CT sticking to the bomb defuse",
       "team1": {
@@ -3592,7 +3592,7 @@ exports[`getEvent 5`] = `
         "name": "Complexity",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/8OkVX64B2zKF_26eHiIOew/AT-cm%7C8OkVX64B2zKF_26eHiIOew-preview.jpg",
-      "views": 327,
+      "views": 331,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/_aCJNhqB14QVnVqLeBylxA/AT-cm%7C_aCJNhqB14QVnVqLeBylxA.mp4",
@@ -3606,7 +3606,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/_aCJNhqB14QVnVqLeBylxA/AT-cm%7C_aCJNhqB14QVnVqLeBylxA-preview.jpg",
-      "views": 325,
+      "views": 329,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/16LJyVbIBjR2O7JgEnZc0g/AT-cm%7C16LJyVbIBjR2O7JgEnZc0g.mp4",
@@ -3648,7 +3648,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/VztIMO0kLKayOgdkRBtBBA/AT-cm%7CVztIMO0kLKayOgdkRBtBBA-preview.jpg",
-      "views": 241,
+      "views": 247,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/bugeQDzdcoQXpwXOfpKRSA/AT-cm%7CbugeQDzdcoQXpwXOfpKRSA.mp4",
@@ -3662,7 +3662,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/bugeQDzdcoQXpwXOfpKRSA/AT-cm%7CbugeQDzdcoQXpwXOfpKRSA-preview.jpg",
-      "views": 173,
+      "views": 181,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/cQMx1htwJrRDWPzMF_xS5Q/AT-cm%7CcQMx1htwJrRDWPzMF_xS5Q.mp4",
@@ -3676,7 +3676,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/cQMx1htwJrRDWPzMF_xS5Q/AT-cm%7CcQMx1htwJrRDWPzMF_xS5Q-preview.jpg",
-      "views": 8613,
+      "views": 8639,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/281Clg8_F79X3clN1niRWA/AT-cm%7C281Clg8_F79X3clN1niRWA.mp4",
@@ -3690,7 +3690,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/281Clg8_F79X3clN1niRWA/AT-cm%7C281Clg8_F79X3clN1niRWA-preview.jpg",
-      "views": 3179,
+      "views": 3215,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Qczx2j_X_0_6Ir49kYytoQ/AT-cm%7CQczx2j_X_0_6Ir49kYytoQ.mp4",
@@ -3704,7 +3704,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Qczx2j_X_0_6Ir49kYytoQ/AT-cm%7CQczx2j_X_0_6Ir49kYytoQ-preview.jpg",
-      "views": 2765,
+      "views": 2779,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/g-7DLU5ZnAyvJQCiY1OJrg/AT-cm%7Cg-7DLU5ZnAyvJQCiY1OJrg.mp4",
@@ -3715,10 +3715,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/g-7DLU5ZnAyvJQCiY1OJrg/AT-cm%7Cg-7DLU5ZnAyvJQCiY1OJrg-preview.jpg",
-      "views": 2538,
+      "views": 2556,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/RfvFXwCacoJj3gBH4cu-FQ/AT-cm%7CRfvFXwCacoJj3gBH4cu-FQ.mp4",
@@ -3732,7 +3732,7 @@ exports[`getEvent 5`] = `
         "name": "Evil Geniuses",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/RfvFXwCacoJj3gBH4cu-FQ/AT-cm%7CRfvFXwCacoJj3gBH4cu-FQ-preview.jpg",
-      "views": 2457,
+      "views": 2469,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/EZH7SYoyw3XDPNXgnfCwlA/AT-cm%7CEZH7SYoyw3XDPNXgnfCwlA.mp4",
@@ -3746,7 +3746,7 @@ exports[`getEvent 5`] = `
         "name": "Evil Geniuses",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/EZH7SYoyw3XDPNXgnfCwlA/AT-cm%7CEZH7SYoyw3XDPNXgnfCwlA-preview.jpg",
-      "views": 1543,
+      "views": 1545,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/E8LcVpBnJjZ1BFRbgWVQtQ/AT-cm%7CE8LcVpBnJjZ1BFRbgWVQtQ.mp4",
@@ -3760,7 +3760,7 @@ exports[`getEvent 5`] = `
         "name": "Evil Geniuses",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/E8LcVpBnJjZ1BFRbgWVQtQ/AT-cm%7CE8LcVpBnJjZ1BFRbgWVQtQ-preview.jpg",
-      "views": 1383,
+      "views": 1385,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/r3ISJBlumlCYAexNodFBnw/AT-cm%7Cr3ISJBlumlCYAexNodFBnw.mp4",
@@ -3774,7 +3774,7 @@ exports[`getEvent 5`] = `
         "name": "Nouns",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/r3ISJBlumlCYAexNodFBnw/AT-cm%7Cr3ISJBlumlCYAexNodFBnw-preview.jpg",
-      "views": 1205,
+      "views": 1217,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/V8ChgEp5fqrkhXyUOrVCqg/AT-cm%7CV8ChgEp5fqrkhXyUOrVCqg.mp4",
@@ -3788,7 +3788,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/V8ChgEp5fqrkhXyUOrVCqg/AT-cm%7CV8ChgEp5fqrkhXyUOrVCqg-preview.jpg",
-      "views": 1087,
+      "views": 1095,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/c0mqzEKX43rTkfozCz595Q/AT-cm%7Cc0mqzEKX43rTkfozCz595Q.mp4",
@@ -3802,7 +3802,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/c0mqzEKX43rTkfozCz595Q/AT-cm%7Cc0mqzEKX43rTkfozCz595Q-preview.jpg",
-      "views": 1053,
+      "views": 1065,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/2N0leP68UVTOB8QePdo_Qg/AT-cm%7C2N0leP68UVTOB8QePdo_Qg.mp4",
@@ -3813,10 +3813,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/2N0leP68UVTOB8QePdo_Qg/AT-cm%7C2N0leP68UVTOB8QePdo_Qg-preview.jpg",
-      "views": 1037,
+      "views": 1045,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/ogRDRxf6_8gnuG0n5xrtCQ/AT-cm%7CogRDRxf6_8gnuG0n5xrtCQ.mp4",
@@ -3830,21 +3830,7 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/ogRDRxf6_8gnuG0n5xrtCQ/AT-cm%7CogRDRxf6_8gnuG0n5xrtCQ-preview.jpg",
-      "views": 1003,
-    },
-    {
-      "link": "https://clips-media-assets2.twitch.tv/S7PU-pyi2nQ1SxrMJk7Kpw/AT-cm%7CS7PU-pyi2nQ1SxrMJk7Kpw.mp4",
-      "name": "broky - 3 AWP kills on the Connector defense",
-      "team1": {
-        "id": 6667,
-        "name": "FaZe",
-      },
-      "team2": {
-        "id": 10399,
-        "name": "Evil Geniuses",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/S7PU-pyi2nQ1SxrMJk7Kpw/AT-cm%7CS7PU-pyi2nQ1SxrMJk7Kpw-preview.jpg",
-      "views": 841,
+      "views": 1009,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/7OSbZgGjNql5zcrGQ6s4qQ/AT-cm%7C7OSbZgGjNql5zcrGQ6s4qQ.mp4",
@@ -3858,7 +3844,21 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/7OSbZgGjNql5zcrGQ6s4qQ/AT-cm%7C7OSbZgGjNql5zcrGQ6s4qQ-preview.jpg",
-      "views": 831,
+      "views": 851,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/S7PU-pyi2nQ1SxrMJk7Kpw/AT-cm%7CS7PU-pyi2nQ1SxrMJk7Kpw.mp4",
+      "name": "broky - 3 AWP kills on the Connector defense",
+      "team1": {
+        "id": 6667,
+        "name": "FaZe",
+      },
+      "team2": {
+        "id": 10399,
+        "name": "Evil Geniuses",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/S7PU-pyi2nQ1SxrMJk7Kpw/AT-cm%7CS7PU-pyi2nQ1SxrMJk7Kpw-preview.jpg",
+      "views": 843,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/GWIRXrMwsST2WR08vUGuhg/AT-cm%7CGWIRXrMwsST2WR08vUGuhg.mp4",
@@ -3872,7 +3872,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/GWIRXrMwsST2WR08vUGuhg/AT-cm%7CGWIRXrMwsST2WR08vUGuhg-preview.jpg",
-      "views": 715,
+      "views": 731,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/Wo_tXbqXlw0BmsBJt34sVw/AT-cm%7CWo_tXbqXlw0BmsBJt34sVw.mp4",
@@ -3883,10 +3883,10 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Wo_tXbqXlw0BmsBJt34sVw/AT-cm%7CWo_tXbqXlw0BmsBJt34sVw-preview.jpg",
-      "views": 689,
+      "views": 693,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/BQwC_cH7oI_gFZnt9fj-nw/AT-cm%7CBQwC_cH7oI_gFZnt9fj-nw.mp4",
@@ -3900,21 +3900,7 @@ exports[`getEvent 5`] = `
         "name": "Astralis",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/BQwC_cH7oI_gFZnt9fj-nw/AT-cm%7CBQwC_cH7oI_gFZnt9fj-nw-preview.jpg",
-      "views": 669,
-    },
-    {
-      "link": "https://clips-media-assets2.twitch.tv/4Hr15XGg1E3cHyUPd35DoA/AT-cm%7C4Hr15XGg1E3cHyUPd35DoA.mp4",
-      "name": "M3 | try - 1vs2 USP-S clutch (CT - bomb planted after 1 clutch kill)",
-      "team1": {
-        "id": 4991,
-        "name": "fnatic",
-      },
-      "team2": {
-        "id": 9996,
-        "name": "9z",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/4Hr15XGg1E3cHyUPd35DoA/AT-cm%7C4Hr15XGg1E3cHyUPd35DoA-preview.jpg",
-      "views": 647,
+      "views": 677,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/NGdXYvpIP1CUvN72ecU8Cg/vod-1832400998-offset-20624.mp4",
@@ -3928,7 +3914,21 @@ exports[`getEvent 5`] = `
         "name": "Grayhound",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/NGdXYvpIP1CUvN72ecU8Cg/vod-1832400998-offset-20624-preview.jpg",
-      "views": 645,
+      "views": 655,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/4Hr15XGg1E3cHyUPd35DoA/AT-cm%7C4Hr15XGg1E3cHyUPd35DoA.mp4",
+      "name": "M3 | try - 1vs2 USP-S clutch (CT - bomb planted after 1 clutch kill)",
+      "team1": {
+        "id": 4991,
+        "name": "fnatic",
+      },
+      "team2": {
+        "id": 9996,
+        "name": "9z",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/4Hr15XGg1E3cHyUPd35DoA/AT-cm%7C4Hr15XGg1E3cHyUPd35DoA-preview.jpg",
+      "views": 651,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/dt7sbqMg5s5VEDwGKLxkPg/AT-cm%7Cdt7sbqMg5s5VEDwGKLxkPg.mp4",
@@ -3942,7 +3942,7 @@ exports[`getEvent 5`] = `
         "name": "Nouns",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/dt7sbqMg5s5VEDwGKLxkPg/AT-cm%7Cdt7sbqMg5s5VEDwGKLxkPg-preview.jpg",
-      "views": 621,
+      "views": 627,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/KnHUm3qSV2jwNNMR6Wk16Q/AT-cm%7CKnHUm3qSV2jwNNMR6Wk16Q.mp4",
@@ -3956,21 +3956,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/KnHUm3qSV2jwNNMR6Wk16Q/AT-cm%7CKnHUm3qSV2jwNNMR6Wk16Q-preview.jpg",
-      "views": 597,
-    },
-    {
-      "link": "https://clips-media-assets2.twitch.tv/Y_ya51okf2Loy2aynlzd4w/AT-cm%7CY_ya51okf2Loy2aynlzd4w.mp4",
-      "name": "jabbi - 1vs3 clutch (T - bomb planted after 1 clutch kill - second half pistol round)",
-      "team1": {
-        "id": 7175,
-        "name": "Heroic",
-      },
-      "team2": {
-        "id": 9996,
-        "name": "9z",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/Y_ya51okf2Loy2aynlzd4w/AT-cm%7CY_ya51okf2Loy2aynlzd4w-preview.jpg",
-      "views": 571,
+      "views": 613,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/-0K3VwcjhF8J-_9c6MX25Q/AT-cm%7C-0K3VwcjhF8J-_9c6MX25Q.mp4",
@@ -3984,7 +3970,21 @@ exports[`getEvent 5`] = `
         "name": "OG",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/-0K3VwcjhF8J-_9c6MX25Q/AT-cm%7C-0K3VwcjhF8J-_9c6MX25Q-preview.jpg",
-      "views": 569,
+      "views": 577,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/Y_ya51okf2Loy2aynlzd4w/AT-cm%7CY_ya51okf2Loy2aynlzd4w.mp4",
+      "name": "jabbi - 1vs3 clutch (T - bomb planted after 1 clutch kill - second half pistol round)",
+      "team1": {
+        "id": 7175,
+        "name": "HEROIC",
+      },
+      "team2": {
+        "id": 9996,
+        "name": "9z",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/Y_ya51okf2Loy2aynlzd4w/AT-cm%7CY_ya51okf2Loy2aynlzd4w-preview.jpg",
+      "views": 577,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/ePhVSFyEwRfzG2yePdjRyw/AT-cm%7CePhVSFyEwRfzG2yePdjRyw.mp4",
@@ -3998,7 +3998,7 @@ exports[`getEvent 5`] = `
         "name": "Complexity",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/ePhVSFyEwRfzG2yePdjRyw/AT-cm%7CePhVSFyEwRfzG2yePdjRyw-preview.jpg",
-      "views": 543,
+      "views": 549,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/KWpN4Rfn9oBuKTBEWmtKqw/AT-cm%7CKWpN4Rfn9oBuKTBEWmtKqw.mp4",
@@ -4012,21 +4012,21 @@ exports[`getEvent 5`] = `
         "name": "Nouns",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/KWpN4Rfn9oBuKTBEWmtKqw/AT-cm%7CKWpN4Rfn9oBuKTBEWmtKqw-preview.jpg",
-      "views": 525,
+      "views": 527,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/3h1lneWBeQw3wQMPqlgA-Q/AT-cm%7C3h1lneWBeQw3wQMPqlgA-Q.mp4",
       "name": "try - 4 quick M4A1-S HS kills on the Mid push (initial frags - anti-eco)",
       "team1": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "team2": {
         "id": 9996,
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/3h1lneWBeQw3wQMPqlgA-Q/AT-cm%7C3h1lneWBeQw3wQMPqlgA-Q-preview.jpg",
-      "views": 515,
+      "views": 521,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/cSp2u_8flaf-tpsUKU1S5w/AT-cm%7CcSp2u_8flaf-tpsUKU1S5w.mp4",
@@ -4040,21 +4040,7 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/cSp2u_8flaf-tpsUKU1S5w/AT-cm%7CcSp2u_8flaf-tpsUKU1S5w-preview.jpg",
-      "views": 479,
-    },
-    {
-      "link": "https://clips-media-assets2.twitch.tv/CTRn_hR8E-GAgys0D6wsJQ/AT-cm%7CCTRn_hR8E-GAgys0D6wsJQ.mp4",
-      "name": "cadiaN - 1vs2 clutch (T - post-plant situation)",
-      "team1": {
-        "id": 7175,
-        "name": "Heroic",
-      },
-      "team2": {
-        "id": 9996,
-        "name": "9z",
-      },
-      "thumbnail": "https://clips-media-assets2.twitch.tv/CTRn_hR8E-GAgys0D6wsJQ/AT-cm%7CCTRn_hR8E-GAgys0D6wsJQ-preview.jpg",
-      "views": 463,
+      "views": 485,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/ncdr8v47-LgTlFMQgbjb4A/AT-cm%7Cncdr8v47-LgTlFMQgbjb4A.mp4",
@@ -4068,7 +4054,21 @@ exports[`getEvent 5`] = `
         "name": "9z",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/ncdr8v47-LgTlFMQgbjb4A/AT-cm%7Cncdr8v47-LgTlFMQgbjb4A-preview.jpg",
-      "views": 457,
+      "views": 467,
+    },
+    {
+      "link": "https://clips-media-assets2.twitch.tv/CTRn_hR8E-GAgys0D6wsJQ/AT-cm%7CCTRn_hR8E-GAgys0D6wsJQ.mp4",
+      "name": "cadiaN - 1vs2 clutch (T - post-plant situation)",
+      "team1": {
+        "id": 7175,
+        "name": "HEROIC",
+      },
+      "team2": {
+        "id": 9996,
+        "name": "9z",
+      },
+      "thumbnail": "https://clips-media-assets2.twitch.tv/CTRn_hR8E-GAgys0D6wsJQ/AT-cm%7CCTRn_hR8E-GAgys0D6wsJQ-preview.jpg",
+      "views": 465,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/8gyC7lOhGQfaT1O_EdO0_w/AT-cm%7C8gyC7lOhGQfaT1O_EdO0_w.mp4",
@@ -4096,7 +4096,7 @@ exports[`getEvent 5`] = `
         "name": "MOUZ",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/59gCy9m3Fv7rg_zR0NHeWw/AT-cm%7C59gCy9m3Fv7rg_zR0NHeWw-preview.jpg",
-      "views": 343,
+      "views": 347,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/nMr5MBxzUPJFUJGSXla2xw/AT-cm%7CnMr5MBxzUPJFUJGSXla2xw.mp4",
@@ -4110,7 +4110,7 @@ exports[`getEvent 5`] = `
         "name": "Complexity",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/nMr5MBxzUPJFUJGSXla2xw/AT-cm%7CnMr5MBxzUPJFUJGSXla2xw-preview.jpg",
-      "views": 327,
+      "views": 335,
     },
     {
       "link": "https://clips-media-assets2.twitch.tv/BVwp8HkUnwqKvGLoDBNzRg/AT-cm%7CBVwp8HkUnwqKvGLoDBNzRg.mp4",
@@ -4121,7 +4121,7 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/BVwp8HkUnwqKvGLoDBNzRg/AT-cm%7CBVwp8HkUnwqKvGLoDBNzRg-preview.jpg",
       "views": 325,
@@ -4135,7 +4135,7 @@ exports[`getEvent 5`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       "thumbnail": "https://clips-media-assets2.twitch.tv/Vx3kpjG-ypHUm7Z2GK75hw/AT-cm%7CVx3kpjG-ypHUm7Z2GK75hw-preview.jpg",
       "views": 267,
@@ -4275,7 +4275,7 @@ exports[`getEvent 5`] = `
       "qualifiesFor": undefined,
       "team": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4410,6 +4410,10 @@ exports[`getEvent 5`] = `
       "name": "IEM Cologne 2023",
     },
     {
+      "id": 6865,
+      "name": "IEM Sydney 2023",
+    },
+    {
       "id": 7063,
       "name": "IEM Dallas 2023 Europe Closed Qualifier",
     },
@@ -4433,7 +4437,7 @@ exports[`getEvent 5`] = `
   "teams": [
     {
       "id": 7175,
-      "name": "Heroic",
+      "name": "HEROIC",
       "rankDuringEvent": 2,
       "reasonForParticipation": "Partner Team",
     },

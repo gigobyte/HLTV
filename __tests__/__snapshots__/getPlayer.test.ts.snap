@@ -402,6 +402,150 @@ exports[`getPlayer 1`] = `
   "name": "Oleksandr Kostyliev",
   "news": [
     {
+      "link": "/news/39112/spirit-vs-g2-headlines-first-round-of-blast-premier-spring-final",
+      "name": "Spirit vs G2 headlines first round of BLAST Premier Spring Final",
+    },
+    {
+      "link": "/news/39038/s1mples-bold-prediction-froz1k-moves-up-as-navi-youth-and-junior-merge",
+      "name": "s1mple's bold prediction froz1k moves up as NAVI Youth and Junior merge",
+    },
+    {
+      "link": "/news/39015/snappi-i-think-we-hit-rock-bottom-at-epl-hopefully-that-was-it",
+      "name": "Snappi: "I think we hit rock bottom at EPL; hopefully, that was it"",
+    },
+    {
+      "link": "/news/38968/zywoo-takes-esl-pro-league-season-19-mvp",
+      "name": "ZywOo takes ESL Pro League Season 19 MVP",
+    },
+    {
+      "link": "/news/38871/s1mple-on-return-navi-won-the-major-so-some-plans-have-changed",
+      "name": "s1mple on return: "NAVI won the Major, so some plans have changed"",
+    },
+    {
+      "link": "/news/38858/community-reacts-dust2-replaces-overpass-in-map-pool",
+      "name": "Community reacts: Dust2 replaces Overpass in map pool",
+    },
+    {
+      "link": "/news/38793/editorial-ageing-and-to-call-upon-a-falling-star-devices-journey-to-igl",
+      "name": "Editorial: Ageing and to call upon a falling star, device's journey to IGL",
+    },
+    {
+      "link": "/news/38747/why-more-and-more-igls-are-taking-up-the-supportive-rotator-role",
+      "name": "Why more and more IGLs are taking up the 'supportive rotator' role",
+    },
+    {
+      "link": "/news/38782/stat-check-vp-look-for-starpower-and-unpredictability-from-electronic",
+      "name": "Stat Check: VP look for starpower and unpredictability from electroNic",
+    },
+    {
+      "link": "/news/38783/electronic-to-play-for-virtuspro-at-esl-pro-league-s19",
+      "name": "electroNic to play for Virtus.pro at ESL Pro League S19",
+    },
+    {
+      "link": "/news/38781/the-evps-and-best-five-of-iem-chengdu",
+      "name": "The EVPs and Best Five of IEM Chengdu",
+    },
+    {
+      "link": "/news/38695/the-evps-and-best-five-of-pgl-major-copenhagen",
+      "name": "The EVPs and Best Five of PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38684/discussing-navis-major-win-on-hltv-confirmed-with-semphis",
+      "name": "Discussing NAVI's Major win on HLTV Confirmed with SEMPHIS",
+    },
+    {
+      "link": "/news/38675/team-ranking-march-2024",
+      "name": "Team ranking: March 2024",
+    },
+    {
+      "link": "/news/38632/official-dupreeh-joins-falcons",
+      "name": "Official: dupreeh joins Falcons",
+    },
+    {
+      "link": "/news/38611/navi-secure-final-major-playoff-spot-over-pain",
+      "name": "NAVI secure final Major playoff spot over paiN",
+    },
+    {
+      "link": "/news/38608/m0nesy-i-dont-want-to-wait-for-my-teammates-to-die-i-want-to-make-a-difference",
+      "name": "m0NESY: "I don't want to wait for my teammates to die, I want to make a difference"",
+    },
+    {
+      "link": "/news/38514/media-falcons-in-early-talks-over-dupreeh",
+      "name": "Media: Falcons in early talks over dupreeh",
+    },
+    {
+      "link": "/news/38487/from-paris-to-copenhagen-whats-changed",
+      "name": "From Paris to Copenhagen, what's changed?",
+    },
+    {
+      "link": "/news/38488/visualized-all-24-teams-at-pgl-major-copenhagen",
+      "name": "Visualized: All 24 teams at PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38483/f0rest-and-s1mple-among-registered-subs-as-rosters-lock-for-pgl-major-copenhagen",
+      "name": "f0rest and s1mple among registered subs as rosters lock for PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38454/editorial-the-psychology-of-donking",
+      "name": "Editorial: The psychology of donking",
+    },
+    {
+      "link": "/news/38455/metizport-ease-past-monte-in-showdown",
+      "name": "Metizport ease past Monte in Showdown",
+    },
+    {
+      "link": "/news/38440/metizport-eliminate-falcons-in-s1mple-cs2-debut",
+      "name": "Metizport eliminate Falcons in s1mple CS2 debut",
+    },
+    {
+      "link": "/news/38432/snappi-on-playing-with-s1mple-the-stuff-he-does-gets-more-crazy-by-the-day",
+      "name": "Snappi on playing with s1mple: "The stuff he does gets more crazy by the day"",
+    },
+    {
+      "link": "/news/38431/38-of-fantasy-players-go-with-s1mple-for-blast-spring-showdown",
+      "name": "38% of Fantasy players go with s1mple for BLAST Spring Showdown",
+    },
+    {
+      "link": "/news/38429/blast-spring-showdown-teams-format-schedule-prizes-talent",
+      "name": "BLAST Spring Showdown teams, format, schedule, prizes, talent",
+    },
+    {
+      "link": "/news/38405/nilo-part-of-metizport-quartet-to-extend-contract",
+      "name": "nilo part of Metizport quartet to extend contract",
+    },
+    {
+      "link": "/news/38382/blast-announce-spring-showdown-talent",
+      "name": "BLAST announce Spring Showdown talent",
+    },
+    {
+      "link": "/news/38357/blast-spring-showdown-opening-matchups-announced",
+      "name": "BLAST Spring Showdown opening matchups announced",
+    },
+    {
+      "link": "/news/38270/s1mple-joins-falcons-on-loan-boros-benched",
+      "name": "s1mple joins Falcons on loan; BOROS benched",
+    },
+    {
+      "link": "/news/38244/jl-we-may-not-win-the-major-but-we-want-to-make-a-deep-run",
+      "name": "jL: "We may not win the Major, but we want to make a deep run"",
+    },
+    {
+      "link": "/news/38113/why-sdy-has-been-in-the-form-of-his-life-with-monte",
+      "name": "Why sdy has been in the form of his life with Monte",
+    },
+    {
+      "link": "/news/38121/donk-on-comparisons-to-s1mple-and-zywoo-i-think-im-far-behind",
+      "name": "donk on comparisons to s1mple and ZywOo: "I think I'm far behind"",
+    },
+    {
+      "link": "/news/37992/the-ewing-theory-when-losing-your-best-player-is-a-good-thing",
+      "name": "The Ewing theory: When losing your best player is a good thing",
+    },
+    {
+      "link": "/news/38026/aleksib-on-b1t-exit-rumors-i-hope-its-a-meme",
+      "name": "Aleksib on b1t exit rumors: "I hope it's a meme"",
+    },
+    {
       "link": "/news/37988/preview-theres-a-reason-to-look-forward-to-blast-groups-again",
       "name": "Preview: There's a reason to look forward to BLAST Groups again",
     },
@@ -5488,7 +5632,21 @@ exports[`getPlayer 1`] = `
       "id": 4608,
       "leaveDate": undefined,
       "name": "Natus Vincere",
-      "startDate": 1471644000000,
+      "startDate": 1710802800000,
+      "trophies": [],
+    },
+    {
+      "id": 11283,
+      "leaveDate": 1710802800000,
+      "name": "Falcons",
+      "startDate": 1708297200000,
+      "trophies": [],
+    },
+    {
+      "id": 4608,
+      "leaveDate": 1708297200000,
+      "name": "Natus Vincere",
+      "startDate": 1470261600000,
       "trophies": [
         {
           "id": 6345,
@@ -5566,30 +5724,37 @@ exports[`getPlayer 1`] = `
     },
     {
       "id": 5973,
-      "leaveDate": 1460584800000,
+      "leaveDate": 1470261600000,
       "name": "Liquid",
-      "startDate": 1455145200000,
+      "startDate": 1451689200000,
       "trophies": [],
     },
     {
       "id": 5310,
       "leaveDate": 1447542000000,
       "name": "HellRaisers",
-      "startDate": 1442268000000,
+      "startDate": 1442095200000,
       "trophies": [],
     },
     {
       "id": 5988,
-      "leaveDate": 1436718600000,
+      "leaveDate": 1437084000000,
       "name": "FlipSid3",
-      "startDate": 1427142000000,
+      "startDate": 1422745200000,
       "trophies": [],
     },
     {
       "id": 5310,
-      "leaveDate": 1421017200000,
+      "leaveDate": 1421190000000,
       "name": "HellRaisers",
-      "startDate": 1410300000000,
+      "startDate": 1410904800000,
+      "trophies": [],
+    },
+    {
+      "id": 5008,
+      "leaveDate": 1396994400000,
+      "name": "Courage",
+      "startDate": 1393714800000,
       "trophies": [],
     },
   ],
@@ -5638,7 +5803,22 @@ exports[`getPlayer 3`] = `
   "news": [],
   "statistics": undefined,
   "team": undefined,
-  "teams": [],
+  "teams": [
+    {
+      "id": 5907,
+      "leaveDate": 1446246000000,
+      "name": "WinOut.net",
+      "startDate": 1444860000000,
+      "trophies": [],
+    },
+    {
+      "id": 6239,
+      "leaveDate": 1441576800000,
+      "name": "Nexus",
+      "startDate": 1439503200000,
+      "trophies": [],
+    },
+  ],
   "twitch": undefined,
   "twitter": undefined,
 }

@@ -573,7 +573,7 @@ exports[`getMatchStats 2`] = `
       },
       {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       {
         "id": 7059,
@@ -1688,7 +1688,7 @@ exports[`getMatchStats 2`] = `
     "teams": [
       {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       {
         "id": 6137,
@@ -2044,7 +2044,7 @@ exports[`getMatchStats 2`] = `
     "teams": [
       {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       {
         "id": 4548,
@@ -2174,7 +2174,7 @@ exports[`getMatchStats 2`] = `
       },
       {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
       {
         "id": 4602,

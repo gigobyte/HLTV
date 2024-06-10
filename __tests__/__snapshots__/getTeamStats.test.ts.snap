@@ -623,16 +623,16 @@ exports[`getTeamStats 1`] = `
   ],
   "historicPlayers": [
     {
-      "id": 13992,
-      "name": "Zix",
+      "id": 10697,
+      "name": "blocker",
     },
     {
-      "id": 16412,
-      "name": "rafftu",
+      "id": 15384,
+      "name": "doublemagic",
     },
     {
-      "id": 10762,
-      "name": "Rock1nG",
+      "id": 16410,
+      "name": "Duplicate",
     },
     {
       "id": 21345,
@@ -643,56 +643,52 @@ exports[`getTeamStats 1`] = `
       "name": "KalubeR",
     },
     {
-      "id": 20114,
-      "name": "shaiK",
-    },
-    {
-      "id": 20097,
-      "name": "h4rn",
-    },
-    {
-      "id": 14380,
-      "name": "Patrick",
-    },
-    {
-      "id": 16410,
-      "name": "Duplicate",
-    },
-    {
-      "id": 3183,
-      "name": "spyleadeR",
-    },
-    {
-      "id": 8917,
-      "name": "niki1",
+      "id": 13464,
+      "name": "mar",
     },
     {
       "id": 20388,
       "name": "milky",
     },
     {
+      "id": 8917,
+      "name": "niki1",
+    },
+    {
       "id": 17146,
       "name": "numb",
     },
     {
-      "id": 9653,
-      "name": "wallax",
+      "id": 14380,
+      "name": "Patrick",
     },
     {
-      "id": 10697,
-      "name": "blocker",
-    },
-    {
-      "id": 15384,
-      "name": "doublemagic",
+      "id": 16412,
+      "name": "rafftu",
     },
     {
       "id": 17145,
       "name": "Rainwaker",
     },
     {
-      "id": 13464,
-      "name": "mar",
+      "id": 10762,
+      "name": "Rock1nG",
+    },
+    {
+      "id": 20114,
+      "name": "shaiK",
+    },
+    {
+      "id": 3183,
+      "name": "spyleadeR",
+    },
+    {
+      "id": 13992,
+      "name": "Zix",
+    },
+    {
+      "id": 20097,
+      "name": "h4rn",
     },
   ],
   "id": 9863,

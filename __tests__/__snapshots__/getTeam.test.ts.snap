@@ -13,6 +13,702 @@ exports[`getTeam 1`] = `
   "name": "Natus Vincere",
   "news": [
     {
+      "link": "/news/39199/blast-premier-spring-final-2024-teams-format-schedule-talent-prizes-fantasy",
+      "name": "BLAST Premier Spring Final 2024 teams, format, schedule, talent, prizes, fantasy",
+    },
+    {
+      "link": "/news/39192/imperial-and-wildcard-qualify-for-epl-s20",
+      "name": "Imperial and Wildcard qualify for EPL S20",
+    },
+    {
+      "link": "/news/39191/sangal-complete-heroic-lower-bracket-run-to-qualify-for-epl-s20",
+      "name": "Sangal complete heroic lower bracket run to qualify for EPL S20",
+    },
+    {
+      "link": "/news/39187/lynn-vision-snag-place-in-esl-pro-league-s20",
+      "name": "Lynn Vision snag place in ESL Pro League S20",
+    },
+    {
+      "link": "/news/39184/flyquest-lock-in-esl-pro-league-season-20-spot",
+      "name": "FlyQuest lock in ESL Pro League Season 20 spot",
+    },
+    {
+      "link": "/news/39180/m80-red-canids-atox-qualify-for-esl-pro-league-season-20",
+      "name": "M80, RED Canids, ATOX qualify for ESL Pro League Season 20",
+    },
+    {
+      "link": "/news/39176/nettik-blitzes-flyquest-as-rooster-qualify-for-esl-pro-league",
+      "name": "nettik blitzes FlyQuest as Rooster qualify for ESL Pro League",
+    },
+    {
+      "link": "/news/39171/koi-qualify-for-esl-pro-league-season-20",
+      "name": "KOI qualify for ESL Pro League Season 20",
+    },
+    {
+      "link": "/news/39148/team-ranking-may-2024",
+      "name": "Team ranking: May 2024",
+    },
+    {
+      "link": "/news/39116/nicoodoz-i-think-we-can-just-ball-out-there-is-no-pressure",
+      "name": "nicoodoz: "I think we can just ball out, there is no pressure"",
+    },
+    {
+      "link": "/news/39112/spirit-vs-g2-headlines-first-round-of-blast-premier-spring-final",
+      "name": "Spirit vs G2 headlines first round of BLAST Premier Spring Final",
+    },
+    {
+      "link": "/news/39107/heroic-bag-iem-dallas-playoff-spot-over-big",
+      "name": "HEROIC bag IEM Dallas playoff spot over BIG",
+    },
+    {
+      "link": "/news/39104/b1ad3-next-season-will-show-if-we-need-to-make-changes",
+      "name": "B1ad3: "Next season will show if we need to make changes"",
+    },
+    {
+      "link": "/news/39102/navi-sent-packing-in-dallas-after-heroic-loss",
+      "name": "NAVI sent packing in Dallas after HEROIC loss",
+    },
+    {
+      "link": "/news/39099/ence-swap-dycha-and-hades-for-sdy-and-podi",
+      "name": "ENCE swap dycha and hades for sdy and podi",
+    },
+    {
+      "link": "/news/39094/big-take-advantage-of-flyquest-choke-to-stay-alive-in-dallas",
+      "name": "BIG take advantage of FlyQuest choke to stay alive in Dallas",
+    },
+    {
+      "link": "/news/39092/magixx-we-lost-those-series-this-year-only-because-of-some-mental-shit",
+      "name": "magixx: "We lost those series this year only because of some mental shit"",
+    },
+    {
+      "link": "/news/39091/heroic-exploit-m80s-mistakes-to-progress-in-dallas",
+      "name": "HEROIC exploit M80's mistakes to progress in Dallas",
+    },
+    {
+      "link": "/news/39090/spirit-ease-into-iem-dallas-playoffs-over-navi",
+      "name": "Spirit ease into IEM Dallas playoffs over NAVI",
+    },
+    {
+      "link": "/news/39079/kakafu-on-gob-b-removal-it-came-as-a-surprise",
+      "name": "kakafu on gob b removal: "It came as a  surprise"",
+    },
+    {
+      "link": "/news/39080/spirit-and-vp-end-iem-dallas-opening-round-with-victories",
+      "name": "Spirit and VP end IEM Dallas opening round with victories",
+    },
+    {
+      "link": "/news/39078/navi-and-faze-secure-opening-wins-in-dallas",
+      "name": "NAVI and FaZe secure opening wins in Dallas",
+    },
+    {
+      "link": "/news/39069/mouz-could-go-from-pretenders-to-undisputed-at-iem-dallas",
+      "name": "MOUZ could go from pretenders to undisputed at IEM Dallas",
+    },
+    {
+      "link": "/news/39072/all-you-need-to-know-about-iem-dallas-groups-fantasy",
+      "name": "All you need to know about IEM Dallas groups fantasy",
+    },
+    {
+      "link": "/news/39057/at-a-crossroads-the-high-stakes-clash-between-complexity-and-liquid-at-iem-dallas",
+      "name": "At a crossroads: The high-stakes clash between Complexity and Liquid at IEM Dallas",
+    },
+    {
+      "link": "/news/39068/jl-on-major-mvp-it-was-my-dream-but-i-never-thought-it-was-possible",
+      "name": "jL on Major MVP: "It was my dream but I never thought it was possible"",
+    },
+    {
+      "link": "/news/39061/iem-dallas-2024-teams-format-schedule-talent-prizes-fantasy",
+      "name": "IEM Dallas 2024 teams, format, schedule, talent, prizes, fantasy",
+    },
+    {
+      "link": "/news/38990/editorial-can-esl-pro-league-survive-in-a-changing-landscape",
+      "name": "Editorial: Can ESL Pro League survive in a changing landscape?",
+    },
+    {
+      "link": "/news/39012/iem-dallas-groups-and-matchups-announced",
+      "name": "IEM Dallas groups and matchups announced",
+    },
+    {
+      "link": "/news/38986/the-evps-and-best-five-of-esl-pro-league-season-19",
+      "name": "The EVPs and Best Five of ESL Pro League Season 19",
+    },
+    {
+      "link": "/news/38965/siuhy-on-vitality-match-they-also-need-something-special-up-their-sleeve-against-us",
+      "name": "siuhy on Vitality match: "They also need something special up their sleeve against us"",
+    },
+    {
+      "link": "/news/38964/mouz-defeat-complexity-to-make-epl-grand-final",
+      "name": "MOUZ defeat Complexity to make EPL grand final",
+    },
+    {
+      "link": "/news/38949/elige-i-know-i-need-to-perform-and-show-that-i-still-have-it",
+      "name": "EliGE: "I know I need to perform and show that I still have it"",
+    },
+    {
+      "link": "/news/38944/rain-if-we-beat-navi-10-more-times-in-a-row-then-ill-let-the-major-go",
+      "name": "rain: "If we beat NAVI 10 more times in a row, then I'll let the Major go"",
+    },
+    {
+      "link": "/news/38943/faze-claim-vengeance-to-eliminate-navi-from-epl",
+      "name": "FaZe claim vengeance to eliminate NAVI from EPL",
+    },
+    {
+      "link": "/news/38935/broky-stars-as-faze-labor-to-victory-over-monte",
+      "name": "broky stars as FaZe labor to victory over Monte",
+    },
+    {
+      "link": "/news/38926/epl-s19-playoffs-fantasy-padding-explained",
+      "name": "EPL S19 playoffs fantasy padding explained",
+    },
+    {
+      "link": "/news/38925/team-ranking-april-2024",
+      "name": "Team ranking: April 2024",
+    },
+    {
+      "link": "/news/38923/esports-world-cup-announces-club-program-with-30-member-orgs",
+      "name": "Esports World Cup announces club program with 30 member orgs",
+    },
+    {
+      "link": "/news/38920/esl-pro-league-s19-playoffs-bracket-set",
+      "name": "ESL Pro League S19 playoffs bracket set",
+    },
+    {
+      "link": "/news/38901/complexity-and-navi-book-epl-playoff-spots",
+      "name": "Complexity and NAVI book EPL playoff spots",
+    },
+    {
+      "link": "/news/38895/mouz-and-liquid-lock-in-epl-playoff-berths",
+      "name": "MOUZ and Liquid lock in EPL playoff berths",
+    },
+    {
+      "link": "/news/38867/jls-golden-card-among-most-picked-as-epl-groups-c-and-d-fantasy-goes-live",
+      "name": "jL's golden card among most picked as EPL Groups C and D fantasy goes live",
+    },
+    {
+      "link": "/news/38828/cloud9-bench-perfecto-hobbit",
+      "name": "Cloud9 bench Perfecto, HObbit",
+    },
+    {
+      "link": "/news/38820/sashi-defeat-cloud9-and-eternal-fire-in-shock-ewc-qualification-run",
+      "name": "Sashi defeat Cloud9 and Eternal Fire in shock EWC qualification run",
+    },
+    {
+      "link": "/news/38819/flyquest-qualify-for-esports-world-cup",
+      "name": "FlyQuest qualify for Esports World Cup",
+    },
+    {
+      "link": "/news/38816/esl-pro-league-season-19-teams-format-schedule-talent-prizes-fantasy",
+      "name": "ESL Pro League Season 19 teams, format, schedule, talent, prizes, fantasy",
+    },
+    {
+      "link": "/news/38814/m80-beat-liquid-to-qualify-for-ewc-mibr-through-from-south-america",
+      "name": "M80 beat Liquid to qualify for EWC; MIBR through from South America",
+    },
+    {
+      "link": "/news/38813/issaa-set-to-play-first-big-event-since-2019-as-jijiehao-qualify-for-esports-world-cup",
+      "name": "ISSAA set to play first Big Event since 2019 as JiJieHao qualify for Esports World Cup",
+    },
+    {
+      "link": "/news/38812/themongolz-qualify-for-esports-world-cup-2024",
+      "name": "TheMongolz qualify for Esports World Cup 2024",
+    },
+    {
+      "link": "/news/38806/falcons-heroic-miss-out-on-esports-world-cup-as-betboom-sashi-pass-open-qualifiers",
+      "name": "Falcons, HEROIC miss out on Esports World Cup as BetBoom, Sashi pass open qualifiers",
+    },
+    {
+      "link": "/news/38801/b1ad3-i-didnt-expect-to-win-a-major-so-fast",
+      "name": "B1ad3: "I didn't expect to win a Major so fast"",
+    },
+    {
+      "link": "/news/38747/why-more-and-more-igls-are-taking-up-the-supportive-rotator-role",
+      "name": "Why more and more IGLs are taking up the 'supportive rotator' role",
+    },
+    {
+      "link": "/news/38795/b1ad3-on-hltv-confirmed-second-major-win-international-roster-and-future",
+      "name": "B1ad3 on HLTV Confirmed: Second Major win, international roster, and future",
+    },
+    {
+      "link": "/news/38789/esl-pro-league-s19-schedule-groups-bracket-set",
+      "name": "ESL Pro League S19 schedule & groups bracket set",
+    },
+    {
+      "link": "/news/38783/electronic-to-play-for-virtuspro-at-esl-pro-league-s19",
+      "name": "electroNic to play for Virtus.pro at ESL Pro League S19",
+    },
+    {
+      "link": "/news/38779/virtuspro-sign-electronic",
+      "name": "Virtus.pro sign electroNic",
+    },
+    {
+      "link": "/news/38762/esports-world-cup-qualifier-invites-announced",
+      "name": "Esports World Cup qualifier invites announced",
+    },
+    {
+      "link": "/news/38748/frozen-on-fatigue-we-have-to-perform-under-these-circumstances-as-well",
+      "name": "frozen on fatigue: "We have to perform under these circumstances as well"",
+    },
+    {
+      "link": "/news/38738/hooxi-the-post-major-blues-are-hitting-us-a-bit",
+      "name": "HooXi: "The post-Major blues are hitting us a bit"",
+    },
+    {
+      "link": "/news/38718/cadian-wins-in-first-meeting-with-heroic-liquid-to-face-g2",
+      "name": "cadiaN wins in first meeting with HEROIC, Liquid to face G2",
+    },
+    {
+      "link": "/news/38712/video-copenhagen-major-as-we-saw-it",
+      "name": "Video: Copenhagen Major as we saw it",
+    },
+    {
+      "link": "/news/38711/esports-world-cup-invites-revealed",
+      "name": "Esports World Cup invites revealed",
+    },
+    {
+      "link": "/news/38689/best-photos-from-pgl-major-copenhagen",
+      "name": "Best photos from PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38695/the-evps-and-best-five-of-pgl-major-copenhagen",
+      "name": "The EVPs and Best Five of PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38692/crouch-jump-bug-fixed-navi-champions-stickers-released-in-new-update",
+      "name": "Crouch-jump bug fixed, NAVI Champions stickers released in new update",
+    },
+    {
+      "link": "/news/38690/n1ssim-returns-to-sharks-after-pain-loan-deal-expires",
+      "name": "n1ssim returns to Sharks after paiN loan deal expires",
+    },
+    {
+      "link": "/news/38684/discussing-navis-major-win-on-hltv-confirmed-with-semphis",
+      "name": "Discussing NAVI's Major win on HLTV Confirmed with SEMPHIS",
+    },
+    {
+      "link": "/news/38675/team-ranking-march-2024",
+      "name": "Team ranking: March 2024",
+    },
+    {
+      "link": "/news/38670/navi-qualify-for-ewc-and-blast-world-final",
+      "name": "NAVI qualify for EWC and BLAST World Final",
+    },
+    {
+      "link": "/news/38669/jl-fk-aleksib-haters",
+      "name": "jL: "F**k Aleksib haters"",
+    },
+    {
+      "link": "/news/38668/pgl-major-copenhagen-had-third-highest-peak-viewership-in-cs-history",
+      "name": "PGL Major Copenhagen had third-highest peak viewership in CS history",
+    },
+    {
+      "link": "/news/38667/jl-claims-pgl-major-copenhagen-mvp-award",
+      "name": "jL claims PGL Major Copenhagen MVP award",
+    },
+    {
+      "link": "/news/38666/navi-beat-faze-to-win-pgl-major-copenhagen",
+      "name": "NAVI beat FaZe to win PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38662/aleksib-i-feel-like-we-could-be-unstoppable",
+      "name": "Aleksib: "I feel like we could be unstoppable"",
+    },
+    {
+      "link": "/news/38661/navi-move-on-to-copenhagen-major-final-over-g2",
+      "name": "NAVI move on to Copenhagen Major final over G2",
+    },
+    {
+      "link": "/news/38653/im-if-we-win-the-major-and-im-last-on-the-scoreboard-no-one-cares",
+      "name": "iM: "If we win the Major and I'm last on the scoreboard, no one cares"",
+    },
+    {
+      "link": "/news/38655/g2-brush-aside-mouz-to-reach-semi-finals-in-copenhagen",
+      "name": "G2 brush aside MOUZ to reach semi-finals in Copenhagen",
+    },
+    {
+      "link": "/news/38652/w0nderful-stars-as-navi-secure-semi-final-spot-over-eternal-fire",
+      "name": "w0nderful stars as NAVI secure semi-final spot over Eternal Fire",
+    },
+    {
+      "link": "/news/38643/we-want-to-show-the-power-of-esports-eternal-fires-watch-parties-will-get-bigger-and-bigger",
+      "name": ""We want to show the power of esports" - Eternal Fire's watch parties will get bigger and bigger",
+    },
+    {
+      "link": "/news/38639/gamerlegion-announce-keoz-benching",
+      "name": "GamerLegion announce Keoz benching",
+    },
+    {
+      "link": "/news/38638/is-the-new-generation-large-and-in-charge-or-are-the-old-guard-still-kings",
+      "name": "Is the new generation large and in charge, or are the old guard still kings?",
+    },
+    {
+      "link": "/news/38637/major-playoffs-fantasy-starts-soon-with-increased-points",
+      "name": "Major Playoffs fantasy starts soon with increased points",
+    },
+    {
+      "link": "/news/38634/can-faze-level-up-in-the-arena-and-stop-spirit",
+      "name": "Can FaZe level up in the arena and stop Spirit?",
+    },
+    {
+      "link": "/news/38632/official-dupreeh-joins-falcons",
+      "name": "Official: dupreeh joins Falcons",
+    },
+    {
+      "link": "/news/38616/b1ad3-jl-has-this-instant-mindset-to-destroy-the-other-team",
+      "name": "B1ad3: "jL has this instant mindset to destroy the other team"",
+    },
+    {
+      "link": "/news/38610/stacked-pgl-major-playoffs-bracket-set",
+      "name": "Stacked PGL Major playoffs bracket set",
+    },
+    {
+      "link": "/news/38611/navi-secure-final-major-playoff-spot-over-pain",
+      "name": "NAVI secure final Major playoff spot over paiN",
+    },
+    {
+      "link": "/news/38602/ax1le-you-play-your-entire-career-in-one-style-now-i-had-to-adapt-and-it-wasnt-easy",
+      "name": "Ax1Le: "You play your entire career in one style, now I had to adapt and it wasn't easy"",
+    },
+    {
+      "link": "/news/38598/vp-vs-g2-faze-vs-col-headline-final-elimination-stage-round",
+      "name": "VP vs G2, FaZe vs COL headline final Elimination Stage round",
+    },
+    {
+      "link": "/news/38600/cloud9-brush-aside-navi-to-book-playoff-spot",
+      "name": "Cloud9 brush aside NAVI to book playoff spot",
+    },
+    {
+      "link": "/news/38584/chopper-many-top-cis-teams-invited-me-and-i-always-denied-thinking-i-should-do-something-myself",
+      "name": "chopper: "Many top CIS teams invited me and I always denied thinking I should do something myself"",
+    },
+    {
+      "link": "/news/38585/g2-and-faze-avoid-each-other-in-round-4-with-ecstatic-win",
+      "name": "G2 and FaZe avoid each other in Round 4 with ECSTATIC win",
+    },
+    {
+      "link": "/news/38582/spirit-roll-into-major-playoffs-after-beating-navi",
+      "name": "Spirit roll into Major playoffs after beating NAVI",
+    },
+    {
+      "link": "/news/38572/aleksib-it-feels-good-to-know-you-won-with-good-teamwork-rather-than-individual-brilliance",
+      "name": "Aleksib: "It feels good to know you won with good teamwork rather than individual brilliance"",
+    },
+    {
+      "link": "/news/38573/matchups-revealed-for-day-2-of-pgl-major-copenhagen-elimination-stage",
+      "name": "Matchups revealed for day 2 of PGL Major Copenhagen Elimination Stage",
+    },
+    {
+      "link": "/news/38570/navi-clinch-narrow-win-over-g2",
+      "name": "NAVI clinch narrow win over G2",
+    },
+    {
+      "link": "/news/38565/elimination-stage-round-1-ends-with-g2-and-spirit-victories",
+      "name": "Elimination Stage Round 1 ends with G2 and Spirit victories",
+    },
+    {
+      "link": "/news/38560/mouz-navi-survive-openers-against-underdogs",
+      "name": "MOUZ, NAVI survive openers against underdogs",
+    },
+    {
+      "link": "/news/38555/elimination-stage-fantasy-goes-live-with-16-teams-and-increased-points",
+      "name": "Elimination Stage fantasy goes live with 16 teams and increased points",
+    },
+    {
+      "link": "/news/38550/furia-beat-saw-to-last-elimination-stage-spot",
+      "name": "FURIA beat SAW to last Elimination Stage spot",
+    },
+    {
+      "link": "/news/38514/media-falcons-in-early-talks-over-dupreeh",
+      "name": "Media: Falcons in early talks over dupreeh",
+    },
+    {
+      "link": "/news/38497/maj3rs-hopes-of-captaining-the-turkish-ship-to-the-high-seas-of-tier-one-cs",
+      "name": "MAJ3R's hopes of captaining the Turkish ship to the high seas of tier-one CS",
+    },
+    {
+      "link": "/news/38487/from-paris-to-copenhagen-whats-changed",
+      "name": "From Paris to Copenhagen, what's changed?",
+    },
+    {
+      "link": "/news/38492/sprout-release-anlelele-bench-sl1m3",
+      "name": "Sprout release Anlelele, bench sL1m3",
+    },
+    {
+      "link": "/news/38488/visualized-all-24-teams-at-pgl-major-copenhagen",
+      "name": "Visualized: All 24 teams at PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38486/pgl-major-copenhagen-teams-format-schedule-prizes-talent",
+      "name": "PGL Major Copenhagen teams, format, schedule, prizes, talent",
+    },
+    {
+      "link": "/news/38483/f0rest-and-s1mple-among-registered-subs-as-rosters-lock-for-pgl-major-copenhagen",
+      "name": "f0rest and s1mple among registered subs as rosters lock for PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38469/glowiing-in-his-30s-who-is-9-pandas-star-rifler",
+      "name": "glowiing in his 30s: Who is 9 Pandas' star rifler?",
+    },
+    {
+      "link": "/news/38477/mithr-extends-contract-with-apeks-until-2027",
+      "name": "mithR extends contract with Apeks until 2027",
+    },
+    {
+      "link": "/news/38474/heroic-round-out-iem-dallas-list",
+      "name": "HEROIC round out IEM Dallas list",
+    },
+    {
+      "link": "/news/38454/editorial-the-psychology-of-donking",
+      "name": "Editorial: The psychology of donking",
+    },
+    {
+      "link": "/news/38460/spirit-complete-blast-spring-final-team-list",
+      "name": "Spirit complete BLAST Spring Final team list",
+    },
+    {
+      "link": "/news/38458/saw-beat-heavygod-less-og-to-qualify-for-blast-spring-final",
+      "name": "SAW beat HeavyGod-less OG to qualify for BLAST Spring Final",
+    },
+    {
+      "link": "/news/38424/pgl-major-copenhagen-attendees-finalized",
+      "name": "PGL Major Copenhagen attendees finalized",
+    },
+    {
+      "link": "/news/38361/themongolz-crush-lynn-vision-to-qualify-for-pgl-major-copenhagen",
+      "name": "TheMongolz crush Lynn Vision to qualify for PGL Major Copenhagen",
+    },
+    {
+      "link": "/news/38352/liquid-qualify-for-iem-dallas",
+      "name": "Liquid qualify for IEM Dallas",
+    },
+    {
+      "link": "/news/38350/kyxsan-on-his-rapid-ascent-i-still-cant-believe-it-sometimes",
+      "name": "kyxsan on his rapid ascent: "I still can’t believe it sometimes"",
+    },
+    {
+      "link": "/news/38348/sdy-departs-monte-by-mutual-agreement",
+      "name": "sdy departs Monte by mutual agreement",
+    },
+    {
+      "link": "/news/38338/30-year-old-glowiing-shines-to-secure-9-pandas-major-berth",
+      "name": "30-year-old glowiing shines to secure 9 Pandas Major berth",
+    },
+    {
+      "link": "/news/38337/9z-qualify-for-iem-dallas",
+      "name": "9z qualify for IEM Dallas",
+    },
+    {
+      "link": "/news/38336/betboom-bench-innersh1ne-after-rmr-failure",
+      "name": "BetBoom bench innersh1ne after RMR failure",
+    },
+    {
+      "link": "/news/38332/grayhound-beat-rooster-to-qualify-for-iem-dallas",
+      "name": "Grayhound beat Rooster to qualify for IEM Dallas",
+    },
+    {
+      "link": "/news/38319/six-teams-fight-for-one-major-spot-in-eu-lcq",
+      "name": "Six teams fight for one Major spot in EU LCQ",
+    },
+    {
+      "link": "/news/38302/styko-i-came-to-the-rmr-to-do-one-job-and-that-job-is-done",
+      "name": "STYKO: "I came to the RMR to do one job, and that job is done"",
+    },
+    {
+      "link": "/news/38270/s1mple-joins-falcons-on-loan-boros-benched",
+      "name": "s1mple joins Falcons on loan; BOROS benched",
+    },
+    {
+      "link": "/news/38244/jl-we-may-not-win-the-major-but-we-want-to-make-a-deep-run",
+      "name": "jL: "We may not win the Major, but we want to make a deep run"",
+    },
+    {
+      "link": "/news/38243/round-5-matchups-set-at-europe-rmr-a",
+      "name": "Round 5 matchups set at Europe RMR A",
+    },
+    {
+      "link": "/news/38242/navi-defeat-betboom-to-qualify-for-pgl-major",
+      "name": "NAVI defeat BetBoom to qualify for PGL Major",
+    },
+    {
+      "link": "/news/38241/saw-stamp-enterprise-out-of-europe-rmr",
+      "name": "SAW stamp Enterprise out of Europe RMR",
+    },
+    {
+      "link": "/news/38230/jame-i-was-waiting-for-a-year-for-the-rmr-after-the-previous-fiasco",
+      "name": "Jame: "I was waiting for a year [for the RMR] after the previous fiasco"",
+    },
+    {
+      "link": "/news/38229/europe-rmr-a-round-four-matchups-set",
+      "name": "Europe RMR A round four matchups set",
+    },
+    {
+      "link": "/news/38226/virtuspro-beat-navi-to-clinch-pgl-major-spot",
+      "name": "Virtus.pro beat NAVI to clinch PGL Major spot",
+    },
+    {
+      "link": "/news/38216/spirit-g2-among-final-invites-to-iem-dallas",
+      "name": "Spirit, G2 among final invites to IEM Dallas",
+    },
+    {
+      "link": "/news/38215/faze-g2-navi-vp-headline-europe-rmr-a-day-two",
+      "name": "FaZe-G2, NAVI-VP headline Europe RMR A day two",
+    },
+    {
+      "link": "/news/38214/navi-set-aside-enterprise-as-day-one-of-eu-rmr-a-concludes",
+      "name": "NAVI set aside Enterprise as day one of EU RMR A concludes",
+    },
+    {
+      "link": "/news/38207/eternal-fire-enterprise-join-favorites-in-1-0-pool",
+      "name": "Eternal Fire, Enterprise join favorites in 1-0 pool",
+    },
+    {
+      "link": "/news/38206/navi-see-off-koi-as-g2-dominate-itb",
+      "name": "NAVI see off KOI as G2 dominate ITB",
+    },
+    {
+      "link": "/news/38196/the-evps-and-best-five-of-iem-katowice",
+      "name": "The EVPs and Best Five of IEM Katowice",
+    },
+    {
+      "link": "/news/38194/faze-claim-top-spot-spirit-breach-top-three-in-post-katowice-rankings",
+      "name": "FaZe claim top spot, Spirit breach top three in post-Katowice rankings",
+    },
+    {
+      "link": "/news/38192/europe-rmr-a-fantasy-open-poll-on-donks-price-for-rmr-b",
+      "name": "Europe RMR A fantasy open; poll on donk’s price for RMR B",
+    },
+    {
+      "link": "/news/38191/pgl-major-copenhagen-europe-rmr-a-teams-format-schedule-prizes-talent",
+      "name": "PGL Major Copenhagen Europe RMR A teams, format, schedule, prizes, talent",
+    },
+    {
+      "link": "/news/38168/from-foes-to-friends-to-foes-again-taz-and-neo-meet-in-katowice-playoffs",
+      "name": "From foes to friends to foes again: TaZ and NEO meet in Katowice playoffs",
+    },
+    {
+      "link": "/news/38156/sunpayus-no-one-expected-us-to-qualify-for-the-playoffs-even-we-didnt-expect-it",
+      "name": "SunPayus: "No one expected us to qualify [for the playoffs], even we didn't expect it"",
+    },
+    {
+      "link": "/news/38155/pgl-cs2-europe-rmr-a-opening-round-schedule-revealed",
+      "name": "PGL CS2 Europe RMR A opening round schedule revealed",
+    },
+    {
+      "link": "/news/38149/snappi-theres-a-lot-of-overreaction-from-the-community-ive-been-using-it-as-motivation",
+      "name": "Snappi: "There's a lot of overreaction from the community; I've been using it as motivation"",
+    },
+    {
+      "link": "/news/38147/falcons-make-the-spodek-at-expense-of-navi",
+      "name": "Falcons make the Spodek at expense of NAVI",
+    },
+    {
+      "link": "/news/38143/eternal-fires-katowice-run-ended-by-navi",
+      "name": "Eternal Fire's Katowice run ended by NAVI",
+    },
+    {
+      "link": "/news/38142/falcons-eliminate-complexity-from-katowice",
+      "name": "Falcons eliminate Complexity from Katowice",
+    },
+    {
+      "link": "/news/38128/natus-vincere-eliminate-apeks-in-katowice",
+      "name": "Natus Vincere eliminate Apeks in Katowice",
+    },
+    {
+      "link": "/news/38113/why-sdy-has-been-in-the-form-of-his-life-with-monte",
+      "name": "Why sdy has been in the form of his life with Monte",
+    },
+    {
+      "link": "/news/38121/donk-on-comparisons-to-s1mple-and-zywoo-i-think-im-far-behind",
+      "name": "donk on comparisons to s1mple and ZywOo: "I think I'm far behind"",
+    },
+    {
+      "link": "/news/38119/complexity-move-past-apeks-in-katowice",
+      "name": "Complexity move past Apeks in Katowice",
+    },
+    {
+      "link": "/news/38118/sh1ro-donk-shine-as-spirit-beat-navi-in-katowice",
+      "name": "sh1ro, donk shine as Spirit beat NAVI in Katowice",
+    },
+    {
+      "link": "/news/38115/m0nesy-leads-the-charge-for-g2-in-2-1-victory-over-heroic",
+      "name": "m0NESY leads the charge for G2 in 2-1 victory over Heroic",
+    },
+    {
+      "link": "/news/38108/iem-katowice-group-stage-fantasy-set-with-play-in-teams",
+      "name": "IEM Katowice Group Stage Fantasy set with Play-in teams",
+    },
+    {
+      "link": "/news/38109/navi-vs-spirit-headlines-first-round-of-iem-katowice-group-stage",
+      "name": "NAVI vs Spirit headlines first round of IEM Katowice group stage",
+    },
+    {
+      "link": "/news/38077/iem-katowices-play-in-and-group-stage-fantasy-games-are-live",
+      "name": "IEM Katowice's Play-in and Group Stage fantasy games are live",
+    },
+    {
+      "link": "/news/38076/iem-katowice-teams-format-schedule-prizes-talent",
+      "name": "IEM Katowice teams, format, schedule, prizes, talent",
+    },
+    {
+      "link": "/news/37992/the-ewing-theory-when-losing-your-best-player-is-a-good-thing",
+      "name": "The Ewing theory: When losing your best player is a good thing",
+    },
+    {
+      "link": "/news/38071/g2-lock-up-blast-spring-final-spot-over-liquid",
+      "name": "G2 lock up BLAST Spring Final spot over Liquid",
+    },
+    {
+      "link": "/news/38065/navi-demolish-g2-to-qualify-for-blast-spring-final",
+      "name": "NAVI demolish G2 to qualify for BLAST Spring Final",
+    },
+    {
+      "link": "/news/38057/bad-news-kangaroos-clinch-final-epl-s19-spot",
+      "name": "Bad News Kangaroos clinch final EPL S19 spot",
+    },
+    {
+      "link": "/news/38056/g2-ease-past-nip-to-send-them-to-spring-showdown",
+      "name": "G2 ease past NIP to send them to Spring Showdown",
+    },
+    {
+      "link": "/news/38053/pera-qualify-for-esl-pro-league-season-19-over-guild-eagles",
+      "name": "PERA qualify for ESL Pro League Season 19 over Guild Eagles",
+    },
+    {
+      "link": "/news/38045/imperial-sharks-qualify-for-esl-pro-league",
+      "name": "Imperial, Sharks qualify for ESL Pro League",
+    },
+    {
+      "link": "/news/38026/aleksib-on-b1t-exit-rumors-i-hope-its-a-meme",
+      "name": "Aleksib on b1t exit rumors: "I hope it's a meme"",
+    },
+    {
+      "link": "/news/38027/nip-send-complexity-to-showdown",
+      "name": "NIP send Complexity to Showdown",
+    },
+    {
+      "link": "/news/38025/navi-edge-closer-to-blast-spring-final",
+      "name": "NAVI edge closer to BLAST Spring Final",
+    },
+    {
+      "link": "/news/38017/complexity-collapse-grants-navi-winning-start-at-blast",
+      "name": "Complexity collapse grants NAVI winning start at BLAST",
+    },
+    {
+      "link": "/news/38015/g2-stroll-through-nip-in-blast-opener",
+      "name": "G2 stroll through NIP in BLAST opener",
+    },
+    {
+      "link": "/news/38014/pgl-unveils-eu-rmrs-team-distribution",
+      "name": "PGL unveils EU RMRs team distribution",
+    },
+    {
+      "link": "/news/38010/eu-rmr-team-list-set-as-preasy-3dmax-clinch-final-slots",
+      "name": "EU RMR team list set as Preasy, 3DMAX clinch final slots",
+    },
+    {
+      "link": "/news/38004/the-first-fantasy-game-of-2024-is-set-to-start-with-blast-premier-spring-groups",
+      "name": "The first fantasy game of 2024 is set to start with BLAST Premier Spring Groups",
+    },
+    {
       "link": "/news/37999/five-eu-rmr-spots-remain-as-closed-qualifiers-reach-end",
       "name": "Five EU RMR spots remain as closed qualifiers reach end",
     },
@@ -14204,55 +14900,55 @@ exports[`getTeam 1`] = `
   "players": [
     {
       "id": 18987,
-      "mapsPlayed": 433,
+      "mapsPlayed": 492,
       "name": "b1t",
-      "timeOnTeam": "3 years",
+      "timeOnTeam": "3 years4 months",
       "type": "Starter",
     },
     {
       "id": 9816,
-      "mapsPlayed": 71,
+      "mapsPlayed": 129,
       "name": "Aleksib",
-      "timeOnTeam": "6 months",
+      "timeOnTeam": "11 months",
       "type": "Starter",
     },
     {
       "id": 14759,
-      "mapsPlayed": 71,
+      "mapsPlayed": 129,
       "name": "iM",
-      "timeOnTeam": "6 months",
+      "timeOnTeam": "11 months",
       "type": "Starter",
     },
     {
       "id": 19206,
-      "mapsPlayed": 71,
+      "mapsPlayed": 129,
       "name": "jL",
-      "timeOnTeam": "6 months",
+      "timeOnTeam": "11 months",
       "type": "Starter",
     },
     {
       "id": 20127,
-      "mapsPlayed": 22,
+      "mapsPlayed": 80,
       "name": "w0nderful",
-      "timeOnTeam": "2 months",
+      "timeOnTeam": "7 months",
       "type": "Starter",
     },
     {
       "id": 7998,
-      "mapsPlayed": 1247,
+      "mapsPlayed": 0,
       "name": "s1mple",
-      "timeOnTeam": "7 years5 months",
+      "timeOnTeam": "2 months",
       "type": "Benched",
     },
     {
       "id": 472,
-      "mapsPlayed": 717,
+      "mapsPlayed": 775,
       "name": "B1ad3",
-      "timeOnTeam": "4 years4 months",
+      "timeOnTeam": "4 years8 months",
       "type": "Coach",
     },
   ],
-  "rank": 4,
+  "rank": 6,
   "rankingDevelopment": [
     30,
     15,
@@ -14281,6 +14977,26 @@ exports[`getTeam 1`] = `
     4,
     4,
     4,
+    4,
+    3,
+    3,
+    6,
+    6,
+    5,
+    6,
+    6,
+    6,
+    6,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    4,
+    3,
+    4,
+    6,
   ],
   "twitter": "https://www.twitter.com/natusvincere",
 }

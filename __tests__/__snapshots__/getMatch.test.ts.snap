@@ -834,7 +834,7 @@ exports[`getMatch 5`] = `
       "result": "14 - 16",
       "winner": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -847,7 +847,7 @@ exports[`getMatch 5`] = `
       "result": "4 - 16",
       "winner": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
   ],
@@ -914,7 +914,7 @@ exports[`getMatch 5`] = `
   },
   "team2": {
     "id": 7175,
-    "name": "Heroic",
+    "name": "HEROIC",
     "rank": 17,
   },
   "title": undefined,

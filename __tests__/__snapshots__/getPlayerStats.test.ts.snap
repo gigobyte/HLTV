@@ -14,24 +14,72 @@ exports[`getPlayerStats 1`] = `
     "firstKillInWonRounds": 20.6,
     "fiveKillRounds": 71,
     "fourKillRounds": 530,
-    "grenadeKills": 231,
-    "oneKillRounds": 14416,
-    "openingDeaths": 4099,
+    "grenadeKills": 232,
+    "oneKillRounds": 14441,
+    "openingDeaths": 4103,
     "openingKillRating": 1.24,
     "openingKillRatio": 1.6,
-    "openingKills": 6573,
+    "openingKills": 6581,
     "otherKills": 315,
-    "pistolKills": 6549,
-    "rifleKills": 15910,
-    "roundsWithKills": 24684,
-    "smgKills": 965,
-    "sniperKills": 14793,
+    "pistolKills": 6551,
+    "rifleKills": 15942,
+    "roundsWithKills": 24715,
+    "smgKills": 966,
+    "sniperKills": 14795,
     "teamWinPercentAfterFirstKill": 75,
-    "threeKillRounds": 2434,
-    "twoKillRounds": 7233,
-    "zeroKillRounds": 21003,
+    "threeKillRounds": 2435,
+    "twoKillRounds": 7238,
+    "zeroKillRounds": 21035,
   },
   "matches": [
+    {
+      "date": 1709752500000,
+      "deaths": 20,
+      "kills": 10,
+      "map": "de_vertigo",
+      "mapStatsId": 171466,
+      "rating": 0.78,
+      "team1": {
+        "id": 11283,
+        "name": "Falcons",
+      },
+      "team2": {
+        "id": 11641,
+        "name": "Metizport",
+      },
+    },
+    {
+      "date": 1709752500000,
+      "deaths": 14,
+      "kills": 14,
+      "map": "de_overpass",
+      "mapStatsId": 171460,
+      "rating": 1.35,
+      "team1": {
+        "id": 11283,
+        "name": "Falcons",
+      },
+      "team2": {
+        "id": 11641,
+        "name": "Metizport",
+      },
+    },
+    {
+      "date": 1709752500000,
+      "deaths": 15,
+      "kills": 14,
+      "map": "de_mirage",
+      "mapStatsId": 171451,
+      "rating": 0.84,
+      "team1": {
+        "id": 11283,
+        "name": "Falcons",
+      },
+      "team2": {
+        "id": 11641,
+        "name": "Metizport",
+      },
+    },
     {
       "date": 1696168800000,
       "deaths": 26,
@@ -525,7 +573,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -541,7 +589,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -557,7 +605,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -605,7 +653,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -621,7 +669,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -861,7 +909,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -877,7 +925,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -957,7 +1005,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 6248,
-        "name": "TheMongolz",
+        "name": "The MongolZ",
       },
     },
     {
@@ -1085,7 +1133,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1101,7 +1149,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1373,7 +1421,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1389,7 +1437,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1805,7 +1853,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1821,7 +1869,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -1837,7 +1885,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -2285,7 +2333,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -2301,7 +2349,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -2317,7 +2365,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3117,7 +3165,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3133,7 +3181,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3149,7 +3197,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3309,7 +3357,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3325,7 +3373,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3341,7 +3389,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3421,7 +3469,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -3437,7 +3485,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4061,7 +4109,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4077,7 +4125,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4221,7 +4269,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4237,7 +4285,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4253,7 +4301,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4445,7 +4493,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4813,7 +4861,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4829,7 +4877,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -4845,7 +4893,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -6157,7 +6205,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -6173,7 +6221,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -6189,7 +6237,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -8077,7 +8125,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -8093,7 +8141,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -8221,7 +8269,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -8237,7 +8285,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -8253,7 +8301,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -9026,11 +9074,11 @@ exports[`getPlayerStats 1`] = `
     },
     {
       "date": 1591719000000,
-      "deaths": 20,
-      "kills": 23,
-      "map": "de_dust2",
-      "mapStatsId": 103849,
-      "rating": 1.17,
+      "deaths": 27,
+      "kills": 22,
+      "map": "de_mirage",
+      "mapStatsId": 174171,
+      "rating": 0.86,
       "team1": {
         "id": 4608,
         "name": "Natus Vincere",
@@ -9042,11 +9090,11 @@ exports[`getPlayerStats 1`] = `
     },
     {
       "date": 1591719000000,
-      "deaths": 27,
-      "kills": 22,
-      "map": "de_mirage",
-      "mapStatsId": 103843,
-      "rating": 0.86,
+      "deaths": 20,
+      "kills": 23,
+      "map": "de_dust2",
+      "mapStatsId": 103849,
+      "rating": 1.17,
       "team1": {
         "id": 4608,
         "name": "Natus Vincere",
@@ -10397,7 +10445,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10413,7 +10461,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10429,7 +10477,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10493,7 +10541,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10509,7 +10557,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10749,7 +10797,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -10765,7 +10813,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -11549,7 +11597,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -11565,7 +11613,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -11581,7 +11629,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -12493,7 +12541,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -12509,7 +12557,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -12573,7 +12621,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -12589,7 +12637,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -12605,7 +12653,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -13341,7 +13389,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -13357,7 +13405,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -14989,7 +15037,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15005,7 +15053,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15021,7 +15069,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15373,7 +15421,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15389,7 +15437,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15869,7 +15917,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15885,7 +15933,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -15901,7 +15949,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16669,7 +16717,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16685,7 +16733,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16797,7 +16845,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16813,7 +16861,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16829,7 +16877,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -16861,7 +16909,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -17213,7 +17261,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -17229,7 +17277,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -18205,7 +18253,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -18221,7 +18269,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -18653,7 +18701,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -18669,7 +18717,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -19261,7 +19309,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -19501,7 +19549,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -19517,7 +19565,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -19965,7 +20013,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -19981,7 +20029,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -26093,7 +26141,7 @@ exports[`getPlayerStats 1`] = `
       },
       "team2": {
         "id": 5822,
-        "name": "KaBuM.TD",
+        "name": "KaBuM",
       },
     },
     {
@@ -27621,16 +27669,16 @@ exports[`getPlayerStats 1`] = `
   "overviewStatistics": {
     "assistsPerRound": 0.1,
     "damagePerRound": 85.4,
-    "deaths": 28996,
+    "deaths": 29045,
     "deathsPerRound": 0.63,
     "grenadeDamagePerRound": 2.5,
     "headshots": 41.1,
     "kdRatio": 1.33,
-    "kills": 38676,
+    "kills": 38714,
     "killsPerRound": 0.85,
-    "mapsPlayed": 1724,
+    "mapsPlayed": 1727,
     "rating1": 1.24,
-    "roundsPlayed": 45687,
+    "roundsPlayed": 45750,
     "savedByTeammatePerRound": 0.08,
     "savedTeammatesPerRound": 0.11,
   },
@@ -28043,40 +28091,1080 @@ exports[`getPlayerStats 3`] = `
   "image": "https://img-cdn.hltv.org/playerbodyshot/jArV2iqcFzSLhpHfOn0Ra_.png?ixlib=java-2.1.0&w=400&s=a3ebbb6208c23b59974fc142acbd8993",
   "individualStatistics": {
     "firstKillInWonRounds": 14.1,
-    "fiveKillRounds": 18,
-    "fourKillRounds": 146,
-    "grenadeKills": 237,
-    "oneKillRounds": 9508,
-    "openingDeaths": 3520,
+    "fiveKillRounds": 19,
+    "fourKillRounds": 157,
+    "grenadeKills": 245,
+    "oneKillRounds": 9907,
+    "openingDeaths": 3665,
     "openingKillRating": 0.98,
     "openingKillRatio": 0.91,
-    "openingKills": 3196,
-    "otherKills": 86,
-    "pistolKills": 3552,
-    "rifleKills": 15508,
-    "roundsWithKills": 14398,
-    "smgKills": 1080,
-    "sniperKills": 260,
-    "teamWinPercentAfterFirstKill": 71.3,
-    "threeKillRounds": 1039,
-    "twoKillRounds": 3687,
-    "zeroKillRounds": 17654,
+    "openingKills": 3327,
+    "otherKills": 90,
+    "pistolKills": 3713,
+    "rifleKills": 16147,
+    "roundsWithKills": 14997,
+    "smgKills": 1129,
+    "sniperKills": 268,
+    "teamWinPercentAfterFirstKill": 71.4,
+    "threeKillRounds": 1077,
+    "twoKillRounds": 3837,
+    "zeroKillRounds": 18415,
   },
   "matches": [
     {
-      "date": 1700492400000,
-      "deaths": 20,
-      "kills": 13,
-      "map": "de_cache",
-      "mapStatsId": 167037,
-      "rating": 0.68,
+      "date": 1717863900000,
+      "deaths": 14,
+      "kills": 8,
+      "map": "de_mirage",
+      "mapStatsId": 177477,
+      "rating": 0.59,
       "team1": {
-        "id": 12537,
-        "name": "Team neaLaN",
+        "id": 10621,
+        "name": "1WIN",
       },
       "team2": {
-        "id": 12538,
-        "name": "Team mopoz",
+        "id": 11811,
+        "name": "Monte",
+      },
+    },
+    {
+      "date": 1717860000000,
+      "deaths": 12,
+      "kills": 14,
+      "map": "default",
+      "mapStatsId": 177461,
+      "rating": 1.2,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12814,
+        "name": "Quixal",
+      },
+    },
+    {
+      "date": 1717851900000,
+      "deaths": 13,
+      "kills": 7,
+      "map": "de_dust2",
+      "mapStatsId": 177433,
+      "rating": 0.76,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12586,
+        "name": "AMKAL",
+      },
+    },
+    {
+      "date": 1717678800000,
+      "deaths": 26,
+      "kills": 20,
+      "map": "default",
+      "mapStatsId": 177189,
+      "rating": 0.84,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12818,
+        "name": "FAVBET",
+      },
+    },
+    {
+      "date": 1717678800000,
+      "deaths": 15,
+      "kills": 20,
+      "map": "de_inferno",
+      "mapStatsId": 177175,
+      "rating": 1.35,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12818,
+        "name": "FAVBET",
+      },
+    },
+    {
+      "date": 1717678800000,
+      "deaths": 11,
+      "kills": 12,
+      "map": "de_ancient",
+      "mapStatsId": 177167,
+      "rating": 0.95,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12818,
+        "name": "FAVBET",
+      },
+    },
+    {
+      "date": 1717254000000,
+      "deaths": 15,
+      "kills": 11,
+      "map": "de_ancient",
+      "mapStatsId": 176713,
+      "rating": 0.81,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12124,
+        "name": "Insilio",
+      },
+    },
+    {
+      "date": 1717254000000,
+      "deaths": 16,
+      "kills": 18,
+      "map": "default",
+      "mapStatsId": 176704,
+      "rating": 1.15,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12124,
+        "name": "Insilio",
+      },
+    },
+    {
+      "date": 1717081200000,
+      "deaths": 9,
+      "kills": 14,
+      "map": "default",
+      "mapStatsId": 176572,
+      "rating": 1.29,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12618,
+        "name": "V1dar",
+      },
+    },
+    {
+      "date": 1717081200000,
+      "deaths": 4,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 176567,
+      "rating": 1.99,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12618,
+        "name": "V1dar",
+      },
+    },
+    {
+      "date": 1717081200000,
+      "deaths": 13,
+      "kills": 9,
+      "map": "de_vertigo",
+      "mapStatsId": 176561,
+      "rating": 0.81,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12618,
+        "name": "V1dar",
+      },
+    },
+    {
+      "date": 1716728400000,
+      "deaths": 13,
+      "kills": 11,
+      "map": "de_ancient",
+      "mapStatsId": 176340,
+      "rating": 0.92,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11883,
+        "name": "9 Pandas",
+      },
+    },
+    {
+      "date": 1716728400000,
+      "deaths": 15,
+      "kills": 6,
+      "map": "de_mirage",
+      "mapStatsId": 176336,
+      "rating": 0.61,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11883,
+        "name": "9 Pandas",
+      },
+    },
+    {
+      "date": 1716635400000,
+      "deaths": 14,
+      "kills": 17,
+      "map": "de_inferno",
+      "mapStatsId": 176282,
+      "rating": 1.18,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    {
+      "date": 1716635400000,
+      "deaths": 15,
+      "kills": 24,
+      "map": "de_mirage",
+      "mapStatsId": 176278,
+      "rating": 1.42,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    {
+      "date": 1716635400000,
+      "deaths": 23,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 176268,
+      "rating": 0.64,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 8297,
+        "name": "FURIA",
+      },
+    },
+    {
+      "date": 1716483600000,
+      "deaths": 14,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 176207,
+      "rating": 0.95,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11419,
+        "name": "ECSTATIC",
+      },
+    },
+    {
+      "date": 1716483600000,
+      "deaths": 9,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 176203,
+      "rating": 1.61,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11419,
+        "name": "ECSTATIC",
+      },
+    },
+    {
+      "date": 1716045000000,
+      "deaths": 24,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 175794,
+      "rating": 1,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10577,
+        "name": "SINNERS",
+      },
+    },
+    {
+      "date": 1715858400000,
+      "deaths": 16,
+      "kills": 16,
+      "map": "de_mirage",
+      "mapStatsId": 175594,
+      "rating": 1.18,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11523,
+        "name": "Zero Tenacity",
+      },
+    },
+    {
+      "date": 1715858400000,
+      "deaths": 16,
+      "kills": 10,
+      "map": "default",
+      "mapStatsId": 175587,
+      "rating": 0.76,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11523,
+        "name": "Zero Tenacity",
+      },
+    },
+    {
+      "date": 1715858400000,
+      "deaths": 14,
+      "kills": 10,
+      "map": "de_inferno",
+      "mapStatsId": 175582,
+      "rating": 0.86,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11523,
+        "name": "Zero Tenacity",
+      },
+    },
+    {
+      "date": 1715620200000,
+      "deaths": 13,
+      "kills": 19,
+      "map": "de_inferno",
+      "mapStatsId": 175334,
+      "rating": 1.44,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12009,
+        "name": "Permitta",
+      },
+    },
+    {
+      "date": 1715620200000,
+      "deaths": 8,
+      "kills": 16,
+      "map": "de_dust2",
+      "mapStatsId": 175330,
+      "rating": 1.66,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12009,
+        "name": "Permitta",
+      },
+    },
+    {
+      "date": 1715256000000,
+      "deaths": 16,
+      "kills": 10,
+      "map": "de_vertigo",
+      "mapStatsId": 175075,
+      "rating": 0.86,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11712,
+        "name": "Sashi",
+      },
+    },
+    {
+      "date": 1715256000000,
+      "deaths": 17,
+      "kills": 13,
+      "map": "de_ancient",
+      "mapStatsId": 175073,
+      "rating": 0.88,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11712,
+        "name": "Sashi",
+      },
+    },
+    {
+      "date": 1715160600000,
+      "deaths": 17,
+      "kills": 12,
+      "map": "de_ancient",
+      "mapStatsId": 175024,
+      "rating": 0.75,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1715160600000,
+      "deaths": 9,
+      "kills": 13,
+      "map": "default",
+      "mapStatsId": 175021,
+      "rating": 1.28,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1715099400000,
+      "deaths": 8,
+      "kills": 12,
+      "map": "de_inferno",
+      "mapStatsId": 175005,
+      "rating": 1.22,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12543,
+        "name": "BLEED",
+      },
+    },
+    {
+      "date": 1715099400000,
+      "deaths": 10,
+      "kills": 10,
+      "map": "default",
+      "mapStatsId": 175001,
+      "rating": 1.03,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12543,
+        "name": "BLEED",
+      },
+    },
+    {
+      "date": 1714905000000,
+      "deaths": 16,
+      "kills": 18,
+      "map": "de_mirage",
+      "mapStatsId": 174887,
+      "rating": 1.13,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12527,
+        "name": "Guild Eagles",
+      },
+    },
+    {
+      "date": 1714905000000,
+      "deaths": 8,
+      "kills": 7,
+      "map": "default",
+      "mapStatsId": 174884,
+      "rating": 1.1,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12527,
+        "name": "Guild Eagles",
+      },
+    },
+    {
+      "date": 1714666200000,
+      "deaths": 15,
+      "kills": 9,
+      "map": "de_ancient",
+      "mapStatsId": 174770,
+      "rating": 0.7,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12801,
+        "name": "Soda",
+      },
+    },
+    {
+      "date": 1714666200000,
+      "deaths": 13,
+      "kills": 15,
+      "map": "default",
+      "mapStatsId": 174762,
+      "rating": 1.07,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12801,
+        "name": "Soda",
+      },
+    },
+    {
+      "date": 1714653000000,
+      "deaths": 14,
+      "kills": 7,
+      "map": "de_mirage",
+      "mapStatsId": 174751,
+      "rating": 0.77,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12000,
+        "name": "500",
+      },
+    },
+    {
+      "date": 1714653000000,
+      "deaths": 18,
+      "kills": 22,
+      "map": "de_overpass",
+      "mapStatsId": 174750,
+      "rating": 1.43,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12000,
+        "name": "500",
+      },
+    },
+    {
+      "date": 1714653000000,
+      "deaths": 12,
+      "kills": 16,
+      "map": "default",
+      "mapStatsId": 174742,
+      "rating": 1.16,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12000,
+        "name": "500",
+      },
+    },
+    {
+      "date": 1714402800000,
+      "deaths": 17,
+      "kills": 18,
+      "map": "de_ancient",
+      "mapStatsId": 174575,
+      "rating": 1.23,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7441,
+        "name": "ECLOT",
+      },
+    },
+    {
+      "date": 1714402800000,
+      "deaths": 14,
+      "kills": 10,
+      "map": "default",
+      "mapStatsId": 174572,
+      "rating": 0.89,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7441,
+        "name": "ECLOT",
+      },
+    },
+    {
+      "date": 1714396500000,
+      "deaths": 22,
+      "kills": 25,
+      "map": "de_ancient",
+      "mapStatsId": 174562,
+      "rating": 1.19,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10577,
+        "name": "SINNERS",
+      },
+    },
+    {
+      "date": 1714323000000,
+      "deaths": 17,
+      "kills": 5,
+      "map": "de_mirage",
+      "mapStatsId": 174518,
+      "rating": 0.58,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10333,
+        "name": "Sangal",
+      },
+    },
+    {
+      "date": 1714323000000,
+      "deaths": 17,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 174515,
+      "rating": 1,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10333,
+        "name": "Sangal",
+      },
+    },
+    {
+      "date": 1714221000000,
+      "deaths": 17,
+      "kills": 18,
+      "map": "de_mirage",
+      "mapStatsId": 174434,
+      "rating": 1.3,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1714221000000,
+      "deaths": 15,
+      "kills": 13,
+      "map": "de_ancient",
+      "mapStatsId": 174429,
+      "rating": 0.89,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1714056600000,
+      "deaths": 14,
+      "kills": 14,
+      "map": "default",
+      "mapStatsId": 174320,
+      "rating": 1.11,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12009,
+        "name": "Permitta",
+      },
+    },
+    {
+      "date": 1713880800000,
+      "deaths": 10,
+      "kills": 8,
+      "map": "de_mirage",
+      "mapStatsId": 174227,
+      "rating": 0.99,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7865,
+        "name": "HAVU",
+      },
+    },
+    {
+      "date": 1713880800000,
+      "deaths": 13,
+      "kills": 9,
+      "map": "de_ancient",
+      "mapStatsId": 174225,
+      "rating": 0.96,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7865,
+        "name": "HAVU",
+      },
+    },
+    {
+      "date": 1713880800000,
+      "deaths": 14,
+      "kills": 6,
+      "map": "default",
+      "mapStatsId": 174219,
+      "rating": 0.68,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7865,
+        "name": "HAVU",
+      },
+    },
+    {
+      "date": 1713697200000,
+      "deaths": 19,
+      "kills": 11,
+      "map": "de_inferno",
+      "mapStatsId": 174114,
+      "rating": 0.72,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1713697200000,
+      "deaths": 15,
+      "kills": 11,
+      "map": "de_ancient",
+      "mapStatsId": 174110,
+      "rating": 0.91,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 7969,
+        "name": "Nemiga",
+      },
+    },
+    {
+      "date": 1713632400000,
+      "deaths": 14,
+      "kills": 14,
+      "map": "de_vertigo",
+      "mapStatsId": 174054,
+      "rating": 1,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12781,
+        "name": "esmagaB",
+      },
+    },
+    {
+      "date": 1713632400000,
+      "deaths": 13,
+      "kills": 15,
+      "map": "de_inferno",
+      "mapStatsId": 174049,
+      "rating": 1.17,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12781,
+        "name": "esmagaB",
+      },
+    },
+    {
+      "date": 1713276000000,
+      "deaths": 13,
+      "kills": 14,
+      "map": "default",
+      "mapStatsId": 173623,
+      "rating": 1.11,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11790,
+        "name": "ENCE Academy",
+      },
+    },
+    {
+      "date": 1713276000000,
+      "deaths": 13,
+      "kills": 12,
+      "map": "de_mirage",
+      "mapStatsId": 173617,
+      "rating": 1.04,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11790,
+        "name": "ENCE Academy",
+      },
+    },
+    {
+      "date": 1713168000000,
+      "deaths": 14,
+      "kills": 14,
+      "map": "de_ancient",
+      "mapStatsId": 173551,
+      "rating": 1.22,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12087,
+        "name": "Lazer Cats",
+      },
+    },
+    {
+      "date": 1713168000000,
+      "deaths": 6,
+      "kills": 15,
+      "map": "de_vertigo",
+      "mapStatsId": 173548,
+      "rating": 1.54,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 12087,
+        "name": "Lazer Cats",
+      },
+    },
+    {
+      "date": 1712671200000,
+      "deaths": 14,
+      "kills": 10,
+      "map": "de_mirage",
+      "mapStatsId": 173168,
+      "rating": 0.75,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11861,
+        "name": "Aurora",
+      },
+    },
+    {
+      "date": 1712671200000,
+      "deaths": 16,
+      "kills": 16,
+      "map": "de_ancient",
+      "mapStatsId": 173163,
+      "rating": 0.99,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11861,
+        "name": "Aurora",
+      },
+    },
+    {
+      "date": 1712595600000,
+      "deaths": 14,
+      "kills": 12,
+      "map": "de_overpass",
+      "mapStatsId": 173114,
+      "rating": 0.9,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11883,
+        "name": "9 Pandas",
+      },
+    },
+    {
+      "date": 1712595600000,
+      "deaths": 10,
+      "kills": 15,
+      "map": "default",
+      "mapStatsId": 173108,
+      "rating": 1.58,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11883,
+        "name": "9 Pandas",
+      },
+    },
+    {
+      "date": 1712581200000,
+      "deaths": 9,
+      "kills": 8,
+      "map": "de_ancient",
+      "mapStatsId": 173083,
+      "rating": 1.28,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 11861,
+        "name": "Aurora",
+      },
+    },
+    {
+      "date": 1710082800000,
+      "deaths": 13,
+      "kills": 11,
+      "map": "de_vertigo",
+      "mapStatsId": 171707,
+      "rating": 1.14,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10864,
+        "name": "VP.Prodigy",
+      },
+    },
+    {
+      "date": 1710082800000,
+      "deaths": 12,
+      "kills": 8,
+      "map": "default",
+      "mapStatsId": 171698,
+      "rating": 0.83,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10864,
+        "name": "VP.Prodigy",
+      },
+    },
+    {
+      "date": 1710082800000,
+      "deaths": 15,
+      "kills": 9,
+      "map": "de_ancient",
+      "mapStatsId": 171695,
+      "rating": 0.79,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10864,
+        "name": "VP.Prodigy",
+      },
+    },
+    {
+      "date": 1709667000000,
+      "deaths": 21,
+      "kills": 17,
+      "map": "de_inferno",
+      "mapStatsId": 171390,
+      "rating": 0.88,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10459,
+        "name": "ARCRED",
+      },
+    },
+    {
+      "date": 1709667000000,
+      "deaths": 14,
+      "kills": 17,
+      "map": "de_ancient",
+      "mapStatsId": 171387,
+      "rating": 1.29,
+      "team1": {
+        "id": 10621,
+        "name": "1WIN",
+      },
+      "team2": {
+        "id": 10459,
+        "name": "ARCRED",
       },
     },
     {
@@ -28316,7 +29404,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -28332,7 +29420,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -28348,7 +29436,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -28492,7 +29580,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 6248,
-        "name": "TheMongolz",
+        "name": "The MongolZ",
       },
     },
     {
@@ -28508,7 +29596,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 6248,
-        "name": "TheMongolz",
+        "name": "The MongolZ",
       },
     },
     {
@@ -28524,7 +29612,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 6248,
-        "name": "TheMongolz",
+        "name": "The MongolZ",
       },
     },
     {
@@ -29340,7 +30428,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -29356,7 +30444,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -29372,7 +30460,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -29420,7 +30508,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -29436,7 +30524,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -29452,7 +30540,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -31468,7 +32556,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -31484,7 +32572,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -31500,7 +32588,7 @@ exports[`getPlayerStats 3`] = `
       },
       "team2": {
         "id": 7175,
-        "name": "Heroic",
+        "name": "HEROIC",
       },
     },
     {
@@ -47234,21 +48322,24 @@ exports[`getPlayerStats 3`] = `
   ],
   "name": "Sanzhar Iskhakov",
   "overviewStatistics": {
-    "assistsPerRound": 0.13,
-    "damagePerRound": 73.6,
-    "deaths": 22310,
-    "deathsPerRound": 0.7,
+    "assistsPerRound": 0.14,
+    "damagePerRound": 73.5,
+    "deaths": 23220,
+    "deathsPerRound": 0.69,
     "grenadeDamagePerRound": 4.8,
-    "headshots": 55.7,
+    "headshots": 55.8,
     "kdRatio": 0.93,
-    "kills": 20673,
+    "kills": 21535,
     "killsPerRound": 0.64,
-    "mapsPlayed": 1198,
-    "rating2": 0.99,
-    "roundsPlayed": 32052,
+    "mapsPlayed": 1263,
+    "rating2": 1,
+    "roundsPlayed": 33412,
     "savedByTeammatePerRound": 0.09,
     "savedTeammatesPerRound": 0.09,
   },
-  "team": undefined,
+  "team": {
+    "id": 10621,
+    "name": "1WIN",
+  },
 }
 `;
