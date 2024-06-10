@@ -117,8 +117,8 @@ export const defaultLoadMatchStatsPage = async (url: string) => {
   return new Promise<string>((res) => res(responseBody ?? ''))
 }
 export const defaultLoadPage =
-  (httpAgent: HttpsAgent | HttpAgent | undefined) => (url: string) => {
-    return gotScraping({
+  (httpAgent: HttpsAgent | HttpAgent | undefined) => async (url: string) => {
+    const res = await gotScraping({
       url,
       agent: {
         http: httpAgent,
@@ -132,7 +132,8 @@ export const defaultLoadPage =
         locales: ['en-US'],
         operatingSystems: ['windows']
       }
-    }).then((res) => res.body)
+    })
+    return res.body
   }
 
 const defaultAgent = new HttpsAgent()
