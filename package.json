@@ -28,23 +28,23 @@
   "homepage": "https://github.com/beermonsterdota/HLTV#readme",
   "devDependencies": {
     "@types/cheerio": "0.22.35",
-    "@types/node": "18.19.8",
+    "@types/node": "20.14.2",
     "@types/random-useragent": "0.3.3",
     "@types/request": "2.48.12",
     "@types/socket.io-client": "1.4.36",
     "@types/user-agents": "1.0.4",
-    "prettier": "3.2.4",
+    "prettier": "3.3.1",
     "ts-node": "10.9.2",
-    "tsx": "^4.7.0",
-    "typescript": "5.3.3",
-    "vite": "^5.0.12",
-    "vitest": "^1.2.1"
+    "tsx": "^4.15.1",
+    "typescript": "5.4.5",
+    "vite": "^5.2.13",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
-    "axios": "^1.6.5",
+    "axios": "^1.7.2",
     "cheerio": "1.0.0-rc.12",
-    "got-scraping": "^4.0.3",
-    "puppeteer": "^21.7.0",
+    "got-scraping": "^4.0.6",
+    "puppeteer": "^22.10.0",
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "socket.io-client": "2.4.0"
