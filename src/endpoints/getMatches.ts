@@ -77,6 +77,7 @@ export const getMatches =
         const stars = 5 - el.find('.matchRating i.faded').length
         const live = el.find('.matchTime.matchLive').text() === 'LIVE'
         const title = el.find('.matchInfoEmpty').text() || undefined
+        const linkToMatch = el.find('.a-reset').attr('href')
 
         const date = el.find('.matchTime').numFromAttr('data-unix')
 
@@ -104,6 +105,17 @@ export const getMatches =
         const eventName = el.find('.matchEventLogo').attr('title')
         const event = events.find((x) => x.name === eventName)
 
-        return { id, date, stars, title, team1, team2, format, event, live }
+        return {
+          id,
+          date,
+          stars,
+          title,
+          team1,
+          team2,
+          format,
+          event,
+          live,
+          linkToMatch
+        }
       })
   }
