@@ -46,7 +46,7 @@
   "devDependencies": {
     "@types/cheerio": "0.22.35",
     "@types/jest": "29.5.14",
-    "@types/node": "18.19.60",
+    "@types/node": "20.17.2",
     "@types/random-useragent": "0.3.3",
     "@types/request": "2.48.12",
     "@types/socket.io-client": "1.4.36",
