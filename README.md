@@ -1,5 +1,6 @@
-[![Dependency Status](https://david-dm.org/gigobyte/hltv.svg)](https://david-dm.org/gigobyte/hltv)
-[![devDependencies Status](https://david-dm.org/gigobyte/hltv/dev-status.svg)](https://david-dm.org/gigobyte/hltv?type=dev)
+> [!WARNING]  
+> This library is no longer actively maintained.
+
 
 <h1 align="center">
   <img src="https://www.hltv.org/img/static/TopLogo2x.png" alt="HLTV logo" width="200">
