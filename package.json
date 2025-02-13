@@ -52,7 +52,7 @@
     "@types/socket.io-client": "1.4.36",
     "@types/user-agents": "1.0.4",
     "jest": "29.7.0",
-    "prettier": "3.5.0",
+    "prettier": "3.5.1",
     "ts-jest": "29.2.5",
     "ts-node": "10.9.2",
     "typescript": "5.7.3"
