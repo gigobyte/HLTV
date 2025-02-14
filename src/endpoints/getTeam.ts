@@ -44,7 +44,7 @@ export const getTeam =
 
     const name = $('.profile-team-name').text()
     const logoSrc = $('.teamlogo').attr('src')
-    const logo = logoSrc.includes('placeholder.svg') ? undefined : logoSrc
+    const logo = logoSrc?.includes('placeholder.svg') ? undefined : logoSrc
     const facebook = $('.facebook').parent().attr('href')
     const twitter = $('.twitter').parent().attr('href')
     const instagram = $('.instagram').parent().attr('href')
@@ -109,7 +109,7 @@ export const getTeam =
       name: $('.team-country .flag').attr('alt'),
       code: $('.team-country .flag').attrThen(
         'src',
-        (x) => x.split('/').pop()?.split('.')[0]!
+        (x) => x?.split('/').pop()?.split('.')[0]!
       )
     }
 
